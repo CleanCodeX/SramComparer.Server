@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+	  <TargetFramework>net5.0</TargetFramework>
+	  <Nullable>enable</Nullable>
+	  <LangVersion>preview</LangVersion>
+	  <Company>CleanCodeX</Company>
+	  <Product>SramComparer.SoE.Server</Product>
+	  <Version>1.0.0-a1</Version>
+	  <Authors>CleanCodeX</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CCX.SramComparer.SoE" Version="0.2.3-a1" />
+		<PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.4.5" />
+	</ItemGroup>
+
+</Project>

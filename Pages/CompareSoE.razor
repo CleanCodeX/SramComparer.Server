@@ -1,0 +1,19 @@
+﻿@page "/compare/soe"
+
+<h1>Secret of Ervermore - SRAM comparison</h1>
+
+<p>
+	<label><b>File region:</b></label><br>@FileRegion
+	<br/>
+	<label><b>Current file:</b></label><br/>
+	<InputFile OnChange="@OnCurrentFileChange"/><br/>
+	<label><b>Comparison file:</b></label><br/>
+	<InputFile OnChange="@OnComparisonFileChange"/>
+</p>
+
+<button class="btn btn-primary" @onclick="@Compare" disabled="@CompareButtonDisabled">Compare</button>
+<p />
+
+<div>
+	@ComparisonResult
+</div>
