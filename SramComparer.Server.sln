@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30524.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SramComparer.SoE.Server", "SramComparer.SoE.Server.csproj", "{85B610ED-C315-475A-B367-3B4FE66818DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SramComparer.Server", "SramComparer.Server.csproj", "{85B610ED-C315-475A-B367-3B4FE66818DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -5,9 +5,13 @@
 	  <Nullable>enable</Nullable>
 	  <LangVersion>preview</LangVersion>
 	  <Company>CleanCodeX</Company>
-	  <Product>SramComparer.SoE.Server</Product>
+	  <Product>SramComparer.Server</Product>
 	  <Version>1.0.0-a1</Version>
 	  <Authors>CleanCodeX</Authors>
+	  <UserSecretsId>b522e830-8649-4f5f-9417-8b10e62105f6</UserSecretsId>
+	  <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+	  <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+	  <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +20,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="CCX.SramComparer.SoE" Version="0.2.3-a1" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
 		<PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.4.5" />
 	</ItemGroup>
 
