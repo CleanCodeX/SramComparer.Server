@@ -10,8 +10,6 @@
 	  <Authors>CleanCodeX</Authors>
 	  <UserSecretsId>b522e830-8649-4f5f-9417-8b10e62105f6</UserSecretsId>
 	  <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
-	  <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
-	  <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
