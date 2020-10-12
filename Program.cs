@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace SramComparer.SoE.Server
+namespace SramComparer.Server
 {
 	public class Program
 	{

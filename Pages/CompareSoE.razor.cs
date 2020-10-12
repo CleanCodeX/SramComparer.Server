@@ -1,56 +1,33 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
-using Common.Shared.Min.Helpers;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
-using SramComparer.SoE.Server.Extensions;
-using SramComparer.SoE.Services;
-using SramFormat.SoE.Models.Enums;
+using SramComparer.Server.ViewModels;
 
-namespace SramComparer.SoE.Server.Pages
+namespace SramComparer.Server.Pages
 {
 	public partial class CompareSoE
 	{
-		private Options Options { get; } = new Options();
-		private FileRegion FileRegion { get; set; } = FileRegion.UnitedStates;
-		private MemoryStream? CurrentFileStream { get; set; }
-		private MemoryStream? ComparisonFileStream { get; set; }
-		private MarkupString ComparisonResult { get; set; }
-		private bool IsComparing { get; set; }
-		private bool CompareButtonDisabled => !IsComparing && (CurrentFileStream is null || ComparisonFileStream is null);
+		private readonly MarkupString Ns = (MarkupString)"&nbsp;";
 
-		private void Compare()
-		{
-			IsComparing = true;
+		private CompareSoEViewModel ViewModel { get; } = new CompareSoEViewModel();
+		private bool CompareButtonDisabled => !ViewModel.CanCompare;
 
-			try
-			{
-				Options.Region = FileRegion;
+		private string selectSelectedStyle = "color: cyan;background-color: black;";
+		private string selectUnselectStyle = "color: white;background-color: black;";
+		private string ButtonStyle = "color: cyan;width: 600px;";
+		
+		private string WholeGameStyle => ViewModel.WholeGameBuffer == default ? selectUnselectStyle : selectSelectedStyle;
+		private string NonGameStyle => ViewModel.NonGameBuffer == default ? selectUnselectStyle : selectSelectedStyle;
 
-				var output = new StringWriter { NewLine = "<br>" };
+		private string CurrentGameStyle => ViewModel.CurrentGame == default ? selectUnselectStyle : selectSelectedStyle;
+		private string ComparisonGameStyle => ViewModel.ComparisonGame == default ? selectUnselectStyle : selectSelectedStyle;
+		private string RegionStyle => ViewModel.Region == default ? selectUnselectStyle : selectSelectedStyle;
+		private string Unknown12BStyle => ViewModel.Unknown12B == default ? selectUnselectStyle : selectSelectedStyle;
+		private string GameChecksumStyle => ViewModel.GameChecksum == default ? selectUnselectStyle : selectSelectedStyle;
 
-				Requires.NotNull(CurrentFileStream, nameof(CurrentFileStream));
-				Requires.NotNull(ComparisonFileStream, nameof(ComparisonFileStream));
-				
-				CurrentFileStream.Position = 0;
-				ComparisonFileStream.Position = 0;
-				
-				new CommandHandlerSoE().Compare(CurrentFileStream, ComparisonFileStream, Options, output);
+		private async Task OnCurrentFileChange(InputFileChangeEventArgs arg) => ViewModel.CurrentFileStream = await arg.File.OpenReadStream().CopyAsMemoryStreamAsync();
 
-				ComparisonResult = (MarkupString)output.ToString().FormatComparisonText();
-			}
-			catch (Exception ex)
-			{
-				ComparisonResult = (MarkupString)ex.Message;
-			}
-
-			IsComparing = false;
-		}
-
-		private async Task OnCurrentFileChange(InputFileChangeEventArgs arg) => CurrentFileStream = await arg.File.OpenReadStream().CopyAsMemoryStreamAsync();
-
-		private async Task OnComparisonFileChange(InputFileChangeEventArgs arg) => ComparisonFileStream = await arg.File.OpenReadStream().CopyAsMemoryStreamAsync();
+		private async Task OnComparisonFileChange(InputFileChangeEventArgs arg) => ViewModel.ComparisonFileStream = await arg.File.OpenReadStream().CopyAsMemoryStreamAsync();
 	}
 }

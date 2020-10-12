@@ -1,19 +1,62 @@
 ﻿@page "/compare/soe"
 
-<h1>Secret of Ervermore - SRAM comparison</h1>
+<div class="mainDiv">
+	<h1 class="whiteText">SoE-SramComparer - Web comparison</h1>
+	<br />
 
-<p>
-	<label><b>File region:</b></label><br>@FileRegion
-	<br/>
-	<label><b>Current file:</b></label><br/>
-	<InputFile OnChange="@OnCurrentFileChange"/><br/>
-	<label><b>Comparison file:</b></label><br/>
-	<InputFile OnChange="@OnComparisonFileChange"/>
-</p>
+	<EditForm Model="@ViewModel">
+		<p>
+			<label class="yellowText">File region:@Ns</label><InputSelectEnum @bind-Value="@ViewModel.Region" style=@RegionStyle />
+			<p>
+				<label class="yellowText">Current SRAM-File (*.srm)</label>
+					<br/>
+				<label>File:@Ns</label>
+				*) <InputFile OnChange="@OnCurrentFileChange" style=@ButtonStyle />
+					<br/>
+				<label>Game:@Ns</label>
+				<InputSelectEnum @bind-Value="@ViewModel.CurrentGame" style=@CurrentGameStyle />
+			</p>
+			
+			<p>
+				<label class="yellowText">Comparison SRAM-File (*.srm|*.comp)</label>
+					<br/>
+				<label>File:@Ns</label>
+				*) <InputFile OnChange="@OnComparisonFileChange" style=@ButtonStyle />
+					<br/>
+				<label>Game:@Ns</label>
+				<InputSelectEnum @bind-Value="@ViewModel.ComparisonGame" style=@ComparisonGameStyle />
+			</p>
+			
+			<p>
+				<label class="yellowText">Perform additional comparisons:</label>
+					<br />
+					<InputCheckbox @bind-Value="@ViewModel.WholeGameBuffer" />
+					<label style=@WholeGameStyle title="Comparison of whole game buffer (including the 'knowns')">Whole game buffer</label> | 
+					<InputCheckbox @bind-Value="@ViewModel.NonGameBuffer" />
+					<label style=@NonGameStyle title="Comparison of non game buffer (after all game sections)">Non game buffer</label>
+				
+			</p>
+			
+			<p>
+				<label class="yellowText">Show additional game information:</label>
+					<br />
+				<label>Checksum:@Ns</label>
+				<InputSelectEnum @bind-Value="@ViewModel.GameChecksum" style=@GameChecksumStyle />
+					<br />
+				<label title="This value changes at every in-game save - maybe a timestamp or similar">Unknown 12B:@Ns</label>
+				<InputSelectEnum @bind-Value="@ViewModel.Unknown12B" style=@Unknown12BStyle />
+			</p>
+			<label class="whiteText">*) mandatory</label>
+			<br />
+		</p>
 
-<button class="btn btn-primary" @onclick="@Compare" disabled="@CompareButtonDisabled">Compare</button>
-<p />
+		<button class="btn btn-primary" @onclick="@ViewModel.Compare" disabled="@CompareButtonDisabled">Compare</button>
+		<InputCheckbox @bind-Value="@ViewModel.UseColoredOutput" />
+		<label title="Use experimental HTML coloring of output" class="whiteText">Use colored output</label>
+		<p />
+	</EditForm>
 
-<div>
-	@ComparisonResult
+	<div class="comparisonResult">
+		@ViewModel.ComparisonResult
+	</div>
 </div>

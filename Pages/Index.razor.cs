@@ -2,16 +2,16 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
-using SramComparer.SoE.Server.Helpers;
+using SramComparer.Server.Helpers;
 
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
-namespace SramComparer.SoE.Server.Pages
+namespace SramComparer.Server.Pages
 {
 	[Route("/")]
 	public partial class Index
 	{
-		private const string ReadMeUrl = "https://raw.githubusercontent.com/CleanCodeX/SramComparer/master/ReadMe.md";
+		private const string ReadMeUrl = "https://raw.githubusercontent.com/CleanCodeX/SramComparer.SoE/master/ReadMe.md";
 
 #nullable disable
 		[Inject]

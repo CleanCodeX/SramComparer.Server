@@ -1,7 +1,7 @@
 ﻿using Markdig;
 using Microsoft.AspNetCore.Components;
 
-namespace SramComparer.SoE.Server.Helpers
+namespace SramComparer.Server.Helpers
 {
 	public static class MarkdownHelper
 	{
