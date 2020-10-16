@@ -17,6 +17,7 @@ using Res = SramComparer.Server.Properties.Resources;
 
 namespace SramComparer.Server.ViewModels
 {
+	/// <summary>Viewmodel for SoE SRAM comparison</summary>
 	public class CompareSoEViewModel
 	{
 		public enum GameId
@@ -73,12 +74,12 @@ namespace SramComparer.Server.ViewModels
 
 		public void Compare()
 		{
-			if (!CanCompare) return;
-
-			IsComparing = true;
-
 			try
 			{
+				CanCompare.ThrowIfFalse(nameof(CanCompare));
+
+				IsComparing = true;
+
 				SetOptions();
 
 				var output = new StringWriter { NewLine = "<br>" };

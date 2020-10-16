@@ -9,6 +9,7 @@
 	  <Version>1.0.0-a1</Version>
 	  <Authors>CleanCodeX</Authors>
 	  <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+	  <UserSecretsId>17d24474-ed46-4f7f-bc20-2d543c8c8603</UserSecretsId>
   </PropertyGroup>
 
 	<ItemGroup>
@@ -21,7 +22,9 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CCX.SramComparer.SoE" Version="0.2.3-a5" />
+		<PackageReference Include="CCX.SramComparer.SoE" Version="0.2.3-a7" />
+		<PackageReference Include="Humanizer.Core" Version="2.8.26" />
+		<PackageReference Include="Humanizer.Core.de" Version="2.8.26" />
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
 		<PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.4.5" />
 	</ItemGroup>

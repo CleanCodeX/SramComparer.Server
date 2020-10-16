@@ -1,7 +1,9 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Reflection;
+using Humanizer;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Rendering;
@@ -68,10 +70,14 @@ namespace SramComparer.Server.Shared.Controls
             // Read the Display attribute name
             var member = value!.GetType().GetMember(value.ToString()!)[0];
             var displayAttribute = member.GetCustomAttribute<DisplayAttribute>();
-            return displayAttribute != null ? displayAttribute.GetName()! : value.ToString()!;
+            if (displayAttribute != null)
+                return displayAttribute.GetName()!;
 
-            // Require the NuGet package Humanizer.Core
-            // <PackageReference Include = "Humanizer.Core" Version = "2.8.26" />
+            var displayNameAttribute = member.GetCustomAttribute<DisplayNameAttribute>();
+            if (displayNameAttribute != null)
+                return displayNameAttribute.DisplayName;
+
+            return value.ToString()!.Humanize();
         }
 
         // Get the actual enum type. It unwrap Nullable<T> if needed

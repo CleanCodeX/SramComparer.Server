@@ -1,58 +1,56 @@
-﻿@page "/compare/soe"
-
-<div class="mainDiv">
-	<h1 class="whiteText">SoE-SramComparer - Web comparison</h1>
+﻿<div class="mainDiv">
+	<h1 class="whiteText">@Res.SramComparer - @Res.WebComparison</h1>
 	<br />
 
 	<EditForm Model="@ViewModel">
 		<p>
-			<label class="yellowText">File region:@Ns</label><InputSelectEnum @bind-Value="@ViewModel.Region" style=@RegionStyle />
+			<label class="yellowText">@Res.FileRegion:@Ns</label><InputSelectEnum @bind-Value="@ViewModel.Region" style=@RegionStyle />
 			<p>
-				<label class="yellowText">Current SRAM-File (*.srm)</label>
+				<label class="yellowText">@Res.CurrentSramFile (*.srm)</label>
 					<br/>
-				<label>File:@Ns</label>
+				<label>@Res.File:@Ns</label>
 				*) <InputFile OnChange="@OnCurrentFileChange" style=@ButtonStyle />
 					<br/>
-				<label>Game:@Ns</label>
+				<label>@Res.Game:@Ns</label>
 				<InputSelectEnum @bind-Value="@ViewModel.CurrentGame" style=@CurrentGameStyle />
 			</p>
 			
 			<p>
-				<label class="yellowText">Comparison SRAM-File (*.srm|*.comp)</label>
+				<label class="yellowText">@Res.ComparisonSramFile (*.srm|*.comp)</label>
 					<br/>
-				<label>File:@Ns</label>
+				<label>@Res.File:@Ns</label>
 				*) <InputFile OnChange="@OnComparisonFileChange" style=@ButtonStyle />
 					<br/>
-				<label>Game:@Ns</label>
+				<label>@Res.Game:@Ns</label>
 				<InputSelectEnum @bind-Value="@ViewModel.ComparisonGame" style=@ComparisonGameStyle />
 			</p>
 			
 			<p>
-				<label class="yellowText">Perform additional comparisons:</label>
+				<label class="yellowText">@Res.AdditionalComparisons:</label>
 					<br />
 					<InputCheckbox @bind-Value="@ViewModel.WholeGameBuffer" />
-					<label style=@WholeGameStyle title="Comparison of whole game buffer (including the 'knowns')">Whole game buffer</label> | 
+					<label style=@WholeGameStyle title="@Res.WholeGameBufferHint">@Res.WholeGameBuffer</label> | 
 					<InputCheckbox @bind-Value="@ViewModel.NonGameBuffer" />
-					<label style=@NonGameStyle title="Comparison of non game buffer (after all game sections)">Non game buffer</label>
+					<label style=@NonGameStyle title="@Res.NonGameBufferHint">@Res.NonGameBuffer</label>
 				
 			</p>
 			
 			<p>
-				<label class="yellowText">Show additional game information:</label>
+				<label class="yellowText">@Res.ShowAdditionalGameInformation:</label>
 					<br />
-				<label>Checksum:@Ns</label>
+				<label>@Res.Checksum:@Ns</label>
 				<InputSelectEnum @bind-Value="@ViewModel.GameChecksum" style=@GameChecksumStyle />
 					<br />
-				<label title="This value changes at every in-game save - maybe a timestamp or similar">Unknown 12B:@Ns</label>
+				<label title="@Res.Unknown12BHint">@Res.Unknown12B:@Ns</label>
 				<InputSelectEnum @bind-Value="@ViewModel.Unknown12B" style=@Unknown12BStyle />
 			</p>
-			<label class="whiteText">*) mandatory</label>
+			<label class="whiteText">*) @Res.Mandatory</label>
 			<br />
 		</p>
 
-		<button class="btn btn-primary" @onclick="@ViewModel.Compare" disabled="@CompareButtonDisabled">Compare</button>
+		<button class="btn btn-primary" @onclick="@ViewModel.Compare" disabled="@CompareButtonDisabled">@Res.Compare</button>
 		<InputCheckbox @bind-Value="@ViewModel.UseColoredOutput" />
-		<label title="Use experimental HTML coloring of output" class="whiteText">Use colored output</label>
+		<label class="whiteText">@Res.UseColoredOutput</label>
 		<p />
 	</EditForm>
 

@@ -2,29 +2,31 @@
 using Common.Shared.Min.Extensions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
+using SramComparer.Server.Helpers;
 using SramComparer.Server.ViewModels;
 
 namespace SramComparer.Server.Pages
 {
+	[Route(PageUris.CompareSoE)]
 	public partial class CompareSoE
 	{
-		private readonly MarkupString Ns = (MarkupString)"&nbsp;";
+		private static readonly MarkupString Ns = (MarkupString)"&nbsp;";
 
 		private CompareSoEViewModel ViewModel { get; } = new CompareSoEViewModel();
 		private bool CompareButtonDisabled => !ViewModel.CanCompare;
 
-		private string selectSelectedStyle = "color: cyan;background-color: black;";
-		private string selectUnselectStyle = "color: white;background-color: black;";
-		private string ButtonStyle = "color: cyan;width: 600px;";
+		private const string SelectSelectedStyle = "color: cyan;background-color: black;";
+		private const string SelectUnselectedStyle = "color: white;background-color: black;";
+		private const string ButtonStyle = "color: cyan;width: 600px;";
 		
-		private string WholeGameStyle => ViewModel.WholeGameBuffer == default ? selectUnselectStyle : selectSelectedStyle;
-		private string NonGameStyle => ViewModel.NonGameBuffer == default ? selectUnselectStyle : selectSelectedStyle;
+		private string WholeGameStyle => ViewModel.WholeGameBuffer == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string NonGameStyle => ViewModel.NonGameBuffer == default ? SelectUnselectedStyle : SelectSelectedStyle;
 
-		private string CurrentGameStyle => ViewModel.CurrentGame == default ? selectUnselectStyle : selectSelectedStyle;
-		private string ComparisonGameStyle => ViewModel.ComparisonGame == default ? selectUnselectStyle : selectSelectedStyle;
-		private string RegionStyle => ViewModel.Region == default ? selectUnselectStyle : selectSelectedStyle;
-		private string Unknown12BStyle => ViewModel.Unknown12B == default ? selectUnselectStyle : selectSelectedStyle;
-		private string GameChecksumStyle => ViewModel.GameChecksum == default ? selectUnselectStyle : selectSelectedStyle;
+		private string CurrentGameStyle => ViewModel.CurrentGame == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string ComparisonGameStyle => ViewModel.ComparisonGame == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string RegionStyle => ViewModel.Region == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string Unknown12BStyle => ViewModel.Unknown12B == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string GameChecksumStyle => ViewModel.GameChecksum == default ? SelectUnselectedStyle : SelectSelectedStyle;
 
 		private async Task OnCurrentFileChange(InputFileChangeEventArgs arg) => ViewModel.CurrentFileStream = await arg.File.OpenReadStream().CopyAsMemoryStreamAsync();
 

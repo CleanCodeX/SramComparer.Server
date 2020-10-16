@@ -1,5 +1,9 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">SRAM Comparer</a>
+﻿@using SramComparer.Server.Extensions
+@using SramComparer.Server.Helpers
+
+<img src="meta/SoE.png" style="float:top;width:250px;height:250px;" >
+<div class="top-row pl-4 navbar navbar-dark">
+        <a class="navbar-brand" href="">@Res.SramComparer</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,12 +13,12 @@
     <ul class="nav flex-column">
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Download
+                <span class="oi oi-arrow-circle-bottom" aria-hidden="true"></span> @Res.Download
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="compare/soe">
-                <span class="oi oi-plus" aria-hidden="true"></span> Web&nbsp;Comparison
+            <NavLink class="nav-link" href="@PageUris.CompareSoE">
+                <span class="oi oi-eye" aria-hidden="true"></span> @Res.WebComparison.ReplaceSpaces()
             </NavLink>
         </li>
     </ul>

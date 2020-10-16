@@ -6,9 +6,9 @@ namespace SramComparer.Server.Extensions
 	public static  class ConsoleColorExtensions
 	{
 		/// <summary>
-		/// Gets the rgb color for console color
+		/// Gets the rgb color of a console color
 		/// </summary>
-		/// <returns>Color.</returns>
+		/// <returns>RGB color</returns>
 		public static Color ToColor(this ConsoleColor color)
 		{
 			var c = Color.FromName(Enum.Parse(typeof(ConsoleColor), color.ToString()!).ToString()!);

@@ -138,4 +138,69 @@
   <data name="Game4Only" xml:space="preserve">
     <value>#4 only</value>
   </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="WebComparison" xml:space="preserve">
+    <value>Web comparison</value>
+  </data>
+  <data name="SramComparer" xml:space="preserve">
+    <value>SRAM Comparer</value>
+  </data>
+  <data name="ComparisonSramFile" xml:space="preserve">
+    <value>Comparison SRAM-File</value>
+  </data>
+  <data name="CurrentSramFile" xml:space="preserve">
+    <value>Current SRAM-File</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="Game" xml:space="preserve">
+    <value>Game</value>
+  </data>
+  <data name="AdditionalComparisons" xml:space="preserve">
+    <value>Additional comparisons</value>
+  </data>
+  <data name="WholeGameBuffer" xml:space="preserve">
+    <value>Whole game buffer</value>
+  </data>
+  <data name="FileRegion" xml:space="preserve">
+    <value>File region</value>
+  </data>
+  <data name="NonGameBuffer" xml:space="preserve">
+    <value>Non game buffer</value>
+  </data>
+  <data name="NonGameBufferHint" xml:space="preserve">
+    <value>Comparison of non game buffer (after all game sections)</value>
+  </data>
+  <data name="WholeGameBufferHint" xml:space="preserve">
+    <value>Comparison of whole game buffer (including the "knowns")</value>
+  </data>
+  <data name="ShowAdditionalGameInformation" xml:space="preserve">
+    <value>Show additional game information</value>
+  </data>
+  <data name="Checksum" xml:space="preserve">
+    <value>Checksum</value>
+  </data>
+  <data name="Unknown12B" xml:space="preserve">
+    <value>Unknown12B</value>
+  </data>
+  <data name="Unknown12BHint" xml:space="preserve">
+    <value>This value changes at every in-game save - maybe a timestamp or similar</value>
+  </data>
+  <data name="Mandatory" xml:space="preserve">
+    <value>mandatory</value>
+    <comment>LC</comment>
+  </data>
+  <data name="Compare" xml:space="preserve">
+    <value>Compare</value>
+  </data>
+  <data name="UseColoredOutput" xml:space="preserve">
+    <value>Use colored output</value>
+  </data>
+  <data name="OpenSourceInfoFragment" xml:space="preserve">
+    <value>is an Open Source tool. Source is hosted at</value>
+    <comment>{App title} ...  {Link}</comment>
+  </data>
 </root>

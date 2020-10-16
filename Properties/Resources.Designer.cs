@@ -61,6 +61,15 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Additional comparisons ähnelt.
+        /// </summary>
+        public static string AdditionalComparisons {
+            get {
+                return ResourceManager.GetString("AdditionalComparisons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Affected games only ähnelt.
         /// </summary>
         public static string AffectedGamesOnly {
@@ -79,11 +88,83 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Checksum ähnelt.
+        /// </summary>
+        public static string Checksum {
+            get {
+                return ResourceManager.GetString("Checksum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compare ähnelt.
+        /// </summary>
+        public static string Compare {
+            get {
+                return ResourceManager.GetString("Compare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Comparison SRAM-File ähnelt.
+        /// </summary>
+        public static string ComparisonSramFile {
+            get {
+                return ResourceManager.GetString("ComparisonSramFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Current SRAM-File ähnelt.
+        /// </summary>
+        public static string CurrentSramFile {
+            get {
+                return ResourceManager.GetString("CurrentSramFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Don&apos;t show ähnelt.
         /// </summary>
         public static string DontShow {
             get {
                 return ResourceManager.GetString("DontShow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download ähnelt.
+        /// </summary>
+        public static string Download {
+            get {
+                return ResourceManager.GetString("Download", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die File ähnelt.
+        /// </summary>
+        public static string File {
+            get {
+                return ResourceManager.GetString("File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die File region ähnelt.
+        /// </summary>
+        public static string FileRegion {
+            get {
+                return ResourceManager.GetString("FileRegion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Game ähnelt.
+        /// </summary>
+        public static string Game {
+            get {
+                return ResourceManager.GetString("Game", resourceCulture);
             }
         }
         
@@ -120,6 +201,114 @@ namespace SramComparer.Server.Properties {
         public static string Game4Only {
             get {
                 return ResourceManager.GetString("Game4Only", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die mandatory ähnelt.
+        /// </summary>
+        public static string Mandatory {
+            get {
+                return ResourceManager.GetString("Mandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Non game buffer ähnelt.
+        /// </summary>
+        public static string NonGameBuffer {
+            get {
+                return ResourceManager.GetString("NonGameBuffer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Comparison of non game buffer (after all game sections) ähnelt.
+        /// </summary>
+        public static string NonGameBufferHint {
+            get {
+                return ResourceManager.GetString("NonGameBufferHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die is an Open Source tool. Source is hosted at ähnelt.
+        /// </summary>
+        public static string OpenSourceInfoFragment {
+            get {
+                return ResourceManager.GetString("OpenSourceInfoFragment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show additional game information ähnelt.
+        /// </summary>
+        public static string ShowAdditionalGameInformation {
+            get {
+                return ResourceManager.GetString("ShowAdditionalGameInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Comparer ähnelt.
+        /// </summary>
+        public static string SramComparer {
+            get {
+                return ResourceManager.GetString("SramComparer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Unknown12B ähnelt.
+        /// </summary>
+        public static string Unknown12B {
+            get {
+                return ResourceManager.GetString("Unknown12B", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die This value changes at every in-game save - maybe a timestamp or similar ähnelt.
+        /// </summary>
+        public static string Unknown12BHint {
+            get {
+                return ResourceManager.GetString("Unknown12BHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Use colored output ähnelt.
+        /// </summary>
+        public static string UseColoredOutput {
+            get {
+                return ResourceManager.GetString("UseColoredOutput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Web comparison ähnelt.
+        /// </summary>
+        public static string WebComparison {
+            get {
+                return ResourceManager.GetString("WebComparison", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Whole game buffer ähnelt.
+        /// </summary>
+        public static string WholeGameBuffer {
+            get {
+                return ResourceManager.GetString("WholeGameBuffer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Comparison of whole game buffer (including the &quot;knowns&quot;) ähnelt.
+        /// </summary>
+        public static string WholeGameBufferHint {
+            get {
+                return ResourceManager.GetString("WholeGameBufferHint", resourceCulture);
             }
         }
     }

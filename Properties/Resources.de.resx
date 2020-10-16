@@ -1,0 +1,95 @@
+﻿<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="AdditionalComparisons" xml:space="preserve">
+		<value>Zusätzliche Vergleiche</value>
+	</data>
+	<data name="AffectedGamesOnly" xml:space="preserve">
+		<value>Nur betroffene Spielslots</value>
+	</data>
+	<data name="AllGames" xml:space="preserve">
+		<value>Alle Spielslots</value>
+	</data>
+	<data name="Checksum" xml:space="preserve">
+		<value>Prüfsumme</value>
+	</data>
+	<data name="Compare" xml:space="preserve">
+		<value>Vergleiche</value>
+	</data>
+	<data name="ComparisonSramFile" xml:space="preserve">
+		<value>Vergleichs SRAM-Datei</value>
+	</data>
+	<data name="CurrentSramFile" xml:space="preserve">
+		<value>Aktuelle SRAM-Datei</value>
+	</data>
+	<data name="DontShow" xml:space="preserve">
+		<value>Nicht anzeigen</value>
+	</data>
+	<data name="Download" xml:space="preserve">
+		<value>Herunterladen</value>
+	</data>
+	<data name="File" xml:space="preserve">
+		<value>Datei</value>
+	</data>
+	<data name="FileRegion" xml:space="preserve">
+		<value>Datei-Region</value>
+	</data>
+	<data name="Game" xml:space="preserve">
+		<value>Spielslot</value>
+	</data>
+	<data name="Game1Only" xml:space="preserve">
+		<value>Nur #1</value>
+	</data>
+	<data name="Game2Only" xml:space="preserve">
+		<value>Nur #2</value>
+	</data>
+	<data name="Game4Only" xml:space="preserve">
+		<value>Nur #4</value>
+	</data>
+	<data name="Game3Only" xml:space="preserve">
+		<value>Nur #3</value>
+	</data>
+	<data name="Mandatory" xml:space="preserve">
+		<value>Pflichtfeld</value>
+	</data>
+	<data name="NonGameBuffer" xml:space="preserve">
+		<value>Nicht-Spielslot-Bereich</value>
+	</data>
+	<data name="NonGameBufferHint" xml:space="preserve">
+		<value>Vergleich des nicht Spielslot-Bereichs (außerhalb aller Spielslot-Bereiche)</value>
+	</data>
+	<data name="ShowAdditionalGameInformation" xml:space="preserve">
+		<value>Zusätzliche Spielslot-Informationen anzeigen</value>
+	</data>
+	<data name="SramComparer" xml:space="preserve">
+		<value>SRAM Comparer</value>
+	</data>
+	<data name="Unknown12B" xml:space="preserve">
+		<value>Unknown12B</value>
+	</data>
+	<data name="Unknown12BHint" xml:space="preserve">
+		<value>Dieser Wert ändert sich bei jedem In-game Speichern - vielleicht ein Zeitstempel oder ähnliches</value>
+	</data>
+	<data name="UseColoredOutput" xml:space="preserve">
+		<value>Farbliche Ausgabe verwenden</value>
+	</data>
+	<data name="WebComparison" xml:space="preserve">
+		<value>Web-Vergleich</value>
+	</data>
+	<data name="WholeGameBuffer" xml:space="preserve">
+		<value>Gesamter Spielslot-Bereich</value>
+	</data>
+	<data name="WholeGameBufferHint" xml:space="preserve">
+		<value>Vergleich des gesamten Spielslot-Bereichs (inklusive der "bekannten" Bereiche)</value>
+	</data>
+</root>
