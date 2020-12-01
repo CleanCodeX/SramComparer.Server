@@ -35,9 +35,6 @@
 	<data name="DontShow" xml:space="preserve">
 		<value>Nicht anzeigen</value>
 	</data>
-	<data name="Download" xml:space="preserve">
-		<value>Herunterladen</value>
-	</data>
 	<data name="File" xml:space="preserve">
 		<value>Datei</value>
 	</data>
@@ -84,12 +81,57 @@
 		<value>Farbliche Ausgabe verwenden</value>
 	</data>
 	<data name="WebComparison" xml:space="preserve">
-		<value>Web-Vergleich</value>
+		<value>Vergleichen</value>
 	</data>
 	<data name="WholeGameBuffer" xml:space="preserve">
 		<value>Gesamter Spielslot-Bereich</value>
 	</data>
 	<data name="WholeGameBufferHint" xml:space="preserve">
 		<value>Vergleich des gesamten Spielslot-Bereichs (inklusive der "bekannten" Bereiche)</value>
+	</data>
+	<data name="Offset" xml:space="preserve">
+		<value>Offset</value>
+	</data>
+	<data name="OffsetValue" xml:space="preserve">
+		<value>Offset Wert</value>
+	</data>
+	<data name="OpenSourceInfoFragment" xml:space="preserve">
+		<value>ist ein Open-Source Tool gehostet auf</value>
+	</data>
+	<data name="WebOffset" xml:space="preserve">
+		<value>Offset Änderung</value>
+	</data>
+	<data name="Game1" xml:space="preserve">
+		<value>#1</value>
+	</data>
+	<data name="Game2" xml:space="preserve">
+		<value>#2</value>
+	</data>
+	<data name="Game3" xml:space="preserve">
+		<value>#3</value>
+	</data>
+	<data name="Game4" xml:space="preserve">
+		<value>#4</value>
+	</data>
+	<data name="SramOffsetEdit" xml:space="preserve">
+		<value>SRAM Offset Änderung</value>
+	</data>
+	<data name="DownloadConfirmationFileTemplate" xml:space="preserve">
+		<value>Datei '{0}' herunterladen?</value>
+	</data>
+	<data name="ButtonGetOffsetValue" xml:space="preserve">
+		<value>Lade einen Offset-Wert</value>
+	</data>
+	<data name="ButtonSetOffsetValue" xml:space="preserve">
+		<value>Setze einen Offset-Wert</value>
+	</data>
+	<data name="SramFile" xml:space="preserve">
+		<value>SRAM-Datei</value>
+	</data>
+	<data name="ButtonDownloadChangedFile" xml:space="preserve">
+		<value>Geänderte Datei herunterladen</value>
+	</data>
+	<data name="Download" xml:space="preserve">
+		<value>Download</value>
 	</data>
 </root>

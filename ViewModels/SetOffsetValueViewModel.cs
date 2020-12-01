@@ -1,0 +1,79 @@
+﻿using System;
+using System.Drawing;
+using System.IO;
+using System.Threading.Tasks;
+using Common.Shared.Min.Extensions;
+using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
+using SramCommons.Extensions;
+using SramComparer.Helpers;
+using SramComparer.Properties;
+using SramComparer.Server.Extensions;
+using Res = SramComparer.Server.Properties.Resources;
+
+#pragma warning disable 8509
+
+namespace SramComparer.Server.ViewModels
+{
+	/// <summary>Base Viewmodel for loading SoE SRAM files</summary>
+	public class SetOffsetValueViewModel : GetOffsetValueViewModel
+	{
+#nullable disable
+		[Inject] internal IJSRuntime JsRuntime { get; set; }
+#nullable restore
+
+		public bool CanSave { get; set; }
+
+		public void SetOffsetValue()
+		{
+			try
+			{
+				CanSave = false;
+
+				SramFile.ThrowIfNull(nameof(SramFile));
+				SramFile.SetOffsetValue(Options.CurrentGame - 1, Offset, (byte)OffsetValue);
+				var valueDisplayText = NumberFormatter.GetByteValueRepresentations((byte)OffsetValue);
+
+				OutputMessage = Resources.StatusSetOffsetValueTemplate.InsertArgs(Offset, valueDisplayText).ColorText(Color.Green).ToMarkup();
+			}
+			catch (Exception ex)
+			{
+				OutputMessage = ex.Message.ColorText(Color.Red).ToMarkup();
+			}
+
+			CanSave = true;
+		}
+
+		public async Task SaveAndDownloadAsync()
+		{
+			try
+			{
+				var result = await JsRuntime.InvokeAsync<bool>("confirm", Res.DownloadConfirmationFileTemplate.InsertArgs(CurrentFileName));
+				if (!result) return;
+
+				SramFile.ThrowIfNull(nameof(SramFile));
+				
+				CanSave = false;
+				
+				var bytes = new byte[8192];
+				using var stream = new MemoryStream(bytes);
+				SramFile.Save(stream);
+
+				await JsRuntime.InvokeVoidAsync(
+					"downloadFromByteArray",
+					new
+					{
+						ByteArray = bytes,
+						FileName = CurrentFileName,
+						ContentType = "application/octet-stream"
+					});
+			}
+			catch (Exception ex)
+			{
+				OutputMessage = ex.Message.ColorText(Color.Red).ToMarkup();
+			}
+
+			CanSave = true;
+		}
+	}
+}

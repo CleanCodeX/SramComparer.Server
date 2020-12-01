@@ -8,11 +8,11 @@ using SramComparer.Server.ViewModels;
 namespace SramComparer.Server.Pages
 {
 	[Route(PageUris.CompareSoE)]
-	public partial class CompareSoE
+	public partial class Compare
 	{
 		private static readonly MarkupString Ns = (MarkupString)"&nbsp;";
 
-		private CompareSoEViewModel ViewModel { get; } = new CompareSoEViewModel();
+		private CompareViewModel ViewModel { get; } = new();
 		private bool CompareButtonDisabled => !ViewModel.CanCompare;
 
 		private const string SelectSelectedStyle = "color: cyan;background-color: black;";
@@ -28,7 +28,7 @@ namespace SramComparer.Server.Pages
 		private string Unknown12BStyle => ViewModel.Unknown12B == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private string GameChecksumStyle => ViewModel.GameChecksum == default ? SelectUnselectedStyle : SelectSelectedStyle;
 
-		private async Task OnCurrentFileChange(InputFileChangeEventArgs arg) => ViewModel.CurrentFileStream = await arg.File.OpenReadStream().CopyAsMemoryStreamAsync();
+		private Task OnCurrentFileChange(InputFileChangeEventArgs arg) => ViewModel.SetCurrentFileAsync(arg.File);
 
 		private async Task OnComparisonFileChange(InputFileChangeEventArgs arg) => ViewModel.ComparisonFileStream = await arg.File.OpenReadStream().CopyAsMemoryStreamAsync();
 	}

@@ -88,6 +88,33 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download changed file ähnelt.
+        /// </summary>
+        public static string ButtonDownloadChangedFile {
+            get {
+                return ResourceManager.GetString("ButtonDownloadChangedFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Get offset value ähnelt.
+        /// </summary>
+        public static string ButtonGetOffsetValue {
+            get {
+                return ResourceManager.GetString("ButtonGetOffsetValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Set offset value ähnelt.
+        /// </summary>
+        public static string ButtonSetOffsetValue {
+            get {
+                return ResourceManager.GetString("ButtonSetOffsetValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Checksum ähnelt.
         /// </summary>
         public static string Checksum {
@@ -142,6 +169,15 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download file &apos;{0}&apos;? ähnelt.
+        /// </summary>
+        public static string DownloadConfirmationFileTemplate {
+            get {
+                return ResourceManager.GetString("DownloadConfirmationFileTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die File ähnelt.
         /// </summary>
         public static string File {
@@ -169,11 +205,29 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #1 ähnelt.
+        /// </summary>
+        public static string Game1 {
+            get {
+                return ResourceManager.GetString("Game1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die #1 only ähnelt.
         /// </summary>
         public static string Game1Only {
             get {
                 return ResourceManager.GetString("Game1Only", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #2 ähnelt.
+        /// </summary>
+        public static string Game2 {
+            get {
+                return ResourceManager.GetString("Game2", resourceCulture);
             }
         }
         
@@ -187,11 +241,29 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #3 ähnelt.
+        /// </summary>
+        public static string Game3 {
+            get {
+                return ResourceManager.GetString("Game3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die #3 only ähnelt.
         /// </summary>
         public static string Game3Only {
             get {
                 return ResourceManager.GetString("Game3Only", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #4 ähnelt.
+        /// </summary>
+        public static string Game4 {
+            get {
+                return ResourceManager.GetString("Game4", resourceCulture);
             }
         }
         
@@ -232,6 +304,24 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Offset ähnelt.
+        /// </summary>
+        public static string Offset {
+            get {
+                return ResourceManager.GetString("Offset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Offset value ähnelt.
+        /// </summary>
+        public static string OffsetValue {
+            get {
+                return ResourceManager.GetString("OffsetValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die is an Open Source tool. Source is hosted at ähnelt.
         /// </summary>
         public static string OpenSourceInfoFragment {
@@ -255,6 +345,24 @@ namespace SramComparer.Server.Properties {
         public static string SramComparer {
             get {
                 return ResourceManager.GetString("SramComparer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM-File ähnelt.
+        /// </summary>
+        public static string SramFile {
+            get {
+                return ResourceManager.GetString("SramFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Offset Edit ähnelt.
+        /// </summary>
+        public static string SramOffsetEdit {
+            get {
+                return ResourceManager.GetString("SramOffsetEdit", resourceCulture);
             }
         }
         
@@ -286,11 +394,20 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Web comparison ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compare ähnelt.
         /// </summary>
         public static string WebComparison {
             get {
                 return ResourceManager.GetString("WebComparison", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Offset edit ähnelt.
+        /// </summary>
+        public static string WebOffset {
+            get {
+                return ResourceManager.GetString("WebOffset", resourceCulture);
             }
         }
         

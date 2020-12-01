@@ -5,6 +5,16 @@ VisualStudioVersion = 16.0.30524.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SramComparer.Server", "SramComparer.Server.csproj", "{85B610ED-C315-475A-B367-3B4FE66818DC}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SramCommons", "..\SramCommons\SramCommons.csproj", "{96008CD4-633E-4B7F-9174-135FBE909CA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SramFormat.SoE", "..\SramFormat.SoE\SramFormat.SoE.csproj", "{6BFD0FDD-E614-43F4-96E5-4824FAA4359C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SramComparer", "..\SramComparer\SramComparer.csproj", "{515A200D-C4E6-4ACC-85B0-FA2827C0DAEA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SramComparer.SoE", "..\SramComparer.SoE\SramComparer.SoE.csproj", "{BA917CE9-EE2B-40B1-8393-AF96BFAF5D12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "..\WebApplication1\WebApplication1.csproj", "{0409C388-E1F6-47CF-838E-F08DF61CAFEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,26 @@ Global
 		{85B610ED-C315-475A-B367-3B4FE66818DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85B610ED-C315-475A-B367-3B4FE66818DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85B610ED-C315-475A-B367-3B4FE66818DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96008CD4-633E-4B7F-9174-135FBE909CA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96008CD4-633E-4B7F-9174-135FBE909CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96008CD4-633E-4B7F-9174-135FBE909CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96008CD4-633E-4B7F-9174-135FBE909CA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BFD0FDD-E614-43F4-96E5-4824FAA4359C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BFD0FDD-E614-43F4-96E5-4824FAA4359C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BFD0FDD-E614-43F4-96E5-4824FAA4359C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BFD0FDD-E614-43F4-96E5-4824FAA4359C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{515A200D-C4E6-4ACC-85B0-FA2827C0DAEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{515A200D-C4E6-4ACC-85B0-FA2827C0DAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{515A200D-C4E6-4ACC-85B0-FA2827C0DAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{515A200D-C4E6-4ACC-85B0-FA2827C0DAEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA917CE9-EE2B-40B1-8393-AF96BFAF5D12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA917CE9-EE2B-40B1-8393-AF96BFAF5D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA917CE9-EE2B-40B1-8393-AF96BFAF5D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA917CE9-EE2B-40B1-8393-AF96BFAF5D12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0409C388-E1F6-47CF-838E-F08DF61CAFEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0409C388-E1F6-47CF-838E-F08DF61CAFEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0409C388-E1F6-47CF-838E-F08DF61CAFEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0409C388-E1F6-47CF-838E-F08DF61CAFEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

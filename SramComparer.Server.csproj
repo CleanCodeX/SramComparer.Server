@@ -3,10 +3,9 @@
   <PropertyGroup>
 	  <TargetFramework>net5.0</TargetFramework>
 	  <Nullable>enable</Nullable>
-	  <LangVersion>preview</LangVersion>
 	  <Company>CleanCodeX</Company>
 	  <Product>SramComparer.Server</Product>
-	  <Version>1.0.0-a1</Version>
+	  <Version>1.0.0-a2</Version>
 	  <Authors>CleanCodeX</Authors>
 	  <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 	  <UserSecretsId>17d24474-ed46-4f7f-bc20-2d543c8c8603</UserSecretsId>
@@ -22,11 +21,17 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CCX.SramComparer.SoE" Version="0.2.3-a7" />
+		<PackageReference Include="CCX.SramComparer.SoE" Version="0.2.3-b2" />
 		<PackageReference Include="Humanizer.Core" Version="2.8.26" />
 		<PackageReference Include="Humanizer.Core.de" Version="2.8.26" />
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
-		<PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.4.5" />
+		<PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.5.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\SramCommons\SramCommons.csproj" />
+	  <ProjectReference Include="..\SramComparer.SoE\SramComparer.SoE.csproj" />
+	  <ProjectReference Include="..\SramFormat.SoE\SramFormat.SoE.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

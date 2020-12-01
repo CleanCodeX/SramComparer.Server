@@ -1,47 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 using System.IO;
 using Common.Shared.Min.Extensions;
 using Common.Shared.Min.Helpers;
 using Microsoft.AspNetCore.Components;
 using SramComparer.Helpers;
+using SramComparer.Server.Extensions;
 using SramComparer.Server.Services;
+using SramComparer.Server.ViewModels.Bases;
 using SramComparer.Services;
-using SramComparer.SoE;
 using SramComparer.SoE.Enums;
 using SramComparer.SoE.Services;
-using SramFormat.SoE.Models.Enums;
 using Res = SramComparer.Server.Properties.Resources;
 #pragma warning disable 8509
 
 namespace SramComparer.Server.ViewModels
 {
 	/// <summary>Viewmodel for SoE SRAM comparison</summary>
-	public class CompareSoEViewModel
+	public class CompareViewModel : ViewModelBase
 	{
-		public enum GameId
-		{
-			[Display(Name = nameof(Res.AllGames), ResourceType = typeof(Res))]
-			All,
-			[Display(Name = nameof(Res.Game1Only), ResourceType = typeof(Res))]
-			One,
-			[Display(Name = nameof(Res.Game2Only), ResourceType = typeof(Res))]
-			Two,
-			[Display(Name = nameof(Res.Game3Only), ResourceType = typeof(Res))]
-			Three,
-			[Display(Name = nameof(Res.Game4Only), ResourceType = typeof(Res))]
-			Four
-		}
-
-		public Options Options { get; } = new Options();
-		public FileRegion Region { get; set; } = FileRegion.UnitedStates;
-		public GameId CurrentGame { get; set; }
 		public GameId ComparisonGame { get; set; }
-		public IEnumerable<FileRegion> FileRegions { get; } = default(FileRegion).GetValues();
-		public MemoryStream? CurrentFileStream { get; set; }
 		public MemoryStream? ComparisonFileStream { get; set; }
-		public MarkupString ComparisonResult { get; set; }
+		public MarkupString OutputMessage { get; set; }
 		public bool IsComparing { get; set; }
 		public bool CanCompare => !IsComparing && CurrentFileStream is not null && ComparisonFileStream is not null;
 		public ComparisonFlagsSoE Flags { get; set; }
@@ -82,7 +63,7 @@ namespace SramComparer.Server.ViewModels
 
 				SetOptions();
 
-				var output = new StringWriter { NewLine = "<br>" };
+				using var output = new StringWriter { NewLine = "<br>" };
 
 				Requires.NotNull(CurrentFileStream, nameof(CurrentFileStream));
 				Requires.NotNull(ComparisonFileStream, nameof(ComparisonFileStream));
@@ -92,11 +73,11 @@ namespace SramComparer.Server.ViewModels
 
 				new CommandHandlerSoE(UseColoredOutput ? new HtmlConsolePrinterSoE() : new ConsolePrinter()).Compare(CurrentFileStream, ComparisonFileStream, Options, output);
 
-				ComparisonResult = (MarkupString)output.ToString();
+				OutputMessage = output.ToString().ToMarkup();
 			}
 			catch (Exception ex)
 			{
-				ComparisonResult = (MarkupString)ex.Message;
+				OutputMessage = ex.Message.ColorText(Color.Red).ToMarkup();
 			}
 
 			IsComparing = false;
@@ -108,6 +89,7 @@ namespace SramComparer.Server.ViewModels
 			Options.CurrentGame = CurrentGame.ToInt();
 			Options.ComparisonGame = ComparisonGame.ToInt();
 
+			Options.Flags = Options.Flags & ~ComparisonFlagsSoE.AllGameChecksums;
 			if (GameChecksum != default)
 				Options.Flags = GameChecksum switch
 				{
@@ -115,7 +97,8 @@ namespace SramComparer.Server.ViewModels
 					AllSingleFlag.AffectedGamesOnly => Options.Flags |= ComparisonFlagsSoE.GameChecksum,
 				};
 
-			if (GameChecksum != default)
+			Options.Flags = Options.Flags & ~ComparisonFlagsSoE.AllUnknown12Bs;
+			if (Unknown12B != default)
 				Options.Flags = Unknown12B switch
 				{
 					AllSingleFlag.AllGames => Options.Flags |= ComparisonFlagsSoE.AllUnknown12Bs,

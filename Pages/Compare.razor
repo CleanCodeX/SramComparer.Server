@@ -1,5 +1,7 @@
-﻿<div class="mainDiv">
-	<h1 class="whiteText">@Res.SramComparer - @Res.WebComparison</h1>
+﻿<title>SRAM Comparer (Web)</title>
+
+<div class="mainDiv">
+	<h1 class="whiteText">@Res.SramComparer</h1>
 	<br />
 
 	<EditForm Model="@ViewModel">
@@ -54,7 +56,7 @@
 		<p />
 	</EditForm>
 
-	<div class="comparisonResult">
-		@ViewModel.ComparisonResult
+	<div class="result">
+		@ViewModel.OutputMessage
 	</div>
 </div>

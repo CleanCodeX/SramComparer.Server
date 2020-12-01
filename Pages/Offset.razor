@@ -1,0 +1,41 @@
+﻿<title>SRAM Offset Edit (Web)</title>
+
+<div class="mainDiv">
+	<h1 class="whiteText">@Res.SramOffsetEdit</h1>
+	<br />
+
+	<EditForm Model="@ViewModel">
+		<p>
+			<label class="yellowText">@Res.FileRegion:@Ns</label><InputSelectEnum @bind-Value="@ViewModel.Region" style=@RegionStyle />
+			<p>
+				<label class="yellowText">@Res.SramFile (*.srm)</label>
+					<br/>
+				<label>@Res.File:@Ns</label>
+				*) <InputFile OnChange="@OnCurrentFileChange" style=@ButtonStyle />
+					<br/>
+				<label>@Res.Game:@Ns</label>
+				<InputSelectEnum @bind-Value="@ViewModel.CurrentGame" style=@CurrentGameStyle />
+			</p>
+
+			<p>
+				<label>@Res.Offset:@Ns</label>
+				<InputNumber @bind-Value="@ViewModel.Offset" />
+				<button @onclick="@(() => ViewModel.GetOffsetValue())" disabled="@(!ViewModel.CanGet)">@Res.ButtonGetOffsetValue</button>
+				<br />
+				<label>@Res.OffsetValue:@Ns</label>
+				<InputNumber @bind-Value="@ViewModel.OffsetValue" />
+				<button @onclick="@(() => ViewModel.SetOffsetValue())" disabled="@(!ViewModel.CanSet)">@Res.ButtonSetOffsetValue</button>
+				<br />
+			</p>
+			<label class="whiteText">*) @Res.Mandatory</label>
+			<br />
+		</p>
+
+		<button class="btn btn-primary" @onclick="@ViewModel.SaveAndDownloadAsync" disabled="@SaveButtonDisabled">@Res.ButtonDownloadChangedFile</button>
+		<p />
+	</EditForm>
+
+	<div class="result">
+		@ViewModel.OutputMessage
+	</div>
+</div>

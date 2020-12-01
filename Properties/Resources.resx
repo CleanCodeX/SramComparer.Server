@@ -138,20 +138,44 @@
   <data name="Game4Only" xml:space="preserve">
     <value>#4 only</value>
   </data>
-  <data name="Download" xml:space="preserve">
-    <value>Download</value>
+  <data name="Game1" xml:space="preserve">
+    <value>#1</value>
+  </data>
+  <data name="Game2" xml:space="preserve">
+    <value>#2</value>
+  </data>
+  <data name="Game3" xml:space="preserve">
+    <value>#3</value>
+  </data>
+  <data name="Game4" xml:space="preserve">
+    <value>#4</value>
+  </data>
+  <data name="ButtonDownloadChangedFile" xml:space="preserve">
+    <value>Download changed file</value>
+  </data>
+  <data name="DownloadConfirmationFileTemplate" xml:space="preserve">
+    <value>Download file '{0}'?</value>
   </data>
   <data name="WebComparison" xml:space="preserve">
-    <value>Web comparison</value>
+    <value>Compare</value>
+  </data>
+  <data name="WebOffset" xml:space="preserve">
+    <value>Offset edit</value>
   </data>
   <data name="SramComparer" xml:space="preserve">
     <value>SRAM Comparer</value>
+  </data>
+  <data name="SramOffsetEdit" xml:space="preserve">
+    <value>SRAM Offset Edit</value>
   </data>
   <data name="ComparisonSramFile" xml:space="preserve">
     <value>Comparison SRAM-File</value>
   </data>
   <data name="CurrentSramFile" xml:space="preserve">
     <value>Current SRAM-File</value>
+  </data>
+  <data name="SramFile" xml:space="preserve">
+    <value>SRAM-File</value>
   </data>
   <data name="File" xml:space="preserve">
     <value>File</value>
@@ -186,6 +210,18 @@
   <data name="Unknown12B" xml:space="preserve">
     <value>Unknown12B</value>
   </data>
+  <data name="Offset" xml:space="preserve">
+    <value>Offset</value>
+  </data>
+  <data name="ButtonGetOffsetValue" xml:space="preserve">
+    <value>Get offset value</value>
+  </data>
+  <data name="ButtonSetOffsetValue" xml:space="preserve">
+    <value>Set offset value</value>
+  </data>
+  <data name="OffsetValue" xml:space="preserve">
+    <value>Offset value</value>
+  </data>
   <data name="Unknown12BHint" xml:space="preserve">
     <value>This value changes at every in-game save - maybe a timestamp or similar</value>
   </data>
@@ -195,6 +231,9 @@
   </data>
   <data name="Compare" xml:space="preserve">
     <value>Compare</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
   </data>
   <data name="UseColoredOutput" xml:space="preserve">
     <value>Use colored output</value>
