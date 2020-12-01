@@ -1,9 +1,5 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Components;
-using Microsoft.JSInterop;
-using SramComparer.Server.Extensions;
+﻿using Microsoft.AspNetCore.Components;
+using SramComparer.Server.Helpers;
 using SramComparer.Server.Services;
 
 namespace SramComparer.Server.Shared
@@ -12,7 +8,8 @@ namespace SramComparer.Server.Shared
 	{
 #nullable disable
 		[Inject] private IAppInfoService AppInfoService { get; set; }
-		[Inject] private IJSRuntime JsRuntime { get; set; }
+		[Inject] private Settings Settings { get; set; }
+		[Inject] private NavigationManager Navigation { get; set; }
 #nullable restore
 
 		private bool collapseNavMenu = true;
@@ -21,15 +18,6 @@ namespace SramComparer.Server.Shared
 
 		private void ToggleNavMenu() => collapseNavMenu = !collapseNavMenu;
 
-		public async Task DownloadChangelogAsync()
-		{
-			try
-			{
-				var saveFilename = $"changelog_v{AppInfoService.PackageVersion}.txt";
-				await JsRuntime.StartDownloadAsync(saveFilename, File.ReadAllBytes("changelog.txt"));
-			}
-			catch
-			{ }
-		}
-    }
+		private void OpenChangelog() => Navigation.NavigateTo(Settings.ChangeLogUrl!);
+	}
 }

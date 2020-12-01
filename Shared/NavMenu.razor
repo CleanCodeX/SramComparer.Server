@@ -10,7 +10,7 @@
 </div>
 
 <div class="version">
-    @($"v{AppInfoService.PackageVersion}") <button class="btn-info history" @onclick="@DownloadChangelogAsync" title="@Res.HintDownloadChangelog"><span class="iconify" data-icon="oi:header" data-inline="false" /></button>
+    @($"v{AppInfoService.PackageVersion}") <button class="btn-info history" @onclick="@OpenChangelog" title="@Res.HintShowChangelog"><span class="iconify" data-icon="oi:header" data-inline="false" /></button>
 </div>
 
 <div class="@NavMenuCssClass" @onclick="@ToggleNavMenu">

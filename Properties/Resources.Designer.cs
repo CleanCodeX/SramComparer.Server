@@ -340,20 +340,20 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Download changelog ähnelt.
-        /// </summary>
-        public static string HintDownloadChangelog {
-            get {
-                return ResourceManager.GetString("HintDownloadChangelog", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Download as text file ähnelt.
         /// </summary>
         public static string HintDownloadFile {
             get {
                 return ResourceManager.GetString("HintDownloadFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show changelog ähnelt.
+        /// </summary>
+        public static string HintShowChangelog {
+            get {
+                return ResourceManager.GetString("HintShowChangelog", resourceCulture);
             }
         }
         

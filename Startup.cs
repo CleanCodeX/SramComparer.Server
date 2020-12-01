@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
+using SramComparer.Server.Helpers;
 using SramComparer.Server.Services;
 
 namespace SramComparer.Server
@@ -18,6 +20,9 @@ namespace SramComparer.Server
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddSingleton<IAppInfoService, AppInfoService>();
+
+			services.AddOptions<Settings>().Bind(Configuration.GetSection(nameof(Settings)));
+			services.AddSingleton(cfg => cfg.GetService<IOptionsMonitor<Settings>>()!.CurrentValue);
 
 			services.AddHttpClient();
 			services.AddRazorPages();

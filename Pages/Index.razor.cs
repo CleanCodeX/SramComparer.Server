@@ -11,11 +11,11 @@ namespace SramComparer.Server.Pages
 	[Route("/")]
 	public partial class Index
 	{
-		private const string ReadMeUrl = "https://raw.githubusercontent.com/CleanCodeX/SramComparer.SoE/master/ReadMe.md";
-
 #nullable disable
 		[Inject]
 		private IHttpClientFactory ClientFactory { get; set; }
+		[Inject]
+		private Settings Settings { get; set; }
 #nullable restore
 
 		private MarkupString ReadMeContent { get; set; }
@@ -27,7 +27,7 @@ namespace SramComparer.Server.Pages
 			try
 			{
 				var http = ClientFactory.CreateClient();
-				var response = await http.GetAsync(ReadMeUrl);
+				var response = await http.GetAsync(Settings.ReadMeUrl);
 				var result = response.IsSuccessStatusCode ?
 					await response.Content.ReadAsStringAsync() : response.ReasonPhrase!;
 

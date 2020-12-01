@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <Content Include="changelog.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
