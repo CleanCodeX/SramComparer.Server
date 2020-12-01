@@ -262,6 +262,9 @@
   <data name="Download" xml:space="preserve">
     <value>Download</value>
   </data>
+  <data name="HintDownloadChangelog" xml:space="preserve">
+    <value>Download changelog</value>
+  </data>
   <data name="UseColoredOutput" xml:space="preserve">
     <value>Use colored output</value>
   </data>
