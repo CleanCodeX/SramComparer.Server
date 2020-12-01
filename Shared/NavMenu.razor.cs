@@ -25,8 +25,8 @@ namespace SramComparer.Server.Shared
 		{
 			try
 			{
-				var filename = "changelog.txt";
-				await JsRuntime.StartDownloadAsync(filename, File.ReadAllBytes(filename));
+				var saveFilename = $"changelog_v{AppInfoService.PackageVersion}.txt";
+				await JsRuntime.StartDownloadAsync(saveFilename, File.ReadAllBytes("changelog.txt"));
 			}
 			catch
 			{ }
