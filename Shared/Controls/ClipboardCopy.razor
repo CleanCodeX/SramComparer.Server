@@ -1,0 +1,22 @@
+﻿@inject IJSRuntime JsRuntime
+
+<button type="button" id="copyButton" class="btn btn-primary" @onclick="CopyTextToClipboardAsync" @attributes="AdditionalAttributes" disabled="@Disabled"><span class="iconify" data-icon="oi-file" data-inline="false" /></button>
+
+@code {
+
+	[Parameter] public bool Disabled { get; set; }
+	[Parameter] public string? Text { get; set; }
+	[Parameter] public Func<string>? OnCopy { get; set; }
+
+	[Parameter(CaptureUnmatchedValues = true)]
+	public IReadOnlyDictionary<string, object>? AdditionalAttributes { get; set; }
+
+	private async Task CopyTextToClipboardAsync()
+	{
+		var result = OnCopy?.Invoke();
+		if (result != null)
+			Text = result;
+
+		await JsRuntime.InvokeVoidAsync("clipboardCopy.copyText", TimeSpan.FromMilliseconds(100), Text!, Res.MessageCopiedToClipboard);
+	}
+}

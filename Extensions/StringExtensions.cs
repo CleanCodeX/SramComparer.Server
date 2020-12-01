@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Diagnostics.CodeAnalysis;
+using System.Drawing;
 using Microsoft.AspNetCore.Components;
 
 namespace SramComparer.Server.Extensions
@@ -22,5 +24,9 @@ namespace SramComparer.Server.Extensions
 		
 		/// <summary>Creates a markup string</summary>
 		public static MarkupString ToMarkup(this string source) => (MarkupString)source;
+
+		public static string ReplaceHtmlLinebreaks(this MarkupString source) => source.ToString().ReplaceHtmlLinebreaks();
+		public static string ReplaceHtmlLinebreaks([NotNull] this string source) => source
+			.Replace("<br>", Environment.NewLine);
 	}
 }

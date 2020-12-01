@@ -1,5 +1,8 @@
 ﻿@using SramComparer.Server.Extensions
 @using SramComparer.Server.Helpers
+@using SramComparer.Server.Services
+
+@inject IAppInfoService AppInfoService
 
 <img src="meta/SoE.png" style="float:top;width:250px;height:250px;" >
 <div class="top-row pl-4 navbar navbar-dark">
@@ -7,6 +10,10 @@
     <button class="navbar-toggler" @onclick="@ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
+</div>
+
+<div class="version">
+    @($"v{AppInfoService.PackageVersion}")
 </div>
 
 <div class="@NavMenuCssClass" @onclick="@ToggleNavMenu">

@@ -20,19 +20,20 @@
 			<p>
 				<label>@Res.Offset:@Ns</label>
 				<InputNumber @bind-Value="@ViewModel.Offset" />
-				<button @onclick="@(() => ViewModel.GetOffsetValue())" disabled="@(!ViewModel.CanGet)">@Res.ButtonGetOffsetValue</button>
+				<button class="btn btn-primary" @onclick="@(() => ViewModel.GetOffsetValue())" disabled="@(!ViewModel.CanGet)" title="@Res.HintButtonGetOffsetValue"><span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" /></button>
 				<br />
 				<label>@Res.OffsetValue:@Ns</label>
 				<InputNumber @bind-Value="@ViewModel.OffsetValue" />
-				<button @onclick="@(() => ViewModel.SetOffsetValue())" disabled="@(!ViewModel.CanSet)">@Res.ButtonSetOffsetValue</button>
+				<button class="btn btn-primary" @onclick="@(() => ViewModel.SetOffsetValue())" disabled="@(!ViewModel.CanSet)" title="@Res.HintButtonSetOffsetValue"><span class="iconify" data-icon="oi-pencil" data-inline="false" /></button>
 				<br />
 			</p>
-			<label class="whiteText">*) @Res.Mandatory</label>
-			<br />
-		</p>
 
-		<button class="btn btn-primary" @onclick="@ViewModel.SaveAndDownloadAsync" disabled="@SaveButtonDisabled">@Res.ButtonDownloadChangedFile</button>
-		<p />
+			<p>
+				<label class="whiteText">*) @Res.Mandatory</label>
+			</p>
+
+			<button class="btn btn-primary" @onclick="@ViewModel.SaveAndDownloadAsync" disabled="@SaveButtonDisabled" title="@Res.HintButtonDownloadChangedFile"><span class="iconify" data-icon="oi-cloud-download" data-inline="false" /></button>
+		</p>
 	</EditForm>
 
 	<div class="result">

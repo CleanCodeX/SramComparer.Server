@@ -88,29 +88,56 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Download changed file ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compiled at ähnelt.
         /// </summary>
-        public static string ButtonDownloadChangedFile {
+        public static string AppCompiledAt {
             get {
-                return ResourceManager.GetString("ButtonDownloadChangedFile", resourceCulture);
+                return ResourceManager.GetString("AppCompiledAt", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Get offset value ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Version ähnelt.
         /// </summary>
-        public static string ButtonGetOffsetValue {
+        public static string AppVersion {
             get {
-                return ResourceManager.GetString("ButtonGetOffsetValue", resourceCulture);
+                return ResourceManager.GetString("AppVersion", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Set offset value ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Copy to clipboard ähnelt.
         /// </summary>
-        public static string ButtonSetOffsetValue {
+        public static string ButtonCopy {
             get {
-                return ResourceManager.GetString("ButtonSetOffsetValue", resourceCulture);
+                return ResourceManager.GetString("ButtonCopy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download ähnelt.
+        /// </summary>
+        public static string ButtonDownloadFile {
+            get {
+                return ResourceManager.GetString("ButtonDownloadFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Get value ähnelt.
+        /// </summary>
+        public static string ButtonGetValue {
+            get {
+                return ResourceManager.GetString("ButtonGetValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Set value ähnelt.
+        /// </summary>
+        public static string ButtonSetValue {
+            get {
+                return ResourceManager.GetString("ButtonSetValue", resourceCulture);
             }
         }
         
@@ -120,15 +147,6 @@ namespace SramComparer.Server.Properties {
         public static string Checksum {
             get {
                 return ResourceManager.GetString("Checksum", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Compare ähnelt.
-        /// </summary>
-        public static string Compare {
-            get {
-                return ResourceManager.GetString("Compare", resourceCulture);
             }
         }
         
@@ -277,11 +295,74 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download changed file ähnelt.
+        /// </summary>
+        public static string HintButtonDownloadChangedFile {
+            get {
+                return ResourceManager.GetString("HintButtonDownloadChangedFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Get offset value ähnelt.
+        /// </summary>
+        public static string HintButtonGetOffsetValue {
+            get {
+                return ResourceManager.GetString("HintButtonGetOffsetValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Set offset value ähnelt.
+        /// </summary>
+        public static string HintButtonSetOffsetValue {
+            get {
+                return ResourceManager.GetString("HintButtonSetOffsetValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compare the files ähnelt.
+        /// </summary>
+        public static string HintCompare {
+            get {
+                return ResourceManager.GetString("HintCompare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Copy text to clipboard ähnelt.
+        /// </summary>
+        public static string HintCopyButton {
+            get {
+                return ResourceManager.GetString("HintCopyButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download as text file ähnelt.
+        /// </summary>
+        public static string HintDownloadFile {
+            get {
+                return ResourceManager.GetString("HintDownloadFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die mandatory ähnelt.
         /// </summary>
         public static string Mandatory {
             get {
                 return ResourceManager.GetString("Mandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Copied to clipboard! ähnelt.
+        /// </summary>
+        public static string MessageCopiedToClipboard {
+            get {
+                return ResourceManager.GetString("MessageCopiedToClipboard", resourceCulture);
             }
         }
         

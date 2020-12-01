@@ -23,8 +23,8 @@
 	<data name="Checksum" xml:space="preserve">
 		<value>Prüfsumme</value>
 	</data>
-	<data name="Compare" xml:space="preserve">
-		<value>Vergleiche</value>
+	<data name="HintCompare" xml:space="preserve">
+		<value>Vergleiche die Dateien</value>
 	</data>
 	<data name="ComparisonSramFile" xml:space="preserve">
 		<value>Vergleichs SRAM-Datei</value>
@@ -78,7 +78,7 @@
 		<value>Dieser Wert ändert sich bei jedem In-game Speichern - vielleicht ein Zeitstempel oder ähnliches</value>
 	</data>
 	<data name="UseColoredOutput" xml:space="preserve">
-		<value>Farbliche Ausgabe verwenden</value>
+		<value>Eingefärbte Ausgabe verwenden</value>
 	</data>
 	<data name="WebComparison" xml:space="preserve">
 		<value>Vergleichen</value>
@@ -119,19 +119,46 @@
 	<data name="DownloadConfirmationFileTemplate" xml:space="preserve">
 		<value>Datei '{0}' herunterladen?</value>
 	</data>
-	<data name="ButtonGetOffsetValue" xml:space="preserve">
+	<data name="HintButtonGetOffsetValue" xml:space="preserve">
 		<value>Lade einen Offset-Wert</value>
 	</data>
-	<data name="ButtonSetOffsetValue" xml:space="preserve">
+	<data name="HintButtonSetOffsetValue" xml:space="preserve">
 		<value>Setze einen Offset-Wert</value>
 	</data>
 	<data name="SramFile" xml:space="preserve">
 		<value>SRAM-Datei</value>
 	</data>
-	<data name="ButtonDownloadChangedFile" xml:space="preserve">
+	<data name="HintButtonDownloadChangedFile" xml:space="preserve">
 		<value>Geänderte Datei herunterladen</value>
 	</data>
 	<data name="Download" xml:space="preserve">
 		<value>Download</value>
+	</data>
+	<data name="ButtonCopy" xml:space="preserve">
+		<value>In die Zwischenablage kopieren</value>
+	</data>
+	<data name="MessageCopiedToClipboard" xml:space="preserve">
+		<value>In die Zwischenablage kopiert!</value>
+	</data>
+	<data name="ButtonDownloadFile" xml:space="preserve">
+    <value>Herunterladen</value>
+  </data>
+	<data name="HintDownloadFile" xml:space="preserve">
+    <value>Als Text-Datei herunterladen</value>
+  </data>
+	<data name="AppCompiledAt" xml:space="preserve">
+		<value>Kompiliert am</value>
+	</data>
+	<data name="AppVersion" xml:space="preserve">
+		<value>Version</value>
+	</data>
+	<data name="HintCopyButton" xml:space="preserve">
+		<value>Text in Zwischenablage kopieren</value>
+	</data>
+	<data name="ButtonGetValue" xml:space="preserve">
+		<value>Zeige Wert</value>
+	</data>
+	<data name="ButtonSetValue" xml:space="preserve">
+		<value>Setze Wert</value>
 	</data>
 </root>

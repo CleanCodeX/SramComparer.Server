@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Components;
 using SramComparer.Helpers;
 using SramComparer.Server.Extensions;
 using SramComparer.Server.Services;
+using SramComparer.Server.Shared;
+using SramComparer.Server.Shared.Enums;
 using SramComparer.Server.ViewModels.Bases;
 using SramComparer.Services;
 using SramComparer.SoE.Enums;

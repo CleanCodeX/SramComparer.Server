@@ -56,7 +56,7 @@ namespace SramComparer.Server.ViewModels
 				CanSave = false;
 				
 				var bytes = new byte[8192];
-				using var stream = new MemoryStream(bytes);
+				await using var stream = new MemoryStream(bytes);
 				SramFile.Save(stream);
 
 				await JsRuntime.InvokeVoidAsync(

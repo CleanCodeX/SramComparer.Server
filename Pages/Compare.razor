@@ -46,16 +46,20 @@
 				<label title="@Res.Unknown12BHint">@Res.Unknown12B:@Ns</label>
 				<InputSelectEnum @bind-Value="@ViewModel.Unknown12B" style=@Unknown12BStyle />
 			</p>
+			<p>	
+				<InputCheckbox @bind-Value="@ViewModel.UseColoredOutput" /> <label class="whiteText">@Res.UseColoredOutput</label>
+			</p>
+
 			<label class="whiteText">*) @Res.Mandatory</label>
 			<br />
 		</p>
 
-		<button class="btn btn-primary" @onclick="@ViewModel.Compare" disabled="@CompareButtonDisabled">@Res.Compare</button>
-		<InputCheckbox @bind-Value="@ViewModel.UseColoredOutput" />
-		<label class="whiteText">@Res.UseColoredOutput</label>
-		<p />
+		<p>	
+			<button class="btn btn-primary" @onclick="@ViewModel.Compare" disabled="@CompareButtonDisabled" title="@Res.HintCompare"><span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" /></button>
+			
+			<ClipboardCopy OnCopy="@CopyText" Disabled="@CopyButtonDisabled" title="@Res.HintCopyButton" />&nbsp;<button class="btn btn-primary" @onclick="@DownloadAsync" disabled="@CopyButtonDisabled" title="@Res.HintDownloadFile"><span class="iconify" data-icon="oi-cloud-download" data-inline="false" /></button>
+		</p>
 	</EditForm>
-
 	<div class="result">
 		@ViewModel.OutputMessage
 	</div>

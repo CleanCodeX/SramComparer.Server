@@ -3,6 +3,8 @@ using System.IO;
 using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
 using Microsoft.AspNetCore.Components.Forms;
+using SramComparer.Server.Shared;
+using SramComparer.Server.Shared.Enums;
 using SramComparer.SoE;
 using SramFormat.SoE.Models.Enums;
 

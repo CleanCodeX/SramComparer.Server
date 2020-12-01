@@ -6,6 +6,8 @@ using Common.Shared.Min.Helpers;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using SramComparer.Server.Extensions;
+using SramComparer.Server.Shared;
+using SramComparer.Server.Shared.Enums;
 using SramFormat.SoE;
 
 #pragma warning disable 8509

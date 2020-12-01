@@ -60,3 +60,10 @@
 		display: block;
 	}
 }
+
+.version {
+	margin: 5px;
+	margin-left: 10px;
+	color: darkgray;
+	alignment: center
+}
