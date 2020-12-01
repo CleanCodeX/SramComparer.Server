@@ -20,6 +20,10 @@
     <None Remove=".gitignore" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="changelog.txt" />
+  </ItemGroup>
+
 	<ItemGroup>
 		<PackageReference Include="CCX.SramComparer.SoE" Version="0.2.3-b2" />
 		<PackageReference Include="Humanizer.Core" Version="2.8.26" />

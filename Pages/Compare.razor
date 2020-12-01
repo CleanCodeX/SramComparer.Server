@@ -1,65 +1,101 @@
 ﻿<title>SRAM Comparer (Web)</title>
 
-<div class="mainDiv">
-	<h1 class="whiteText">@Res.SramComparer</h1>
+<div>
+	<h1>@Res.SramComparer</h1>
 	<br />
 
 	<EditForm Model="@ViewModel">
-		<p>
-			<label class="yellowText">@Res.FileRegion:@Ns</label><InputSelectEnum @bind-Value="@ViewModel.Region" style=@RegionStyle />
-			<p>
-				<label class="yellowText">@Res.CurrentSramFile (*.srm)</label>
-					<br/>
-				<label>@Res.File:@Ns</label>
-				*) <InputFile OnChange="@OnCurrentFileChange" style=@ButtonStyle />
-					<br/>
-				<label>@Res.Game:@Ns</label>
-				<InputSelectEnum @bind-Value="@ViewModel.CurrentGame" style=@CurrentGameStyle />
-			</p>
+		<table>
+			<tr>
+				<td><label class="header">@Res.FileRegion:@Ns</label></td>
+				<td><InputSelectEnum @bind-Value="@ViewModel.Region" style=@RegionStyle /></td>
+			</tr>
 			
-			<p>
-				<label class="yellowText">@Res.ComparisonSramFile (*.srm|*.comp)</label>
-					<br/>
-				<label>@Res.File:@Ns</label>
-				*) <InputFile OnChange="@OnComparisonFileChange" style=@ButtonStyle />
-					<br/>
-				<label>@Res.Game:@Ns</label>
-				<InputSelectEnum @bind-Value="@ViewModel.ComparisonGame" style=@ComparisonGameStyle />
-			</p>
+			<p />
+
+			<tr>
+				<td colspan="2"><label class="header">@Res.CurrentSramFile (*.srm)</label></td>
+			</tr>
+
+			<tr>
+				<td><label>@Res.File:@Ns *)</label></td>
+				<td><InputFile OnChange="@OnCurrentFileChange" style=@ButtonStyle /></td>
+			</tr>
+			<tr>
+				<td><label>@Res.Game:@Ns</label></td>
+				<td><InputSelectEnum @bind-Value="@ViewModel.CurrentGame" style=@CurrentGameStyle /></td>
+			</tr>
 			
-			<p>
-				<label class="yellowText">@Res.AdditionalComparisons:</label>
-					<br />
-					<InputCheckbox @bind-Value="@ViewModel.WholeGameBuffer" />
+			<p />
+
+			<tr>
+				<td colspan="2"><label class="header">@Res.ComparisonSramFile (*.srm|*.comp)</label></td>
+			</tr>
+			
+			<tr>
+				<td><label>@Res.File:@Ns *)</label></td>
+				<td><InputFile OnChange="@OnComparisonFileChange" style=@ButtonStyle /></td>
+			</tr>
+			<tr>
+				<td><label>@Res.Game:@Ns</label></td>
+				<td><InputSelectEnum @bind-Value="@ViewModel.ComparisonGame" style=@ComparisonGameStyle /></td>
+			</tr>
+			
+			<p />
+
+			<tr>
+				<td colspan="2"><label class="header">@Res.AdditionalComparisons:</label></td>
+			</tr>
+			
+			<tr>
+				<td colspan="2"><InputCheckbox @bind-Value="@ViewModel.WholeGameBuffer" />
 					<label style=@WholeGameStyle title="@Res.WholeGameBufferHint">@Res.WholeGameBuffer</label> | 
 					<InputCheckbox @bind-Value="@ViewModel.NonGameBuffer" />
 					<label style=@NonGameStyle title="@Res.NonGameBufferHint">@Res.NonGameBuffer</label>
-				
-			</p>
+				</td>
+			</tr>
 			
-			<p>
-				<label class="yellowText">@Res.ShowAdditionalGameInformation:</label>
-					<br />
-				<label>@Res.Checksum:@Ns</label>
-				<InputSelectEnum @bind-Value="@ViewModel.GameChecksum" style=@GameChecksumStyle />
-					<br />
-				<label title="@Res.Unknown12BHint">@Res.Unknown12B:@Ns</label>
-				<InputSelectEnum @bind-Value="@ViewModel.Unknown12B" style=@Unknown12BStyle />
-			</p>
-			<p>	
-				<InputCheckbox @bind-Value="@ViewModel.UseColoredOutput" /> <label class="whiteText">@Res.UseColoredOutput</label>
-			</p>
+			<p />
 
-			<label class="whiteText">*) @Res.Mandatory</label>
-			<br />
-		</p>
-
-		<p>	
-			<button class="btn btn-primary" @onclick="@ViewModel.Compare" disabled="@CompareButtonDisabled" title="@Res.HintCompare"><span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" /></button>
+			<tr>
+				<td colspan="2"><label class="header">@Res.ShowAdditionalGameInformation:</label></td>
+			</tr>
 			
-			<ClipboardCopy OnCopy="@CopyText" Disabled="@CopyButtonDisabled" title="@Res.HintCopyButton" />&nbsp;<button class="btn btn-primary" @onclick="@DownloadAsync" disabled="@CopyButtonDisabled" title="@Res.HintDownloadFile"><span class="iconify" data-icon="oi-cloud-download" data-inline="false" /></button>
-		</p>
+			<tr>
+				<td><label>@Res.Checksum:@Ns</label></td>
+				<td><InputSelectEnum @bind-Value="@ViewModel.GameChecksum" style=@GameChecksumStyle /></td>
+			</tr>
+			<tr>
+				<td><label title="@Res.Unknown12BHint">@Res.Unknown12B:@Ns</label></td>
+				<td><InputSelectEnum @bind-Value="@ViewModel.Unknown12B" style=@Unknown12BStyle /></td>
+			</tr>
+			
+			<p />
+
+			<tr>	
+				<td colspan="2"><InputCheckbox @bind-Value="@ViewModel.UseColoredOutput" /> <label class="whiteText">@Res.UseColoredOutput</label></td>
+			</tr>
+
+			<p />
+
+			<tr>
+				<td><label>*) @Res.Mandatory</label></td>
+			</tr>
+		
+			<p />
+
+			<tr>	
+				<td>
+					<button class="btn btn-primary" @onclick="@ViewModel.Compare" disabled="@CompareButtonDisabled" title="@Res.HintCompare"><span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" /></button>
+					
+					<ClipboardCopy OnCopy="@CopyText" Disabled="@CopyButtonDisabled" title="@Res.HintCopyButton" />
+					
+					<button class="btn btn-primary" @onclick="@DownloadAsync" disabled="@CopyButtonDisabled" title="@Res.HintDownloadFile"><span class="iconify" data-icon="oi-cloud-download" data-inline="false" /></button>
+				</td>
+			</tr>
+		</table>
 	</EditForm>
+
 	<div class="result">
 		@ViewModel.OutputMessage
 	</div>

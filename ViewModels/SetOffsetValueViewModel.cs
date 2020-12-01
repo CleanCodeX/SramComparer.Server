@@ -9,7 +9,6 @@ using SramCommons.Extensions;
 using SramComparer.Helpers;
 using SramComparer.Properties;
 using SramComparer.Server.Extensions;
-using Res = SramComparer.Server.Properties.Resources;
 
 #pragma warning disable 8509
 
@@ -48,25 +47,13 @@ namespace SramComparer.Server.ViewModels
 		{
 			try
 			{
-				var result = await JsRuntime.InvokeAsync<bool>("confirm", Res.DownloadConfirmationFileTemplate.InsertArgs(CurrentFileName));
-				if (!result) return;
-
 				SramFile.ThrowIfNull(nameof(SramFile));
-				
 				CanSave = false;
 				
 				var bytes = new byte[8192];
-				await using var stream = new MemoryStream(bytes);
-				SramFile.Save(stream);
+				SramFile.Save(new MemoryStream(bytes));
 
-				await JsRuntime.InvokeVoidAsync(
-					"downloadFromByteArray",
-					new
-					{
-						ByteArray = bytes,
-						FileName = CurrentFileName,
-						ContentType = "application/octet-stream"
-					});
+				await JsRuntime.StartDownloadAsync(CurrentFileName!, bytes);
 			}
 			catch (Exception ex)
 			{

@@ -9,7 +9,6 @@ using Microsoft.JSInterop;
 using SramComparer.Server.Extensions;
 using SramComparer.Server.Helpers;
 using SramComparer.Server.ViewModels;
-using Res = SramComparer.Server.Properties.Resources;
 
 namespace SramComparer.Server.Pages
 {
@@ -56,24 +55,11 @@ namespace SramComparer.Server.Pages
 			return ViewModel.OutputMessage.ReplaceHtmlLinebreaks();
 		}
 
-		private async Task DownloadAsync()
+		public async Task DownloadAsync()
 		{
 			try
 			{
-				var filename = "Output.txt";
-				var result = await JsRuntime.InvokeAsync<bool>("confirm", Res.DownloadConfirmationFileTemplate.InsertArgs(filename));
-				if (!result) return;
-
-				var bytes = Encoding.UTF8.GetBytes(CopyText());
-				
-				await JsRuntime.InvokeVoidAsync(
-					"downloadFromByteArray",
-					new
-					{
-						ByteArray = bytes,
-						FileName = filename,
-						ContentType = "application/octet-stream"
-					});
+				await JsRuntime.StartDownloadAsync("Output.txt", Encoding.UTF8.GetBytes(CopyText()));
 			}
 			catch (Exception ex)
 			{

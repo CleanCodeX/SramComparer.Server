@@ -1,8 +1,5 @@
 ﻿@using SramComparer.Server.Extensions
 @using SramComparer.Server.Helpers
-@using SramComparer.Server.Services
-
-@inject IAppInfoService AppInfoService
 
 <img src="meta/SoE.png" style="float:top;width:250px;height:250px;" >
 <div class="top-row pl-4 navbar navbar-dark">
@@ -13,7 +10,7 @@
 </div>
 
 <div class="version">
-    @($"v{AppInfoService.PackageVersion}")
+    @($"v{AppInfoService.PackageVersion}") <button class="btn-info history" @onclick="@DownloadChangelogAsync" title="@Res.HintDownloadChangelog"><span class="iconify" data-icon="oi:header" data-inline="false" /></button>
 </div>
 
 <div class="@NavMenuCssClass" @onclick="@ToggleNavMenu">
@@ -35,11 +32,3 @@
         </li>
     </ul>
 </div>
-
-@code {
-    private bool collapseNavMenu = true;
-
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu() => collapseNavMenu = !collapseNavMenu;
-}
