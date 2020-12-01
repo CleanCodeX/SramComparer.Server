@@ -3,14 +3,12 @@
 
 <img src="meta/SoE.png" style="float:top;width:250px;height:250px;" >
 <div class="top-row pl-4 navbar navbar-dark">
-        <a class="navbar-brand" href="">@Res.SramComparer</a>
+    <div class="version">
+        @($"v{AppInfoService.PackageVersion}")  <button class="btn-info history" @onclick="@OpenChangelog" title="@Res.HintShowChangelog"><span class="iconify" data-icon="oi:header" data-inline="false" /></button>
+    </div>
     <button class="navbar-toggler" @onclick="@ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
-</div>
-
-<div class="version">
-    @($"v{AppInfoService.PackageVersion}") <button class="btn-info history" @onclick="@OpenChangelog" title="@Res.HintShowChangelog"><span class="iconify" data-icon="oi:header" data-inline="false" /></button>
 </div>
 
 <div class="@NavMenuCssClass" @onclick="@ToggleNavMenu">

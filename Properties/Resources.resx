@@ -181,10 +181,10 @@
     <value>Offset edit</value>
   </data>
   <data name="SramComparer" xml:space="preserve">
-    <value>SRAM Comparer</value>
+    <value>SRAM - Comparer</value>
   </data>
   <data name="SramOffsetEdit" xml:space="preserve">
-    <value>SRAM Offset Edit</value>
+    <value>SRAM - Offset Edit</value>
   </data>
   <data name="ComparisonSramFile" xml:space="preserve">
     <value>Comparison SRAM-File</value>

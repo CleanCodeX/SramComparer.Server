@@ -430,7 +430,7 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Comparer ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Comparer ähnelt.
         /// </summary>
         public static string SramComparer {
             get {
@@ -448,7 +448,7 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Offset Edit ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Offset Edit ähnelt.
         /// </summary>
         public static string SramOffsetEdit {
             get {
