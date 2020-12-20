@@ -1,6 +1,6 @@
 ﻿# This project is Open-Source! Even this Webservice.
 
-* Sources are hosted at <a href="https://github.com/CleanCodeX" target="_">GitHub</a>
+* Sources are hosted at [GitHub](https://github.com/CleanCodeX){target="_"}
 
 ## Relevant Repositories
 
