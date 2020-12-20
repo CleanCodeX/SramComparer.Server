@@ -1,7 +1,12 @@
-﻿namespace SramComparer.Server.Helpers
+﻿using System.Collections.Generic;
+
+#nullable disable
+
+namespace SramComparer.Server.Helpers
 {
-	public record Settings(string? ReadMeUrl, string? GitHubUrl, string? ChangeLogUrl)
+	public record Settings
 	{
-		public Settings() :this(default, default, default) { }
+		public IDictionary<string, string> Urls { get; set; }
+		public IDictionary<string, string> Files { get; set; }
 	}
 }

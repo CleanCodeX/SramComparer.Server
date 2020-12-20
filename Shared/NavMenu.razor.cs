@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using SramComparer.Server.Extensions;
 using SramComparer.Server.Helpers;
 using SramComparer.Server.Services;
 
@@ -9,15 +10,33 @@ namespace SramComparer.Server.Shared
 #nullable disable
 		[Inject] private IAppInfoService AppInfoService { get; set; }
 		[Inject] private Settings Settings { get; set; }
-		[Inject] private NavigationManager Navigation { get; set; }
+		[Inject] private NavigationManager NavigationManager { get; set; }
 #nullable restore
 
-		private bool collapseNavMenu = true;
+		private enum ExpandedMenu
+		{
+			None,
+			SramComparer,
+			WebTools
+		}
 
-		private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+		private bool _sramComparer = true;
+		private bool _webTools = true;
 
-		private void ToggleNavMenu() => collapseNavMenu = !collapseNavMenu;
+		private string? GetUrl(string key) => Settings.Urls.GetValue(key);
 
-		private void OpenChangelog() => Navigation.NavigateTo(Settings.ChangeLogUrl!);
+		//private string? GetNavMenuCssClass(bool flag) => !flag ? null : "collapse";
+
+		private void ExpandMenu(ExpandedMenu menu)
+		{
+			return;
+			
+			_sramComparer = menu == ExpandedMenu.SramComparer;
+			_webTools = menu == ExpandedMenu.WebTools;
+		}
+
+		private void CollapseMenu() => ExpandMenu(ExpandedMenu.None);
+
+		private void OpenChangelog() => NavigationManager.NavigateTo(PageUris.Changelog);
 	}
 }

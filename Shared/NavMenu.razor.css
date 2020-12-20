@@ -1,3 +1,19 @@
+.logo {
+	float: top;
+	width: 280px;
+	height: 240px;
+}
+
+.icon {
+	width: 20px;
+	height: 20px;
+	margin-right: 15px;
+}
+
+.version {
+	color: lightgray;
+}
+
 .navbar-toggler {
 	background-color: rgba(255, 255, 255, 0.1);
 }
@@ -20,21 +36,13 @@
 
 .nav-item {
 	font-size: 0.9rem;
-	padding-bottom: 0.5rem;
-}
-
-.nav-item:first-of-type {
-	padding-top: 1rem;
-}
-
-.nav-item:last-of-type {
-	padding-bottom: 1rem;
+	padding-top: 0.2rem;
 }
 
 .nav-item ::deep a {
 	color: #d7d7d7;
 	border-radius: 4px;
-	height: 3rem;
+	height: 2.5rem;
 	display: flex;
 	align-items: center;
 	line-height: 3rem;
@@ -59,16 +67,4 @@
 		/* Never collapse the sidebar for wide screens */
 		display: block;
 	}
-}
-
-.version {
-	margin: 5px;
-	margin-left: 10px;
-	color: darkgray;
-	alignment: center
-}
-
-.history {
-	width: 30px;
-	height: 30px;
 }

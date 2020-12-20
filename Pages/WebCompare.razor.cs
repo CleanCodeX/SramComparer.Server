@@ -12,8 +12,8 @@ using SramComparer.Server.ViewModels;
 
 namespace SramComparer.Server.Pages
 {
-	[Route(PageUris.CompareSoE)]
-	public partial class Compare
+	[Route(PageUris.Compare)]
+	public partial class WebCompare
 	{
 		private static readonly MarkupString Ns = (MarkupString)"&nbsp;";
 

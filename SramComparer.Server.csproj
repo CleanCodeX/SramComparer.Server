@@ -5,7 +5,7 @@
 	  <Nullable>enable</Nullable>
 	  <Company>CleanCodeX</Company>
 	  <Product>SramComparer.Server</Product>
-	  <Version>1.0.1-a1</Version>
+	  <Version>1.0.2-a1</Version>
 	  <Authors>CleanCodeX</Authors>
 	  <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 	  <UserSecretsId>17d24474-ed46-4f7f-bc20-2d543c8c8603</UserSecretsId>
@@ -21,15 +21,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="changelog.txt">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Content>
+    <_WebToolingArtifacts Remove="Properties\PublishProfiles\sramcomparer - Web Deploy.pubxml" />
   </ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CCX.SramComparer.SoE" Version="0.2.3-b6" />
+		<PackageReference Include="CCX.SramComparer.SoE" Version="0.2.4-a2" />
 		<PackageReference Include="Humanizer.Core" Version="2.8.26" />
 		<PackageReference Include="Humanizer.Core.de" Version="2.8.26" />
+		<PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
 		<PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.5.0" />
 	</ItemGroup>

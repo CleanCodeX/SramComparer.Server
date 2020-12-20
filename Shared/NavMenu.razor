@@ -1,31 +1,97 @@
-﻿@using SramComparer.Server.Extensions
-@using SramComparer.Server.Helpers
+﻿@using SramComparer.Server.Helpers
+@using SramComparer.Server.Extensions
 
-<img src="meta/SoE.png" style="float:top;width:250px;height:250px;" >
-<div class="top-row pl-4 navbar navbar-dark">
-    <div class="version">
-        @($"v{AppInfoService.PackageVersion}")  <button class="btn-info history" @onclick="@OpenChangelog" title="@Res.HintShowChangelog"><span class="iconify" data-icon="oi:header" data-inline="false" /></button>
+<img src="media/SoE.png" class="logo" alt="SoE" @onclick="@CollapseMenu">
+<div class="top-row pl-4 navbar navbar-dark version" @onclick="@CollapseMenu">
+    <div>
+        @($"v{AppInfoService.PackageVersion}")<NavLink href="@PageUris.Changelog" title="@Res.HintShowChangelog">?</NavLink>
     </div>
-    <button class="navbar-toggler" @onclick="@ToggleNavMenu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
 </div>
+<div>
+    <ul class="nav flex-column" title="@Res.SramComparer">
+        <li class="nav-item px-3">
+            <a class="nav-link" href="@PageUris.Features" @onclick="@(() => ExpandMenu(ExpandedMenu.SramComparer))">
+                <span class="oi oi-aperture" aria-hidden="true"/> @Res.SramComparer.ReplaceSpaces()
+            </a>
+        </li>
+        @if (_sramComparer)
+        {
+            <li class="nav-item px-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" href="@PageUris.Features">
+                            <span class="oi oi-align-center" aria-hidden="true"/> @Res.Features.ReplaceSpaces()
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" href="@PageUris.Download">
+                            <span class="oi oi-arrow-circle-bottom" aria-hidden="true"/> @Res.Download.ReplaceSpaces()
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" href="@PageUris.WhatIsUnknown">
+                            <span class="oi oi-puzzle-piece" aria-hidden="true"/> @Res.WhatIsUnknown.ReplaceSpaces()
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" href="@PageUris.Unknowns">
+                            <span class="oi oi-question-mark" aria-hidden="true"/> @Res.Unknowns.ReplaceSpaces()
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" href="@PageUris.Imagery">
+                            <span class="oi oi-map" aria-hidden="true"/> @Res.Imagery.ReplaceSpaces()
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" href="@PageUris.HowToUse">
+                            <span class="oi oi-document" aria-hidden="true"/> @Res.HowToUse.ReplaceSpaces()
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" href="@PageUris.HowCanIHelp">
+                            <span class="oi oi-thumb-up" aria-hidden="true"/> @Res.HowCanIHelp.ReplaceSpaces()
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" href="@GetUrl("github")" target="_" title="@Res.LinkOpensInNewTab">
+                            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="icon" alt="GitHub" /> GitHub
+                        </NavLink>
+                    </li>
+                </ul>
+            </li>
+        }
+    </ul>
 
-<div class="@NavMenuCssClass" @onclick="@ToggleNavMenu">
-    <ul class="nav flex-column">
+    <ul class="nav flex-column" title="@Res.WebTools">
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-arrow-circle-bottom" aria-hidden="true"></span> @Res.Download
-            </NavLink>
+            <a class="nav-link" href="@PageUris.Compare" @onclick="@(() => ExpandMenu(ExpandedMenu.WebTools))">
+                <span class="oi oi-aperture" aria-hidden="true"/> @Res.WebTools.ReplaceSpaces()
+            </a>
         </li>
+        @if (_webTools)
+        {
+            <li class="nav-item px-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" href="@PageUris.Compare">
+                            <span class="oi oi-eye" aria-hidden="true"/> @Res.WebComparison.ReplaceSpaces()
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" href="@PageUris.Offset">
+                            <span class="oi oi-pencil" aria-hidden="true"/> @Res.WebOffset.ReplaceSpaces()
+                        </NavLink>
+                    </li>
+                </ul>
+            </li>
+        }
+    </ul>
+
+    <ul class="nav flex-column" title="@Res.Pages">
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.CompareSoE">
-                <span class="oi oi-eye" aria-hidden="true"></span> @Res.WebComparison.ReplaceSpaces()
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.OffsetSoE">
-                <span class="oi oi-pencil" aria-hidden="true"></span> @Res.WebOffset.ReplaceSpaces()
+            <NavLink class="nav-link" href="@PageUris.AwesomeSoE" title="@Res.TooltipAwesomeSoE">
+                <span class="oi oi-aperture" aria-hidden="true"/> @Res.AwesomeSoE.ReplaceSpaces()
             </NavLink>
         </li>
     </ul>

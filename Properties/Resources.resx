@@ -175,13 +175,31 @@
     <value>Download file '{0}'?</value>
   </data>
   <data name="WebComparison" xml:space="preserve">
-    <value>Compare</value>
+    <value>Web Compare SRAM</value>
   </data>
   <data name="WebOffset" xml:space="preserve">
-    <value>Offset edit</value>
+    <value>Web Offset Edit</value>
+  </data>
+  <data name="AwesomeSoE" xml:space="preserve">
+    <value>Awesome SoE</value>
+  </data>
+  <data name="TooltipAwesomeSoE" xml:space="preserve">
+    <value>Check out these awesome SoE pages</value>
+  </data>
+  <data name="Pages" xml:space="preserve">
+    <value>Pages</value>
+  </data>
+  <data name="SramTools" xml:space="preserve">
+    <value>SRAM - Tools</value>
   </data>
   <data name="SramComparer" xml:space="preserve">
     <value>SRAM - Comparer</value>
+  </data>
+  <data name="WebTools" xml:space="preserve">
+    <value>Web - Tools</value>
+  </data>
+  <data name="ReadMe" xml:space="preserve">
+    <value>Read Me</value>
   </data>
   <data name="SramOffsetEdit" xml:space="preserve">
     <value>SRAM - Offset Edit</value>
@@ -261,6 +279,36 @@
   </data>
   <data name="Download" xml:space="preserve">
     <value>Download</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>Features</value>
+  </data>
+  <data name="WhatIsUnknown" xml:space="preserve">
+    <value>What's unknown?</value>
+  </data>
+  <data name="Unknowns" xml:space="preserve">
+    <value>Unknowns</value>
+  </data>
+  <data name="HowToUse" xml:space="preserve">
+    <value>How to use?</value>
+  </data>
+  <data name="HowCanIHelp" xml:space="preserve">
+    <value>How can I help?</value>
+  </data>
+  <data name="LinkOpensInNewTab" xml:space="preserve">
+    <value>Link opens in a new tab</value>
+  </data>
+  <data name="Prerequisites" xml:space="preserve">
+    <value>Prerequisites</value>
+  </data>
+  <data name="Imagery" xml:space="preserve">
+    <value>Show me images!</value>
+  </data>
+  <data name="Changelog" xml:space="preserve">
+    <value>Changelog</value>
   </data>
   <data name="HintShowChangelog" xml:space="preserve">
     <value>Show changelog</value>

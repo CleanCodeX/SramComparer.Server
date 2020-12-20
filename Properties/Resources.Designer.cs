@@ -106,6 +106,15 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Awesome SoE ähnelt.
+        /// </summary>
+        public static string AwesomeSoE {
+            get {
+                return ResourceManager.GetString("AwesomeSoE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Copy to clipboard ähnelt.
         /// </summary>
         public static string ButtonCopy {
@@ -138,6 +147,15 @@ namespace SramComparer.Server.Properties {
         public static string ButtonSetValue {
             get {
                 return ResourceManager.GetString("ButtonSetValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Changelog ähnelt.
+        /// </summary>
+        public static string Changelog {
+            get {
+                return ResourceManager.GetString("Changelog", resourceCulture);
             }
         }
         
@@ -192,6 +210,15 @@ namespace SramComparer.Server.Properties {
         public static string DownloadConfirmationFileTemplate {
             get {
                 return ResourceManager.GetString("DownloadConfirmationFileTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Features ähnelt.
+        /// </summary>
+        public static string Features {
+            get {
+                return ResourceManager.GetString("Features", resourceCulture);
             }
         }
         
@@ -358,6 +385,51 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die History ähnelt.
+        /// </summary>
+        public static string History {
+            get {
+                return ResourceManager.GetString("History", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die How can I help? ähnelt.
+        /// </summary>
+        public static string HowCanIHelp {
+            get {
+                return ResourceManager.GetString("HowCanIHelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die How to use? ähnelt.
+        /// </summary>
+        public static string HowToUse {
+            get {
+                return ResourceManager.GetString("HowToUse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show me images! ähnelt.
+        /// </summary>
+        public static string Imagery {
+            get {
+                return ResourceManager.GetString("Imagery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Link opens in a new tab ähnelt.
+        /// </summary>
+        public static string LinkOpensInNewTab {
+            get {
+                return ResourceManager.GetString("LinkOpensInNewTab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die mandatory ähnelt.
         /// </summary>
         public static string Mandatory {
@@ -421,6 +493,33 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pages ähnelt.
+        /// </summary>
+        public static string Pages {
+            get {
+                return ResourceManager.GetString("Pages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Prerequisites ähnelt.
+        /// </summary>
+        public static string Prerequisites {
+            get {
+                return ResourceManager.GetString("Prerequisites", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Read Me ähnelt.
+        /// </summary>
+        public static string ReadMe {
+            get {
+                return ResourceManager.GetString("ReadMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Show additional game information ähnelt.
         /// </summary>
         public static string ShowAdditionalGameInformation {
@@ -457,6 +556,24 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Tools ähnelt.
+        /// </summary>
+        public static string SramTools {
+            get {
+                return ResourceManager.GetString("SramTools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Check out these awesome SoE pages ähnelt.
+        /// </summary>
+        public static string TooltipAwesomeSoE {
+            get {
+                return ResourceManager.GetString("TooltipAwesomeSoE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Unknown12B ähnelt.
         /// </summary>
         public static string Unknown12B {
@@ -475,6 +592,15 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Unknowns ähnelt.
+        /// </summary>
+        public static string Unknowns {
+            get {
+                return ResourceManager.GetString("Unknowns", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Use colored output ähnelt.
         /// </summary>
         public static string UseColoredOutput {
@@ -484,7 +610,7 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Compare ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Web Compare SRAM ähnelt.
         /// </summary>
         public static string WebComparison {
             get {
@@ -493,11 +619,29 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Offset edit ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Web Offset Edit ähnelt.
         /// </summary>
         public static string WebOffset {
             get {
                 return ResourceManager.GetString("WebOffset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Web - Tools ähnelt.
+        /// </summary>
+        public static string WebTools {
+            get {
+                return ResourceManager.GetString("WebTools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die What&apos;s unknown? ähnelt.
+        /// </summary>
+        public static string WhatIsUnknown {
+            get {
+                return ResourceManager.GetString("WhatIsUnknown", resourceCulture);
             }
         }
         

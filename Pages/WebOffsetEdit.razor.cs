@@ -7,8 +7,8 @@ using SramComparer.Server.ViewModels;
 
 namespace SramComparer.Server.Pages
 {
-	[Route(PageUris.OffsetSoE)]
-	public partial class Offset
+	[Route(PageUris.Offset)]
+	public partial class WebOffsetEdit
 	{
 		private static readonly MarkupString Ns = (MarkupString)"&nbsp;";
 
