@@ -8,17 +8,10 @@
     </div>
 </div>
 <div>
-    <ul class="nav flex-column" title="@Res.SramDocumentation">
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@GetUrl("sram-docu")" target="_" title="@Res.LinkOpensInNewTab">
-                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="icon" alt="@Res.SramDocumentation"/> @Res.SramDocumentation
-            </NavLink>
-        </li>
-    </ul>
     <ul class="nav flex-column" title="@Res.SramComparer">
         <li class="nav-item px-3">
             <a class="nav-link" href="@PageUris.Features" @onclick="@(() => ExpandMenu(ExpandedMenu.SramComparer))">
-                <span class="oi oi-aperture" aria-hidden="true"/> @Res.SramComparer.ReplaceSpaces()
+                <img class="oi oi-command"/> @Res.SramComparer.ReplaceSpaces()
             </a>
         </li>
         @if (_sramComparer)
@@ -27,7 +20,7 @@
                 <ul class="nav flex-column">
                     <li class="nav-item px-3">
                         <NavLink class="nav-link" href="@PageUris.Features">
-                            <span class="oi oi-align-center" aria-hidden="true"/> @Res.Features.ReplaceSpaces()
+                            <span class="oi oi-circle-check" aria-hidden="true"/> @Res.Features.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
@@ -42,7 +35,7 @@
                     </li>
                     <li class="nav-item px-3">
                         <NavLink class="nav-link" href="@PageUris.Unknowns">
-                            <span class="oi oi-question-mark" aria-hidden="true"/> @Res.Unknowns.ReplaceSpaces()
+                            <span class="oi oi-question-mark" aria-hidden="true"/> @Res.TheUnknowns.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
@@ -52,7 +45,7 @@
                     </li>
                     <li class="nav-item px-3">
                         <NavLink class="nav-link" href="@PageUris.HowToUse">
-                            <span class="oi oi-document" aria-hidden="true"/> @Res.HowToUse.ReplaceSpaces()
+                            <span class="oi oi-text" aria-hidden="true"/> @Res.HowToUse.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
@@ -61,8 +54,8 @@
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@GetUrl("github")" target="_" title="@Res.LinkOpensInNewTab">
-                            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="icon" alt="GitHub"/> GitHub
+                        <NavLink class="nav-link" href="@PageUris.GitHub">
+                            <img src="Media/github-11-24.png" class="icon" /> GitHub
                         </NavLink>
                     </li>
                 </ul>
@@ -73,7 +66,7 @@
     <ul class="nav flex-column" title="@Res.WebTools">
         <li class="nav-item px-3">
             <a class="nav-link" href="@PageUris.Compare" @onclick="@(() => ExpandMenu(ExpandedMenu.WebTools))">
-                <span class="oi oi-aperture" aria-hidden="true"/> @Res.WebTools.ReplaceSpaces()
+                <span class="oi oi-wrench" aria-hidden="true"/> @Res.WebTools.ReplaceSpaces()
             </a>
         </li>
         @if (_webTools)
@@ -94,11 +87,20 @@
             </li>
         }
     </ul>
-
-    <ul class="nav flex-column" title="@Res.Pages">
+    <ul class="nav flex-column">
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.AwesomeSoE" title="@Res.TooltipAwesomeSoE">
-                <span class="oi oi-aperture" aria-hidden="true"/> @Res.AwesomeSoE.ReplaceSpaces()
+            <NavLink class="nav-link" href="@PageUris.SramDocu">
+                <span class="oi oi-document" aria-hidden="true"/> @Res.SramDocumentation.ReplaceSpaces()
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="@PageUris.Forums">
+                <span class="oi oi-people" aria-hidden="true"/> @Res.Forums.ReplaceSpaces()
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="@PageUris.Awesome" title="@Res.TooltipAwesomeSoE">
+                <span class="oi oi-star" aria-hidden="true"/> @Res.AwesomeSoE.ReplaceSpaces()
             </NavLink>
         </li>
     </ul>

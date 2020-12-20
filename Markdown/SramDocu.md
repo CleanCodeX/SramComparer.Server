@@ -1,0 +1,1 @@
+﻿## Disclaimer: The SRAM documentation is hosted at <a href="https://github.com/CleanCodeX/SramFormat.SoE">GitHub</a>

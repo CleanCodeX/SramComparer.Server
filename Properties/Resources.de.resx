@@ -183,7 +183,7 @@
 		<value>Bedienungsanleitung</value>
 	</data>
 	<data name="Imagery" xml:space="preserve">
-		<value>Zeig mir Bilder!</value>
+		<value>Ich will Bilder sehen!</value>
 	</data>
 	<data name="Prerequisites" xml:space="preserve">
 		<value>Voraussetzungen</value>
@@ -206,8 +206,8 @@
 	<data name="LinkOpensInNewTab" xml:space="preserve">
 		<value>Link öffnet sich in einem neuen Tab</value>
 	</data>
-	<data name="Unknowns" xml:space="preserve">
-		<value>Unbekannte</value>
+	<data name="TheUnknowns" xml:space="preserve">
+		<value>Das Unbekannte</value>
 	</data>
 	<data name="SramDocumentation" xml:space="preserve">
 		<value>SRAM Dokumentation</value>
@@ -215,4 +215,7 @@
 	<data name="TooltipAwesomeSoE" xml:space="preserve">
 		<value>Awesome Seiten für ein awesome Spiel</value>
 	</data>
+	<data name="SramComparerOpenSourceDisclaimer" xml:space="preserve">
+    <value>SRAM - Comparer ist Open-Source!</value>
+  </data>
 </root>

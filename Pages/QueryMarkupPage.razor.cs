@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using Common.Shared.Min.Extensions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.WebUtilities;
@@ -8,7 +7,7 @@ using SramComparer.Server.Pages.Bases;
 
 namespace SramComparer.Server.Pages
 {
-	[Route(PageUris.Show)]
+	[Route(PageUris.Embed)]
 	public partial class QueryMarkupPage : MarkupContentBase
 	{
 #nullable disable

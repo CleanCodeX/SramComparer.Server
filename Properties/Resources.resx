@@ -195,6 +195,9 @@
   <data name="SramComparer" xml:space="preserve">
     <value>SRAM - Comparer</value>
   </data>
+  <data name="SramComparerOpenSourceDisclaimer" xml:space="preserve">
+    <value>SRAM - Comparer (and everything else here) is open-source!</value>
+  </data>
   <data name="WebTools" xml:space="preserve">
     <value>Web - Tools</value>
   </data>
@@ -289,8 +292,8 @@
   <data name="WhatIsUnknown" xml:space="preserve">
     <value>What's unknown?</value>
   </data>
-  <data name="Unknowns" xml:space="preserve">
-    <value>Unknowns</value>
+  <data name="TheUnknowns" xml:space="preserve">
+    <value>The Unknowns</value>
   </data>
   <data name="HowToUse" xml:space="preserve">
     <value>How to use?</value>
@@ -301,6 +304,12 @@
   <data name="SramDocumentation" xml:space="preserve">
     <value>SRAM Documentation</value>
   </data>
+  <data name="Forums" xml:space="preserve">
+    <value>Forums</value>
+  </data>
+  <data name="ForumsTitle" xml:space="preserve">
+    <value>To share your opinions or findings consider posting at the forums. Your community help is appreciated!</value>
+  </data>
   <data name="LinkOpensInNewTab" xml:space="preserve">
     <value>Link opens in a new tab</value>
   </data>
@@ -308,7 +317,7 @@
     <value>Prerequisites</value>
   </data>
   <data name="Imagery" xml:space="preserve">
-    <value>Show me images!</value>
+    <value>I wanna see images!</value>
   </data>
   <data name="Changelog" xml:space="preserve">
     <value>Changelog</value>
@@ -319,8 +328,8 @@
   <data name="UseColoredOutput" xml:space="preserve">
     <value>Use colored output</value>
   </data>
-  <data name="OpenSourceInfoFragment" xml:space="preserve">
-    <value>is an Open Source tool. Source is hosted at</value>
+  <data name="OpenSourceHistTitleFragment" xml:space="preserve">
+    <value>The source code is hosted at </value>
     <comment>{App title} ...  {Link}</comment>
   </data>
 </root>

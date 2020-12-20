@@ -241,6 +241,24 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Forums ähnelt.
+        /// </summary>
+        public static string Forums {
+            get {
+                return ResourceManager.GetString("Forums", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die To share your opinions or findings consider posting at the forums. Your community help is appreciated! ähnelt.
+        /// </summary>
+        public static string ForumsTitle {
+            get {
+                return ResourceManager.GetString("ForumsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Game ähnelt.
         /// </summary>
         public static string Game {
@@ -412,7 +430,7 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Show me images! ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die I wanna see images! ähnelt.
         /// </summary>
         public static string Imagery {
             get {
@@ -484,11 +502,11 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die is an Open Source tool. Source is hosted at ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die The source code is hosted at  ähnelt.
         /// </summary>
-        public static string OpenSourceInfoFragment {
+        public static string OpenSourceHistTitleFragment {
             get {
-                return ResourceManager.GetString("OpenSourceInfoFragment", resourceCulture);
+                return ResourceManager.GetString("OpenSourceHistTitleFragment", resourceCulture);
             }
         }
         
@@ -538,6 +556,15 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Comparer (and everything else here) is open-source! ähnelt.
+        /// </summary>
+        public static string SramComparerOpenSourceDisclaimer {
+            get {
+                return ResourceManager.GetString("SramComparerOpenSourceDisclaimer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Documentation ähnelt.
         /// </summary>
         public static string SramDocumentation {
@@ -574,6 +601,15 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The Unknowns ähnelt.
+        /// </summary>
+        public static string TheUnknowns {
+            get {
+                return ResourceManager.GetString("TheUnknowns", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Awesome pages for an awesome game ähnelt.
         /// </summary>
         public static string TooltipAwesomeSoE {
@@ -597,15 +633,6 @@ namespace SramComparer.Server.Properties {
         public static string Unknown12BHint {
             get {
                 return ResourceManager.GetString("Unknown12BHint", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Unknowns ähnelt.
-        /// </summary>
-        public static string Unknowns {
-            get {
-                return ResourceManager.GetString("Unknowns", resourceCulture);
             }
         }
         
