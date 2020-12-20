@@ -27,9 +27,9 @@ namespace SramComparer.Server.Pages
 
 			page = page.ToLower();
 
-			if (Settings.Files.TryGetValue(page, out var file))
+			if (Settings.Files is not null && Settings.Files.TryGetValue(page, out var file))
 				Filepath = file;
-			else if (Settings.Urls.TryGetValue(page, out var url))
+			else if (Settings.Urls is not null && Settings.Urls.TryGetValue(page, out var url))
 			{
 				if (!url.StartsWith("http"))
 					url = $"{NavigationManager.BaseUri}{url}";
