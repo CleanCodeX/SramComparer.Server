@@ -1,6 +1,7 @@
 ﻿## SRAM Documentation
 
-* SRAM Documentation are hosted at [GitHub](https://github.com/CleanCodeX/SramFormat.SoE){target="_blank"}
+* SRAM Documentation are hosted at [GitHub](https://github.com/CleanCodeX/SramFormat.SoE){target="_"}
+* SRAM Documentation are hosted at <a href=https://github.com/CleanCodeX/SramFormat.SoE target="_">GitHub</a>
 
 #### Contents
 
