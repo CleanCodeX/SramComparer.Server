@@ -6,7 +6,7 @@
 		public const string Offset = "/offset";
 
 		public const string Embed = "/embed";
-		public const string EmbedPrefix = Embed + "?p=";
+		private const string EmbedPrefix = Embed + "?p=";
 
 		public const string Download = EmbedPrefix + nameof(Download);
 		public const string Features = EmbedPrefix + nameof(Features);
