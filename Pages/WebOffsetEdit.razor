@@ -7,6 +7,10 @@
 	<EditForm Model="@ViewModel">
 		<table>
 			<tr>
+				<th class="firstColumn"/><th />
+			</tr>
+
+			<tr>
 				<td><label class="header">@Res.FileRegion:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.Region" style=@RegionStyle /></td>
 			</tr>

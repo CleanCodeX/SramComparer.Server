@@ -1,4 +1,8 @@
-﻿.result {
+﻿.firstColumn {
+	width: 150px;
+}
+
+.result {
 	min-height:500px;
 }
 
