@@ -184,7 +184,7 @@
     <value>Awesome SoE</value>
   </data>
   <data name="TooltipAwesomeSoE" xml:space="preserve">
-    <value>Check out these awesome SoE pages</value>
+    <value>Awesome pages for an awesome game</value>
   </data>
   <data name="Pages" xml:space="preserve">
     <value>Pages</value>
@@ -298,8 +298,8 @@
   <data name="HowCanIHelp" xml:space="preserve">
     <value>How can I help?</value>
   </data>
-  <data name="SramDocu" xml:space="preserve">
-    <value>SRAM Docu</value>
+  <data name="SramDocumentation" xml:space="preserve">
+    <value>SRAM Documentation</value>
   </data>
   <data name="LinkOpensInNewTab" xml:space="preserve">
     <value>Link opens in a new tab</value>

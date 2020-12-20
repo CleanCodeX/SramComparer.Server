@@ -538,11 +538,11 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Docu ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Documentation ähnelt.
         /// </summary>
-        public static string SramDocu {
+        public static string SramDocumentation {
             get {
-                return ResourceManager.GetString("SramDocu", resourceCulture);
+                return ResourceManager.GetString("SramDocumentation", resourceCulture);
             }
         }
         
@@ -574,7 +574,7 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Check out these awesome SoE pages ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Awesome pages for an awesome game ähnelt.
         /// </summary>
         public static string TooltipAwesomeSoE {
             get {
