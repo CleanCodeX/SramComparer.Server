@@ -538,6 +538,15 @@ namespace SramComparer.Server.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Docu ähnelt.
+        /// </summary>
+        public static string SramDocu {
+            get {
+                return ResourceManager.GetString("SramDocu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die SRAM-File ähnelt.
         /// </summary>
         public static string SramFile {

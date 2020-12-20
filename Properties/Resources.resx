@@ -298,6 +298,9 @@
   <data name="HowCanIHelp" xml:space="preserve">
     <value>How can I help?</value>
   </data>
+  <data name="SramDocu" xml:space="preserve">
+    <value>SRAM Docu</value>
+  </data>
   <data name="LinkOpensInNewTab" xml:space="preserve">
     <value>Link opens in a new tab</value>
   </data>

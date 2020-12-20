@@ -209,4 +209,7 @@
 	<data name="Unknowns" xml:space="preserve">
 		<value>Unbekannte</value>
 	</data>
+  <data name="SramDocu" xml:space="preserve">
+    <value>SRAM Doku</value>
+  </data>
 </root>
