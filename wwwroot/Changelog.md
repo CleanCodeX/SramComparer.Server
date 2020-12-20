@@ -1,5 +1,6 @@
 ﻿1.0.2 - 2020-12-18
 * added Awesome SoE pages link
+* added SRAM docu link
 * restructured menu
 
 1.0.1 - 2020-12-01 
