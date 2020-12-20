@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
 using Microsoft.JSInterop;
-using Res = SramComparer.Server.Properties.Resources;
+using Res = WebServer.SoE.Properties.Resources;
 
-namespace SramComparer.Server.Extensions
+namespace WebServer.SoE.Extensions
 {
 	public static class JsRuntimeExtensions
 	{

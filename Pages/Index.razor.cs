@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
-using SramComparer.Server.Helpers;
+using WebServer.SoE.Helpers;
 
-namespace SramComparer.Server.Pages
+namespace WebServer.SoE.Pages
 {
 	[Route("/")]
 	public partial class Index : ComponentBase

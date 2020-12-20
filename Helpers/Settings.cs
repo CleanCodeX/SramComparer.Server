@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace SramComparer.Server.Helpers
+namespace WebServer.SoE.Helpers
 {
 	public record Settings
 	{

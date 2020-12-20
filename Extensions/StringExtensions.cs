@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using Microsoft.AspNetCore.Components;
 
-namespace SramComparer.Server.Extensions
+namespace WebServer.SoE.Extensions
 {
 	/// <summary>
 	/// Various HTML extensions for strings

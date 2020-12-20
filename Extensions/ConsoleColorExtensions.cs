@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace SramComparer.Server.Extensions
+namespace WebServer.SoE.Extensions
 {
 	public static  class ConsoleColorExtensions
 	{

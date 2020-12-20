@@ -3,7 +3,7 @@ using System.IO;
 using System.Reflection;
 using Common.Shared.Min.Extensions;
 
-namespace SramComparer.Server.Services
+namespace WebServer.SoE.Services
 {
 	public interface IAppInfoService
     {

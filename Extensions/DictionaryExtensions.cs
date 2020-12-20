@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SramComparer.Server.Extensions
+namespace WebServer.SoE.Extensions
 {
 	/// <summary>
 	/// Provides safe access to dictionary values

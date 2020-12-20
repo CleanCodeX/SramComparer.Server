@@ -6,18 +6,17 @@ using Common.Shared.Min.Extensions;
 using Common.Shared.Min.Helpers;
 using Microsoft.AspNetCore.Components;
 using SramComparer.Helpers;
-using SramComparer.Server.Extensions;
-using SramComparer.Server.Services;
-using SramComparer.Server.Shared;
-using SramComparer.Server.Shared.Enums;
-using SramComparer.Server.ViewModels.Bases;
 using SramComparer.Services;
 using SramComparer.SoE.Enums;
 using SramComparer.SoE.Services;
-using Res = SramComparer.Server.Properties.Resources;
+using WebServer.SoE.Extensions;
+using WebServer.SoE.Services;
+using WebServer.SoE.Shared.Enums;
+using WebServer.SoE.ViewModels.Bases;
+using Res = WebServer.SoE.Properties.Resources;
 #pragma warning disable 8509
 
-namespace SramComparer.Server.ViewModels
+namespace WebServer.SoE.ViewModels
 {
 	/// <summary>Viewmodel for SoE SRAM comparison</summary>
 	public class CompareViewModel : ViewModelBase
@@ -27,7 +26,6 @@ namespace SramComparer.Server.ViewModels
 		public MarkupString OutputMessage { get; set; }
 		public bool IsComparing { get; set; }
 		public bool CanCompare => !IsComparing && CurrentFileStream is not null && ComparisonFileStream is not null;
-		public ComparisonFlagsSoE Flags { get; set; }
 		public bool UseColoredOutput { get; set; } = true;
 
 		public bool WholeGameBuffer

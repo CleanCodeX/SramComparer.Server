@@ -2,10 +2,10 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.WebUtilities;
-using SramComparer.Server.Helpers;
-using SramComparer.Server.Pages.Bases;
+using WebServer.SoE.Helpers;
+using WebServer.SoE.Pages.Bases;
 
-namespace SramComparer.Server.Pages
+namespace WebServer.SoE.Pages
 {
 	[Route(PageUris.Embed)]
 	public partial class QueryMarkupPage : MarkupContentBase

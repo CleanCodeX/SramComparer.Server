@@ -4,10 +4,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using SramComparer.Server.Helpers;
-using SramComparer.Server.Services;
+using WebServer.SoE.Helpers;
+using WebServer.SoE.Services;
 
-namespace SramComparer.Server
+namespace WebServer.SoE
 {
 	public class Startup
 	{

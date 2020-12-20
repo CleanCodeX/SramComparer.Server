@@ -4,12 +4,12 @@ using Common.Shared.Min.Extensions;
 using SramCommons.Extensions;
 using SramComparer.Helpers;
 using SramComparer.Properties;
-using SramComparer.Server.Extensions;
-using SramComparer.Server.ViewModels.Bases;
+using WebServer.SoE.Extensions;
+using WebServer.SoE.ViewModels.Bases;
 
 #pragma warning disable 8509
 
-namespace SramComparer.Server.ViewModels
+namespace WebServer.SoE.ViewModels
 {
 	/// <summary>Base Viewmodel for loading SoE SRAM files</summary>
 	public class GetOffsetValueViewModel : LoadViewModelBase

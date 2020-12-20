@@ -1,16 +1,12 @@
 ﻿using Microsoft.AspNetCore.Components;
-using SramComparer.Server.Extensions;
-using SramComparer.Server.Helpers;
-using SramComparer.Server.Services;
+using WebServer.SoE.Services;
 
-namespace SramComparer.Server.Shared
+namespace WebServer.SoE.Shared
 {
 	public partial class NavMenu
 	{
 #nullable disable
 		[Inject] private IAppInfoService AppInfoService { get; set; }
-		[Inject] private Settings Settings { get; set; }
-		[Inject] private NavigationManager NavigationManager { get; set; }
 #nullable restore
 
 		private enum ExpandedMenu
@@ -23,10 +19,6 @@ namespace SramComparer.Server.Shared
 		private bool _sramComparer = true;
 		private bool _webTools = true;
 
-		private string? GetUrl(string key) => Settings.Urls.GetValue(key);
-
-		//private string? GetNavMenuCssClass(bool flag) => !flag ? null : "collapse";
-
 		private void ExpandMenu(ExpandedMenu menu)
 		{
 			return;
@@ -36,7 +28,5 @@ namespace SramComparer.Server.Shared
 		}
 
 		private void CollapseMenu() => ExpandMenu(ExpandedMenu.None);
-
-		private void OpenChangelog() => NavigationManager.NavigateTo(PageUris.Changelog);
 	}
 }

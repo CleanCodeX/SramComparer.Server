@@ -6,11 +6,11 @@ using Common.Shared.Min.Extensions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.JSInterop;
-using SramComparer.Server.Extensions;
-using SramComparer.Server.Helpers;
-using SramComparer.Server.ViewModels;
+using WebServer.SoE.Extensions;
+using WebServer.SoE.Helpers;
+using WebServer.SoE.ViewModels;
 
-namespace SramComparer.Server.Pages
+namespace WebServer.SoE.Pages
 {
 	[Route(PageUris.Compare)]
 	public partial class WebCompare

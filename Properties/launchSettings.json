@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "SramComparer.Server": {
+    "WebServer.SoE": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

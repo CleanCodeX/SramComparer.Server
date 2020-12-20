@@ -2,10 +2,10 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.JSInterop;
-using SramComparer.Server.Helpers;
-using SramComparer.Server.ViewModels;
+using WebServer.SoE.Helpers;
+using WebServer.SoE.ViewModels;
 
-namespace SramComparer.Server.Pages
+namespace WebServer.SoE.Pages
 {
 	[Route(PageUris.Offset)]
 	public partial class WebOffsetEdit

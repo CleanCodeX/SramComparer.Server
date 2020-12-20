@@ -8,11 +8,11 @@ using Microsoft.JSInterop;
 using SramCommons.Extensions;
 using SramComparer.Helpers;
 using SramComparer.Properties;
-using SramComparer.Server.Extensions;
+using WebServer.SoE.Extensions;
 
 #pragma warning disable 8509
 
-namespace SramComparer.Server.ViewModels
+namespace WebServer.SoE.ViewModels
 {
 	/// <summary>Base Viewmodel for loading SoE SRAM files</summary>
 	public class SetOffsetValueViewModel : GetOffsetValueViewModel

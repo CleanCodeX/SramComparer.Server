@@ -5,14 +5,13 @@ using Common.Shared.Min.Extensions;
 using Common.Shared.Min.Helpers;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
-using SramComparer.Server.Extensions;
-using SramComparer.Server.Shared;
-using SramComparer.Server.Shared.Enums;
 using SramFormat.SoE;
+using WebServer.SoE.Extensions;
+using WebServer.SoE.Shared.Enums;
 
 #pragma warning disable 8509
 
-namespace SramComparer.Server.ViewModels.Bases
+namespace WebServer.SoE.ViewModels.Bases
 {
 	/// <summary>Base Viewmodel for loading SoE SRAM files</summary>
 	public abstract class LoadViewModelBase : ViewModelBase

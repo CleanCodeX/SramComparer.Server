@@ -4,7 +4,7 @@
 	  <TargetFramework>net5.0</TargetFramework>
 	  <Nullable>enable</Nullable>
 	  <Company>CleanCodeX</Company>
-	  <Product>SramComparer.Server</Product>
+	  <Product>WebServer.SoE</Product>
 	  <Version>1.0.2-a1</Version>
 	  <Authors>CleanCodeX</Authors>
 	  <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
@@ -18,13 +18,6 @@
 
 	<ItemGroup>
 		<None Remove=".gitignore" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Content Include="Markdown\Changelog.md" />
-	  <Content Include="Markdown\Forums.md" />
-	  <Content Include="Markdown\GitHub.md" />
-	  <Content Include="Markdown\SramDocu.md" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -56,5 +49,7 @@
 	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

@@ -4,9 +4,9 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Rendering;
-using SramComparer.Server.Helpers;
+using WebServer.SoE.Helpers;
 
-namespace SramComparer.Server.Pages.Bases
+namespace WebServer.SoE.Pages.Bases
 {
 	public abstract class MarkupContentBase : ComponentBase
 	{

@@ -1,4 +1,4 @@
-﻿namespace SramComparer.Server.Helpers
+﻿namespace WebServer.SoE.Helpers
 {
 	internal static class PageUris
 	{

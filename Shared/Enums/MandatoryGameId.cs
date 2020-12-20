@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using SramComparer.Server.Properties;
+using WebServer.SoE.Properties;
 
-namespace SramComparer.Server.Shared.Enums
+namespace WebServer.SoE.Shared.Enums
 {
 	public enum MandatoryGameId
 	{
