@@ -8,6 +8,13 @@
     </div>
 </div>
 <div>
+    <ul class="nav flex-column" title="@Res.SramDocu">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="@GetUrl("sram-docu")" target="_" title="@Res.LinkOpensInNewTab">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="icon" alt="@Res.SramDocu"/> @Res.SramDocu
+            </NavLink>
+        </li>
+    </ul>
     <ul class="nav flex-column" title="@Res.SramComparer">
         <li class="nav-item px-3">
             <a class="nav-link" href="@PageUris.Features" @onclick="@(() => ExpandMenu(ExpandedMenu.SramComparer))">
@@ -55,12 +62,7 @@
                     </li>
                     <li class="nav-item px-3">
                         <NavLink class="nav-link" href="@GetUrl("github")" target="_" title="@Res.LinkOpensInNewTab">
-                            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="icon" alt="GitHub" /> GitHub
-                        </NavLink>
-                    </li>
-                    <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@GetUrl("sram-docu")" target="_" title="@Res.LinkOpensInNewTab">
-                            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="icon" alt="@Res.SramDocu" /> @Res.SramDocu
+                            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="icon" alt="GitHub"/> GitHub
                         </NavLink>
                     </li>
                 </ul>
