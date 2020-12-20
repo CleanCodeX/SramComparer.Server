@@ -1,7 +1,9 @@
-﻿1.0.2 - 2020-12-18
+﻿1.0.2 - 2020-12-20
+* restructured menu
 * added Awesome SoE pages link
 * added SRAM docu link
-* restructured menu
+* added Forums link
+* moved most pages into markdown files hosted at github
 
 1.0.1 - 2020-12-01 
 * added download text file and copy to clipboard buttons for (colored) comparison results
