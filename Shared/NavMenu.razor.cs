@@ -12,19 +12,25 @@ namespace WebServer.SoE.Shared
 		private enum ExpandedMenu
 		{
 			None,
-			SramComparer,
-			WebTools
+			SramHacking = 0x1,
+			SramComparison = 0x2,
+			ConsoleApp = 0x4 | SramComparison,
+			WebTools = 0x8 | SramComparison
 		}
 
-		private bool _sramComparer = true;
-		private bool _webTools = true;
+		private static bool _sramHacking = false;
+		private static bool _sramComparison = false;
+		private static bool _consoleApp = false;
+		private static bool _webTools = false;
 
 		private void ExpandMenu(ExpandedMenu menu)
 		{
-			return;
-			
-			_sramComparer = menu == ExpandedMenu.SramComparer;
-			_webTools = menu == ExpandedMenu.WebTools;
+			_sramHacking = menu.HasFlag(ExpandedMenu.SramHacking);
+			_sramComparison = menu.HasFlag(ExpandedMenu.SramComparison);
+			_consoleApp = menu.HasFlag(ExpandedMenu.ConsoleApp);
+			_webTools = menu.HasFlag(ExpandedMenu.WebTools);
+
+			InvokeAsync(StateHasChanged);
 		}
 
 		private void CollapseMenu() => ExpandMenu(ExpandedMenu.None);

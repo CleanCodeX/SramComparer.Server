@@ -2,7 +2,8 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	background-color: black;
+	background-color: #111111;
+	color: lightgray;
 }
 
 .main {
@@ -53,7 +54,7 @@
 
 	.sidebar {
 		width: 280px;
-		height: 100vh;
+		height: 140vh;
 		position: sticky;
 		top: 0;
 	}

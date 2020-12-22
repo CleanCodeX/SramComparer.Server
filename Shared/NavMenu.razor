@@ -1,107 +1,151 @@
 ﻿@using WebServer.SoE.Helpers
 @using WebServer.SoE.Extensions
 
+@{ var sp = "&nbsp;".ToMarkup(); }
+
 <img src="media/SoE.png" class="logo" alt="SoE" @onclick="@CollapseMenu">
 <div class="top-row pl-4 navbar navbar-dark version" @onclick="@CollapseMenu">
     <div>
-        @($"v{AppInfoService.PackageVersion}")<NavLink href="@PageUris.Changelog" title="@Res.HintShowChangelog">?</NavLink>
+        <a href="@PageUris.ChangeLog" title="@Res.HintShowChangelog">? @($"v{AppInfoService.PackageVersion}")</a>
     </div>
 </div>
 <div>
-    <ul class="nav flex-column" title="@Res.SramComparer">
+    <!-- SRAM Hacking -->
+    <ol class="nav flex-column">
         <li class="nav-item px-3">
-            <a class="nav-link" href="@PageUris.Features" @onclick="@(() => ExpandMenu(ExpandedMenu.SramComparer))">
-                <img class="oi oi-command"/> @Res.SramComparer.ReplaceSpaces()
+            <a class="nav-link" href="@PageUris.Goal" @onclick="@(() => ExpandMenu(ExpandedMenu.SramHacking))">
+                <span class="oi oi-code"/> @Res.MenuSramHacking.ReplaceSpaces() 
+                @sp <span class="@(_sramHacking ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
             </a>
-        </li>
-        @if (_sramComparer)
-        {
-            <li class="nav-item px-3">
-                <ul class="nav flex-column">
+  
+            @if (_sramHacking)
+            {
+                <ol class="nav flex-column">
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Features">
-                            <span class="oi oi-circle-check" aria-hidden="true"/> @Res.Features.ReplaceSpaces()
-                        </NavLink>
-                    </li>
-                    <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Download">
-                            <span class="oi oi-arrow-circle-bottom" aria-hidden="true"/> @Res.Download.ReplaceSpaces()
-                        </NavLink>
-                    </li>
-                    <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.WhatIsUnknown">
-                            <span class="oi oi-puzzle-piece" aria-hidden="true"/> @Res.WhatIsUnknown.ReplaceSpaces()
+                        <NavLink class="nav-link" href="@PageUris.Goal">
+                            <span class="oi oi-flag" aria-hidden="true"/> @Res.MenuGoal.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
                         <NavLink class="nav-link" href="@PageUris.Unknowns">
-                            <span class="oi oi-question-mark" aria-hidden="true"/> @Res.TheUnknowns.ReplaceSpaces()
-                        </NavLink>
-                    </li>
-                    <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Imagery">
-                            <span class="oi oi-map" aria-hidden="true"/> @Res.Imagery.ReplaceSpaces()
-                        </NavLink>
-                    </li>
-                    <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.HowToUse">
-                            <span class="oi oi-text" aria-hidden="true"/> @Res.HowToUse.ReplaceSpaces()
+                            <span class="oi oi-project" aria-hidden="true"/> @Res.MenuTheUnknowns.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
                         <NavLink class="nav-link" href="@PageUris.HowCanIHelp">
-                            <span class="oi oi-thumb-up" aria-hidden="true"/> @Res.HowCanIHelp.ReplaceSpaces()
+                            <span class="oi oi-thumb-up" aria-hidden="true"/> @Res.MenuHowCanIHelp.ReplaceSpaces()
                         </NavLink>
                     </li>
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" href="@PageUris.SramDocu">
+                            <span class="oi oi-document" aria-hidden="true"/> @Res.MenuDocumentation.ReplaceSpaces()
+                        </NavLink>
+                    </li>
+                </ol>
+            }
+        </li>
+    </ol>
+    <!-- / SRAM Hacking -->
+    <!-- SRAM Comparison -->
+    <ol class="nav flex-column">
+        <li class="nav-item px-3">
+            <a class="nav-link" href="@PageUris.Features" @onclick="@(() => ExpandMenu(ExpandedMenu.SramComparison))">
+                <span class="oi oi-eye"/> @Res.MenuSramComparison.ReplaceSpaces() 
+                @sp <span class="@(_sramComparison ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
+            </a>
+            @if (_sramComparison)
+            {
+                <ol class="nav flex-column">
+                    <!-- Features -->
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" href="@PageUris.Features">
+                            <span class="oi oi-circle-check" aria-hidden="true"/> @Res.MenuFeatures.ReplaceSpaces()
+                        </NavLink>
+                    </li>
+                    <!-- / Features -->
+                    <!-- SramComparerCmdApp -->
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="@PageUris.Imagery" @onclick="@(() => ExpandMenu(ExpandedMenu.ConsoleApp))">
+                            <span class="oi oi-command" aria-hidden="true"/> @Res.MenuSramComparerCmdApp.ReplaceSpaces() 
+                            @sp <span class="@(_consoleApp ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
+                        </a>
+                        @if (_consoleApp)
+                        {
+                            <ol class="nav flex-column">
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="@PageUris.Imagery">
+                                        <span class="oi oi-image" aria-hidden="true"/> @Res.MenuImagery.ReplaceSpaces()
+                                    </NavLink>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="@PageUris.Downloads">
+                                        <span class="oi oi-arrow-circle-bottom" aria-hidden="true"/> @Res.MenuDownload.ReplaceSpaces()
+                                    </NavLink>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="@PageUris.HowToUse">
+                                        <span class="oi oi-text" aria-hidden="true"/> @Res.MenuHowToUse.ReplaceSpaces()
+                                    </NavLink>
+                                </li>
+                            </ol>
+                        }
+                    </li>
+                    <!-- / SramComparerCmdApp -->
+                    <!-- WebTools -->
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="@PageUris.Compare" @onclick="@(() => ExpandMenu(ExpandedMenu.WebTools))">
+                            <span class="oi oi-wrench" /> @Res.MenuWebTools.ReplaceSpaces() 
+                            @sp <span class="@(_webTools ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
+                        </a>
+                        
+                        @if (_webTools)
+                        {
+                            <ol class="nav flex-column">
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="@PageUris.Compare">
+                                        <span class="oi oi-eye" aria-hidden="true"/> @Res.WebComparison.ReplaceSpaces()
+                                    </NavLink>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="@PageUris.Offset">
+                                        <span class="oi oi-pencil" aria-hidden="true"/> @Res.MenuWebOffset.ReplaceSpaces()
+                                    </NavLink>
+                                </li>
+                            </ol>
+                        }
+                    </li>
+                    <!-- / WebTools -->
+                </ol>
+                <!-- GitHub -->
+                <ol class="nav flex-column">
                     <li class="nav-item px-3">
                         <NavLink class="nav-link" href="@PageUris.GitHub">
                             <img src="Media/github-11-24.png" class="icon" /> GitHub
                         </NavLink>
                     </li>
-                </ul>
-            </li>
-        }
-    </ul>
-
-    <ul class="nav flex-column" title="@Res.WebTools">
-        <li class="nav-item px-3">
-            <a class="nav-link" href="@PageUris.Compare" @onclick="@(() => ExpandMenu(ExpandedMenu.WebTools))">
-                <span class="oi oi-wrench" aria-hidden="true"/> @Res.WebTools.ReplaceSpaces()
-            </a>
+                </ol>
+                <!-- / GitHub -->
+            }
         </li>
-        @if (_webTools)
-        {
-            <li class="nav-item px-3">
-                <ul class="nav flex-column">
-                    <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Compare">
-                            <span class="oi oi-eye" aria-hidden="true"/> @Res.WebComparison.ReplaceSpaces()
-                        </NavLink>
-                    </li>
-                    <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Offset">
-                            <span class="oi oi-pencil" aria-hidden="true"/> @Res.WebOffset.ReplaceSpaces()
-                        </NavLink>
-                    </li>
-                </ul>
-            </li>
-        }
-    </ul>
-    <ul class="nav flex-column">
+    </ol>
+    <!-- / SRAM Comparison -->
+    <!-- Other -->
+    <ol class="nav flex-column">
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.SramDocu">
-                <span class="oi oi-document" aria-hidden="true"/> @Res.SramDocumentation.ReplaceSpaces()
+            <NavLink class="nav-link" href="@PageUris.Support">
+                <span class="oi oi-heart" aria-hidden="true"/> @Res.MenuSupport.ReplaceSpaces()
             </NavLink>
         </li>
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="@PageUris.Forums">
-                <span class="oi oi-people" aria-hidden="true"/> @Res.Forums.ReplaceSpaces()
+                <span class="oi oi-people" aria-hidden="true"/> @Res.MenuForums.ReplaceSpaces()
             </NavLink>
         </li>
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="@PageUris.Awesome" title="@Res.TooltipAwesomeSoE">
-                <span class="oi oi-star" aria-hidden="true"/> @Res.AwesomeSoE.ReplaceSpaces()
+                <span class="oi oi-star" aria-hidden="true"/> @Res.MenuAwesomeSoE.ReplaceSpaces()
             </NavLink>
         </li>
-    </ul>
+    </ol>
+    <!-- / Other -->
 </div>

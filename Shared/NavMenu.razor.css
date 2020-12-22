@@ -4,6 +4,10 @@
 	height: 240px;
 }
 
+.submenu {
+	margin-left: 10px;
+}
+
 .icon {
 	width: 20px;
 	height: 20px;
@@ -12,6 +16,7 @@
 
 .version {
 	color: lightgray;
+	margin-top: -50px;
 }
 
 .navbar-toggler {
@@ -20,7 +25,7 @@
 
 .top-row {
 	height: 3.5rem;
-	background-color: rgba(0,0,0,0.4);
+/*	background-color: rgba(99,0,0,0.5);*/
 }
 
 .navbar-brand {
@@ -36,7 +41,6 @@
 
 .nav-item {
 	font-size: 0.9rem;
-	padding-top: 0.2rem;
 }
 
 .nav-item ::deep a {

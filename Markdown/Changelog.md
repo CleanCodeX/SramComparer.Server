@@ -1,6 +1,6 @@
 ﻿## Changelog
 
-##### 1.0.2 - 2020-12-20
+##### 1.0.2 - 2020-12-22
 * restructured menu
 * added Awesome SoE pages link
 * added SRAM docu link
@@ -14,4 +14,4 @@
 * added changelog download
 
 ##### 1.0.0 - 2020-10-01 
-* First Release
+* First web release

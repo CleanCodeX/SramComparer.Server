@@ -1,11 +1,12 @@
 ﻿## SRAM Documentation
 
-* SRAM Documentation are hosted at <a href="https://github.com/CleanCodeX/SramFormat.SoE" target="_">GitHub</a>
+* SRAM Documentation is hosted at [GitHub](https://github.com/CleanCodeX/SramFormat.SoE"){target="_"}
 
 #### Contents
 
-Links open in a new tab
+Hint: Links open in a new tab
 
 * [SRAM Map](https://github.com/CleanCodeX/SramFormat.SoE/blob/master/Markdown/Items/Sram.md){target="_"}
 * [Known Offsets](https://github.com/CleanCodeX/SramFormat.SoE/blob/master/Markdown/Offsets.md){target="_"}
 * [Structure Sizes](https://github.com/CleanCodeX/SramFormat.SoE/blob/master/Markdown/Sizes.md){target="_"}
+* [List of Unknowns](https://github.com/CleanCodeX/SramFormat.SoE/blob/master/Markdown/Unknowns.md){target="_"}

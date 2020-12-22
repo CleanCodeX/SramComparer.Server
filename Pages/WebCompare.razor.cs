@@ -26,8 +26,8 @@ namespace WebServer.SoE.Pages
 		private bool CompareButtonDisabled => !ViewModel.CanCompare;
 		private bool CopyButtonDisabled => ViewModel.IsComparing || ViewModel.OutputMessage.ToString().IsNullOrEmpty();
 
-		private const string SelectSelectedStyle = "color: cyan;background-color: black;";
-		private const string SelectUnselectedStyle = "color: white;background-color: black;";
+		private const string SelectSelectedStyle = "color: cyan;background-color: #111111;";
+		private const string SelectUnselectedStyle = "color: white;background-color: #111111;";
 		private const string ButtonStyle = "color: cyan;width: 600px;";
 		
 		private string WholeGameStyle => ViewModel.WholeGameBuffer == default ? SelectUnselectedStyle : SelectSelectedStyle;

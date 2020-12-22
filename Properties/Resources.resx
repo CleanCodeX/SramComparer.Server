@@ -175,12 +175,12 @@
     <value>Download file '{0}'?</value>
   </data>
   <data name="WebComparison" xml:space="preserve">
-    <value>Web Compare SRAM</value>
+    <value>Compare</value>
   </data>
-  <data name="WebOffset" xml:space="preserve">
-    <value>Web Offset Edit</value>
+  <data name="MenuWebOffset" xml:space="preserve">
+    <value>Edit offset</value>
   </data>
-  <data name="AwesomeSoE" xml:space="preserve">
+  <data name="MenuAwesomeSoE" xml:space="preserve">
     <value>Awesome SoE</value>
   </data>
   <data name="TooltipAwesomeSoE" xml:space="preserve">
@@ -189,22 +189,28 @@
   <data name="Pages" xml:space="preserve">
     <value>Pages</value>
   </data>
-  <data name="SramTools" xml:space="preserve">
+  <data name="MenuSramTools" xml:space="preserve">
     <value>SRAM - Tools</value>
   </data>
-  <data name="SramComparer" xml:space="preserve">
+  <data name="CaptionSramComparer" xml:space="preserve">
     <value>SRAM - Comparer</value>
+  </data>
+  <data name="MenuSramComparerCmdApp" xml:space="preserve">
+    <value>Console App</value>
+  </data>
+  <data name="MenuSramComparison" xml:space="preserve">
+    <value>SRAM Comparison</value>
   </data>
   <data name="SramComparerOpenSourceDisclaimer" xml:space="preserve">
     <value>SRAM - Comparer (and everything else here) is open-source!</value>
   </data>
-  <data name="WebTools" xml:space="preserve">
-    <value>Web - Tools</value>
+  <data name="MenuWebTools" xml:space="preserve">
+    <value>Web Tools</value>
   </data>
   <data name="ReadMe" xml:space="preserve">
     <value>Read Me</value>
   </data>
-  <data name="SramOffsetEdit" xml:space="preserve">
+  <data name="CaptionSramOffsetEdit" xml:space="preserve">
     <value>SRAM - Offset Edit</value>
   </data>
   <data name="ComparisonSramFile" xml:space="preserve">
@@ -280,46 +286,52 @@
   <data name="ButtonCopy" xml:space="preserve">
     <value>Copy to clipboard</value>
   </data>
-  <data name="Download" xml:space="preserve">
+  <data name="MenuDownload" xml:space="preserve">
     <value>Download</value>
   </data>
-  <data name="History" xml:space="preserve">
+  <data name="MenuHistory" xml:space="preserve">
     <value>History</value>
   </data>
-  <data name="Features" xml:space="preserve">
+  <data name="MenuFeatures" xml:space="preserve">
     <value>Features</value>
   </data>
-  <data name="WhatIsUnknown" xml:space="preserve">
-    <value>What's unknown?</value>
+  <data name="MenuSramHacking" xml:space="preserve">
+    <value>SRAM Hacking</value>
   </data>
-  <data name="TheUnknowns" xml:space="preserve">
+  <data name="MenuGoal" xml:space="preserve">
+    <value>What's the goal?</value>
+  </data>
+  <data name="MenuTheUnknowns" xml:space="preserve">
     <value>The Unknowns</value>
   </data>
-  <data name="HowToUse" xml:space="preserve">
-    <value>How to use?</value>
+  <data name="MenuHowToUse" xml:space="preserve">
+    <value>Manual</value>
   </data>
-  <data name="HowCanIHelp" xml:space="preserve">
+  <data name="MenuHowCanIHelp" xml:space="preserve">
     <value>How can I help?</value>
   </data>
-  <data name="SramDocumentation" xml:space="preserve">
-    <value>SRAM Documentation</value>
+  <data name="MenuSupport" xml:space="preserve">
+    <value>Support</value>
   </data>
-  <data name="Forums" xml:space="preserve">
+  <data name="MenuDocumentation" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
+  <data name="MenuForums" xml:space="preserve">
     <value>Forums</value>
   </data>
-  <data name="ForumsTitle" xml:space="preserve">
+  <data name="CaptionForums" xml:space="preserve">
     <value>To share your opinions or findings consider posting at the forums. Your community help is appreciated!</value>
   </data>
-  <data name="LinkOpensInNewTab" xml:space="preserve">
+  <data name="HintLinkOpensInNewTab" xml:space="preserve">
     <value>Link opens in a new tab</value>
   </data>
   <data name="Prerequisites" xml:space="preserve">
     <value>Prerequisites</value>
   </data>
-  <data name="Imagery" xml:space="preserve">
-    <value>I wanna see images!</value>
+  <data name="MenuImagery" xml:space="preserve">
+    <value>Images</value>
   </data>
-  <data name="Changelog" xml:space="preserve">
+  <data name="MenuChangelog" xml:space="preserve">
     <value>Changelog</value>
   </data>
   <data name="HintShowChangelog" xml:space="preserve">
@@ -328,8 +340,7 @@
   <data name="UseColoredOutput" xml:space="preserve">
     <value>Use colored output</value>
   </data>
-  <data name="OpenSourceHistTitleFragment" xml:space="preserve">
+  <data name="OpenSourceInfoFragment" xml:space="preserve">
     <value>The source code is hosted at </value>
-    <comment>{App title} ...  {Link}</comment>
   </data>
 </root>

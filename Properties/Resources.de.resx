@@ -68,7 +68,7 @@
 	<data name="ShowAdditionalGameInformation" xml:space="preserve">
 		<value>Zusätzliche Spielslot-Informationen anzeigen</value>
 	</data>
-	<data name="SramComparer" xml:space="preserve">
+	<data name="CaptionSramComparer" xml:space="preserve">
 		<value>SRAM Comparer</value>
 	</data>
 	<data name="Unknown12B" xml:space="preserve">
@@ -81,7 +81,7 @@
 		<value>Eingefärbte Ausgabe verwenden</value>
 	</data>
 	<data name="WebComparison" xml:space="preserve">
-		<value>Web Vergleich</value>
+		<value>Vergleichen</value>
 	</data>
 	<data name="WholeGameBuffer" xml:space="preserve">
 		<value>Gesamter Spielslot-Bereich</value>
@@ -98,8 +98,8 @@
 	<data name="OpenSourceInfoFragment" xml:space="preserve">
 		<value>ist ein Open-Source Tool gehostet auf</value>
 	</data>
-	<data name="WebOffset" xml:space="preserve">
-		<value>Web Offset Änderung</value>
+	<data name="MenuWebOffset" xml:space="preserve">
+		<value>Offset bearbeiten</value>
 	</data>
 	<data name="Game1" xml:space="preserve">
 		<value>#1</value>
@@ -113,7 +113,7 @@
 	<data name="Game4" xml:space="preserve">
 		<value>#4</value>
 	</data>
-	<data name="SramOffsetEdit" xml:space="preserve">
+	<data name="CaptionSramOffsetEdit" xml:space="preserve">
 		<value>SRAM Offset Änderung</value>
 	</data>
 	<data name="DownloadConfirmationFileTemplate" xml:space="preserve">
@@ -131,7 +131,7 @@
 	<data name="HintButtonDownloadChangedFile" xml:space="preserve">
 		<value>Geänderte Datei herunterladen</value>
 	</data>
-	<data name="Download" xml:space="preserve">
+	<data name="MenuDownload" xml:space="preserve">
 		<value>Download</value>
 	</data>
 	<data name="ButtonCopy" xml:space="preserve">
@@ -164,26 +164,26 @@
 	<data name="HintShowChangelog" xml:space="preserve">
     <value>Changelog anzeigen</value>
   </data>
-	<data name="AwesomeSoE" xml:space="preserve">
+	<data name="MenuAwesomeSoE" xml:space="preserve">
 		<value>Awesome SoE</value>
 	</data>
 	<data name="Pages" xml:space="preserve">
     <value>Seiten</value>
   </data>
-  <data name="Changelog" xml:space="preserve">
+  <data name="MenuChangelog" xml:space="preserve">
     <value>Historie</value>
   </data>
-	<data name="Features" xml:space="preserve">
+	<data name="MenuFeatures" xml:space="preserve">
 		<value>Features</value>
 	</data>
-	<data name="HowCanIHelp" xml:space="preserve">
+	<data name="MenuHowCanIHelp" xml:space="preserve">
 		<value>Wie kann ich helfen?</value>
 	</data>
-	<data name="HowToUse" xml:space="preserve">
-		<value>Bedienungsanleitung</value>
+	<data name="MenuHowToUse" xml:space="preserve">
+		<value>Anleitung</value>
 	</data>
-	<data name="Imagery" xml:space="preserve">
-		<value>Ich will Bilder sehen!</value>
+	<data name="MenuImagery" xml:space="preserve">
+		<value>Bilder</value>
 	</data>
 	<data name="Prerequisites" xml:space="preserve">
 		<value>Voraussetzungen</value>
@@ -191,26 +191,26 @@
 	<data name="ReadMe" xml:space="preserve">
 		<value>Lies Mich</value>
 	</data>
-	<data name="SramTools" xml:space="preserve">
+	<data name="MenuSramTools" xml:space="preserve">
 		<value>SRAM - Tools</value>
 	</data>
-	<data name="WebTools" xml:space="preserve">
+	<data name="MenuWebTools" xml:space="preserve">
 		<value>Web - Tools</value>
 	</data>
-	<data name="WhatIsUnknown" xml:space="preserve">
-		<value>Was ist unbekannt?</value>
+	<data name="MenuGoal" xml:space="preserve">
+		<value>Was ist das Ziel?</value>
 	</data>
-	<data name="History" xml:space="preserve">
+	<data name="MenuHistory" xml:space="preserve">
 		<value>Historie</value>
 	</data>
-	<data name="LinkOpensInNewTab" xml:space="preserve">
+	<data name="HintLinkOpensInNewTab" xml:space="preserve">
 		<value>Link öffnet sich in einem neuen Tab</value>
 	</data>
-	<data name="TheUnknowns" xml:space="preserve">
+	<data name="MenuTheUnknowns" xml:space="preserve">
 		<value>Das Unbekannte</value>
 	</data>
-	<data name="SramDocumentation" xml:space="preserve">
-		<value>SRAM Dokumentation</value>
+	<data name="MenuDocumentation" xml:space="preserve">
+		<value>Dokumentation</value>
 	</data>
 	<data name="TooltipAwesomeSoE" xml:space="preserve">
 		<value>Awesome Seiten für ein awesome Spiel</value>
@@ -218,4 +218,19 @@
 	<data name="SramComparerOpenSourceDisclaimer" xml:space="preserve">
     <value>SRAM - Comparer ist Open-Source!</value>
   </data>
+	<data name="MenuSupport" xml:space="preserve">
+		<value>Unterstützung</value>
+	</data>
+	<data name="MenuForums" xml:space="preserve">
+		<value>Foren</value>
+	</data>
+	<data name="CaptionForums" xml:space="preserve">
+		<value>Um deine Meinung oder Funde zu teilen erwäge einen Post in den Foren. Deine Community-Hilfe wird begrüßt!</value>
+	</data>
+	<data name="MenuSramHacking" xml:space="preserve">
+		<value>SRAM Hacking</value>
+	</data>
+	<data name="MenuSramComparison" xml:space="preserve">
+		<value>SRAM Vergleich</value>
+	</data>
 </root>

@@ -106,15 +106,6 @@ namespace WebServer.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Awesome SoE ähnelt.
-        /// </summary>
-        public static string AwesomeSoE {
-            get {
-                return ResourceManager.GetString("AwesomeSoE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Copy to clipboard ähnelt.
         /// </summary>
         public static string ButtonCopy {
@@ -151,11 +142,29 @@ namespace WebServer.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Changelog ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die To share your opinions or findings consider posting at the forums. Your community help is appreciated! ähnelt.
         /// </summary>
-        public static string Changelog {
+        public static string CaptionForums {
             get {
-                return ResourceManager.GetString("Changelog", resourceCulture);
+                return ResourceManager.GetString("CaptionForums", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Comparer ähnelt.
+        /// </summary>
+        public static string CaptionSramComparer {
+            get {
+                return ResourceManager.GetString("CaptionSramComparer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Offset Edit ähnelt.
+        /// </summary>
+        public static string CaptionSramOffsetEdit {
+            get {
+                return ResourceManager.GetString("CaptionSramOffsetEdit", resourceCulture);
             }
         }
         
@@ -196,29 +205,11 @@ namespace WebServer.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Download ähnelt.
-        /// </summary>
-        public static string Download {
-            get {
-                return ResourceManager.GetString("Download", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Download file &apos;{0}&apos;? ähnelt.
         /// </summary>
         public static string DownloadConfirmationFileTemplate {
             get {
                 return ResourceManager.GetString("DownloadConfirmationFileTemplate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Features ähnelt.
-        /// </summary>
-        public static string Features {
-            get {
-                return ResourceManager.GetString("Features", resourceCulture);
             }
         }
         
@@ -237,24 +228,6 @@ namespace WebServer.SoE.Properties {
         public static string FileRegion {
             get {
                 return ResourceManager.GetString("FileRegion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Forums ähnelt.
-        /// </summary>
-        public static string Forums {
-            get {
-                return ResourceManager.GetString("Forums", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die To share your opinions or findings consider posting at the forums. Your community help is appreciated! ähnelt.
-        /// </summary>
-        public static string ForumsTitle {
-            get {
-                return ResourceManager.GetString("ForumsTitle", resourceCulture);
             }
         }
         
@@ -394,6 +367,15 @@ namespace WebServer.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Link opens in a new tab ähnelt.
+        /// </summary>
+        public static string HintLinkOpensInNewTab {
+            get {
+                return ResourceManager.GetString("HintLinkOpensInNewTab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Show changelog ähnelt.
         /// </summary>
         public static string HintShowChangelog {
@@ -403,56 +385,182 @@ namespace WebServer.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die mandatory ähnelt.
+        /// </summary>
+        public static string Mandatory {
+            get {
+                return ResourceManager.GetString("Mandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Awesome SoE ähnelt.
+        /// </summary>
+        public static string MenuAwesomeSoE {
+            get {
+                return ResourceManager.GetString("MenuAwesomeSoE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Changelog ähnelt.
+        /// </summary>
+        public static string MenuChangelog {
+            get {
+                return ResourceManager.GetString("MenuChangelog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Documentation ähnelt.
+        /// </summary>
+        public static string MenuDocumentation {
+            get {
+                return ResourceManager.GetString("MenuDocumentation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download ähnelt.
+        /// </summary>
+        public static string MenuDownload {
+            get {
+                return ResourceManager.GetString("MenuDownload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Features ähnelt.
+        /// </summary>
+        public static string MenuFeatures {
+            get {
+                return ResourceManager.GetString("MenuFeatures", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Forums ähnelt.
+        /// </summary>
+        public static string MenuForums {
+            get {
+                return ResourceManager.GetString("MenuForums", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die What&apos;s the goal? ähnelt.
+        /// </summary>
+        public static string MenuGoal {
+            get {
+                return ResourceManager.GetString("MenuGoal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die History ähnelt.
         /// </summary>
-        public static string History {
+        public static string MenuHistory {
             get {
-                return ResourceManager.GetString("History", resourceCulture);
+                return ResourceManager.GetString("MenuHistory", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die How can I help? ähnelt.
         /// </summary>
-        public static string HowCanIHelp {
+        public static string MenuHowCanIHelp {
             get {
-                return ResourceManager.GetString("HowCanIHelp", resourceCulture);
+                return ResourceManager.GetString("MenuHowCanIHelp", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die How to use? ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Manual ähnelt.
         /// </summary>
-        public static string HowToUse {
+        public static string MenuHowToUse {
             get {
-                return ResourceManager.GetString("HowToUse", resourceCulture);
+                return ResourceManager.GetString("MenuHowToUse", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die I wanna see images! ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Images ähnelt.
         /// </summary>
-        public static string Imagery {
+        public static string MenuImagery {
             get {
-                return ResourceManager.GetString("Imagery", resourceCulture);
+                return ResourceManager.GetString("MenuImagery", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Link opens in a new tab ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Console App ähnelt.
         /// </summary>
-        public static string LinkOpensInNewTab {
+        public static string MenuSramComparerCmdApp {
             get {
-                return ResourceManager.GetString("LinkOpensInNewTab", resourceCulture);
+                return ResourceManager.GetString("MenuSramComparerCmdApp", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die mandatory ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Comparison ähnelt.
         /// </summary>
-        public static string Mandatory {
+        public static string MenuSramComparison {
             get {
-                return ResourceManager.GetString("Mandatory", resourceCulture);
+                return ResourceManager.GetString("MenuSramComparison", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Hacking ähnelt.
+        /// </summary>
+        public static string MenuSramHacking {
+            get {
+                return ResourceManager.GetString("MenuSramHacking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Tools ähnelt.
+        /// </summary>
+        public static string MenuSramTools {
+            get {
+                return ResourceManager.GetString("MenuSramTools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Support ähnelt.
+        /// </summary>
+        public static string MenuSupport {
+            get {
+                return ResourceManager.GetString("MenuSupport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The Unknowns ähnelt.
+        /// </summary>
+        public static string MenuTheUnknowns {
+            get {
+                return ResourceManager.GetString("MenuTheUnknowns", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Edit offset ähnelt.
+        /// </summary>
+        public static string MenuWebOffset {
+            get {
+                return ResourceManager.GetString("MenuWebOffset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Web Tools ähnelt.
+        /// </summary>
+        public static string MenuWebTools {
+            get {
+                return ResourceManager.GetString("MenuWebTools", resourceCulture);
             }
         }
         
@@ -504,9 +612,9 @@ namespace WebServer.SoE.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die The source code is hosted at  ähnelt.
         /// </summary>
-        public static string OpenSourceHistTitleFragment {
+        public static string OpenSourceInfoFragment {
             get {
-                return ResourceManager.GetString("OpenSourceHistTitleFragment", resourceCulture);
+                return ResourceManager.GetString("OpenSourceInfoFragment", resourceCulture);
             }
         }
         
@@ -547,15 +655,6 @@ namespace WebServer.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Comparer ähnelt.
-        /// </summary>
-        public static string SramComparer {
-            get {
-                return ResourceManager.GetString("SramComparer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Comparer (and everything else here) is open-source! ähnelt.
         /// </summary>
         public static string SramComparerOpenSourceDisclaimer {
@@ -565,47 +664,11 @@ namespace WebServer.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Documentation ähnelt.
-        /// </summary>
-        public static string SramDocumentation {
-            get {
-                return ResourceManager.GetString("SramDocumentation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die SRAM-File ähnelt.
         /// </summary>
         public static string SramFile {
             get {
                 return ResourceManager.GetString("SramFile", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Offset Edit ähnelt.
-        /// </summary>
-        public static string SramOffsetEdit {
-            get {
-                return ResourceManager.GetString("SramOffsetEdit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Tools ähnelt.
-        /// </summary>
-        public static string SramTools {
-            get {
-                return ResourceManager.GetString("SramTools", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die The Unknowns ähnelt.
-        /// </summary>
-        public static string TheUnknowns {
-            get {
-                return ResourceManager.GetString("TheUnknowns", resourceCulture);
             }
         }
         
@@ -646,38 +709,11 @@ namespace WebServer.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Web Compare SRAM ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compare ähnelt.
         /// </summary>
         public static string WebComparison {
             get {
                 return ResourceManager.GetString("WebComparison", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Web Offset Edit ähnelt.
-        /// </summary>
-        public static string WebOffset {
-            get {
-                return ResourceManager.GetString("WebOffset", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Web - Tools ähnelt.
-        /// </summary>
-        public static string WebTools {
-            get {
-                return ResourceManager.GetString("WebTools", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die What&apos;s unknown? ähnelt.
-        /// </summary>
-        public static string WhatIsUnknown {
-            get {
-                return ResourceManager.GetString("WhatIsUnknown", resourceCulture);
             }
         }
         
