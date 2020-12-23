@@ -1,7 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
+using WebServer.SoE.Helpers;
 using WebServer.SoE.Services;
 
 namespace WebServer.SoE.Shared
@@ -11,6 +12,7 @@ namespace WebServer.SoE.Shared
 #nullable disable
 		[Inject] private IAppInfoService AppInfoService { get; set; }
 		[Inject] private ProtectedSessionStorage SessionStorage { get; set; }
+		[Inject] private NavigationManager NavManager { get; set; }
 #nullable restore
 
 		private enum ExpandedMenu
@@ -34,7 +36,44 @@ namespace WebServer.SoE.Shared
 		{
 			_menu = (await SessionStorage.GetAsync<ExpandedMenu>(nameof(_menu))).Value;
 			SetMenuStateVariables(_menu);
+
+			NavManager.LocationChanged += NavManagerOnLocationChanged;
 		}
+
+		private void NavManagerOnLocationChanged(object? sender, LocationChangedEventArgs e)
+		{
+			var path = "/" + NavManager.ToBaseRelativePath(e.Location).ToLower();
+			var menu = path switch
+			{
+				PageUris.Goal => ExpandedMenu.SramHacking,
+				PageUris.Unknowns => ExpandedMenu.SramHacking,
+				PageUris.HowCanIHelp => ExpandedMenu.SramHacking,
+				PageUris.SramDocu => ExpandedMenu.SramHacking,
+
+				PageUris.Features => ExpandedMenu.SramComparison,
+
+				PageUris.Imagery => ExpandedMenu.ConsoleApp,
+				PageUris.Downloads => ExpandedMenu.ConsoleApp,
+				PageUris.HowToUse => ExpandedMenu.ConsoleApp,
+
+				PageUris.Compare => ExpandedMenu.WebTools,
+				PageUris.Offset => ExpandedMenu.WebTools,
+
+				PageUris.GitHub => ExpandedMenu.SramComparison,
+
+				_ => ExpandedMenu.None
+			};
+
+			if(menu != _menu)
+#pragma warning disable 4014
+				ExpandMenu(menu);
+#pragma warning restore 4014
+		}
+
+		private Task ExpandSramHacking() => ExpandMenu(ExpandedMenu.SramHacking);
+		private Task ExpandSramComparison() => ExpandMenu(ExpandedMenu.SramHacking);
+		private Task ExpandConsoleApp() => ExpandMenu(ExpandedMenu.ConsoleApp);
+		private Task ExpandWebTools() => ExpandMenu(ExpandedMenu.WebTools);
 
 		private async Task ExpandMenu(ExpandedMenu menu)
 		{

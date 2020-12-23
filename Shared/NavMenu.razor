@@ -11,7 +11,7 @@
     <!-- SRAM Hacking -->
     <ol class="nav flex-column">
         <li class="nav-item px-3">
-            <a class="nav-link" href="@PageUris.Goal" @onclick="@(() => ExpandMenu(ExpandedMenu.SramHacking))">
+            <a class="nav-link" href="@PageUris.Goal" @onclick="@ExpandSramHacking">
                 <span class="oi oi-code"/> @Res.MenuSramHacking.ReplaceSpaces() 
                 @sp <span class="@(_sramHacking ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
             </a>
@@ -47,7 +47,7 @@
     <!-- SRAM Comparison -->
     <ol class="nav flex-column">
         <li class="nav-item px-3">
-            <a class="nav-link" href="@PageUris.Features" @onclick="@(() => ExpandMenu(ExpandedMenu.SramComparison))">
+            <a class="nav-link" href="@PageUris.Features" @onclick="@ExpandSramComparison">
                 <span class="oi oi-eye"/> @Res.MenuSramComparison.ReplaceSpaces() 
                 @sp <span class="@(_sramComparison ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
             </a>
@@ -56,14 +56,14 @@
                 <ol class="nav flex-column">
                     <!-- Features -->
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Features" @onclick="@(() => ExpandMenu(ExpandedMenu.SramComparison))">
+                        <NavLink class="nav-link" href="@PageUris.Features">
                             <span class="oi oi-circle-check" aria-hidden="true"/> @Res.MenuFeatures.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <!-- / Features -->
                     <!-- SramComparerCmdApp -->
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="@PageUris.Imagery" @onclick="@(() => ExpandMenu(ExpandedMenu.ConsoleApp))">
+                        <a class="nav-link" href="@PageUris.Imagery" @onclick="@ExpandConsoleApp">
                             <span class="oi oi-command" aria-hidden="true"/> @Res.MenuSramComparerCmdApp.ReplaceSpaces() 
                             @sp <span class="@(_consoleApp ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
                         </a>
@@ -91,7 +91,7 @@
                     <!-- / SramComparerCmdApp -->
                     <!-- WebTools -->
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="@PageUris.Compare" @onclick="@(() => ExpandMenu(ExpandedMenu.WebTools))">
+                        <a class="nav-link" href="@PageUris.Compare" @onclick="@ExpandWebTools">
                             <span class="oi oi-wrench" /> @Res.MenuWebTools.ReplaceSpaces() 
                             @sp <span class="@(_webTools ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
                         </a>
@@ -128,7 +128,7 @@
     </ol>
     <!-- / SRAM Comparison -->
     <!-- Other -->
-    <ol class="nav flex-column" @onclick="@(() => ExpandMenu(ExpandedMenu.None))">
+    <ol class="nav flex-column" @onclick="@CollapseMenu">
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="@PageUris.Support">
                 <span class="oi oi-heart" aria-hidden="true"/> @Res.MenuSupport.ReplaceSpaces()

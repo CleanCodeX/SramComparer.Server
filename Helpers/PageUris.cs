@@ -8,18 +8,18 @@
 		public const string Embed = "/embed";
 		private const string EmbedPrefix = Embed + "?p=";
 
-		public const string Downloads = EmbedPrefix + nameof(Downloads);
-		public const string Features = EmbedPrefix + nameof(Features);
-		public const string HowToUse = EmbedPrefix + nameof(HowToUse);
-		public const string Imagery = EmbedPrefix + nameof(Imagery);
-		public const string Goal = EmbedPrefix + nameof(Goal);
-		public const string Unknowns = EmbedPrefix + nameof(Unknowns);
-		public const string HowCanIHelp = EmbedPrefix + nameof(HowCanIHelp);
-		public const string ChangeLog = EmbedPrefix + nameof(ChangeLog);
-		public const string Awesome = EmbedPrefix + nameof(Awesome);
-		public const string GitHub = EmbedPrefix + nameof(GitHub);
-		public const string Support = EmbedPrefix + nameof(Support);
-		public const string Forums = EmbedPrefix + nameof(Forums);
-		public const string SramDocu = EmbedPrefix + nameof(SramDocu);
+		public const string Downloads = EmbedPrefix + "downloads";
+		public const string Features = EmbedPrefix + "features";
+		public const string HowToUse = EmbedPrefix + "howtouse";
+		public const string Imagery = EmbedPrefix + "imagery";
+		public const string Goal = EmbedPrefix + "goal";
+		public const string Unknowns = EmbedPrefix + "unknowns";
+		public const string HowCanIHelp = EmbedPrefix + "howcanihelp";
+		public const string ChangeLog = EmbedPrefix + "changelog";
+		public const string Awesome = EmbedPrefix + "awesome";
+		public const string GitHub = EmbedPrefix + "github";
+		public const string Support = EmbedPrefix + "support";
+		public const string Forums = EmbedPrefix + "forums";
+		public const string SramDocu = EmbedPrefix + "sramdocu";
 	}
 }

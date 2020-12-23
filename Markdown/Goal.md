@@ -9,7 +9,7 @@ A little less than 50% (about aprox. 400 bytes) of SoE's SRAM game slot format i
 
 Most of unknown parts are reserved for pick-up information of various ingredient sniff spots, opened chests, gourds, pots and which persons were spoken to twice. Despite these there are also game relevant progress flags which we want to know to write more capable SRAM editors.
 
-A non exhaustive list can be found under section [Unknowns](embed?p=unknowns).
+A non exhaustive list can be found under section [Unknowns](embed?p=Unknowns).
 
 ##### When will it be available?
 
