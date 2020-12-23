@@ -6,12 +6,12 @@ using Common.Shared.Min.Helpers;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using SramFormat.SoE;
-using WebServer.SoE.Extensions;
-using WebServer.SoE.Shared.Enums;
+using WebApp.SoE.Extensions;
+using WebApp.SoE.Shared.Enums;
 
 #pragma warning disable 8509
 
-namespace WebServer.SoE.ViewModels.Bases
+namespace WebApp.SoE.ViewModels.Bases
 {
 	/// <summary>Base Viewmodel for loading SoE SRAM files</summary>
 	public abstract class LoadViewModelBase : ViewModelBase

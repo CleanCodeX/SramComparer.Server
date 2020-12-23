@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
-using WebServer.SoE.Helpers;
-using WebServer.SoE.ViewModels;
+using WebApp.SoE.Helpers;
+using WebApp.SoE.ViewModels;
 
-namespace WebServer.SoE.Pages
+namespace WebApp.SoE.Pages
 {
 	[Route(PageUris.Offset)]
 	public partial class WebOffsetEdit

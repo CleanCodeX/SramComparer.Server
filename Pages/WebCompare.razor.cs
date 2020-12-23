@@ -5,13 +5,12 @@ using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
-using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using Microsoft.JSInterop;
-using WebServer.SoE.Extensions;
-using WebServer.SoE.Helpers;
-using WebServer.SoE.ViewModels;
+using WebApp.SoE.Extensions;
+using WebApp.SoE.Helpers;
+using WebApp.SoE.ViewModels;
 
-namespace WebServer.SoE.Pages
+namespace WebApp.SoE.Pages
 {
 	[Route(PageUris.Compare)]
 	public partial class WebCompare

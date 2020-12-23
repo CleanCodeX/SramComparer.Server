@@ -3,7 +3,7 @@ using System.IO;
 using System.Reflection;
 using Common.Shared.Min.Extensions;
 
-namespace WebServer.SoE.Services
+namespace WebApp.SoE.Services
 {
 	public interface IAppInfoService
     {

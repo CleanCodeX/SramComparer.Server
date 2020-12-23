@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "WebServer.SoE": {
+    "WebApp.SoE": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

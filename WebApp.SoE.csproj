@@ -4,7 +4,7 @@
 	  <TargetFramework>net5.0</TargetFramework>
 	  <Nullable>enable</Nullable>
 	  <Company>CleanCodeX</Company>
-	  <Product>WebServer.SoE</Product>
+	  <Product>WebApp.SoE</Product>
 	  <Version>1.0.2-a1</Version>
 	  <Authors>CleanCodeX</Authors>
 	  <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>

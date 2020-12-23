@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Rendering;
 
-namespace WebServer.SoE.Shared.Controls
+namespace WebApp.SoE.Shared.Controls
 {
     public sealed class InputSelectEnum<TEnum> : InputBase<TEnum>
     {

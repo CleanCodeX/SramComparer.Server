@@ -7,11 +7,11 @@ The more people contribute, the earlier and better results.
 
 But after all this is a free time project and developing tools or finding offsets needs hundreds if not thousands of hours.
 
-If the goal of this project isn't clear, make sure to have read our [goal](embed?p=goal) first.
+If the goal of this project isn't clear, make sure to have read our [goal](_?p=goal) first.
 
 Assuming that you already did that, you might ask yourself how you can contribute. (given the fact that you're reading this page)
 
-If you want to join the SoE 'army', see [here](embed?p=HowCanIHelp) how it works in detail.
+If you want to join the SoE 'army', see [here](_?p=HowCanIHelp) how it works in detail.
 
 If that's not yours and just would like to see more capable SRAM editors in future, hey no big deal, that's fine.
 

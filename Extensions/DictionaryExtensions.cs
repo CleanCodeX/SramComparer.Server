@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WebServer.SoE.Extensions
+namespace WebApp.SoE.Extensions
 {
 	/// <summary>
 	/// Provides safe access to dictionary values

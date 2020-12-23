@@ -1,16 +1,17 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.StaticFiles.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.JSInterop;
-using WebServer.SoE.Helpers;
-using WebServer.SoE.Services;
-using WebServer.SoE.ViewModels;
+using WebApp.SoE.Helpers;
+using WebApp.SoE.Services;
+using WebApp.SoE.ViewModels;
 
-namespace WebServer.SoE
+namespace WebApp.SoE
 {
 	public class Startup
 	{
@@ -58,6 +59,7 @@ namespace WebServer.SoE
 
 			app.UseEndpoints(endpoints =>
 			{
+				endpoints.MapDefaultControllerRoute();
 				endpoints.MapBlazorHub();
 				endpoints.MapFallbackToPage("/_Host");
 			});

@@ -3,10 +3,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
-using WebServer.SoE.Helpers;
-using WebServer.SoE.Services;
+using WebApp.SoE.Helpers;
+using WebApp.SoE.Services;
 
-namespace WebServer.SoE.Shared
+namespace WebApp.SoE.Shared
 {
 	public partial class NavMenu
 	{

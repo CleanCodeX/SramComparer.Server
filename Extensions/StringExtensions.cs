@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using Microsoft.AspNetCore.Components;
 
-namespace WebServer.SoE.Extensions
+namespace WebApp.SoE.Extensions
 {
 	/// <summary>
 	/// Various HTML extensions for strings

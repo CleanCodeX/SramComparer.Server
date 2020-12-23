@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
 using Microsoft.JSInterop;
-using Res = WebServer.SoE.Properties.Resources;
+using Res = WebApp.SoE.Properties.Resources;
 
-namespace WebServer.SoE.Extensions
+namespace WebApp.SoE.Extensions
 {
 	public static class JsRuntimeExtensions
 	{

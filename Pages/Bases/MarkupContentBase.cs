@@ -3,9 +3,9 @@ using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
-using WebServer.SoE.Helpers;
+using WebApp.SoE.Helpers;
 
-namespace WebServer.SoE.Pages.Bases
+namespace WebApp.SoE.Pages.Bases
 {
 	public abstract class MarkupContentBase : ComponentBase
 	{

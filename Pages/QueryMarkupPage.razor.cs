@@ -2,12 +2,12 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.WebUtilities;
-using WebServer.SoE.Helpers;
-using WebServer.SoE.Pages.Bases;
+using WebApp.SoE.Helpers;
+using WebApp.SoE.Pages.Bases;
 
-namespace WebServer.SoE.Pages
+namespace WebApp.SoE.Pages
 {
-	[Route(PageUris.Embed)]
+	[Route(PageUris.Page)]
 	public partial class QueryMarkupPage : MarkupContentBase
 	{
 #nullable disable

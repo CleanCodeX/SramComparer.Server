@@ -15,4 +15,4 @@ Links open in a new tab
 * [SramCommons](https://github.com/CleanCodeX/SramCommons){target="_"} Common SRAM Load functionality
 
 ###### Webserver
-* [WebServer.SoE](https://github.com/CleanCodeX/WebServer.SoE){target="_"} To make it all shiny for you
+* [WebApp.SoE](https://github.com/CleanCodeX/WebApp.SoE){target="_"} To make it all shiny for you

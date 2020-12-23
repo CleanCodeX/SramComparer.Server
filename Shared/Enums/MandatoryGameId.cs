@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using WebServer.SoE.Properties;
+using WebApp.SoE.Properties;
 
-namespace WebServer.SoE.Shared.Enums
+namespace WebApp.SoE.Shared.Enums
 {
 	public enum MandatoryGameId
 	{

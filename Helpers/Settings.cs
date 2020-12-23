@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace WebServer.SoE.Helpers
+namespace WebApp.SoE.Helpers
 {
 	public record Settings
 	{

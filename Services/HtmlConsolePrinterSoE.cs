@@ -1,8 +1,8 @@
 ﻿using System;
-using WebServer.SoE.Extensions;
+using WebApp.SoE.Extensions;
 using SramComparer.SoE.Services;
 
-namespace WebServer.SoE.Services
+namespace WebApp.SoE.Services
 {
 	/// <summary>
 	/// HTML formatted ConsolePrinter for SoE

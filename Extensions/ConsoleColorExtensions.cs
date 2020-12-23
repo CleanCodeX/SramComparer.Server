@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace WebServer.SoE.Extensions
+namespace WebApp.SoE.Extensions
 {
 	public static  class ConsoleColorExtensions
 	{

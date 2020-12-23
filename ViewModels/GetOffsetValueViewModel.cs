@@ -6,12 +6,12 @@ using Microsoft.AspNetCore.Components.Forms;
 using SramCommons.Extensions;
 using SramComparer.Helpers;
 using SramComparer.Properties;
-using WebServer.SoE.Extensions;
-using WebServer.SoE.ViewModels.Bases;
+using WebApp.SoE.Extensions;
+using WebApp.SoE.ViewModels.Bases;
 
 #pragma warning disable 8509
 
-namespace WebServer.SoE.ViewModels
+namespace WebApp.SoE.ViewModels
 {
 	/// <summary>Base Viewmodel for loading SoE SRAM files</summary>
 	public class GetOffsetValueViewModel : LoadViewModelBase

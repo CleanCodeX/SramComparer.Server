@@ -1,7 +1,7 @@
 ﻿using Markdig;
 using Microsoft.AspNetCore.Components;
 
-namespace WebServer.SoE.Helpers
+namespace WebApp.SoE.Helpers
 {
 	/// <summary>Parses markdown content (md-files) into a MarkupString which can be displayed in blazor</summary>
 	public static class MarkdownHelper

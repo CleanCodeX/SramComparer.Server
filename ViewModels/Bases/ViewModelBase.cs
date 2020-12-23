@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using SramComparer.SoE;
 using SramFormat.SoE.Models.Enums;
-using WebServer.SoE.Shared.Enums;
+using WebApp.SoE.Shared.Enums;
 
-namespace WebServer.SoE.ViewModels.Bases
+namespace WebApp.SoE.ViewModels.Bases
 {
 	public abstract class ViewModelBase
 	{

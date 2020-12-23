@@ -11,14 +11,14 @@ using SramComparer.Helpers;
 using SramComparer.Services;
 using SramComparer.SoE.Enums;
 using SramComparer.SoE.Services;
-using WebServer.SoE.Extensions;
-using WebServer.SoE.Services;
-using WebServer.SoE.Shared.Enums;
-using WebServer.SoE.ViewModels.Bases;
-using Res = WebServer.SoE.Properties.Resources;
+using WebApp.SoE.Extensions;
+using WebApp.SoE.Services;
+using WebApp.SoE.Shared.Enums;
+using WebApp.SoE.ViewModels.Bases;
+using Res = WebApp.SoE.Properties.Resources;
 #pragma warning disable 8509
 
-namespace WebServer.SoE.ViewModels
+namespace WebApp.SoE.ViewModels
 {
 	/// <summary>Viewmodel for SoE SRAM comparison</summary>
 	public class CompareViewModel : ViewModelBase

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
-using WebServer.SoE.Helpers;
+using WebApp.SoE.Helpers;
 
-namespace WebServer.SoE.Pages
+namespace WebApp.SoE.Pages
 {
 	[Route("/")]
 	public partial class Index : ComponentBase
