@@ -352,3 +352,4 @@ MigrationBackup/
 /SramComparer.SoE/nuget.config
 /SramComparer.SoE/Properties/launchSettings.json
 /Properties/ServiceDependencies/sramcomparer - Web Deploy
+/Properties/ServiceDependencies/webapp - Web Deploy/profile.arm.json

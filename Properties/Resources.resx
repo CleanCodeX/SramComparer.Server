@@ -193,7 +193,7 @@
     <value>SRAM - Tools</value>
   </data>
   <data name="CaptionWebCompare" xml:space="preserve">
-    <value>SRAM - Comparer</value>
+    <value>SRAM - Web Compare</value>
   </data>
   <data name="MenuSramComparerCmdApp" xml:space="preserve">
     <value>Console App</value>
@@ -211,7 +211,7 @@
     <value>Read Me</value>
   </data>
   <data name="CaptionWebOffsetEdit" xml:space="preserve">
-    <value>SRAM - Offset Edit</value>
+    <value>SRAM - Web Offset Edit</value>
   </data>
   <data name="ComparisonSramFile" xml:space="preserve">
     <value>Comparison SRAM-File</value>
@@ -230,6 +230,12 @@
   </data>
   <data name="AdditionalComparisons" xml:space="preserve">
     <value>Additional comparisons</value>
+  </data>
+  <data name="ProjectStatus" xml:space="preserve">
+    <value>Project status</value>
+  </data>
+  <data name="HintCompletionStatus" xml:space="preserve">
+    <value>Completion Status</value>
   </data>
   <data name="WholeGameBuffer" xml:space="preserve">
     <value>Whole game buffer</value>
@@ -254,6 +260,12 @@
   </data>
   <data name="Unknown12B" xml:space="preserve">
     <value>Unknown12B</value>
+  </data>
+  <data name="KnownBytes" xml:space="preserve">
+    <value>known bytes</value>
+  </data>
+  <data name="UnknownBytes" xml:space="preserve">
+    <value>unknown bytes</value>
   </data>
   <data name="Offset" xml:space="preserve">
     <value>Offset</value>

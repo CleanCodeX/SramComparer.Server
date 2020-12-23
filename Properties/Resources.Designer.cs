@@ -142,7 +142,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Comparer ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Web Compare ähnelt.
         /// </summary>
         public static string CaptionWebCompare {
             get {
@@ -151,7 +151,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Offset Edit ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Web Offset Edit ähnelt.
         /// </summary>
         public static string CaptionWebOffsetEdit {
             get {
@@ -340,6 +340,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Completion Status ähnelt.
+        /// </summary>
+        public static string HintCompletionStatus {
+            get {
+                return ResourceManager.GetString("HintCompletionStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Copy text to clipboard ähnelt.
         /// </summary>
         public static string HintCopyButton {
@@ -372,6 +381,15 @@ namespace WebApp.SoE.Properties {
         public static string HintShowChangelog {
             get {
                 return ResourceManager.GetString("HintShowChangelog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die known bytes ähnelt.
+        /// </summary>
+        public static string KnownBytes {
+            get {
+                return ResourceManager.GetString("KnownBytes", resourceCulture);
             }
         }
         
@@ -628,6 +646,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Project status ähnelt.
+        /// </summary>
+        public static string ProjectStatus {
+            get {
+                return ResourceManager.GetString("ProjectStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Read Me ähnelt.
         /// </summary>
         public static string ReadMe {
@@ -687,6 +714,15 @@ namespace WebApp.SoE.Properties {
         public static string Unknown12BHint {
             get {
                 return ResourceManager.GetString("Unknown12BHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die unknown bytes ähnelt.
+        /// </summary>
+        public static string UnknownBytes {
+            get {
+                return ResourceManager.GetString("UnknownBytes", resourceCulture);
             }
         }
         

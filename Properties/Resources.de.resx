@@ -68,9 +68,6 @@
 	<data name="ShowAdditionalGameInformation" xml:space="preserve">
 		<value>Zusätzliche Spielslot-Informationen anzeigen</value>
 	</data>
-	<data name="CaptionSramComparer" xml:space="preserve">
-		<value>SRAM Comparer</value>
-	</data>
 	<data name="Unknown12B" xml:space="preserve">
 		<value>Unknown12B</value>
 	</data>
@@ -114,7 +111,7 @@
 		<value>#4</value>
 	</data>
 	<data name="CaptionWebOffsetEdit" xml:space="preserve">
-		<value>SRAM Offset Änderung</value>
+		<value>SRAM - Web Offset Änderung</value>
 	</data>
 	<data name="DownloadConfirmationFileTemplate" xml:space="preserve">
 		<value>Datei '{0}' herunterladen?</value>
@@ -224,13 +221,28 @@
 	<data name="MenuCommunity" xml:space="preserve">
 		<value>Community</value>
 	</data>
-	<data name="CaptionForums" xml:space="preserve">
-		<value>Um deine Meinung oder Funde zu teilen erwäge einen Post in den Foren. Deine Community-Hilfe wird begrüßt!</value>
-	</data>
 	<data name="MenuSramHacking" xml:space="preserve">
 		<value>SRAM Hacking</value>
 	</data>
 	<data name="MenuSramComparison" xml:space="preserve">
 		<value>SRAM Vergleich</value>
+	</data>
+	<data name="MenuSramComparerCmdApp" xml:space="preserve">
+		<value>Konsolen App</value>
+	</data>
+	<data name="ProjectStatus" xml:space="preserve">
+		<value>Projekt-Status</value>
+	</data>
+	<data name="CaptionWebCompare" xml:space="preserve">
+		<value>SRAM - Web Vergleich</value>
+	</data>
+	<data name="KnownBytes" xml:space="preserve">
+		<value>bekannte Bytes</value>
+	</data>
+	<data name="UnknownBytes" xml:space="preserve">
+		<value>unbekannte Bytes</value>
+	</data>
+	<data name="HintCompletionStatus" xml:space="preserve">
+		<value>Vervollständigungs-Status</value>
 	</data>
 </root>
