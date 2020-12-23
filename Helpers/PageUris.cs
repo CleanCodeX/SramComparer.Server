@@ -5,8 +5,8 @@
 		public const string Compare = "/compare";
 		public const string Offset = "/offset";
 
-		public const string Page = "/_";
-		private const string PagePrefix = Page + "?p=";
+		public const string Page = "/p";
+		private const string PagePrefix = Page + "?c=";
 
 		public const string Downloads = PagePrefix + "downloads";
 		public const string Features = PagePrefix + "features";

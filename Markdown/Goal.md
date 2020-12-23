@@ -12,7 +12,7 @@ The only problem is a little less than 50% (about aprox. 400 bytes) of SoE's SRA
 #### What's still unknown?
 Most of unknown parts are reserved for pick-up information of various ingredient sniff spots, opened chests, gourds, pots and which persons were spoken to twice. Despite these there are also game relevant progress flags which we want to know to write more capable SRAM editors.
 
-A non exhaustive list can be found under section [Unknowns](_?p=Unknowns).
+A non exhaustive list can be found under section [Unknowns](p?c=Unknowns).
 
 #### What's the Goal?
 Once the SRAM format is completely known, it offers the possibility to write a full capable SRAM editor, enabling/disabling everything what can be controlled by a savegame.
@@ -26,4 +26,4 @@ We're spending our free time working on that, but that won't be enough to make i
 
 At this point you might ask yourself how you can make it happen faster. (likely I guess, due to the fact that you clicked on this page)
 
-If you want to join the SoE army, see [here](_?p=HowCanIHelp) how it works.
+If you want to join the SoE army, see [here](p?c=HowCanIHelp) how it works.

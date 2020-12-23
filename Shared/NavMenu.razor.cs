@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
@@ -10,12 +9,6 @@ namespace WebApp.SoE.Shared
 {
 	public partial class NavMenu
 	{
-#nullable disable
-		[Inject] private IAppInfoService AppInfoService { get; set; }
-		[Inject] private ProtectedSessionStorage SessionStorage { get; set; }
-		[Inject] private NavigationManager NavManager { get; set; }
-#nullable restore
-
 		private enum ExpandedMenu
 		{
 			None,
@@ -27,10 +20,16 @@ namespace WebApp.SoE.Shared
 			WebTools = WebTools_Flag | SramComparison
 		}
 
-		private bool _sramHacking = false;
-		private bool _sramComparison = false;
-		private bool _consoleApp = false;
-		private bool _webTools = false;
+#nullable disable
+		[Inject] private IAppInfoService AppInfoService { get; set; }
+		[Inject] private ProtectedSessionStorage SessionStorage { get; set; }
+		[Inject] private NavigationManager NavManager { get; set; }
+#nullable restore
+		
+		private bool _sramHacking;
+		private bool _sramComparison;
+		private bool _consoleApp;
+		private bool _webTools;
 		private ExpandedMenu _menu;
 
 		protected override async Task OnInitializedAsync()
@@ -71,17 +70,18 @@ namespace WebApp.SoE.Shared
 				return;
 				
 #pragma warning disable 4014
-				ExpandMenu(menu);
+			ExpandMenu(menu);
 #pragma warning restore 4014
 			
-			StateHasChanged();
+			InvokeAsync(StateHasChanged);
 		}
 
 		private Task ExpandSramHacking() => ExpandMenu(ExpandedMenu.SramHacking);
 		private Task ExpandSramComparison() => ExpandMenu(ExpandedMenu.SramHacking);
 		private Task ExpandConsoleApp() => ExpandMenu(ExpandedMenu.ConsoleApp);
 		private Task ExpandWebTools() => ExpandMenu(ExpandedMenu.WebTools);
-
+		private Task CollapseMenu() => ExpandMenu(ExpandedMenu.None);
+		
 		private async Task ExpandMenu(ExpandedMenu menu)
 		{
 			if (_menu == menu) return;
@@ -89,15 +89,8 @@ namespace WebApp.SoE.Shared
 			_menu = menu;
 
 			SetMenuStateVariables(menu);
-			try
-			{
-				await SessionStorage.SetAsync(nameof(_menu), _menu);
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine(ex);
-				throw;
-			}
+	
+			await SessionStorage.SetAsync(nameof(_menu), _menu);
 		}
 
 		private void SetMenuStateVariables(ExpandedMenu menu)
@@ -107,7 +100,5 @@ namespace WebApp.SoE.Shared
 			_consoleApp = menu.HasFlag(ExpandedMenu.ConsoleApp);
 			_webTools = menu.HasFlag(ExpandedMenu.WebTools);
 		}
-
-		private Task CollapseMenu() => ExpandMenu(ExpandedMenu.None);
 	}
 }
