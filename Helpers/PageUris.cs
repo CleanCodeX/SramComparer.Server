@@ -19,7 +19,7 @@
 		public const string Awesome = EmbedPrefix + "awesome";
 		public const string GitHub = EmbedPrefix + "github";
 		public const string Support = EmbedPrefix + "support";
-		public const string Forums = EmbedPrefix + "forums";
+		public const string Community = EmbedPrefix + "community";
 		public const string SramDocu = EmbedPrefix + "sramdocu";
 	}
 }

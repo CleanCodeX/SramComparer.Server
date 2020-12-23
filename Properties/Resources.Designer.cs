@@ -142,29 +142,20 @@ namespace WebServer.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die To share your opinions or findings consider posting at the forums. Your community help is appreciated! ähnelt.
-        /// </summary>
-        public static string CaptionForums {
-            get {
-                return ResourceManager.GetString("CaptionForums", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Comparer ähnelt.
         /// </summary>
-        public static string CaptionSramComparer {
+        public static string CaptionWebCompare {
             get {
-                return ResourceManager.GetString("CaptionSramComparer", resourceCulture);
+                return ResourceManager.GetString("CaptionWebCompare", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Offset Edit ähnelt.
         /// </summary>
-        public static string CaptionSramOffsetEdit {
+        public static string CaptionWebOffsetEdit {
             get {
-                return ResourceManager.GetString("CaptionSramOffsetEdit", resourceCulture);
+                return ResourceManager.GetString("CaptionWebOffsetEdit", resourceCulture);
             }
         }
         
@@ -412,6 +403,15 @@ namespace WebServer.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Community ähnelt.
+        /// </summary>
+        public static string MenuCommunity {
+            get {
+                return ResourceManager.GetString("MenuCommunity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Documentation ähnelt.
         /// </summary>
         public static string MenuDocumentation {
@@ -435,15 +435,6 @@ namespace WebServer.SoE.Properties {
         public static string MenuFeatures {
             get {
                 return ResourceManager.GetString("MenuFeatures", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Forums ähnelt.
-        /// </summary>
-        public static string MenuForums {
-            get {
-                return ResourceManager.GetString("MenuForums", resourceCulture);
             }
         }
         

@@ -16,7 +16,7 @@ Reading and manipulating offset values can be done either by using
 * [Web Offset Editor](offset)
 * [Windows Console App](embed?p=downloads)
 
-Post your discoveries at the [forums](embed?p=forums)!
+Post your discoveries at the [Community](embed?p=community)!
 
 A manual for using the Console App can be found [here](embed?p=HowToUse).
 

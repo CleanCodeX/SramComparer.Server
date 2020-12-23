@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
@@ -35,7 +36,9 @@ namespace WebServer.SoE.Shared
 		protected override async Task OnInitializedAsync()
 		{
 			_menu = (await SessionStorage.GetAsync<ExpandedMenu>(nameof(_menu))).Value;
-			SetMenuStateVariables(_menu);
+			
+			if(_menu != ExpandedMenu.None)
+				SetMenuStateVariables(_menu);
 
 			NavManager.LocationChanged += NavManagerOnLocationChanged;
 		}
@@ -64,10 +67,14 @@ namespace WebServer.SoE.Shared
 				_ => ExpandedMenu.None
 			};
 
-			if(menu != _menu)
+			if (menu == _menu)
+				return;
+				
 #pragma warning disable 4014
 				ExpandMenu(menu);
 #pragma warning restore 4014
+			
+			StateHasChanged();
 		}
 
 		private Task ExpandSramHacking() => ExpandMenu(ExpandedMenu.SramHacking);
@@ -77,11 +84,20 @@ namespace WebServer.SoE.Shared
 
 		private async Task ExpandMenu(ExpandedMenu menu)
 		{
+			if (_menu == menu) return;
+
 			_menu = menu;
 
 			SetMenuStateVariables(menu);
-
-			await SessionStorage.SetAsync(nameof(_menu), _menu);
+			try
+			{
+				await SessionStorage.SetAsync(nameof(_menu), _menu);
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex);
+				throw;
+			}
 		}
 
 		private void SetMenuStateVariables(ExpandedMenu menu)

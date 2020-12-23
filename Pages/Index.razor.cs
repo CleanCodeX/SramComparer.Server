@@ -11,6 +11,6 @@ namespace WebServer.SoE.Pages
 		private NavigationManager NavManager { get; set; }
 #nullable restore
 
-		protected override void OnAfterRender(bool firstRender) => NavManager.NavigateTo(PageUris.Features);
+		protected override void OnAfterRender(bool firstRender) => NavManager.NavigateTo(PageUris.Goal);
 	}
 }

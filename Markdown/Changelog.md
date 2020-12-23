@@ -5,7 +5,7 @@
 * restructured menu
 * added Awesome SoE pages link
 * added SRAM docu link
-* added Forums link
+* added Forums / Discord invite link
 * moved most pages into markdown files hosted at github
 
 ##### 1.0.1 - 2020-12-01 

@@ -1,4 +1,4 @@
-﻿## This project is Open-Source! Even this Webserver.
+﻿## This project is Open-Source! Even this web app.
 
 Sources are hosted at [GitHub](https://github.com/CleanCodeX){target="_"}
 

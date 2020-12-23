@@ -113,7 +113,7 @@
 	<data name="Game4" xml:space="preserve">
 		<value>#4</value>
 	</data>
-	<data name="CaptionSramOffsetEdit" xml:space="preserve">
+	<data name="CaptionWebOffsetEdit" xml:space="preserve">
 		<value>SRAM Offset Änderung</value>
 	</data>
 	<data name="DownloadConfirmationFileTemplate" xml:space="preserve">
@@ -221,8 +221,8 @@
 	<data name="MenuSupport" xml:space="preserve">
 		<value>Unterstützung</value>
 	</data>
-	<data name="MenuForums" xml:space="preserve">
-		<value>Foren</value>
+	<data name="MenuCommunity" xml:space="preserve">
+		<value>Community</value>
 	</data>
 	<data name="CaptionForums" xml:space="preserve">
 		<value>Um deine Meinung oder Funde zu teilen erwäge einen Post in den Foren. Deine Community-Hilfe wird begrüßt!</value>

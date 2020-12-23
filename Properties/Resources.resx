@@ -192,7 +192,7 @@
   <data name="MenuSramTools" xml:space="preserve">
     <value>SRAM - Tools</value>
   </data>
-  <data name="CaptionSramComparer" xml:space="preserve">
+  <data name="CaptionWebCompare" xml:space="preserve">
     <value>SRAM - Comparer</value>
   </data>
   <data name="MenuSramComparerCmdApp" xml:space="preserve">
@@ -210,7 +210,7 @@
   <data name="ReadMe" xml:space="preserve">
     <value>Read Me</value>
   </data>
-  <data name="CaptionSramOffsetEdit" xml:space="preserve">
+  <data name="CaptionWebOffsetEdit" xml:space="preserve">
     <value>SRAM - Offset Edit</value>
   </data>
   <data name="ComparisonSramFile" xml:space="preserve">
@@ -316,11 +316,8 @@
   <data name="MenuDocumentation" xml:space="preserve">
     <value>Documentation</value>
   </data>
-  <data name="MenuForums" xml:space="preserve">
-    <value>Forums</value>
-  </data>
-  <data name="CaptionForums" xml:space="preserve">
-    <value>To share your opinions or findings consider posting at the forums. Your community help is appreciated!</value>
+  <data name="MenuCommunity" xml:space="preserve">
+    <value>Community</value>
   </data>
   <data name="HintLinkOpensInNewTab" xml:space="preserve">
     <value>Link opens in a new tab</value>
