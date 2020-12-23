@@ -31,7 +31,7 @@ namespace WebServer.SoE.ViewModels.Bases
 			Load();
 		}
 
-		public void Load()
+		private void Load()
 		{
 			try
 			{
@@ -39,13 +39,11 @@ namespace WebServer.SoE.ViewModels.Bases
 
 				IsLoading = true;
 
-				SetOptions();
-
 				Requires.NotNull(CurrentFileStream, nameof(CurrentFileStream));
 
 				CurrentFileStream.Position = 0;
 
-				SramFile = new SramFileSoE(CurrentFileStream, Options.Region);
+				SramFile = new SramFileSoE(CurrentFileStream, Region);
 				CurrentFileStream = null;
 			}
 			catch (Exception ex)
@@ -56,10 +54,19 @@ namespace WebServer.SoE.ViewModels.Bases
 			IsLoading = false;
 		}
 
-		private void SetOptions()
+		protected internal override async Task LoadOptionsAsync()
 		{
-			Options.Region = Region;
-			Options.CurrentGame = CurrentGame.ToInt();
+			await base.LoadOptionsAsync();
+
+			if(Options.CurrentGame > 0)
+				CurrentGame = (MandatoryGameId)base.CurrentGame;
+		}
+
+		protected internal override Task SaveOptionsAsync()
+		{
+			base.CurrentGame = (GameId)CurrentGame;
+
+			return base.SaveOptionsAsync();
 		}
 	}
 }

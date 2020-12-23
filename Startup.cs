@@ -1,11 +1,14 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
+using Microsoft.JSInterop;
 using WebServer.SoE.Helpers;
 using WebServer.SoE.Services;
+using WebServer.SoE.ViewModels;
 
 namespace WebServer.SoE
 {
@@ -20,6 +23,12 @@ namespace WebServer.SoE
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddSingleton<IAppInfoService, AppInfoService>();
+			services.AddScoped<CompareViewModel>(sp => new() {LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>()});
+			services.AddScoped<SetOffsetValueViewModel>(sp => new()
+			{
+				JsRuntime = sp.GetRequiredService<IJSRuntime>(),
+				LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>()
+			});
 
 			services.AddOptions<Settings>().Bind(Configuration.GetSection(nameof(Settings)));
 			services.AddSingleton(cfg => cfg.GetService<IOptionsMonitor<Settings>>()!.CurrentValue);

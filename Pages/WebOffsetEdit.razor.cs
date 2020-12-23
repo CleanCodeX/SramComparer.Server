@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
-using Microsoft.JSInterop;
 using WebServer.SoE.Helpers;
 using WebServer.SoE.ViewModels;
 
@@ -13,10 +12,7 @@ namespace WebServer.SoE.Pages
 		private static readonly MarkupString Ns = (MarkupString)"&nbsp;";
 
 #nullable disable
-		[Inject]
-		private IJSRuntime JsRuntime { get; set; }
-
-		private SetOffsetValueViewModel ViewModel { get; set; }
+		[Inject] private SetOffsetValueViewModel ViewModel { get; set; }
 #nullable restore
 
 		private bool SaveButtonDisabled => !ViewModel.CanSave;
@@ -28,7 +24,7 @@ namespace WebServer.SoE.Pages
 		private string CurrentGameStyle => ViewModel.CurrentGame == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private string RegionStyle => ViewModel.Region == default ? SelectUnselectedStyle : SelectSelectedStyle;
 
-		protected override void OnParametersSet() => ViewModel = new() { JsRuntime = JsRuntime };
+		protected override Task OnInitializedAsync() => ViewModel.LoadOptionsAsync();
 
 		private Task OnCurrentFileChange(InputFileChangeEventArgs arg) => ViewModel.SetCurrentFileAsync(arg.File);
 	}

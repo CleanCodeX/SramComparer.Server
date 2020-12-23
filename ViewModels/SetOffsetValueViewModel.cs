@@ -30,10 +30,10 @@ namespace WebServer.SoE.ViewModels
 				CanSave = false;
 
 				SramFile.ThrowIfNull(nameof(SramFile));
-				SramFile.SetOffsetValue(Options.CurrentGame - 1, Offset, (byte)OffsetValue);
+				SramFile.SetOffsetValue(Options.CurrentGame - 1, OffsetAddress, (byte)OffsetValue);
 				var valueDisplayText = NumberFormatter.GetByteValueRepresentations((byte)OffsetValue);
 
-				OutputMessage = Resources.StatusSetOffsetValueTemplate.InsertArgs(Offset, valueDisplayText).ColorText(Color.Green).ToMarkup();
+				OutputMessage = Resources.StatusSetOffsetValueTemplate.InsertArgs(OffsetAddress, valueDisplayText).ColorText(Color.Green).ToMarkup();
 			}
 			catch (Exception ex)
 			{

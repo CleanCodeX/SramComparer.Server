@@ -12,8 +12,8 @@ namespace WebServer.SoE
 			Host.CreateDefaultBuilder(args)
 				.ConfigureWebHostDefaults(webBuilder =>
 				{
-					//webBuilder.UseSetting(WebHostDefaults.DetailedErrorsKey, "true");
-					//webBuilder.CaptureStartupErrors(true);
+					webBuilder.UseSetting(WebHostDefaults.DetailedErrorsKey, "true");
+					webBuilder.CaptureStartupErrors(true);
 					webBuilder.UseStaticWebAssets();
 					webBuilder.UseStartup<Startup>();
 				})

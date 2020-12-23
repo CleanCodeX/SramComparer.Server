@@ -37,8 +37,8 @@
 			<tr>
 				<td><label>@Res.Offset:@Ns</label>*)</td>
 				<td>
-					<input type="number" @bind="@ViewModel.Offset" maxLength="4" />
-					<button class="btn btn-primary" @onclick="@(() => ViewModel.GetOffsetValue())" disabled="@(!ViewModel.CanGet)" title="@Res.HintButtonGetOffsetValue"><span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" /></button>
+					<input type="number" @bind="@ViewModel.OffsetAddress" maxLength="4" />
+					<button class="btn btn-primary" @onclick="@(() => ViewModel.GetOffsetValueAsync())" disabled="@(!ViewModel.CanGet)" title="@Res.HintButtonGetOffsetValue"><span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" /></button>
 				</td>
 			</tr>
 			<tr>

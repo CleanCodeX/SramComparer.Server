@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using Microsoft.JSInterop;
 using WebServer.SoE.Extensions;
 using WebServer.SoE.Helpers;
@@ -18,11 +19,10 @@ namespace WebServer.SoE.Pages
 		private static readonly MarkupString Ns = (MarkupString)"&nbsp;";
 
 #nullable disable
-		[Inject]
-		private IJSRuntime JsRuntime { get; set; }
+		[Inject] private IJSRuntime JsRuntime { get; set; }
+		[Inject] private CompareViewModel ViewModel { get; set; }
 #nullable restore
-
-		private CompareViewModel ViewModel { get; } = new();
+		
 		private bool CompareButtonDisabled => !ViewModel.CanCompare;
 		private bool CopyButtonDisabled => ViewModel.IsComparing || ViewModel.OutputMessage.ToString().IsNullOrEmpty();
 
@@ -42,6 +42,8 @@ namespace WebServer.SoE.Pages
 		private Task OnCurrentFileChange(InputFileChangeEventArgs arg) => ViewModel.SetCurrentFileAsync(arg.File);
 
 		private async Task OnComparisonFileChange(InputFileChangeEventArgs arg) => ViewModel.ComparisonFileStream = await arg.File.OpenReadStream().CopyAsMemoryStreamAsync();
+
+		protected override Task OnInitializedAsync() => ViewModel.LoadOptionsAsync();
 
 		private string CopyText()
 		{

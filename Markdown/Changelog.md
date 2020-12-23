@@ -1,6 +1,7 @@
 ﻿## Changelog
 
-##### 1.0.2 - 2020-12-22
+##### 1.0.2 - 2020-12-23
+* added automatic settings loading/saving for web tools
 * restructured menu
 * added Awesome SoE pages link
 * added SRAM docu link

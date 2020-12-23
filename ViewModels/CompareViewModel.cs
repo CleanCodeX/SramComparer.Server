@@ -2,9 +2,11 @@
 using System.ComponentModel.DataAnnotations;
 using System.Drawing;
 using System.IO;
+using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
 using Common.Shared.Min.Helpers;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Forms;
 using SramComparer.Helpers;
 using SramComparer.Services;
 using SramComparer.SoE.Enums;
@@ -61,7 +63,7 @@ namespace WebServer.SoE.ViewModels
 
 				IsComparing = true;
 
-				SetOptions();
+				SaveOptionsAsync().GetAwaiter().GetResult();
 
 				using var output = new StringWriter { NewLine = "<br>" };
 
@@ -83,10 +85,25 @@ namespace WebServer.SoE.ViewModels
 			IsComparing = false;
 		}
 
-		private void SetOptions()
+		protected internal override async Task LoadOptionsAsync()
 		{
-			Options.Region = Region;
-			Options.CurrentGame = CurrentGame.ToInt();
+			await base.LoadOptionsAsync();
+
+			ComparisonGame = (GameId)Options.ComparisonGame;
+
+			if (Options.Flags.HasFlag(ComparisonFlagsSoE.GameChecksum))
+				GameChecksum = Options.Flags.HasFlag(ComparisonFlagsSoE.AllGameChecksums)
+					? AllSingleFlag.AllGames
+					: AllSingleFlag.AffectedGamesOnly;
+
+			if (Options.Flags.HasFlag(ComparisonFlagsSoE.Unknown12B))
+				Unknown12B = Options.Flags.HasFlag(ComparisonFlagsSoE.AllUnknown12Bs)
+					? AllSingleFlag.AllGames
+					: AllSingleFlag.AffectedGamesOnly;
+		}
+
+		protected internal override Task SaveOptionsAsync()
+		{
 			Options.ComparisonGame = ComparisonGame.ToInt();
 
 			Options.Flags = Options.Flags & ~ComparisonFlagsSoE.AllGameChecksums;
@@ -104,6 +121,8 @@ namespace WebServer.SoE.ViewModels
 					AllSingleFlag.AllGames => Options.Flags |= ComparisonFlagsSoE.AllUnknown12Bs,
 					AllSingleFlag.AffectedGamesOnly => Options.Flags |= ComparisonFlagsSoE.Unknown12B,
 				};
+
+			return base.SaveOptionsAsync();
 		}
 	}
 }
