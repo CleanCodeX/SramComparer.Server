@@ -14,5 +14,5 @@ Links open in a new tab
 * [SramComparer](https://github.com/CleanCodeX/SramComparer){target="_"} Common SRAM comparison functionality
 * [SramCommons](https://github.com/CleanCodeX/SramCommons){target="_"} Common SRAM Load functionality
 
-###### Webserver
+###### WebApp
 * [WebApp.SoE](https://github.com/CleanCodeX/WebApp.SoE){target="_"} To make it all shiny for you
