@@ -21,7 +21,6 @@ In that case you might want to tell your SoE friends about this project.
 
 Make it publicly known so crowd sourcing can start to kick in.
 
+**Thank you!** 😊
 
-Thank you 😊
-
-Also thanks to the people who already [contributed](p?c=contributors) to this project.
+Also **many thanks** to the people who [contributed](p?c=contributors) to this project.
