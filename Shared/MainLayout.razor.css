@@ -1,12 +1,9 @@
 .page {
-	position: relative;
-	display: flex;
-	flex-direction: column;
 	color: lightgray;
 }
 
 .main {
-	flex: 1;
+	display: -webkit-box;
 }
 
 .main .top-row > a, .main .top-row .btn-link {
@@ -21,14 +18,18 @@
 
 .content {
 	font-size: 1.3rem;
-	min-height: 660px;
+	max-width: 1000px;
+}
+
+.sidebar {
+	box-sizing: content-box;
 }
 
 .navmenu {
 	padding-top: 15px;
 	background-image: linear-gradient(360deg, rgb(5, 39, 103) 0%, #111111 70%);
 	height: -webkit-fill-available;
-	min-height: 495px;
+	min-height: 517px;
 }
 
 .sidebar .nav-item a.active {

@@ -1,9 +1,13 @@
-img {
+.header {
 	width: 100%;
 }
 
 .project {
-	height: 80px;
+	display: flex;
+}
+
+#projectBanner {
+	height: 70px;
 }
 
 .blur {
