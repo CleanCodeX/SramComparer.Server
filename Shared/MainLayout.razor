@@ -1,18 +1,18 @@
 ﻿@inherits LayoutComponentBase
 
+<HeaderDisplay />
 <div class="page">
     <div class="sidebar">
-        <LogoDisplay />
         <div class="navmenu">    
             <NavMenu />
         </div>
+        <LogoDisplay />
     </div>
-    
+
     <div class="main">
-        <HeaderDisplay />
         <div class="content px-4">
             @Body
         </div>
+        <FooterDisplay />
     </div>
 </div>
-<FooterDisplay />

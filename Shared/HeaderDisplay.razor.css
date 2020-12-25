@@ -2,7 +2,10 @@ img {
 	width: 100%;
 }
 
-.blur {
+.project {
 	height: 80px;
-	filter: blur(1.3px);
+}
+
+.blur {
+	filter: blur(1px);
 }

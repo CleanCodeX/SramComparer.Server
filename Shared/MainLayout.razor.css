@@ -21,14 +21,14 @@
 
 .content {
 	font-size: 1.3rem;
-	min-height: 700px;
+	min-height: 660px;
 }
 
 .navmenu {
 	padding-top: 15px;
-	background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #111111 70%);
+	background-image: linear-gradient(360deg, rgb(5, 39, 103) 0%, #111111 70%);
 	height: -webkit-fill-available;
-	min-height: 660px;
+	min-height: 495px;
 }
 
 .sidebar .nav-item a.active {
