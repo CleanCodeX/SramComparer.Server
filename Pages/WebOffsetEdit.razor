@@ -62,8 +62,11 @@
 			</tr>
 		</table>
 	</EditForm>
-
-	<div class="result">
-		@ViewModel.OutputMessage
-	</div>
+	
+	@if (ViewModel.ShowOutput)
+	{
+		<div class="result">
+			@ViewModel.OutputMessage
+		</div>
+	}
 </div>

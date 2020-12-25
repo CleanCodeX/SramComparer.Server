@@ -28,6 +28,7 @@ namespace WebApp.SoE.ViewModels
 		public bool IsComparing { get; set; }
 		public bool CanCompare => !IsComparing && CurrentFileStream is not null && ComparisonFileStream is not null;
 		public bool UseColoredOutput { get; set; } = true;
+		public bool ShowOutput => OutputMessage.ToString() != string.Empty;
 
 		public bool WholeGameBuffer
 		{

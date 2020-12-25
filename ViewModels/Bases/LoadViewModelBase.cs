@@ -23,7 +23,8 @@ namespace WebApp.SoE.ViewModels.Bases
 		public MarkupString OutputMessage { get; set; }
 		public new MandatoryGameId CurrentGame { get; set; } = MandatoryGameId.One;
 		public bool IsLoaded => SramFile is not null;
-
+		public bool ShowOutput => OutputMessage.ToString() != string.Empty;
+		
 		public override async Task SetCurrentFileAsync(IBrowserFile file)
 		{
 			await base.SetCurrentFileAsync(file);
