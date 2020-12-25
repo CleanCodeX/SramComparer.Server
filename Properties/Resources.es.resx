@@ -204,9 +204,6 @@
   <data name="MenuSramComparison" xml:space="preserve">
     <value>SRAM Comparison</value>
   </data>
-  <data name="SramComparerOpenSourceDisclaimer" xml:space="preserve">
-    <value>SRAM - Comparer (and everything else here) is open-source!</value>
-  </data>
   <data name="MenuWebTools" xml:space="preserve">
     <value>Web Tools</value>
   </data>

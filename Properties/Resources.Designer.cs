@@ -655,7 +655,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Format Completion Project ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Format Completion Project ähnelt.
         /// </summary>
         public static string ProjectName {
             get {
@@ -687,15 +687,6 @@ namespace WebApp.SoE.Properties {
         public static string ShowAdditionalGameInformation {
             get {
                 return ResourceManager.GetString("ShowAdditionalGameInformation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Comparer (and everything else here) is open-source! ähnelt.
-        /// </summary>
-        public static string SramComparerOpenSourceDisclaimer {
-            get {
-                return ResourceManager.GetString("SramComparerOpenSourceDisclaimer", resourceCulture);
             }
         }
         

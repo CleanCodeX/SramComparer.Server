@@ -206,9 +206,6 @@
 	<data name="TooltipAwesomeSoE" xml:space="preserve">
 		<value>Awesome Seiten für ein awesome Spiel</value>
 	</data>
-	<data name="SramComparerOpenSourceDisclaimer" xml:space="preserve">
-    <value>SRAM - Comparer ist Open-Source!</value>
-  </data>
 	<data name="MenuSupport" xml:space="preserve">
 		<value>Unterstützung</value>
 	</data>
@@ -243,7 +240,7 @@
 		<value>Info</value>
 	</data>
 	<data name="ProjectName" xml:space="preserve">
-		<value>SRAM Format Vervollständigungs Projekt</value>
+		<value>Format Vervollständigungs Projekt</value>
 	</data>
 	<data name="MenuAbout" xml:space="preserve">
 		<value>Info</value>
