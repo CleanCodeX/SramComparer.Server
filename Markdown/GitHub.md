@@ -4,7 +4,7 @@ Sources are hosted at [GitHub](https://github.com/CleanCodeX){target="_"}
 
 ### Relevant Repos
 
-Links open in a new tab
+Info: links open in a new tab
 
 #### Secret Of Evermore
 * [SramFormat.SoE](https://github.com/CleanCodeX/SramFormat.SoE){target="_"} SoE's SRAM Structures
