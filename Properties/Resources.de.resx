@@ -158,16 +158,13 @@
 	<data name="ButtonSetValue" xml:space="preserve">
 		<value>Setze Wert</value>
 	</data>
-	<data name="HintShowChangelog" xml:space="preserve">
-    <value>Changelog anzeigen</value>
-  </data>
 	<data name="MenuAwesomeSoE" xml:space="preserve">
 		<value>Awesome SoE</value>
 	</data>
 	<data name="Pages" xml:space="preserve">
     <value>Seiten</value>
   </data>
-  <data name="MenuChangelog" xml:space="preserve">
+  <data name="Changelog" xml:space="preserve">
     <value>Historie</value>
   </data>
 	<data name="MenuFeatures" xml:space="preserve">

@@ -160,6 +160,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Changelog ähnelt.
+        /// </summary>
+        public static string Changelog {
+            get {
+                return ResourceManager.GetString("Changelog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Checksum ähnelt.
         /// </summary>
         public static string Checksum {
@@ -385,15 +394,6 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Show changelog ähnelt.
-        /// </summary>
-        public static string HintShowChangelog {
-            get {
-                return ResourceManager.GetString("HintShowChangelog", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die known bytes ähnelt.
         /// </summary>
         public static string KnownBytes {
@@ -435,15 +435,6 @@ namespace WebApp.SoE.Properties {
         public static string MenuAwesomeSoE {
             get {
                 return ResourceManager.GetString("MenuAwesomeSoE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Changelog ähnelt.
-        /// </summary>
-        public static string MenuChangelog {
-            get {
-                return ResourceManager.GetString("MenuChangelog", resourceCulture);
             }
         }
         

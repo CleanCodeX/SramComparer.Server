@@ -349,11 +349,8 @@
   <data name="MenuImagery" xml:space="preserve">
     <value>Images</value>
   </data>
-  <data name="MenuChangelog" xml:space="preserve">
+  <data name="Changelog" xml:space="preserve">
     <value>Changelog</value>
-  </data>
-  <data name="HintShowChangelog" xml:space="preserve">
-    <value>Show changelog</value>
   </data>
   <data name="UseColoredOutput" xml:space="preserve">
     <value>Use colored output</value>
