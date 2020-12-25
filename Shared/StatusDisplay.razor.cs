@@ -5,9 +5,9 @@ using Res = SramComparer.Properties.Resources;
 
 namespace WebApp.SoE.Shared
 {
-	public partial class CompletionDisplay
+	public partial class StatusDisplay
 	{
-		public string? CompletionStatus { get; private set; }
+		public string? Status { get; private set; }
 
 		protected override void OnInitialized()
 		{
@@ -20,7 +20,7 @@ namespace WebApp.SoE.Shared
 			var unknown = Resources.UnknownBytes;
 			var known = Resources.KnownBytes;
 
-			CompletionStatus = $"{knownPercentage}% ({knownBytes}) {known} + {unknownPercentage}% ({unknownBytes}) {unknown} {est} 100% ({allBytes} {Res.Bytes})";
+			Status = $"{knownPercentage}% ({knownBytes}) {known} + {unknownPercentage}% ({unknownBytes}) {unknown} {est} 100% ({allBytes} {Res.Bytes})";
 		}
 	}
 }

@@ -235,10 +235,10 @@
     <value>Project status</value>
   </data>
   <data name="HintProjectStatus" xml:space="preserve">
-    <value>Completion Status</value>
+    <value>Format exploration status</value>
   </data>
   <data name="ProjectName" xml:space="preserve">
-    <value>Format Completion Project</value>
+    <value>Format Exploration Project</value>
   </data>
   <data name="WholeGameBuffer" xml:space="preserve">
     <value>Whole game buffer</value>

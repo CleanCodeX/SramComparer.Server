@@ -385,7 +385,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Completion Status ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Format exploration status ähnelt.
         /// </summary>
         public static string HintProjectStatus {
             get {
@@ -655,7 +655,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Format Completion Project ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Format Exploration Project ähnelt.
         /// </summary>
         public static string ProjectName {
             get {
