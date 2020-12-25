@@ -282,6 +282,9 @@
   <data name="ButtonGetValue" xml:space="preserve">
     <value>Get value</value>
   </data>
+  <data name="Contributor" xml:space="preserve">
+    <value>Contributor</value>
+  </data>
   <data name="ButtonSetValue" xml:space="preserve">
     <value>Set value</value>
   </data>

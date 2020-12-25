@@ -5,7 +5,7 @@ using WebApp.SoE.Services;
 
 namespace WebApp.SoE.Pages
 {
-	[Route("/about")]
+	[Route(PageUris.About)]
     public partial class About
     {
 #nullable disable

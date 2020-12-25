@@ -4,7 +4,7 @@ img {
 }
 
 .blur {
-/*	filter: blur(1px);*/
+	filter: blur(1px);
 }
 
 .footer {

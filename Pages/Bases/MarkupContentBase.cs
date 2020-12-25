@@ -15,7 +15,7 @@ namespace WebApp.SoE.Pages.Bases
 
 		[Parameter] public string? Url { get; set; }
 		[Parameter] public string? Filepath { get; set; }
-
+		
 		protected MarkupString Content { get; set; }
 
 		protected override async Task OnParametersSetAsync()
@@ -26,7 +26,7 @@ namespace WebApp.SoE.Pages.Bases
 				Content = MarkdownHelper.Parse(await LoadFromUrlAsync(Url));
 		}
 
-		private async Task<string> LoadFromUrlAsync(string url)
+		protected async Task<string> LoadFromUrlAsync(string url)
 		{
 			try
 			{
@@ -43,7 +43,7 @@ namespace WebApp.SoE.Pages.Bases
 			}
 		}
 
-		private static string LoadFromFile(string filepath)
+		protected static string LoadFromFile(string filepath)
 		{
 			try
 			{

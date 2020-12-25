@@ -178,6 +178,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Contributor ähnelt.
+        /// </summary>
+        public static string Contributor {
+            get {
+                return ResourceManager.GetString("Contributor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Current SRAM-File ähnelt.
         /// </summary>
         public static string CurrentSramFile {

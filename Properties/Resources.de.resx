@@ -251,4 +251,7 @@
 	<data name="MenuAbout" xml:space="preserve">
 		<value>Info</value>
 	</data>
+	<data name="Contributor" xml:space="preserve">
+		<value>Contributor</value>
+	</data>
 </root>

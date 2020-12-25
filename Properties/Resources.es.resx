@@ -358,4 +358,7 @@
   <data name="OpenSourceInfoFragment" xml:space="preserve">
     <value>The source code is hosted at </value>
   </data>
+  <data name="Contributor" xml:space="preserve">
+    <value>Contributor</value>
+  </data>
 </root>
