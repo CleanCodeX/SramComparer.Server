@@ -1,0 +1,8 @@
+img {
+	width: 100%;
+}
+
+.blur {
+	height: 60px;
+	filter: blur(1.3px);
+}

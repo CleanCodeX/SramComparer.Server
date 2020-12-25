@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
 using Common.Shared.Min.Helpers;
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Forms;
 using SramComparer.Helpers;
 using SramComparer.Services;
 using SramComparer.SoE.Enums;
@@ -55,7 +54,7 @@ namespace WebApp.SoE.ViewModels
 		public AllSingleFlag GameChecksum { get; set; }
 		public AllSingleFlag Unknown12B { get; set; }
 
-		public void Compare()
+		public async Task CompareAsync()
 		{
 			try
 			{
@@ -63,7 +62,7 @@ namespace WebApp.SoE.ViewModels
 
 				IsComparing = true;
 
-				SaveOptionsAsync().GetAwaiter().GetResult();
+				await SaveOptionsAsync();
 
 				using var output = new StringWriter { NewLine = "<br>" };
 

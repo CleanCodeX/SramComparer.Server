@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using WebApp.SoE.Helpers;
-using WebApp.SoE.Services;
 
 namespace WebApp.SoE.Shared
 {
@@ -21,7 +20,6 @@ namespace WebApp.SoE.Shared
 		}
 
 #nullable disable
-		[Inject] private IAppInfoService AppInfoService { get; set; }
 		[Inject] private ProtectedSessionStorage SessionStorage { get; set; }
 		[Inject] private NavigationManager NavManager { get; set; }
 #nullable restore

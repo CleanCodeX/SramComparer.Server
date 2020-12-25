@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
 using Microsoft.AspNetCore.Components;
@@ -22,9 +23,21 @@ namespace WebApp.SoE.ViewModels.Bases
 		protected MemoryStream? CurrentFileStream { get; set; }
 		public string? CurrentFileName { get; set; }
 
+		protected virtual string StorageKeyPrefix => GetType().Name + "_" ;
+		private string StorageKey => StorageKeyPrefix + nameof(Options);
+		
 		protected internal virtual async Task LoadOptionsAsync()
 		{
-			Options = (await LocalStorage.GetAsync<Options>(nameof(Options))).Value ?? Options;
+			try
+			{
+				if(await LocalStorage.GetAsync<Options>(StorageKey) is {Success: true} settings)
+					Options = settings.Value!;
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex);
+			}
+			
 			Region = Options.Region;
 			CurrentGame = (GameId)Options.CurrentGame;
 		}
@@ -34,7 +47,14 @@ namespace WebApp.SoE.ViewModels.Bases
 			Options.Region = Region;
 			Options.CurrentGame = CurrentGame.ToInt();
 
-			await LocalStorage.SetAsync(nameof(Options), Options);
+			try
+			{
+				await LocalStorage.SetAsync(StorageKey, Options);
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex);
+			}
 		}
 
 		public virtual async Task SetCurrentFileAsync(IBrowserFile file)

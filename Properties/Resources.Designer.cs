@@ -340,15 +340,6 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Completion Status ähnelt.
-        /// </summary>
-        public static string HintCompletionStatus {
-            get {
-                return ResourceManager.GetString("HintCompletionStatus", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Copy text to clipboard ähnelt.
         /// </summary>
         public static string HintCopyButton {
@@ -376,6 +367,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Completion Status ähnelt.
+        /// </summary>
+        public static string HintProjectStatus {
+            get {
+                return ResourceManager.GetString("HintProjectStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Show changelog ähnelt.
         /// </summary>
         public static string HintShowChangelog {
@@ -394,11 +394,29 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Info ähnelt.
+        /// </summary>
+        public static string LabelInfo {
+            get {
+                return ResourceManager.GetString("LabelInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die mandatory ähnelt.
         /// </summary>
         public static string Mandatory {
             get {
                 return ResourceManager.GetString("Mandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die About ähnelt.
+        /// </summary>
+        public static string MenuAbout {
+            get {
+                return ResourceManager.GetString("MenuAbout", resourceCulture);
             }
         }
         
@@ -520,20 +538,11 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Hacking ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Format ähnelt.
         /// </summary>
-        public static string MenuSramHacking {
+        public static string MenuSramFormat {
             get {
-                return ResourceManager.GetString("MenuSramHacking", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Tools ähnelt.
-        /// </summary>
-        public static string MenuSramTools {
-            get {
-                return ResourceManager.GetString("MenuSramTools", resourceCulture);
+                return ResourceManager.GetString("MenuSramFormat", resourceCulture);
             }
         }
         
@@ -642,6 +651,15 @@ namespace WebApp.SoE.Properties {
         public static string Prerequisites {
             get {
                 return ResourceManager.GetString("Prerequisites", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Format Completion Project ähnelt.
+        /// </summary>
+        public static string ProjectName {
+            get {
+                return ResourceManager.GetString("ProjectName", resourceCulture);
             }
         }
         

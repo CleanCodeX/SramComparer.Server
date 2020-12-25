@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Globalization;
 using SramFormat.SoE.Constants;
 using WebApp.SoE.Properties;
+using Res = SramComparer.Properties.Resources;
 
 namespace WebApp.SoE.Shared
 {
@@ -11,6 +11,7 @@ namespace WebApp.SoE.Shared
 
 		protected override void OnInitialized()
 		{
+			var est = '≙';
 			var knownBytes = Sizes.Game.AllKnown;
 			var allBytes = Sizes.Game.All;
 			var unknownBytes = Sizes.Game.AllUnknown;
@@ -18,9 +19,8 @@ namespace WebApp.SoE.Shared
 			var unknownPercentage = Math.Round((double)unknownBytes / allBytes * 100, 1);
 			var unknown = Resources.UnknownBytes;
 			var known = Resources.KnownBytes;
-			var status = Resources.ProjectStatus;
 
-			CompletionStatus = $"{status}: {known} {knownBytes} ({knownPercentage}%) vs. {unknown} {unknownBytes} ({unknownPercentage}%)";
+			CompletionStatus = $"{knownPercentage}% ({knownBytes}) {known} + {unknownPercentage}% ({unknownBytes}) {unknown} {est} 100% ({allBytes} {Res.Bytes})";
 		}
 	}
 }

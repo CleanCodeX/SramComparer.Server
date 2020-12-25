@@ -44,13 +44,13 @@ namespace WebApp.SoE.Pages
 
 		protected override Task OnInitializedAsync() => ViewModel.LoadOptionsAsync();
 
-		private string CopyText()
+		private async Task<string> CopyTextAsync()
 		{
 			if (!ViewModel.UseColoredOutput)
 				return ViewModel.OutputMessage.ToString();
 
 			ViewModel.UseColoredOutput = false;
-			ViewModel.Compare();
+			await ViewModel.CompareAsync();
 			ViewModel.UseColoredOutput = true;
 
 			return ViewModel.OutputMessage.ReplaceHtmlLinebreaks();
@@ -60,7 +60,7 @@ namespace WebApp.SoE.Pages
 		{
 			try
 			{
-				await JsRuntime.StartDownloadAsync("Output.txt", Encoding.UTF8.GetBytes(CopyText()));
+				await JsRuntime.StartDownloadAsync("Output.txt", Encoding.UTF8.GetBytes(await CopyTextAsync()));
 			}
 			catch (Exception ex)
 			{

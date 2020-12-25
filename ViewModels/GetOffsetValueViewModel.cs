@@ -22,16 +22,18 @@ namespace WebApp.SoE.ViewModels
 		public bool CanGet => IsLoaded && OffsetAddress > 0;
 		public bool CanSet => IsLoaded && OffsetAddress > 0;
 
+		private string StorageKey => StorageKeyPrefix + nameof(OffsetAddress);
+
 		protected internal override async Task LoadOptionsAsync()
 		{
 			await base.LoadOptionsAsync();
-			OffsetAddress = (await LocalStorage.GetAsync<int>(nameof(OffsetAddress))).Value;
+			OffsetAddress = (await LocalStorage.GetAsync<int>(StorageKey)).Value;
 		}
 
 		protected internal override async Task SaveOptionsAsync()
 		{
 			await base.SaveOptionsAsync();
-			await LocalStorage.SetAsync(nameof(OffsetAddress), OffsetAddress);
+			await LocalStorage.SetAsync(StorageKey, OffsetAddress);
 		}
 
 		public override async Task SetCurrentFileAsync(IBrowserFile file)
@@ -44,15 +46,21 @@ namespace WebApp.SoE.ViewModels
 
 		public async Task GetOffsetValueAsync()
 		{
+			InternalGetOffsetValue();
+			await SaveOptionsAsync();
+		}
+
+		private void InternalGetOffsetValue()
+		{
 			try
 			{
+				CurrentGame.ThrowIfDefault(nameof(CurrentGame));
 				SramFile.ThrowIfNull(nameof(SramFile));
-				OffsetValue = SramFile.GetOffsetByte(Options.CurrentGame - 1, OffsetAddress);
-				var valueDisplayText = NumberFormatter.GetByteValueRepresentations((byte)OffsetValue);
+				OffsetValue = SramFile.GetOffsetByte(CurrentGame.ToInt() - 1, OffsetAddress);
+				var valueDisplayText = NumberFormatter.GetByteValueRepresentations((byte) OffsetValue);
 
-				OutputMessage = Resources.StatusGetOffsetValueTemplate.InsertArgs(OffsetAddress, valueDisplayText).ColorText(Color.Green).ToMarkup();
-
-				await SaveOptionsAsync();
+				OutputMessage = Resources.StatusGetOffsetValueTemplate.InsertArgs(OffsetAddress, valueDisplayText)
+					.ColorText(Color.Green).ToMarkup();
 			}
 			catch (Exception ex)
 			{

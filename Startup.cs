@@ -9,6 +9,7 @@ using Microsoft.JSInterop;
 using WebApp.SoE.Helpers;
 using WebApp.SoE.Services;
 using WebApp.SoE.ViewModels;
+using Westwind.AspNetCore.LiveReload;
 
 namespace WebApp.SoE
 {
@@ -33,6 +34,12 @@ namespace WebApp.SoE
 			services.AddOptions<Settings>().Bind(Configuration.GetSection(nameof(Settings)));
 			services.AddSingleton(cfg => cfg.GetService<IOptionsMonitor<Settings>>()!.CurrentValue);
 
+			services.AddLiveReload(config => {
+				config.LiveReloadEnabled = true;
+				config.ClientFileExtensions = ".css,.js,.htm,.html";
+				config.FolderToMonitor = "~/../";
+			});
+
 			services.AddHttpClient();
 			services.AddRazorPages();
 			services.AddServerSideBlazor();
@@ -52,6 +59,7 @@ namespace WebApp.SoE
 				app.UseHsts();
 			}
 
+			app.UseLiveReload();
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
 			app.UseRouting();

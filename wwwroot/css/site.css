@@ -1,12 +1,32 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 html, body {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: monospace;
 	background-color: #111111;
 }
 
-a, .btn-link {
-	color: #0366d6;
+h1{
+	color: lightgrey;
+}
+
+h2 {
+	color: turquoise;
+}
+
+h3, h4 {
+	color: darkcyan;
+}
+
+h5 {
+	color: teal;
+}
+
+a {
+	color: cyan;
+}
+
+a:visited {
+	color: steelblue;
 }
 
 .btn-primary {
@@ -15,9 +35,12 @@ a, .btn-link {
 	border-color: #1861ac;
 }
 
-.content {
-	padding-top: 40px;
-	font-family: "Consolas"
+.content h1, h2 {
+	margin-top: 15px;
+}
+
+.content h3, h4 {
+	margin-top: 30px;
 }
 
 .valid.modified:not([type=checkbox]) {

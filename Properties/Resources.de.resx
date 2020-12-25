@@ -188,9 +188,6 @@
 	<data name="ReadMe" xml:space="preserve">
 		<value>Lies Mich</value>
 	</data>
-	<data name="MenuSramTools" xml:space="preserve">
-		<value>SRAM - Tools</value>
-	</data>
 	<data name="MenuWebTools" xml:space="preserve">
 		<value>Web - Tools</value>
 	</data>
@@ -221,8 +218,8 @@
 	<data name="MenuCommunity" xml:space="preserve">
 		<value>Community</value>
 	</data>
-	<data name="MenuSramHacking" xml:space="preserve">
-		<value>SRAM Hacking</value>
+	<data name="MenuSramFormat" xml:space="preserve">
+		<value>SRAM Format</value>
 	</data>
 	<data name="MenuSramComparison" xml:space="preserve">
 		<value>SRAM Vergleich</value>
@@ -242,7 +239,16 @@
 	<data name="UnknownBytes" xml:space="preserve">
 		<value>unbekannte Bytes</value>
 	</data>
-	<data name="HintCompletionStatus" xml:space="preserve">
-		<value>Vervollständigungs-Status</value>
+	<data name="HintProjectStatus" xml:space="preserve">
+		<value>Etdeckungs-Status</value>
+	</data>
+	<data name="LabelInfo" xml:space="preserve">
+		<value>Info</value>
+	</data>
+	<data name="ProjectName" xml:space="preserve">
+		<value>SRAM Format Vervollständigungs Projekt</value>
+	</data>
+	<data name="MenuAbout" xml:space="preserve">
+		<value>Info</value>
 	</data>
 </root>

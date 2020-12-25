@@ -4,6 +4,7 @@
 	{
 		public const string Compare = "/compare";
 		public const string Offset = "/offset";
+		public const string About = "/about";
 
 		public const string Page = "/p";
 		private const string PagePrefix = Page + "?c=";

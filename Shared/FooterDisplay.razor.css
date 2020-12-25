@@ -1,0 +1,12 @@
+img {
+	height: 60px;
+	width: -webkit-fill-available;
+}
+
+.blur {
+/*	filter: blur(1px);*/
+}
+
+.footer {
+	padding-top: 10px;
+}

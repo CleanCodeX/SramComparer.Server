@@ -3,16 +3,12 @@
 
 @{ var sp = "&nbsp;".ToMarkup(); }
 
-<img src="media/SoE.png" class="logo" alt="SoE">
-<div class="top-row pl-4 navbar navbar-dark version">
-    <a href="@PageUris.ChangeLog" title="@Res.HintShowChangelog">@($"v{AppInfoService.PackageVersion}")</a>
-</div>
 <div>
     <!-- SRAM Hacking -->
     <ol class="nav flex-column">
         <li class="nav-item px-3">
             <a class="nav-link" href="@PageUris.Goal">
-                <span class="oi oi-code"/> @Res.MenuSramHacking.ReplaceSpaces() 
+                <span class="oi oi-code"/> @Res.MenuSramFormat.ReplaceSpaces() 
                 @sp <span class="@(_sramHacking ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
             </a>
   
@@ -142,6 +138,11 @@
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="@PageUris.Awesome" title="@Res.TooltipAwesomeSoE">
                 <span class="oi oi-star" aria-hidden="true"/> @Res.MenuAwesomeSoE.ReplaceSpaces()
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="@PageUris.About">
+                <span class="oi oi-info" aria-hidden="true"/> @Res.MenuAbout.ReplaceSpaces()
             </NavLink>
         </li>
     </ol>

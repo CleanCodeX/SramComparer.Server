@@ -20,27 +20,29 @@ namespace WebApp.SoE.ViewModels
 #nullable disable
 		[Inject] internal IJSRuntime JsRuntime { get; set; }
 #nullable restore
+		
+		private bool Changed { get; set; }
 
-		public bool CanSave { get; set; }
+		public bool CanSave => Changed && CanSet;
 
-		public void SetOffsetValue()
+		public async Task SetOffsetValueAsync()
 		{
 			try
 			{
-				CanSave = false;
-
+				await Task.CompletedTask;
+				
 				SramFile.ThrowIfNull(nameof(SramFile));
 				SramFile.SetOffsetValue(Options.CurrentGame - 1, OffsetAddress, (byte)OffsetValue);
 				var valueDisplayText = NumberFormatter.GetByteValueRepresentations((byte)OffsetValue);
 
 				OutputMessage = Resources.StatusSetOffsetValueTemplate.InsertArgs(OffsetAddress, valueDisplayText).ColorText(Color.Green).ToMarkup();
+
+				Changed = true;
 			}
 			catch (Exception ex)
 			{
 				OutputMessage = ex.Message.ColorText(Color.Red).ToMarkup();
 			}
-
-			CanSave = true;
 		}
 
 		public async Task SaveAndDownloadAsync()
@@ -48,19 +50,18 @@ namespace WebApp.SoE.ViewModels
 			try
 			{
 				SramFile.ThrowIfNull(nameof(SramFile));
-				CanSave = false;
-				
+
 				var bytes = new byte[8192];
 				SramFile.Save(new MemoryStream(bytes));
 
 				await JsRuntime.StartDownloadAsync(CurrentFileName!, bytes);
+
+				Changed = false;
 			}
 			catch (Exception ex)
 			{
 				OutputMessage = ex.Message.ColorText(Color.Red).ToMarkup();
 			}
-
-			CanSave = true;
 		}
 	}
 }

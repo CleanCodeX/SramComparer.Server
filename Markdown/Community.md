@@ -9,3 +9,5 @@ Info: links open in a new tab
 
 * There's also a [Discord](https://discord.gg/QGQdJNM4){target="_"} 
 
+* Or send an [e-Mail](mailto:SoECP@xeth.de?subject=SoE%20Completion%20Project)
+

@@ -2,7 +2,7 @@
 
 Compare SRAM files. It's not that difficult.
 
-That would be really awesome. This potentially safes  much time not doing ourselfs twice what you already did.
+That would be really awesome. This saves potentially much time not doing something twice what someone else already did.
 
 Join the SoE community to find meanings for various SRAM offsets.
 This can be done either by using 
