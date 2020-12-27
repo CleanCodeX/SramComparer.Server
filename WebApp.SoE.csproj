@@ -9,11 +9,8 @@
 	  <Authors>CleanCodeX</Authors>
 	  <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 	  <UserSecretsId>17d24474-ed46-4f7f-bc20-2d543c8c8603</UserSecretsId>
+	  <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Pages\Community.razor.cs" />
-  </ItemGroup>
 
 	<ItemGroup>
 		<ProjectCapability Include="DynamicDependentFile" />
