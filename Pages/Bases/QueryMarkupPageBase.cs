@@ -39,7 +39,7 @@ namespace WebApp.SoE.Pages.Bases
 		private void NavigationManagerOnLocationChanged(object? sender, LocationChangedEventArgs e)
 		{
 			if (e.IsNavigationIntercepted)
-				NavigationManager.NavigateTo(e.Location, true);
+				NavigationManager.NavigateTo(e.Location, false);
 		}
 	}
 }
