@@ -1,8 +1,8 @@
-## How can I help?
+## Can I help?
 
-Compare SRAM files. It's not difficult at all.
+Sure! Just compare SRAM files. It's not difficult at all.
 
-This would be really awesome. This would save much time in not doing something twice what someone else already did.
+This would be really awesome. Your help would save much time in not doing something twice what someone else already did.
 
 Join the SoE 'exploration' community to find meanings for various SRAM offsets.
 This can be done either by using 
@@ -18,5 +18,5 @@ Reading and manipulating offset values can be done using the following:
 
 Post your assumptions and discoveries in the [Community](p?c=community)!
 
-A manual for using the Console App can be found [here](p?c=HowToUse). [Web Comparison](compare) is easier to use and works with any kind of modern browser.
+A manual for using the Console App can be found [here](p?c=Manual). [Web Comparison](compare) is easier to use and works with any kind of modern browser.
 

@@ -170,10 +170,10 @@
 	<data name="MenuFeatures" xml:space="preserve">
 		<value>Features</value>
 	</data>
-	<data name="MenuHowCanIHelp" xml:space="preserve">
-		<value>Wie kann ich helfen?</value>
+	<data name="MenuCanIHelp" xml:space="preserve">
+		<value>Kann ich helfen?</value>
 	</data>
-	<data name="MenuHowToUse" xml:space="preserve">
+	<data name="Manual" xml:space="preserve">
 		<value>Anleitung</value>
 	</data>
 	<data name="MenuImagery" xml:space="preserve">

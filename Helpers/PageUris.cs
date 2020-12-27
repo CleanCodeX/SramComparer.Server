@@ -12,11 +12,11 @@
 
 		public const string Downloads = PagePrefix + "downloads";
 		public const string Features = PagePrefix + "features";
-		public const string HowToUse = PagePrefix + "howtouse";
+		public const string Manual = PagePrefix + "manual";
 		public const string Imagery = PagePrefix + "imagery";
 		public const string Goal = PagePrefix + "goal";
 		public const string Unknowns = PagePrefix + "unknowns";
-		public const string HowCanIHelp = PagePrefix + "howcanihelp";
+		public const string Contribute = PagePrefix + "contribute";
 		public const string ChangeLog = PagePrefix + "changelog";
 		public const string Awesome = PagePrefix + "awesome";
 		public const string GitHub = PagePrefix + "github";

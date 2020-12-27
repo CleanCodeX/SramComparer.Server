@@ -421,6 +421,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Manual ähnelt.
+        /// </summary>
+        public static string Manual {
+            get {
+                return ResourceManager.GetString("Manual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die About ähnelt.
         /// </summary>
         public static string MenuAbout {
@@ -435,6 +444,15 @@ namespace WebApp.SoE.Properties {
         public static string MenuAwesomeSoE {
             get {
                 return ResourceManager.GetString("MenuAwesomeSoE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Can I help? ähnelt.
+        /// </summary>
+        public static string MenuCanIHelp {
+            get {
+                return ResourceManager.GetString("MenuCanIHelp", resourceCulture);
             }
         }
         
@@ -489,24 +507,6 @@ namespace WebApp.SoE.Properties {
         public static string MenuHistory {
             get {
                 return ResourceManager.GetString("MenuHistory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die How can I help? ähnelt.
-        /// </summary>
-        public static string MenuHowCanIHelp {
-            get {
-                return ResourceManager.GetString("MenuHowCanIHelp", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Manual ähnelt.
-        /// </summary>
-        public static string MenuHowToUse {
-            get {
-                return ResourceManager.GetString("MenuHowToUse", resourceCulture);
             }
         }
         

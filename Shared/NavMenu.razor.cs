@@ -24,7 +24,7 @@ namespace WebApp.SoE.Shared
 		[Inject] private NavigationManager NavManager { get; set; }
 #nullable restore
 		
-		private bool _sramHacking;
+		private bool _sramFormat;
 		private bool _sramComparison;
 		private bool _consoleApp;
 		private bool _webTools;
@@ -47,14 +47,14 @@ namespace WebApp.SoE.Shared
 			{
 				PageUris.Goal => ExpandedMenu.SramHacking,
 				PageUris.Unknowns => ExpandedMenu.SramHacking,
-				PageUris.HowCanIHelp => ExpandedMenu.SramHacking,
+				PageUris.Contribute => ExpandedMenu.SramHacking,
 				PageUris.SramDocu => ExpandedMenu.SramHacking,
 
 				PageUris.Features => ExpandedMenu.SramComparison,
 
 				PageUris.Imagery => ExpandedMenu.ConsoleApp,
 				PageUris.Downloads => ExpandedMenu.ConsoleApp,
-				PageUris.HowToUse => ExpandedMenu.ConsoleApp,
+				PageUris.Manual => ExpandedMenu.ConsoleApp,
 
 				PageUris.Compare => ExpandedMenu.WebTools,
 				PageUris.Offset => ExpandedMenu.WebTools,
@@ -94,7 +94,7 @@ namespace WebApp.SoE.Shared
 		private void SetMenuStateVariables(ExpandedMenu menu)
 		{
 			_sramComparison = menu.HasFlag(ExpandedMenu.SramComparison);
-			_sramHacking = menu.HasFlag(ExpandedMenu.SramHacking);
+			_sramFormat = menu.HasFlag(ExpandedMenu.SramHacking);
 			_consoleApp = menu.HasFlag(ExpandedMenu.ConsoleApp);
 			_webTools = menu.HasFlag(ExpandedMenu.WebTools);
 		}

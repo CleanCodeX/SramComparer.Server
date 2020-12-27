@@ -12,10 +12,18 @@ If the goal of this project isn't clear, make sure to have read the [goal](p?c=g
 
 Assuming that you already did that, you might ask yourself what *you* can do.
 
-If you want to join the SoE 'army', see [here](p?c=HowCanIHelp) how it works.
+* Comparing SRAMs
+
+If so, you might want to join the SoE 'army', see [here](p?c=Contribute) how it works.
+
+* Provide localization
+
+If you're speaking a language which this website currently doesn't offer but you think it should do, then consider offering a localization into your language as a huge contribution to this project. You might open access to people who cannot understand the supported languages well. If you're interested to add yourself to the contributors list click [here](mailto:evermore@xeth.de?subject=Format%20Exploration%20Project%20Localization)
 
 ### Passive Help
 If that's not yours and just would like to see more capable SRAM editors in future, hey no big deal, that's ok.
+
+* Propaganda
 
 In that case you might want to tell your SoE friends about this project. 
 

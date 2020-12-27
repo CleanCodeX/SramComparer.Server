@@ -319,10 +319,10 @@
   <data name="MenuTheUnknowns" xml:space="preserve">
     <value>The Unknowns</value>
   </data>
-  <data name="MenuHowToUse" xml:space="preserve">
+  <data name="Manual" xml:space="preserve">
     <value>Manual</value>
   </data>
-  <data name="MenuHowCanIHelp" xml:space="preserve">
+  <data name="MenuCanIHelp" xml:space="preserve">
     <value>How can I help?</value>
   </data>
   <data name="MenuSupport" xml:space="preserve">

@@ -22,4 +22,4 @@ A non-exhaustive list can be found under section [Unknowns](p?c=Unknowns).
 Well, that's mostly up to the amount of contributions by the community.
 I am spending my free time working on that, but that won't be enough to make it happen fast.
 
-If you want to join the SoE 'army', see [here](p?c=HowCanIHelp) how it works.
+If you want to join the SoE 'army', see [here](p?c=Contribute) how it works.
