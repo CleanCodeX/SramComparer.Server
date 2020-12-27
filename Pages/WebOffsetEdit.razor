@@ -11,31 +11,31 @@
 			</tr>
 
 			<tr>
-				<td><label class="header">@Res.FileRegion:@Ns</label></td>
+				<td><label class="header">@ResComp.SettingRegion:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.Region" style=@RegionStyle /></td>
 			</tr>
 			
 			<p />
 
 			<tr>
-				<td colspan="2"><label class="header">@Res.SramFile (*.srm)</label></td>
+				<td colspan="2"><label class="header">@ResComp.CurrentSramFile (*.srm)</label></td>
 			</tr>
 			<tr>
-				<td><label>@Res.File:@Ns</label>*)</td>
+				<td><label>@ResComp.CurrentSramFile:@Ns</label>*)</td>
 				<td><InputFile OnChange="@OnCurrentFileChange" style=@ButtonStyle /></td>
 			</tr>
 			<tr>
-				<td><label>@Res.Game:@Ns</label></td>
+				<td><label>@ResComp.Game:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.CurrentGame" style=@CurrentGameStyle /></td>
 			</tr>
 
 			<p />
 			
 			<tr>
-				<td><label class="header">@(Res.Offset)s</label></td>
+				<td><label class="header">@(ResComp.GameOffset)s</label></td>
 			</tr>
 			<tr>
-				<td><label>@Res.Offset:@Ns</label>*)</td>
+				<td><label>@ResComp.GameOffset:@Ns</label>*)</td>
 				<td>
 					<input type="number" @bind="@ViewModel.OffsetAddress" maxLength="4" />
 					<button class="btn btn-primary" @onclick="@ViewModel.GetOffsetValueAsync" disabled="@(!ViewModel.CanGet)" title="@Res.HintButtonGetOffsetValue"><span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" /></button>

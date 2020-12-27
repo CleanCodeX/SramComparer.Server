@@ -11,37 +11,37 @@
 			</tr>
 
 			<tr>
-				<td><label class="header">@Res.FileRegion:@Ns</label></td>
+				<td><label class="header">@ResComp.SettingRegion:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.Region" style=@RegionStyle /></td>
 			</tr>
 			
 			<p />
 
 			<tr>
-				<td colspan="2"><label class="header">@Res.CurrentSramFile (*.srm)</label></td>
+				<td colspan="2"><label class="header">@ResComp.CurrentSramFile (*.srm)</label></td>
 			</tr>
 
 			<tr>
-				<td><label>@Res.File:@Ns *)</label></td>
+				<td><label>@ResComp.CurrentSramFile:@Ns *)</label></td>
 				<td><InputFile OnChange="@OnCurrentFileChange" style=@ButtonStyle /></td>
 			</tr>
 			<tr>
-				<td><label>@Res.Game:@Ns</label></td>
+				<td><label>@ResComp.Game:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.CurrentGame" style=@CurrentGameStyle /></td>
 			</tr>
 			
 			<p />
 
 			<tr>
-				<td colspan="2"><label class="header">@Res.ComparisonSramFile (*.srm|*.comp)</label></td>
+				<td colspan="2"><label class="header">@ResComp.ComparisonSramFile (*.srm|*.comp)</label></td>
 			</tr>
 			
 			<tr>
-				<td><label>@Res.File:@Ns *)</label></td>
+				<td><label>@ResComp.ComparisonSramFile:@Ns *)</label></td>
 				<td><InputFile OnChange="@OnComparisonFileChange" style=@ButtonStyle /></td>
 			</tr>
 			<tr>
-				<td><label>@Res.Game:@Ns</label></td>
+				<td><label>@ResComp.Game:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.ComparisonGame" style=@ComparisonGameStyle /></td>
 			</tr>
 			
@@ -53,9 +53,9 @@
 			
 			<tr>
 				<td colspan="2"><InputCheckbox @bind-Value="@ViewModel.WholeGameBuffer" />
-					<label style=@WholeGameStyle title="@Res.WholeGameBufferHint">@Res.WholeGameBuffer</label> | 
+					<label style=@WholeGameStyle title="@Res.WholeGameBufferHint">@ResCompSoE.WholeGameBuffer</label> | 
 					<InputCheckbox @bind-Value="@ViewModel.NonGameBuffer" />
-					<label style=@NonGameStyle title="@Res.NonGameBufferHint">@Res.NonGameBuffer</label>
+					<label style=@NonGameStyle title="@Res.NonGameBufferHint">@ResCompSoE.NonGameBuffer</label>
 				</td>
 			</tr>
 			
@@ -66,11 +66,11 @@
 			</tr>
 			
 			<tr>
-				<td><label>@Res.Checksum:@Ns</label></td>
+				<td><label>@ResCompSoE.GameChecksum:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.GameChecksum" style=@GameChecksumStyle /></td>
 			</tr>
 			<tr>
-				<td><label title="@Res.Unknown12BHint">@Res.Unknown12B:@Ns</label></td>
+				<td><label title="@Res.Unknown12BHint">@ResCompSoE.Unknown12B:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.Unknown12B" style=@Unknown12BStyle /></td>
 			</tr>
 			

@@ -20,29 +20,11 @@
 	<data name="AllGames" xml:space="preserve">
 		<value>Alle Spielslots</value>
 	</data>
-	<data name="Checksum" xml:space="preserve">
-		<value>Prüfsumme</value>
-	</data>
 	<data name="HintButtonCompare" xml:space="preserve">
 		<value>Vergleiche SRAM-Dateien</value>
 	</data>
-	<data name="ComparisonSramFile" xml:space="preserve">
-		<value>Vergleichs SRAM-Datei</value>
-	</data>
-	<data name="CurrentSramFile" xml:space="preserve">
-		<value>Aktuelle SRAM-Datei</value>
-	</data>
 	<data name="DontShow" xml:space="preserve">
 		<value>Nicht anzeigen</value>
-	</data>
-	<data name="File" xml:space="preserve">
-		<value>Datei</value>
-	</data>
-	<data name="FileRegion" xml:space="preserve">
-		<value>Datei-Region</value>
-	</data>
-	<data name="Game" xml:space="preserve">
-		<value>Spielslot</value>
 	</data>
 	<data name="Game1Only" xml:space="preserve">
 		<value>Nur #1</value>
@@ -59,17 +41,11 @@
 	<data name="Mandatory" xml:space="preserve">
 		<value>Pflichtfeld</value>
 	</data>
-	<data name="NonGameBuffer" xml:space="preserve">
-		<value>Nicht-Spielslot-Bereich</value>
-	</data>
 	<data name="NonGameBufferHint" xml:space="preserve">
 		<value>Vergleich des nicht Spielslot-Bereichs (außerhalb aller Spielslot-Bereiche)</value>
 	</data>
 	<data name="ShowAdditionalGameInformation" xml:space="preserve">
 		<value>Zusätzliche Spielslot-Informationen anzeigen</value>
-	</data>
-	<data name="Unknown12B" xml:space="preserve">
-		<value>Unknown12B</value><comment>Don't translate this term</comment>
 	</data>
 	<data name="Unknown12BHint" xml:space="preserve">
 		<value>Dieser Wert ändert sich bei jedem In-game Speichern - vielleicht ein Zeitstempel oder ähnliches</value>
@@ -80,23 +56,17 @@
 	<data name="WebComparison" xml:space="preserve">
 		<value>Vergleichen</value>
 	</data>
-	<data name="WholeGameBuffer" xml:space="preserve">
-		<value>Gesamter Spielslot-Bereich</value>
-	</data>
 	<data name="WholeGameBufferHint" xml:space="preserve">
 		<value>Vergleich des gesamten Spielslot-Bereichs (inklusive der "bekannten" Bereiche)</value>
 	</data>
-	<data name="Offset" xml:space="preserve">
-		<value>Offset</value>
-	</data>
 	<data name="OffsetValue" xml:space="preserve">
-		<value>Offset Wert</value>
+		<value>Offset Wert</value><comment>The term Offset should only be translated if not understandable</comment>
 	</data>
 	<data name="OpenSourceInfoFragment" xml:space="preserve">
 		<value>ist ein Open-Source Tool gehostet auf</value>
 	</data>
 	<data name="MenuWebOffset" xml:space="preserve">
-		<value>Offset bearbeiten</value>
+		<value>Offset bearbeiten</value><comment>The term Offset should only be translated if not understandable</comment>
 	</data>
 	<data name="Game1" xml:space="preserve">
 		<value>#1</value>
@@ -111,19 +81,16 @@
 		<value>#4</value>
 	</data>
 	<data name="CaptionWebOffsetEdit" xml:space="preserve">
-		<value>SRAM - Web Offset Änderung</value>
+		<value>SRAM - Web Offset Änderung</value><comment>The term Offset should only be translated if not understandable</comment>
 	</data>
 	<data name="DownloadConfirmationFileTemplate" xml:space="preserve">
 		<value>Datei '{0}' herunterladen?</value>
 	</data>
 	<data name="HintButtonGetOffsetValue" xml:space="preserve">
-		<value>Lade einen Offset-Wert</value>
+		<value>Lade einen Offset-Wert</value><comment>The term Offset should only be translated if not understandable</comment>
 	</data>
 	<data name="HintButtonSetOffsetValue" xml:space="preserve">
-		<value>Setze einen Offset-Wert</value>
-	</data>
-	<data name="SramFile" xml:space="preserve">
-		<value>SRAM-Datei</value>
+		<value>Setze einen Offset-Wert</value><comment>The term Offset should only be translated if not understandable</comment>
 	</data>
 	<data name="HintButtonDownloadChangedFile" xml:space="preserve">
 		<value>Geänderte Datei herunterladen</value>
@@ -164,7 +131,7 @@
 	<data name="Pages" xml:space="preserve">
     <value>Seiten</value>
   </data>
-  <data name="Changelog" xml:space="preserve">
+  <data name="ChangeLog" xml:space="preserve">
     <value>Historie</value>
   </data>
 	<data name="MenuFeatures" xml:space="preserve">
@@ -172,9 +139,6 @@
 	</data>
 	<data name="MenuCanIHelp" xml:space="preserve">
 		<value>Kann ich helfen?</value>
-	</data>
-	<data name="Manual" xml:space="preserve">
-		<value>Anleitung</value>
 	</data>
 	<data name="MenuImagery" xml:space="preserve">
 		<value>Bilder</value>
@@ -221,9 +185,6 @@
 	<data name="MenuSramComparerCmdApp" xml:space="preserve">
 		<value>Konsolen App</value>
 	</data>
-	<data name="ProjectStatus" xml:space="preserve">
-		<value>Projekt-Status</value>
-	</data>
 	<data name="CaptionWebCompare" xml:space="preserve">
 		<value>SRAM - Web Vergleich</value>
 	</data>
@@ -236,7 +197,7 @@
 	<data name="HintProjectStatus" xml:space="preserve">
 		<value>Etdeckungs-Status</value>
 	</data>
-	<data name="LabelInfo" xml:space="preserve">
+	<data name="TitleInfo" xml:space="preserve">
 		<value>Info</value>
 	</data>
 	<data name="ProjectName" xml:space="preserve">

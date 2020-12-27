@@ -120,7 +120,7 @@
   <data name="AllGames" xml:space="preserve">
     <value>All games</value>
   </data>
-  <data name="LabelInfo" xml:space="preserve">
+  <data name="TitleInfo" xml:space="preserve">
     <value>Info</value>
   </data>
   <data name="AppCompiledAt" xml:space="preserve">
@@ -181,7 +181,7 @@
     <value>Compare</value>
   </data>
   <data name="MenuWebOffset" xml:space="preserve">
-    <value>Edit offset</value>
+    <value>Edit offset</value><comment>The term Offset should only be translated if not understandable</comment>
   </data>
   <data name="MenuAwesomeSoE" xml:space="preserve">
     <value>Awesome SoE</value>
@@ -214,43 +214,16 @@
     <value>Read Me</value>
   </data>
   <data name="CaptionWebOffsetEdit" xml:space="preserve">
-    <value>SRAM - Web Offset Edit</value>
-  </data>
-  <data name="ComparisonSramFile" xml:space="preserve">
-    <value>Comparison SRAM-File</value>
-  </data>
-  <data name="CurrentSramFile" xml:space="preserve">
-    <value>Current SRAM-File</value>
-  </data>
-  <data name="SramFile" xml:space="preserve">
-    <value>SRAM-File</value>
-  </data>
-  <data name="File" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="Game" xml:space="preserve">
-    <value>Game</value>
+    <value>SRAM - Web Offset Edit</value><comment>The term Offset should only be translated if not understandable</comment>
   </data>
   <data name="AdditionalComparisons" xml:space="preserve">
     <value>Additional comparisons</value>
-  </data>
-  <data name="ProjectStatus" xml:space="preserve">
-    <value>Project status</value>
   </data>
   <data name="HintProjectStatus" xml:space="preserve">
     <value>Format exploration status</value>
   </data>
   <data name="ProjectName" xml:space="preserve">
     <value>Format Exploration Project</value>
-  </data>
-  <data name="WholeGameBuffer" xml:space="preserve">
-    <value>Whole game buffer</value>
-  </data>
-  <data name="FileRegion" xml:space="preserve">
-    <value>File region</value>
-  </data>
-  <data name="NonGameBuffer" xml:space="preserve">
-    <value>Non game buffer</value>
   </data>
   <data name="NonGameBufferHint" xml:space="preserve">
     <value>Comparison of non game buffer (after all game sections)</value>
@@ -261,23 +234,14 @@
   <data name="ShowAdditionalGameInformation" xml:space="preserve">
     <value>Show additional game information</value>
   </data>
-  <data name="Checksum" xml:space="preserve">
-    <value>Checksum</value>
-  </data>
-  <data name="Unknown12B" xml:space="preserve">
-    <value>Unknown12B</value><comment>Don't translate this term</comment>
-  </data>
   <data name="KnownBytes" xml:space="preserve">
     <value>known bytes</value>
   </data>
   <data name="UnknownBytes" xml:space="preserve">
     <value>unknown bytes</value>
   </data>
-  <data name="Offset" xml:space="preserve">
-    <value>Offset</value>
-  </data>
   <data name="HintButtonGetOffsetValue" xml:space="preserve">
-    <value>Get offset value</value>
+    <value>Get offset value</value><comment>The term Offset should only be translated if not understandable</comment>
   </data>
   <data name="ButtonGetValue" xml:space="preserve">
     <value>Get value</value>
@@ -289,10 +253,10 @@
     <value>Set value</value>
   </data>
   <data name="HintButtonSetOffsetValue" xml:space="preserve">
-    <value>Set offset value</value>
+    <value>Set offset value</value><comment>The term Offset should only be translated if not understandable</comment>
   </data>
   <data name="OffsetValue" xml:space="preserve">
-    <value>Offset value</value>
+    <value>Offset value</value><comment>The term Offset should only be translated if not understandable</comment>
   </data>
   <data name="Unknown12BHint" xml:space="preserve">
     <value>This value changes at every in-game save - maybe a timestamp or similar</value>
@@ -325,9 +289,6 @@
   <data name="MenuTheUnknowns" xml:space="preserve">
     <value>The Unknowns</value>
   </data>
-  <data name="Manual" xml:space="preserve">
-    <value>Manual</value>
-  </data>
   <data name="MenuCanIHelp" xml:space="preserve">
     <value>Can I help?</value>
   </data>
@@ -349,7 +310,7 @@
   <data name="MenuImagery" xml:space="preserve">
     <value>Images</value>
   </data>
-  <data name="Changelog" xml:space="preserve">
+  <data name="ChangeLog" xml:space="preserve">
     <value>Changelog</value>
   </data>
   <data name="UseColoredOutput" xml:space="preserve">

@@ -162,27 +162,9 @@ namespace WebApp.SoE.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Changelog ähnelt.
         /// </summary>
-        public static string Changelog {
+        public static string ChangeLog {
             get {
-                return ResourceManager.GetString("Changelog", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Checksum ähnelt.
-        /// </summary>
-        public static string Checksum {
-            get {
-                return ResourceManager.GetString("Checksum", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Comparison SRAM-File ähnelt.
-        /// </summary>
-        public static string ComparisonSramFile {
-            get {
-                return ResourceManager.GetString("ComparisonSramFile", resourceCulture);
+                return ResourceManager.GetString("ChangeLog", resourceCulture);
             }
         }
         
@@ -192,15 +174,6 @@ namespace WebApp.SoE.Properties {
         public static string Contributor {
             get {
                 return ResourceManager.GetString("Contributor", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Current SRAM-File ähnelt.
-        /// </summary>
-        public static string CurrentSramFile {
-            get {
-                return ResourceManager.GetString("CurrentSramFile", resourceCulture);
             }
         }
         
@@ -219,33 +192,6 @@ namespace WebApp.SoE.Properties {
         public static string DownloadConfirmationFileTemplate {
             get {
                 return ResourceManager.GetString("DownloadConfirmationFileTemplate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die File ähnelt.
-        /// </summary>
-        public static string File {
-            get {
-                return ResourceManager.GetString("File", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die File region ähnelt.
-        /// </summary>
-        public static string FileRegion {
-            get {
-                return ResourceManager.GetString("FileRegion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Game ähnelt.
-        /// </summary>
-        public static string Game {
-            get {
-                return ResourceManager.GetString("Game", resourceCulture);
             }
         }
         
@@ -403,29 +349,11 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Info ähnelt.
-        /// </summary>
-        public static string LabelInfo {
-            get {
-                return ResourceManager.GetString("LabelInfo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die mandatory ähnelt.
         /// </summary>
         public static string Mandatory {
             get {
                 return ResourceManager.GetString("Mandatory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Manual ähnelt.
-        /// </summary>
-        public static string Manual {
-            get {
-                return ResourceManager.GetString("Manual", resourceCulture);
             }
         }
         
@@ -601,29 +529,11 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Non game buffer ähnelt.
-        /// </summary>
-        public static string NonGameBuffer {
-            get {
-                return ResourceManager.GetString("NonGameBuffer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Comparison of non game buffer (after all game sections) ähnelt.
         /// </summary>
         public static string NonGameBufferHint {
             get {
                 return ResourceManager.GetString("NonGameBufferHint", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Offset ähnelt.
-        /// </summary>
-        public static string Offset {
-            get {
-                return ResourceManager.GetString("Offset", resourceCulture);
             }
         }
         
@@ -673,15 +583,6 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Project status ähnelt.
-        /// </summary>
-        public static string ProjectStatus {
-            get {
-                return ResourceManager.GetString("ProjectStatus", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Read Me ähnelt.
         /// </summary>
         public static string ReadMe {
@@ -700,11 +601,11 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM-File ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Info ähnelt.
         /// </summary>
-        public static string SramFile {
+        public static string TitleInfo {
             get {
-                return ResourceManager.GetString("SramFile", resourceCulture);
+                return ResourceManager.GetString("TitleInfo", resourceCulture);
             }
         }
         
@@ -714,15 +615,6 @@ namespace WebApp.SoE.Properties {
         public static string TooltipAwesomeSoE {
             get {
                 return ResourceManager.GetString("TooltipAwesomeSoE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Unknown12B ähnelt.
-        /// </summary>
-        public static string Unknown12B {
-            get {
-                return ResourceManager.GetString("Unknown12B", resourceCulture);
             }
         }
         
@@ -759,15 +651,6 @@ namespace WebApp.SoE.Properties {
         public static string WebComparison {
             get {
                 return ResourceManager.GetString("WebComparison", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Whole game buffer ähnelt.
-        /// </summary>
-        public static string WholeGameBuffer {
-            get {
-                return ResourceManager.GetString("WholeGameBuffer", resourceCulture);
             }
         }
         
