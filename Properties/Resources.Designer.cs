@@ -196,6 +196,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die File ähnelt.
+        /// </summary>
+        public static string File {
+            get {
+                return ResourceManager.GetString("File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die #1 ähnelt.
         /// </summary>
         public static string Game1 {
@@ -318,6 +327,15 @@ namespace WebApp.SoE.Properties {
         public static string HintDownloadFile {
             get {
                 return ResourceManager.GetString("HintDownloadFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The relative offset within the gameslot area ähnelt.
+        /// </summary>
+        public static string HintGameOffset {
+            get {
+                return ResourceManager.GetString("HintGameOffset", resourceCulture);
             }
         }
         

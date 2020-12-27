@@ -60,7 +60,7 @@
 		<value>Vergleich des gesamten Spielslot-Bereichs (inklusive der "bekannten" Bereiche)</value>
 	</data>
 	<data name="OffsetValue" xml:space="preserve">
-		<value>Offset Wert</value><comment>The term Offset should only be translated if not understandable</comment>
+		<value>Offset-Wert</value><comment>The term Offset should only be translated if not understandable</comment>
 	</data>
 	<data name="OpenSourceInfoFragment" xml:space="preserve">
 		<value>ist ein Open-Source Tool gehostet auf</value>
@@ -211,5 +211,11 @@
 	</data>
 	<data name="MenuQuickLinks" xml:space="preserve">
 		<value>Quicklinks</value>
+	</data>
+	<data name="File" xml:space="preserve">
+		<value>Datei</value>
+	</data>
+	<data name="HintGameOffset" xml:space="preserve">
+		<value>Das relative Offset innerhalb des Spielslot-Bereichs</value>
 	</data>
 </root>

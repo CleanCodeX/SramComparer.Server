@@ -22,7 +22,7 @@
 			</tr>
 
 			<tr>
-				<td><label>@ResComp.CurrentSramFile:@Ns *)</label></td>
+				<td><label>@Res.File:@Ns *)</label></td>
 				<td><InputFile OnChange="@OnCurrentFileChange" style=@ButtonStyle /></td>
 			</tr>
 			<tr>
@@ -37,7 +37,7 @@
 			</tr>
 			
 			<tr>
-				<td><label>@ResComp.ComparisonSramFile:@Ns *)</label></td>
+				<td><label>@Res.File:@Ns *)</label></td>
 				<td><InputFile OnChange="@OnComparisonFileChange" style=@ButtonStyle /></td>
 			</tr>
 			<tr>
@@ -66,7 +66,7 @@
 			</tr>
 			
 			<tr>
-				<td><label>@ResCompSoE.GameChecksum:@Ns</label></td>
+				<td><label>@ResCompSoE.Checksum:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.GameChecksum" style=@GameChecksumStyle /></td>
 			</tr>
 			<tr>

@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="File" xml:space="preserve">
+    <value>File</value>
+  </data>
   <data name="AllGames" xml:space="preserve">
     <value>All games</value>
   </data>
@@ -242,6 +245,9 @@
   </data>
   <data name="HintButtonGetOffsetValue" xml:space="preserve">
     <value>Get offset value</value><comment>The term Offset should only be translated if not understandable</comment>
+  </data>
+  <data name="HintGameOffset" xml:space="preserve">
+    <value>The relative offset within the gameslot area</value><comment>The term Offset should only be translated if not understandable</comment>
   </data>
   <data name="ButtonGetValue" xml:space="preserve">
     <value>Get value</value>

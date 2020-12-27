@@ -21,7 +21,7 @@
 				<td colspan="2"><label class="header">@ResComp.CurrentSramFile (*.srm)</label></td>
 			</tr>
 			<tr>
-				<td><label>@ResComp.CurrentSramFile:@Ns</label>*)</td>
+				<td><label>@Res.File:@Ns</label>*)</td>
 				<td><InputFile OnChange="@OnCurrentFileChange" style=@ButtonStyle /></td>
 			</tr>
 			<tr>
@@ -32,12 +32,12 @@
 			<p />
 			
 			<tr>
-				<td><label class="header">@(ResComp.GameOffset)s</label></td>
+				<td><label class="header">@ResComp.Offset</label></td>
 			</tr>
 			<tr>
-				<td><label>@ResComp.GameOffset:@Ns</label>*)</td>
+				<td><label title="@Res.HintGameOffset">@ResComp.GameOffset:@Ns</label>*)</td>
 				<td>
-					<input type="number" @bind="@ViewModel.OffsetAddress" maxLength="4" />
+					<input type="number" @bind="@ViewModel.OffsetAddress" maxLength="4" title="@Res.HintGameOffset" />
 					<button class="btn btn-primary" @onclick="@ViewModel.GetOffsetValueAsync" disabled="@(!ViewModel.CanGet)" title="@Res.HintButtonGetOffsetValue"><span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" /></button>
 				</td>
 			</tr>
