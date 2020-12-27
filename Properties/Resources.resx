@@ -189,6 +189,9 @@
   <data name="MenuAbout" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="MenuQuickLinks" xml:space="preserve">
+    <value>Quick links</value>
+  </data>
   <data name="TooltipAwesomeSoE" xml:space="preserve">
     <value>Awesome pages for an awesome game</value>
   </data>
@@ -298,8 +301,8 @@
     <value>mandatory</value>
     <comment>LC</comment>
   </data>
-  <data name="HintCompare" xml:space="preserve">
-    <value>Compare the files</value>
+  <data name="HintButtonCompare" xml:space="preserve">
+    <value>Compare SRAM files</value>
   </data>
   <data name="ButtonCopy" xml:space="preserve">
     <value>Copy to clipboard</value>

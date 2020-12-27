@@ -147,4 +147,21 @@
         </li>
     </ol>
     <!-- / Other -->
+    <!-- Quick links -->
+    <ol class="nav flex-column">
+        <li class="nav-item px-3" title="@Res.MenuQuickLinks">
+            <NavLink class="nav-link" href="@PageUris.Compare" Match="NavLinkMatch.Prefix">
+                <span class="oi oi-flash" aria-hidden="true"/>
+
+                <a href="@PageUris.Compare">
+                    <button class="btn btn-primary" title="@Res.HintButtonCompare"><span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" /></button>
+                </a>
+                @sp
+                <a href="@PageUris.Offset">
+                    <button class="btn btn-primary" title="@Res.HintButtonSetOffsetValue"><span class="iconify" data-icon="oi-pencil" data-inline="false" /></button>
+                </a>
+            </NavLink>
+        </li>
+    </ol>
+    <!-- / Quick links -->
 </div>

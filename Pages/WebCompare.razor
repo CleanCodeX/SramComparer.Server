@@ -90,7 +90,7 @@
 
 			<tr>	
 				<td>
-					<button class="btn btn-primary" @onclick="@ViewModel.CompareAsync" disabled="@CompareButtonDisabled" title="@Res.HintCompare"><span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" /></button>
+					<button class="btn btn-primary" @onclick="@ViewModel.CompareAsync" disabled="@CompareButtonDisabled" title="@Res.HintButtonCompare"><span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" /></button>
 					
 					<ClipboardCopy OnCopyAsync="@CopyTextAsync" Disabled="@CopyButtonDisabled" title="@Res.HintCopyButton" />
 					

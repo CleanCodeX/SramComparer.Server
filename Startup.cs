@@ -59,7 +59,9 @@ namespace WebApp.SoE
 				app.UseHsts();
 			}
 
+#if DEBUG
 			app.UseLiveReload();
+#endif
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
 			app.UseRouting();

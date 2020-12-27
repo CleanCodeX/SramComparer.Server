@@ -295,7 +295,7 @@
     <value>mandatory</value>
     <comment>LC</comment>
   </data>
-  <data name="HintCompare" xml:space="preserve">
+  <data name="HintButtonCompare" xml:space="preserve">
     <value>Compare the files</value>
   </data>
   <data name="ButtonCopy" xml:space="preserve">

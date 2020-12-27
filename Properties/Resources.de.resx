@@ -23,8 +23,8 @@
 	<data name="Checksum" xml:space="preserve">
 		<value>Prüfsumme</value>
 	</data>
-	<data name="HintCompare" xml:space="preserve">
-		<value>Vergleiche die Dateien</value>
+	<data name="HintButtonCompare" xml:space="preserve">
+		<value>Vergleiche SRAM-Dateien</value>
 	</data>
 	<data name="ComparisonSramFile" xml:space="preserve">
 		<value>Vergleichs SRAM-Datei</value>
@@ -247,5 +247,8 @@
 	</data>
 	<data name="Contributor" xml:space="preserve">
 		<value>Contributor</value>
+	</data>
+	<data name="MenuQuickLinks" xml:space="preserve">
+		<value>Quicklinks</value>
 	</data>
 </root>

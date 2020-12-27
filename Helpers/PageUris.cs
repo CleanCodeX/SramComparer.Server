@@ -7,21 +7,21 @@
 		public const string About = "/about";
 		public const string Contributors = "/contributors";
 		
-		public const string Page = "/p";
-		private const string PagePrefix = Page + "?c=";
+		public const string Downloads = "/downloads";
+		public const string Features = "/features";
+		public const string Manual = "/manual";
+		public const string Imagery = "/imagery";
+		public const string Goal = "/goal";
+		public const string Unknowns = "/unknowns";
+		public const string Contribute = "/contribute";
+		public const string ChangeLog = "/changelog";
+		public const string Awesome = "/awesome";
+		public const string GitHub = "/github";
+		public const string Support = "/support";
+		public const string Community = "/community";
+		public const string SramDocu = "/sramdocu";
 
-		public const string Downloads = PagePrefix + "downloads";
-		public const string Features = PagePrefix + "features";
-		public const string Manual = PagePrefix + "manual";
-		public const string Imagery = PagePrefix + "imagery";
-		public const string Goal = PagePrefix + "goal";
-		public const string Unknowns = PagePrefix + "unknowns";
-		public const string Contribute = PagePrefix + "contribute";
-		public const string ChangeLog = PagePrefix + "changelog";
-		public const string Awesome = PagePrefix + "awesome";
-		public const string GitHub = PagePrefix + "github";
-		public const string Support = PagePrefix + "support";
-		public const string Community = PagePrefix + "community";
-		public const string SramDocu = PagePrefix + "sramdocu";
+		public const string Page = "/p";
+		public const string ContentPagePrefix = Page + "?c=";
 	}
 }

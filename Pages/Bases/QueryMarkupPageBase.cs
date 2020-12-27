@@ -6,30 +6,38 @@ using WebApp.SoE.Helpers;
 
 namespace WebApp.SoE.Pages.Bases
 {
-	public abstract class QueryMarkupPageBase: MarkupContentBase
+	public abstract class QueryMarkupPageBase : MarkupContentBase
 	{
 #nullable disable
 		[Inject] private Settings Settings { get; set; }
 		[Inject] private NavigationManager NavigationManager { get; set; }
 #nullable restore
-		
+
 		protected string? Page { get; set; }
 
 		protected override void OnParametersSet()
 		{
+			HandleQueryParam(Page ?? GetQueryParam());
+
 			NavigationManager.LocationChanged += NavigationManagerOnLocationChanged;
-			
-			HandleQueryParam();
 		}
 
-		private bool HandleQueryParam()
+		private bool HasQueryParamChanged(bool handleNewPage = true)
 		{
-			var page = QueryHelpers.ParseQuery(NavigationManager.Uri).Values.FirstOrDefault().ToString();
-			if (page is null || Page == page)
-				return false;
+			if (GetQueryParam() is { } newPage && Page != newPage)
+			{
+				if(handleNewPage)
+					HandleQueryParam(newPage);
+				return true;
+			}
 
+			return false;
+		}
+
+		protected bool HandleQueryParam(string? page)
+		{
 			Page = page;
-			page = page.ToLower();
+			page = page?.ToLower();
 
 			if (Settings.Files is not null && Settings.Files.TryGetValue(page, out var file))
 			{
@@ -50,13 +58,20 @@ namespace WebApp.SoE.Pages.Bases
 			return false;
 		}
 
+		private string? GetQueryParam() => QueryHelpers.ParseQuery(NavigationManager.Uri).Values.FirstOrDefault().ToString();
+
 		private void NavigationManagerOnLocationChanged(object? sender, LocationChangedEventArgs e)
 		{
-			if (e.IsNavigationIntercepted && HandleQueryParam())
+			var forceReload = false;
+			
+			if(e.IsNavigationIntercepted)
 			{
-				LoadContent().GetAwaiter().GetResult();
-				StateHasChanged();
+				if (!HasQueryParamChanged(false)) return;
+
+				forceReload = true;
 			}
+			
+			NavigationManager.NavigateTo(e.Location, forceReload);
 		}
 	}
 }

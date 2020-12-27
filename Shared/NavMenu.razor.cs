@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.IO;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
@@ -42,7 +43,7 @@ namespace WebApp.SoE.Shared
 
 		private void NavManagerOnLocationChanged(object? sender, LocationChangedEventArgs e)
 		{
-			var path = "/" + NavManager.ToBaseRelativePath(e.Location).ToLower();
+			var path = Path.Join("/", NavManager.ToBaseRelativePath(e.Location).ToLower());
 			var menu = path switch
 			{
 				PageUris.Goal => ExpandedMenu.SramHacking,

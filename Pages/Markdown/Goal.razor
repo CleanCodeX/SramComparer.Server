@@ -1,0 +1,10 @@
+﻿@using WebApp.SoE.Helpers
+
+@attribute [Route(PageUris.Goal)]
+@inherits QueryMarkupPageBase
+
+@Content
+
+@code {
+	protected override void OnParametersSet() => HandleQueryParam(nameof(PageUris.Goal));
+}

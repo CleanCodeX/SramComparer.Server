@@ -1,5 +1,8 @@
 ﻿## Changelog
 
+#### 1.0.3 - 2020-12-27
+* added web action quick link buttons
+
 #### 1.0.2 - 2020-12-23
 * added automatic settings loading/saving for web tools
 * restructured menu

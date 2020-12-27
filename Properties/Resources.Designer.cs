@@ -322,6 +322,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compare SRAM files ähnelt.
+        /// </summary>
+        public static string HintButtonCompare {
+            get {
+                return ResourceManager.GetString("HintButtonCompare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Download changed file ähnelt.
         /// </summary>
         public static string HintButtonDownloadChangedFile {
@@ -345,15 +354,6 @@ namespace WebApp.SoE.Properties {
         public static string HintButtonSetOffsetValue {
             get {
                 return ResourceManager.GetString("HintButtonSetOffsetValue", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Compare the files ähnelt.
-        /// </summary>
-        public static string HintCompare {
-            get {
-                return ResourceManager.GetString("HintCompare", resourceCulture);
             }
         }
         
@@ -516,6 +516,15 @@ namespace WebApp.SoE.Properties {
         public static string MenuImagery {
             get {
                 return ResourceManager.GetString("MenuImagery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Quick links ähnelt.
+        /// </summary>
+        public static string MenuQuickLinks {
+            get {
+                return ResourceManager.GetString("MenuQuickLinks", resourceCulture);
             }
         }
         

@@ -8,13 +8,13 @@ The more people contribute, the earlier and better results.
 But after all this is a free time project and developing tools or finding offset meanings needs hundreds, probably thousands of hours.
 
 ## Active Help
-If the goal of this project isn't clear, make sure to have read the [goal](p?c=goal) first.
+If the goal of this project isn't clear, make sure to have read the [goal](goal) first.
 
 Assuming that you already did that, you might ask yourself what *you* can do.
 
 ### Comparing SRAMs
 
-If so, you might want to join the SoE 'army', see [here](p?c=Contribute) how it works.
+If so, you might want to join the SoE 'army', see [here](Contribute) how it works.
 
 ### Provide a localization
 
@@ -31,4 +31,4 @@ Make it publicly known so crowd sourcing can start to kick in.
 
 **Thank you!** 😊
 
-Also **many thanks** to the people who [contributed](p?c=contributors) to this project.
+Also **many thanks** to the people who [contributed](contributors) to this project.
