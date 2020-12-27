@@ -18,7 +18,9 @@ namespace WebApp.SoE.Pages.Bases
 		
 		protected MarkupString Content { get; set; }
 
-		protected override async Task OnParametersSetAsync()
+		protected override Task OnParametersSetAsync() => LoadContent();
+
+		protected async Task LoadContent()
 		{
 			if (Filepath is not null)
 				Content = MarkdownHelper.Parse(LoadFromFile(Filepath));
