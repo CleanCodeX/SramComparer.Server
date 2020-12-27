@@ -262,7 +262,7 @@
     <value>Checksum</value>
   </data>
   <data name="Unknown12B" xml:space="preserve">
-    <value>Unknown12B</value>
+    <value>Unknown12B</value><comment>Don't translate this term</comment>
   </data>
   <data name="KnownBytes" xml:space="preserve">
     <value>known bytes</value>

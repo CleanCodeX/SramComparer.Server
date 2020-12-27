@@ -69,7 +69,7 @@
 		<value>Zusätzliche Spielslot-Informationen anzeigen</value>
 	</data>
 	<data name="Unknown12B" xml:space="preserve">
-		<value>Unknown12B</value>
+		<value>Unknown12B</value><comment>Don't translate this term</comment>
 	</data>
 	<data name="Unknown12BHint" xml:space="preserve">
 		<value>Dieser Wert ändert sich bei jedem In-game Speichern - vielleicht ein Zeitstempel oder ähnliches</value>
