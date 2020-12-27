@@ -13,13 +13,13 @@ Once the SRAM format is completely known, it offers the possibility to write a f
 "That sounds nice!" you might say. (obviously I think that, too)
 
 ### What's still unknown?
-Most of unknown parts are reserved for pick-up information of various ingredient sniff spots, opened chests, gourds, pots and which persons were spoken to twice. Despite these there are also game relevant progress flags which we want to know to write more capable SRAM editors.
+Most of unknown parts are reserved for pick-up information from various ingredient sniff spots, opened chests, gourds, pots and which people were spoken twice. Despite these things there are also game relevant progress flags which need to be known to write a more capable SRAM editor.
 
-A non exhaustive list can be found under section [Unknowns](p?c=Unknowns).
+A non-exhaustive list can be found under section [Unknowns](p?c=Unknowns).
 
 ### When will it be available?
 
 Well, that's mostly up to the amount of contributions by the community.
-We're spending our free time working on that, but that won't be enough to make it happen fast.
+I am spending my free time working on that, but that won't be enough to make it happen fast.
 
-If you want to join the SoE army, see [here](p?c=HowCanIHelp) how it works.
+If you want to join the SoE 'army', see [here](p?c=HowCanIHelp) how it works.
