@@ -75,12 +75,6 @@ namespace WebApp.SoE.Shared
 			InvokeAsync(StateHasChanged);
 		}
 
-		private Task ExpandSramHacking() => ExpandMenu(ExpandedMenu.SramHacking);
-		private Task ExpandSramComparison() => ExpandMenu(ExpandedMenu.SramHacking);
-		private Task ExpandConsoleApp() => ExpandMenu(ExpandedMenu.ConsoleApp);
-		private Task ExpandWebTools() => ExpandMenu(ExpandedMenu.WebTools);
-		private Task CollapseMenu() => ExpandMenu(ExpandedMenu.None);
-		
 		private async Task ExpandMenu(ExpandedMenu menu)
 		{
 			if (_menu == menu) return;

@@ -20,6 +20,7 @@
 		public const string Support = "/support";
 		public const string Community = "/community";
 		public const string SramDocu = "/sramdocu";
+		public const string Discord = "https://discord.gg/s4wTHQgxae";
 
 		public const string Page = "/p";
 		public const string ContentPagePrefix = Page + "?c=";

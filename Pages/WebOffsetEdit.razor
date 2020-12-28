@@ -38,14 +38,18 @@
 				<td><label title="@Res.HintGameOffset">@ResComp.GameOffset:@Ns</label>*)</td>
 				<td>
 					<input type="number" @bind="@ViewModel.OffsetAddress" maxLength="4" title="@Res.HintGameOffset" />
-					<button class="btn btn-primary" @onclick="@ViewModel.GetOffsetValueAsync" disabled="@(!ViewModel.CanGet)" title="@Res.HintButtonGetOffsetValue"><span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" /></button>
+					<button class="btn btn-primary" @onclick="@ViewModel.GetOffsetValueAsync" disabled="@(!ViewModel.CanGet)" title="@Res.HintButtonGetOffsetValue">
+						<span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" />
+					</button>
 				</td>
 			</tr>
 			<tr>
 				<td><label>@Res.OffsetValue:@Ns</label></td>
 				<td>
 					<input type="number" @bind="@ViewModel.OffsetValue" maxLength="3" />
-					<button class="btn btn-primary" @onclick="@ViewModel.SetOffsetValueAsync" disabled="@(!ViewModel.CanSet)" title="@Res.HintButtonSetOffsetValue"><span class="iconify" data-icon="oi-pencil" data-inline="false" /></button>
+					<button class="btn btn-primary" @onclick="@ViewModel.SetOffsetValueAsync" disabled="@(!ViewModel.CanSet)" title="@Res.HintButtonSetOffsetValue">
+						<span class="iconify" data-icon="oi-pencil" data-inline="false" />
+					</button>
 				</td>
 			</tr>
 			
@@ -58,7 +62,11 @@
 			<p />
 			
 			<tr>
-				<td><button class="btn btn-primary" @onclick="@ViewModel.SaveAndDownloadAsync" disabled="@SaveButtonDisabled" title="@Res.HintButtonDownloadChangedFile"><span class="iconify" data-icon="oi-cloud-download" data-inline="false" /></button></td>
+				<td>
+					<button class="btn btn-primary" @onclick="@ViewModel.SaveAndDownloadAsync" disabled="@SaveButtonDisabled" title="@Res.HintButtonDownloadChangedFile">
+						<span class="iconify" data-icon="oi-cloud-download" data-inline="false" />
+					</button>
+				</td>
 			</tr>
 		</table>
 	</EditForm>

@@ -11,6 +11,6 @@ namespace WebApp.SoE.Pages
 
 	    public string? Author => Page != defaultPage ? Page : null;
 
-		protected override void OnInitialized() => Page = defaultPage;
+		protected override string? GetQueryParam() => base.GetQueryParam() ?? defaultPage;
     }
 }
