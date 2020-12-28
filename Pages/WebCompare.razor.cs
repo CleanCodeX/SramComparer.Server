@@ -25,33 +25,35 @@ namespace WebApp.SoE.Pages
 		private bool CompareButtonDisabled => !ViewModel.CanCompare;
 		private bool CopyButtonDisabled => ViewModel.IsComparing || ViewModel.OutputMessage.ToString().IsNullOrEmpty();
 
-		private const string SelectSelectedStyle = "color: cyan;background-color: #111111;";
-		private const string SelectUnselectedStyle = "color: white;background-color: #111111;";
+		private const string BgColor = "#111111";
+
+		private static readonly string SelectSelectedStyle = $"color: cyan;background-color: {BgColor};";
+		private static readonly string SelectUnselectedStyle = $"color: white;background-color: {BgColor};";
 		private const string ButtonStyle = "color: cyan;width: 600px;";
 		
-		private string WholeGameStyle => ViewModel.WholeGameBuffer == default ? SelectUnselectedStyle : SelectSelectedStyle;
-		private string NonGameStyle => ViewModel.NonGameBuffer == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string WholeSlotStyle => ViewModel.SlotByteByByteComparison == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string NonSlotStyle => ViewModel.NonSlotByteByByteComparison == default ? SelectUnselectedStyle : SelectSelectedStyle;
 
-		private string CurrentGameStyle => ViewModel.CurrentGame == default ? SelectUnselectedStyle : SelectSelectedStyle;
-		private string ComparisonGameStyle => ViewModel.ComparisonGame == default ? SelectUnselectedStyle : SelectSelectedStyle;
-		private string RegionStyle => ViewModel.Region == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string CurrentSramFileStyle => ViewModel.CurrentSramSaveSlot == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string ComparisonSramFileStyle => ViewModel.ComparisonSramFileSaveSlot == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string GameRegionStyle => ViewModel.GameRegion == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private string Unknown12BStyle => ViewModel.Unknown12B == default ? SelectUnselectedStyle : SelectSelectedStyle;
-		private string GameChecksumStyle => ViewModel.GameChecksum == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string ChecksumStyle => ViewModel.Checksum == default ? SelectUnselectedStyle : SelectSelectedStyle;
 
 		private Task OnCurrentFileChange(InputFileChangeEventArgs arg) => ViewModel.SetCurrentFileAsync(arg.File);
 
-		private async Task OnComparisonFileChange(InputFileChangeEventArgs arg) => ViewModel.ComparisonFileStream = await arg.File.OpenReadStream().CopyAsMemoryStreamAsync();
+		private async Task OnComparisonFileChange(InputFileChangeEventArgs arg) => ViewModel.ComparisonSramFileStream = await arg.File.OpenReadStream().CopyAsMemoryStreamAsync();
 
 		protected override Task OnInitializedAsync() => ViewModel.LoadOptionsAsync();
 
 		private async Task<string> CopyTextAsync()
 		{
-			if (!ViewModel.UseColoredOutput)
+			if (!ViewModel.ColorizeOutput)
 				return ViewModel.OutputMessage.ToString();
 
-			ViewModel.UseColoredOutput = false;
+			ViewModel.ColorizeOutput = false;
 			await ViewModel.CompareAsync();
-			ViewModel.UseColoredOutput = true;
+			ViewModel.ColorizeOutput = true;
 
 			return ViewModel.OutputMessage.ReplaceHtmlLinebreaks();
 		}

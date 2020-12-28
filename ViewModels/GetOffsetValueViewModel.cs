@@ -54,9 +54,9 @@ namespace WebApp.SoE.ViewModels
 		{
 			try
 			{
-				CurrentGame.ThrowIfDefault(nameof(CurrentGame));
+				CurrentSramSaveSlot.ThrowIfDefault(nameof(CurrentSramSaveSlot));
 				SramFile.ThrowIfNull(nameof(SramFile));
-				OffsetValue = SramFile.GetOffsetByte(CurrentGame.ToInt() - 1, OffsetAddress);
+				OffsetValue = SramFile.GetOffsetByte(CurrentSramSaveSlot.ToInt() - 1, OffsetAddress);
 				var valueDisplayText = NumberFormatter.GetByteValueRepresentations((byte) OffsetValue);
 
 				OutputMessage = Resources.StatusGetOffsetValueTemplate.InsertArgs(OffsetAddress, valueDisplayText)

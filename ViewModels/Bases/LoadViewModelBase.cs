@@ -21,7 +21,7 @@ namespace WebApp.SoE.ViewModels.Bases
 		public bool IsLoading { get; set; }
 		public virtual bool CanLoad => !IsLoading && CurrentFileStream is not null;
 		public MarkupString OutputMessage { get; set; }
-		public new MandatoryGameId CurrentGame { get; set; } = MandatoryGameId.One;
+		public new MandatoryGameId CurrentSramSaveSlot { get; set; } = MandatoryGameId.One;
 		public bool IsLoaded => SramFile is not null;
 		public bool ShowOutput => OutputMessage.ToString() != string.Empty;
 		
@@ -44,7 +44,7 @@ namespace WebApp.SoE.ViewModels.Bases
 
 				CurrentFileStream.Position = 0;
 
-				SramFile = new SramFileSoE(CurrentFileStream, Region);
+				SramFile = new SramFileSoE(CurrentFileStream, GameRegion);
 				CurrentFileStream = null;
 			}
 			catch (Exception ex)
@@ -59,13 +59,13 @@ namespace WebApp.SoE.ViewModels.Bases
 		{
 			await base.LoadOptionsAsync();
 
-			if(Options.CurrentGame > 0)
-				CurrentGame = (MandatoryGameId)base.CurrentGame;
+			if(Options.CurrentSramFileSaveSlot > 0)
+				CurrentSramSaveSlot = (MandatoryGameId)base.CurrentSramSaveSlot;
 		}
 
 		protected internal override Task SaveOptionsAsync()
 		{
-			base.CurrentGame = (GameId)CurrentGame;
+			base.CurrentSramSaveSlot = (SaveSlotId)CurrentSramSaveSlot;
 
 			return base.SaveOptionsAsync();
 		}

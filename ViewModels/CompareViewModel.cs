@@ -22,38 +22,38 @@ namespace WebApp.SoE.ViewModels
 	/// <summary>Viewmodel for SoE SRAM comparison</summary>
 	public class CompareViewModel : ViewModelBase
 	{
-		public GameId ComparisonGame { get; set; }
-		public MemoryStream? ComparisonFileStream { get; set; }
+		public SaveSlotId ComparisonSramFileSaveSlot { get; set; }
+		public MemoryStream? ComparisonSramFileStream { get; set; }
 		public MarkupString OutputMessage { get; set; }
 		public bool IsComparing { get; set; }
-		public bool CanCompare => !IsComparing && CurrentFileStream is not null && ComparisonFileStream is not null;
-		public bool UseColoredOutput { get; set; } = true;
+		public bool CanCompare => !IsComparing && CurrentFileStream is not null && ComparisonSramFileStream is not null;
+		public bool ColorizeOutput { get; set; } = true;
 		public bool ShowOutput => OutputMessage.ToString() != string.Empty;
 
-		public bool WholeGameBuffer
+		public bool SlotByteByByteComparison
 		{
-			get => Options.Flags.HasFlag(ComparisonFlagsSoE.WholeGameBuffer);
-			set => Options.Flags = (ComparisonFlagsSoE)EnumHelper.InvertUIntFlag(Options.Flags, ComparisonFlagsSoE.WholeGameBuffer);
+			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.SlotByteByByteComparison);
+			set => Options.ComparisonFlags = (ComparisonFlagsSoE)EnumHelper.InvertUIntFlag(Options.ComparisonFlags, ComparisonFlagsSoE.SlotByteByByteComparison);
 		}
 
-		public bool NonGameBuffer
+		public bool NonSlotByteByByteComparison
 		{
-			get => Options.Flags.HasFlag(ComparisonFlagsSoE.NonGameBuffer);
-			set => Options.Flags = (ComparisonFlagsSoE)EnumHelper.InvertUIntFlag(Options.Flags, ComparisonFlagsSoE.NonGameBuffer);
+			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.NonSlotByteByByteComparison);
+			set => Options.ComparisonFlags = (ComparisonFlagsSoE)EnumHelper.InvertUIntFlag(Options.ComparisonFlags, ComparisonFlagsSoE.NonSlotByteByByteComparison);
 		}
 
-		public enum AllSingleFlag : uint
+		public enum SaveSlotOption : uint
 		{
 			[Display(Name = nameof(Res.DontShow), ResourceType = typeof(Res))]
 			None,
-			[Display(Name = nameof(Res.AffectedGamesOnly), ResourceType = typeof(Res))]
-			AffectedGamesOnly,
-			[Display(Name = nameof(Res.AllGames), ResourceType = typeof(Res))]
-			AllGames
+			[Display(Name = nameof(Res.ComparedSaveSlots), ResourceType = typeof(Res))]
+			Compared,
+			[Display(Name = nameof(Res.AllSaveSlots), ResourceType = typeof(Res))]
+			All
 		}
 
-		public AllSingleFlag GameChecksum { get; set; }
-		public AllSingleFlag Unknown12B { get; set; }
+		public SaveSlotOption Checksum { get; set; }
+		public SaveSlotOption Unknown12B { get; set; }
 
 		public async Task CompareAsync()
 		{
@@ -68,12 +68,12 @@ namespace WebApp.SoE.ViewModels
 				using var output = new StringWriter { NewLine = "<br>" };
 
 				Requires.NotNull(CurrentFileStream, nameof(CurrentFileStream));
-				Requires.NotNull(ComparisonFileStream, nameof(ComparisonFileStream));
+				Requires.NotNull(ComparisonSramFileStream, nameof(ComparisonSramFileStream));
 
 				CurrentFileStream.Position = 0;
-				ComparisonFileStream.Position = 0;
+				ComparisonSramFileStream.Position = 0;
 
-				new CommandHandlerSoE(UseColoredOutput ? new HtmlConsolePrinterSoE() : new ConsolePrinter()).Compare(CurrentFileStream, ComparisonFileStream, Options, output);
+				new CommandHandlerSoE(ColorizeOutput ? new HtmlConsolePrinterSoE() : new ConsolePrinter()).Compare(CurrentFileStream, ComparisonSramFileStream, Options, output);
 
 				OutputMessage = output.ToString().ToMarkup();
 			}
@@ -89,37 +89,37 @@ namespace WebApp.SoE.ViewModels
 		{
 			await base.LoadOptionsAsync();
 
-			ComparisonGame = (GameId)Options.ComparisonGame;
+			ComparisonSramFileSaveSlot = (SaveSlotId)Options.ComparisonSramFileSaveSlot;
 
-			if (Options.Flags.HasFlag(ComparisonFlagsSoE.GameChecksum))
-				GameChecksum = Options.Flags.HasFlag(ComparisonFlagsSoE.AllGameChecksums)
-					? AllSingleFlag.AllGames
-					: AllSingleFlag.AffectedGamesOnly;
+			if (Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.ChecksumComparedSlots))
+				Checksum = Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.ChecksumAllSlots)
+					? SaveSlotOption.All
+					: SaveSlotOption.Compared;
 
-			if (Options.Flags.HasFlag(ComparisonFlagsSoE.Unknown12B))
-				Unknown12B = Options.Flags.HasFlag(ComparisonFlagsSoE.AllUnknown12Bs)
-					? AllSingleFlag.AllGames
-					: AllSingleFlag.AffectedGamesOnly;
+			if (Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.Unknown12BComparedSlots))
+				Unknown12B = Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.Unknown12BAllSlots)
+					? SaveSlotOption.All
+					: SaveSlotOption.Compared;
 		}
 
 		protected internal override Task SaveOptionsAsync()
 		{
-			Options.ComparisonGame = ComparisonGame.ToInt();
+			Options.ComparisonSramFileSaveSlot = ComparisonSramFileSaveSlot.ToInt();
 
-			Options.Flags = Options.Flags & ~ComparisonFlagsSoE.AllGameChecksums;
-			if (GameChecksum != default)
-				Options.Flags = GameChecksum switch
+			Options.ComparisonFlags = Options.ComparisonFlags & ~ComparisonFlagsSoE.ChecksumAllSlots;
+			if (Checksum != default)
+				Options.ComparisonFlags = Checksum switch
 				{
-					AllSingleFlag.AllGames => Options.Flags |= ComparisonFlagsSoE.AllGameChecksums,
-					AllSingleFlag.AffectedGamesOnly => Options.Flags |= ComparisonFlagsSoE.GameChecksum,
+					SaveSlotOption.All => Options.ComparisonFlags |= ComparisonFlagsSoE.ChecksumAllSlots,
+					SaveSlotOption.Compared => Options.ComparisonFlags |= ComparisonFlagsSoE.ChecksumComparedSlots,
 				};
 
-			Options.Flags = Options.Flags & ~ComparisonFlagsSoE.AllUnknown12Bs;
+			Options.ComparisonFlags = Options.ComparisonFlags & ~ComparisonFlagsSoE.Unknown12BAllSlots;
 			if (Unknown12B != default)
-				Options.Flags = Unknown12B switch
+				Options.ComparisonFlags = Unknown12B switch
 				{
-					AllSingleFlag.AllGames => Options.Flags |= ComparisonFlagsSoE.AllUnknown12Bs,
-					AllSingleFlag.AffectedGamesOnly => Options.Flags |= ComparisonFlagsSoE.Unknown12B,
+					SaveSlotOption.All => Options.ComparisonFlags |= ComparisonFlagsSoE.Unknown12BAllSlots,
+					SaveSlotOption.Compared => Options.ComparisonFlags |= ComparisonFlagsSoE.Unknown12BComparedSlots,
 				};
 
 			return base.SaveOptionsAsync();

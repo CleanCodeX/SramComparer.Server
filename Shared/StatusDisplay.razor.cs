@@ -12,9 +12,9 @@ namespace WebApp.SoE.Shared
 		protected override void OnInitialized()
 		{
 			var est = '≙';
-			var knownBytes = Sizes.Game.AllKnown;
-			var allBytes = Sizes.Game.All;
-			var unknownBytes = Sizes.Game.AllUnknown;
+			var knownBytes = Sizes.SaveSlot.AllKnown;
+			var allBytes = Sizes.SaveSlot.All;
+			var unknownBytes = Sizes.SaveSlot.AllUnknown;
 			var knownPercentage = Math.Round((double)knownBytes / allBytes * 100, 1);
 			var unknownPercentage = Math.Round((double)unknownBytes / allBytes * 100, 1);
 			var unknown = Resources.UnknownBytes;

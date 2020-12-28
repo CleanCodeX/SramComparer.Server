@@ -21,8 +21,8 @@ namespace WebApp.SoE.Pages
 		private const string SelectUnselectedStyle = "color: white;background-color: black;";
 		private const string ButtonStyle = "color: cyan;width: 600px;";
 		
-		private string CurrentGameStyle => ViewModel.CurrentGame == default ? SelectUnselectedStyle : SelectSelectedStyle;
-		private string RegionStyle => ViewModel.Region == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string CurrentSramFileStyle => ViewModel.CurrentSramSaveSlot == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string GameRegionStyle => ViewModel.GameRegion == default ? SelectUnselectedStyle : SelectSelectedStyle;
 
 		protected override Task OnInitializedAsync() => ViewModel.LoadOptionsAsync();
 

@@ -11,8 +11,8 @@
 			</tr>
 
 			<tr>
-				<td><label class="header">@ResComp.SettingRegion:@Ns</label></td>
-				<td><InputSelectEnum @bind-Value="@ViewModel.Region" style=@RegionStyle /></td>
+				<td><label class="header">@ResComp.GameRegion:@Ns</label></td>
+				<td><InputSelectEnum @bind-Value="@ViewModel.GameRegion" style=@GameRegionStyle /></td>
 			</tr>
 			
 			<p />
@@ -26,8 +26,8 @@
 				<td><InputFile OnChange="@OnCurrentFileChange" style=@ButtonStyle /></td>
 			</tr>
 			<tr>
-				<td><label>@ResComp.Game:@Ns</label></td>
-				<td><InputSelectEnum @bind-Value="@ViewModel.CurrentGame" style=@CurrentGameStyle /></td>
+				<td><label>@ResComp.SaveSlot:@Ns</label></td>
+				<td><InputSelectEnum @bind-Value="@ViewModel.CurrentSramSaveSlot" style=@CurrentSramFileStyle /></td>
 			</tr>
 			
 			<p />
@@ -41,8 +41,8 @@
 				<td><InputFile OnChange="@OnComparisonFileChange" style=@ButtonStyle /></td>
 			</tr>
 			<tr>
-				<td><label>@ResComp.Game:@Ns</label></td>
-				<td><InputSelectEnum @bind-Value="@ViewModel.ComparisonGame" style=@ComparisonGameStyle /></td>
+				<td><label>@ResComp.SaveSlot:@Ns</label></td>
+				<td><InputSelectEnum @bind-Value="@ViewModel.ComparisonSramFileSaveSlot" style=@ComparisonSramFileStyle /></td>
 			</tr>
 			
 			<p />
@@ -52,32 +52,32 @@
 			</tr>
 			
 			<tr>
-				<td colspan="2"><InputCheckbox @bind-Value="@ViewModel.WholeGameBuffer" />
-					<label style=@WholeGameStyle title="@Res.WholeGameBufferHint">@ResCompSoE.WholeGameBuffer</label> | 
-					<InputCheckbox @bind-Value="@ViewModel.NonGameBuffer" />
-					<label style=@NonGameStyle title="@Res.NonGameBufferHint">@ResCompSoE.NonGameBuffer</label>
+				<td colspan="2"><InputCheckbox @bind-Value="@ViewModel.SlotByteByByteComparison" />
+					<label style=@WholeSlotStyle title="@Res.HintSaveSlotByteByByteComparison">@ResComp.SlotByteByByteComparison</label> | 
+					<InputCheckbox @bind-Value="@ViewModel.NonSlotByteByByteComparison" />
+					<label style=@NonSlotStyle title="@Res.HintNonSaveSlotByteByByteComparison">@ResComp.NonSlotByteByByteComparison</label>
 				</td>
 			</tr>
 			
 			<p />
 
 			<tr>
-				<td colspan="2"><label class="header">@Res.ShowAdditionalGameInformation:</label></td>
+				<td colspan="2"><label class="header">@Res.ShowAdditionalSaveSlotInformation:</label></td>
 			</tr>
 			
 			<tr>
-				<td><label>@ResCompSoE.Checksum:@Ns</label></td>
-				<td><InputSelectEnum @bind-Value="@ViewModel.GameChecksum" style=@GameChecksumStyle /></td>
+				<td><label>@Res.Checksum:@Ns</label></td>
+				<td><InputSelectEnum @bind-Value="@ViewModel.Checksum" style=@ChecksumStyle /></td>
 			</tr>
 			<tr>
-				<td><label title="@Res.Unknown12BHint">@ResCompSoE.Unknown12B:@Ns</label></td>
+				<td><label title="@Res.HintUnknown12B">Unknown12B:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.Unknown12B" style=@Unknown12BStyle /></td>
 			</tr>
 			
 			<p />
 
 			<tr>	
-				<td colspan="2"><InputCheckbox @bind-Value="@ViewModel.UseColoredOutput" /> <label>@Res.UseColoredOutput</label></td>
+				<td colspan="2"><InputCheckbox @bind-Value="@ViewModel.ColorizeOutput" /> <label>@Res.ColorizeOutput</label></td>
 			</tr>
 
 			<p />

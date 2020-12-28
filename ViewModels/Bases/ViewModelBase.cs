@@ -18,8 +18,8 @@ namespace WebApp.SoE.ViewModels.Bases
 #nullable restore
 
 		public Options Options { get; private set; } = new();
-		public FileRegion Region { get; set; } = FileRegion.UnitedStates;
-		public GameId CurrentGame { get; set; }
+		public GameRegion GameRegion { get; set; }
+		public SaveSlotId CurrentSramSaveSlot { get; set; }
 		protected MemoryStream? CurrentFileStream { get; set; }
 		public string? CurrentFileName { get; set; }
 
@@ -38,14 +38,14 @@ namespace WebApp.SoE.ViewModels.Bases
 				Console.WriteLine(ex);
 			}
 			
-			Region = Options.Region;
-			CurrentGame = (GameId)Options.CurrentGame;
+			GameRegion = Options.GameRegion;
+			CurrentSramSaveSlot = (SaveSlotId)Options.CurrentSramFileSaveSlot;
 		}
 
 		protected internal virtual async Task SaveOptionsAsync()
 		{
-			Options.Region = Region;
-			Options.CurrentGame = CurrentGame.ToInt();
+			Options.GameRegion = GameRegion;
+			Options.CurrentSramFileSaveSlot = CurrentSramSaveSlot.ToInt();
 
 			try
 			{

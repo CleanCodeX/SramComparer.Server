@@ -70,25 +70,16 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Affected games only ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die All save slots ähnelt.
         /// </summary>
-        public static string AffectedGamesOnly {
+        public static string AllSaveSlots {
             get {
-                return ResourceManager.GetString("AffectedGamesOnly", resourceCulture);
+                return ResourceManager.GetString("AllSaveSlots", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die All games ähnelt.
-        /// </summary>
-        public static string AllGames {
-            get {
-                return ResourceManager.GetString("AllGames", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Compiled at ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compile date ähnelt.
         /// </summary>
         public static string AppCompiledAt {
             get {
@@ -169,6 +160,33 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Checksum ähnelt.
+        /// </summary>
+        public static string Checksum {
+            get {
+                return ResourceManager.GetString("Checksum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Use colored output ähnelt.
+        /// </summary>
+        public static string ColorizeOutput {
+            get {
+                return ResourceManager.GetString("ColorizeOutput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compared game slots only ähnelt.
+        /// </summary>
+        public static string ComparedSaveSlots {
+            get {
+                return ResourceManager.GetString("ComparedSaveSlots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Contributor ähnelt.
         /// </summary>
         public static string Contributor {
@@ -205,20 +223,29 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #1 only ähnelt.
+        /// </summary>
+        public static string FirstSaveSlot {
+            get {
+                return ResourceManager.GetString("FirstSaveSlot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #4 only ähnelt.
+        /// </summary>
+        public static string FourthSaveSlot {
+            get {
+                return ResourceManager.GetString("FourthSaveSlot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die #1 ähnelt.
         /// </summary>
         public static string Game1 {
             get {
                 return ResourceManager.GetString("Game1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #1 only ähnelt.
-        /// </summary>
-        public static string Game1Only {
-            get {
-                return ResourceManager.GetString("Game1Only", resourceCulture);
             }
         }
         
@@ -232,15 +259,6 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #2 only ähnelt.
-        /// </summary>
-        public static string Game2Only {
-            get {
-                return ResourceManager.GetString("Game2Only", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die #3 ähnelt.
         /// </summary>
         public static string Game3 {
@@ -250,29 +268,11 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #3 only ähnelt.
-        /// </summary>
-        public static string Game3Only {
-            get {
-                return ResourceManager.GetString("Game3Only", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die #4 ähnelt.
         /// </summary>
         public static string Game4 {
             get {
                 return ResourceManager.GetString("Game4", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #4 only ähnelt.
-        /// </summary>
-        public static string Game4Only {
-            get {
-                return ResourceManager.GetString("Game4Only", resourceCulture);
             }
         }
         
@@ -331,15 +331,6 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die The relative offset within the gameslot area ähnelt.
-        /// </summary>
-        public static string HintGameOffset {
-            get {
-                return ResourceManager.GetString("HintGameOffset", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Link opens in a new tab ähnelt.
         /// </summary>
         public static string HintLinkOpensInNewTab {
@@ -349,11 +340,47 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Non-save slot byte-by-byte comparison (beyond all save slots) ähnelt.
+        /// </summary>
+        public static string HintNonSaveSlotByteByByteComparison {
+            get {
+                return ResourceManager.GetString("HintNonSaveSlotByteByByteComparison", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Format exploration status ähnelt.
         /// </summary>
         public static string HintProjectStatus {
             get {
                 return ResourceManager.GetString("HintProjectStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Save slot byte-by-byte comparison (including the &quot;knowns&quot; areas) ähnelt.
+        /// </summary>
+        public static string HintSaveSlotByteByByteComparison {
+            get {
+                return ResourceManager.GetString("HintSaveSlotByteByByteComparison", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The relative offset within the gameslot area ähnelt.
+        /// </summary>
+        public static string HintSaveSlotOffset {
+            get {
+                return ResourceManager.GetString("HintSaveSlotOffset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die This value changes at every in-game save - maybe a timestamp or similar ähnelt.
+        /// </summary>
+        public static string HintUnknown12B {
+            get {
+                return ResourceManager.GetString("HintUnknown12B", resourceCulture);
             }
         }
         
@@ -547,15 +574,6 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Comparison of non game buffer (after all game sections) ähnelt.
-        /// </summary>
-        public static string NonGameBufferHint {
-            get {
-                return ResourceManager.GetString("NonGameBufferHint", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Offset value ähnelt.
         /// </summary>
         public static string OffsetValue {
@@ -610,11 +628,29 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Show additional game information ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die #2 only ähnelt.
         /// </summary>
-        public static string ShowAdditionalGameInformation {
+        public static string SecondSaveSlot {
             get {
-                return ResourceManager.GetString("ShowAdditionalGameInformation", resourceCulture);
+                return ResourceManager.GetString("SecondSaveSlot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show additional save slot information ähnelt.
+        /// </summary>
+        public static string ShowAdditionalSaveSlotInformation {
+            get {
+                return ResourceManager.GetString("ShowAdditionalSaveSlotInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #3 only ähnelt.
+        /// </summary>
+        public static string ThirdSaveSlot {
+            get {
+                return ResourceManager.GetString("ThirdSaveSlot", resourceCulture);
             }
         }
         
@@ -637,15 +673,6 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die This value changes at every in-game save - maybe a timestamp or similar ähnelt.
-        /// </summary>
-        public static string Unknown12BHint {
-            get {
-                return ResourceManager.GetString("Unknown12BHint", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die unknown bytes ähnelt.
         /// </summary>
         public static string UnknownBytes {
@@ -655,29 +682,11 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Use colored output ähnelt.
-        /// </summary>
-        public static string UseColoredOutput {
-            get {
-                return ResourceManager.GetString("UseColoredOutput", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Compare ähnelt.
         /// </summary>
         public static string WebComparison {
             get {
                 return ResourceManager.GetString("WebComparison", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Comparison of whole game buffer (including the &quot;knowns&quot;) ähnelt.
-        /// </summary>
-        public static string WholeGameBufferHint {
-            get {
-                return ResourceManager.GetString("WholeGameBufferHint", resourceCulture);
             }
         }
     }

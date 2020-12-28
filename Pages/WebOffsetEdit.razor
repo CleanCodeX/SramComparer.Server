@@ -11,8 +11,8 @@
 			</tr>
 
 			<tr>
-				<td><label class="header">@ResComp.SettingRegion:@Ns</label></td>
-				<td><InputSelectEnum @bind-Value="@ViewModel.Region" style=@RegionStyle /></td>
+				<td><label class="header">@ResComp.GameRegion:@Ns</label></td>
+				<td><InputSelectEnum @bind-Value="@ViewModel.GameRegion" style=@GameRegionStyle /></td>
 			</tr>
 			
 			<p />
@@ -25,8 +25,8 @@
 				<td><InputFile OnChange="@OnCurrentFileChange" style=@ButtonStyle /></td>
 			</tr>
 			<tr>
-				<td><label>@ResComp.Game:@Ns</label></td>
-				<td><InputSelectEnum @bind-Value="@ViewModel.CurrentGame" style=@CurrentGameStyle /></td>
+				<td><label>@ResComp.SaveSlot:@Ns</label></td>
+				<td><InputSelectEnum @bind-Value="@ViewModel.CurrentSramSaveSlot" style=@CurrentSramFileStyle /></td>
 			</tr>
 
 			<p />
@@ -35,9 +35,9 @@
 				<td><label class="header">@ResComp.Offset</label></td>
 			</tr>
 			<tr>
-				<td><label title="@Res.HintGameOffset">@ResComp.GameOffset:@Ns</label>*)</td>
+				<td><label title="@Res.HintSaveSlotOffset">@ResComp.SaveSlotOffset:@Ns</label>*)</td>
 				<td>
-					<input type="number" @bind="@ViewModel.OffsetAddress" maxLength="4" title="@Res.HintGameOffset" />
+					<input type="number" @bind="@ViewModel.OffsetAddress" maxLength="4" title="@Res.HintSaveSlotOffset" />
 					<button class="btn btn-primary" @onclick="@ViewModel.GetOffsetValueAsync" disabled="@(!ViewModel.CanGet)" title="@Res.HintButtonGetOffsetValue">
 						<span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" />
 					</button>

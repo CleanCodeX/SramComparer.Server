@@ -14,11 +14,8 @@
 	<data name="AdditionalComparisons" xml:space="preserve">
 		<value>Zusätzliche Vergleiche</value>
 	</data>
-	<data name="AffectedGamesOnly" xml:space="preserve">
-		<value>Nur betroffene Spielslots</value>
-	</data>
-	<data name="AllGames" xml:space="preserve">
-		<value>Alle Spielslots</value>
+	<data name="AllSaveSlots" xml:space="preserve">
+		<value>Alle Speicherplätze</value>
 	</data>
 	<data name="HintButtonCompare" xml:space="preserve">
 		<value>Vergleiche SRAM-Dateien</value>
@@ -26,38 +23,38 @@
 	<data name="DontShow" xml:space="preserve">
 		<value>Nicht anzeigen</value>
 	</data>
-	<data name="Game1Only" xml:space="preserve">
+	<data name="FirstSaveSlot" xml:space="preserve">
 		<value>Nur #1</value>
 	</data>
-	<data name="Game2Only" xml:space="preserve">
+	<data name="SecondSaveSlot" xml:space="preserve">
 		<value>Nur #2</value>
 	</data>
-	<data name="Game4Only" xml:space="preserve">
+	<data name="FourthSaveSlot" xml:space="preserve">
 		<value>Nur #4</value>
 	</data>
-	<data name="Game3Only" xml:space="preserve">
+	<data name="ThirdSaveSlot" xml:space="preserve">
 		<value>Nur #3</value>
 	</data>
 	<data name="Mandatory" xml:space="preserve">
 		<value>Pflichtfeld</value>
 	</data>
-	<data name="NonGameBufferHint" xml:space="preserve">
-		<value>Vergleich des nicht Spielslot-Bereichs (außerhalb aller Spielslot-Bereiche)</value>
+	<data name="HintNonSaveSlotByteByByteComparison" xml:space="preserve">
+		<value>Gesamten nicht-Speicherslot Byte-für-Byte vergleichen (jenseits aller Speicherslots)</value>
 	</data>
-	<data name="ShowAdditionalGameInformation" xml:space="preserve">
-		<value>Zusätzliche Spielslot-Informationen anzeigen</value>
+	<data name="ShowAdditionalSaveSlotInformation" xml:space="preserve">
+		<value>Zusätzliche Speicherslot-Informationen anzeigen</value>
 	</data>
-	<data name="Unknown12BHint" xml:space="preserve">
+	<data name="HintUnknown12B" xml:space="preserve">
 		<value>Dieser Wert ändert sich bei jedem In-game Speichern - vielleicht ein Zeitstempel oder ähnliches</value>
 	</data>
-	<data name="UseColoredOutput" xml:space="preserve">
+	<data name="ColorizeOutput" xml:space="preserve">
 		<value>Eingefärbte Ausgabe verwenden</value>
 	</data>
 	<data name="WebComparison" xml:space="preserve">
 		<value>Vergleichen</value>
 	</data>
-	<data name="WholeGameBufferHint" xml:space="preserve">
-		<value>Vergleich des gesamten Spielslot-Bereichs (inklusive der "bekannten" Bereiche)</value>
+	<data name="HintSaveSlotByteByByteComparison" xml:space="preserve">
+		<value>Speicherslot Byte-für-Byte vergleichen (inkl. der "bekannten" Bereiche)</value>
 	</data>
 	<data name="OffsetValue" xml:space="preserve">
 		<value>Offset-Wert</value><comment>The term Offset should only be translated if not understandable</comment>
@@ -111,7 +108,7 @@
     <value>Als Text-Datei herunterladen</value>
   </data>
 	<data name="AppCompiledAt" xml:space="preserve">
-		<value>Kompiliert am</value>
+		<value>Kompilierungsdatum</value>
 	</data>
 	<data name="AppVersion" xml:space="preserve">
 		<value>Version</value>
@@ -207,7 +204,7 @@
 		<value>Info</value>
 	</data>
 	<data name="Contributor" xml:space="preserve">
-		<value>Contributor</value>
+		<value>Beitragender</value>
 	</data>
 	<data name="MenuQuickLinks" xml:space="preserve">
 		<value>Quicklinks</value>
@@ -215,7 +212,13 @@
 	<data name="File" xml:space="preserve">
 		<value>Datei</value>
 	</data>
-	<data name="HintGameOffset" xml:space="preserve">
-		<value>Das relative Offset innerhalb des Spielslot-Bereichs</value>
+	<data name="HintSaveSlotOffset" xml:space="preserve">
+		<value>Das relative Offset innerhalb des Speicherslot-Bereichs</value>
+	</data>
+	<data name="Checksum" xml:space="preserve">
+		<value>Prüfsumme</value>
+	</data>
+	<data name="ComparedSaveSlots" xml:space="preserve">
+		<value>Nur verglichene Speicherplätze</value>
 	</data>
 </root>

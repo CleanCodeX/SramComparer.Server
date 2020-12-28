@@ -32,7 +32,7 @@ namespace WebApp.SoE.ViewModels
 				await Task.CompletedTask;
 				
 				SramFile.ThrowIfNull(nameof(SramFile));
-				SramFile.SetOffsetValue(Options.CurrentGame - 1, OffsetAddress, (byte)OffsetValue);
+				SramFile.SetOffsetValue(Options.CurrentSramFileSaveSlot - 1, OffsetAddress, (byte)OffsetValue);
 				var valueDisplayText = NumberFormatter.GetByteValueRepresentations((byte)OffsetValue);
 
 				OutputMessage = Resources.StatusSetOffsetValueTemplate.InsertArgs(OffsetAddress, valueDisplayText).ColorText(Color.Green).ToMarkup();
