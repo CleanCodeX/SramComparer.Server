@@ -313,11 +313,29 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Community ähnelt.
+        /// </summary>
+        public static string HintCommunity {
+            get {
+                return ResourceManager.GetString("HintCommunity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Copy text to clipboard ähnelt.
         /// </summary>
         public static string HintCopyButton {
             get {
                 return ResourceManager.GetString("HintCopyButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download Console App ähnelt.
+        /// </summary>
+        public static string HintDownload {
+            get {
+                return ResourceManager.GetString("HintDownload", resourceCulture);
             }
         }
         
@@ -372,6 +390,15 @@ namespace WebApp.SoE.Properties {
         public static string HintSaveSlotOffset {
             get {
                 return ResourceManager.GetString("HintSaveSlotOffset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Documentation ähnelt.
+        /// </summary>
+        public static string HintSramDocu {
+            get {
+                return ResourceManager.GetString("HintSramDocu", resourceCulture);
             }
         }
         

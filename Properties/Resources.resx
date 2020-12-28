@@ -261,6 +261,9 @@
   <data name="ButtonSetValue" xml:space="preserve">
     <value>Set value</value>
   </data>
+  <data name="HintCommunity" xml:space="preserve">
+    <value>Community</value>
+  </data>
   <data name="HintButtonSetOffsetValue" xml:space="preserve">
     <value>Set offset value</value><comment>The term Offset should only be translated if not understandable</comment>
   </data>
@@ -283,6 +286,9 @@
   <data name="MenuDownload" xml:space="preserve">
     <value>Download</value>
   </data>
+  <data name="HintDownload" xml:space="preserve">
+    <value>Download Console App</value>
+  </data>
   <data name="MenuHistory" xml:space="preserve">
     <value>History</value>
   </data>
@@ -303,6 +309,9 @@
   </data>
   <data name="MenuSupport" xml:space="preserve">
     <value>Support</value>
+  </data>
+  <data name="HintSramDocu" xml:space="preserve">
+    <value>SRAM Documentation</value>
   </data>
   <data name="MenuDocumentation" xml:space="preserve">
     <value>Documentation</value>

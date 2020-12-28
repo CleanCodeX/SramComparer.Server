@@ -221,4 +221,10 @@
 	<data name="ComparedSaveSlots" xml:space="preserve">
 		<value>Nur verglichene Speicherplätze</value>
 	</data>
+	<data name="HintCommunity" xml:space="preserve">
+		<value>Community</value>
+	</data>
+	<data name="HintDownload" xml:space="preserve">
+		<value>Download der Konsolen-Anwendung</value>
+	</data>
 </root>
