@@ -4,6 +4,10 @@ img {
 	margin-right: 10px;
 }
 
+.firstRow {
+	margin-top: 10px;
+}
+
 .oi-zoom-in {
 	color: cyan;
 }
