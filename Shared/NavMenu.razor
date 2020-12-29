@@ -1,57 +1,60 @@
 ﻿@using WebApp.SoE.Helpers
 @using WebApp.SoE.Extensions
 
-@{ var sp = "&nbsp;".ToMarkup(); }
+@{
+    var sp = "&nbsp;".ToMarkup();
+    var del = "&nbsp;~&nbsp;".ToMarkup();
+}
 
 <div>
     <!-- Quick links -->
     <ol class="nav flex-column">
-        <li class="nav-item" title="@Res.MenuQuickLinks">
+        <li class="nav-item quicklinks" title="@Res.MenuQuickLinks">
             <NavLink class="nav-link" href="@PageUris.SramDocu">
-                <span class="iconify" data-icon="oi-flash"/>
-                :@sp
+                &gt;@sp
                 <a href="@PageUris.SramDocu" title="@Res.HintSramDocu">
                     <span class="iconify" data-icon="oi-document"/>
                 </a>
-                @sp|@sp
+                @del
                 <a href="@PageUris.Awesome" title="@Res.HintAwesomeSoE">
                     <span class="iconify" data-icon="oi-star"/>
                 </a>
-                @sp|@sp
+                @del
                 <a href="@PageUris.Community" title="@Res.HintCommunity">
                     <span class="iconify" data-icon="oi-people"/>
                 </a>
-                @sp|@sp
+                @del
                 <a href="@PageUris.Discord" target="_" title="@Res.HintDiscord">
                     <img src="media/Discord.png" class="discord" />
                 </a>
-                @sp|@sp
+                @del
                 <a href="@PageUris.GitHub" title="@Res.HintGitHub">
                     <img src="media/GitHub.png" class="github"/>
                 </a>
+                @sp&lt;
             </NavLink>
             <NavLink class="nav-link" href="@PageUris.Compare">
-                <span class="iconify" data-icon="oi-flash"/>
-                :@sp
+                &gt;@sp
                 <a href="@PageUris.Compare" title="@Res.HintButtonCompare">
                     <span class="iconify" data-icon="oi-magnifying-glass"/>
                 </a>
-                @sp|@sp
+                @del
                 <a href="@PageUris.Offset" title="@Res.HintButtonSetOffsetValue">
                     <span class="iconify" data-icon="oi-pencil"/>
                 </a>
-                @sp|@sp
+                @del
                 <a href="@PageUris.Downloads" title="@Res.HintDownload">
                     <span class="iconify" data-icon="oi-cloud-download"/>
                 </a>
-                @sp|@sp
+                @del
                 <a href="@PageUris.Imagery" title="@Res.HintImagery">
                     <span class="iconify" data-icon="oi-image"/>
                 </a>
-                @sp|@sp
+                @del
                 <a href="@PageUris.Manual" title="@Res.HintManual">
                     <span class="iconify" data-icon="oi-document"/>
                 </a>
+                @sp&lt;
             </NavLink>
         </li>
     </ol>
