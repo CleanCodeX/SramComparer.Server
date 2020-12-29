@@ -164,7 +164,7 @@
 	<data name="MenuDocumentation" xml:space="preserve">
 		<value>Dokumentation</value>
 	</data>
-	<data name="TooltipAwesomeSoE" xml:space="preserve">
+	<data name="HintAwesomeSoE" xml:space="preserve">
 		<value>Awesome Seiten für ein awesome Spiel</value>
 	</data>
 	<data name="MenuSupport" xml:space="preserve">
@@ -226,5 +226,17 @@
 	</data>
 	<data name="HintSramDocu" xml:space="preserve">
 		<value>SRAM-Dokumentation</value>
+	</data>
+	<data name="HintGitHub" xml:space="preserve">
+		<value>Quellcodes auf GitHub</value>
+	</data>
+	<data name="HintImagery" xml:space="preserve">
+		<value>Bilder der Konsolen-Anwendung</value>
+	</data>
+	<data name="HintManual" xml:space="preserve">
+		<value>Bedienungsanleitung der Konsolen-Anwendung</value>
+	</data>
+	<data name="HintDiscord" xml:space="preserve">
+		<value>Discord-Einladung</value>
 	</data>
 </root>

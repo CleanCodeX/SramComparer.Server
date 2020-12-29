@@ -17,6 +17,7 @@
 }
 
 .content {
+	padding: 1rem;
 	font-size: 1.3rem;
 	max-width: 1000px;
 }
@@ -26,7 +27,7 @@
 }
 
 .navmenu {
-	min-height: 504px;
+	min-height: 494px;
 	padding-top: 15px;
 	background-image: linear-gradient(360deg, rgb(5, 39, 103) 0%, #111111 70%);
 	height: -webkit-fill-available;

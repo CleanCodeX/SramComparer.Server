@@ -4,6 +4,7 @@
 
 .result {
 	margin-top: 15px;
-	min-height:500px;
+	min-height: 500px;
+	white-space: pre;
 }
 

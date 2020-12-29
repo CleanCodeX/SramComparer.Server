@@ -195,8 +195,14 @@
   <data name="MenuQuickLinks" xml:space="preserve">
     <value>Quick links</value>
   </data>
-  <data name="TooltipAwesomeSoE" xml:space="preserve">
+  <data name="HintAwesomeSoE" xml:space="preserve">
     <value>Awesome pages for an awesome game</value>
+  </data>
+	<data name="HintGitHub" xml:space="preserve">
+    <value>Sources at GitHub</value>
+  </data>
+  <data name="HintDiscord" xml:space="preserve">
+    <value>Discord invite</value>
   </data>
   <data name="Pages" xml:space="preserve">
     <value>Pages</value>
@@ -284,6 +290,12 @@
   </data>
   <data name="HintDownload" xml:space="preserve">
     <value>Download Console App</value>
+  </data>
+  <data name="HintImagery" xml:space="preserve">
+    <value>Console App Imagery</value>
+  </data>
+  <data name="HintManual" xml:space="preserve">
+    <value>Console App Manual</value>
   </data>
   <data name="MenuHistory" xml:space="preserve">
     <value>History</value>

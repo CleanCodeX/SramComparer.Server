@@ -91,12 +91,12 @@ namespace WebApp.SoE.ViewModels
 
 			ComparisonSramFileSaveSlot = (SaveSlotId)Options.ComparisonSramFileSaveSlot;
 
-			if (Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.ChecksumComparedSlots))
+			if (Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.ChecksumWhenDifferent))
 				Checksum = Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.ChecksumAllSlots)
 					? SaveSlotOption.All
 					: SaveSlotOption.Compared;
 
-			if (Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.Unknown12BComparedSlots))
+			if (Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.Unknown12BWhenDifferent))
 				Unknown12B = Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.Unknown12BAllSlots)
 					? SaveSlotOption.All
 					: SaveSlotOption.Compared;
@@ -111,7 +111,7 @@ namespace WebApp.SoE.ViewModels
 				Options.ComparisonFlags = Checksum switch
 				{
 					SaveSlotOption.All => Options.ComparisonFlags |= ComparisonFlagsSoE.ChecksumAllSlots,
-					SaveSlotOption.Compared => Options.ComparisonFlags |= ComparisonFlagsSoE.ChecksumComparedSlots,
+					SaveSlotOption.Compared => Options.ComparisonFlags |= ComparisonFlagsSoE.ChecksumWhenDifferent,
 				};
 
 			Options.ComparisonFlags = Options.ComparisonFlags & ~ComparisonFlagsSoE.Unknown12BAllSlots;
@@ -119,7 +119,7 @@ namespace WebApp.SoE.ViewModels
 				Options.ComparisonFlags = Unknown12B switch
 				{
 					SaveSlotOption.All => Options.ComparisonFlags |= ComparisonFlagsSoE.Unknown12BAllSlots,
-					SaveSlotOption.Compared => Options.ComparisonFlags |= ComparisonFlagsSoE.Unknown12BComparedSlots,
+					SaveSlotOption.Compared => Options.ComparisonFlags |= ComparisonFlagsSoE.Unknown12BWhenDifferent,
 				};
 
 			return base.SaveOptionsAsync();

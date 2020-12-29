@@ -186,7 +186,7 @@
 	<data name="ShowAdditionalSaveSlotInformation" xml:space="preserve">
 		<value>Afficher des informations supplémentaires sur la partie</value>
 	</data>
-	<data name="TooltipAwesomeSoE" xml:space="preserve">
+	<data name="HintAwesomeSoE" xml:space="preserve">
 		<value>Des pages géniales pour un jeu génial</value>
 	</data>
 	<data name="UnknownBytes" xml:space="preserve">
@@ -227,5 +227,18 @@
 	</data>
 	<data name="ChangeLog" xml:space="preserve">
 		<value>Historique</value>
+	</data>
+	<data name="HintGitHub" xml:space="preserve">
+		<value>Sources at GitHub</value>
+	</data>
+	<data name="HintImagery" xml:space="preserve">
+		<value>Console App Imagery</value>
+	</data>
+	<data name="HintManual" xml:space="preserve">
+		<value>Console App Manual</value>
+	</data>
+	<data name="HintDiscord" xml:space="preserve">
+		<value>Discord invite
+</value>
 	</data>
 </root>

@@ -268,6 +268,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Awesome pages for an awesome game ähnelt.
+        /// </summary>
+        public static string HintAwesomeSoE {
+            get {
+                return ResourceManager.GetString("HintAwesomeSoE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Compare SRAM files ähnelt.
         /// </summary>
         public static string HintButtonCompare {
@@ -322,6 +331,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Discord invite ähnelt.
+        /// </summary>
+        public static string HintDiscord {
+            get {
+                return ResourceManager.GetString("HintDiscord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Download Console App ähnelt.
         /// </summary>
         public static string HintDownload {
@@ -340,11 +358,38 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sources at GitHub ähnelt.
+        /// </summary>
+        public static string HintGitHub {
+            get {
+                return ResourceManager.GetString("HintGitHub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Console App Imagery ähnelt.
+        /// </summary>
+        public static string HintImagery {
+            get {
+                return ResourceManager.GetString("HintImagery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Link opens in a new tab ähnelt.
         /// </summary>
         public static string HintLinkOpensInNewTab {
             get {
                 return ResourceManager.GetString("HintLinkOpensInNewTab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Console App Manual ähnelt.
+        /// </summary>
+        public static string HintManual {
+            get {
+                return ResourceManager.GetString("HintManual", resourceCulture);
             }
         }
         
@@ -678,15 +723,6 @@ namespace WebApp.SoE.Properties {
         public static string TitleInfo {
             get {
                 return ResourceManager.GetString("TitleInfo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Awesome pages for an awesome game ähnelt.
-        /// </summary>
-        public static string TooltipAwesomeSoE {
-            get {
-                return ResourceManager.GetString("TooltipAwesomeSoE", resourceCulture);
             }
         }
         
