@@ -91,7 +91,7 @@
 		<value>Définir la valeur du décalage</value>
 	</data>
 	<data name="HintButtonCompare" xml:space="preserve">
-		<value>Comparez les fichiers</value>
+		<value>Comparer les fichiers</value>
 	</data>
 	<data name="HintCopyButton" xml:space="preserve">
 		<value>Copier le texte dans le presse-papiers</value>
