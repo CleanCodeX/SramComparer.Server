@@ -27,5 +27,7 @@ namespace WebApp.SoE.Services
 		protected override void PrintColoredLine(ConsoleColor foregroundColor, ConsoleColor backgroundColor, string text) =>
 			base.PrintLine(text.ColorText(foregroundColor.ToColor())
 				.BgColorText(backgroundColor.ToColor()));
+
+		public override string NewLine => "<br>";
 	}
 }
