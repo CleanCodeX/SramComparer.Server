@@ -94,7 +94,7 @@
 	}
 
 	.sidebar {
-		width: 280px;
+		min-width: 280px;
 		position: sticky;
 	}
 

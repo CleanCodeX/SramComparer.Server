@@ -2,6 +2,8 @@
 
 <h2>@Res.AppVersion</h2>
 
-<a href="changelog">@AppInfoService.PackageVersion</a>
+Web-App: @AppInfoService.PackageVersion | <a href="changelog">@Res.ChangeLog</a>
+<br />
+@Res.MenuSramComparerCmdApp: @AppInfoService.GetAssemblyVersion(typeof(SramComparer.SoE.Program).Assembly) | <a href="p?c=console_changelog">@Res.ChangeLog</a>
 
 @Content

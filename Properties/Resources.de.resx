@@ -128,9 +128,9 @@
 	<data name="Pages" xml:space="preserve">
     <value>Seiten</value>
   </data>
-  <data name="ChangeLog" xml:space="preserve">
-    <value>Historie</value>
-  </data>
+	<data name="ChangeLog" xml:space="preserve">
+		<value>Change-Log</value>
+	</data>
 	<data name="MenuFeatures" xml:space="preserve">
 		<value>Features</value>
 	</data>

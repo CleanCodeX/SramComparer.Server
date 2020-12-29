@@ -5,13 +5,6 @@ using Common.Shared.Min.Extensions;
 
 namespace WebApp.SoE.Services
 {
-	public interface IAppInfoService
-    {
-        DateTime CompileTime { get; }
-        public string PackageVersion { get; }
-        string? AppTitle { get; }
-    }
-
     public class AppInfoService : IAppInfoService
     {
         public DateTime CompileTime { get; }
@@ -27,12 +20,19 @@ namespace WebApp.SoE.Services
 
             AppTitle = assembly.GetCustomAttribute<AssemblyProductAttribute>()?.Product ?? assembly.GetCustomAttribute<AssemblyTitleAttribute>()?.Title;
 
-            PackageVersion = GetPackageVersion(assembly);
+            PackageVersion = GetAssemblyVersion(assembly);
+        }
 
-            if (PackageVersion.EndsWith(".0"))
-                PackageVersion = PackageVersion.Replace(".0", string.Empty);
+        public string GetAssemblyVersion(Assembly assembly)
+        {
+            var version = GetPackageVersion(assembly);
+            if (version.EndsWith(".0"))
+                version = PackageVersion.Replace(".0", string.Empty);
 
-            static string GetPackageVersion(Assembly assembly) => assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()!.InformationalVersion.SubstringBefore("-");
+            return version;
+
+            static string GetPackageVersion(Assembly assembly) =>
+                assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()!.InformationalVersion.SubstringBefore("-");
         }
     }
 }
