@@ -14,8 +14,8 @@
 		public const string Goal = "/goal";
 		public const string Unknowns = "/unknowns";
 		public const string Contribute = "/contribute";
-		public const string WebChangelog = "/web-changelog";
-		public const string ConsoleChangelog = "/console-changelog";
+		public const string ChangelogWeb = "/changelog-web";
+		public const string ChangelogConsole = "/changelog-console";
 		public const string Awesome = "/awesome";
 		public const string GitHub = "/github";
 		public const string Support = "/support";
