@@ -237,6 +237,6 @@
 		<value>Bedienungsanleitung der Konsolen-Anwendung</value>
 	</data>
 	<data name="HintDiscord" xml:space="preserve">
-		<value>Discord-Einladung</value>
+		<value>Direkte Discord-Einladung</value>
 	</data>
 </root>

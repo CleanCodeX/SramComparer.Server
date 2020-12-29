@@ -331,7 +331,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Discord invite ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Direct Discord invite ähnelt.
         /// </summary>
         public static string HintDiscord {
             get {

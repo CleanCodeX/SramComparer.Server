@@ -238,7 +238,6 @@
 		<value>Console App Manual</value>
 	</data>
 	<data name="HintDiscord" xml:space="preserve">
-		<value>Discord invite
-</value>
+		<value>Direct Discord invite</value>
 	</data>
 </root>
