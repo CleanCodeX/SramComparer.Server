@@ -16,18 +16,6 @@ namespace WebApp.SoE.Pages.Bases
 
 		protected override void OnParametersSet() => HandleQueryParam(Page ?? GetQueryParam());
 
-		private bool HasQueryParamChanged(bool handleNewPage = true)
-		{
-			if (GetQueryParam() is { } newPage && Page != newPage)
-			{
-				if(handleNewPage)
-					HandleQueryParam(newPage);
-				return true;
-			}
-
-			return false;
-		}
-
 		protected bool HandleQueryParam(string? page)
 		{
 			Url = Filepath = null;

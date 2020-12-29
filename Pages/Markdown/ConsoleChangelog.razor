@@ -1,0 +1,10 @@
+﻿@using WebApp.SoE.Helpers
+
+@attribute [Route(PageUris.ConsoleChangelog)]
+@inherits QueryMarkupPageBase
+
+@Content
+
+@code {
+	protected override void OnParametersSet() => HandleQueryParam(PageUris.ConsoleChangelog.Substring(1));
+}
