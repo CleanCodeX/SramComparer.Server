@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using SramComparer.SoE;
-using SramFormat.SoE.Models.Enums;
+using SramFormat.SoE.Enums;
 using WebApp.SoE.Shared.Enums;
 
 namespace WebApp.SoE.ViewModels.Bases
