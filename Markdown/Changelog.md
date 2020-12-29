@@ -1,7 +1,8 @@
 ﻿## Changelog
 
-#### 1.0.3 - 2020-12-27
+#### 1.0.3 - 2020-12-29
 * added quick links
+* added french localization
 
 #### 1.0.2 - 2020-12-23
 * added automatic settings loading/saving for web tools

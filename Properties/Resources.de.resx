@@ -15,7 +15,7 @@
 		<value>Zusätzliche Vergleiche</value>
 	</data>
 	<data name="AllSaveSlots" xml:space="preserve">
-		<value>Alle Speicherplätze</value>
+		<value>Alle Speicherslots</value>
 	</data>
 	<data name="HintButtonCompare" xml:space="preserve">
 		<value>Vergleiche SRAM-Dateien</value>
@@ -192,7 +192,7 @@
 		<value>unbekannte Bytes</value>
 	</data>
 	<data name="HintProjectStatus" xml:space="preserve">
-		<value>Etdeckungs-Status</value>
+		<value>Entdeckungs-Status</value>
 	</data>
 	<data name="TitleInfo" xml:space="preserve">
 		<value>Info</value>
@@ -219,12 +219,15 @@
 		<value>Prüfsumme</value>
 	</data>
 	<data name="ComparedSaveSlots" xml:space="preserve">
-		<value>Nur verglichene Speicherplätze</value>
+		<value>Nur verglichene Speicherslots</value>
 	</data>
 	<data name="HintCommunity" xml:space="preserve">
 		<value>Community</value>
 	</data>
 	<data name="HintDownload" xml:space="preserve">
 		<value>Download der Konsolen-Anwendung</value>
+	</data>
+	<data name="HintSramDocu" xml:space="preserve">
+		<value>SRAM-Dokumentation</value>
 	</data>
 </root>

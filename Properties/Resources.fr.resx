@@ -1,0 +1,234 @@
+﻿<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="AdditionalComparisons" xml:space="preserve">
+		<value>Comparaisons supplémentaires</value>
+	</data>
+	<data name="ComparedSaveSlots" xml:space="preserve">
+		<value>Uniquement les jeux concernés</value>
+	</data>
+	<data name="AllSaveSlots" xml:space="preserve">
+		<value>Toutes les parties</value>
+	</data>
+	<data name="AppCompiledAt" xml:space="preserve">
+		<value>Compilé le</value><comment>Changed to Compile date</comment>
+	</data>
+	<data name="AppVersion" xml:space="preserve">
+		<value>Version</value>
+	</data>
+	<data name="ButtonCopy" xml:space="preserve">
+		<value>Copier dans le presse-papier</value>
+	</data>
+	<data name="ButtonDownloadFile" xml:space="preserve">
+		<value>Télécharger</value>
+	</data>
+	<data name="ButtonGetValue" xml:space="preserve">
+		<value>Obtenir la valeur</value>
+	</data>
+	<data name="ButtonSetValue" xml:space="preserve">
+		<value>Définir la valeur</value>
+	</data>
+	<data name="CaptionWebCompare" xml:space="preserve">
+		<value>SRAM - Web Comparaison</value><comment>Needs to have Web or online oncluded</comment>
+	</data>
+	<data name="CaptionWebOffsetEdit" xml:space="preserve">
+		<value>SRAM - Web Modification du décalage</value>
+		<comment>Needs to have Web or online oncluded</comment>
+	</data>
+	<data name="Checksum" xml:space="preserve">
+		<value>Checksum</value>
+	</data>
+	<data name="Contributor" xml:space="preserve">
+		<value>Contributeur</value>
+	</data>
+	<data name="DontShow" xml:space="preserve">
+		<value>Ne pas montrer</value>
+	</data>
+	<data name="DownloadConfirmationFileTemplate" xml:space="preserve">
+		<value>Télécharger le fichier "{0}"?</value>
+	</data>
+	<data name="File" xml:space="preserve">
+		<value>Fichier</value>
+	</data>
+	<data name="Game1" xml:space="preserve">
+		<value>n°1</value>
+	</data>
+	<data name="Game2" xml:space="preserve">
+		<value>n°2</value>
+	</data>
+	<data name="Game3" xml:space="preserve">
+		<value>n°3</value>
+	</data>
+	<data name="Game4" xml:space="preserve">
+		<value>n°4</value>
+	</data>
+	<data name="FirstSaveSlot" xml:space="preserve">
+		<value>Seulement n°1</value>
+	</data>
+	<data name="FourthSaveSlot" xml:space="preserve">
+		<value>Seulement n°4</value>
+	</data>
+	<data name="SecondSaveSlot" xml:space="preserve">
+		<value>Seulement n°2</value>
+	</data>
+	<data name="ThirdSaveSlot" xml:space="preserve">
+		<value>Seulement n°3</value>
+	</data>
+	<data name="HintButtonDownloadChangedFile" xml:space="preserve">
+		<value>Télécharger le fichier modifié</value>
+	</data>
+	<data name="HintButtonGetOffsetValue" xml:space="preserve">
+		<value>Obtenir la valeur du décalage</value>
+	</data>
+	<data name="HintButtonSetOffsetValue" xml:space="preserve">
+		<value>Définir la valeur du décalage</value>
+	</data>
+	<data name="HintButtonCompare" xml:space="preserve">
+		<value>Comparez les fichiers</value>
+	</data>
+	<data name="HintCopyButton" xml:space="preserve">
+		<value>Copier le texte dans le presse-papiers</value>
+	</data>
+	<data name="HintDownloadFile" xml:space="preserve">
+		<value>Télécharger sous forme de fichier texte</value>
+	</data>
+	<data name="HintLinkOpensInNewTab" xml:space="preserve">
+		<value>Le lien s'ouvre dans un nouvel onglet</value>
+	</data>
+	<data name="HintProjectStatus" xml:space="preserve">
+		<value>Statut de l'exploration du format</value>
+	</data>
+	<data name="Mandatory" xml:space="preserve">
+		<value>obligatoire</value>
+	</data>
+	<data name="MenuAbout" xml:space="preserve">
+		<value>À propos</value>
+	</data>
+	<data name="TitleInfo" xml:space="preserve">
+		<value>Infos</value>
+	</data>
+	<data name="MenuAwesomeSoE" xml:space="preserve">
+		<value>Super SoE</value><comment>For various topics there are Awesome pages, for SoE it's called Awesome SoE</comment>
+	</data>
+	<data name="MenuCommunity" xml:space="preserve">
+		<value>Communité</value>
+	</data>
+	<data name="MenuDocumentation" xml:space="preserve">
+		<value>Documentation</value>
+	</data>
+	<data name="MenuDownload" xml:space="preserve">
+		<value>Télécharger</value>
+	</data>
+	<data name="MenuFeatures" xml:space="preserve">
+		<value>Caractéristiques</value>
+	</data>
+	<data name="MenuGoal" xml:space="preserve">
+		<value>Quel est le but?</value>
+	</data>
+	<data name="MenuHistory" xml:space="preserve">
+		<value>Historique</value>
+	</data>
+	<data name="MenuCanIHelp" xml:space="preserve">
+		<value>Comment puis-je aider?</value><comment>Changed to Can I help?</comment>
+	</data>
+	<data name="MenuImagery" xml:space="preserve">
+		<value>Images</value>
+	</data>
+	<data name="MenuSramComparerCmdApp" xml:space="preserve">
+		<value>Application console</value>
+	</data>
+	<data name="MenuSramComparison" xml:space="preserve">
+		<value>Comparaison de fichiers SRAM</value>
+	</data>
+	<data name="MenuSramFormat" xml:space="preserve">
+		<value>Format SRAM</value>
+	</data>
+	<data name="MenuSupport" xml:space="preserve">
+		<value>Aide</value>
+	</data>
+	<data name="MenuTheUnknowns" xml:space="preserve">
+		<value>Valeurs inconnues</value>
+	</data>
+	<data name="MenuWebOffset" xml:space="preserve">
+		<value>Modifier le décalage</value>
+	</data>
+	<data name="MenuWebTools" xml:space="preserve">
+		<value>Outils Web</value>
+	</data>
+	<data name="MessageCopiedToClipboard" xml:space="preserve">
+		<value>Copié dans le presse-papier;</value><comment>Why a semicolon?</comment>
+	</data>
+	<data name="HintNonSaveSlotByteByByteComparison" xml:space="preserve">
+		<value>Comparaison des données en dehors de la partie en cours (après les données de toutes les parties)</value>
+	</data>
+	<data name="OpenSourceInfoFragment" xml:space="preserve">
+		<value>Le code source est hébergé à l'adresse</value>
+	</data>
+	<data name="Pages" xml:space="preserve">
+		<value>Pages</value>
+	</data>
+	<data name="Prerequisites" xml:space="preserve">
+		<value>Prérequis</value>
+	</data>
+	<data name="ProjectName" xml:space="preserve">
+		<value>Projet d'exploration de format</value>
+	</data>
+	<data name="ReadMe" xml:space="preserve">
+		<value>Lisez-moi</value>
+	</data>
+	<data name="ShowAdditionalSaveSlotInformation" xml:space="preserve">
+		<value>Afficher des informations supplémentaires sur la partie</value>
+	</data>
+	<data name="TooltipAwesomeSoE" xml:space="preserve">
+		<value>Des pages géniales pour un jeu génial</value>
+	</data>
+	<data name="UnknownBytes" xml:space="preserve">
+		<value>octets inconnus</value>
+	</data>
+	<data name="ColorizeOutput" xml:space="preserve">
+		<value>Résultat avec couleurs</value><comment>Canged to colorize output</comment>
+	</data>
+	<data name="WebComparison" xml:space="preserve">
+		<value>Comparer</value>
+	</data>
+	<data name="HintSaveSlotByteByByteComparison" xml:space="preserve">
+		<value>Comparaison des données (y compris les valeurs connues)</value>
+	</data>
+	<data name="OffsetValue" xml:space="preserve">
+		<value>Valeur du décalage</value>
+	</data>
+	<data name="MenuQuickLinks" xml:space="preserve">
+		<value>Quick links</value>
+	</data>
+	<data name="HintUnknown12B" xml:space="preserve">
+		<value>Cette valeur change à chaque sauvegarde en jeu</value>
+	</data>
+	<data name="HintSaveSlotOffset" xml:space="preserve">
+		<value>The relative offset within the gameslot area</value>
+	</data>
+	<data name="HintSramDocu" xml:space="preserve">
+		<value>SRAM Documentation</value>
+	</data>
+	<data name="KnownBytes" xml:space="preserve">
+		<value>octets connus</value>
+	</data>
+	<data name="HintCommunity" xml:space="preserve">
+		<value>Communité</value>
+	</data>
+	<data name="HintDownload" xml:space="preserve">
+		<value>Download Console App</value>
+	</data>
+	<data name="ChangeLog" xml:space="preserve">
+		<value>Historique</value>
+	</data>
+</root>

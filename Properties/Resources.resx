@@ -136,7 +136,7 @@
     <value>Copied to clipboard!</value>
   </data>
   <data name="ComparedSaveSlots" xml:space="preserve">
-    <value>Compared game slots only</value>
+    <value>Compared save slots only</value>
   </data>
   <data name="DontShow" xml:space="preserve">
     <value>Don't show</value>
@@ -187,7 +187,7 @@
     <value>Edit offset</value><comment>The term Offset should only be translated if not understandable</comment>
   </data>
   <data name="MenuAwesomeSoE" xml:space="preserve">
-    <value>Awesome SoE</value>
+    <value>Awesome SoE</value><comment>For various topics there are Awesome pages, for SoE it's called Awesome SoE</comment>
   </data>
   <data name="MenuAbout" xml:space="preserve">
     <value>About</value>
@@ -275,7 +275,6 @@
   </data>
   <data name="Mandatory" xml:space="preserve">
     <value>mandatory</value>
-    <comment>LC</comment>
   </data>
   <data name="HintButtonCompare" xml:space="preserve">
     <value>Compare SRAM files</value>
@@ -332,7 +331,7 @@
     <value>Changelog</value>
   </data>
   <data name="ColorizeOutput" xml:space="preserve">
-    <value>Use colored output</value>
+    <value>Colorize output</value>
   </data>
   <data name="OpenSourceInfoFragment" xml:space="preserve">
     <value>The source code is hosted at </value>
