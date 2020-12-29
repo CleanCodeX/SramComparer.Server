@@ -8,72 +8,49 @@
     <ol class="nav flex-column">
         <li class="nav-item" title="@Res.MenuQuickLinks">
             <NavLink class="nav-link" href="@PageUris.SramDocu">
-                <span class="oi oi-flash" aria-hidden="true"/>
-
-                <a href="@PageUris.SramDocu">
-                    <button class="btn btn-info" title="@Res.HintSramDocu">
-                        <span class="iconify" data-icon="oi-document" data-inline="false" />
-                    </button>
+                <span class="iconify" data-icon="oi-flash"/>
+                :@sp
+                <a href="@PageUris.SramDocu" title="@Res.HintSramDocu">
+                    <span class="iconify" data-icon="oi-document"/>
                 </a>
-                @sp
+                @sp|@sp
                 <a href="@PageUris.Awesome" title="@Res.HintAwesomeSoE">
-                    <button class="btn btn-warning">
-                        <span class="iconify" data-icon="oi-star" data-inline="false" />
-                    </button>
+                    <span class="iconify" data-icon="oi-star"/>
                 </a>
-                @sp
+                @sp|@sp
                 <a href="@PageUris.Community" title="@Res.HintCommunity">
-                    <button class="btn btn-dark">
-                        <span class="iconify" data-icon="oi-people" data-inline="false" />
-                    </button>
+                    <span class="iconify" data-icon="oi-people"/>
                 </a>
-                @sp
+                @sp|@sp
                 <a href="@PageUris.Discord" target="_" title="@Res.HintDiscord">
-                    <button class="btn btn-dark">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
-                            <path d="M6.552 6.712c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888.008-.488-.36-.888-.816-.888zm2.92 0c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888s-.36-.888-.816-.888z"/>
-                            <path d="M13.36 0H2.64C1.736 0 1 .736 1 1.648v10.816c0 .912.736 1.648 1.64 1.648h9.072l-.424-1.48 1.024.952.968.896L15 16V1.648C15 .736 14.264 0 13.36 0zm-3.088 10.448s-.288-.344-.528-.648c1.048-.296 1.448-.952 1.448-.952-.328.216-.64.368-.92.472-.4.168-.784.28-1.16.344a5.604 5.604 0 0 1-2.072-.008 6.716 6.716 0 0 1-1.176-.344 4.688 4.688 0 0 1-.584-.272c-.024-.016-.048-.024-.072-.04-.016-.008-.024-.016-.032-.024-.144-.08-.224-.136-.224-.136s.384.64 1.4.944c-.24.304-.536.664-.536.664-1.768-.056-2.44-1.216-2.44-1.216 0-2.576 1.152-4.664 1.152-4.664 1.152-.864 2.248-.84 2.248-.84l.08.096c-1.44.416-2.104 1.048-2.104 1.048s.176-.096.472-.232c.856-.376 1.536-.48 1.816-.504.048-.008.088-.016.136-.016a6.521 6.521 0 0 1 4.024.752s-.632-.6-1.992-1.016l.112-.128s1.096-.024 2.248.84c0 0 1.152 2.088 1.152 4.664 0 0-.68 1.16-2.448 1.216z"/>
-                        </svg>
-                    </button>
+                    <img src="media/Discord.png" class="discord" />
                 </a>
-                @sp
+                @sp|@sp
                 <a href="@PageUris.GitHub" title="@Res.HintGitHub">
-                    <button class="btn btn-success">
-                        <img src="Media/github-11-24.png" />
-                    </button>
+                    <img src="media/GitHub.png" class="github"/>
                 </a>
             </NavLink>
             <NavLink class="nav-link" href="@PageUris.Compare">
-                <span class="oi oi-flash" aria-hidden="true"/>
-
-                <a href="@PageUris.Compare">
-                    <button class="btn btn-danger" title="@Res.HintButtonCompare">
-                        <span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" />
-                    </button>
+                <span class="iconify" data-icon="oi-flash"/>
+                :@sp
+                <a href="@PageUris.Compare" title="@Res.HintButtonCompare">
+                    <span class="iconify" data-icon="oi-magnifying-glass"/>
                 </a>
-                @sp
-                <a href="@PageUris.Offset">
-                    <button class="btn btn-danger" title="@Res.HintButtonSetOffsetValue">
-                        <span class="iconify" data-icon="oi-pencil" data-inline="false" />
-                    </button>
+                @sp|@sp
+                <a href="@PageUris.Offset" title="@Res.HintButtonSetOffsetValue">
+                    <span class="iconify" data-icon="oi-pencil"/>
                 </a>
-                @sp
-                <a href="@PageUris.Downloads">
-                    <button class="btn btn-secondary" title="@Res.HintDownload">
-                        <span class="iconify" data-icon="oi-cloud-download" data-inline="false" />
-                    </button>
+                @sp|@sp
+                <a href="@PageUris.Downloads" title="@Res.HintDownload">
+                    <span class="iconify" data-icon="oi-cloud-download"/>
                 </a>
-                @sp
-                <a href="@PageUris.Imagery">
-                    <button class="btn btn-secondary" title="@Res.HintImagery">
-                        <span class="iconify" data-icon="oi-image" data-inline="false" />
-                    </button>
+                @sp|@sp
+                <a href="@PageUris.Imagery" title="@Res.HintImagery">
+                    <span class="iconify" data-icon="oi-image"/>
                 </a>
-                @sp
-                <a href="@PageUris.Manual">
-                    <button class="btn btn-secondary" title="@Res.HintManual">
-                        <span class="iconify" data-icon="oi-document" data-inline="false" />
-                    </button>
+                @sp|@sp
+                <a href="@PageUris.Manual" title="@Res.HintManual">
+                    <span class="iconify" data-icon="oi-document"/>
                 </a>
             </NavLink>
         </li>
@@ -189,7 +166,7 @@
                 <ol class="nav flex-column">
                     <li class="nav-item px-3">
                         <NavLink class="nav-link" href="@PageUris.GitHub">
-                            <img src="Media/github-11-24.png" class="icon" /> GitHub
+                            <img src="media/github-11-24.png" class="icon" /> GitHub
                         </NavLink>
                     </li>
                 </ol>
