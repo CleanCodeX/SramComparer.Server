@@ -64,7 +64,7 @@ namespace WebApp.SoE.ViewModels
 			}
 			catch (Exception ex)
 			{
-				OutputMessage = ex.Message.ColorText(Color.Red).ToMarkup();
+				OutputMessage = ex.GetColoredMessage();
 			}
 		}
 	}

@@ -160,16 +160,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Checksum ähnelt.
-        /// </summary>
-        public static string Checksum {
-            get {
-                return ResourceManager.GetString("Checksum", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Use colored output ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Colorize output ähnelt.
         /// </summary>
         public static string ColorizeOutput {
             get {
@@ -178,7 +169,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Compared game slots only ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compared save slots only ähnelt.
         /// </summary>
         public static string ComparedSaveSlots {
             get {
@@ -313,7 +304,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Community ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Community (Discord, Forum, etc.) ähnelt.
         /// </summary>
         public static string HintCommunity {
             get {

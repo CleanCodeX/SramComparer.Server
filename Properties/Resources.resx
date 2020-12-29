@@ -234,10 +234,7 @@
   <data name="HintSaveSlotByteByByteComparison" xml:space="preserve">
     <value>Save slot byte-by-byte comparison (including the "knowns" areas)</value>
   </data>
-	<data name="Checksum" xml:space="preserve">
-    <value>Checksum</value>
-  </data>
-	<data name="ShowAdditionalSaveSlotInformation" xml:space="preserve">
+  <data name="ShowAdditionalSaveSlotInformation" xml:space="preserve">
     <value>Show additional save slot information</value>
   </data>
   <data name="KnownBytes" xml:space="preserve">
@@ -262,7 +259,7 @@
     <value>Set value</value>
   </data>
   <data name="HintCommunity" xml:space="preserve">
-    <value>Community</value>
+    <value>Community (Discord, Forum, etc.)</value>
   </data>
   <data name="HintButtonSetOffsetValue" xml:space="preserve">
     <value>Set offset value</value><comment>The term Offset should only be translated if not understandable</comment>

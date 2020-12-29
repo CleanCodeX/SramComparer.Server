@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
@@ -65,7 +64,7 @@ namespace WebApp.SoE.ViewModels
 
 				await SaveOptionsAsync();
 
-				using var output = new StringWriter { NewLine = "<br>" };
+				using var output = new StringWriter {NewLine = "<br>"};
 
 				Requires.NotNull(CurrentFileStream, nameof(CurrentFileStream));
 				Requires.NotNull(ComparisonSramFileStream, nameof(ComparisonSramFileStream));
@@ -73,13 +72,14 @@ namespace WebApp.SoE.ViewModels
 				CurrentFileStream.Position = 0;
 				ComparisonSramFileStream.Position = 0;
 
-				new CommandHandlerSoE(ColorizeOutput ? new HtmlConsolePrinterSoE() : new ConsolePrinter()).Compare(CurrentFileStream, ComparisonSramFileStream, Options, output);
+				new CommandHandlerSoE(ColorizeOutput ? new HtmlConsolePrinterSoE() : new ConsolePrinter()).Compare(
+					CurrentFileStream, ComparisonSramFileStream, Options, output);
 
 				OutputMessage = output.ToString().ToMarkup();
 			}
 			catch (Exception ex)
 			{
-				OutputMessage = ex.Message.ColorText(Color.Red).ToMarkup();
+				OutputMessage = ex.GetColoredMessage();
 			}
 
 			IsComparing = false;

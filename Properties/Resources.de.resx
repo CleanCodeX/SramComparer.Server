@@ -215,14 +215,11 @@
 	<data name="HintSaveSlotOffset" xml:space="preserve">
 		<value>Das relative Offset innerhalb des Speicherslot-Bereichs</value>
 	</data>
-	<data name="Checksum" xml:space="preserve">
-		<value>Prüfsumme</value>
-	</data>
 	<data name="ComparedSaveSlots" xml:space="preserve">
 		<value>Nur verglichene Speicherslots</value>
 	</data>
 	<data name="HintCommunity" xml:space="preserve">
-		<value>Community</value>
+		<value>Community (Discord, Forum, etc.)</value>
 	</data>
 	<data name="HintDownload" xml:space="preserve">
 		<value>Download der Konsolen-Anwendung</value>

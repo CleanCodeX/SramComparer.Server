@@ -45,9 +45,6 @@
 		<value>SRAM - Web Modification du décalage</value>
 		<comment>Needs to have Web or online oncluded</comment>
 	</data>
-	<data name="Checksum" xml:space="preserve">
-		<value>Checksum</value>
-	</data>
 	<data name="Contributor" xml:space="preserve">
 		<value>Contributeur</value>
 	</data>
@@ -223,7 +220,7 @@
 		<value>octets connus</value>
 	</data>
 	<data name="HintCommunity" xml:space="preserve">
-		<value>Communité</value>
+		<value>Communité (Discord, Forum, etc.)</value>
 	</data>
 	<data name="HintDownload" xml:space="preserve">
 		<value>Download Console App</value>

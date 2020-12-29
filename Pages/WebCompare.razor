@@ -1,4 +1,5 @@
-﻿<title>@Res.CaptionWebCompare</title>
+﻿@using SramComparer.SoE.Properties
+<title>@Res.CaptionWebCompare</title>
 
 <div>
 	<h1>@Res.CaptionWebCompare</h1>
@@ -66,7 +67,7 @@
 			</tr>
 			
 			<tr>
-				<td><label>@Res.Checksum:@Ns</label></td>
+				<td><label>@Resources.Checksum:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.Checksum" style=@ChecksumStyle /></td>
 			</tr>
 			<tr>
