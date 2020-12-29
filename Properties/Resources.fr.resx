@@ -21,7 +21,7 @@
 		<value>Toutes les parties</value>
 	</data>
 	<data name="AppCompiledAt" xml:space="preserve">
-		<value>Compilé le</value><comment>Changed to Compile date</comment>
+		<value>Changed to Compile date</value><comment>Changed to Compile date</comment>
 	</data>
 	<data name="AppVersion" xml:space="preserve">
 		<value>Version</value>
@@ -39,10 +39,10 @@
 		<value>Définir la valeur</value>
 	</data>
 	<data name="CaptionWebCompare" xml:space="preserve">
-		<value>SRAM - Web Comparaison</value><comment>Needs to have Web or online oncluded</comment>
+		<value>Web Comparaison SRAM</value><comment>Needs to have Web or online oncluded</comment>
 	</data>
 	<data name="CaptionWebOffsetEdit" xml:space="preserve">
-		<value>SRAM - Web Modification du décalage</value>
+		<value>Web Modification du décalage SRAM</value>
 		<comment>Needs to have Web or online oncluded</comment>
 	</data>
 	<data name="Contributor" xml:space="preserve">
@@ -145,7 +145,7 @@
 		<value>Application console</value>
 	</data>
 	<data name="MenuSramComparison" xml:space="preserve">
-		<value>Comparaison de fichiers SRAM</value>
+		<value>Comparaison SRAM</value>
 	</data>
 	<data name="MenuSramFormat" xml:space="preserve">
 		<value>Format SRAM</value>
@@ -163,7 +163,7 @@
 		<value>Outils Web</value>
 	</data>
 	<data name="MessageCopiedToClipboard" xml:space="preserve">
-		<value>Copié dans le presse-papier;</value><comment>Why a semicolon?</comment>
+		<value>Copié dans le presse-papier!</value><comment>Why a semicolon?</comment>
 	</data>
 	<data name="HintNonSaveSlotByteByByteComparison" xml:space="preserve">
 		<value>Comparaison des données en dehors de la partie en cours (après les données de toutes les parties)</value>
@@ -205,16 +205,16 @@
 		<value>Valeur du décalage</value>
 	</data>
 	<data name="MenuQuickLinks" xml:space="preserve">
-		<value>Quick links</value>
+		<value>Liens rapides</value>
 	</data>
 	<data name="HintUnknown12B" xml:space="preserve">
 		<value>Cette valeur change à chaque sauvegarde en jeu</value>
 	</data>
 	<data name="HintSaveSlotOffset" xml:space="preserve">
-		<value>The relative offset within the gameslot area</value>
+		<value>Le décalage relatif dans les données de la partie</value>
 	</data>
 	<data name="HintSramDocu" xml:space="preserve">
-		<value>SRAM Documentation</value>
+		<value>Documentation SRAM</value>
 	</data>
 	<data name="KnownBytes" xml:space="preserve">
 		<value>octets connus</value>
@@ -223,21 +223,21 @@
 		<value>Communité (Discord, Forum, etc.)</value>
 	</data>
 	<data name="HintDownload" xml:space="preserve">
-		<value>Download Console App</value>
+		<value>Télécharger l'application console</value>
 	</data>
 	<data name="ChangeLog" xml:space="preserve">
 		<value>Historique</value>
 	</data>
 	<data name="HintGitHub" xml:space="preserve">
-		<value>Sources at GitHub</value>
+		<value>Code-source sur GitHub</value>
 	</data>
 	<data name="HintImagery" xml:space="preserve">
 		<value>Console App Imagery</value>
 	</data>
 	<data name="HintManual" xml:space="preserve">
-		<value>Console App Manual</value>
+		<value>Manuel de l'application console</value>
 	</data>
 	<data name="HintDiscord" xml:space="preserve">
-		<value>Direct Discord invite</value>
+		<value>Invitation Discord</value>
 	</data>
 </root>

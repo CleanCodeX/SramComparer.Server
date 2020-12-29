@@ -1,6 +1,9 @@
+using System.Collections.Generic;
+using System.Globalization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -31,14 +34,38 @@ namespace WebApp.SoE
 				LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>()
 			});
 
+			services.Configure<RequestLocalizationOptions>(
+				options =>
+				{
+					var uiCulture = CultureInfo.GetCultureInfo("en");
+					var supportedCultures = new List<CultureInfo>
+					{
+						uiCulture,
+						CultureInfo.GetCultureInfo("de"),
+						CultureInfo.GetCultureInfo("fr")
+					};
+
+					options.DefaultRequestCulture = new RequestCulture(uiCulture);
+					// Formatting numbers, dates, etc.
+					options.SupportedCultures = supportedCultures;
+					// UI strings that we have localized.
+					options.SupportedUICultures = supportedCultures;
+
+					options.AddInitialRequestCultureProvider(new QueryStringRequestCultureProvider());
+					options.AddInitialRequestCultureProvider(new CookieRequestCultureProvider());
+					options.AddInitialRequestCultureProvider(new AcceptLanguageHeaderRequestCultureProvider());
+				});
+
 			services.AddOptions<Settings>().Bind(Configuration.GetSection(nameof(Settings)));
 			services.AddSingleton(cfg => cfg.GetService<IOptionsMonitor<Settings>>()!.CurrentValue);
 
+#if DEBUG
 			services.AddLiveReload(config => {
 				config.LiveReloadEnabled = true;
 				config.ClientFileExtensions = ".css,.js,.htm,.html";
 				config.FolderToMonitor = "~/../";
 			});
+#endif
 
 			services.AddHttpClient();
 			services.AddRazorPages();
@@ -62,6 +89,8 @@ namespace WebApp.SoE
 #if DEBUG
 			app.UseLiveReload();
 #endif
+
+			app.UseRequestLocalization();
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
 			app.UseRouting();
