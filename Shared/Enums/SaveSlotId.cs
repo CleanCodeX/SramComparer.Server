@@ -7,13 +7,13 @@ namespace WebApp.SoE.Shared.Enums
 	{
 		[Display(Name = nameof(Resources.AllSaveSlots), ResourceType = typeof(Resources))]
 		All,
-		[Display(Name = nameof(Resources.FirstSaveSlot), ResourceType = typeof(Resources))]
+		[Display(Name = nameof(Resources.SaveSlot1Only), ResourceType = typeof(Resources))]
 		First,
-		[Display(Name = nameof(Resources.SecondSaveSlot), ResourceType = typeof(Resources))]
+		[Display(Name = nameof(Resources.SaveSlot2Only), ResourceType = typeof(Resources))]
 		Second,
-		[Display(Name = nameof(Resources.ThirdSaveSlot), ResourceType = typeof(Resources))]
+		[Display(Name = nameof(Resources.SaveSlot3Only), ResourceType = typeof(Resources))]
 		Third,
-		[Display(Name = nameof(Resources.FourthSaveSlot), ResourceType = typeof(Resources))]
+		[Display(Name = nameof(Resources.SaveSlot4Only), ResourceType = typeof(Resources))]
 		Fourth
 	}
 }

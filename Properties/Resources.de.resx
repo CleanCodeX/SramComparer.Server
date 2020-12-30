@@ -14,8 +14,8 @@
 	<data name="AdditionalComparisons" xml:space="preserve">
 		<value>Zusätzliche Vergleiche</value>
 	</data>
-	<data name="AllSaveSlots" xml:space="preserve">
-		<value>Alle Speicherslots</value>
+	<data name="ComparedSaveSlots" xml:space="preserve">
+		<value>Verglichene Speicherslots</value>
 	</data>
 	<data name="HintButtonCompare" xml:space="preserve">
 		<value>Vergleiche SRAM-Dateien</value>
@@ -23,16 +23,16 @@
 	<data name="DontShow" xml:space="preserve">
 		<value>Nicht anzeigen</value>
 	</data>
-	<data name="FirstSaveSlot" xml:space="preserve">
+	<data name="SaveSlot1Only" xml:space="preserve">
 		<value>Nur #1</value>
 	</data>
-	<data name="SecondSaveSlot" xml:space="preserve">
+	<data name="SaveSlot2Only" xml:space="preserve">
 		<value>Nur #2</value>
 	</data>
-	<data name="FourthSaveSlot" xml:space="preserve">
+	<data name="SaveSlot4Only" xml:space="preserve">
 		<value>Nur #4</value>
 	</data>
-	<data name="ThirdSaveSlot" xml:space="preserve">
+	<data name="SaveSlot3Only" xml:space="preserve">
 		<value>Nur #3</value>
 	</data>
 	<data name="Mandatory" xml:space="preserve">
@@ -65,16 +65,16 @@
 	<data name="MenuWebOffset" xml:space="preserve">
 		<value>Offset bearbeiten</value><comment>The term Offset should only be translated if not understandable</comment>
 	</data>
-	<data name="Game1" xml:space="preserve">
+	<data name="SaveSlot1" xml:space="preserve">
 		<value>#1</value>
 	</data>
-	<data name="Game2" xml:space="preserve">
+	<data name="SaveSlot2" xml:space="preserve">
 		<value>#2</value>
 	</data>
-	<data name="Game3" xml:space="preserve">
+	<data name="SaveSlot3" xml:space="preserve">
 		<value>#3</value>
 	</data>
-	<data name="Game4" xml:space="preserve">
+	<data name="SaveSlot4" xml:space="preserve">
 		<value>#4</value>
 	</data>
 	<data name="CaptionWebOffsetEdit" xml:space="preserve">
@@ -215,8 +215,8 @@
 	<data name="HintSaveSlotOffset" xml:space="preserve">
 		<value>Das relative Offset innerhalb des Speicherslot-Bereichs</value>
 	</data>
-	<data name="ComparedSaveSlots" xml:space="preserve">
-		<value>Nur verglichene Speicherslots</value>
+	<data name="ComparedSaveSlotsIfDifferent" xml:space="preserve">
+		<value>Verglichene Speicherslots falls unterschiedlich</value>
 	</data>
 	<data name="HintCommunity" xml:space="preserve">
 		<value>Community (Discord, Forum, etc.)</value>
@@ -238,5 +238,8 @@
 	</data>
 	<data name="HintDiscord" xml:space="preserve">
 		<value>Direkte Discord-Einladung</value>
+	</data>
+	<data name="AllSaveSlots" xml:space="preserve">
+		<value>Alle Speicherslots</value>
 	</data>
 </root>

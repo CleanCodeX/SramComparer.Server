@@ -169,11 +169,20 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Compared save slots only ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compared save slots ähnelt.
         /// </summary>
         public static string ComparedSaveSlots {
             get {
                 return ResourceManager.GetString("ComparedSaveSlots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compared save slots if different ähnelt.
+        /// </summary>
+        public static string ComparedSaveSlotsIfDifferent {
+            get {
+                return ResourceManager.GetString("ComparedSaveSlotsIfDifferent", resourceCulture);
             }
         }
         
@@ -210,60 +219,6 @@ namespace WebApp.SoE.Properties {
         public static string File {
             get {
                 return ResourceManager.GetString("File", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #1 only ähnelt.
-        /// </summary>
-        public static string FirstSaveSlot {
-            get {
-                return ResourceManager.GetString("FirstSaveSlot", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #4 only ähnelt.
-        /// </summary>
-        public static string FourthSaveSlot {
-            get {
-                return ResourceManager.GetString("FourthSaveSlot", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #1 ähnelt.
-        /// </summary>
-        public static string Game1 {
-            get {
-                return ResourceManager.GetString("Game1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #2 ähnelt.
-        /// </summary>
-        public static string Game2 {
-            get {
-                return ResourceManager.GetString("Game2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #3 ähnelt.
-        /// </summary>
-        public static string Game3 {
-            get {
-                return ResourceManager.GetString("Game3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #4 ähnelt.
-        /// </summary>
-        public static string Game4 {
-            get {
-                return ResourceManager.GetString("Game4", resourceCulture);
             }
         }
         
@@ -691,11 +646,74 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #1 ähnelt.
+        /// </summary>
+        public static string SaveSlot1 {
+            get {
+                return ResourceManager.GetString("SaveSlot1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #1 only ähnelt.
+        /// </summary>
+        public static string SaveSlot1Only {
+            get {
+                return ResourceManager.GetString("SaveSlot1Only", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #2 ähnelt.
+        /// </summary>
+        public static string SaveSlot2 {
+            get {
+                return ResourceManager.GetString("SaveSlot2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die #2 only ähnelt.
         /// </summary>
-        public static string SecondSaveSlot {
+        public static string SaveSlot2Only {
             get {
-                return ResourceManager.GetString("SecondSaveSlot", resourceCulture);
+                return ResourceManager.GetString("SaveSlot2Only", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #3 ähnelt.
+        /// </summary>
+        public static string SaveSlot3 {
+            get {
+                return ResourceManager.GetString("SaveSlot3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #3 only ähnelt.
+        /// </summary>
+        public static string SaveSlot3Only {
+            get {
+                return ResourceManager.GetString("SaveSlot3Only", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #4 ähnelt.
+        /// </summary>
+        public static string SaveSlot4 {
+            get {
+                return ResourceManager.GetString("SaveSlot4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #4 only ähnelt.
+        /// </summary>
+        public static string SaveSlot4Only {
+            get {
+                return ResourceManager.GetString("SaveSlot4Only", resourceCulture);
             }
         }
         
@@ -705,15 +723,6 @@ namespace WebApp.SoE.Properties {
         public static string ShowAdditionalSaveSlotInformation {
             get {
                 return ResourceManager.GetString("ShowAdditionalSaveSlotInformation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #3 only ähnelt.
-        /// </summary>
-        public static string ThirdSaveSlot {
-            get {
-                return ResourceManager.GetString("ThirdSaveSlot", resourceCulture);
             }
         }
         

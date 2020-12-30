@@ -45,10 +45,10 @@ namespace WebApp.SoE.ViewModels
 		{
 			[Display(Name = nameof(Res.DontShow), ResourceType = typeof(Res))]
 			None,
+			[Display(Name = nameof(Res.ComparedSaveSlotsIfDifferent), ResourceType = typeof(Res))]
+			ComparedIfDifferent,
 			[Display(Name = nameof(Res.ComparedSaveSlots), ResourceType = typeof(Res))]
-			Compared,
-			[Display(Name = nameof(Res.AllSaveSlots), ResourceType = typeof(Res))]
-			All
+			Compared
 		}
 
 		public SaveSlotOption Checksum { get; set; }
@@ -91,35 +91,35 @@ namespace WebApp.SoE.ViewModels
 
 			ComparisonSramFileSaveSlot = (SaveSlotId)Options.ComparisonSramFileSaveSlot;
 
-			if (Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.ChecksumWhenDifferent))
-				Checksum = Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.ChecksumAllSlots)
-					? SaveSlotOption.All
-					: SaveSlotOption.Compared;
+			if (Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.ChecksumIfDifferent))
+				Checksum = Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.Checksum)
+					? SaveSlotOption.Compared
+					: SaveSlotOption.ComparedIfDifferent;
 
-			if (Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.Unknown12BWhenDifferent))
-				Unknown12B = Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.Unknown12BAllSlots)
-					? SaveSlotOption.All
-					: SaveSlotOption.Compared;
+			if (Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.Unknown12BIfDifferent))
+				Unknown12B = Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.Unknown12B)
+					? SaveSlotOption.Compared
+					: SaveSlotOption.ComparedIfDifferent;
 		}
 
 		protected internal override Task SaveOptionsAsync()
 		{
 			Options.ComparisonSramFileSaveSlot = ComparisonSramFileSaveSlot.ToInt();
 
-			Options.ComparisonFlags = Options.ComparisonFlags & ~ComparisonFlagsSoE.ChecksumAllSlots;
+			Options.ComparisonFlags = Options.ComparisonFlags & ~ComparisonFlagsSoE.Checksum;
 			if (Checksum != default)
 				Options.ComparisonFlags = Checksum switch
 				{
-					SaveSlotOption.All => Options.ComparisonFlags |= ComparisonFlagsSoE.ChecksumAllSlots,
-					SaveSlotOption.Compared => Options.ComparisonFlags |= ComparisonFlagsSoE.ChecksumWhenDifferent,
+					SaveSlotOption.Compared => Options.ComparisonFlags |= ComparisonFlagsSoE.Checksum,
+					SaveSlotOption.ComparedIfDifferent => Options.ComparisonFlags |= ComparisonFlagsSoE.ChecksumIfDifferent,
 				};
 
-			Options.ComparisonFlags = Options.ComparisonFlags & ~ComparisonFlagsSoE.Unknown12BAllSlots;
+			Options.ComparisonFlags = Options.ComparisonFlags & ~ComparisonFlagsSoE.Unknown12B;
 			if (Unknown12B != default)
 				Options.ComparisonFlags = Unknown12B switch
 				{
-					SaveSlotOption.All => Options.ComparisonFlags |= ComparisonFlagsSoE.Unknown12BAllSlots,
-					SaveSlotOption.Compared => Options.ComparisonFlags |= ComparisonFlagsSoE.Unknown12BWhenDifferent,
+					SaveSlotOption.Compared => Options.ComparisonFlags |= ComparisonFlagsSoE.Unknown12B,
+					SaveSlotOption.ComparedIfDifferent => Options.ComparisonFlags |= ComparisonFlagsSoE.Unknown12BIfDifferent,
 				};
 
 			return base.SaveOptionsAsync();

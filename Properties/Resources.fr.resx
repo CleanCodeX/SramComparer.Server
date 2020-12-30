@@ -17,7 +17,7 @@
 	<data name="ComparedSaveSlots" xml:space="preserve">
 		<value>Uniquement les jeux concernés</value>
 	</data>
-	<data name="AllSaveSlots" xml:space="preserve">
+	<data name="ComparedSaveSlotsIfDifferent" xml:space="preserve">
 		<value>Toutes les parties</value>
 	</data>
 	<data name="AppCompiledAt" xml:space="preserve">
@@ -57,28 +57,28 @@
 	<data name="File" xml:space="preserve">
 		<value>Fichier</value>
 	</data>
-	<data name="Game1" xml:space="preserve">
+	<data name="SaveSlot1" xml:space="preserve">
 		<value>n°1</value>
 	</data>
-	<data name="Game2" xml:space="preserve">
+	<data name="SaveSlot2" xml:space="preserve">
 		<value>n°2</value>
 	</data>
-	<data name="Game3" xml:space="preserve">
+	<data name="SaveSlot3" xml:space="preserve">
 		<value>n°3</value>
 	</data>
-	<data name="Game4" xml:space="preserve">
+	<data name="SaveSlot4" xml:space="preserve">
 		<value>n°4</value>
 	</data>
-	<data name="FirstSaveSlot" xml:space="preserve">
+	<data name="SaveSlot1Only" xml:space="preserve">
 		<value>Seulement n°1</value>
 	</data>
-	<data name="FourthSaveSlot" xml:space="preserve">
+	<data name="SaveSlot4Only" xml:space="preserve">
 		<value>Seulement n°4</value>
 	</data>
-	<data name="SecondSaveSlot" xml:space="preserve">
+	<data name="SaveSlot2Only" xml:space="preserve">
 		<value>Seulement n°2</value>
 	</data>
-	<data name="ThirdSaveSlot" xml:space="preserve">
+	<data name="SaveSlot3Only" xml:space="preserve">
 		<value>Seulement n°3</value>
 	</data>
 	<data name="HintButtonDownloadChangedFile" xml:space="preserve">
@@ -239,5 +239,8 @@
 	</data>
 	<data name="HintDiscord" xml:space="preserve">
 		<value>Invitation Discord</value>
+	</data>
+	<data name="AllSaveSlots" xml:space="preserve">
+		<value>Toutes les parties</value>
 	</data>
 </root>
