@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.WebUtilities;
 using WebApp.SoE.Extensions;
@@ -78,7 +79,7 @@ namespace WebApp.SoE.Pages.Bases
 		{
 			if (Settings.Files is not null && Settings.Files.TryGetValue(page, out var file))
 			{
-				Content = MarkdownHelper.Parse(LoadFromFile(file) + Environment.NewLine + "(F)");
+				Content = MarkdownHelper.Parse(LoadFromFile(file) + Environment.NewLine + "F");
 
 				return true;
 			}
@@ -90,12 +91,12 @@ namespace WebApp.SoE.Pages.Bases
 		{
 			if (Settings.Urls is null || !Settings.Urls.TryGetValue(page, out var url)) return false;
 			
-			var langUrl = MakeLanguageFilePath(url, language);
+			var langUrl = MakeLanguageFileUrl(url, language);
 
 			var content = await LoadFromUrlAsync(langUrl, true);
-			if (content is not null)
+			if (content is not null && content != "Not Found")
 			{
-				Content = MarkdownHelper.Parse(content + Environment.NewLine + "(U)");
+				Content = MarkdownHelper.Parse(content);
 				return true;
 			}
 
@@ -104,7 +105,7 @@ namespace WebApp.SoE.Pages.Bases
 
 			if (!AutoTranslate)
 			{
-				Content = MarkdownHelper.Parse(content + Environment.NewLine + "(U)");
+				Content = MarkdownHelper.Parse(content);
 				return true;
 			}
 
@@ -122,7 +123,7 @@ namespace WebApp.SoE.Pages.Bases
 			var langFilePath = MakeLanguageFilePath(filePath, language);
 			if (File.Exists(langFilePath))
 			{
-				Content = MarkdownHelper.Parse(LoadFromFile(langFilePath) + Environment.NewLine + "(F)");
+				Content = MarkdownHelper.Parse(LoadFromFile(langFilePath) + Environment.NewLine + "F");
 				return true;
 			}
 
@@ -131,7 +132,7 @@ namespace WebApp.SoE.Pages.Bases
 
 			if (!AutoTranslate)
 			{
-				Content = MarkdownHelper.Parse(content + Environment.NewLine + "(F)");
+				Content = MarkdownHelper.Parse(content + Environment.NewLine + "F");
 				return true;
 			}
 
@@ -150,6 +151,16 @@ namespace WebApp.SoE.Pages.Bases
 			var fileName = Path.GetFileNameWithoutExtension(filePath);
 			var extension = Path.GetExtension(filePath);
 			return Path.Join(path, $"{fileName}-{language}{extension}");
+		}
+
+		private static string MakeLanguageFileUrl(string url, string language)
+		{
+			var uri = new Uri(url);
+			var fileName = Path.GetFileName(uri.LocalPath);
+			var fileNameWithoutExtension = Path.GetFileNameWithoutExtension(uri.LocalPath);
+			var extension = Path.GetExtension(uri.LocalPath);
+			var langFilename = $"{fileNameWithoutExtension}-{language}{extension}";
+			return url.Replace(fileName, langFilename);
 		}
 
 		private static async Task<string?> TranslateContent(string content, string language)
