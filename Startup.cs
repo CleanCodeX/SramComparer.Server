@@ -38,8 +38,11 @@ namespace WebApp.SoE
 			});
 
 			var supportedCulturesSection = Configuration.GetSection(nameof(SupportedCultures));
-			services.Configure<SupportedCultures>(supportedCulturesSection);
-			var supportedCultureIds = supportedCulturesSection.GetChildren().Select(e => e.Value);
+			services.AddOptions<SupportedCultures>().Bind(supportedCulturesSection);
+			var supportedCultureIds = supportedCulturesSection.GetSection("Cultures").GetChildren().Select(e => e.Value).ToList();
+
+			services.AddTransient(cfg => cfg.GetService<IOptionsMonitor<SupportedCultures>>()!.CurrentValue);
+
 			services.Configure<RequestLocalizationOptions>(
 				options =>
 				{

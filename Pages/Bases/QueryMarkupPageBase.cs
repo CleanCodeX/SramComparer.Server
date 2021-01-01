@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.WebUtilities;
 using WebApp.SoE.Extensions;
@@ -20,6 +19,7 @@ namespace WebApp.SoE.Pages.Bases
 		[Inject] private Settings Settings { get; set; }
 		[Inject] private NavigationManager NavigationManager { get; set; }
 		[Inject] private IHttpContextAccessor HttpContextAccessor { get; set; }
+		[Inject] private SupportedCultures SupportedCultures { get; set; }
 #nullable restore
 
 		protected string? Page { get; set; }
@@ -37,7 +37,7 @@ namespace WebApp.SoE.Pages.Bases
 			if (page is null) return;
 
 			var language = GetRequestLanguage() ?? "en";
-			var translate = language != "en";
+			var translate = SupportedCultures.Cultures.Contains(language) && language != "en";
 
 			if (translate && await TryLoadFileAsync(page, language)) return;
 			if (TryGetFileName(page))
@@ -54,6 +54,7 @@ namespace WebApp.SoE.Pages.Bases
 			{
 				var cultureFeature = httpContext.Features.Get<IRequestCultureFeature>();
 				var requestCulture = cultureFeature.RequestCulture.UICulture!;
+
 				return requestCulture.TwoLetterISOLanguageName!;
 			}
 
