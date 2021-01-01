@@ -28,6 +28,8 @@ namespace WebApp.SoE
 		{
 			services.AddSingleton<IAppInfoService, AppInfoService>();
 			services.AddScoped<CompareViewModel>(sp => new() {LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>()});
+			services.AddHttpContextAccessor();
+
 			services.AddScoped<SetOffsetValueViewModel>(sp => new()
 			{
 				JsRuntime = sp.GetRequiredService<IJSRuntime>(),
@@ -42,8 +44,12 @@ namespace WebApp.SoE
 					{
 						uiCulture,
 						CultureInfo.GetCultureInfo("de"),
-						CultureInfo.GetCultureInfo("fr")
+						CultureInfo.GetCultureInfo("fr"),
+						CultureInfo.GetCultureInfo("it"),
+						CultureInfo.GetCultureInfo("jp"),
 					};
+
+					CultureInfo.CurrentUICulture = uiCulture;
 
 					options.DefaultRequestCulture = new RequestCulture(uiCulture);
 					// Formatting numbers, dates, etc.
@@ -75,6 +81,8 @@ namespace WebApp.SoE
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
+			app.UseRequestLocalization();
+
 			if (env.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();
@@ -90,7 +98,6 @@ namespace WebApp.SoE
 			app.UseLiveReload();
 #endif
 
-			app.UseRequestLocalization();
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
 			app.UseRouting();

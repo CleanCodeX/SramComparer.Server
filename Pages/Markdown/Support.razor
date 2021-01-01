@@ -6,5 +6,5 @@
 @Content
 
 @code {
-	protected override void OnParametersSet() => HandleQueryParam(nameof(PageUris.Support));
+	protected override Task OnParametersSetAsync() => HandleQueryParamAsync(nameof(PageUris.Support));
 }

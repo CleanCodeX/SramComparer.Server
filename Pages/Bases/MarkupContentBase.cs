@@ -28,7 +28,7 @@ namespace WebApp.SoE.Pages.Bases
 				Content = MarkdownHelper.Parse(await LoadFromUrlAsync(Url));
 		}
 
-		protected async Task<string> LoadFromUrlAsync(string url)
+		protected async Task<string?> LoadFromUrlAsync(string url, bool allowFailure = false)
 		{
 			try
 			{
@@ -41,15 +41,15 @@ namespace WebApp.SoE.Pages.Bases
 			}
 			catch (Exception ex)
 			{
-				return ex.Message;
+				return allowFailure ? null : ex.Message;
 			}
 		}
 
-		protected static string LoadFromFile(string filepath)
+		protected static string LoadFromFile(string filePath)
 		{
 			try
 			{
-				return File.ReadAllText(filepath);
+				return File.ReadAllText(filePath);
 			}
 			catch (Exception ex)
 			{

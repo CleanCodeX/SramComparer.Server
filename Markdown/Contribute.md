@@ -15,6 +15,7 @@ Reading and manipulating offset values can be done using the following:
 
 * [Web Offset Editor](offset)
 * [Windows Console App](downloads)
+* Hex-editor
 
 Post your assumptions and finds in the [Community](community)!
 

@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Reflection;
-using Humanizer;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Rendering;
@@ -77,7 +76,7 @@ namespace WebApp.SoE.Shared.Controls
             if (displayNameAttribute != null)
                 return displayNameAttribute.DisplayName;
 
-            return value.ToString()!.Humanize();
+            return value.ToString()!;
         }
 
         // Get the actual enum type. It unwrap Nullable<T> if needed

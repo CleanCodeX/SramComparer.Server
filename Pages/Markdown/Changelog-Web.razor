@@ -6,5 +6,5 @@
 @Content
 
 @code {
-	protected override void OnParametersSet() => HandleQueryParam(PageUris.ChangelogWeb.Substring(1));
+	protected override Task OnParametersSetAsync() => HandleQueryParamAsync(PageUris.ChangelogWeb.Substring(1));
 }
