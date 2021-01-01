@@ -79,7 +79,7 @@ namespace WebApp.SoE.Pages.Bases
 		{
 			if (Settings.Files is not null && Settings.Files.TryGetValue(page, out var file))
 			{
-				Content = MarkdownHelper.Parse(LoadFromFile(file) + Environment.NewLine + "F");
+				Content = MarkdownHelper.Parse(LoadFromFile(file) + Environment.NewLine + "(local)");
 
 				return true;
 			}
@@ -123,7 +123,7 @@ namespace WebApp.SoE.Pages.Bases
 			var langFilePath = MakeLanguageFilePath(filePath, language);
 			if (File.Exists(langFilePath))
 			{
-				Content = MarkdownHelper.Parse(LoadFromFile(langFilePath) + Environment.NewLine + "F");
+				Content = MarkdownHelper.Parse(LoadFromFile(langFilePath) + Environment.NewLine + "(local)");
 				return true;
 			}
 
@@ -132,7 +132,7 @@ namespace WebApp.SoE.Pages.Bases
 
 			if (!AutoTranslate)
 			{
-				Content = MarkdownHelper.Parse(content + Environment.NewLine + "F");
+				Content = MarkdownHelper.Parse(content + Environment.NewLine + "(local)");
 				return true;
 			}
 
