@@ -37,7 +37,7 @@ namespace WebApp.SoE.Pages.Bases
 			if (page is null) return;
 
 			var language = GetRequestLanguage() ?? "en";
-			var translate = SupportedCultures.Cultures.Contains(language) && language != "en";
+			var translate = language != "en" && SupportedCultures.Cultures.Contains(language) ;
 
 			if (translate && await TryLoadFileAsync(page, language)) return;
 			if (TryGetFileName(page))

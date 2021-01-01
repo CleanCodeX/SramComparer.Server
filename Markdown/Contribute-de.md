@@ -1,23 +1,23 @@
-## Kann ich helfen??
+ï»¿## Kann ich helfen??
 
-Und ob! Vergleiche SRAM-Dateien, es ist überhaupt nicht schwierig.
+Und ob! Vergleiche SRAM-Dateien, es ist Ã¼berhaupt nicht schwierig.
 
-Das wäre wirklich cool. Deine Hilfe würde viel Zeit sparen, indem nicht zweimal etwas getan wird, was bereits jemand anderes getan hat.
+Das wÃ¤re wirklich cool. Deine Hilfe wÃ¼rde viel Zeit sparen, indem nicht zweimal etwas getan wird, was bereits jemand anderes getan hat.
 
-Tritt der SoE-Explorations-Community bei, um Bedeutungen für verschiedene SRAM-Offsets zu finden.
-Das geht mit folgenden Möglichkeiten:
+Tritt der SoE-Explorations-Community bei, um Bedeutungen fÃ¼r verschiedene SRAM-Offsets zu finden.
+Das geht mit folgenden MÃ¶glichkeiten:
 
 * [Webvergleich](compare)
 * [Windows Console App](Downloads)
 
-Sobald du eine Bedeutung für einen Offset-Wert gefunden hast, versuche diesen Wert in anderen SRAM-Dateien (* .srm) zu setzen oder wegzunehmen um deinen Fund zu verifizieren.
-Das Lesen und Bearbeiten von Versatzwerten kann (u.a.) mit den folgenden Möglichkeiten erfolgen:
+Sobald du eine Bedeutung fÃ¼r einen Offset-Wert gefunden hast, versuche diesen Wert in anderen SRAM-Dateien (* .srm) zu setzen oder wegzunehmen um deinen Fund zu verifizieren.
+Das Lesen und Bearbeiten von Versatzwerten kann (u.a.) mit den folgenden MÃ¶glichkeiten erfolgen:
 
 * [Web Offset Editor](Offset)
 * [Windows Console App](Downloads)
 * Hex-Editor
 
-Veröffentliche deine Vermutungen und Funde in der [Community](Community)!
+VerÃ¶ffentliche deine Vermutungen und Funde in der [Community](Community)!
 
 Eine Anleitung zur Verwendung der Konsolen-App findest du [hier](Manual). [Web-Vergleich](Compare) ist einfacher zu verwenden und funktioniert mit jedem modernen Browser.
 
