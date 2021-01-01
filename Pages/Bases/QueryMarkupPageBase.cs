@@ -66,7 +66,7 @@ namespace WebApp.SoE.Pages.Bases
 				if (!url.StartsWith("http"))
 					url = $"{NavigationManager.BaseUri}{url}";
 
-				Content = MarkdownHelper.Parse(await LoadFromUrlAsync(url) + Environment.NewLine + "#0");
+				Content = MarkdownHelper.Parse(await LoadFromUrlAsync(url));
 
 				return true;
 			}
@@ -78,7 +78,7 @@ namespace WebApp.SoE.Pages.Bases
 		{
 			if (Settings.Files is not null && Settings.Files.TryGetValue(page, out var file))
 			{
-				Content = MarkdownHelper.Parse(LoadFromFile(file) + Environment.NewLine + "#A");
+				Content = MarkdownHelper.Parse(LoadFromFile(file) + Environment.NewLine + "(F)");
 
 				return true;
 			}
@@ -95,7 +95,7 @@ namespace WebApp.SoE.Pages.Bases
 			var content = await LoadFromUrlAsync(langUrl, true);
 			if (content is not null)
 			{
-				Content = MarkdownHelper.Parse(content + Environment.NewLine + "#1");
+				Content = MarkdownHelper.Parse(content + Environment.NewLine + "(U)");
 				return true;
 			}
 
@@ -104,15 +104,13 @@ namespace WebApp.SoE.Pages.Bases
 
 			if (!AutoTranslate)
 			{
-				Content = MarkdownHelper.Parse(content + Environment.NewLine + "#2");
+				Content = MarkdownHelper.Parse(content + Environment.NewLine + "(U)");
 				return true;
 			}
 
 			var translatedContent = await TranslateContent(content!, language);
 
-			Content = MarkdownHelper.Parse(translatedContent.IsNullOrEmpty()
-				? content + Environment.NewLine + "#3"
-				: translatedContent);
+			Content = MarkdownHelper.Parse(translatedContent ?? content);
 
 			return true;
 		}
@@ -124,7 +122,7 @@ namespace WebApp.SoE.Pages.Bases
 			var langFilePath = MakeLanguageFilePath(filePath, language);
 			if (File.Exists(langFilePath))
 			{
-				Content = MarkdownHelper.Parse(LoadFromFile(langFilePath) + Environment.NewLine + "#B");
+				Content = MarkdownHelper.Parse(LoadFromFile(langFilePath) + Environment.NewLine + "(F)");
 				return true;
 			}
 
@@ -133,15 +131,13 @@ namespace WebApp.SoE.Pages.Bases
 
 			if (!AutoTranslate)
 			{
-				Content = MarkdownHelper.Parse(content + Environment.NewLine + "#C");
+				Content = MarkdownHelper.Parse(content + Environment.NewLine + "(F)");
 				return true;
 			}
 
 			var translatedContent = await TranslateContent(content!, language);
 
-			Content = MarkdownHelper.Parse(translatedContent.IsNullOrEmpty()
-				? content + Environment.NewLine + "#D"
-				: translatedContent);
+			Content = MarkdownHelper.Parse(translatedContent ?? content);
 
 			return true;
 		}
