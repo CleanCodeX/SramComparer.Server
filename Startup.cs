@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using Microsoft.AspNetCore.Hosting;
@@ -36,22 +37,25 @@ namespace WebApp.SoE
 				LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>()
 			});
 
+			var supportedCulturesSection = Configuration.GetSection(nameof(SupportedCultures));
+			services.Configure<SupportedCultures>(supportedCulturesSection);
+			var supportedCultureIds = supportedCulturesSection.GetChildren().Select(e => e.Value);
 			services.Configure<RequestLocalizationOptions>(
 				options =>
 				{
 					var uiCulture = CultureInfo.GetCultureInfo("en");
-					var supportedCultures = new List<CultureInfo>
-					{
-						uiCulture,
-						CultureInfo.GetCultureInfo("de"),
-						CultureInfo.GetCultureInfo("fr"),
-						CultureInfo.GetCultureInfo("it"),
-						CultureInfo.GetCultureInfo("jp"),
-					};
+					var supportedCultures = new List<CultureInfo> {uiCulture};
 
+					foreach (var supportedCultureId in supportedCultureIds)
+						supportedCultures.Add(CultureInfo.GetCultureInfo(supportedCultureId));
+
+					CultureInfo.CurrentCulture = uiCulture;
 					CultureInfo.CurrentUICulture = uiCulture;
 
-					options.DefaultRequestCulture = new RequestCulture(uiCulture);
+					options.FallBackToParentUICultures = true;
+					options.FallBackToParentCultures = true;
+
+					options.SetDefaultCulture("en");
 					// Formatting numbers, dates, etc.
 					options.SupportedCultures = supportedCultures;
 					// UI strings that we have localized.
