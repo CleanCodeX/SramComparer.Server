@@ -43,14 +43,13 @@ namespace WebApp.SoE
 			services.Configure<RequestLocalizationOptions>(
 				options =>
 				{
-					var uiCulture = CultureInfo.GetCultureInfo("en");
-					var supportedCultures = new List<CultureInfo> {uiCulture};
-
+					var defaultCulture = CultureInfo.GetCultureInfo("en");
+					CultureInfo.CurrentCulture = defaultCulture;
+					CultureInfo.CurrentUICulture = defaultCulture;
+					
+					var supportedCultures = new List<CultureInfo> { defaultCulture };
 					foreach (var supportedCultureId in supportedCultureIds)
 						supportedCultures.Add(CultureInfo.GetCultureInfo(supportedCultureId));
-
-					CultureInfo.CurrentCulture = uiCulture;
-					CultureInfo.CurrentUICulture = uiCulture;
 
 					options.FallBackToParentUICultures = true;
 					options.FallBackToParentCultures = true;
