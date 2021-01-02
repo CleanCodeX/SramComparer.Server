@@ -1,6 +1,6 @@
 ﻿## SRAM Format Documentation
 
-* The documentation is hosted at [GitHub](https://github.com/CleanCodeX/SramFormat.SoE"){target="_"}
+* The documentation is hosted at <a href="https://github.com/CleanCodeX/SramFormat.SoE" target="_">GitHub</a>
 
 #### Contents
 

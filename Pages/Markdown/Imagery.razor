@@ -6,11 +6,9 @@
 @Content
 
 @code {
-
 	protected override Task OnParametersSetAsync()
 	{
 		AutoTranslate = false;
 		return HandleQueryParamAsync(nameof(PageUris.Imagery));
 	}
-
 }
