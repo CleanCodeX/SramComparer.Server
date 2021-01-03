@@ -9,5 +9,5 @@ Info: links open in a new tab
 
 * There's also a [Discord Invitation](https://discord.gg/s4wTHQgxae){target="_"} 
 
-* Or send an old-school [e-Mail](mailto:evermore@xeth.de?subject=Format%20Exploration%20Project)
+* Or send an old-school [e-Mail](mailto:evermore@SECRETOFxeth.de?subject=Format%20Exploration%20Project) by removing the SECRETOF part
 
