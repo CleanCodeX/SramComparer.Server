@@ -6,5 +6,9 @@
 @Content
 
 @code {
-	protected override Task OnParametersSetAsync() => HandleQueryParamAsync(nameof(PageUris.Awesome));
+	protected override Task OnParametersSetAsync()
+	{
+		AutoTranslate = false;
+		return HandleQueryParamAsync(nameof(PageUris.Awesome));
+	}
 }
