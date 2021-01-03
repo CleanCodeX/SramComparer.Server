@@ -8,17 +8,17 @@ The more people contribute, the earlier and better results.
 But after all this is a free time project and developing tools or finding offset meanings needs hundreds, probably thousands of hours.
 
 ## Active Help
-If the goal of this project isn't clear, make sure to have read the [goal](goal) first.
+If the goal of this project isn't clear, make sure to have read the <a href=goal>goal</a> first.
 
 Assuming that you already did that, you might ask yourself what *you* can do.
 
 ### Comparing SRAMs
 
-If so, you might want to join the SoE 'army', see [here](Contribute) how it works.
+If so, you might want to join the SoE 'army', see <a href=Contribute>here</a> how it works.
 
 ### Provide a localization
 
-If you're speaking a language which this website currently doesn't offer but you think it should do, then consider offering a localization into your language as a huge contribution to this project. You might open access to people who cannot understand the supported languages well. If you're interested to add yourself to the contributors list click [here](mailto:evermore@xeth.de?subject=Format%20Exploration%20Project%20Localization)
+If you're speaking a language which this website currently doesn't offer but you think it should do, then consider offering a localization into your language as a huge contribution to this project. You might open access to people who cannot understand the supported languages well. If you're interested to add yourself to the contributors list click <a hef="mailto:evermore@SECRETOFxeth.de?Subject=Format%20Exploration%20Projekt">here</a> by removing the SECRETOF part.
 
 ## Passive Help
 If that's not yours and just would like to see more capable SRAM editors in future, hey no big deal, that's ok.
@@ -31,4 +31,4 @@ Make it publicly known so crowd sourcing can start to kick in.
 
 **Thank you!** 😊
 
-Also **many thanks** to the people who [contributed](contributors) to this project.
+Also **many thanks** to the people who <a href=contributors>contributed</a> to this project.

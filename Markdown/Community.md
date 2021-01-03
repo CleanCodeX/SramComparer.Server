@@ -5,9 +5,9 @@ Your community help is appreciated!
 
 Info: links open in a new tab
 
-* Check out the [Forums](http://forum.xeth.de){target="_"}
+* Check out the <a href="http://forum.xeth.de" target="_">Forum</a>
 
-* There's also a [Discord Invitation](https://discord.gg/s4wTHQgxae){target="_"} 
+* There's also a <a href="https://discord.gg/s4wTHQgxae" target="_">Discord</a>
 
-* Or send an old-school [e-Mail](mailto:evermore@SECRETOFxeth.de?subject=Format%20Exploration%20Project) by removing the SECRETOF part
+* Or send an old-school <a hef="mailto:evermore@SECRETOFxeth.de?Subject=Format%20Exploration%20Projekt">eMail</a> by removing the SECRETOF part
 
