@@ -4,6 +4,8 @@
 @{
     var sp = "&nbsp;".ToMarkup();
     var del = "&nbsp;&nbsp;".ToMarkup();
+    var quickLinkOpener = "<|".ToMarkup();
+    var quickLinkCloser = "|>".ToMarkup();
 }
 
 <div>
@@ -11,7 +13,7 @@
     <ol class="nav flex-column">
         <li class="nav-item quicklinks" title="@Res.MenuQuickLinks">
             <NavLink class="nav-link" href="@PageUris.SramDocu">
-                &gt;@sp
+                @quickLinkOpener @sp
                 <a href="@PageUris.SramDocu" title="@Res.HintSramDocu">
                     <span class="iconify" data-icon="oi-document"/>
                 </a>
@@ -31,10 +33,10 @@
                 <a href="@PageUris.GitHub" title="@Res.HintGitHub">
                     <img src="media/GitHub.png" class="github"/>
                 </a>
-                @sp&lt;
+                @sp @quickLinkCloser
             </NavLink>
             <NavLink class="nav-link" href="@PageUris.Compare">
-                &gt;@sp
+                @quickLinkOpener @sp
                 <a href="@PageUris.Compare" title="@Res.HintButtonCompare">
                     <span class="iconify" data-icon="oi-magnifying-glass"/>
                 </a>
@@ -54,7 +56,7 @@
                 <a href="@PageUris.Manual" title="@Res.HintManual">
                     <span class="iconify" data-icon="oi-document"/>
                 </a>
-                @sp&lt;
+                @sp @quickLinkCloser
             </NavLink>
         </li>
     </ol>

@@ -235,10 +235,10 @@
     <value>Format Exploration Project</value>
   </data>
   <data name="HintNonSaveSlotByteByByteComparison" xml:space="preserve">
-    <value>Non-save slot byte-by-byte comparison (beyond all save slots)</value>
+    <value>Compare non-save slot area byte by byte (area beyond all save slots)</value>
   </data>
   <data name="HintSaveSlotByteByByteComparison" xml:space="preserve">
-    <value>Save slot byte-by-byte comparison (including the "knowns" areas)</value>
+    <value>Compare whole save slot area byte by byte (including the "knowns" areas)</value>
   </data>
   <data name="ShowAdditionalSaveSlotInformation" xml:space="preserve">
     <value>Show additional save slot information</value>

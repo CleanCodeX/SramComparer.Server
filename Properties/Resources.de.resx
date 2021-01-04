@@ -39,7 +39,7 @@
 		<value>Pflichtfeld</value>
 	</data>
 	<data name="HintNonSaveSlotByteByByteComparison" xml:space="preserve">
-		<value>Gesamten nicht-Speicherslot Byte-für-Byte vergleichen (jenseits aller Speicherslots)</value>
+		<value>Gesamten nicht-Speicherslot Byte für Byte vergleichen (Bereich jenseits aller Speicherslots)</value>
 	</data>
 	<data name="ShowAdditionalSaveSlotInformation" xml:space="preserve">
 		<value>Zusätzliche Speicherslot-Informationen anzeigen</value>
@@ -54,7 +54,7 @@
 		<value>Vergleichen</value>
 	</data>
 	<data name="HintSaveSlotByteByByteComparison" xml:space="preserve">
-		<value>Speicherslot Byte-für-Byte vergleichen (inkl. der "bekannten" Bereiche)</value>
+		<value>Gesamten Speicherslot Byte für Byte vergleichen (inkl. der "bekannten" Bereiche)</value>
 	</data>
 	<data name="OffsetValue" xml:space="preserve">
 		<value>Offset-Wert</value><comment>The term Offset should only be translated if not understandable</comment>
