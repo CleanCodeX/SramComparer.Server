@@ -7,7 +7,7 @@ Daher kann dieser Fortschritt auch gelesen und manipuliert werden.
 
 Das einzige Problem dabei ist, dass ca. 54% des SRAM-Speicherslot-Formates von SoE gelten immer noch als unbekannt, was bedeutet, dass wir nicht wirklich wissen, was diese Teile vom SRAM tatsächlich repräsentieren.
 
-## Was sind die Ziele?
+## Was ist das Ziel?
 Sobald das SRAM-Format vollständig bekannt ist, bietet es die Möglichkeit einen leistungsstarken Spielstand-Editor zu entwickeln, der alles aktiviert oder deaktiviert, was von einem Spielstand aus gesteuert werden kann.
 
 "Das klingt cool!" denkst du vielleicht. Absolut, das tut es!
