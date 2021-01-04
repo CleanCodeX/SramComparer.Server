@@ -242,4 +242,19 @@
 	<data name="AllSaveSlots" xml:space="preserve">
 		<value>Alle Speicherslots</value>
 	</data>
+	<data name="AutoTranslate" xml:space="preserve">
+		<value>Auto-Übersetzung</value>
+	</data>
+	<data name="ButtonTitleDisableAutoTranslate" xml:space="preserve">
+		<value>Auto-Übersetzung deaktivieren</value>
+	</data>
+	<data name="ButtonTitleEnableAutoTranslate" xml:space="preserve">
+		<value>Auto-Übersetzung aktivieren</value>
+	</data>
+	<data name="ButtonOn" xml:space="preserve">
+		<value>An</value>
+	</data>
+	<data name="ButtonOff" xml:space="preserve">
+		<value>Aus</value>
+	</data>
 </root>

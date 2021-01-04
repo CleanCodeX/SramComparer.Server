@@ -1,10 +1,15 @@
 ﻿@using WebApp.SoE.Helpers
 
 @attribute [Route(PageUris.GitHub)]
-@inherits QueryMarkupPageBase
+@inherits AutoLangContentIdMarkupBase
+
+@if (ShowAutoTranslateOption)
+{
+	<TranslateButton @bind-Value="@AutoTranslate" />
+}
 
 @Content
 
 @code {
-	protected override Task OnParametersSetAsync() => HandleQueryParamAsync(nameof(PageUris.GitHub));
+	protected override void OnParametersSet() => ContentId = (nameof(PageUris.GitHub));
 }

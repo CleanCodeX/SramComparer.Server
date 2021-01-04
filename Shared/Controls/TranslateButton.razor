@@ -1,0 +1,26 @@
+﻿<div>
+	<label>@Res.AutoTranslate</label>&nbsp;
+
+	@{
+		var caption = Value ? Res.ButtonOn : Res.ButtonOff;
+		var buttonClass = Value ? "btn btn-success" : "btn btn-secondary";
+		var buttonTitle = Value ? Res.ButtonTitleDisableAutoTranslate : Res.ButtonTitleEnableAutoTranslate;
+	}
+
+	<button class="@buttonClass" @onclick="@ToggleAutoTranslateAsync" title="@buttonTitle">@caption</button>
+</div>
+
+@code {
+	[Parameter]
+	public bool Value { get; set; }
+
+	[Parameter]
+	public EventCallback<bool> ValueChanged { get; set; }
+
+	private void ToggleAutoTranslateAsync()
+	{
+		Value = !Value;
+		if (ValueChanged.HasDelegate)
+			InvokeAsync(() => ValueChanged.InvokeAsync(Value));
+	}
+}

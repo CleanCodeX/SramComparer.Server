@@ -348,4 +348,19 @@
   <data name="AllSaveSlots" xml:space="preserve">
     <value>All save slots</value>
   </data>
+  <data name="AutoTranslate" xml:space="preserve">
+    <value>Auto translate</value>
+  </data>
+  <data name="ButtonTitleEnableAutoTranslate" xml:space="preserve">
+    <value>Enable auto-translate</value>
+  </data>
+  <data name="ButtonTitleDisableAutoTranslate" xml:space="preserve">
+    <value>Disable auto-translate</value>
+  </data>
+  <data name="ButtonOn" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="ButtonOff" xml:space="preserve">
+    <value>Off</value>
+  </data>
 </root>

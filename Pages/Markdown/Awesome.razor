@@ -1,14 +1,10 @@
 ﻿@using WebApp.SoE.Helpers
 
 @attribute [Route(PageUris.Awesome)]
-@inherits QueryMarkupPageBase
+@inherits LangContentIdMarkupBase
 
 @Content
 
 @code {
-	protected override Task OnParametersSetAsync()
-	{
-		AutoTranslate = false;
-		return HandleQueryParamAsync(nameof(PageUris.Awesome));
-	}
+	protected override void OnParametersSet() => ContentId = nameof(PageUris.Awesome);
 }

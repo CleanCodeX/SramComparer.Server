@@ -5,7 +5,7 @@ using WebApp.SoE.Pages.Bases;
 namespace WebApp.SoE.Pages
 {
 	[Route(PageUris.Page)]
-	public partial class QueryMarkupPage : QueryMarkupPageBase
+	public partial class QueryMarkupPage : LangContentIdMarkupBase
 	{
 	}
 }

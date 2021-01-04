@@ -97,6 +97,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Auto translate ähnelt.
+        /// </summary>
+        public static string AutoTranslate {
+            get {
+                return ResourceManager.GetString("AutoTranslate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Copy to clipboard ähnelt.
         /// </summary>
         public static string ButtonCopy {
@@ -124,11 +133,47 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Off ähnelt.
+        /// </summary>
+        public static string ButtonOff {
+            get {
+                return ResourceManager.GetString("ButtonOff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die On ähnelt.
+        /// </summary>
+        public static string ButtonOn {
+            get {
+                return ResourceManager.GetString("ButtonOn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Set value ähnelt.
         /// </summary>
         public static string ButtonSetValue {
             get {
                 return ResourceManager.GetString("ButtonSetValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Disable auto-translate ähnelt.
+        /// </summary>
+        public static string ButtonTitleDisableAutoTranslate {
+            get {
+                return ResourceManager.GetString("ButtonTitleDisableAutoTranslate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Enable auto-translate ähnelt.
+        /// </summary>
+        public static string ButtonTitleEnableAutoTranslate {
+            get {
+                return ResourceManager.GetString("ButtonTitleEnableAutoTranslate", resourceCulture);
             }
         }
         

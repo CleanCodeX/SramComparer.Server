@@ -13,20 +13,21 @@ namespace WebApp.SoE.Pages.Bases
 		[Inject] private IHttpClientFactory ClientFactory { get; set; }
 #nullable restore
 
-		[Parameter] public string? Url { get; set; }
-		[Parameter] public string? Filepath { get; set; }
-		
 		protected MarkupString Content { get; set; }
 
-		protected override Task OnParametersSetAsync() => LoadContent();
-
-		protected async Task LoadContent()
+		protected virtual async Task<bool> SetContentFromFileAsync(string filePath)
 		{
-			if (Filepath is not null)
-				Content = MarkdownHelper.Parse(LoadFromFile(Filepath));
-			else if (Url is not null)
-				Content = MarkdownHelper.Parse(await LoadFromUrlAsync(Url));
+			Content = await ParseContentAsync(LoadFromFile(filePath));
+			return Content.Value != string.Empty;
 		}
+
+		protected virtual async Task<bool> SetContentFromUrlAsync(string url)
+		{
+			Content = await ParseContentAsync(await LoadFromUrlAsync(url));
+			return Content.Value != string.Empty;
+		}
+
+		protected virtual Task<MarkupString> ParseContentAsync(string? content) => Task.FromResult(MarkdownHelper.Parse(content));
 
 		protected async Task<string?> LoadFromUrlAsync(string url, bool allowFailure = false)
 		{
