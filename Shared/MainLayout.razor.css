@@ -19,7 +19,8 @@
 .content {
 	padding: 1rem;
 	font-size: 1.3rem;
-	width: 1000px;
+	min-width: 1000px;
+	max-width: 1200px;
 }
 
 .sidebar {
