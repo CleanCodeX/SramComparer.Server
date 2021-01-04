@@ -7,17 +7,17 @@ Therefore this progress can be read and mnipulated, too.
 
 The only problem is that aprox. 54% of SoE's SRAM save slot format is still considered to be unknown, meaning that we don't really know what these parts of SRAM actually represent.
 
-## What's still unknown?
-Most of unknown areas are reserved for ingredient sniffing spots, opened walls, doors, chests, gourds, pots and twice spoken people. Apart from these things there are also game-relevant progress flags such as which bosses have already been defeated or which other events already occurred in the past. All these things must be known in order to develop a powerful savegame editor.
-
-A non-exhaustive list can be found under: <a href=Unknowns>Unknowns</a>.
-
 ## What are the goals?
 Once the SRAM format is completely known, it offers the possibility to write a full capable SRAM editor, enabling/disabling everything what can be controlled by a savegame.
 
 Possible features:
 
 "That sounds cool!" you might think. Indeed it does!
+
+### What's still unknown?
+Most of unknown areas are reserved for ingredient sniffing spots, opened walls, doors, chests, gourds, pots and twice spoken people. Apart from these things there are also game-relevant progress flags such as which bosses have already been defeated or which other events already occurred in the past. All these things must be known in order to develop a powerful savegame editor.
+
+A non-exhaustive list can be found under: <a href=Unknowns>Unknowns</a>.
 
 ### Exclusive features of a future savegame editor
 * Reset boss fights which have already been defeated

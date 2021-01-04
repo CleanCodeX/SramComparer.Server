@@ -7,15 +7,15 @@ Daher kann dieser Fortschritt auch gelesen und manipuliert werden.
 
 Das einzige Problem dabei ist, dass ca. 54% des SRAM-Speicherslot-Formates von SoE gelten immer noch als unbekannt, was bedeutet, dass wir nicht wirklich wissen, was diese Teile vom SRAM tatsächlich repräsentieren.
 
-## Was ist noch unbekannt?
-Die meisten unbekannten Bereiche sind für Zutaten-Schnüffelstellen, geöffnete Mauern, Türen, Truhen, Kürbisse, Töpfe und zweimal angesprochenen Personen reserviert. Abseits dieser Dinge gibt es auch spielrelevante Fortschrittsmerkmale wie z. B. welche Endgegner bereits besiegt wurden oder welche sonstigen Ereignisse bereits in der Vergangenheit liegen. All diese Dinge müssen bekannt sein um einen leistungsstarken Spielstand-Editor zu entwickeln.
-
-Eine unvollständige Liste findest du unter: <a href=unknowns>das Unbekannte</a>.
-
 ## Was sind die Ziele?
 Sobald das SRAM-Format vollständig bekannt ist, bietet es die Möglichkeit einen leistungsstarken Spielstand-Editor zu entwickeln, der alles aktiviert oder deaktiviert, was von einem Spielstand aus gesteuert werden kann.
 
 "Das klingt cool!" denkst du vielleicht. Absolut, das tut es!
+
+### Was ist noch unbekannt?
+Die meisten unbekannten Bereiche sind für Zutaten-Schnüffelstellen, geöffnete Mauern, Türen, Truhen, Kürbisse, Töpfe und zweimal angesprochenen Personen reserviert. Abseits dieser Dinge gibt es auch spielrelevante Fortschrittsmerkmale wie z. B. welche Endgegner bereits besiegt wurden oder welche sonstigen Ereignisse bereits in der Vergangenheit liegen. All diese Dinge müssen bekannt sein um einen leistungsstarken Spielstand-Editor zu entwickeln.
+
+Eine unvollständige Liste findest du unter: <a href=unknowns>das Unbekannte</a>.
 
 ### Exklusive Features eines zukünftigen Spielstand-Editors
 * Zurücksetzen von bereits durchgeführten Boss-Kämpfen
