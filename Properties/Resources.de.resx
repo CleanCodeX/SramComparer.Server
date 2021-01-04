@@ -149,8 +149,8 @@
 	<data name="MenuWebTools" xml:space="preserve">
 		<value>Web - Tools</value>
 	</data>
-	<data name="MenuGoal" xml:space="preserve">
-		<value>Was ist das Ziel?</value>
+	<data name="MenuGoals" xml:space="preserve">
+		<value>Was sind Ziele?</value>
 	</data>
 	<data name="MenuHistory" xml:space="preserve">
 		<value>Historie</value>
@@ -203,8 +203,8 @@
 	<data name="MenuAbout" xml:space="preserve">
 		<value>Info</value>
 	</data>
-	<data name="Contributor" xml:space="preserve">
-		<value>Beitragender</value>
+	<data name="Contributors" xml:space="preserve">
+		<value>Beitragende</value>
 	</data>
 	<data name="MenuQuickLinks" xml:space="preserve">
 		<value>Quicklinks</value>

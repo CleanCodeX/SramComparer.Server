@@ -45,8 +45,8 @@
 		<value>Web Modification du décalage SRAM</value>
 		<comment>Needs to have Web or online oncluded</comment>
 	</data>
-	<data name="Contributor" xml:space="preserve">
-		<value>Contributeur</value>
+	<data name="Contributors" xml:space="preserve">
+		<value>Contributeurs</value>
 	</data>
 	<data name="DontShow" xml:space="preserve">
 		<value>Ne pas montrer</value>
@@ -129,8 +129,8 @@
 	<data name="MenuFeatures" xml:space="preserve">
 		<value>Caractéristiques</value>
 	</data>
-	<data name="MenuGoal" xml:space="preserve">
-		<value>Quel est le but?</value>
+	<data name="MenuGoals" xml:space="preserve">
+		<value>Quels sont les objectifs?</value>
 	</data>
 	<data name="MenuHistory" xml:space="preserve">
 		<value>Historique</value>

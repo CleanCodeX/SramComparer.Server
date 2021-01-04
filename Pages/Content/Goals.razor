@@ -1,6 +1,6 @@
 ﻿@using WebApp.SoE.Helpers
 
-@attribute [Route(PageUris.Goal)]
+@attribute [Route(PageUris.Goals)]
 @inherits AutoLangContentIdMarkupBase
 
 @if (ShowAutoTranslateOption)
@@ -11,5 +11,5 @@
 @Content
 
 @code {
-	protected override void OnParametersSet() => ContentId = (nameof(PageUris.Goal));
+	protected override void OnParametersSet() => ContentId = (nameof(PageUris.Goals));
 }

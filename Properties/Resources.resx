@@ -258,8 +258,8 @@
   <data name="ButtonGetValue" xml:space="preserve">
     <value>Get value</value>
   </data>
-  <data name="Contributor" xml:space="preserve">
-    <value>Contributor</value>
+  <data name="Contributors" xml:space="preserve">
+    <value>Contributors</value>
   </data>
   <data name="ButtonSetValue" xml:space="preserve">
     <value>Set value</value>
@@ -306,8 +306,8 @@
   <data name="MenuSramFormat" xml:space="preserve">
     <value>SRAM Format</value>
   </data>
-  <data name="MenuGoal" xml:space="preserve">
-    <value>What's the goal?</value>
+  <data name="MenuGoals" xml:space="preserve">
+    <value>What are the goals?</value>
   </data>
   <data name="MenuTheUnknowns" xml:space="preserve">
     <value>The Unknowns</value>

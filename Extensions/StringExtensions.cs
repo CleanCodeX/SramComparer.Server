@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
+using Common.Shared.Min.Extensions;
 using Microsoft.AspNetCore.Components;
 
 namespace WebApp.SoE.Extensions
@@ -28,5 +29,7 @@ namespace WebApp.SoE.Extensions
 		public static string ReplaceHtmlLinebreaks(this MarkupString source) => source.ToString().ReplaceHtmlLinebreaks();
 		public static string ReplaceHtmlLinebreaks([NotNull] this string source) => source
 			.Replace("<br>", Environment.NewLine);
+
+		public static string? ToNullIfEmpty(this string? source) => source.IsNullOrEmpty() ? null : source;
 	}
 }

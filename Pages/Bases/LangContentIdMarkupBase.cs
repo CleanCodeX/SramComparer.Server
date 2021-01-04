@@ -95,7 +95,7 @@ namespace WebApp.SoE.Pages.Bases
 			var path = Path.GetDirectoryName(filePath);
 			var fileName = Path.GetFileNameWithoutExtension(filePath);
 			var extension = Path.GetExtension(filePath);
-			return Path.Join(path, $"{fileName}-{language}{extension}");
+			return Path.Join(path, language, $"{fileName}-{language}{extension}");
 		}
 
 		private static string MakeLanguageFileUrl(string url, string language)
@@ -104,7 +104,7 @@ namespace WebApp.SoE.Pages.Bases
 			var fileName = Path.GetFileName(uri.LocalPath);
 			var fileNameWithoutExtension = Path.GetFileNameWithoutExtension(uri.LocalPath);
 			var extension = Path.GetExtension(uri.LocalPath);
-			var langFilename = $"{fileNameWithoutExtension}-{language}{extension}";
+			var langFilename = $"{language}/{fileNameWithoutExtension}-{language}{extension}";
 			return url.Replace(fileName, langFilename);
 		}
 	}

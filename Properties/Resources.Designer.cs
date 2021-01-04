@@ -232,11 +232,11 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Contributor ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Contributors ähnelt.
         /// </summary>
-        public static string Contributor {
+        public static string Contributors {
             get {
-                return ResourceManager.GetString("Contributor", resourceCulture);
+                return ResourceManager.GetString("Contributors", resourceCulture);
             }
         }
         
@@ -394,7 +394,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Non-save slot byte-by-byte comparison (beyond all save slots) ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compare non-save slot area byte by byte (area beyond all save slots) ähnelt.
         /// </summary>
         public static string HintNonSaveSlotByteByByteComparison {
             get {
@@ -412,7 +412,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Save slot byte-by-byte comparison (including the &quot;knowns&quot; areas) ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compare whole save slot area byte by byte (including the &quot;knowns&quot; areas) ähnelt.
         /// </summary>
         public static string HintSaveSlotByteByByteComparison {
             get {
@@ -529,11 +529,11 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die What&apos;s the goal? ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die What are the goals? ähnelt.
         /// </summary>
-        public static string MenuGoal {
+        public static string MenuGoals {
             get {
-                return ResourceManager.GetString("MenuGoal", resourceCulture);
+                return ResourceManager.GetString("MenuGoals", resourceCulture);
             }
         }
         

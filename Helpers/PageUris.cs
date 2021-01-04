@@ -6,12 +6,13 @@
 		public const string Offset = "/offset";
 		public const string About = "/about";
 		public const string Contributors = "/contributors";
-		
+		public const string Contributor = "/contributor";
+
 		public const string Downloads = "/downloads";
 		public const string Features = "/features";
 		public const string Manual = "/manual";
 		public const string Imagery = "/imagery";
-		public const string Goal = "/goal";
+		public const string Goals = "/goals";
 		public const string Unknowns = "/unknowns";
 		public const string Contribute = "/contribute";
 		public const string ChangelogWeb = "/changelog-web";

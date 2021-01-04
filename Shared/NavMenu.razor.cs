@@ -46,7 +46,7 @@ namespace WebApp.SoE.Shared
 			var path = Path.Join("/", NavManager.ToBaseRelativePath(e.Location).ToLower());
 			var menu = path switch
 			{
-				PageUris.Goal => ExpandedMenu.SramHacking,
+				PageUris.Goals => ExpandedMenu.SramHacking,
 				PageUris.Unknowns => ExpandedMenu.SramHacking,
 				PageUris.Contribute => ExpandedMenu.SramHacking,
 				PageUris.SramDocu => ExpandedMenu.SramHacking,

@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.WebUtilities;
+using WebApp.SoE.Extensions;
 using WebApp.SoE.Helpers;
 
 namespace WebApp.SoE.Pages.Bases
@@ -81,6 +82,6 @@ namespace WebApp.SoE.Pages.Bases
 			return false;
 		}
 
-		protected virtual string? GetQueryParam() => QueryHelpers.ParseQuery(NavigationManager.Uri).Values.FirstOrDefault().ToString();
+		protected virtual string? GetQueryParam() => QueryHelpers.ParseQuery(NavigationManager.Uri).Values.FirstOrDefault().ToString().ToNullIfEmpty();
 	}
 }
