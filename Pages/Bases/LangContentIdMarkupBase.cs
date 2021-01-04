@@ -80,9 +80,7 @@ namespace WebApp.SoE.Pages.Bases
 				request.Method = "HEAD";
 
 				using var response = (HttpWebResponse)request.GetResponse();
-				response.Close();
-
-				return response.StatusCode == HttpStatusCode.OK;
+					return response.StatusCode == HttpStatusCode.OK;
 			}
 			catch
 			{
@@ -93,18 +91,15 @@ namespace WebApp.SoE.Pages.Bases
 		private static string MakeLanguageFilePath(string filePath, string language)
 		{
 			var path = Path.GetDirectoryName(filePath);
-			var fileName = Path.GetFileNameWithoutExtension(filePath);
-			var extension = Path.GetExtension(filePath);
-			return Path.Join(path, language, $"{fileName}-{language}{extension}");
+			var fileName = Path.GetFileName(filePath);
+			return Path.Join(path, language, fileName);
 		}
 
 		private static string MakeLanguageFileUrl(string url, string language)
 		{
 			var uri = new Uri(url);
 			var fileName = Path.GetFileName(uri.LocalPath);
-			var fileNameWithoutExtension = Path.GetFileNameWithoutExtension(uri.LocalPath);
-			var extension = Path.GetExtension(uri.LocalPath);
-			var langFilename = $"{language}/{fileNameWithoutExtension}-{language}{extension}";
+			var langFilename = $"{language}/{fileName}";
 			return url.Replace(fileName, langFilename);
 		}
 	}
