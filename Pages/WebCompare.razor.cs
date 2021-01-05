@@ -55,7 +55,7 @@ namespace WebApp.SoE.Pages
 			await ViewModel.CompareAsync();
 			ViewModel.ColorizeOutput = true;
 
-			return ViewModel.OutputMessage.ReplaceHtmlLinebreaks();
+			return ViewModel.OutputMessage.ReplaceHtmlLineBreaks();
 		}
 
 		public async Task DownloadAsync()

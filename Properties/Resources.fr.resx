@@ -258,4 +258,10 @@
 	<data name="ButtonOff" xml:space="preserve">
 		<value>Off</value>
 	</data>
+	<data name="ButtonShowLocalization" xml:space="preserve">
+		<value>Afficher la localisation</value>
+	</data>
+	<data name="ButtonHideLocalization" xml:space="preserve">
+		<value>Masquer la localisation</value>
+	</data>
 </root>

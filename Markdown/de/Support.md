@@ -17,7 +17,7 @@ Falls Bits und Bytes genau dein Ding sind, könntest du der Exploration-Army bei
 
 ### Biete eine Lokalisierung an
 
-Wenn du eine Sprache sprichst, die diese Website derzeit nicht anbietet, du aber der Meinung bist, dass sie das **sollte**, dann könntest du eine Lokalisierung in deiner Sprache als großen Beitrag zu diesem Projekt leisten. Du könntest den Zugang für Personen öffnen, die die unterstützten Sprachen nicht (gut) verstehen. Wenn du dich für das Projekt engagieren willst, klicke <a hef="mailto:evermore@SECRETOFxeth.de?Subject=Format%20Exploration%20Project">hier</a>, indem du den SECRETOF-Teil entfernst.
+Wenn du eine Sprache sprichst, die diese Website derzeit nicht anbietet, du aber der Meinung bist, dass sie das **sollte**, dann könntest du eine Lokalisierung in deiner Sprache als großen Beitrag zu diesem Projekt leisten. Du könntest den Zugang für Personen öffnen, die die unterstützten Sprachen nicht (gut) verstehen. Wenn du dich für das Projekt engagieren willst, schaue <a href=localization>hier</a> wie vorzugehen ist.
 
 ## Passive Hilfe
 Wenn Bits und Bytes nicht so dein Ding sind, dann ist das auch in Ordnung. 

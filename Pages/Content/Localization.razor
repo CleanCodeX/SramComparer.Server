@@ -1,0 +1,66 @@
+﻿@using WebApp.SoE.Helpers
+@using WebApp.SoE.Extensions
+
+@attribute [Route(PageUris.Localization)]
+@inherits AutoLangContentIdMarkupBase
+
+@if (ShowAutoTranslateOption)
+{
+	<TranslateButton @bind-Value="@AutoTranslate" />
+}
+
+<div class="markup">
+	@Content
+</div>
+
+<p>
+	<div>
+		<button class="@_buttonStyle" @onclick="@(InvertShowTranslation)">@($"[{_language}]") @_buttonCaption</button>
+		<ClipboardCopy OnCopyAsync="@GetCopyTextAsync" title="@Res.HintCopyButton" />
+	</div>
+
+	@if (_showLocalization && _localization.HasValue)
+	{
+		<div class="result">
+			@_localization.Value
+		</div>
+	}
+
+</p>
+
+@code {
+	private bool _showLocalization;
+	private MarkupString? _localization;
+	#nullable disable
+	private string _buttonCaption;
+	private string _language;
+	private string _buttonStyle;
+	#nullable restore
+
+	protected override void OnParametersSet()
+	{
+		ContentId = nameof(PageUris.Localization);
+		SetShowTranslation();
+	}
+
+	private Task<string> GetCopyTextAsync() => Task.FromResult(LocalizationHelper.GetResourceStrings(_language));
+
+	private void InvertShowTranslation()
+	{
+		_showLocalization = !_showLocalization;
+		SetShowTranslation();
+	}
+
+	private void SetShowTranslation()
+	{
+		_buttonCaption = _showLocalization ? Res.ButtonHideLocalization : Res.ButtonShowLocalization;
+		_buttonStyle = _showLocalization ? "btn btn-secondary" : "btn btn-dark";
+
+		_language = AutoTranslate ? Language : "en";
+		if (_language != "de")
+			_language = "en";
+
+		if (_showLocalization)
+			_localization ??= LocalizationHelper.GetResourceStrings(_language, LocalizationOptions.Create(null, true, true)).ToMarkup();
+	}
+}

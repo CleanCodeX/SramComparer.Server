@@ -30,19 +30,20 @@ namespace WebApp.SoE
 			services.AddSingleton<IAppInfoService, AppInfoService>();
 			services.AddScoped<CompareViewModel>(sp => new() {LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>()});
 			services.AddHttpContextAccessor();
-
+			
 			services.AddScoped<SetOffsetValueViewModel>(sp => new()
 			{
 				JsRuntime = sp.GetRequiredService<IJSRuntime>(),
 				LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>()
 			});
 
+			services.AddOptions<Settings>().Bind(Configuration.GetSection(nameof(Settings)));
+			services.AddSingleton(cfg => cfg.GetService<IOptionsMonitor<Settings>>()!.CurrentValue);
+
 			var supportedCulturesSection = Configuration.GetSection(nameof(SupportedCultures));
 			services.AddOptions<SupportedCultures>().Bind(supportedCulturesSection);
 			var supportedCultureIds = supportedCulturesSection.GetSection("Cultures").GetChildren().Select(e => e.Value).ToList();
-
-			services.AddTransient(cfg => cfg.GetService<IOptionsMonitor<SupportedCultures>>()!.CurrentValue);
-
+			
 			services.Configure<RequestLocalizationOptions>(
 				options =>
 				{
@@ -68,8 +69,7 @@ namespace WebApp.SoE
 					options.AddInitialRequestCultureProvider(new AcceptLanguageHeaderRequestCultureProvider());
 				});
 
-			services.AddOptions<Settings>().Bind(Configuration.GetSection(nameof(Settings)));
-			services.AddSingleton(cfg => cfg.GetService<IOptionsMonitor<Settings>>()!.CurrentValue);
+			services.AddTransient(cfg => cfg.GetService<IOptionsMonitor<SupportedCultures>>()!.CurrentValue);
 
 #if DEBUG
 			services.AddLiveReload(config => {
@@ -80,7 +80,7 @@ namespace WebApp.SoE
 #endif
 
 			services.AddHttpClient();
-			services.AddRazorPages();
+			services.AddRazorPages().AddDataAnnotationsLocalization();
 			services.AddServerSideBlazor();
 		}
 

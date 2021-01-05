@@ -92,6 +92,7 @@ namespace WebApp.SoE.Pages.Bases
 		{
 			var path = Path.GetDirectoryName(filePath);
 			var fileName = Path.GetFileName(filePath);
+
 			return Path.Join(path, language, fileName);
 		}
 
@@ -100,6 +101,7 @@ namespace WebApp.SoE.Pages.Bases
 			var uri = new Uri(url);
 			var fileName = Path.GetFileName(uri.LocalPath);
 			var langFilename = $"{language}/{fileName}";
+
 			return url.Replace(fileName, langFilename);
 		}
 	}

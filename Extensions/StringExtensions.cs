@@ -26,10 +26,16 @@ namespace WebApp.SoE.Extensions
 		/// <summary>Creates a markup string</summary>
 		public static MarkupString ToMarkup(this string source) => (MarkupString)source;
 
-		public static string ReplaceHtmlLinebreaks(this MarkupString source) => source.ToString().ReplaceHtmlLinebreaks();
-		public static string ReplaceHtmlLinebreaks([NotNull] this string source) => source
+		public static string ReplaceHtmlLineBreaks(this MarkupString source) => source.ToString().ReplaceHtmlLineBreaks();
+		public static string ReplaceHtmlLineBreaks([NotNull] this string source) => source
 			.Replace("<br>", Environment.NewLine);
 
 		public static string? ToNullIfEmpty(this string? source) => source.IsNullOrEmpty() ? null : source;
+
+		public static string ReplaceWithHtmlLineBreaks(this string source) => source
+			.Replace(Environment.NewLine, "<br>");
+
+		/// <summary>Replaces quotes</summary>
+		public static MarkupString RemoveQuotes(this string source) => source.Remove(@"""")!.ToMarkup();
 	}
 }

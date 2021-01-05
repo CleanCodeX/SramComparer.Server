@@ -12,11 +12,8 @@ namespace WebApp.SoE.Helpers
 			if (markdown.IsNullOrEmpty()) return default;
 			
 			var pipeline = new MarkdownPipelineBuilder()
-				//.UseAdvancedExtensions()
-				.UseMediaLinks()
-				.UseBootstrap()
-				.UseReferralLinks()
 				.UseAutoLinks()
+				.UseEmojiAndSmiley()
 				.Build();
 			return (MarkupString)Markdown.ToHtml(markdown, pipeline);
 		}

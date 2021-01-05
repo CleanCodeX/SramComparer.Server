@@ -17,7 +17,7 @@ If bits and bytes **are** your kind of thing, you might want to join the 'explor
 
 ### Provide a localization
 
-If you're speaking a language which this website currently doesn't offer but you think it **should** do, then consider a localization into your language as a huge contribution to this project. You might open access to people who cannot understand the supported languages (well). If you're interested to engage yourself for this project click <a hef="mailto:evermore@SECRETOFxeth.de?Subject=Format%20Exploration%20Projekt">here</a> by removing the SECRETOF part.
+If you're speaking a language which this website currently doesn't offer but you think it **should** do, then consider a localization into your language as a huge contribution to this project. You might open access to people who cannot understand the supported languages (well). If you want to get involved in the project, see <a href=localization>here</a> to do.
 
 ## Passive Help
 If bits and bytes **aren't** your kind of thing, hey no big deal, that's OK.

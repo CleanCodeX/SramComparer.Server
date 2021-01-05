@@ -3,7 +3,9 @@
 @attribute [Route(PageUris.Manual)]
 @inherits LangContentIdMarkupBase
 
-@Content
+<div class="markup">
+	@Content
+</div>
 
 @code {
 	protected override void OnParametersSet() => ContentId = nameof(PageUris.Manual);

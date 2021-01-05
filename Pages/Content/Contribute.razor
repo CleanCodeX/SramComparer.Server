@@ -8,7 +8,9 @@
 	<TranslateButton @bind-Value="@AutoTranslate" />
 }
 
-@Content
+<div class="markup">
+	@Content
+</div>
 
 @code {
 	protected override void OnParametersSet() => ContentId = (nameof(PageUris.Contribute));

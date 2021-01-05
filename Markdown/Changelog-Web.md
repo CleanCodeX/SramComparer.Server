@@ -1,7 +1,8 @@
 ﻿## Changelog Web-App
 
 #### 1.0.4 - 2021-01-04
-* added auto translate option
+* added auto-translate option for pages
+* added localization page
 
 #### 1.0.3 - 2020-12-29
 * added quick links

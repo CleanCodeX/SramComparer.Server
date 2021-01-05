@@ -133,6 +133,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Hide localization ähnelt.
+        /// </summary>
+        public static string ButtonHideLocalization {
+            get {
+                return ResourceManager.GetString("ButtonHideLocalization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Off ähnelt.
         /// </summary>
         public static string ButtonOff {
@@ -156,6 +165,15 @@ namespace WebApp.SoE.Properties {
         public static string ButtonSetValue {
             get {
                 return ResourceManager.GetString("ButtonSetValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show localization ähnelt.
+        /// </summary>
+        public static string ButtonShowLocalization {
+            get {
+                return ResourceManager.GetString("ButtonShowLocalization", resourceCulture);
             }
         }
         
