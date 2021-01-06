@@ -1,7 +1,7 @@
 # Glossary
 
 ## SRAM
-SRAM stands for <a href="https://de.wikipedia.org/wiki/Static_random-access_memory" target=_>Static Random Access Memory</a> and is a buffer where the game stores all information the game needs to continue from a savegame later on.
+SRAM stands for <a href="https://en.wikipedia.org/wiki/Static_random-access_memory" target=_>Static Random Access Memory</a> and is a buffer where the game stores all information the game needs to continue from a savegame later on.
 
 When you save in-game at the inn the SRAM buffer will be updated. With an emulator the SRAM gets saved to disk as *.srm file. Every progress you made in the game gets stored in this file.
 
