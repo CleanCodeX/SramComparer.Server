@@ -5,8 +5,6 @@ using System.Resources;
 using System.Text;
 using WebApp.SoE.Extensions;
 
-// ReSharper disable RedundantNameQualifier
-
 namespace WebApp.SoE.Helpers
 {
 	public class LocalizationOptions
