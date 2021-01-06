@@ -9,7 +9,7 @@ Aber letztendlich ist dies ein Freizeit-Projekt und die Entwicklung von Tools od
 ## Aktive Hilfe
 Wenn das Ziel dieses Projekts noch nicht klar ist, lies zuerst das <a href=goals>Ziel</a> durch.
 
-Falls du dich fragst, was tun kannst um zu helfen, gäbe es da ein paar Möglichkeiten:
+Falls du dich fragst, was tun kannst um zu helfen, gäbe es da ein paar Möglichkeiten.
 
 ### Vergleichen von SRAMs
 
@@ -19,7 +19,7 @@ Falls Bits und Bytes genau dein Ding sind, könntest du dich in das Exploration 
 
 Sprichst du eine Sprache, welche diese Website derzeit nicht anbietet, bist aber der Meinung, dass sie unterstützt werden sollte?
 In diesem Fall könntest du eine Lokalisierung in deiner Sprache in Betracht ziehen. 
-Du könntest den Zugang zu diesme Projekt für Personen öffnen, welche nur *deine* Sprache verstehen. 
+Du könntest den Zugang zu diesem Projekt für Personen öffnen, welche nur *deine* Sprache verstehen. 
 
 Wenn du das tun möchtest, schaue <a href=localize>hier</a> wie vorzugehen ist.
 

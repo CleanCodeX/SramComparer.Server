@@ -9,7 +9,7 @@ But after all this is a free time project and developing tools or finding offset
 ## Active Help
 If the goals of this project aren't clear yet, make sure to have read through the <a href=goals>goals</a> first.
 
-If you're wondering what can be done to help, there are a few things you can do:
+If you're wondering what can be done to help, there are a few things you can do.
 
 ### Comparing SRAMs
 
