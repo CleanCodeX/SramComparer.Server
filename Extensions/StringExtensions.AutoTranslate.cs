@@ -11,8 +11,8 @@ namespace WebApp.SoE.Extensions
 
 				#region HTML link correction
 
-					.Replace("> ", ">") 
-					.Replace(" </a>.", "</a>.")
+					.Replace("> ", ">")
+					.Replace(" </a>", "</a>")
 
 				#endregion HTML link correction
 
