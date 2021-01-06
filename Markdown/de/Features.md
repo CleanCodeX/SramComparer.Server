@@ -1,5 +1,5 @@
 ﻿# SoE SRAM Comparer
-Erlaubt das Vergleichen von (unbekannten) Bereichen and modifizieren von Offset-Werten in Secret of Evermores SRAM-Datei.
+Erlaubt das Vergleichen von (unbekannten) Bereichen und Modifizieren von Offset-Werten in Secret of Evermores SRAM-Datei.
 
 ## Features
 * [C|W] Anzeigen (oder speichern von geänderten) Offset-Werten

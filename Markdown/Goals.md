@@ -1,4 +1,6 @@
-# SRAM
+# Goal
+
+## SRAM?
 If you're unsure what this term means, there is an explanation in the <a href=glossary>glossary</a>.
 
 The SRAM-file can be read and manipulated, too. So far so good.

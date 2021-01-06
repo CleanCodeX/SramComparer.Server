@@ -1,5 +1,6 @@
-## Can I help?
+# Contribute to the project
 
+## Can I help?
 Actually you can! Compare SRAM files, it's not difficult at all.
 
 This would be really awesome. Your help would save much time in not doing something twice what someone else already did.

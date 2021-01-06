@@ -28,7 +28,7 @@ Wenn Bits und Bytes nicht so dein Ding sind, dann ist das auch in Ordnung.
 
 Sofern du zukünftig trotzdem einen leistungsfähigen Spielstand-Editor sehen möchtest, könntest du helfen mit:
 
-* Mundpropaganda
+### Mundpropaganda
 
 In diesem Fall erzähle deinen SoE-Freunden von diesem Projekt.
 

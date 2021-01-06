@@ -27,7 +27,7 @@ If bits and bytes **aren't** your thing, hey no big deal, that's OK.
 
 If you just would like to see a poweful savegame editor in future then you might help with
 
-* Propaganda
+### Propaganda
 
 In that case you might want to tell your SoE friends about this project. 
 

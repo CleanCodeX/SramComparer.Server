@@ -1,4 +1,6 @@
-﻿## This project is an open-source project!
+﻿# GitHub
+
+## This project is an open-source project!
 
 Sources are hosted at <a href="https://github.com/CleanCodeX" target="_">GitHub</a>.
 

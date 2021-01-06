@@ -1,38 +1,74 @@
 ## Guide
-**Steps**:
 
-***1.1)*** Before you start, have a look into <a href="unknowns">unknowns</a> to see examples of which parts of SRAM structure are still considered to be unknown. See some <a href="imagery">imagery</a> of how to interpret comparison results.
-***1.2)*** Most emulators have the option to save the game's S-RAM automatically after a change occurs.
-     Make sure this is enabled if existing. Otherwise you have manually ensure that the emulator updates 
-     the *.srm file.
-***1.3)*** Start the application by passing the game's srm filepath as first command parameter. The file can also be 
-     dragged onto the application.
+This is a step-by-step guid of SRAM-Comparer console app.
 
-***2)***   Then press (ow) to create a comparison copy of your current SRAM file. This allows to compare with after the current SRAM file changed.
+## ***1)*** Preparation
 
-***3.1)*** Cause in-game a SRAM change. (e.g. let a game progress event happen or 
-    open an unopened chest) To force the SRAM file to be updated, save your game in-game at the inn.
-***3.2)*** Press (c) to compare the current srm file with comparison file. 
-     (If the SRAM file did not change at all, you probably did not save in-game or the emulator didn't
-     (yet!) update the SRAM (srm) file automatically. Check the modification date of the game's srm file.
-     For Example: Snes9x's default srm update period is 30 seconds. Decrease it to a lower value, like 1 second,
-     but not to 0 (which deactivates the automatism).  
+### Useful links
+Check out <a href="unknowns">Unknowns</a> to see examples of which parts of the SRAM structure are still considered to be unknown. Take a look at <a href="imagery">pictures</a> to see how the comparison results are to be interpreted.
 
-***4.1)*** Make sure to change as little as possible between two saves to avoid unnecessary noise. 
-***4.2)*** As soon as you can clearly assign a change in the game to a change in the SRAM, you have found a meaning for this specific offset. Then press (e) to export the comparison result as a text file in your export directory.
-***4.3)*** Rename the file according to your find.
-***4.4)*** Check whether the change found also occurs in other game versions. E.g. unpatched or patched versions.
-***4.5) Make sure it's reproducible, then report your find via <a href="community">Community</a>.
+### Configure emulator
+Most emulators have the option to save a game's SRAM as soon as a change occurs.
+Make sure this setting is enabled. Otherwise you have to make sure by yourself that the emulator updates the * .srm file.
 
-***5)***   To start a comparison without previous SRAM changes, press again (ow) to save your current SRAM file 
-     as comparison file. Then start again at step 3.1.
+### Start console app
+Start the application by passing the path to the SRAM file (* .srm) of the game as the first command line parameter. The file can also be dragged and dropped onto the application.
 
-***6.1)*** (optional, advanced) If you have more than one slot with changes to comparison file, press (ss) to
+## ***2)*** Create comparison SRAM file
+Then press (ow) to create a comparison copy of your current SRAM file. This allows to compare with after the current SRAM file changed.
+
+## ***3)*** Trigger a change in the game and compare SRAM
+
+### Trigger SRAM change
+Change the SRAM in the game by e.g. triggering a game event or opening a chest, so that the SRAM file is about to be updated. 
+Then save your game in at the inn.
+
+### Compare SRAM
+Press (c) to compare the current SRAM file with comparison file. 
+If the SRAM file has not changed at all, then the emulator *probably* has not (yet!) Updated the file automatically. Check the modification date of the * .srm file.
+
+Example: the update period preset by Snes9x is 30 seconds. Decrease the value to 1 second, but not to 0! (which leads to the deactivation of the automatism)
+
+## ***4)*** Interpret the comparison result and document the find
+
+### Reduce annoying noise
+Try to change as little as possible between two saves to avoid unnecessary bit noise.
+
+### Optimal comparison conditions
+* Look out for changing bits or bytes. The comparison result is colored differently if either only 1 bit or 1 whole byte has changed. If necessary, take a look <a href="imagery">here</a> again.
+* Often a number of values are changed by an action in the game. Try to isolate the changes by repeating with different savegames, which keep changing over and over again.
+
+### Ensure reproducibility
+Changes in value often mean something different than assumed. Ensure reproducibility by trying the following.
+
+Check whether the change found:
+* also occurs in other game versions. E.g. unpatched or patched versions
+* is still reproducible even after reloading your saved game
+
+### Export comparison result
+As soon as you can reproducibly assign a single change in the SRAM to a change in the game, press (e) to export the comparison result as a text file in your export directory. Rename the file according to your find or your guess.
+
+### document Find
+Document your find or your assumption via the <a href="community">Community</a>.
+
+## ***5)*** New comparison without previous changes
+To enable a comparison without previous SRAM changes, press (ow) to save the current SRAM file as a comparison file. Then start again at step 3.1.
+
+## ***6)*** Comparison options
+
+### (optional) Compare single or different save slots
+If you have more than one slot with changes to comparison file, press (ss) to
      set the game's save slot (1-4) to avoid comparing other save slots. If two different save slots should be 
      compared with each other, additionally press (ssc) to set the the slot of comparison file, too.
-***6.2)*** (optional, advanced) Press (asbc) or (nsbc) to set comparison modes. 
-     If you are unsure, leave at default to compare as less as possible bytes.
 
-***7)***   (optional) Current and comparison srm file can be backed-up (b) or (bc) or restored (r) or (rc) individually.
+### (optional) Compare all or unknown only areas of save slot
+To compare all bytes (including the known areas) of a save slot byte by byte, press (asbc). If you are unsure, leave the default setting to compare as few bytes as possible.
 
-***8)***   (optional) SRAM offset values for specific save slots can be displayed by pressing (ov) or manipulated by (mov). You can decide whether to update your current SRAM file (backup recommended) or creating a new file.
+### (optional) Compare non-save slot areas bytes
+To compare the bytes behind all save slots press (nsbc). Currently it appears that this area is empty.
+
+## ***7)*** (optional) Bavkup or restore SRAM files
+Current and comparison srm file can be backed-up (b) or (bc) or restored (r) or (rc) individually.
+
+## ***8)*** (optional) Show or edit offset values
+SRAM offset values for specific save slots can be displayed by pressing (ov) or manipulated by (mov). You can decide whether to update your current SRAM file (backup recommended) or creating a new file.

@@ -1,4 +1,6 @@
-﻿## SRAM
+﻿# Ziel des Ganzen
+
+## SRAM?
 Falls du unsicher bist, was mit diesem Begriff gemeint ist, im <a href=glossary>Glossar</a> wird es erklärt.
 
 Die SRAM-Datei kann gelesen und manipuliert werden. So weit, so gut.
@@ -7,7 +9,6 @@ Das einzige Problem dabei ist, dass ca. 54% des SRAM-Speicherslot-Formates von S
 
 ### Die Unbekannten
 Eine Erklärung der Unbekannten findest du im <a href=glossary>Glossar</a>.
-
 Eine unvollständige Liste von Beispielen findest du unter: <a href=unknowns>das Unbekannte</a>.
 
 ## Was ist das Ziel?
