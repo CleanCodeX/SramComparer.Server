@@ -1,7 +1,7 @@
 ﻿@using WebApp.SoE.Helpers
 @using WebApp.SoE.Extensions
 
-@attribute [Route(PageUris.Localization)]
+@attribute [Route(PageUris.Localize)]
 @inherits AutoLangContentIdMarkupBase
 
 @if (ShowAutoTranslateOption)
@@ -39,7 +39,7 @@
 
 	protected override void OnParametersSet()
 	{
-		ContentId = nameof(PageUris.Localization);
+		ContentId = nameof(PageUris.Localize);
 		SetShowTranslation();
 	}
 

@@ -9,7 +9,7 @@
 		public const string About = "/about";
 		public const string Contributors = "/contributors";
 		public const string Contributor = "/contributor";
-		public const string Localization = "/localization";
+		public const string Localize = "/localize";
 		public const string Features = "/features";
 
 		public const string Guide = "/guide";
