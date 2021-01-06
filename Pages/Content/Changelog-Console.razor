@@ -13,5 +13,5 @@
 </div>
 
 @code {
-	protected override void OnParametersSet() => ContentId = nameof(PageUris.ChangelogConsole);
+	protected override void OnParametersSet() => ContentId = PageUris.ChangelogConsole.Substring(1);
 }
