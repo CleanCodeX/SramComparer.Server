@@ -1,10 +1,10 @@
 ﻿@inherits ContentIdMarkupBase
 
-<h2>@Res.AppVersion</h2>
+<h2>@Res.LabelAppVersion</h2>
 
-Web App: @AppInfoService.PackageVersion | <a href=changelog-web>@Res.ChangeLog</a>
+Web App: @AppInfoService.PackageVersion | <a href=changelog-web>@Res.LabelChangeLog</a>
 <br />
-@Res.MenuSramComparerCmdApp: @AppInfoService.GetAssemblyVersion(typeof(SramComparer.SoE.Program).Assembly) | <a href=changelog-console>@Res.ChangeLog</a>
+@Res.MenuSramComparerCmdApp: @AppInfoService.GetAssemblyVersion(typeof(SramComparer.SoE.Program).Assembly) | <a href=changelog-console>@Res.LabelChangeLog</a>
 
 <p />
 <p />

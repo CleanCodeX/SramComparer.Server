@@ -1,10 +1,10 @@
 ﻿<div>
-	<label>@Res.AutoTranslate</label>&nbsp;
+	<label>@Res.LabelAutoTranslate</label>&nbsp;
 
 	@{
 		var caption = Value ? Res.ButtonOn : Res.ButtonOff;
 		var buttonClass = Value ? "btn btn-secondary" : "btn btn-dark";
-		var buttonTitle = Value ? Res.ButtonTitleDisableAutoTranslate : Res.ButtonTitleEnableAutoTranslate;
+		var buttonTitle = Value ? Res.ButtonTitleDisableAutoTranslation : Res.ButtonTitleEnableAutoTranslation;
 	}
 
 	<button class="@buttonClass" @onclick="@ToggleAutoTranslateAsync" title="@buttonTitle">@caption</button>

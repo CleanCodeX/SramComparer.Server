@@ -17,8 +17,8 @@ namespace WebApp.SoE.Shared
 			var unknownBytes = Sizes.SaveSlot.AllUnknown;
 			var knownPercentage = Math.Round((double)knownBytes / allBytes * 100, 1);
 			var unknownPercentage = Math.Round((double)unknownBytes / allBytes * 100, 1);
-			var unknown = Resources.UnknownBytes;
-			var known = Resources.KnownBytes;
+			var unknown = Resources.LabelUnknownBytes;
+			var known = Resources.LabelKnownBytes;
 
 			Status = $"{knownPercentage}% ({knownBytes}) {known} + {unknownPercentage}% ({unknownBytes}) {unknown} {est} 100% ({allBytes} {Res.Bytes})";
 		}

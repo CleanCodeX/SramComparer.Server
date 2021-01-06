@@ -43,11 +43,11 @@ namespace WebApp.SoE.ViewModels
 
 		public enum SaveSlotOption : uint
 		{
-			[Display(Name = nameof(Res.DontShow), ResourceType = typeof(Res))]
+			[Display(Name = nameof(Res.EnumDontShow), ResourceType = typeof(Res))]
 			None,
-			[Display(Name = nameof(Res.ComparedSaveSlotsIfDifferent), ResourceType = typeof(Res))]
+			[Display(Name = nameof(Res.EnumComparedSaveSlotsIfDifferent), ResourceType = typeof(Res))]
 			ComparedIfDifferent,
-			[Display(Name = nameof(Res.ComparedSaveSlots), ResourceType = typeof(Res))]
+			[Display(Name = nameof(Res.EnumComparedSaveSlots), ResourceType = typeof(Res))]
 			Compared
 		}
 

@@ -14,7 +14,7 @@
 * added Awesome SoE pages link
 * added SRAM docu link
 * added Forums / Discord invite link
-* moved most pages into markdown files hosted at github
+* moved most pages into markdown files hosted at GitHub
 
 #### v001 (2020-12-01)
 * added download text file and copy to clipboard buttons for (colored) comparison results

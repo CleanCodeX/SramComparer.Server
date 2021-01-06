@@ -9,7 +9,7 @@ namespace WebApp.SoE.Extensions
 	{
 		public static async Task<bool> StartDownloadAsync(this IJSRuntime source, string filename, byte[] content)
 		{
-			var result = await source.InvokeAsync<bool>("confirm", Res.DownloadConfirmationFileTemplate.InsertArgs(filename));
+			var result = await source.InvokeAsync<bool>("confirm", Res.AlertDownloadConfirmationFileTemplate.InsertArgs(filename));
 			if (!result) return false;
 
 			await source.InvokeVoidAsync(

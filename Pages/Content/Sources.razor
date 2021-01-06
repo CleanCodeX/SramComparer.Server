@@ -1,6 +1,6 @@
 ﻿@using WebApp.SoE.Helpers
 
-@attribute [Route(PageUris.GitHub)]
+@attribute [Route(PageUris.Sources)]
 @inherits AutoLangContentIdMarkupBase
 
 @if (ShowAutoTranslateOption)
@@ -13,5 +13,5 @@
 </div>
 
 @code {
-	protected override void OnParametersSet() => ContentId = (nameof(PageUris.GitHub));
+	protected override void OnParametersSet() => ContentId = (nameof(PageUris.Sources));
 }

@@ -60,7 +60,7 @@ namespace WebApp.SoE.Shared
 				PageUris.Compare => ExpandedMenu.WebTools,
 				PageUris.OffsetEdit => ExpandedMenu.WebTools,
 
-				PageUris.GitHub => ExpandedMenu.SramComparison,
+				PageUris.Sources => ExpandedMenu.SramComparison,
 
 				_ => ExpandedMenu.None
 			};

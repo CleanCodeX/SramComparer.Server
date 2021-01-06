@@ -23,7 +23,7 @@
 			</tr>
 
 			<tr>
-				<td><label>@Res.File:@Ns *)</label></td>
+				<td><label>@Res.LabelFile:@Ns *)</label></td>
 				<td><InputFile OnChange="@OnCurrentFileChange" style=@ButtonStyle /></td>
 			</tr>
 			<tr>
@@ -38,7 +38,7 @@
 			</tr>
 			
 			<tr>
-				<td><label>@Res.File:@Ns *)</label></td>
+				<td><label>@Res.LabelFile:@Ns *)</label></td>
 				<td><InputFile OnChange="@OnComparisonFileChange" style=@ButtonStyle /></td>
 			</tr>
 			<tr>
@@ -49,21 +49,21 @@
 			<p />
 
 			<tr>
-				<td colspan="2"><label class="header">@Res.AdditionalComparisons:</label></td>
+				<td colspan="2"><label class="header">@Res.LabelAdditionalComparisons:</label></td>
 			</tr>
 			
 			<tr>
 				<td colspan="2"><InputCheckbox @bind-Value="@ViewModel.SlotByteByByteComparison" />
-					<label style=@WholeSlotStyle title="@Res.HintSaveSlotByteByByteComparison">@ResComp.SlotByteByByteComparison</label> | 
+					<label style=@WholeSlotStyle title="@Res.LabelTitleSaveSlotByteByByteComparison">@ResComp.SlotByteByByteComparison</label> | 
 					<InputCheckbox @bind-Value="@ViewModel.NonSlotByteByByteComparison" />
-					<label style=@NonSlotStyle title="@Res.HintNonSaveSlotByteByByteComparison">@ResComp.NonSlotByteByByteComparison</label>
+					<label style=@NonSlotStyle title="@Res.LabelTitleNonSaveSlotByteByByteComparison">@ResComp.NonSlotByteByByteComparison</label>
 				</td>
 			</tr>
 			
 			<p />
 
 			<tr>
-				<td colspan="2"><label class="header">@Res.ShowAdditionalSaveSlotInformation:</label></td>
+				<td colspan="2"><label class="header">@Res.LabelShowAdditionalSaveSlotInformation:</label></td>
 			</tr>
 			
 			<tr>
@@ -71,33 +71,33 @@
 				<td><InputSelectEnum @bind-Value="@ViewModel.Checksum" style=@ChecksumStyle /></td>
 			</tr>
 			<tr>
-				<td><label title="@Res.HintUnknown12B">Unknown12B:@Ns</label></td>
+				<td><label title="@Res.LabelTitleUnknown12B">Unknown12B:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.Unknown12B" style=@Unknown12BStyle /></td>
 			</tr>
 			
 			<p />
 
 			<tr>	
-				<td colspan="2"><InputCheckbox @bind-Value="@ViewModel.ColorizeOutput" /> <label>@Res.ColorizeOutput</label></td>
+				<td colspan="2"><InputCheckbox @bind-Value="@ViewModel.ColorizeOutput" /> <label>@Res.LabelColorizeOutput</label></td>
 			</tr>
 
 			<p />
 
 			<tr>
-				<td><label>*) @Res.Mandatory</label></td>
+				<td><label>*) @Res.LabelMandatory</label></td>
 			</tr>
 		
 			<p />
 
 			<tr>	
 				<td>
-					<button class="btn btn-primary" @onclick="@ViewModel.CompareAsync" disabled="@CompareButtonDisabled" title="@Res.HintButtonCompare">
+					<button class="btn btn-primary" @onclick="@ViewModel.CompareAsync" disabled="@CompareButtonDisabled" title="@Res.ButtonTitleCompare">
 						<span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" />
 					</button>
 					
-					<ClipboardCopy OnCopyAsync="@CopyTextAsync" Disabled="@CopyButtonDisabled" title="@Res.HintCopyButton" />
+					<ClipboardCopy OnCopyAsync="@CopyTextAsync" Disabled="@CopyButtonDisabled" title="@Res.ButtonTitleCopy" />
 					
-					<button class="btn btn-primary" @onclick="@DownloadAsync" disabled="@CopyButtonDisabled" title="@Res.HintDownloadFile">
+					<button class="btn btn-primary" @onclick="@DownloadAsync" disabled="@CopyButtonDisabled" title="@Res.ButtonTitleDownloadFile">
 						<span class="iconify" data-icon="oi-cloud-download" data-inline="false" />
 					</button>
 				</td>

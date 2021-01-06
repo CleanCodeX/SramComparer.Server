@@ -61,47 +61,20 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Additional comparisons ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Copied to clipboard! ähnelt.
         /// </summary>
-        public static string AdditionalComparisons {
+        public static string AlertCopiedToClipboard {
             get {
-                return ResourceManager.GetString("AdditionalComparisons", resourceCulture);
+                return ResourceManager.GetString("AlertCopiedToClipboard", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die All save slots ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download file &apos;{0}&apos;? ähnelt.
         /// </summary>
-        public static string AllSaveSlots {
+        public static string AlertDownloadConfirmationFileTemplate {
             get {
-                return ResourceManager.GetString("AllSaveSlots", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Compile date ähnelt.
-        /// </summary>
-        public static string AppCompiledAt {
-            get {
-                return ResourceManager.GetString("AppCompiledAt", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Version ähnelt.
-        /// </summary>
-        public static string AppVersion {
-            get {
-                return ResourceManager.GetString("AppVersion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Auto translate ähnelt.
-        /// </summary>
-        public static string AutoTranslate {
-            get {
-                return ResourceManager.GetString("AutoTranslate", resourceCulture);
+                return ResourceManager.GetString("AlertDownloadConfirmationFileTemplate", resourceCulture);
             }
         }
         
@@ -178,20 +151,83 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compare SRAM files ähnelt.
+        /// </summary>
+        public static string ButtonTitleCompare {
+            get {
+                return ResourceManager.GetString("ButtonTitleCompare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Copy text to clipboard ähnelt.
+        /// </summary>
+        public static string ButtonTitleCopy {
+            get {
+                return ResourceManager.GetString("ButtonTitleCopy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Copy localization to clipboard ähnelt.
+        /// </summary>
+        public static string ButtonTitleCopyLocalization {
+            get {
+                return ResourceManager.GetString("ButtonTitleCopyLocalization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Disable auto-translate ähnelt.
         /// </summary>
-        public static string ButtonTitleDisableAutoTranslate {
+        public static string ButtonTitleDisableAutoTranslation {
             get {
-                return ResourceManager.GetString("ButtonTitleDisableAutoTranslate", resourceCulture);
+                return ResourceManager.GetString("ButtonTitleDisableAutoTranslation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download changed file ähnelt.
+        /// </summary>
+        public static string ButtonTitleDownloadChangedFile {
+            get {
+                return ResourceManager.GetString("ButtonTitleDownloadChangedFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download as text file ähnelt.
+        /// </summary>
+        public static string ButtonTitleDownloadFile {
+            get {
+                return ResourceManager.GetString("ButtonTitleDownloadFile", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Enable auto-translate ähnelt.
         /// </summary>
-        public static string ButtonTitleEnableAutoTranslate {
+        public static string ButtonTitleEnableAutoTranslation {
             get {
-                return ResourceManager.GetString("ButtonTitleEnableAutoTranslate", resourceCulture);
+                return ResourceManager.GetString("ButtonTitleEnableAutoTranslation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Get offset value ähnelt.
+        /// </summary>
+        public static string ButtonTitleGetOffsetValue {
+            get {
+                return ResourceManager.GetString("ButtonTitleGetOffsetValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Set offset value ähnelt.
+        /// </summary>
+        public static string ButtonTitleSetOffsetValue {
+            get {
+                return ResourceManager.GetString("ButtonTitleSetOffsetValue", resourceCulture);
             }
         }
         
@@ -214,281 +250,272 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Changelog ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die All save slots ähnelt.
         /// </summary>
-        public static string ChangeLog {
+        public static string EnumAllSaveSlots {
             get {
-                return ResourceManager.GetString("ChangeLog", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Colorize output ähnelt.
-        /// </summary>
-        public static string ColorizeOutput {
-            get {
-                return ResourceManager.GetString("ColorizeOutput", resourceCulture);
+                return ResourceManager.GetString("EnumAllSaveSlots", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Compared save slots ähnelt.
         /// </summary>
-        public static string ComparedSaveSlots {
+        public static string EnumComparedSaveSlots {
             get {
-                return ResourceManager.GetString("ComparedSaveSlots", resourceCulture);
+                return ResourceManager.GetString("EnumComparedSaveSlots", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Compared save slots if different ähnelt.
         /// </summary>
-        public static string ComparedSaveSlotsIfDifferent {
+        public static string EnumComparedSaveSlotsIfDifferent {
             get {
-                return ResourceManager.GetString("ComparedSaveSlotsIfDifferent", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Contributors ähnelt.
-        /// </summary>
-        public static string Contributors {
-            get {
-                return ResourceManager.GetString("Contributors", resourceCulture);
+                return ResourceManager.GetString("EnumComparedSaveSlotsIfDifferent", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Don&apos;t show ähnelt.
         /// </summary>
-        public static string DontShow {
+        public static string EnumDontShow {
             get {
-                return ResourceManager.GetString("DontShow", resourceCulture);
+                return ResourceManager.GetString("EnumDontShow", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Download file &apos;{0}&apos;? ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die #1 ähnelt.
         /// </summary>
-        public static string DownloadConfirmationFileTemplate {
+        public static string EnumSaveSlot1 {
             get {
-                return ResourceManager.GetString("DownloadConfirmationFileTemplate", resourceCulture);
+                return ResourceManager.GetString("EnumSaveSlot1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #1 only ähnelt.
+        /// </summary>
+        public static string EnumSaveSlot1Only {
+            get {
+                return ResourceManager.GetString("EnumSaveSlot1Only", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #2 ähnelt.
+        /// </summary>
+        public static string EnumSaveSlot2 {
+            get {
+                return ResourceManager.GetString("EnumSaveSlot2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #2 only ähnelt.
+        /// </summary>
+        public static string EnumSaveSlot2Only {
+            get {
+                return ResourceManager.GetString("EnumSaveSlot2Only", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #3 ähnelt.
+        /// </summary>
+        public static string EnumSaveSlot3 {
+            get {
+                return ResourceManager.GetString("EnumSaveSlot3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #3 only ähnelt.
+        /// </summary>
+        public static string EnumSaveSlot3Only {
+            get {
+                return ResourceManager.GetString("EnumSaveSlot3Only", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #4 ähnelt.
+        /// </summary>
+        public static string EnumSaveSlot4 {
+            get {
+                return ResourceManager.GetString("EnumSaveSlot4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die #4 only ähnelt.
+        /// </summary>
+        public static string EnumSaveSlot4Only {
+            get {
+                return ResourceManager.GetString("EnumSaveSlot4Only", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Additional comparisons ähnelt.
+        /// </summary>
+        public static string LabelAdditionalComparisons {
+            get {
+                return ResourceManager.GetString("LabelAdditionalComparisons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Version ähnelt.
+        /// </summary>
+        public static string LabelAppVersion {
+            get {
+                return ResourceManager.GetString("LabelAppVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Auto translate ähnelt.
+        /// </summary>
+        public static string LabelAutoTranslate {
+            get {
+                return ResourceManager.GetString("LabelAutoTranslate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Changelog ähnelt.
+        /// </summary>
+        public static string LabelChangeLog {
+            get {
+                return ResourceManager.GetString("LabelChangeLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Colorize output ähnelt.
+        /// </summary>
+        public static string LabelColorizeOutput {
+            get {
+                return ResourceManager.GetString("LabelColorizeOutput", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die File ähnelt.
         /// </summary>
-        public static string File {
+        public static string LabelFile {
             get {
-                return ResourceManager.GetString("File", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Awesome pages for an awesome game ähnelt.
-        /// </summary>
-        public static string HintAwesomeSoE {
-            get {
-                return ResourceManager.GetString("HintAwesomeSoE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Compare SRAM files ähnelt.
-        /// </summary>
-        public static string HintButtonCompare {
-            get {
-                return ResourceManager.GetString("HintButtonCompare", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Download changed file ähnelt.
-        /// </summary>
-        public static string HintButtonDownloadChangedFile {
-            get {
-                return ResourceManager.GetString("HintButtonDownloadChangedFile", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Get offset value ähnelt.
-        /// </summary>
-        public static string HintButtonGetOffsetValue {
-            get {
-                return ResourceManager.GetString("HintButtonGetOffsetValue", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Set offset value ähnelt.
-        /// </summary>
-        public static string HintButtonSetOffsetValue {
-            get {
-                return ResourceManager.GetString("HintButtonSetOffsetValue", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Community (Discord, Forum, etc.) ähnelt.
-        /// </summary>
-        public static string HintCommunity {
-            get {
-                return ResourceManager.GetString("HintCommunity", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Copy text to clipboard ähnelt.
-        /// </summary>
-        public static string HintCopyButton {
-            get {
-                return ResourceManager.GetString("HintCopyButton", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Copy localization to clipboard ähnelt.
-        /// </summary>
-        public static string HintCopyLocalizationButton {
-            get {
-                return ResourceManager.GetString("HintCopyLocalizationButton", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Direct Discord invite ähnelt.
-        /// </summary>
-        public static string HintDiscord {
-            get {
-                return ResourceManager.GetString("HintDiscord", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Download Console App ähnelt.
-        /// </summary>
-        public static string HintDownload {
-            get {
-                return ResourceManager.GetString("HintDownload", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Download as text file ähnelt.
-        /// </summary>
-        public static string HintDownloadFile {
-            get {
-                return ResourceManager.GetString("HintDownloadFile", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Sources at GitHub ähnelt.
-        /// </summary>
-        public static string HintGitHub {
-            get {
-                return ResourceManager.GetString("HintGitHub", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Console App Guide ähnelt.
-        /// </summary>
-        public static string HintGuide {
-            get {
-                return ResourceManager.GetString("HintGuide", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Console App Imagery ähnelt.
-        /// </summary>
-        public static string HintImagery {
-            get {
-                return ResourceManager.GetString("HintImagery", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Link opens in a new tab ähnelt.
-        /// </summary>
-        public static string HintLinkOpensInNewTab {
-            get {
-                return ResourceManager.GetString("HintLinkOpensInNewTab", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Compare non-save slot area byte by byte (area beyond all save slots) ähnelt.
-        /// </summary>
-        public static string HintNonSaveSlotByteByByteComparison {
-            get {
-                return ResourceManager.GetString("HintNonSaveSlotByteByByteComparison", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Format exploration status ähnelt.
-        /// </summary>
-        public static string HintProjectStatus {
-            get {
-                return ResourceManager.GetString("HintProjectStatus", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Compare whole save slot area byte by byte (including the &quot;knowns&quot; areas) ähnelt.
-        /// </summary>
-        public static string HintSaveSlotByteByByteComparison {
-            get {
-                return ResourceManager.GetString("HintSaveSlotByteByByteComparison", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die The relative offset within the gameslot area ähnelt.
-        /// </summary>
-        public static string HintSaveSlotOffset {
-            get {
-                return ResourceManager.GetString("HintSaveSlotOffset", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Documentation ähnelt.
-        /// </summary>
-        public static string HintSramDocu {
-            get {
-                return ResourceManager.GetString("HintSramDocu", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die This value changes at every in-game save - maybe a timestamp or similar ähnelt.
-        /// </summary>
-        public static string HintUnknown12B {
-            get {
-                return ResourceManager.GetString("HintUnknown12B", resourceCulture);
+                return ResourceManager.GetString("LabelFile", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die known bytes ähnelt.
         /// </summary>
-        public static string KnownBytes {
+        public static string LabelKnownBytes {
             get {
-                return ResourceManager.GetString("KnownBytes", resourceCulture);
+                return ResourceManager.GetString("LabelKnownBytes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Link opens in a new tab ähnelt.
+        /// </summary>
+        public static string LabelLinkOpensInNewTab {
+            get {
+                return ResourceManager.GetString("LabelLinkOpensInNewTab", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die mandatory ähnelt.
         /// </summary>
-        public static string Mandatory {
+        public static string LabelMandatory {
             get {
-                return ResourceManager.GetString("Mandatory", resourceCulture);
+                return ResourceManager.GetString("LabelMandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Offset value ähnelt.
+        /// </summary>
+        public static string LabelOffsetValue {
+            get {
+                return ResourceManager.GetString("LabelOffsetValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show additional save slot information ähnelt.
+        /// </summary>
+        public static string LabelShowAdditionalSaveSlotInformation {
+            get {
+                return ResourceManager.GetString("LabelShowAdditionalSaveSlotInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compare non-save slot area byte by byte (area beyond all save slots) ähnelt.
+        /// </summary>
+        public static string LabelTitleNonSaveSlotByteByByteComparison {
+            get {
+                return ResourceManager.GetString("LabelTitleNonSaveSlotByteByByteComparison", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Format Exploration Project ähnelt.
+        /// </summary>
+        public static string LabelTitleProjectName {
+            get {
+                return ResourceManager.GetString("LabelTitleProjectName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Format exploration status ähnelt.
+        /// </summary>
+        public static string LabelTitleProjectStatus {
+            get {
+                return ResourceManager.GetString("LabelTitleProjectStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compare whole save slot area byte by byte (including the &quot;knowns&quot; areas) ähnelt.
+        /// </summary>
+        public static string LabelTitleSaveSlotByteByByteComparison {
+            get {
+                return ResourceManager.GetString("LabelTitleSaveSlotByteByByteComparison", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The relative offset within the gameslot area ähnelt.
+        /// </summary>
+        public static string LabelTitleSaveSlotOffset {
+            get {
+                return ResourceManager.GetString("LabelTitleSaveSlotOffset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die This value changes at every in-game save - maybe a timestamp or similar ähnelt.
+        /// </summary>
+        public static string LabelTitleUnknown12B {
+            get {
+                return ResourceManager.GetString("LabelTitleUnknown12B", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die unknown bytes ähnelt.
+        /// </summary>
+        public static string LabelUnknownBytes {
+            get {
+                return ResourceManager.GetString("LabelUnknownBytes", resourceCulture);
             }
         }
         
@@ -646,6 +673,96 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Info ähnelt.
+        /// </summary>
+        public static string MenuTitleAbout {
+            get {
+                return ResourceManager.GetString("MenuTitleAbout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Awesome pages for an awesome game ähnelt.
+        /// </summary>
+        public static string MenuTitleAwesomeSoE {
+            get {
+                return ResourceManager.GetString("MenuTitleAwesomeSoE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Community (Discord, Forum, etc.) ähnelt.
+        /// </summary>
+        public static string MenuTitleCommunity {
+            get {
+                return ResourceManager.GetString("MenuTitleCommunity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Direct Discord invite ähnelt.
+        /// </summary>
+        public static string MenuTitleDiscord {
+            get {
+                return ResourceManager.GetString("MenuTitleDiscord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download Console App ähnelt.
+        /// </summary>
+        public static string MenuTitleDownload {
+            get {
+                return ResourceManager.GetString("MenuTitleDownload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Console App Guide ähnelt.
+        /// </summary>
+        public static string MenuTitleGuide {
+            get {
+                return ResourceManager.GetString("MenuTitleGuide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Console App Imagery ähnelt.
+        /// </summary>
+        public static string MenuTitleImagery {
+            get {
+                return ResourceManager.GetString("MenuTitleImagery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sources at GitHub ähnelt.
+        /// </summary>
+        public static string MenuTitleSources {
+            get {
+                return ResourceManager.GetString("MenuTitleSources", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Documentation ähnelt.
+        /// </summary>
+        public static string MenuTitleSramDocu {
+            get {
+                return ResourceManager.GetString("MenuTitleSramDocu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compare ähnelt.
+        /// </summary>
+        public static string MenuWebComparison {
+            get {
+                return ResourceManager.GetString("MenuWebComparison", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Offset Edit ähnelt.
         /// </summary>
         public static string MenuWebOffsetEdit {
@@ -660,177 +777,6 @@ namespace WebApp.SoE.Properties {
         public static string MenuWebTools {
             get {
                 return ResourceManager.GetString("MenuWebTools", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Copied to clipboard! ähnelt.
-        /// </summary>
-        public static string MessageCopiedToClipboard {
-            get {
-                return ResourceManager.GetString("MessageCopiedToClipboard", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Offset value ähnelt.
-        /// </summary>
-        public static string OffsetValue {
-            get {
-                return ResourceManager.GetString("OffsetValue", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die The source code is hosted at  ähnelt.
-        /// </summary>
-        public static string OpenSourceInfoFragment {
-            get {
-                return ResourceManager.GetString("OpenSourceInfoFragment", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Pages ähnelt.
-        /// </summary>
-        public static string Pages {
-            get {
-                return ResourceManager.GetString("Pages", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Prerequisites ähnelt.
-        /// </summary>
-        public static string Prerequisites {
-            get {
-                return ResourceManager.GetString("Prerequisites", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Format Exploration Project ähnelt.
-        /// </summary>
-        public static string ProjectName {
-            get {
-                return ResourceManager.GetString("ProjectName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Read Me ähnelt.
-        /// </summary>
-        public static string ReadMe {
-            get {
-                return ResourceManager.GetString("ReadMe", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #1 ähnelt.
-        /// </summary>
-        public static string SaveSlot1 {
-            get {
-                return ResourceManager.GetString("SaveSlot1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #1 only ähnelt.
-        /// </summary>
-        public static string SaveSlot1Only {
-            get {
-                return ResourceManager.GetString("SaveSlot1Only", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #2 ähnelt.
-        /// </summary>
-        public static string SaveSlot2 {
-            get {
-                return ResourceManager.GetString("SaveSlot2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #2 only ähnelt.
-        /// </summary>
-        public static string SaveSlot2Only {
-            get {
-                return ResourceManager.GetString("SaveSlot2Only", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #3 ähnelt.
-        /// </summary>
-        public static string SaveSlot3 {
-            get {
-                return ResourceManager.GetString("SaveSlot3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #3 only ähnelt.
-        /// </summary>
-        public static string SaveSlot3Only {
-            get {
-                return ResourceManager.GetString("SaveSlot3Only", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #4 ähnelt.
-        /// </summary>
-        public static string SaveSlot4 {
-            get {
-                return ResourceManager.GetString("SaveSlot4", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #4 only ähnelt.
-        /// </summary>
-        public static string SaveSlot4Only {
-            get {
-                return ResourceManager.GetString("SaveSlot4Only", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Show additional save slot information ähnelt.
-        /// </summary>
-        public static string ShowAdditionalSaveSlotInformation {
-            get {
-                return ResourceManager.GetString("ShowAdditionalSaveSlotInformation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Info ähnelt.
-        /// </summary>
-        public static string TitleInfo {
-            get {
-                return ResourceManager.GetString("TitleInfo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die unknown bytes ähnelt.
-        /// </summary>
-        public static string UnknownBytes {
-            get {
-                return ResourceManager.GetString("UnknownBytes", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Compare ähnelt.
-        /// </summary>
-        public static string WebComparison {
-            get {
-                return ResourceManager.GetString("WebComparison", resourceCulture);
             }
         }
     }

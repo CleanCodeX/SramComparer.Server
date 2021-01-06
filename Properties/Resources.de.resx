@@ -11,85 +11,82 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
-	<data name="AdditionalComparisons" xml:space="preserve">
+	<data name="LabelAdditionalComparisons" xml:space="preserve">
 		<value>Zusätzliche Vergleiche</value>
 	</data>
-	<data name="ComparedSaveSlots" xml:space="preserve">
+	<data name="EnumComparedSaveSlots" xml:space="preserve">
 		<value>Verglichene Speicherslots</value>
 	</data>
-	<data name="HintButtonCompare" xml:space="preserve">
+	<data name="ButtonTitleCompare" xml:space="preserve">
 		<value>Vergleiche SRAM-Dateien</value>
 	</data>
-	<data name="DontShow" xml:space="preserve">
+	<data name="EnumDontShow" xml:space="preserve">
 		<value>Nicht anzeigen</value>
 	</data>
-	<data name="SaveSlot1Only" xml:space="preserve">
+	<data name="EnumSaveSlot1Only" xml:space="preserve">
 		<value>Nur #1</value>
 	</data>
-	<data name="SaveSlot2Only" xml:space="preserve">
+	<data name="EnumSaveSlot2Only" xml:space="preserve">
 		<value>Nur #2</value>
 	</data>
-	<data name="SaveSlot4Only" xml:space="preserve">
+	<data name="EnumSaveSlot4Only" xml:space="preserve">
 		<value>Nur #4</value>
 	</data>
-	<data name="SaveSlot3Only" xml:space="preserve">
+	<data name="EnumSaveSlot3Only" xml:space="preserve">
 		<value>Nur #3</value>
 	</data>
-	<data name="Mandatory" xml:space="preserve">
+	<data name="LabelMandatory" xml:space="preserve">
 		<value>Pflichtfeld</value>
 	</data>
-	<data name="HintNonSaveSlotByteByByteComparison" xml:space="preserve">
+	<data name="LabelTitleNonSaveSlotByteByByteComparison" xml:space="preserve">
 		<value>Gesamten nicht-Speicherslot Byte für Byte vergleichen (Bereich jenseits aller Speicherslots)</value>
 	</data>
-	<data name="ShowAdditionalSaveSlotInformation" xml:space="preserve">
+	<data name="LabelShowAdditionalSaveSlotInformation" xml:space="preserve">
 		<value>Zusätzliche Speicherslot-Informationen anzeigen</value>
 	</data>
-	<data name="HintUnknown12B" xml:space="preserve">
+	<data name="LabelTitleUnknown12B" xml:space="preserve">
 		<value>Dieser Wert ändert sich bei jedem In-game Speichern - vielleicht ein Zeitstempel oder ähnliches</value>
 	</data>
-	<data name="ColorizeOutput" xml:space="preserve">
+	<data name="LabelColorizeOutput" xml:space="preserve">
 		<value>Eingefärbte Ausgabe verwenden</value>
 	</data>
-	<data name="WebComparison" xml:space="preserve">
+	<data name="MenuWebComparison" xml:space="preserve">
 		<value>Vergleichen</value>
 	</data>
-	<data name="HintSaveSlotByteByByteComparison" xml:space="preserve">
+	<data name="LabelTitleSaveSlotByteByByteComparison" xml:space="preserve">
 		<value>Gesamten Speicherslot Byte für Byte vergleichen (inkl. der "bekannten" Bereiche)</value>
 	</data>
-	<data name="OffsetValue" xml:space="preserve">
+	<data name="LabelOffsetValue" xml:space="preserve">
 		<value>Offset-Wert</value><comment>The term Offset should only be translated if not understandable</comment>
-	</data>
-	<data name="OpenSourceInfoFragment" xml:space="preserve">
-		<value>ist ein Open-Source Tool gehostet auf</value>
 	</data>
 	<data name="MenuWebOffsetEdit" xml:space="preserve">
 		<value>Offset-Bearbeitung</value><comment>The term Offset should only be translated if not understandable</comment>
 	</data>
-	<data name="SaveSlot1" xml:space="preserve">
+	<data name="EnumSaveSlot1" xml:space="preserve">
 		<value>#1</value>
 	</data>
-	<data name="SaveSlot2" xml:space="preserve">
+	<data name="EnumSaveSlot2" xml:space="preserve">
 		<value>#2</value>
 	</data>
-	<data name="SaveSlot3" xml:space="preserve">
+	<data name="EnumSaveSlot3" xml:space="preserve">
 		<value>#3</value>
 	</data>
-	<data name="SaveSlot4" xml:space="preserve">
+	<data name="EnumSaveSlot4" xml:space="preserve">
 		<value>#4</value>
 	</data>
 	<data name="CaptionWebOffsetEdit" xml:space="preserve">
 		<value>SRAM - Web Offset Änderung</value><comment>The term Offset should only be translated if not understandable</comment>
 	</data>
-	<data name="DownloadConfirmationFileTemplate" xml:space="preserve">
+	<data name="AlertDownloadConfirmationFileTemplate" xml:space="preserve">
 		<value>Datei '{0}' herunterladen?</value>
 	</data>
-	<data name="HintButtonGetOffsetValue" xml:space="preserve">
+	<data name="ButtonTitleGetOffsetValue" xml:space="preserve">
 		<value>Lade einen Offset-Wert</value><comment>The term Offset should only be translated if not understandable</comment>
 	</data>
-	<data name="HintButtonSetOffsetValue" xml:space="preserve">
+	<data name="ButtonTitleSetOffsetValue" xml:space="preserve">
 		<value>Setze einen Offset-Wert</value><comment>The term Offset should only be translated if not understandable</comment>
 	</data>
-	<data name="HintButtonDownloadChangedFile" xml:space="preserve">
+	<data name="ButtonTitleDownloadChangedFile" xml:space="preserve">
 		<value>Geänderte Datei herunterladen</value>
 	</data>
 	<data name="MenuChangeLog" xml:space="preserve">
@@ -98,22 +95,19 @@
 	<data name="ButtonCopy" xml:space="preserve">
 		<value>In die Zwischenablage kopieren</value>
 	</data>
-	<data name="MessageCopiedToClipboard" xml:space="preserve">
+	<data name="AlertCopiedToClipboard" xml:space="preserve">
 		<value>In die Zwischenablage kopiert!</value>
 	</data>
 	<data name="ButtonDownloadFile" xml:space="preserve">
     <value>Herunterladen</value>
   </data>
-	<data name="HintDownloadFile" xml:space="preserve">
+	<data name="ButtonTitleDownloadFile" xml:space="preserve">
     <value>Als Text-Datei herunterladen</value>
   </data>
-	<data name="AppCompiledAt" xml:space="preserve">
-		<value>Kompilierungsdatum</value>
-	</data>
-	<data name="AppVersion" xml:space="preserve">
+	<data name="LabelAppVersion" xml:space="preserve">
 		<value>Version</value>
 	</data>
-	<data name="HintCopyButton" xml:space="preserve">
+	<data name="ButtonTitleCopy" xml:space="preserve">
 		<value>Text in Zwischenablage kopieren</value>
 	</data>
 	<data name="ButtonGetValue" xml:space="preserve">
@@ -125,10 +119,7 @@
 	<data name="MenuAwesomeSoE" xml:space="preserve">
 		<value>Awesome SoE</value>
 	</data>
-	<data name="Pages" xml:space="preserve">
-    <value>Seiten</value>
-  </data>
-	<data name="ChangeLog" xml:space="preserve">
+	<data name="LabelChangeLog" xml:space="preserve">
 		<value>Change-Log</value>
 	</data>
 	<data name="MenuFeatures" xml:space="preserve">
@@ -140,12 +131,6 @@
 	<data name="MenuImagery" xml:space="preserve">
 		<value>Bilder</value>
 	</data>
-	<data name="Prerequisites" xml:space="preserve">
-		<value>Voraussetzungen</value>
-	</data>
-	<data name="ReadMe" xml:space="preserve">
-		<value>Lies Mich</value>
-	</data>
 	<data name="MenuWebTools" xml:space="preserve">
 		<value>Web - Tools</value>
 	</data>
@@ -155,7 +140,7 @@
 	<data name="MenuHistory" xml:space="preserve">
 		<value>Historie</value>
 	</data>
-	<data name="HintLinkOpensInNewTab" xml:space="preserve">
+	<data name="LabelLinkOpensInNewTab" xml:space="preserve">
 		<value>Link öffnet sich in einem neuen Tab</value>
 	</data>
 	<data name="MenuTheUnknowns" xml:space="preserve">
@@ -164,7 +149,7 @@
 	<data name="MenuDocumentation" xml:space="preserve">
 		<value>Dokumentation</value>
 	</data>
-	<data name="HintAwesomeSoE" xml:space="preserve">
+	<data name="MenuTitleAwesomeSoE" xml:space="preserve">
 		<value>Awesome Seiten für ein awesome Spiel</value>
 	</data>
 	<data name="MenuSupport" xml:space="preserve">
@@ -185,70 +170,67 @@
 	<data name="CaptionWebCompare" xml:space="preserve">
 		<value>SRAM - Web Vergleich</value>
 	</data>
-	<data name="KnownBytes" xml:space="preserve">
+	<data name="LabelKnownBytes" xml:space="preserve">
 		<value>bekannte Bytes</value>
 	</data>
-	<data name="UnknownBytes" xml:space="preserve">
+	<data name="LabelUnknownBytes" xml:space="preserve">
 		<value>unbekannte Bytes</value>
 	</data>
-	<data name="HintProjectStatus" xml:space="preserve">
+	<data name="LabelTitleProjectStatus" xml:space="preserve">
 		<value>Entdeckungs-Status</value>
 	</data>
-	<data name="TitleInfo" xml:space="preserve">
+	<data name="MenuTitleAbout" xml:space="preserve">
 		<value>Info</value>
 	</data>
-	<data name="ProjectName" xml:space="preserve">
+	<data name="LabelTitleProjectName" xml:space="preserve">
 		<value>Format Erkundungs Projekt</value>
 	</data>
 	<data name="MenuAbout" xml:space="preserve">
 		<value>Info</value>
 	</data>
-	<data name="Contributors" xml:space="preserve">
-		<value>Beitragende</value>
-	</data>
 	<data name="MenuQuickLinks" xml:space="preserve">
 		<value>Quicklinks</value>
 	</data>
-	<data name="File" xml:space="preserve">
+	<data name="LabelFile" xml:space="preserve">
 		<value>Datei</value>
 	</data>
-	<data name="HintSaveSlotOffset" xml:space="preserve">
+	<data name="LabelTitleSaveSlotOffset" xml:space="preserve">
 		<value>Das relative Offset innerhalb des Speicherslot-Bereichs</value>
 	</data>
-	<data name="ComparedSaveSlotsIfDifferent" xml:space="preserve">
+	<data name="EnumComparedSaveSlotsIfDifferent" xml:space="preserve">
 		<value>Verglichene Speicherslots falls unterschiedlich</value>
 	</data>
-	<data name="HintCommunity" xml:space="preserve">
+	<data name="MenuTitleCommunity" xml:space="preserve">
 		<value>Community (Discord, Forum, etc.)</value>
 	</data>
-	<data name="HintDownload" xml:space="preserve">
+	<data name="MenuTitleDownload" xml:space="preserve">
 		<value>Download der Konsolen-Anwendung</value>
 	</data>
-	<data name="HintSramDocu" xml:space="preserve">
+	<data name="MenuTitleSramDocu" xml:space="preserve">
 		<value>SRAM-Dokumentation</value>
 	</data>
-	<data name="HintGitHub" xml:space="preserve">
+	<data name="MenuTitleSources" xml:space="preserve">
 		<value>Quellcodes auf GitHub</value>
 	</data>
-	<data name="HintImagery" xml:space="preserve">
+	<data name="MenuTitleImagery" xml:space="preserve">
 		<value>Bilder der Konsolen-Anwendung</value>
 	</data>
-	<data name="HintGuide" xml:space="preserve">
+	<data name="MenuTitleGuide" xml:space="preserve">
 		<value>Bedienungsanleitung der Konsolen-Anwendung</value>
 	</data>
-	<data name="HintDiscord" xml:space="preserve">
+	<data name="MenuTitleDiscord" xml:space="preserve">
 		<value>Direkte Discord-Einladung</value>
 	</data>
-	<data name="AllSaveSlots" xml:space="preserve">
+	<data name="EnumAllSaveSlots" xml:space="preserve">
 		<value>Alle Speicherslots</value>
 	</data>
-	<data name="AutoTranslate" xml:space="preserve">
+	<data name="LabelAutoTranslate" xml:space="preserve">
 		<value>Auto-Übersetzung</value>
 	</data>
-	<data name="ButtonTitleDisableAutoTranslate" xml:space="preserve">
+	<data name="ButtonTitleDisableAutoTranslation" xml:space="preserve">
 		<value>Auto-Übersetzung deaktivieren</value>
 	</data>
-	<data name="ButtonTitleEnableAutoTranslate" xml:space="preserve">
+	<data name="ButtonTitleEnableAutoTranslation" xml:space="preserve">
 		<value>Auto-Übersetzung aktivieren</value>
 	</data>
 	<data name="ButtonOn" xml:space="preserve">
@@ -263,7 +245,7 @@
 	<data name="ButtonHideLocalization" xml:space="preserve">
 		<value>Lokalisierung ausblenden</value>
 	</data>
-	<data name="HintCopyLocalizationButton" xml:space="preserve">
+	<data name="ButtonTitleCopyLocalization" xml:space="preserve">
 		<value>Die Lokalisierung in die Zwischen ablage kopieren</value>
 	</data>
 	<data name="MenuGuide" xml:space="preserve">

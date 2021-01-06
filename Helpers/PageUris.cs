@@ -2,32 +2,32 @@
 {
 	internal static class PageUris
 	{
-		public const string Compare = "/compare";
+		public const string Compare = "/" + nameof(Compare);
 
 		public const string OffsetEdit = "/offset-edit";
 
-		public const string About = "/about";
-		public const string Contributors = "/contributors";
-		public const string Contributor = "/contributor";
-		public const string Localize = "/localize";
-		public const string Features = "/features";
+		public const string About = "/" + nameof(About);
+		public const string Contributors = "/" + nameof(Contributors);
+		public const string Contributor = "/" + nameof(Contributor);
+		public const string Localize = "/" + nameof(Localize);
+		public const string Features = "/" + nameof(Features);
 
-		public const string Guide = "/guide";
+		public const string Guide = "/" + nameof(Guide);
 
-		public const string Glossary = "/glossary";
-		public const string Imagery = "/imagery";
-		public const string Prerequisites = "/prerequisites";
-		public const string Goals = "/goals";
-		public const string Unknowns = "/unknowns";
-		public const string Contribute = "/contribute";
+		public const string Glossary = "/" + nameof(Glossary);
+		public const string Imagery = "/" + nameof(Imagery);
+		public const string Prerequisites = "/" + nameof(Prerequisites);
+		public const string Goals = "/" + nameof(Goals);
+		public const string Unknowns = "/" + nameof(Unknowns);
+		public const string Contribute = "/" + nameof(Contribute);
 		public const string ChangelogWeb = "/changelog-web";
 		public const string ChangelogConsole = "/changelog-console";
 		
-		public const string Awesome = "/awesome";
-		public const string GitHub = "/github";
-		public const string Support = "/support";
-		public const string Community = "/community";
-		public const string SramDocu = "/sramdocu";
+		public const string Awesome = "/" + nameof(Awesome);
+		public const string Sources = "/" + nameof(Sources);
+		public const string Support = "/" + nameof(Support);
+		public const string Community = "/" + nameof(Community);
+		public const string SramDocu = "/" + nameof(SramDocu);
 		public const string Discord = "https://discord.gg/s4wTHQgxae";
 		
 		public const string Page = "/p";
