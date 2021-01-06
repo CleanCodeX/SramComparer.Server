@@ -9,5 +9,5 @@ Info: Links werden in einem neuen Tab geöffnet
 
 * Es gibt auch einen <a href=https://discord.gg/s4wTHQgxae target=_>Discord</a>
 
-* Oder sende eine old-school <a hef="mailto:evermore@SECRETOFxeth.de?Subject=Format%20Exploration%20Projekt">E-Mail</a> durch entfernen des SECRETOF-Teils
+* Oder sende eine old-school <a href="mailto:evermore@SECRETOFxeth.de?Subject=Format%20Exploration%20Projekt">E-Mail</a> durch entfernen des SECRETOF-Teils
 
