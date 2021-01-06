@@ -7,14 +7,14 @@ Das wäre wirklich cool. Deine Hilfe würde viel Zeit sparen, indem nicht zweima
 Tritt der SoE-Explorations-Community bei, um Bedeutungen für verschiedene SRAM-Offsets zu finden.
 Das geht mit folgenden Möglichkeiten:
 
-* [Webvergleich](compare)
-* [Windows Console App](changelog-console)
+* [Web Vergleich](compare)
+* [Windows Konsolen-App](changelog-console)
 
 Sobald du eine Bedeutung für einen Offset-Wert gefunden hast, versuche diesen Wert in anderen SRAM-Dateien (* .srm) zu setzen oder wegzunehmen um deinen Fund zu verifizieren.
 Das Lesen und Bearbeiten von Versatzwerten kann (u.a.) mit den folgenden Möglichkeiten erfolgen:
 
-* [Web Offset Editor](offset-edit)
-* [Windows Console App](changelog-console)
+* [Web Offset-Editor](offset-edit)
+* [Windows Konsolen-App](changelog-console)
 * Hex-Editor
 
 Veröffentliche deine Vermutungen und Funde in der [Community](community)!
