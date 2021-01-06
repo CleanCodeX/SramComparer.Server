@@ -1,8 +1,6 @@
 ﻿### Lokalisierung (Übersetzung)
 
 Sprichst du eine Sprache, welche diese Website derzeit nicht anbietet, bist aber der Meinung, dass sie unterstützt werden sollte?
-In diesem Fall könntest du eine Lokalisierung in deiner Sprache als Beitrag zu diesem Projekt in Betracht ziehen. 
-Du könntest den Zugang für Personen öffnen, welche nur *deine* Sprache verstehen. 
 
 Schau dir vorher die Lokalisierung im unteren Bereich an.
 

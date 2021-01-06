@@ -247,10 +247,10 @@
 		<value>Auto translate</value>
 	</data>
 	<data name="ButtonTitleDisableAutoTranslate" xml:space="preserve">
-		<value>Disable auto-translate</value>
+		<value>Désactiver la traduction automatique</value>
 	</data>
 	<data name="ButtonTitleEnableAutoTranslate" xml:space="preserve">
-		<value>Enable auto-translate</value>
+		<value>Activer la traduction automatique</value>
 	</data>
 	<data name="ButtonOn" xml:space="preserve">
 		<value>On</value>
@@ -263,5 +263,8 @@
 	</data>
 	<data name="ButtonHideLocalization" xml:space="preserve">
 		<value>Masquer la localisation</value>
+	</data>
+	<data name="HintCopyLocalizationButton" xml:space="preserve">
+		<value>Copier la localisation dans le presse-papiers</value>
 	</data>
 </root>

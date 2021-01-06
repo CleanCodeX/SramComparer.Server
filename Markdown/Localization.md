@@ -1,11 +1,10 @@
 ﻿### Localization
 
-Are you speaking a language which this website currently doesn't offer and you think it should support it? 
-Then consider providing a localization into your language as a contribution to this project. You might open access to guys who can only understand *your* language.
+Do you speak a language that this website doesn't currently offer but think you think it should be supported? 
 
-Have a look at the localization at the bottom. before
+Check out the localization in the bottom area beforehand.
 
-If you want to translate that, download the <a href=localization/csv>CSV-file</a> and open it in Excel or any other csv editor. 
-Make sure to not use semicola (;) in your translation because it is used as column delimiter.
+If you want to translate this, download the <a href=localization/csv>CSV file</a> and open it in Excel or any other CSV editor. 
+Make sure to not use semicolons (;) as it is used as column a separator.
 
-Submit the translation <a href="mailto:evermore@SECRETOFxeth.de?Subject=Format%20Exploration%20Projekt">here</a> by removing the SECRETOF part. ;-)
+Send the translation <a href="mailto:evermore@SECRETOFxeth.de?Subject=Format%20Exploration%20Projekt">here</a> and removing the SECRETOF part. ;-)

@@ -9,18 +9,21 @@ But after all this is a free time project and developing tools or finding offset
 ## Active Help
 If the goals of this project aren't clear yet, make sure to have read through the <a href=goals>goals</a> first.
 
-Assuming that you already did that, you might ask yourself what *you* can do.
+If you're wondering what can be done to help, there are a few things you can do:
 
 ### Comparing SRAMs
 
-If bits and bytes **are** your kind of thing, you might want to join the 'exploration army'. See <a href=Contribute>here</a> how it works.
+If bits and bytes **are** your thing, you could join the exploration team. Check out <a href=Contribute>here</a> how it works.
 
 ### Provide a localization
 
-If you're speaking a language which this website currently doesn't offer but you think it **should** do, then consider a localization into your language as a huge contribution to this project. You might open access to people who cannot understand the supported languages (well). If you want to get involved in the project, see <a href=localization>here</a> to do.
+Do you speak a language that this website doesn't currently offer but think you think it should be supported? 
+In that case, you could consider localization in your language. You could open this project up to people who only understand *your* language.
+
+If you want to do that, check out <a href=localization>here</a> how to proceed.
 
 ## Passive Help
-If bits and bytes **aren't** your kind of thing, hey no big deal, that's OK.
+If bits and bytes **aren't** your thing, hey no big deal, that's OK.
 
 If you just would like to see a poweful savegame editor in future then you might help with
 

@@ -17,6 +17,7 @@
 		public const string Manual = "/manual";
 		public const string Guide = "/guide";
 
+		public const string Glossary = "/glossary";
 		public const string Imagery = "/imagery";
 		public const string Goals = "/goals";
 		public const string Unknowns = "/unknowns";

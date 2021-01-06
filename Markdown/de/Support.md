@@ -7,17 +7,21 @@ Je mehr Menschen etwas beitragen, desto früher und besser die Ergebnisse.
 Aber letztendlich ist dies ein Freizeit-Projekt und die Entwicklung von Tools oder das Finden von Offset-Bedeutungen erfordert Hunderte, wahrscheinlich Tausende von Stunden.
 
 ## Aktive Hilfe
-Wenn die Ziele dieses Projekts noch nicht klar sind, lies zuerst die <a href=goals>Ziele</a> durch.
+Wenn das Ziel dieses Projekts noch nicht klar ist, lies zuerst das <a href=goals>Ziel</a> durch.
 
-Angenommen, dass du das bereits getan hast, wirst du dich vielleicht fragen, was *du* tun kannst.
+Falls du dich fragst, was tun kannst um zu helfen, gäbe es da ein paar Möglichkeiten:
 
 ### Vergleichen von SRAMs
 
-Falls Bits und Bytes genau dein Ding sind, könntest du der Exploration-Army beitreten. Sieh dir <a href=contribute>hier</a> an, wie es funktioniert.
+Falls Bits und Bytes genau dein Ding sind, könntest du dich in das Exploration Team einreihen. Sieh dir <a href=contribute>hier</a> an, wie es funktioniert.
 
 ### Biete eine Lokalisierung an
 
-Wenn du eine Sprache sprichst, die diese Website derzeit nicht anbietet, du aber der Meinung bist, dass sie das **sollte**, dann könntest du eine Lokalisierung in deiner Sprache als großen Beitrag zu diesem Projekt leisten. Du könntest den Zugang für Personen öffnen, die die unterstützten Sprachen nicht (gut) verstehen. Wenn du dich für das Projekt engagieren willst, schaue <a href=localization>hier</a> wie vorzugehen ist.
+Sprichst du eine Sprache, welche diese Website derzeit nicht anbietet, bist aber der Meinung, dass sie unterstützt werden sollte?
+In diesem Fall könntest du eine Lokalisierung in deiner Sprache in Betracht ziehen. 
+Du könntest den Zugang zu diesme Projekt für Personen öffnen, welche nur *deine* Sprache verstehen. 
+
+Wenn du das tun möchtest, schaue <a href=localization>hier</a> wie vorzugehen ist.
 
 ## Passive Hilfe
 Wenn Bits und Bytes nicht so dein Ding sind, dann ist das auch in Ordnung. 

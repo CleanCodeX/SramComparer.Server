@@ -1,0 +1,17 @@
+﻿@using WebApp.SoE.Helpers
+
+@attribute [Route(PageUris.Glossary)]
+@inherits AutoLangContentIdMarkupBase
+
+@if (ShowAutoTranslateOption)
+{
+	<TranslateButton @bind-Value="@AutoTranslate" />
+}
+
+<div class="markup">
+	@Content
+</div>
+
+@code {
+	protected override void OnParametersSet() => ContentId = (nameof(PageUris.Glossary));
+}

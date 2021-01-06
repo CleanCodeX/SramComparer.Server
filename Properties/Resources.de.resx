@@ -263,4 +263,7 @@
 	<data name="ButtonHideLocalization" xml:space="preserve">
 		<value>Lokalisierung ausblenden</value>
 	</data>
+	<data name="HintCopyLocalizationButton" xml:space="preserve">
+		<value>Die Lokalisierung in die Zwischen ablage kopieren</value>
+	</data>
 </root>

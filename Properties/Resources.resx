@@ -177,6 +177,9 @@
   <data name="HintCopyButton" xml:space="preserve">
     <value>Copy text to clipboard</value>
   </data>
+  <data name="HintCopyLocalizationButton" xml:space="preserve">
+    <value>Copy localization to clipboard</value>
+  </data>
   <data name="DownloadConfirmationFileTemplate" xml:space="preserve">
     <value>Download file '{0}'?</value>
   </data>

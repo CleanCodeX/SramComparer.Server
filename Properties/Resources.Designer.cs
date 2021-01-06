@@ -349,6 +349,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Copy localization to clipboard ähnelt.
+        /// </summary>
+        public static string HintCopyLocalizationButton {
+            get {
+                return ResourceManager.GetString("HintCopyLocalizationButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Direct Discord invite ähnelt.
         /// </summary>
         public static string HintDiscord {
