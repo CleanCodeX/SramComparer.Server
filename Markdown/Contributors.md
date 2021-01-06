@@ -1,5 +1,5 @@
 ﻿## Contributors
 
-* [endless90](contributor?c=endless90)
-* [Bumpy](contributor?c=Bumpy)
-* [Onox](contributor?c=Onox)
+* <a href=contributor?c=endless90>endless90</a>
+* <a href=contributor?c=Bumpy>Bumpy</a>
+* <a href=contributor?c=Onox>Onox</a>
