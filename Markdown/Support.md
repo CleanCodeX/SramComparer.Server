@@ -13,14 +13,14 @@ If you're wondering what can be done to help, there are a few things you can do:
 
 ### Comparing SRAMs
 
-If bits and bytes **are** your thing, you could join the exploration team. Check out <a href=Contribute>here</a> how it works.
+If bits and bytes **are** your thing, you could join the exploration team. Check out <a href=contribute>here</a> how it works.
 
 ### Provide a localization
 
 Do you speak a language that this website doesn't currently offer but think you think it should be supported? 
 In that case, you could consider localization in your language. You could open this project up to people who only understand *your* language.
 
-If you want to do that, check out <a href=localization>here</a> how to proceed.
+If you want to do that, check out <a href=localize>here</a> how to proceed.
 
 ## Passive Help
 If bits and bytes **aren't** your thing, hey no big deal, that's OK.

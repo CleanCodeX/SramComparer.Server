@@ -21,7 +21,7 @@ Sprichst du eine Sprache, welche diese Website derzeit nicht anbietet, bist aber
 In diesem Fall könntest du eine Lokalisierung in deiner Sprache in Betracht ziehen. 
 Du könntest den Zugang zu diesme Projekt für Personen öffnen, welche nur *deine* Sprache verstehen. 
 
-Wenn du das tun möchtest, schaue <a href=localization>hier</a> wie vorzugehen ist.
+Wenn du das tun möchtest, schaue <a href=localize>hier</a> wie vorzugehen ist.
 
 ## Passive Hilfe
 Wenn Bits und Bytes nicht so dein Ding sind, dann ist das auch in Ordnung. 
