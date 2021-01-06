@@ -68,7 +68,7 @@ namespace WebApp.SoE.Pages.Bases
 		{
 			if(content is null) return null;
 
-			return content.Remove("</ span>")!.Replace("] (", "](");
+			return content.FixAutoTranslatedText();
 		}
 	}
 }

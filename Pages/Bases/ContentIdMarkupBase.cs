@@ -32,7 +32,10 @@ namespace WebApp.SoE.Pages.Bases
 			if (await SetContentFromFileAsync(contentId))
 				return;
 
-			await SetContentFromUrlAsync(contentId);
+			if (await SetContentFromUrlAsync(contentId))
+				return;
+
+			await SetContentFromTextAsync($"Content '{ContentId}' not found :(");
 		}
 
 		protected override async Task<bool> SetContentFromUrlAsync(string page)

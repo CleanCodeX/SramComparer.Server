@@ -41,11 +41,11 @@
                     <span class="iconify" data-icon="oi-magnifying-glass"/>
                 </a>
                 @del
-                <a href="@PageUris.Offset" title="@Res.HintButtonSetOffsetValue">
+                <a href="@PageUris.OffsetEdit" title="@Res.HintButtonSetOffsetValue">
                     <span class="iconify" data-icon="oi-pencil"/>
                 </a>
                 @del
-                <a href="@PageUris.Downloads" title="@Res.HintDownload">
+                <a href="@PageUris.ChangelogConsole" title="@Res.HintDownload">
                     <span class="iconify" data-icon="oi-cloud-download"/>
                 </a>
                 @del
@@ -53,7 +53,7 @@
                     <span class="iconify" data-icon="oi-image"/>
                 </a>
                 @del
-                <a href="@PageUris.Manual" title="@Res.HintManual">
+                <a href="@PageUris.Guide" title="@Res.HintGuide">
                     <span class="iconify" data-icon="oi-document"/>
                 </a>
                 @sp @quickLinkCloser
@@ -129,13 +129,13 @@
                                     </NavLink>
                                 </li>
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.Downloads">
-                                        <span class="oi oi-arrow-circle-bottom" aria-hidden="true"/> @Res.MenuDownload.ReplaceSpaces()
+                                    <NavLink class="nav-link" href="@PageUris.ChangelogConsole">
+                                        <span class="oi oi-arrow-circle-bottom" aria-hidden="true"/> @Res.MenuChangeLog.ReplaceSpaces()
                                     </NavLink>
                                 </li>
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.Manual">
-                                        <span class="oi oi-document" aria-hidden="true"/> @ResComp.CommandManual.ReplaceSpaces()
+                                    <NavLink class="nav-link" href="@PageUris.Guide">
+                                        <span class="oi oi-document" aria-hidden="true"/> @Res.MenuGuide.ReplaceSpaces()
                                     </NavLink>
                                 </li>
                             </ol>
@@ -158,8 +158,8 @@
                                     </NavLink>
                                 </li>
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.Offset">
-                                        <span class="oi oi-pencil" aria-hidden="true"/> @Res.MenuWebOffset.ReplaceSpaces()
+                                    <NavLink class="nav-link" href="@PageUris.OffsetEdit">
+                                        <span class="oi oi-pencil" aria-hidden="true"/> @Res.MenuWebOffsetEdit.ReplaceSpaces()
                                     </NavLink>
                                 </li>
                             </ol>

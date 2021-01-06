@@ -1,4 +1,4 @@
-## How to use
+## Guide
 **Steps**:
 
 ***1.1)*** Before you start, have a look into <a href="unknowns">unknowns</a> to see examples of which parts of SRAM structure are still considered to be unknown. See some <a href="imagery">imagery</a> of how to interpret comparison results.

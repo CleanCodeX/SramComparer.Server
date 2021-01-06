@@ -62,8 +62,8 @@
 	<data name="OpenSourceInfoFragment" xml:space="preserve">
 		<value>ist ein Open-Source Tool gehostet auf</value>
 	</data>
-	<data name="MenuWebOffset" xml:space="preserve">
-		<value>Offset bearbeiten</value><comment>The term Offset should only be translated if not understandable</comment>
+	<data name="MenuWebOffsetEdit" xml:space="preserve">
+		<value>Offset-Bearbeitung</value><comment>The term Offset should only be translated if not understandable</comment>
 	</data>
 	<data name="SaveSlot1" xml:space="preserve">
 		<value>#1</value>
@@ -92,8 +92,8 @@
 	<data name="HintButtonDownloadChangedFile" xml:space="preserve">
 		<value>Geänderte Datei herunterladen</value>
 	</data>
-	<data name="MenuDownload" xml:space="preserve">
-		<value>Download</value>
+	<data name="MenuChangeLog" xml:space="preserve">
+		<value>Change-Log</value>
 	</data>
 	<data name="ButtonCopy" xml:space="preserve">
 		<value>In die Zwischenablage kopieren</value>
@@ -233,7 +233,7 @@
 	<data name="HintImagery" xml:space="preserve">
 		<value>Bilder der Konsolen-Anwendung</value>
 	</data>
-	<data name="HintManual" xml:space="preserve">
+	<data name="HintGuide" xml:space="preserve">
 		<value>Bedienungsanleitung der Konsolen-Anwendung</value>
 	</data>
 	<data name="HintDiscord" xml:space="preserve">
@@ -265,5 +265,8 @@
 	</data>
 	<data name="HintCopyLocalizationButton" xml:space="preserve">
 		<value>Die Lokalisierung in die Zwischen ablage kopieren</value>
+	</data>
+	<data name="MenuGuide" xml:space="preserve">
+		<value>Anleitung</value>
 	</data>
 </root>

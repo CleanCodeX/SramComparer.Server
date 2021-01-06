@@ -394,6 +394,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Console App Guide ähnelt.
+        /// </summary>
+        public static string HintGuide {
+            get {
+                return ResourceManager.GetString("HintGuide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Console App Imagery ähnelt.
         /// </summary>
         public static string HintImagery {
@@ -408,15 +417,6 @@ namespace WebApp.SoE.Properties {
         public static string HintLinkOpensInNewTab {
             get {
                 return ResourceManager.GetString("HintLinkOpensInNewTab", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Console App Manual ähnelt.
-        /// </summary>
-        public static string HintManual {
-            get {
-                return ResourceManager.GetString("HintManual", resourceCulture);
             }
         }
         
@@ -520,6 +520,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Changelog ähnelt.
+        /// </summary>
+        public static string MenuChangeLog {
+            get {
+                return ResourceManager.GetString("MenuChangeLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Community ähnelt.
         /// </summary>
         public static string MenuCommunity {
@@ -538,15 +547,6 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Download ähnelt.
-        /// </summary>
-        public static string MenuDownload {
-            get {
-                return ResourceManager.GetString("MenuDownload", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Features ähnelt.
         /// </summary>
         public static string MenuFeatures {
@@ -561,6 +561,15 @@ namespace WebApp.SoE.Properties {
         public static string MenuGoals {
             get {
                 return ResourceManager.GetString("MenuGoals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Guide ähnelt.
+        /// </summary>
+        public static string MenuGuide {
+            get {
+                return ResourceManager.GetString("MenuGuide", resourceCulture);
             }
         }
         
@@ -637,11 +646,11 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Edit offset ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Offset Edit ähnelt.
         /// </summary>
-        public static string MenuWebOffset {
+        public static string MenuWebOffsetEdit {
             get {
-                return ResourceManager.GetString("MenuWebOffset", resourceCulture);
+                return ResourceManager.GetString("MenuWebOffsetEdit", resourceCulture);
             }
         }
         

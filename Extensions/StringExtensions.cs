@@ -9,7 +9,7 @@ namespace WebApp.SoE.Extensions
 	/// <summary>
 	/// Various HTML extensions for strings
 	/// </summary>
-	public static class StringExtensions
+	public static partial class StringExtensions
 	{
 		/// <summary>Sets a fore color of a string</summary>
 		public static string ColorText(this string? source, Color color) => $"<span style='color:{color.Name}'>{source}</span>";

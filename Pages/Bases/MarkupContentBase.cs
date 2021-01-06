@@ -15,6 +15,12 @@ namespace WebApp.SoE.Pages.Bases
 
 		protected MarkupString Content { get; set; }
 
+		protected virtual async Task<bool> SetContentFromTextAsync(string text)
+		{
+			Content = await ParseContentAsync(text);
+			return Content.Value != string.Empty;
+		}
+
 		protected virtual async Task<bool> SetContentFromFileAsync(string filePath)
 		{
 			Content = await ParseContentAsync(LoadFromFile(filePath));

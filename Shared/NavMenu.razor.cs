@@ -54,11 +54,11 @@ namespace WebApp.SoE.Shared
 				PageUris.Features => ExpandedMenu.SramComparison,
 
 				PageUris.Imagery => ExpandedMenu.ConsoleApp,
-				PageUris.Downloads => ExpandedMenu.ConsoleApp,
-				PageUris.Manual => ExpandedMenu.ConsoleApp,
+				PageUris.ChangelogConsole => ExpandedMenu.ConsoleApp,
+				PageUris.Guide => ExpandedMenu.ConsoleApp,
 
 				PageUris.Compare => ExpandedMenu.WebTools,
-				PageUris.Offset => ExpandedMenu.WebTools,
+				PageUris.OffsetEdit => ExpandedMenu.WebTools,
 
 				PageUris.GitHub => ExpandedMenu.SramComparison,
 

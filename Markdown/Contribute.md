@@ -8,16 +8,16 @@ Join the SoE 'exploration' community to find meanings for various SRAM offsets.
 This can be done either by using 
 
 * [Web Comparison](compare)
-* [Windows Console App](downloads)
+* [Windows Console App](changelog-console)
 
 Once you found a meaning for an offset value, try to enable or disable this flag in other SRAM (*.srm) files to prove your find. 
 Reading and manipulating offset values can be done using the following: 
 
-* [Web Offset Editor](offset)
-* [Windows Console App](downloads)
+* [Web Offset Editor](offset-edit)
+* [Windows Console App](changelog-console)
 * Hex-editor
 
 Post your assumptions and finds in the [Community](community)!
 
-A manual for using the Console App can be found [here](manual). [Web Comparison](compare) is easier to use and works with any kind of modern browser.
+If you're unfamiliar with using the Console App check out the [guide](guide). [Web Comparison](compare) is easier to use and works with any kind of modern browser.
 

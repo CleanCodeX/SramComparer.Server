@@ -8,16 +8,16 @@ Tritt der SoE-Explorations-Community bei, um Bedeutungen für verschiedene SRAM-
 Das geht mit folgenden Möglichkeiten:
 
 * [Webvergleich](compare)
-* [Windows Console App](Downloads)
+* [Windows Console App](changelog-console)
 
 Sobald du eine Bedeutung für einen Offset-Wert gefunden hast, versuche diesen Wert in anderen SRAM-Dateien (* .srm) zu setzen oder wegzunehmen um deinen Fund zu verifizieren.
 Das Lesen und Bearbeiten von Versatzwerten kann (u.a.) mit den folgenden Möglichkeiten erfolgen:
 
-* [Web Offset Editor](Offset)
-* [Windows Console App](Downloads)
+* [Web Offset Editor](offset-edit)
+* [Windows Console App](changelog-console)
 * Hex-Editor
 
-Veröffentliche deine Vermutungen und Funde in der [Community](Community)!
+Veröffentliche deine Vermutungen und Funde in der [Community](community)!
 
-Eine Anleitung zur Verwendung der Konsolen-App findest du [hier](Manual). [Web-Vergleich](Compare) ist einfacher zu verwenden und funktioniert mit jedem modernen Browser.
+Falls du nicht vertraut mit der Verwendung der Konsolen-App bist, schaue in den [Guide](guide). [Web-Vergleich](compare) ist einfacher zu verwenden und funktioniert mit jedem modernen Browser.
 

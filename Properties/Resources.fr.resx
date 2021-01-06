@@ -123,8 +123,8 @@
 	<data name="MenuDocumentation" xml:space="preserve">
 		<value>Documentation</value>
 	</data>
-	<data name="MenuDownload" xml:space="preserve">
-		<value>Télécharger</value>
+	<data name="MenuChangeLog" xml:space="preserve">
+		<value>Historique</value>
 	</data>
 	<data name="MenuFeatures" xml:space="preserve">
 		<value>Caractéristiques</value>
@@ -156,7 +156,7 @@
 	<data name="MenuTheUnknowns" xml:space="preserve">
 		<value>Valeurs inconnues</value>
 	</data>
-	<data name="MenuWebOffset" xml:space="preserve">
+	<data name="MenuWebOffsetEdit" xml:space="preserve">
 		<value>Modifier le décalage</value>
 	</data>
 	<data name="MenuWebTools" xml:space="preserve">
@@ -234,7 +234,7 @@
 	<data name="HintImagery" xml:space="preserve">
 		<value>Captures d'écran de l'application console</value>
 	</data>
-	<data name="HintManual" xml:space="preserve">
+	<data name="HintGuide" xml:space="preserve">
 		<value>Manuel de l'application console</value>
 	</data>
 	<data name="HintDiscord" xml:space="preserve">
@@ -266,5 +266,8 @@
 	</data>
 	<data name="HintCopyLocalizationButton" xml:space="preserve">
 		<value>Copier la localisation dans le presse-papiers</value>
+	</data>
+	<data name="MenuGuide" xml:space="preserve">
+		<value>Manuel</value>
 	</data>
 </root>
