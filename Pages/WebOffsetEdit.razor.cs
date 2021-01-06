@@ -7,6 +7,7 @@ using WebApp.SoE.ViewModels;
 namespace WebApp.SoE.Pages
 {
 	[Route(PageUris.Offset)]
+	[Route(PageUris.OffsetEdit)]
 	public partial class WebOffsetEdit
 	{
 		private static readonly MarkupString Ns = (MarkupString)"&nbsp;";

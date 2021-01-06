@@ -3,15 +3,20 @@
 	internal static class PageUris
 	{
 		public const string Compare = "/compare";
+
 		public const string Offset = "/offset";
+		public const string OffsetEdit = "/offset-edit";
+
 		public const string About = "/about";
 		public const string Contributors = "/contributors";
 		public const string Contributor = "/contributor";
 		public const string Localization = "/localization";
-
 		public const string Downloads = "/downloads";
 		public const string Features = "/features";
+
 		public const string Manual = "/manual";
+		public const string Guide = "/guide";
+
 		public const string Imagery = "/imagery";
 		public const string Goals = "/goals";
 		public const string Unknowns = "/unknowns";
