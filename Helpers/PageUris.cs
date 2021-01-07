@@ -25,7 +25,7 @@
 		
 		public const string Awesome = "/" + nameof(Awesome);
 		public const string Sources = "/" + nameof(Sources);
-		public const string Support = "/" + nameof(Support);
+		public const string Supporting = "/" + nameof(Supporting);
 		public const string Community = "/" + nameof(Community);
 		public const string SramDocu = "/" + nameof(SramDocu);
 		public const string Discord = "https://discord.gg/s4wTHQgxae";
@@ -33,6 +33,6 @@
 		public const string Page = "/p";
 		public const string ContentPagePrefix = Page + "?c=";
 
-		public const string Index = Support;
+		public const string Index = Supporting;
 	}
 }

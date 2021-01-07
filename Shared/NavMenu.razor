@@ -18,7 +18,7 @@
                     <span class="iconify" data-icon="oi-document"/>
                 </a>
                 @del
-                <a href="@PageUris.Awesome" title="@Res.MenuTitleAwesomeSoE">
+                <a href="@PageUris.Awesome" title="@Res.MenuTitleAwesome">
                     <span class="iconify" data-icon="oi-star"/>
                 </a>
                 @del
@@ -31,21 +31,21 @@
                 </a>
                 @del
                 <a href="@PageUris.Sources" title="@Res.MenuTitleSources">
-                    <img src="media/GitHub.png" class="github"/>
+                    <img src="media/GitHub.png" class="github" />
                 </a>
                 @sp @quickLinkCloser
             </NavLink>
             <NavLink class="nav-link" href="@PageUris.Compare">
                 @quickLinkOpener @sp
-                <a href="@PageUris.Compare" title="@Res.ButtonTitleCompare">
+                <a href="@PageUris.Compare" title="@Res.MenuTitleCompare">
                     <span class="iconify" data-icon="oi-magnifying-glass"/>
                 </a>
                 @del
-                <a href="@PageUris.OffsetEdit" title="@Res.ButtonTitleSetOffsetValue">
+                <a href="@PageUris.OffsetEdit" title="@Res.MenuTitleOffsetEdit">
                     <span class="iconify" data-icon="oi-pencil"/>
                 </a>
                 @del
-                <a href="@PageUris.ChangelogConsole" title="@Res.MenuTitleDownload">
+                <a href="@PageUris.ChangelogConsole" title="@Res.MenuTitleChangeLog">
                     <span class="iconify" data-icon="oi-cloud-download"/>
                 </a>
                 @del
@@ -64,7 +64,7 @@
     <!-- SRAM Format -->
     <ol class="nav flex-column firstRow">
         <li class="nav-item px-3">
-            <a class="nav-link" href="@PageUris.Goals">
+            <a class="nav-link" href="@PageUris.Goals" title="@Res.MenuTitleGoals">
                 <span class="@(_sramFormat ? "oi oi-zoom-out" : "oi oi-zoom-in")"/> 
                 <span class="oi oi-code"/> @Res.MenuSramFormat.ReplaceSpaces() 
             </a>
@@ -73,23 +73,23 @@
             {
                 <ol class="nav flex-column">
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Goals">
+                        <NavLink class="nav-link" href="@PageUris.Goals" title="@Res.MenuTitleGoals">
                             <span class="oi oi-flag" aria-hidden="true"/> @Res.MenuGoals.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Unknowns">
+                        <NavLink class="nav-link" href="@PageUris.Unknowns" title="@Res.MenuTitleTheUnknowns">
                             <span class="oi oi-question-mark" aria-hidden="true"/> @Res.MenuTheUnknowns.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Contribute">
-                            <span class="oi oi-thumb-up" aria-hidden="true"/> @Res.MenuCanIHelp.ReplaceSpaces()
+                        <NavLink class="nav-link" href="@PageUris.Contribute" title="@Res.MenuTitleContribute">
+                            <span class="oi oi-thumb-up" aria-hidden="true"/> @Res.MenuContribute.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.SramDocu">
-                            <span class="oi oi-document" aria-hidden="true"/> @Res.MenuDocumentation.ReplaceSpaces()
+                        <NavLink class="nav-link" href="@PageUris.SramDocu" title="@Res.MenuTitleSramDocu">
+                            <span class="oi oi-document" aria-hidden="true"/> @Res.MenuSramDocu.ReplaceSpaces()
                         </NavLink>
                     </li>
                 </ol>
@@ -100,7 +100,7 @@
     <!-- SRAM Comparison -->
     <ol class="nav flex-column">
         <li class="nav-item px-3">
-            <a class="nav-link" href="@PageUris.Features">
+            <a class="nav-link" href="@PageUris.Features" title="@Res.MenuTitleFeatures">
                 <span class="@(_sramComparison ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
                 <span class="oi oi-eye"/> @Res.MenuSramComparison.ReplaceSpaces() 
             </a>
@@ -109,14 +109,14 @@
                 <ol class="nav flex-column">
                     <!-- Features -->
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Features">
+                        <NavLink class="nav-link" href="@PageUris.Features" title="@Res.MenuTitleFeatures">
                             <span class="oi oi-circle-check" aria-hidden="true"/> @Res.MenuFeatures.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <!-- / Features -->
                     <!-- SramComparerCmdApp -->
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="@PageUris.Imagery">
+                        <a class="nav-link" href="@PageUris.Imagery" title="@Res.MenuTitleImagery">
                             <span class="@(_consoleApp ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
                             <span class="oi oi-command" aria-hidden="true"/> @Res.MenuSramComparerCmdApp.ReplaceSpaces() 
                         </a>
@@ -124,17 +124,17 @@
                         {
                             <ol class="nav flex-column">
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.Imagery">
+                                    <NavLink class="nav-link" href="@PageUris.Imagery" title="@Res.MenuTitleImagery">
                                         <span class="oi oi-image" aria-hidden="true"/> @Res.MenuImagery.ReplaceSpaces()
                                     </NavLink>
                                 </li>
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.ChangelogConsole">
+                                    <NavLink class="nav-link" href="@PageUris.ChangelogConsole" title="@Res.MenuTitleChangeLog">
                                         <span class="oi oi-arrow-circle-bottom" aria-hidden="true"/> @Res.MenuChangeLog.ReplaceSpaces()
                                     </NavLink>
                                 </li>
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.Guide">
+                                    <NavLink class="nav-link" href="@PageUris.Guide" title="@Res.MenuTitleGuide">
                                         <span class="oi oi-document" aria-hidden="true"/> @Res.MenuGuide.ReplaceSpaces()
                                     </NavLink>
                                 </li>
@@ -144,7 +144,7 @@
                     <!-- / SramComparerCmdApp -->
                     <!-- WebTools -->
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="@PageUris.Compare">
+                        <a class="nav-link" href="@PageUris.Compare" title="@Res.MenuTitleCompare">
                             <span class="@(_webTools ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
                             <span class="oi oi-wrench" /> @Res.MenuWebTools.ReplaceSpaces() 
                         </a>
@@ -153,12 +153,12 @@
                         {
                             <ol class="nav flex-column">
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.Compare">
+                                    <NavLink class="nav-link" href="@PageUris.Compare" title="@Res.MenuTitleCompare">
                                         <span class="oi oi-eye" aria-hidden="true"/> @Res.MenuWebComparison.ReplaceSpaces()
                                     </NavLink>
                                 </li>
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.OffsetEdit">
+                                    <NavLink class="nav-link" href="@PageUris.OffsetEdit" title="@Res.MenuTitleOffsetEdit">
                                         <span class="oi oi-pencil" aria-hidden="true"/> @Res.MenuWebOffsetEdit.ReplaceSpaces()
                                     </NavLink>
                                 </li>
@@ -170,8 +170,8 @@
                 <!-- GitHub -->
                 <ol class="nav flex-column">
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Sources">
-                            <img src="media/Github.png" class="github" />@(sp)GitHub
+                        <NavLink class="nav-link" href="@PageUris.Sources" title="@Res.MenuTitleSources">
+                            <img src="media/Github.png" class="github" aria-hidden="true" />@(sp)GitHub
                         </NavLink>
                     </li>
                 </ol>
@@ -183,22 +183,22 @@
     <!-- Other -->
     <ol class="nav flex-column">
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.Support">
-                <span class="oi oi-heart" aria-hidden="true"/> @Res.MenuSupport.ReplaceSpaces()
+            <NavLink class="nav-link" href="@PageUris.Supporting" title="@Res.MenuTitleSupporting">
+                <span class="oi oi-heart" aria-hidden="true"/> @Res.MenuSupporting.ReplaceSpaces()
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.Community">
+            <NavLink class="nav-link" href="@PageUris.Community" title="@Res.MenuTitleCommunity">
                 <span class="oi oi-people" aria-hidden="true"/> @Res.MenuCommunity.ReplaceSpaces()
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.Awesome" title="@Res.MenuTitleAwesomeSoE">
+            <NavLink class="nav-link" href="@PageUris.Awesome" title="@Res.MenuTitleAwesome">
                 <span class="oi oi-star" aria-hidden="true"/> @Res.MenuAwesomeSoE.ReplaceSpaces()
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.About">
+            <NavLink class="nav-link" href="@PageUris.About" title="@Res.MenuTitleAbout">
                 <span class="oi oi-info" aria-hidden="true"/> @Res.MenuAbout.ReplaceSpaces()
             </NavLink>
         </li>

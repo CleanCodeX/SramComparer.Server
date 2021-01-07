@@ -125,7 +125,7 @@
 	<data name="MenuFeatures" xml:space="preserve">
 		<value>Features</value>
 	</data>
-	<data name="MenuCanIHelp" xml:space="preserve">
+	<data name="MenuContribute" xml:space="preserve">
 		<value>Kann ich helfen?</value>
 	</data>
 	<data name="MenuImagery" xml:space="preserve">
@@ -146,14 +146,14 @@
 	<data name="MenuTheUnknowns" xml:space="preserve">
 		<value>Das Unbekannte</value>
 	</data>
-	<data name="MenuDocumentation" xml:space="preserve">
+	<data name="MenuSramDocu" xml:space="preserve">
 		<value>Dokumentation</value>
 	</data>
-	<data name="MenuTitleAwesomeSoE" xml:space="preserve">
+	<data name="MenuTitleAwesome" xml:space="preserve">
 		<value>Awesome Seiten für ein awesome Spiel</value>
 	</data>
-	<data name="MenuSupport" xml:space="preserve">
-		<value>Unterstützung</value>
+	<data name="MenuSupporting" xml:space="preserve">
+		<value>Unterstützen</value>
 	</data>
 	<data name="MenuCommunity" xml:space="preserve">
 		<value>Community</value>
@@ -180,7 +180,7 @@
 		<value>Entdeckungs-Status</value>
 	</data>
 	<data name="MenuTitleAbout" xml:space="preserve">
-		<value>Info</value>
+		<value>Versionsangaben und Beitragende</value>
 	</data>
 	<data name="LabelTitleProjectName" xml:space="preserve">
 		<value>Format Erkundungs Projekt</value>
@@ -203,8 +203,8 @@
 	<data name="MenuTitleCommunity" xml:space="preserve">
 		<value>Community (Discord, Forum, etc.)</value>
 	</data>
-	<data name="MenuTitleDownload" xml:space="preserve">
-		<value>Download der Konsolen-Anwendung</value>
+	<data name="MenuTitleChangeLog" xml:space="preserve">
+		<value>Changelog und download der Konsolen-Anwendung</value>
 	</data>
 	<data name="MenuTitleSramDocu" xml:space="preserve">
 		<value>SRAM-Dokumentation</value>
@@ -219,7 +219,7 @@
 		<value>Bedienungsanleitung der Konsolen-Anwendung</value>
 	</data>
 	<data name="MenuTitleDiscord" xml:space="preserve">
-		<value>Direkte Discord-Einladung</value>
+		<value>Öffnet Discord-Einladung</value>
 	</data>
 	<data name="EnumAllSaveSlots" xml:space="preserve">
 		<value>Alle Speicherslots</value>
@@ -250,5 +250,26 @@
 	</data>
 	<data name="MenuGuide" xml:space="preserve">
 		<value>Anleitung</value>
+	</data>
+	<data name="MenuTitleSupporting" xml:space="preserve">
+		<value>Wie man das Projekt unterstützen kann</value>
+	</data>
+	<data name="MenuTitleFeatures" xml:space="preserve">
+		<value>Features von SRAM-Comparer</value>
+	</data>
+	<data name="MenuTitleContribute" xml:space="preserve">
+		<value>Wie man zum Projekt beitragen kann</value>
+	</data>
+	<data name="MenuTitleTheUnknowns" xml:space="preserve">
+		<value>Welche Unbekannten gilt es zu erforschen?</value>
+	</data>
+	<data name="MenuTitleGoals" xml:space="preserve">
+		<value>Das Ziel dieses Projektes</value>
+	</data>
+	<data name="MenuTitleOffsetEdit" xml:space="preserve">
+		<value>Web Offset-Änderung</value>
+	</data>
+	<data name="MenuTitleCompare" xml:space="preserve">
+		<value>Web-Vergleich von SRAM-Dateien</value>
 	</data>
 </root>

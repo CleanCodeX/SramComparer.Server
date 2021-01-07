@@ -127,7 +127,7 @@
     <value>Compared save slots if different</value>
   </data>
   <data name="MenuTitleAbout" xml:space="preserve">
-    <value>Info</value>
+    <value>Version infos and contributors</value>
   </data>
   <data name="LabelAppVersion" xml:space="preserve">
     <value>Version</value>
@@ -195,14 +195,14 @@
   <data name="MenuQuickLinks" xml:space="preserve">
     <value>Quick links</value>
   </data>
-  <data name="MenuTitleAwesomeSoE" xml:space="preserve">
+  <data name="MenuTitleAwesome" xml:space="preserve">
     <value>Awesome pages for an awesome game</value>
   </data>
 	<data name="MenuTitleSources" xml:space="preserve">
     <value>Sources at GitHub</value>
   </data>
   <data name="MenuTitleDiscord" xml:space="preserve">
-    <value>Direct Discord invite</value>
+    <value>Open Discord invite</value>
   </data>
   <data name="CaptionWebCompare" xml:space="preserve">
     <value>SRAM - Web Compare</value>
@@ -279,8 +279,8 @@
   <data name="MenuChangeLog" xml:space="preserve">
     <value>Changelog</value>
   </data>
-  <data name="MenuTitleDownload" xml:space="preserve">
-    <value>Download Console App</value>
+  <data name="MenuTitleChangeLog" xml:space="preserve">
+    <value>Console App changelog and downloads</value>
   </data>
   <data name="MenuTitleImagery" xml:space="preserve">
     <value>Console App Imagery</value>
@@ -303,16 +303,16 @@
   <data name="MenuTheUnknowns" xml:space="preserve">
     <value>The Unknowns</value>
   </data>
-  <data name="MenuCanIHelp" xml:space="preserve">
+  <data name="MenuContribute" xml:space="preserve">
     <value>Can I help?</value>
   </data>
-  <data name="MenuSupport" xml:space="preserve">
-    <value>Support</value>
+  <data name="MenuSupporting" xml:space="preserve">
+    <value>Supporting</value>
   </data>
   <data name="MenuTitleSramDocu" xml:space="preserve">
     <value>SRAM Documentation</value>
   </data>
-  <data name="MenuDocumentation" xml:space="preserve">
+  <data name="MenuSramDocu" xml:space="preserve">
     <value>Documentation</value>
   </data>
   <data name="MenuCommunity" xml:space="preserve">
@@ -356,5 +356,26 @@
   </data>
   <data name="MenuGuide" xml:space="preserve">
     <value>Guide</value>
+  </data>
+  <data name="MenuTitleSupporting" xml:space="preserve">
+    <value>How to support the project</value>
+  </data>
+  <data name="MenuTitleFeatures" xml:space="preserve">
+    <value>Features of SRAM-Comparer</value>
+  </data>
+  <data name="MenuTitleContribute" xml:space="preserve">
+    <value>How to contribute to the project</value>
+  </data>
+  <data name="MenuTitleTheUnknowns" xml:space="preserve">
+    <value>What are the Unknowns to explore?</value>
+  </data>
+  <data name="MenuTitleGoals" xml:space="preserve">
+    <value>The goals of this project</value>
+  </data>
+  <data name="MenuTitleCompare" xml:space="preserve">
+    <value>Web compare of SRAM files</value>
+  </data>
+  <data name="MenuTitleOffsetEdit" xml:space="preserve">
+    <value>Web offset edit</value>
   </data>
 </root>

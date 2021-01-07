@@ -106,7 +106,7 @@
 		<value>À propos</value>
 	</data>
 	<data name="MenuTitleAbout" xml:space="preserve">
-		<value>Infos</value>
+		<value>Informations sur la version et contributeurs</value>
 	</data>
 	<data name="MenuAwesomeSoE" xml:space="preserve">
 		<value>Super SoE</value><comment>For various topics there are Awesome pages, for SoE it's called Awesome SoE</comment>
@@ -114,7 +114,7 @@
 	<data name="MenuCommunity" xml:space="preserve">
 		<value>Communité</value>
 	</data>
-	<data name="MenuDocumentation" xml:space="preserve">
+	<data name="MenuSramDocu" xml:space="preserve">
 		<value>Documentation</value>
 	</data>
 	<data name="MenuChangeLog" xml:space="preserve">
@@ -129,7 +129,7 @@
 	<data name="MenuHistory" xml:space="preserve">
 		<value>Historique</value>
 	</data>
-	<data name="MenuCanIHelp" xml:space="preserve">
+	<data name="MenuContribute" xml:space="preserve">
 		<value>Comment puis-je aider?</value><comment>Changed to Can I help?</comment>
 	</data>
 	<data name="MenuImagery" xml:space="preserve">
@@ -144,7 +144,7 @@
 	<data name="MenuSramFormat" xml:space="preserve">
 		<value>Format SRAM</value>
 	</data>
-	<data name="MenuSupport" xml:space="preserve">
+	<data name="MenuSupporting" xml:space="preserve">
 		<value>Aide</value>
 	</data>
 	<data name="MenuTheUnknowns" xml:space="preserve">
@@ -168,7 +168,7 @@
 	<data name="LabelShowAdditionalSaveSlotInformation" xml:space="preserve">
 		<value>Afficher des informations supplémentaires sur la partie</value>
 	</data>
-	<data name="MenuTitleAwesomeSoE" xml:space="preserve">
+	<data name="MenuTitleAwesome" xml:space="preserve">
 		<value>Des pages géniales pour un jeu génial</value>
 	</data>
 	<data name="LabelUnknownBytes" xml:space="preserve">
@@ -204,8 +204,8 @@
 	<data name="MenuTitleCommunity" xml:space="preserve">
 		<value>Communité (Discord, Forum, etc.)</value>
 	</data>
-	<data name="MenuTitleDownload" xml:space="preserve">
-		<value>Télécharger l'application console</value>
+	<data name="MenuTitleChangeLog" xml:space="preserve">
+		<value>Historique &amp; Télécharger l'application console</value>
 	</data>
 	<data name="LabelChangeLog" xml:space="preserve">
 		<value>Historique</value>
@@ -220,13 +220,13 @@
 		<value>Manuel de l'application console</value>
 	</data>
 	<data name="MenuTitleDiscord" xml:space="preserve">
-		<value>Invitation Discord</value>
+		<value>Ouvrir l'invitation Discord</value>
 	</data>
 	<data name="EnumAllSaveSlots" xml:space="preserve">
 		<value>Toutes les parties</value>
 	</data>
 	<data name="LabelAutoTranslate" xml:space="preserve">
-		<value>Auto translate</value>
+		<value>Traduction automatique</value>
 	</data>
 	<data name="ButtonTitleDisableAutoTranslation" xml:space="preserve">
 		<value>Désactiver la traduction automatique</value>
@@ -235,10 +235,10 @@
 		<value>Activer la traduction automatique</value>
 	</data>
 	<data name="ButtonOn" xml:space="preserve">
-		<value>On</value>
+		<value>Sur</value>
 	</data>
 	<data name="ButtonOff" xml:space="preserve">
-		<value>Off</value>
+		<value>De</value>
 	</data>
 	<data name="ButtonShowLocalization" xml:space="preserve">
 		<value>Afficher la localisation</value>
@@ -251,5 +251,26 @@
 	</data>
 	<data name="MenuGuide" xml:space="preserve">
 		<value>Manuel</value>
+	</data>
+	<data name="MenuTitleGoals" xml:space="preserve">
+		<value>Les objectifs de ce projet</value>
+	</data>
+	<data name="MenuTitleFeatures" xml:space="preserve">
+		<value>Caractéristiques de SRAM-Comparer</value>
+	</data>
+	<data name="MenuTitleSupporting" xml:space="preserve">
+		<value>Comment soutenir le projet</value>
+	</data>
+	<data name="MenuTitleTheUnknowns" xml:space="preserve">
+		<value>Quels sont les inconnus à explorer?</value>
+	</data>
+	<data name="MenuTitleContribute" xml:space="preserve">
+		<value>Comment contribuer au projet</value>
+	</data>
+	<data name="MenuTitleOffsetEdit" xml:space="preserve">
+		<value>Modification du décalage Web</value>
+	</data>
+	<data name="MenuTitleCompare" xml:space="preserve">
+		<value>Comparaison Web des fichiers SRAM</value>
 	</data>
 </root>

@@ -26,7 +26,6 @@ namespace WebApp.SoE.Extensions
 		/// <summary>Creates a markup string</summary>
 		public static MarkupString ToMarkup(this string source) => (MarkupString)source;
 
-		public static string ReplaceHtmlLineBreaks(this MarkupString source) => source.ToString().ReplaceHtmlLineBreaks();
 		public static string ReplaceHtmlLineBreaks([NotNull] this string source) => source
 			.Replace("<br>", Environment.NewLine);
 

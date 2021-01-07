@@ -538,15 +538,6 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Can I help? ähnelt.
-        /// </summary>
-        public static string MenuCanIHelp {
-            get {
-                return ResourceManager.GetString("MenuCanIHelp", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Changelog ähnelt.
         /// </summary>
         public static string MenuChangeLog {
@@ -565,11 +556,11 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Documentation ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Can I help? ähnelt.
         /// </summary>
-        public static string MenuDocumentation {
+        public static string MenuContribute {
             get {
-                return ResourceManager.GetString("MenuDocumentation", resourceCulture);
+                return ResourceManager.GetString("MenuContribute", resourceCulture);
             }
         }
         
@@ -646,6 +637,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Documentation ähnelt.
+        /// </summary>
+        public static string MenuSramDocu {
+            get {
+                return ResourceManager.GetString("MenuSramDocu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Format ähnelt.
         /// </summary>
         public static string MenuSramFormat {
@@ -655,11 +655,11 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Support ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Supporting ähnelt.
         /// </summary>
-        public static string MenuSupport {
+        public static string MenuSupporting {
             get {
-                return ResourceManager.GetString("MenuSupport", resourceCulture);
+                return ResourceManager.GetString("MenuSupporting", resourceCulture);
             }
         }
         
@@ -673,7 +673,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Info ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Version infos and contributors ähnelt.
         /// </summary>
         public static string MenuTitleAbout {
             get {
@@ -684,9 +684,18 @@ namespace WebApp.SoE.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Awesome pages for an awesome game ähnelt.
         /// </summary>
-        public static string MenuTitleAwesomeSoE {
+        public static string MenuTitleAwesome {
             get {
-                return ResourceManager.GetString("MenuTitleAwesomeSoE", resourceCulture);
+                return ResourceManager.GetString("MenuTitleAwesome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Console App changelog and downloads ähnelt.
+        /// </summary>
+        public static string MenuTitleChangeLog {
+            get {
+                return ResourceManager.GetString("MenuTitleChangeLog", resourceCulture);
             }
         }
         
@@ -700,7 +709,25 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Direct Discord invite ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Web compare of SRAM files ähnelt.
+        /// </summary>
+        public static string MenuTitleCompare {
+            get {
+                return ResourceManager.GetString("MenuTitleCompare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die How to contribute to the project ähnelt.
+        /// </summary>
+        public static string MenuTitleContribute {
+            get {
+                return ResourceManager.GetString("MenuTitleContribute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Open Discord invite ähnelt.
         /// </summary>
         public static string MenuTitleDiscord {
             get {
@@ -709,11 +736,20 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Download Console App ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Features of SRAM-Comparer ähnelt.
         /// </summary>
-        public static string MenuTitleDownload {
+        public static string MenuTitleFeatures {
             get {
-                return ResourceManager.GetString("MenuTitleDownload", resourceCulture);
+                return ResourceManager.GetString("MenuTitleFeatures", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The goals of this project ähnelt.
+        /// </summary>
+        public static string MenuTitleGoals {
+            get {
+                return ResourceManager.GetString("MenuTitleGoals", resourceCulture);
             }
         }
         
@@ -736,6 +772,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Web offset edit ähnelt.
+        /// </summary>
+        public static string MenuTitleOffsetEdit {
+            get {
+                return ResourceManager.GetString("MenuTitleOffsetEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Sources at GitHub ähnelt.
         /// </summary>
         public static string MenuTitleSources {
@@ -750,6 +795,24 @@ namespace WebApp.SoE.Properties {
         public static string MenuTitleSramDocu {
             get {
                 return ResourceManager.GetString("MenuTitleSramDocu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die How to support the project ähnelt.
+        /// </summary>
+        public static string MenuTitleSupporting {
+            get {
+                return ResourceManager.GetString("MenuTitleSupporting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die What are the Unknowns to explore? ähnelt.
+        /// </summary>
+        public static string MenuTitleTheUnknowns {
+            get {
+                return ResourceManager.GetString("MenuTitleTheUnknowns", resourceCulture);
             }
         }
         

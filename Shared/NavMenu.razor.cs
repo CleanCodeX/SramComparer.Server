@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
+using WebApp.SoE.Extensions;
 using WebApp.SoE.Helpers;
 
 namespace WebApp.SoE.Shared
@@ -46,21 +47,21 @@ namespace WebApp.SoE.Shared
 			var path = Path.Join("/", NavManager.ToBaseRelativePath(e.Location).ToLower());
 			var menu = path switch
 			{
-				PageUris.Goals => ExpandedMenu.SramHacking,
-				PageUris.Unknowns => ExpandedMenu.SramHacking,
-				PageUris.Contribute => ExpandedMenu.SramHacking,
-				PageUris.SramDocu => ExpandedMenu.SramHacking,
+				_ when path == PageUris.Goals.ToLower() => ExpandedMenu.SramHacking,
+				_ when path == PageUris.Unknowns.ToLower() => ExpandedMenu.SramHacking,
+				_ when path == PageUris.Contribute.ToLower() => ExpandedMenu.SramHacking,
+				_ when path == PageUris.SramDocu.ToLower() => ExpandedMenu.SramHacking,
 
-				PageUris.Features => ExpandedMenu.SramComparison,
+				_ when path == PageUris.Features.ToLower() => ExpandedMenu.SramComparison,
 
-				PageUris.Imagery => ExpandedMenu.ConsoleApp,
-				PageUris.ChangelogConsole => ExpandedMenu.ConsoleApp,
-				PageUris.Guide => ExpandedMenu.ConsoleApp,
+				_ when path == PageUris.Imagery.ToLower() => ExpandedMenu.ConsoleApp,
+				_ when path == PageUris.ChangelogConsole.ToLower() => ExpandedMenu.ConsoleApp,
+				_ when path == PageUris.Guide.ToLower() => ExpandedMenu.ConsoleApp,
 
-				PageUris.Compare => ExpandedMenu.WebTools,
-				PageUris.OffsetEdit => ExpandedMenu.WebTools,
+				_ when path == PageUris.Compare.ToLower() => ExpandedMenu.WebTools,
+				_ when path == PageUris.OffsetEdit.ToLower() => ExpandedMenu.WebTools,
 
-				PageUris.Sources => ExpandedMenu.SramComparison,
+				_ when path == PageUris.Sources.ToLower() => ExpandedMenu.SramComparison,
 
 				_ => ExpandedMenu.None
 			};
