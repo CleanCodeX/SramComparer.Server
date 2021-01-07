@@ -520,6 +520,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Welcome to the Evermore Format Exploration Project! ähnelt.
+        /// </summary>
+        public static string LabelWelcomeMessage {
+            get {
+                return ResourceManager.GetString("LabelWelcomeMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die About ähnelt.
         /// </summary>
         public static string MenuAbout {
@@ -565,7 +574,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Explore ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Exploring SRAM ähnelt.
         /// </summary>
         public static string MenuExplore {
             get {
@@ -583,7 +592,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die What are the goals? ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Goals of this Project ähnelt.
         /// </summary>
         public static string MenuGoals {
             get {

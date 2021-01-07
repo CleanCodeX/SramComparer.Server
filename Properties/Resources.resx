@@ -298,7 +298,7 @@
     <value>SRAM Format</value>
   </data>
   <data name="MenuGoals" xml:space="preserve">
-    <value>What are the goals?</value>
+    <value>Goals of this Project</value>
   </data>
   <data name="MenuTheUnknowns" xml:space="preserve">
     <value>The Unknowns</value>
@@ -307,7 +307,7 @@
     <value>Can I help?</value>
   </data>
   <data name="MenuExplore" xml:space="preserve">
-    <value>Explore</value>
+    <value>Exploring SRAM</value>
   </data>
   <data name="MenuTitleSramDocu" xml:space="preserve">
     <value>SRAM Documentation</value>
@@ -377,5 +377,8 @@
   </data>
   <data name="MenuTitleOffsetEdit" xml:space="preserve">
     <value>Web offset edit</value>
+  </data>
+  <data name="LabelWelcomeMessage" xml:space="preserve">
+    <value>Welcome to the Evermore Format Exploration Project!</value>
   </data>
 </root>

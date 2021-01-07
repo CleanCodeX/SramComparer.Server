@@ -135,7 +135,7 @@
 		<value>Web - Tools</value>
 	</data>
 	<data name="MenuGoals" xml:space="preserve">
-		<value>Was ist das Ziel?</value>
+		<value>Ziel des Projektes</value>
 	</data>
 	<data name="MenuHistory" xml:space="preserve">
 		<value>Historie</value>
@@ -153,7 +153,7 @@
 		<value>Awesome Seiten für ein awesome Spiel</value>
 	</data>
 	<data name="MenuExplore" xml:space="preserve">
-		<value>Erkunden</value>
+		<value>SRAM Erkunden</value>
 	</data>
 	<data name="MenuCommunity" xml:space="preserve">
 		<value>Community</value>
@@ -271,5 +271,8 @@
 	</data>
 	<data name="MenuTitleCompare" xml:space="preserve">
 		<value>Web-Vergleich von SRAM-Dateien</value>
+	</data>
+	<data name="LabelWelcomeMessage" xml:space="preserve">
+		<value>Willkommen zum Evermore Format Erkundungs-Projekt</value>
 	</data>
 </root>

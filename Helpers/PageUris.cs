@@ -32,7 +32,5 @@
 		
 		public const string Page = "/p";
 		public const string ContentPagePrefix = Page + "?c=";
-
-		public const string Index = Contribute;
 	}
 }

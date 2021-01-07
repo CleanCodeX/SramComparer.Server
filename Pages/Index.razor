@@ -1,1 +1,22 @@
-﻿
+﻿@using WebApp.SoE.Helpers
+
+@attribute [Route("/")]
+@inherits AutoLangContentIdMarkupBase
+
+<h1 class="welcome">@Res.LabelWelcomeMessage</h1>
+
+<p /><p />
+
+@if (ShowAutoTranslateOption)
+{
+	<TranslateButton @bind-Value="@AutoTranslate" />
+}
+
+<div class="markup">
+	@Content
+</div>
+
+@code {
+	protected override void OnParametersSet() => ContentId = nameof(PageUris.Goals);
+}
+

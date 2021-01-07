@@ -124,7 +124,7 @@
 		<value>Caractéristiques</value>
 	</data>
 	<data name="MenuGoals" xml:space="preserve">
-		<value>Quel est le but?</value>
+		<value>Objectifs de ce projet</value>
 	</data>
 	<data name="MenuHistory" xml:space="preserve">
 		<value>Historique</value>
@@ -145,7 +145,7 @@
 		<value>Format SRAM</value>
 	</data>
 	<data name="MenuExplore" xml:space="preserve">
-		<value>Explorer</value>
+		<value>Explorer SRAM</value>
 	</data>
 	<data name="MenuTheUnknowns" xml:space="preserve">
 		<value>Valeurs inconnues</value>
@@ -272,5 +272,8 @@
 	</data>
 	<data name="MenuTitleCompare" xml:space="preserve">
 		<value>Comparaison Web des fichiers SRAM</value>
+	</data>
+	<data name="LabelWelcomeMessage" xml:space="preserve">
+		<value>Bienvenue dans le projet d'exploration Evermore Format!</value>
 	</data>
 </root>
