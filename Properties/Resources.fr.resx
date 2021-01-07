@@ -144,8 +144,8 @@
 	<data name="MenuSramFormat" xml:space="preserve">
 		<value>Format SRAM</value>
 	</data>
-	<data name="MenuSupporting" xml:space="preserve">
-		<value>Aide</value>
+	<data name="MenuExplore" xml:space="preserve">
+		<value>Explorer</value>
 	</data>
 	<data name="MenuTheUnknowns" xml:space="preserve">
 		<value>Valeurs inconnues</value>
@@ -258,8 +258,8 @@
 	<data name="MenuTitleFeatures" xml:space="preserve">
 		<value>Caractéristiques de SRAM-Comparer</value>
 	</data>
-	<data name="MenuTitleSupporting" xml:space="preserve">
-		<value>Comment soutenir le projet</value>
+	<data name="MenuTitleExploring" xml:space="preserve">
+		<value>Comment explorer la SRAM</value>
 	</data>
 	<data name="MenuTitleTheUnknowns" xml:space="preserve">
 		<value>Quels sont les inconnus à explorer?</value>

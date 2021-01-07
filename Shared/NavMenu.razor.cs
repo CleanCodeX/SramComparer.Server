@@ -49,7 +49,7 @@ namespace WebApp.SoE.Shared
 			{
 				_ when path == PageUris.Goals.ToLower() => ExpandedMenu.SramHacking,
 				_ when path == PageUris.Unknowns.ToLower() => ExpandedMenu.SramHacking,
-				_ when path == PageUris.Contribute.ToLower() => ExpandedMenu.SramHacking,
+				_ when path == PageUris.Explore.ToLower() => ExpandedMenu.SramHacking,
 				_ when path == PageUris.SramDocu.ToLower() => ExpandedMenu.SramHacking,
 
 				_ when path == PageUris.Features.ToLower() => ExpandedMenu.SramComparison,

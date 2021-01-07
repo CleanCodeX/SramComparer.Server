@@ -306,8 +306,8 @@
   <data name="MenuContribute" xml:space="preserve">
     <value>Can I help?</value>
   </data>
-  <data name="MenuSupporting" xml:space="preserve">
-    <value>Supporting</value>
+  <data name="MenuExplore" xml:space="preserve">
+    <value>Explore</value>
   </data>
   <data name="MenuTitleSramDocu" xml:space="preserve">
     <value>SRAM Documentation</value>
@@ -357,8 +357,8 @@
   <data name="MenuGuide" xml:space="preserve">
     <value>Guide</value>
   </data>
-  <data name="MenuTitleSupporting" xml:space="preserve">
-    <value>How to support the project</value>
+  <data name="MenuTitleExploring" xml:space="preserve">
+    <value>How to explore the SRAM</value>
   </data>
   <data name="MenuTitleFeatures" xml:space="preserve">
     <value>Features of SRAM-Comparer</value>

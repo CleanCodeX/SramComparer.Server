@@ -18,7 +18,7 @@ Sobald das SRAM-Format vollständig bekannt ist, bietet es die Möglichkeit eine
 
 ### Features eines zukünftigen Spielstand-Editors
 * Zurücksetzen von bereits durchgeführten Boss-Kämpfen
-* Festlegen des Spiel-Speicherortes an dem nach dem Laden weitergespielt werden soll
+* Festlegen des Spiel-Speicherortes an welchem nach dem Laden weitergespielt werden soll
 * Zurücksetzen der aufhobenen Zutaten je Map, Kapitel oder des ganzen Spiels
 * Zurücksetzen der geöffneten Kisten, Körbe, Kürbisse oder Wände je Map, Kapitel oder des ganzen Spiels
 
@@ -27,4 +27,4 @@ Sobald das SRAM-Format vollständig bekannt ist, bietet es die Möglichkeit eine
 Nun, das hängt hauptsächlich von der Menge und Qualität der Zuarbeit ab.
 Ich verbringe meine Freizeit damit daran zu arbeiten, aber das wird nicht ausreichen um schnell voranzukommen.
 
-Wenn du der Exploration-Team beitreten möchtest, lies <a href=contribute>hier</a>, wie es funktioniert.
+Wenn du dem Exploration-Team beitreten möchtest, lies <a href=explore>hier</a>, wie es funktioniert.

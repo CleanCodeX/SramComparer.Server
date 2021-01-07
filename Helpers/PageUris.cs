@@ -19,13 +19,13 @@
 		public const string Prerequisites = "/" + nameof(Prerequisites);
 		public const string Goals = "/" + nameof(Goals);
 		public const string Unknowns = "/" + nameof(Unknowns);
-		public const string Contribute = "/" + nameof(Contribute);
+		public const string Explore = "/" + nameof(Explore);
 		public const string ChangelogWeb = "/changelog-web";
 		public const string ChangelogConsole = "/changelog-console";
 		
 		public const string Awesome = "/" + nameof(Awesome);
 		public const string Sources = "/" + nameof(Sources);
-		public const string Supporting = "/" + nameof(Supporting);
+		public const string Contribute = "/" + nameof(Contribute);
 		public const string Community = "/" + nameof(Community);
 		public const string SramDocu = "/" + nameof(SramDocu);
 		public const string Discord = "https://discord.gg/s4wTHQgxae";
@@ -33,6 +33,6 @@
 		public const string Page = "/p";
 		public const string ContentPagePrefix = Page + "?c=";
 
-		public const string Index = Supporting;
+		public const string Index = Contribute;
 	}
 }

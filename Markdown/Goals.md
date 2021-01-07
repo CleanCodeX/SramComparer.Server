@@ -27,4 +27,4 @@ Once the SRAM format is completely known, it offers the possibility to write a f
 Well, that's mostly up to the amount and quality of contributions by the community.
 I am spending my free time working on that, but that won't be enough to make it happen fast.
 
-If you want to join the exploration team, see <a href=Contribute>here</a> how it works.
+If you want to join the exploration team, see <a href=explore>here</a> how it works.

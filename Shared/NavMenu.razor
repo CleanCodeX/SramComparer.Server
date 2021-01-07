@@ -12,7 +12,7 @@
     <!-- Quick links -->
     <ol class="nav flex-column">
         <li class="nav-item quicklinks" title="@Res.MenuQuickLinks">
-            <NavLink class="nav-link" href="@PageUris.SramDocu">
+            <NavLink class="nav-link">
                 @quickLinkOpener @sp
                 <a href="@PageUris.SramDocu" title="@Res.MenuTitleSramDocu">
                     <span class="iconify" data-icon="oi-document"/>
@@ -35,7 +35,7 @@
                 </a>
                 @sp @quickLinkCloser
             </NavLink>
-            <NavLink class="nav-link" href="@PageUris.Compare">
+            <NavLink class="nav-link">
                 @quickLinkOpener @sp
                 <a href="@PageUris.Compare" title="@Res.MenuTitleCompare">
                     <span class="iconify" data-icon="oi-magnifying-glass"/>
@@ -83,8 +83,8 @@
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Contribute" title="@Res.MenuTitleContribute">
-                            <span class="oi oi-thumb-up" aria-hidden="true"/> @Res.MenuContribute.ReplaceSpaces()
+                        <NavLink class="nav-link" href="@PageUris.Explore" title="@Res.MenuTitleExploring">
+                            <span class="oi oi-thumb-up" aria-hidden="true"/> @Res.MenuExplore.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
@@ -183,8 +183,8 @@
     <!-- Other -->
     <ol class="nav flex-column">
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.Supporting" title="@Res.MenuTitleSupporting">
-                <span class="oi oi-heart" aria-hidden="true"/> @Res.MenuSupporting.ReplaceSpaces()
+            <NavLink class="nav-link" href="@PageUris.Contribute" title="@Res.MenuTitleContribute">
+                <span class="oi oi-heart" aria-hidden="true"/> @Res.MenuContribute.ReplaceSpaces()
             </NavLink>
         </li>
         <li class="nav-item px-3">

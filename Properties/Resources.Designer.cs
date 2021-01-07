@@ -565,6 +565,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Explore ähnelt.
+        /// </summary>
+        public static string MenuExplore {
+            get {
+                return ResourceManager.GetString("MenuExplore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Features ähnelt.
         /// </summary>
         public static string MenuFeatures {
@@ -655,15 +664,6 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Supporting ähnelt.
-        /// </summary>
-        public static string MenuSupporting {
-            get {
-                return ResourceManager.GetString("MenuSupporting", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die The Unknowns ähnelt.
         /// </summary>
         public static string MenuTheUnknowns {
@@ -736,6 +736,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die How to explore the SRAM ähnelt.
+        /// </summary>
+        public static string MenuTitleExploring {
+            get {
+                return ResourceManager.GetString("MenuTitleExploring", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Features of SRAM-Comparer ähnelt.
         /// </summary>
         public static string MenuTitleFeatures {
@@ -795,15 +804,6 @@ namespace WebApp.SoE.Properties {
         public static string MenuTitleSramDocu {
             get {
                 return ResourceManager.GetString("MenuTitleSramDocu", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die How to support the project ähnelt.
-        /// </summary>
-        public static string MenuTitleSupporting {
-            get {
-                return ResourceManager.GetString("MenuTitleSupporting", resourceCulture);
             }
         }
         

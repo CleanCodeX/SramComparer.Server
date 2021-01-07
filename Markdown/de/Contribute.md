@@ -1,27 +1,42 @@
-﻿# Etwas zum Projekt beitragen
+﻿# Zum Projekt beitragen
 
-## Kann ich helfen?
-Und ob! Vergleiche SRAM-Dateien, es ist überhaupt nicht schwierig.
+## Ist das möglich?
+Und ob! 
+
+### Worum geht's?
+Wenn das Ziel dieses Projekts noch nicht klar ist, lies zuerst das <a href=goals>Ziel</a> durch.
+
+## Warum
+Das Finden der Bedeutung unbekannter SRAM-Teile ist eine zeitaufwändige Reise, die die Hilfe der Community von SoE benötigt.
+
+Je mehr Menschen etwas beitragen, desto früher und besser die Ergebnisse.
+
+Aber letztendlich ist dies ein Freizeit-Projekt und die Entwicklung von Tools oder das Finden von Offset-Bedeutungen erfordert Hunderte, wahrscheinlich Tausende von Stunden.
+
+## Wie etwas beisteuern
+Es gibt ein paar unterschiedliche Wege etwas zum Projekt beizusteuern.
+
+#### SRAM-Daten vergleichen
+Zunächst einmal ist es nicht schwierig, das zu tun. Es gibt ein praktisches Tool, das die unangenehme Vergleichsarbeit für dich erledigt, sodass du keinen Hex-Editor verwenden musst. Versprochen ;-)
+
+Falls du dich nicht all zu sehr vor Bits und Bytes fürchtest, könntest du dich in das Exploration Team einreihen. Sieh dir <a href=explore>hier</a> an, wie es funktioniert.
 
 Das wäre wirklich cool. Deine Hilfe würde viel Zeit sparen, indem nicht zweimal etwas getan wird, was bereits jemand anderes getan hat.
 
-### SRAM Vergleichen
-Tritt der SoE-Explorations-Community bei, um Bedeutungen für verschiedene SRAM-Offsets zu finden.
-Das geht mit folgenden Möglichkeiten:
+Sollten jedoch Bits und Bytes nicht so dein Ding sein, dann ist das auch in Ordnung. Du kannst auf andere Weise etwas beitragen.
 
-* [Web Vergleich](compare)
-* [Windows Konsolen-App](changelog-console)
+#### Lokalisieren
+Sprichst du eine Sprache, welche diese Website derzeit nicht anbietet, bist aber der Meinung, dass sie unterstützt werden sollte?
+In diesem Fall könntest du eine Lokalisierung in deiner Sprache in Betracht ziehen. 
+Du könntest den Zugang zu diesem Projekt für Personen öffnen, welche nur *deine* Sprache verstehen. 
 
-Sobald du eine Bedeutung für einen Offset-Wert gefunden hast, versuche diesen Wert in anderen SRAM-Dateien (* .srm) zu setzen oder wegzunehmen um deinen Fund zu verifizieren.
+Wenn du das tun möchtest, Cool! Dann schaue <a href=localize>hier</a>.
 
-### Offset-Werte
-Das Lesen und Bearbeiten von Versatzwerten kann (u.a.) mit den folgenden Möglichkeiten erfolgen:
+#### Mundpropaganda / bewerben
+Erzähle deinen Freunde/Publikum/Followern von diesem Projekt.
 
-* [Web Offset-Editor](offset-edit)
-* [Windows Konsolen-App](changelog-console)
-* Hex-Editor
+Mache es bekannt, damit Crowd Sourcing beginnen kann.
 
-Veröffentliche deine Vermutungen und Funde in der [Community](community)!
+**Danke!** 😊
 
-Falls du nicht vertraut mit der Verwendung der Konsolen-App bist, schaue in den [Guide](guide). [Web Vergleich](compare) ist einfacher zu verwenden und funktioniert mit jedem modernen Browser.
-
+Auch **vielen Dank** an <a href=contributors>diejenigen</a>, die bereits zu diesem Projekt beigetragen haben.

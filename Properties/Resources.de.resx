@@ -152,8 +152,8 @@
 	<data name="MenuTitleAwesome" xml:space="preserve">
 		<value>Awesome Seiten für ein awesome Spiel</value>
 	</data>
-	<data name="MenuSupporting" xml:space="preserve">
-		<value>Unterstützen</value>
+	<data name="MenuExplore" xml:space="preserve">
+		<value>Erkunden</value>
 	</data>
 	<data name="MenuCommunity" xml:space="preserve">
 		<value>Community</value>
@@ -251,8 +251,8 @@
 	<data name="MenuGuide" xml:space="preserve">
 		<value>Anleitung</value>
 	</data>
-	<data name="MenuTitleSupporting" xml:space="preserve">
-		<value>Wie man das Projekt unterstützen kann</value>
+	<data name="MenuTitleExploring" xml:space="preserve">
+		<value>Wie das SRAM erkundet wird</value>
 	</data>
 	<data name="MenuTitleFeatures" xml:space="preserve">
 		<value>Features von SRAM-Comparer</value>
