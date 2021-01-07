@@ -1,4 +1,4 @@
-﻿# Erkundung
+﻿# Erkunden
 
 ## SRAM Vergleichen
 Tritt dem Exploration-Team bei um Bedeutungen für verschiedene SRAM-Offsets zu finden.

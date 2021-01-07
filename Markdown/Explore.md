@@ -1,4 +1,4 @@
-# Exploration
+# Explore
 
 ## Compare SRAM
 Join the exploration team to find meanings for various SRAM offsets.
