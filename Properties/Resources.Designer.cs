@@ -622,9 +622,9 @@ namespace WebApp.SoE.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Guide (SRM) ähnelt.
         /// </summary>
-        public static string MenuGuide {
+        public static string MenuGuideSrm {
             get {
-                return ResourceManager.GetString("MenuGuide", resourceCulture);
+                return ResourceManager.GetString("MenuGuideSrm", resourceCulture);
             }
         }
         
@@ -802,9 +802,9 @@ namespace WebApp.SoE.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Console App Guide (SRM) ähnelt.
         /// </summary>
-        public static string MenuTitleGuide {
+        public static string MenuTitleGuideSrm {
             get {
-                return ResourceManager.GetString("MenuTitleGuide", resourceCulture);
+                return ResourceManager.GetString("MenuTitleGuideSrm", resourceCulture);
             }
         }
         

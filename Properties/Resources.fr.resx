@@ -216,7 +216,7 @@
 	<data name="MenuTitleImagery" xml:space="preserve">
 		<value>Captures d'écran de l'application console</value>
 	</data>
-	<data name="MenuTitleGuide" xml:space="preserve">
+	<data name="MenuTitleGuideSrm" xml:space="preserve">
 		<value>Manuel de l'application console (SRM)</value>
 	</data>
 	<data name="MenuTitleDiscord" xml:space="preserve">
@@ -249,7 +249,7 @@
 	<data name="ButtonTitleCopyLocalization" xml:space="preserve">
 		<value>Copier la localisation dans le presse-papiers</value>
 	</data>
-	<data name="MenuGuide" xml:space="preserve">
+	<data name="MenuGuideSrm" xml:space="preserve">
 		<value>Manuel (SRM)</value>
 	</data>
 	<data name="MenuTitleGoals" xml:space="preserve">

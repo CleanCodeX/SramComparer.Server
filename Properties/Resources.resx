@@ -285,7 +285,7 @@
   <data name="MenuTitleImagery" xml:space="preserve">
     <value>Console App Imagery</value>
   </data>
-  <data name="MenuTitleGuide" xml:space="preserve">
+  <data name="MenuTitleGuideSrm" xml:space="preserve">
     <value>Console App Guide (SRM)</value>
   </data>
   <data name="MenuHistory" xml:space="preserve">
@@ -354,7 +354,7 @@
   <data name="ButtonHideLocalization" xml:space="preserve">
     <value>Hide localization</value>
   </data>
-  <data name="MenuGuide" xml:space="preserve">
+  <data name="MenuGuideSrm" xml:space="preserve">
     <value>Guide (SRM)</value>
   </data>
   <data name="MenuTitleExploring" xml:space="preserve">

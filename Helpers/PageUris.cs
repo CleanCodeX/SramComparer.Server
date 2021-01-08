@@ -12,7 +12,7 @@
 		public const string Localize = "/" + nameof(Localize);
 		public const string Features = "/" + nameof(Features);
 
-		public const string Guide = "/" + nameof(Guide);
+		public const string GuideSrm = "/Guide-Srm";
 		public const string GuideSavestate = "/Guide-Savestate";
 
 		public const string Glossary = "/" + nameof(Glossary);

@@ -215,7 +215,7 @@
 	<data name="MenuTitleImagery" xml:space="preserve">
 		<value>Bilder der Konsolen-Anwendung</value>
 	</data>
-	<data name="MenuTitleGuide" xml:space="preserve">
+	<data name="MenuTitleGuideSrm" xml:space="preserve">
 		<value>Bedienungsanleitung der Konsolen-Anwendung (SRM)</value>
 	</data>
 	<data name="MenuTitleDiscord" xml:space="preserve">
@@ -248,7 +248,7 @@
 	<data name="ButtonTitleCopyLocalization" xml:space="preserve">
 		<value>Die Lokalisierung in die Zwischen ablage kopieren</value>
 	</data>
-	<data name="MenuGuide" xml:space="preserve">
+	<data name="MenuGuideSrm" xml:space="preserve">
 		<value>Anleitung (SRM)</value>
 	</data>
 	<data name="MenuTitleExploring" xml:space="preserve">
