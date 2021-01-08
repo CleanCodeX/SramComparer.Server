@@ -19,27 +19,27 @@
 			<p />
 
 			<tr>
-				<td colspan="2"><label class="header">@ResComp.CurrentSramFile (*.srm)</label></td>
+				<td colspan="2"><label class="header" title="@Res.LabelTitleFile">@ResComp.CurrentSramFile (*.srm|*.00x|*.state)</label></td>
 			</tr>
 
 			<tr>
-				<td><label>@Res.LabelFile:@Ns *)</label></td>
+				<td><label title="@Res.LabelTitleFile">@Res.LabelFile:@Ns *)</label></td>
 				<td><InputFile OnChange="@OnCurrentFileChange" style=@ButtonStyle /></td>
 			</tr>
 			<tr>
 				<td><label>@ResComp.SaveSlot:@Ns</label></td>
-				<td><InputSelectEnum @bind-Value="@ViewModel.CurrentSramSaveSlot" style=@CurrentSramFileStyle /></td>
+				<td><InputSelectEnum @bind-Value="@ViewModel.CurrentSramSaveSlot" style=@CurrentSramFileStyle title="@Res.LabelTitleFile" /></td>
 			</tr>
 			
 			<p />
 
 			<tr>
-				<td colspan="2"><label class="header">@ResComp.ComparisonSramFile (*.srm|*.comp)</label></td>
+				<td colspan="2"><label class="header" title="@Res.LabelTitleFile">@ResComp.ComparisonSramFile (*.srm|*.comp|*.00x|*.state)</label></td>
 			</tr>
 			
 			<tr>
-				<td><label>@Res.LabelFile:@Ns *)</label></td>
-				<td><InputFile OnChange="@OnComparisonFileChange" style=@ButtonStyle /></td>
+				<td><label title="@Res.LabelTitleFile">@Res.LabelFile:@Ns *)</label></td>
+				<td><InputFile OnChange="@OnComparisonFileChange" style=@ButtonStyle title="@Res.LabelTitleFile" /></td>
 			</tr>
 			<tr>
 				<td><label>@ResComp.SaveSlot:@Ns</label></td>

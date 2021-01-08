@@ -23,7 +23,7 @@ namespace WebApp.SoE.ViewModels
 		
 		private bool Changed { get; set; }
 
-		public bool CanSave => Changed && CanSet;
+		public bool CanSave => Changed && CanSet && !IsSavestate;
 
 		public async Task SetOffsetValueAsync()
 		{
@@ -32,6 +32,8 @@ namespace WebApp.SoE.ViewModels
 				await Task.CompletedTask;
 				
 				SramFile.ThrowIfNull(nameof(SramFile));
+
+				IsError = false;
 				SramFile.SetOffsetValue(Options.CurrentSramFileSaveSlot - 1, OffsetAddress, (byte)OffsetValue);
 				var valueDisplayText = NumberFormatter.GetByteValueRepresentations((byte)OffsetValue);
 
@@ -42,6 +44,7 @@ namespace WebApp.SoE.ViewModels
 			catch (Exception ex)
 			{
 				OutputMessage = ex.GetColoredMessage();
+				IsError = true;
 			}
 		}
 
@@ -51,6 +54,7 @@ namespace WebApp.SoE.ViewModels
 			{
 				SramFile.ThrowIfNull(nameof(SramFile));
 
+				IsError = false;
 				var bytes = new byte[8192];
 				SramFile.Save(new MemoryStream(bytes));
 
@@ -61,6 +65,7 @@ namespace WebApp.SoE.ViewModels
 			catch (Exception ex)
 			{
 				OutputMessage = ex.GetColoredMessage();
+				IsError = true;
 			}
 		}
 	}

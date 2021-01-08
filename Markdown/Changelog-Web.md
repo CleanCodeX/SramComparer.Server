@@ -1,5 +1,8 @@
 ﻿## Changelog Web-App
 
+#### v005 (2021-01-08)
+* added Web-Compare support for Snes9x savestates
+
 #### v004 (2021-01-04)
 * added auto-translate option for pages
 * added localization page

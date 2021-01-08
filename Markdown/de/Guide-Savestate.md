@@ -1,34 +1,27 @@
-﻿# Anleitung SRM-Datei
+﻿# Anleitung Savestate-Datei (Snes9x)
 
-Dies ist eine Schritt-für-Schritt Anleitung der SRAM-Comparer Konsolenanwendung und dem Vergleichen von SRM-Dateien.
+Dies ist eine Schritt-für-Schritt Anleitung der SRAM-Comparer Konsolenanwendung und dem Vergleichen von Snes9x Savestate-Dateien.
 
-Um Savestate-Dateien zu vergleichen siehe <a href=guide-savestate>hier</a>.
+Um SRM-Dateien zu vergleichen siehe <a href=guide>hier</a>.
 
 ## ***1)*** Vorbereitung
 
 ### Nützliche Links
 Schau in <a href="unknowns">Unknowns</a> um Beispiele zu sehen, welche Teile der SRAM-Struktur noch als unbekannt gelten. Schau dir <a href="imagery">Bilder</a> an wie die Vergleichsergebnisse zu interpretieren sind.
 
-### Emulator konfigurieren
-Die meisten Emulatoren haben die Einstellung das SRAM eines Spiels zu speichern, sobald eine Änderung eintritt. 
-Stelle sicher, dass diese Einstellung aktiviert ist. Andernfalls musst du selbst sicherstellen, dass der Emulator die *.srm-Datei aktualisiert. 
-
 ### Konsolenanwendung starten
-Starte die Anwendung, indem du den Pfad zur Speicher-Datei (*.srm) des Spiels als ersten Kommandozeilen Parameter übergibst. Die Datei kann auch per Drag 'n' Drop auf die Anwendung gezogen werden.
+Starte die Anwendung, indem du den Pfad zur Savestate-Datei (*.000-009 or * .state) des Spiels als ersten Kommandozeilen Parameter übergibst. Die Datei kann auch per Drag 'n' Drop auf die Anwendung gezogen werden.
 
 ## ***2)*** SRAM Vergleichs-Datei erstellen
-Anschließend drücke (ow) um eine Kopie deiner aktuellen SRAM Datei zu erstellen. Diese ermöglicht einen Vergleich nach einer Änderung deiner aktuellen Speicher-Datei.
+Anschließend drücke (ow) um eine Kopie deiner aktuellen Speicher-Datei zu erstellen. Diese ermöglicht einen Vergleich nach einer Änderung deiner aktuellen Speicher-Datei.
 
 ## ***3)*** Veränderung im Spiel auslösen und SRAM vergleichen
 
 ### SRAM-Änderung auslösen
-Verursache im Spiel eine Änderung des SRAMs (z.B. löse ein Spielereignis aus oder öffne eine ungeöffnete Truhe). Damit die Speicher-Datei aktualisiert wird speichere deinen Spielstand im Spiel selbst bei einer Speichermöglichkeit.
+Verursache eine Änderung des SRAMs indem du z.B. ein Spielereignis auslöst oder eine Truhe öffnest und erstelle einen Savestate.
 
 ### SRAM vergleichen
 Drücke (c) um die aktuelle Speicher-Datei mit der Vergleichs-Datei zu vergleichen. 
-     (Falls sich die Speicher-Datei überhaupt nicht geändert hat, hat *vermutlich* der Emulator die Datei (noch!) nicht automatisch aktualisiert. Überprüfe das Änderungsdatum der *.srm-Datei.
-     Beispiel: der von Snes9x voreingestellte Aktualisierungszeitraum ist 30 Sekunden. Verringere den Wert auf z. B. 1 Sekunde,
-     aber nicht auf 0! (was zur Deaktivierung des Automatismus führt)
 
 ## ***4)*** Vergleichsergebnis interpretieren und Fund dokumentieren
 
@@ -36,7 +29,7 @@ Drücke (c) um die aktuelle Speicher-Datei mit der Vergleichs-Datei zu vergleich
 Versuche so wenig wie möglich zwischen zwei Speicherungen zu ändern um unnötiges Bit-Rauschen zu vermeiden. 
 
 ### Optimale Vergleichsbedingungen
-* Halte Ausschau nach sich ändernden, einzelnen Bits oder kompletten Bytes. Das Vergleichserbnis wird farblich anders eingefärbt wenn sich entweder nur 1 Bit oder 1 ganzes Byte geändert hat. Schau es dir ggf. <a href="imagery">hier</a> nochmal an.
+* Halte Ausschau nach sich-ändernden, einzelnen Bits oder kompletten Bytes. Das Vergleichserbnis wird farblich anders eingefärbt wenn sich entweder nur 1 Bit oder 1 ganzes Byte geändert hat. Schau es dir ggf. <a href="imagery">hier</a> nochmal an.
 * Oft werden durch eine Aktion im Spiel zahlreihe Werte geändert. Versuche durch das Wiederholen mit verschiedenen Savegames die Änderungen zu isolieren, die sich immer wieder gleichbleibend ändern.
 
 ### Reproduzierbarkeit sicherstellen

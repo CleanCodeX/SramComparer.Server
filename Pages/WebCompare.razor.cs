@@ -23,7 +23,7 @@ namespace WebApp.SoE.Pages
 #nullable restore
 		
 		private bool CompareButtonDisabled => !ViewModel.CanCompare;
-		private bool CopyButtonDisabled => ViewModel.IsComparing || ViewModel.OutputMessage.ToString().IsNullOrEmpty();
+		private bool CopyButtonDisabled => ViewModel.IsError || ViewModel.IsComparing || ViewModel.OutputMessage.ToString().IsNullOrEmpty();
 
 		private const string BgColor = "#111111";
 
@@ -42,7 +42,11 @@ namespace WebApp.SoE.Pages
 
 		private Task OnCurrentFileChange(InputFileChangeEventArgs arg) => ViewModel.SetCurrentFileAsync(arg.File);
 
-		private async Task OnComparisonFileChange(InputFileChangeEventArgs arg) => ViewModel.ComparisonSramFileStream = await arg.File.OpenReadStream().CopyAsMemoryStreamAsync();
+		private async Task OnComparisonFileChange(InputFileChangeEventArgs arg)
+		{
+			ViewModel.ComparisonFileName = arg.File.Name;
+			ViewModel.ComparisonSramFileStream = await arg.File.OpenReadStream().CopyAsMemoryStreamAsync();
+		}
 
 		protected override Task OnInitializedAsync() => ViewModel.LoadOptionsAsync();
 

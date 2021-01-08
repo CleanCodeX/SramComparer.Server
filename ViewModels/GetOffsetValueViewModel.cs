@@ -21,7 +21,7 @@ namespace WebApp.SoE.ViewModels
 
 		public bool CanGet => IsLoaded && OffsetAddress > 0;
 		public bool CanSet => IsLoaded && OffsetAddress > 0;
-
+		
 		private string StorageKey => StorageKeyPrefix + nameof(OffsetAddress);
 
 		protected internal override async Task LoadOptionsAsync()
@@ -56,6 +56,8 @@ namespace WebApp.SoE.ViewModels
 			{
 				CurrentSramSaveSlot.ThrowIfDefault(nameof(CurrentSramSaveSlot));
 				SramFile.ThrowIfNull(nameof(SramFile));
+
+				IsError = false;
 				OffsetValue = SramFile.GetOffsetByte(CurrentSramSaveSlot.ToInt() - 1, OffsetAddress);
 				var valueDisplayText = NumberFormatter.GetByteValueRepresentations((byte) OffsetValue);
 
@@ -65,6 +67,7 @@ namespace WebApp.SoE.ViewModels
 			catch (Exception ex)
 			{
 				OutputMessage = ex.GetColoredMessage();
+				IsError = true;
 			}
 		}
 	}

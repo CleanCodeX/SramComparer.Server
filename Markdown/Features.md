@@ -3,6 +3,7 @@ Allows to compare (unknown) areas and modify offset values in Secret of Evermore
 
 ## Features
 * [C|W] Display (or save modified) offset values
+* [C|W] Comparison of *.SRM files as well as Snes9x savestate files  
 * [C|W] Comparison of Unknowns area only (d) 
 * [C|W] Comparison of complete save slot area (o)
 * [C|W] Comparison of the non-save slot area (o)

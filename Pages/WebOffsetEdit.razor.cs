@@ -15,7 +15,7 @@ namespace WebApp.SoE.Pages
 		[Inject] private SetOffsetValueViewModel ViewModel { get; set; }
 #nullable restore
 
-		private bool SaveButtonDisabled => !ViewModel.CanSave;
+		private bool SaveButtonDisabled => ViewModel.IsError || !ViewModel.CanSave;
 
 		private const string SelectSelectedStyle = "color: cyan;background-color: black;";
 		private const string SelectUnselectedStyle = "color: white;background-color: black;";

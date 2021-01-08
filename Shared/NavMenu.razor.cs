@@ -57,6 +57,7 @@ namespace WebApp.SoE.Shared
 				_ when path == PageUris.Imagery.ToLower() => ExpandedMenu.ConsoleApp,
 				_ when path == PageUris.ChangelogConsole.ToLower() => ExpandedMenu.ConsoleApp,
 				_ when path == PageUris.Guide.ToLower() => ExpandedMenu.ConsoleApp,
+				_ when path == PageUris.GuideSavestate.ToLower() => ExpandedMenu.ConsoleApp,
 
 				_ when path == PageUris.Compare.ToLower() => ExpandedMenu.WebTools,
 				_ when path == PageUris.OffsetEdit.ToLower() => ExpandedMenu.WebTools,

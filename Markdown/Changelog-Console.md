@@ -5,6 +5,10 @@ This application uses the latest .NET 5 runtime. Make sure you have it installed
 
 Hint: if download does not start, use rightclick - save target as
 
+### v030 (2021-01-08)
+<a href="http://xeth.de/Releases/SramComparer/Comparer-SoE.0.3.0.zip">Download</a>
+* Added support for Snes9x savestates
+
 ### v026 (2020-12-29)
 <a href="http://xeth.de/Releases/SramComparer/Comparer-SoE.0.2.6.zip">Download</a>
 * Bugfix when comparing two different slots

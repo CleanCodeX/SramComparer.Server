@@ -286,7 +286,7 @@
     <value>Console App Imagery</value>
   </data>
   <data name="MenuTitleGuide" xml:space="preserve">
-    <value>Console App Guide</value>
+    <value>Console App Guide (SRM)</value>
   </data>
   <data name="MenuHistory" xml:space="preserve">
     <value>History</value>
@@ -355,7 +355,7 @@
     <value>Hide localization</value>
   </data>
   <data name="MenuGuide" xml:space="preserve">
-    <value>Guide</value>
+    <value>Guide (SRM)</value>
   </data>
   <data name="MenuTitleExploring" xml:space="preserve">
     <value>How to explore the SRAM</value>
@@ -380,5 +380,18 @@
   </data>
   <data name="LabelWelcomeMessage" xml:space="preserve">
     <value>Welcome to the Evermore Format Exploration Project!</value>
+  </data>
+  <data name="LabelTitleFile" xml:space="preserve">
+    <value>Select either a SRAM (*.srm) or Snes9x savestate file (*.000 - *.009; *.state)</value>
+  </data>
+  <data name="MenuTitleGuideSavestate" xml:space="preserve">
+    <value>Console App Guide (Savestate)</value>
+  </data>
+  <data name="MenuGuideSavestate" xml:space="preserve">
+    <value>Guide (Savestate)</value>
+  </data>
+  <data name="ErrorWrongFileExtensionTemplate" xml:space="preserve">
+    <value>Error: File {0} has an unsupported file extension
+</value>
   </data>
 </root>

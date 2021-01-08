@@ -23,11 +23,13 @@ namespace WebApp.SoE.ViewModels
 	{
 		public SaveSlotId ComparisonSramFileSaveSlot { get; set; }
 		public MemoryStream? ComparisonSramFileStream { get; set; }
+		public string? ComparisonFileName { get; set; }
 		public MarkupString OutputMessage { get; set; }
 		public bool IsComparing { get; set; }
 		public bool CanCompare => !IsComparing && CurrentFileStream is not null && ComparisonSramFileStream is not null;
 		public bool ColorizeOutput { get; set; } = true;
 		public bool ShowOutput => OutputMessage.ToString() != string.Empty;
+		public bool IsError { get; private set; }
 
 		public bool SlotByteByByteComparison
 		{
@@ -60,17 +62,21 @@ namespace WebApp.SoE.ViewModels
 			{
 				CanCompare.ThrowIfFalse(nameof(CanCompare));
 
+				IsError = false;
 				IsComparing = true;
 
 				await SaveOptionsAsync();
 
-				using var output = new StringWriter {NewLine = "<br>"};
+				await using var output = new StringWriter {NewLine = "<br>"};
 
 				Requires.NotNull(CurrentFileStream, nameof(CurrentFileStream));
 				Requires.NotNull(ComparisonSramFileStream, nameof(ComparisonSramFileStream));
 
 				CurrentFileStream.Position = 0;
 				ComparisonSramFileStream.Position = 0;
+
+				Options.CurrentSramFilepath = CurrentFileName;
+				Options.ComparisonSramFilepath = ComparisonFileName;
 
 				new CommandHandlerSoE(ColorizeOutput ? new HtmlConsolePrinterSoE() : new ConsolePrinter()).Compare(
 					CurrentFileStream, ComparisonSramFileStream, Options, output);
@@ -80,6 +86,7 @@ namespace WebApp.SoE.ViewModels
 			catch (Exception ex)
 			{
 				OutputMessage = ex.GetColoredMessage();
+				IsError = true;
 			}
 
 			IsComparing = false;

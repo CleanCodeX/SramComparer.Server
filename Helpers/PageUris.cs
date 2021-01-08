@@ -13,6 +13,7 @@
 		public const string Features = "/" + nameof(Features);
 
 		public const string Guide = "/" + nameof(Guide);
+		public const string GuideSavestate = "/Guide-Savestate";
 
 		public const string Glossary = "/" + nameof(Glossary);
 		public const string Imagery = "/" + nameof(Imagery);

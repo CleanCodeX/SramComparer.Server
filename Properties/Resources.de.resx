@@ -216,7 +216,7 @@
 		<value>Bilder der Konsolen-Anwendung</value>
 	</data>
 	<data name="MenuTitleGuide" xml:space="preserve">
-		<value>Bedienungsanleitung der Konsolen-Anwendung</value>
+		<value>Bedienungsanleitung der Konsolen-Anwendung (SRM)</value>
 	</data>
 	<data name="MenuTitleDiscord" xml:space="preserve">
 		<value>Öffnet Discord-Einladung</value>
@@ -249,7 +249,7 @@
 		<value>Die Lokalisierung in die Zwischen ablage kopieren</value>
 	</data>
 	<data name="MenuGuide" xml:space="preserve">
-		<value>Anleitung</value>
+		<value>Anleitung (SRM)</value>
 	</data>
 	<data name="MenuTitleExploring" xml:space="preserve">
 		<value>Wie das SRAM erkundet wird</value>
@@ -274,5 +274,17 @@
 	</data>
 	<data name="LabelWelcomeMessage" xml:space="preserve">
 		<value>Willkommen zum Evermore Format Erkundungs-Projekt</value>
+	</data>
+	<data name="LabelTitleFile" xml:space="preserve">
+		<value>Wähle entweder eine SRAM- (*.srm) or Snes9x Savestate- Datei (*.000 - *.009; *.state)</value>
+	</data>
+	<data name="MenuTitleGuideSavestate" xml:space="preserve">
+		<value>Bedienungsanleitung der Konsolen-Anwendung (Savestate)</value>
+	</data>
+	<data name="MenuGuideSavestate" xml:space="preserve">
+		<value>Anleitung (Savestate)</value>
+	</data>
+	<data name="ErrorWrongFileExtensionTemplate" xml:space="preserve">
+		<value>Fehler: Datei  {0} hat eine nicht unterstützt Dateiendung</value>
 	</data>
 </root>

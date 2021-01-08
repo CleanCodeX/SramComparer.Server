@@ -1,35 +1,27 @@
-## Guide for Comparing SRM files
+## Guide for Comparing Savestate files
 
-This is a step-by-step guide of SRAM-Comparer console app and comparing SRM files.
+This is a step-by-step guide of SRAM-Comparer console app and comparing Snes9x savestate files.
 
-To compare savestate files see <a href=guide-savestate>here</a>.
+To compare SRM files see <a href=guide>here</a>.
 
 ## ***1)*** Preparation
 
 ### Useful links
 Check out <a href="unknowns">Unknowns</a> to see examples of which parts of the SRAM structure are still considered to be unknown. Take a look at <a href="imagery">pictures</a> to see how the comparison results are to be interpreted.
 
-### Configure emulator
-Most emulators have the option to save a game's SRAM as soon as a change occurs.
-Make sure this setting is enabled. Otherwise you have to make sure by yourself that the emulator updates the * .srm file.
-
 ### Start console app
-Start the application by passing the path to the SRAM file (* .srm) of the game as the first command line parameter. The file can also be dragged and dropped onto the application.
+Start the application by passing the path to the savestate file (*.000-009 or * .state) of the game as the first command line parameter. The file can also be dragged and dropped onto the application.
 
-## ***2)*** Create comparison SRAM file
-Then press (ow) to create a comparison copy of your current SRAM file. This allows to compare with after the current SRAM file changed.
+## ***2)*** Create comparison save file
+Then press (ow) to create a comparison copy of your current save file. This allows to compare with after the current save file changed.
 
 ## ***3)*** Trigger a change in the game and compare SRAM
 
 ### Trigger SRAM change
-Change the SRAM in the game by e.g. triggering a game event or opening a chest, so that the SRAM file is about to be updated. 
-Then save your game in at the inn.
+Change the SRAM by e.g. triggering a game event or opening a chest and create a savestate.
 
 ### Compare SRAM
-Press (c) to compare the current SRAM file with comparison file. 
-If the SRAM file has not changed at all, then the emulator *probably* has not (yet!) Updated the file automatically. Check the modification date of the * .srm file.
-
-Example: the update period preset by Snes9x is 30 seconds. Decrease the value to 1 second, but not to 0! (which leads to the deactivation of the automatism)
+Press (c) to compare the current save file with comparison file. 
 
 ## ***4)*** Interpret the comparison result and document the find
 
@@ -54,7 +46,7 @@ As soon as you can reproducibly assign a single change in the SRAM to a change i
 Document your find or your assumption via the <a href="community">Community</a> to avoid others do the same and can help you with the interpretation of your comparison results.
 
 ## ***5)*** New comparison without previous changes
-To enable a comparison without previous SRAM changes, press (ow) to save the current SRAM file as a comparison file. Then start again at step 3.1.
+To enable a comparison without previous SRAM changes, press (ow) to save the current save file as a comparison file. Then start again at step 3.1.
 
 ## ***6)*** Comparison options
 
@@ -73,4 +65,4 @@ To compare the bytes behind all save slots press (nsbc). Currently it appears th
 Current and comparison srm file can be backed-up (b) or (bc) or restored (r) or (rc) individually.
 
 ## ***8)*** (optional) Show or edit offset values
-SRAM offset values for specific save slots can be displayed by pressing (ov) or manipulated by (mov). You can decide whether to update your current SRAM file (backup recommended) or creating a new file.
+SRAM offset values for specific save slots can be displayed by pressing (ov) or manipulated by (mov). You can decide whether to update your current save file (backup recommended) or creating a new file.
