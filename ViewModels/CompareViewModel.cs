@@ -21,12 +21,12 @@ namespace WebApp.SoE.ViewModels
 	/// <summary>Viewmodel for SoE SRAM comparison</summary>
 	public class CompareViewModel : ViewModelBase
 	{
-		public SaveSlotId ComparisonSramFileSaveSlot { get; set; }
-		public MemoryStream? ComparisonSramFileStream { get; set; }
+		public SaveSlotId ComparisonFileSaveSlot { get; set; }
+		public MemoryStream? ComparisonFileStream { get; set; }
 		public string? ComparisonFileName { get; set; }
 		public MarkupString OutputMessage { get; set; }
 		public bool IsComparing { get; set; }
-		public bool CanCompare => !IsComparing && CurrentFileStream is not null && ComparisonSramFileStream is not null;
+		public bool CanCompare => !IsComparing && CurrentFileStream is not null && ComparisonFileStream is not null;
 		public bool ColorizeOutput { get; set; } = true;
 		public bool ShowOutput => OutputMessage.ToString() != string.Empty;
 		public bool IsError { get; private set; }
@@ -70,16 +70,16 @@ namespace WebApp.SoE.ViewModels
 				await using var output = new StringWriter {NewLine = "<br>"};
 
 				Requires.NotNull(CurrentFileStream, nameof(CurrentFileStream));
-				Requires.NotNull(ComparisonSramFileStream, nameof(ComparisonSramFileStream));
+				Requires.NotNull(ComparisonFileStream, nameof(ComparisonFileStream));
 
 				CurrentFileStream.Position = 0;
-				ComparisonSramFileStream.Position = 0;
+				ComparisonFileStream.Position = 0;
 
-				Options.CurrentSramFilepath = CurrentFileName;
-				Options.ComparisonSramFilepath = ComparisonFileName;
+				Options.CurrentFilePath = CurrentFileName;
+				Options.ComparisonFilePath = ComparisonFileName;
 
 				new CommandHandlerSoE(ColorizeOutput ? new HtmlConsolePrinterSoE() : new ConsolePrinter()).Compare(
-					CurrentFileStream, ComparisonSramFileStream, Options, output);
+					CurrentFileStream, ComparisonFileStream, Options, output);
 
 				OutputMessage = output.ToString().ToMarkup();
 			}
@@ -96,7 +96,7 @@ namespace WebApp.SoE.ViewModels
 		{
 			await base.LoadOptionsAsync();
 
-			ComparisonSramFileSaveSlot = (SaveSlotId)Options.ComparisonSramFileSaveSlot;
+			ComparisonFileSaveSlot = (SaveSlotId)Options.ComparisonFileSaveSlot;
 
 			if (Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.ChecksumIfDifferent))
 				Checksum = Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.Checksum)
@@ -111,7 +111,7 @@ namespace WebApp.SoE.ViewModels
 
 		protected internal override Task SaveOptionsAsync()
 		{
-			Options.ComparisonSramFileSaveSlot = ComparisonSramFileSaveSlot.ToInt();
+			Options.ComparisonFileSaveSlot = ComparisonFileSaveSlot.ToInt();
 
 			Options.ComparisonFlags = Options.ComparisonFlags & ~ComparisonFlagsSoE.Checksum;
 			if (Checksum != default)

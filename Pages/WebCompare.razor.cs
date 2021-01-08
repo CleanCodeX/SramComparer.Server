@@ -34,8 +34,8 @@ namespace WebApp.SoE.Pages
 		private string WholeSlotStyle => ViewModel.SlotByteByByteComparison == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private string NonSlotStyle => ViewModel.NonSlotByteByByteComparison == default ? SelectUnselectedStyle : SelectSelectedStyle;
 
-		private string CurrentSramFileStyle => ViewModel.CurrentSramSaveSlot == default ? SelectUnselectedStyle : SelectSelectedStyle;
-		private string ComparisonSramFileStyle => ViewModel.ComparisonSramFileSaveSlot == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string CurrentFileStyle => ViewModel.CurrentFileSaveSlot == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string ComparisonFileStyle => ViewModel.ComparisonFileSaveSlot == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private string GameRegionStyle => ViewModel.GameRegion == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private string Unknown12BStyle => ViewModel.Unknown12B == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private string ChecksumStyle => ViewModel.Checksum == default ? SelectUnselectedStyle : SelectSelectedStyle;
@@ -45,7 +45,7 @@ namespace WebApp.SoE.Pages
 		private async Task OnComparisonFileChange(InputFileChangeEventArgs arg)
 		{
 			ViewModel.ComparisonFileName = arg.File.Name;
-			ViewModel.ComparisonSramFileStream = await arg.File.OpenReadStream().CopyAsMemoryStreamAsync();
+			ViewModel.ComparisonFileStream = await arg.File.OpenReadStream().CopyAsMemoryStreamAsync();
 		}
 
 		protected override Task OnInitializedAsync() => ViewModel.LoadOptionsAsync();

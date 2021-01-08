@@ -20,7 +20,7 @@ namespace WebApp.SoE.ViewModels.Bases
 
 		public Options Options { get; private set; } = new();
 		public GameRegion GameRegion { get; set; }
-		public SaveSlotId CurrentSramSaveSlot { get; set; }
+		public SaveSlotId CurrentFileSaveSlot { get; set; }
 		protected Stream? CurrentFileStream { get; set; }
 		public string? CurrentFileName { get; set; }
 
@@ -40,13 +40,13 @@ namespace WebApp.SoE.ViewModels.Bases
 			}
 			
 			GameRegion = Options.GameRegion;
-			CurrentSramSaveSlot = (SaveSlotId)Options.CurrentSramFileSaveSlot;
+			CurrentFileSaveSlot = (SaveSlotId)Options.CurrentFileSaveSlot;
 		}
 
 		protected internal virtual async Task SaveOptionsAsync()
 		{
 			Options.GameRegion = GameRegion;
-			Options.CurrentSramFileSaveSlot = CurrentSramSaveSlot.ToInt();
+			Options.CurrentFileSaveSlot = CurrentFileSaveSlot.ToInt();
 
 			try
 			{

@@ -26,7 +26,7 @@ namespace WebApp.SoE.ViewModels.Bases
 		public bool IsLoading { get; set; }
 		public virtual bool CanLoad => !IsLoading && CurrentFileStream is not null;
 		public MarkupString OutputMessage { get; set; }
-		public new MandatoryGameId CurrentSramSaveSlot { get; set; } = MandatoryGameId.One;
+		public new MandatoryGameId CurrentFileSaveSlot { get; set; } = MandatoryGameId.One;
 		public bool IsLoaded => SramFile is not null;
 		public bool ShowOutput => OutputMessage.ToString() != string.Empty;
 		public bool IsError { get; protected set; }
@@ -68,13 +68,13 @@ namespace WebApp.SoE.ViewModels.Bases
 		{
 			await base.LoadOptionsAsync();
 
-			if(Options.CurrentSramFileSaveSlot > 0)
-				CurrentSramSaveSlot = (MandatoryGameId)base.CurrentSramSaveSlot;
+			if(Options.CurrentFileSaveSlot > 0)
+				CurrentFileSaveSlot = (MandatoryGameId)base.CurrentFileSaveSlot;
 		}
 
 		protected internal override Task SaveOptionsAsync()
 		{
-			base.CurrentSramSaveSlot = (SaveSlotId)CurrentSramSaveSlot;
+			base.CurrentFileSaveSlot = (SaveSlotId)CurrentFileSaveSlot;
 
 			return base.SaveOptionsAsync();
 		}

@@ -19,7 +19,7 @@
 			<p />
 
 			<tr>
-				<td colspan="2"><label class="header" title="@Res.LabelTitleFile">@ResComp.CurrentSramFile (*.srm|*.00x|*.state)</label></td>
+				<td colspan="2"><label class="header" title="@Res.LabelTitleFile">@ResComp.CurrentFile (*.srm|*.00x|*.state)</label></td>
 			</tr>
 
 			<tr>
@@ -28,13 +28,13 @@
 			</tr>
 			<tr>
 				<td><label>@ResComp.SaveSlot:@Ns</label></td>
-				<td><InputSelectEnum @bind-Value="@ViewModel.CurrentSramSaveSlot" style=@CurrentSramFileStyle title="@Res.LabelTitleFile" /></td>
+				<td><InputSelectEnum @bind-Value="@ViewModel.CurrentFileSaveSlot" style=@CurrentFileStyle title="@Res.LabelTitleFile" /></td>
 			</tr>
 			
 			<p />
 
 			<tr>
-				<td colspan="2"><label class="header" title="@Res.LabelTitleFile">@ResComp.ComparisonSramFile (*.srm|*.comp|*.00x|*.state)</label></td>
+				<td colspan="2"><label class="header" title="@Res.LabelTitleFile">@ResComp.ComparisonFile (*.srm|*.comp|*.00x|*.state)</label></td>
 			</tr>
 			
 			<tr>
@@ -43,7 +43,7 @@
 			</tr>
 			<tr>
 				<td><label>@ResComp.SaveSlot:@Ns</label></td>
-				<td><InputSelectEnum @bind-Value="@ViewModel.ComparisonSramFileSaveSlot" style=@ComparisonSramFileStyle /></td>
+				<td><InputSelectEnum @bind-Value="@ViewModel.ComparisonFileSaveSlot" style=@ComparisonFileStyle /></td>
 			</tr>
 			
 			<p />

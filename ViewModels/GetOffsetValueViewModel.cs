@@ -54,11 +54,11 @@ namespace WebApp.SoE.ViewModels
 		{
 			try
 			{
-				CurrentSramSaveSlot.ThrowIfDefault(nameof(CurrentSramSaveSlot));
+				CurrentFileSaveSlot.ThrowIfDefault(nameof(CurrentFileSaveSlot));
 				SramFile.ThrowIfNull(nameof(SramFile));
 
 				IsError = false;
-				OffsetValue = SramFile.GetOffsetByte(CurrentSramSaveSlot.ToInt() - 1, OffsetAddress);
+				OffsetValue = SramFile.GetOffsetByte(CurrentFileSaveSlot.ToInt() - 1, OffsetAddress);
 				var valueDisplayText = NumberFormatter.GetByteValueRepresentations((byte) OffsetValue);
 
 				OutputMessage = Resources.StatusGetOffsetValueTemplate.InsertArgs(OffsetAddress, valueDisplayText)

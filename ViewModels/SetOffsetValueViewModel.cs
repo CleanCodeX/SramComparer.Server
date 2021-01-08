@@ -34,7 +34,7 @@ namespace WebApp.SoE.ViewModels
 				SramFile.ThrowIfNull(nameof(SramFile));
 
 				IsError = false;
-				SramFile.SetOffsetValue(Options.CurrentSramFileSaveSlot - 1, OffsetAddress, (byte)OffsetValue);
+				SramFile.SetOffsetValue(Options.CurrentFileSaveSlot - 1, OffsetAddress, (byte)OffsetValue);
 				var valueDisplayText = NumberFormatter.GetByteValueRepresentations((byte)OffsetValue);
 
 				OutputMessage = Resources.StatusSetOffsetValueTemplate.InsertArgs(OffsetAddress, valueDisplayText).ColorText(Color.Green).ToMarkup();
