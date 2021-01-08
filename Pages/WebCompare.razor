@@ -12,14 +12,14 @@
 			</tr>
 
 			<tr>
-				<td><label class="header">@ResComp.GameRegion:@Ns</label></td>
+				<td><label class="header">@ResComp.EnumGameRegion:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.GameRegion" style=@GameRegionStyle /></td>
 			</tr>
 			
 			<p />
 
 			<tr>
-				<td colspan="2"><label class="header" title="@Res.LabelTitleFile">@ResComp.CurrentFile (*.srm|*.00x|*.state)</label></td>
+				<td colspan="2"><label class="header" title="@Res.LabelTitleFile">@ResComp.EnumCurrentFile (*.srm|*.00x|*.state)</label></td>
 			</tr>
 
 			<tr>
@@ -34,7 +34,7 @@
 			<p />
 
 			<tr>
-				<td colspan="2"><label class="header" title="@Res.LabelTitleFile">@ResComp.ComparisonFile (*.srm|*.comp|*.00x|*.state)</label></td>
+				<td colspan="2"><label class="header" title="@Res.LabelTitleFile">@ResComp.EnumComparisonFile (*.srm|*.comp|*.00x|*.state)</label></td>
 			</tr>
 			
 			<tr>
@@ -54,9 +54,9 @@
 			
 			<tr>
 				<td colspan="2"><InputCheckbox @bind-Value="@ViewModel.SlotByteByByteComparison" />
-					<label style=@WholeSlotStyle title="@Res.LabelTitleSaveSlotByteByByteComparison">@ResComp.SlotByteByByteComparison</label> | 
+					<label style=@WholeSlotStyle title="@Res.LabelTitleSaveSlotByteByByteComparison">@ResComp.EnumSlotByteByByteComparison</label> | 
 					<InputCheckbox @bind-Value="@ViewModel.NonSlotByteByByteComparison" />
-					<label style=@NonSlotStyle title="@Res.LabelTitleNonSaveSlotByteByByteComparison">@ResComp.NonSlotByteByByteComparison</label>
+					<label style=@NonSlotStyle title="@Res.LabelTitleNonSaveSlotByteByByteComparison">@ResComp.EnumNonSlotByteByByteComparison</label>
 				</td>
 			</tr>
 			
