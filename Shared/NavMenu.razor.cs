@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
@@ -13,7 +14,7 @@ namespace WebApp.SoE.Shared
 		private enum ExpandedMenu
 		{
 			None,
-			SramHacking = 0x1,
+			SramFormat = 0x1,
 			SramComparison = 0x2,
 			ConsoleApp_Flag = 0x4,
 			ConsoleApp = ConsoleApp_Flag | SramComparison,
@@ -48,23 +49,40 @@ namespace WebApp.SoE.Shared
 		private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
 		{
 			var path = Path.Join("/", NavManager.ToBaseRelativePath(e.Location).ToLower());
+
+			var formatItems = new [] { 
+				PageUris.Goals.ToLower(), 
+				PageUris.Unknowns.ToLower(), 
+				PageUris.Exploring.ToLower(), 
+				PageUris.SramDocu.ToLower() };
+
+			var comparisonItems = new[]
+			{
+				PageUris.Features.ToLower(),
+				PageUris.Sources.ToLower()
+			};
+
+			var consoleItems = new[]
+			{
+				PageUris.Imagery.ToLower(), 
+				PageUris.ChangelogConsole.ToLower()
+			};
+
 			var menu = path switch
 			{
-				_ when path == PageUris.Goals.ToLower() => ExpandedMenu.SramHacking,
-				_ when path == PageUris.Unknowns.ToLower() => ExpandedMenu.SramHacking,
-				_ when path == PageUris.Exploring.ToLower() => ExpandedMenu.SramHacking,
-				_ when path == PageUris.SramDocu.ToLower() => ExpandedMenu.SramHacking,
+				// SramFormat
+				_ when formatItems.Contains(path) => ExpandedMenu.SramFormat,
 
-				_ when path == PageUris.Features.ToLower() => ExpandedMenu.SramComparison,
+				// SramComparison
+				_ when comparisonItems.Contains(path) => ExpandedMenu.SramComparison,
 
-				_ when path == PageUris.Imagery.ToLower() => ExpandedMenu.ConsoleApp,
-				_ when path == PageUris.ChangelogConsole.ToLower() => ExpandedMenu.ConsoleApp,
+				// ConsoleApp
+				_ when consoleItems.Contains(path) => ExpandedMenu.ConsoleApp,
 				_ when path.StartsWith(PageUris.Guide, true) => ExpandedMenu.ConsoleApp,
 
+				// WebTools
 				_ when path == PageUris.Comparing.ToLower() => ExpandedMenu.WebTools,
 				_ when path.StartsWith(PageUris.Offset, true) => ExpandedMenu.WebTools,
-
-				_ when path == PageUris.Sources.ToLower() => ExpandedMenu.SramComparison,
 
 				_ => ExpandedMenu.None
 			};
@@ -93,7 +111,7 @@ namespace WebApp.SoE.Shared
 		private void SetMenuStateVariables(ExpandedMenu menu)
 		{
 			_sramComparison = menu.HasFlag(ExpandedMenu.SramComparison);
-			_sramFormat = menu.HasFlag(ExpandedMenu.SramHacking);
+			_sramFormat = menu.HasFlag(ExpandedMenu.SramFormat);
 			_consoleApp = menu.HasFlag(ExpandedMenu.ConsoleApp);
 			_webTools = menu.HasFlag(ExpandedMenu.WebTools);
 		}

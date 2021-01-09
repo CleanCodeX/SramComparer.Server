@@ -23,6 +23,8 @@
 		public const string Goals = "/" + nameof(Goals);
 		public const string Unknowns = "/" + nameof(Unknowns);
 		public const string Exploring = "/" + nameof(Exploring);
+
+		public const string ConsoleApp = "/console-app";
 		public const string Changelog = "/" + nameof(Changelog);
 		public const string ChangelogWeb = Changelog + "/web";
 		public const string ChangelogConsole = Changelog + "/console";
