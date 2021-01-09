@@ -1,7 +1,12 @@
 ﻿@using WebApp.SoE.Helpers
 
 @attribute [Route(PageUris.Tutorials)]
-@inherits LangContentIdMarkupBase
+@inherits AutoLangContentIdMarkupBase
+
+@if (ShowAutoTranslateOption)
+{
+	<TranslateButton @bind-Value="@AutoTranslate" />
+}
 
 <div class="markup">
 	@Content
