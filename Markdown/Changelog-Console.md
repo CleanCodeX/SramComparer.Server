@@ -5,9 +5,12 @@ This application uses the latest .NET 5 runtime. Make sure you have it installed
 
 Hint: if download does not start, use rightclick - save target as
 
-### v030 (2021-01-08)
+### v030 (2021-01-09)
 <a href="http://xeth.de/Releases/SramComparer/Comparer-SoE.0.3.0.zip">Download</a>
 * Added support for Snes9x savestates
+* Added savestate offset value display
+* Added config(s) loading/saving (support for custom config name)
+* Added key binding customization
 
 ### v026 (2020-12-29)
 <a href="http://xeth.de/Releases/SramComparer/Comparer-SoE.0.2.6.zip">Download</a>

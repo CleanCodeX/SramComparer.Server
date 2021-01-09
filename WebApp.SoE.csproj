@@ -3,7 +3,7 @@
   <PropertyGroup>
 	  <TargetFramework>net5.0</TargetFramework>
 	  <Nullable>enable</Nullable>
-	  <Company>CleanCodeX</Company>
+	  <Company>KST</Company>
 	  <Product>WebApp.SoE</Product>
 	  <Version>1.0.5-a1</Version>
 	  <Authors>CleanCodeX</Authors>
@@ -12,6 +12,10 @@
 	  <Platforms>AnyCPU</Platforms>
 	  <PackageProjectUrl>http://evermore.xeth.de</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/CleanCodeX/WebApp.SoE</RepositoryUrl>
+	  <PackageTags>SoE, Secret Of Evermore, SRAM, SNES, Blazor</PackageTags>
+	  <PackageReleaseNotes>Added savestate web comparison
+Added savestate web offset value display
+</PackageReleaseNotes>
   </PropertyGroup>
 
 	<ItemGroup>
@@ -24,9 +28,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CCX.SramComparer.SoE" Version="0.2.6-a2" />
+		<PackageReference Include="CCX.SramComparer.SoE" Version="0.3.0-a2" />
 		<PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.5.0" />
-		<PackageReference Include="Westwind.AspNetCore.LiveReload" Version="0.3.0" />
+		<PackageReference Include="Westwind.AspNetCore.LiveReload" Version="0.3.1" />
 	</ItemGroup>
 
 	<ItemGroup>

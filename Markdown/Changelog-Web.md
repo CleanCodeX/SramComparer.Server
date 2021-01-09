@@ -1,7 +1,9 @@
 ﻿## Changelog Web-App
 
-#### v005 (2021-01-08)
+#### v005 (2021-01-09)
 * added Web-Compare support for Snes9x savestates
+* Added savestate web comparison
+* Added savestate web offset value display
 
 #### v004 (2021-01-04)
 * added auto-translate option for pages

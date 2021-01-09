@@ -92,6 +92,5 @@ namespace WebApp.SoE.ViewModels.Bases
 
 			return result;
 		}
-
 	}
 }

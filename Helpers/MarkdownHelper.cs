@@ -1,5 +1,6 @@
 ﻿using Common.Shared.Min.Extensions;
 using Markdig;
+using Markdig.Extensions.AutoIdentifiers;
 using Microsoft.AspNetCore.Components;
 
 namespace WebApp.SoE.Helpers
@@ -13,6 +14,8 @@ namespace WebApp.SoE.Helpers
 			
 			var pipeline = new MarkdownPipelineBuilder()
 				.UseEmojiAndSmiley()
+				.UseAutoIdentifiers(AutoIdentifierOptions.GitHub)
+				.UseAutoLinks()
 				.Build();
 			return (MarkupString)Markdown.ToHtml(markdown, pipeline);
 		}
