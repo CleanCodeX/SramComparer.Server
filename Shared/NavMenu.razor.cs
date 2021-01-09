@@ -39,28 +39,30 @@ namespace WebApp.SoE.Shared
 			if(_menu != ExpandedMenu.None)
 				SetMenuStateVariables(_menu);
 
-			NavManager.LocationChanged += NavManagerOnLocationChanged;
+			NavManager.LocationChanged += OnLocationChanged;
 		}
 
-		private void NavManagerOnLocationChanged(object? sender, LocationChangedEventArgs e)
+		/// <inheritdoc />
+		public void Dispose() => NavManager.LocationChanged -= OnLocationChanged;
+
+		private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
 		{
 			var path = Path.Join("/", NavManager.ToBaseRelativePath(e.Location).ToLower());
 			var menu = path switch
 			{
 				_ when path == PageUris.Goals.ToLower() => ExpandedMenu.SramHacking,
 				_ when path == PageUris.Unknowns.ToLower() => ExpandedMenu.SramHacking,
-				_ when path == PageUris.Explore.ToLower() => ExpandedMenu.SramHacking,
+				_ when path == PageUris.Exploring.ToLower() => ExpandedMenu.SramHacking,
 				_ when path == PageUris.SramDocu.ToLower() => ExpandedMenu.SramHacking,
 
 				_ when path == PageUris.Features.ToLower() => ExpandedMenu.SramComparison,
 
 				_ when path == PageUris.Imagery.ToLower() => ExpandedMenu.ConsoleApp,
 				_ when path == PageUris.ChangelogConsole.ToLower() => ExpandedMenu.ConsoleApp,
-				_ when path == PageUris.GuideSrm.ToLower() => ExpandedMenu.ConsoleApp,
-				_ when path == PageUris.GuideSavestate.ToLower() => ExpandedMenu.ConsoleApp,
+				_ when path.StartsWith(PageUris.Guide, true) => ExpandedMenu.ConsoleApp,
 
-				_ when path == PageUris.Compare.ToLower() => ExpandedMenu.WebTools,
-				_ when path == PageUris.OffsetEdit.ToLower() => ExpandedMenu.WebTools,
+				_ when path == PageUris.Comparing.ToLower() => ExpandedMenu.WebTools,
+				_ when path.StartsWith(PageUris.Offset, true) => ExpandedMenu.WebTools,
 
 				_ when path == PageUris.Sources.ToLower() => ExpandedMenu.SramComparison,
 

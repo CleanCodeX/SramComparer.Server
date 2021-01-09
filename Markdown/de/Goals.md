@@ -27,4 +27,4 @@ Sobald das SRAM-Format vollständig bekannt ist, bietet es die Möglichkeit eine
 Nun, das hängt hauptsächlich von der Menge und Qualität der Zuarbeit ab.
 Ich verbringe meine Freizeit damit daran zu arbeiten, aber das wird nicht ausreichen um schnell voranzukommen.
 
-Wenn du dem Exploration-Team beitreten möchtest, lies <a href=explore>hier</a>, wie es funktioniert.
+Wenn du dem Exploration-Team beitreten möchtest, lies <a href=exploring>hier</a>, wie es funktioniert.

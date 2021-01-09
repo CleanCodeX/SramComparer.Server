@@ -303,10 +303,10 @@
   <data name="MenuTheUnknowns" xml:space="preserve">
     <value>The Unknowns</value>
   </data>
-  <data name="MenuContribute" xml:space="preserve">
+  <data name="MenuContributing" xml:space="preserve">
     <value>Can I help?</value>
   </data>
-  <data name="MenuExplore" xml:space="preserve">
+  <data name="MenuExploring" xml:space="preserve">
     <value>Exploring SRAM</value>
   </data>
   <data name="MenuTitleSramDocu" xml:space="preserve">

@@ -17,7 +17,7 @@ Allows to compare (unknown) areas and modify offset values in Secret of Evermore
 * [C] Settings are parameterized
 * [W] Last used settings will be automatically saved
 
-*) C = Supported by <a href=downloads>Windows Console App</a>, W = Supported by <a href=compare>Web App</a>
+*) C = Supported by <a href=downloads>Windows Console App</a>, W = Supported by <a href=comparing>Web App</a>
 *) (O) = optional, (D) = default
 
 For images of console app click <a href=imagery>here</a>.

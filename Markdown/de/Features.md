@@ -4,7 +4,7 @@ Erlaubt das Vergleichen von (unbekannten) Bereichen und Modifizieren von Offset-
 ## Features
 * [C|W] Anzeigen (oder speichern von geänderten) Offset-Werten
 * [C|W] Vergleichen von unbekannten Bereichen des Speicherslots (v) 
-* [C|W] Vergleichen des gesamtem Speicherslot-Bereichs (o)
+* [C|W] Vergleichen des gesamten Speicherslot-Bereichs (o)
 * [C|W] Vergleichen des Nicht-Speicherslot-Bereichs (o)
 * [C|W] Vergleichen aller Speicherslots (v) 
 * [C|W] Vergleichen eines spezifischen Speicherslots mit dem gleichen oder unterschiedlichem Vergleichs-Speicherslot (o)
@@ -16,7 +16,7 @@ Erlaubt das Vergleichen von (unbekannten) Bereichen und Modifizieren von Offset-
 * [C] Einstellungen können parametrisiert werden
 * [W] Zuletzt benutzte Einstellungen werden automatisch gespeichert
 
-*) C = unterstützt von <a href=downloads>Windows Konsolen-App</a>, W = unterstützt von <a href=compare>Web-App</a>
+*) C = unterstützt von <a href=downloads>Windows Konsolen-App</a>, W = unterstützt von <a href=comparing>Web-App</a>
 *) (O) = optional, (v) = voreingestellt
 
 Für Bilder der Konsolenanwendung <a href=imagery>hier</a> klicken.

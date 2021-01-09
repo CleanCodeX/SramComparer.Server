@@ -129,7 +129,7 @@
 	<data name="MenuHistory" xml:space="preserve">
 		<value>Historique</value>
 	</data>
-	<data name="MenuContribute" xml:space="preserve">
+	<data name="MenuContributing" xml:space="preserve">
 		<value>Comment puis-je aider?</value><comment>Changed to Can I help?</comment>
 	</data>
 	<data name="MenuImagery" xml:space="preserve">
@@ -144,7 +144,7 @@
 	<data name="MenuSramFormat" xml:space="preserve">
 		<value>Format SRAM</value>
 	</data>
-	<data name="MenuExplore" xml:space="preserve">
+	<data name="MenuExploring" xml:space="preserve">
 		<value>Explorer SRAM</value>
 	</data>
 	<data name="MenuTheUnknowns" xml:space="preserve">

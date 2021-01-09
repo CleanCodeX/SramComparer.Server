@@ -37,11 +37,11 @@
             </NavLink>
             <NavLink class="nav-link">
                 @quickLinkOpener @sp
-                <a href="@PageUris.Compare" title="@Res.MenuTitleCompare">
+                <a href="@PageUris.Comparing" title="@Res.MenuTitleCompare">
                     <span class="iconify" data-icon="oi-magnifying-glass"/>
                 </a>
                 @del
-                <a href="@PageUris.OffsetEdit" title="@Res.MenuTitleOffsetEdit">
+                <a href="@PageUris.OffsetEditing" title="@Res.MenuTitleOffsetEdit">
                     <span class="iconify" data-icon="oi-pencil"/>
                 </a>
                 @del
@@ -83,8 +83,8 @@
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Explore" title="@Res.MenuTitleExploring">
-                            <span class="oi oi-thumb-up"/> @Res.MenuExplore.ReplaceSpaces()
+                        <NavLink class="nav-link" href="@PageUris.Exploring" title="@Res.MenuTitleExploring">
+                            <span class="oi oi-thumb-up"/> @Res.MenuExploring.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
@@ -134,7 +134,7 @@
                                     </NavLink>
                                 </li>
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.GuideSrm" title="@Res.MenuTitleGuideSrm">
+                                    <NavLink class="nav-link" href="@PageUris.Guide" title="@Res.MenuTitleGuideSrm" Match="NavLinkMatch.Prefix">
                                         <span class="oi oi-document"/> @Res.MenuGuideSrm.ReplaceSpaces()
                                     </NavLink>
                                 </li>
@@ -149,7 +149,7 @@
                     <!-- / SramComparerCmdApp -->
                     <!-- WebTools -->
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="@PageUris.Compare" title="@Res.MenuTitleCompare">
+                        <a class="nav-link" href="@PageUris.Comparing" title="@Res.MenuTitleCompare">
                             <span class="@(_webTools ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
                             <span class="oi oi-wrench" /> @Res.MenuWebTools.ReplaceSpaces() 
                         </a>
@@ -158,12 +158,12 @@
                         {
                             <ol class="nav flex-column">
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.Compare" title="@Res.MenuTitleCompare">
+                                    <NavLink class="nav-link" href="@PageUris.Comparing" title="@Res.MenuTitleCompare">
                                         <span class="oi oi-eye"/> @Res.MenuWebComparison.ReplaceSpaces()
                                     </NavLink>
                                 </li>
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.OffsetEdit" title="@Res.MenuTitleOffsetEdit">
+                                    <NavLink class="nav-link" href="@PageUris.OffsetEditing" title="@Res.MenuTitleOffsetEdit" Match="NavLinkMatch.Prefix">
                                         <span class="oi oi-pencil"/> @Res.MenuWebOffsetEdit.ReplaceSpaces()
                                     </NavLink>
                                 </li>
@@ -188,8 +188,8 @@
     <!-- Other -->
     <ol class="nav flex-column">
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.Contribute" title="@Res.MenuTitleContribute">
-                <span class="oi oi-heart"/> @Res.MenuContribute.ReplaceSpaces()
+            <NavLink class="nav-link" href="@PageUris.Contributing" title="@Res.MenuTitleContribute">
+                <span class="oi oi-heart"/> @Res.MenuContributing.ReplaceSpaces()
             </NavLink>
         </li>
         <li class="nav-item px-3">

@@ -467,7 +467,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Select either a SRAM (*.srm) or Snes9x savestate file (*.000 - *.009; *.state) ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Select either a SRAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009; *.state) ähnelt.
         /// </summary>
         public static string LabelTitleFile {
             get {
@@ -586,18 +586,18 @@ namespace WebApp.SoE.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Can I help? ähnelt.
         /// </summary>
-        public static string MenuContribute {
+        public static string MenuContributing {
             get {
-                return ResourceManager.GetString("MenuContribute", resourceCulture);
+                return ResourceManager.GetString("MenuContributing", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Exploring SRAM ähnelt.
         /// </summary>
-        public static string MenuExplore {
+        public static string MenuExploring {
             get {
-                return ResourceManager.GetString("MenuExplore", resourceCulture);
+                return ResourceManager.GetString("MenuExploring", resourceCulture);
             }
         }
         
@@ -890,7 +890,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Save slot ähnelt.
         /// </summary>
         public static string SaveSlot {
             get {

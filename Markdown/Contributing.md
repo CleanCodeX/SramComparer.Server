@@ -20,7 +20,7 @@ There are a view different ways of contributing to the project
 #### Exploring SRAM data
 First of all, it's not difficult to do that. There is a convenient tool which does the nasty work of comparison for you, meaning there is no need to use a hex-editor. Promised ;-)
 
-If you're not **too** scared of bits and bytes, you could join the Exploration team. Check out <a href=explore>here</a> how it works.
+If you're not **too** scared of bits and bytes, you could join the Exploration team. Check out <a href=exploring>here</a> how it works.
 
 However, if bits and bytes aren't your thing, that's fine too. You can contribute in other ways.
 
@@ -28,7 +28,7 @@ However, if bits and bytes aren't your thing, that's fine too. You can contribut
 Do you speak a language that this website doesn't currently offer but think you think it should be supported? 
 In that case, you could consider a localization in your language. You could open this project up to people who only understand *your* language.
 
-If you want to do that, Cool! Then check out <a href=localize>here</a>.
+If you want to do that, Cool! Then check out <a href=localizing>here</a>.
 
 #### Advertising
 Tell your friends/audience/followers about this project. 

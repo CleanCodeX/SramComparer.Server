@@ -36,5 +36,7 @@ namespace WebApp.SoE.Extensions
 
 		/// <summary>Replaces quotes</summary>
 		public static MarkupString RemoveQuotes(this string source) => source.Remove(@"""")!.ToMarkup();
+
+		public static bool StartsWith(this string source, string value, bool ignoreCase) => source.StartsWith(value, true, null);
 	}
 }

@@ -10,4 +10,4 @@ The "Unknowns" are areas of SRAM which have no known meaning assigned yet.
 
 Most of unknown areas are reserved for ingredient sniffing spots, opened walls, doors, chests, gourds, pots and twice spoken people. Apart from these things there are also game-relevant progress flags such as which bosses have already been defeated or which other events already occurred in the past. All these things must be known in order to develop a powerful savegame editor.
 
-A non-exhaustive list can be found under: <a href=Unknowns>Unknowns</a>.
+A non-exhaustive list can be found under: <a href=unknowns>Unknowns</a>.

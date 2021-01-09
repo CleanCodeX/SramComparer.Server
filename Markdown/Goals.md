@@ -9,7 +9,7 @@ The only problem with this is that aprox. 54% of SoE's SRAM save slot format is 
 
 ### The Unknowns
 An explanation of what unknowns are can be found in the <a href=glossary>glossary</a>.
-A non-exhaustive list of examples can be found under: <a href=Unknowns>Unknowns</a>.
+A non-exhaustive list of examples can be found under: <a href=unknowns>Unknowns</a>.
 
 ## What are the goals?
 Once the SRAM format is completely known, it offers the possibility to write a full capable SRAM editor, enabling/disabling everything what can be controlled by a savegame.
@@ -27,4 +27,4 @@ Once the SRAM format is completely known, it offers the possibility to write a f
 Well, that's mostly up to the amount and quality of contributions by the community.
 I am spending my free time working on that, but that won't be enough to make it happen fast.
 
-If you want to join the exploration team, see <a href=explore>here</a> how it works.
+If you want to join the exploration team, see <a href=exploring>here</a> how it works.

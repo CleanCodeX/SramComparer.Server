@@ -125,7 +125,7 @@
 	<data name="MenuFeatures" xml:space="preserve">
 		<value>Features</value>
 	</data>
-	<data name="MenuContribute" xml:space="preserve">
+	<data name="MenuContributing" xml:space="preserve">
 		<value>Kann ich helfen?</value>
 	</data>
 	<data name="MenuImagery" xml:space="preserve">
@@ -152,7 +152,7 @@
 	<data name="MenuTitleAwesome" xml:space="preserve">
 		<value>Awesome Seiten für ein awesome Spiel</value>
 	</data>
-	<data name="MenuExplore" xml:space="preserve">
+	<data name="MenuExploring" xml:space="preserve">
 		<value>SRAM Erkunden</value>
 	</data>
 	<data name="MenuCommunity" xml:space="preserve">

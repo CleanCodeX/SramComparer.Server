@@ -12,8 +12,8 @@ using WebApp.SoE.ViewModels;
 
 namespace WebApp.SoE.Pages
 {
-	[Route(PageUris.Compare)]
-	public partial class WebCompare
+	[Route(PageUris.Comparing)]
+	public partial class Comparing
 	{
 		private static readonly MarkupString Ns = (MarkupString)"&nbsp;";
 

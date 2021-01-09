@@ -19,7 +19,7 @@ Es gibt ein paar unterschiedliche Wege etwas zum Projekt beizusteuern.
 #### SRAM-Daten vergleichen
 Zunächst einmal ist es nicht schwierig, das zu tun. Es gibt ein praktisches Tool, das die unangenehme Vergleichsarbeit für dich erledigt, sodass du keinen Hex-Editor verwenden musst. Versprochen ;-)
 
-Falls du dich nicht all zu sehr vor Bits und Bytes fürchtest, könntest du dich in das Exploration Team einreihen. Sieh dir <a href=explore>hier</a> an, wie es funktioniert.
+Falls du dich nicht all zu sehr vor Bits und Bytes fürchtest, könntest du dich in das Exploration Team einreihen. Sieh dir <a href=exploring>hier</a> an, wie es funktioniert.
 
 Das wäre wirklich cool. Deine Hilfe würde viel Zeit sparen, indem nicht zweimal etwas getan wird, was bereits jemand anderes getan hat.
 
@@ -30,7 +30,7 @@ Sprichst du eine Sprache, welche diese Website derzeit nicht anbietet, bist aber
 In diesem Fall könntest du eine Lokalisierung in deiner Sprache in Betracht ziehen. 
 Du könntest den Zugang zu diesem Projekt für Personen öffnen, welche nur *deine* Sprache verstehen. 
 
-Wenn du das tun möchtest, Cool! Dann schaue <a href=localize>hier</a>.
+Wenn du das tun möchtest, Cool! Dann schaue <a href=localizing>hier</a>.
 
 #### Mundpropaganda / bewerben
 Erzähle deinen Freunde/Publikum/Followern von diesem Projekt.
