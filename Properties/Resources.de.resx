@@ -287,4 +287,10 @@
 	<data name="ErrorWrongFileExtensionTemplate" xml:space="preserve">
 		<value>Fehler: Datei  {0} hat eine nicht unterstützt Dateiendung</value>
 	</data>
+	<data name="SaveSlotOffset" xml:space="preserve">
+		<value>Speicherslot-Offset</value>
+	</data>
+	<data name="SaveSlot" xml:space="preserve">
+		<value>Speicherslot</value>
+	</data>
 </root>

@@ -394,4 +394,10 @@
     <value>Error: File {0} has an unsupported file extension
 </value>
   </data>
+  <data name="SaveSlotOffset" xml:space="preserve">
+    <value>Save slot offset</value>
+  </data>
+  <data name="SaveSlot" xml:space="preserve">
+    <value>Save slot</value>
+  </data>
 </root>

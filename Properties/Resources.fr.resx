@@ -288,4 +288,10 @@
 	<data name="ErrorWrongFileExtensionTemplate" xml:space="preserve">
 		<value>Erreur: le fichier {0} a une extension de fichier non prise en charge</value>
 	</data>
+	<data name="SaveSlotOffset" xml:space="preserve">
+		<value>Décalage dans la partie</value>
+	</data>
+	<data name="SaveSlot" xml:space="preserve">
+		<value>Partie</value>
+	</data>
 </root>

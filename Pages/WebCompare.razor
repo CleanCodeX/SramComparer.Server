@@ -27,7 +27,7 @@
 				<td><InputFile OnChange="@OnCurrentFileChange" style=@ButtonStyle /></td>
 			</tr>
 			<tr>
-				<td><label>@ResComp.SaveSlot:@Ns</label></td>
+				<td><label>@Res.SaveSlot:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.CurrentFileSaveSlot" style=@CurrentFileStyle title="@Res.LabelTitleFile" /></td>
 			</tr>
 			
@@ -42,7 +42,7 @@
 				<td><InputFile OnChange="@OnComparisonFileChange" style=@ButtonStyle title="@Res.LabelTitleFile" /></td>
 			</tr>
 			<tr>
-				<td><label>@ResComp.SaveSlot:@Ns</label></td>
+				<td><label>@Res.SaveSlot:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.ComparisonFileSaveSlot" style=@ComparisonFileStyle /></td>
 			</tr>
 			
@@ -67,7 +67,7 @@
 			</tr>
 			
 			<tr>
-				<td><label>@Resources.Checksum:@Ns</label></td>
+				<td><label>@Resources.EnumChecksum:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.Checksum" style=@ChecksumStyle /></td>
 			</tr>
 			<tr>
