@@ -216,8 +216,8 @@
 	<data name="MenuTitleImagery" xml:space="preserve">
 		<value>Captures d'écran de l'application console</value>
 	</data>
-	<data name="MenuTitleGuideSrm" xml:space="preserve">
-		<value>Manuel de l'application console (SRM)</value>
+	<data name="MenuTitleGuides" xml:space="preserve">
+		<value>Manuels de l'application console</value>
 	</data>
 	<data name="MenuTitleDiscord" xml:space="preserve">
 		<value>Ouvrir l'invitation Discord</value>
@@ -249,8 +249,8 @@
 	<data name="ButtonTitleCopyLocalization" xml:space="preserve">
 		<value>Copier la localisation dans le presse-papiers</value>
 	</data>
-	<data name="MenuGuideSrm" xml:space="preserve">
-		<value>Manuel (SRM)</value>
+	<data name="MenuGuides" xml:space="preserve">
+		<value>Manuels</value>
 	</data>
 	<data name="MenuTitleGoals" xml:space="preserve">
 		<value>Les objectifs de ce projet</value>
@@ -278,12 +278,6 @@
 	</data>
 	<data name="LabelTitleFile" xml:space="preserve">
 		<value>Sélectionnez un fichier de sauvegarde SRAM (* .srm, *.comp) ou Snes9x (* .000 - * .009; *.state)</value>
-	</data>
-	<data name="MenuTitleGuideSavestate" xml:space="preserve">
-		<value>Manuel de l'application console (Savestate)</value>
-	</data>
-	<data name="MenuGuideSavestate" xml:space="preserve">
-		<value>Manuel (Savestate)</value>
 	</data>
 	<data name="ErrorWrongFileExtensionTemplate" xml:space="preserve">
 		<value>Erreur: le fichier {0} a une extension de fichier non prise en charge</value>

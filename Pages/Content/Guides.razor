@@ -1,0 +1,12 @@
+﻿@using WebApp.SoE.Helpers
+
+@attribute [Route(PageUris.Guides)]
+@inherits LangContentIdMarkupBase
+
+<div class="markup">
+	@Content
+</div>
+
+@code {
+	protected override void OnParametersSet() => ContentId = nameof(PageUris.Guides);
+}

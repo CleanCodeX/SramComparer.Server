@@ -215,8 +215,8 @@
 	<data name="MenuTitleImagery" xml:space="preserve">
 		<value>Bilder der Konsolen-Anwendung</value>
 	</data>
-	<data name="MenuTitleGuideSrm" xml:space="preserve">
-		<value>Bedienungsanleitung der Konsolen-Anwendung (SRM)</value>
+	<data name="MenuTitleGuides" xml:space="preserve">
+		<value>Anleitungen der Konsolen-Anwendung</value>
 	</data>
 	<data name="MenuTitleDiscord" xml:space="preserve">
 		<value>Öffnet Discord-Einladung</value>
@@ -248,8 +248,8 @@
 	<data name="ButtonTitleCopyLocalization" xml:space="preserve">
 		<value>Die Lokalisierung in die Zwischen ablage kopieren</value>
 	</data>
-	<data name="MenuGuideSrm" xml:space="preserve">
-		<value>Anleitung (SRM)</value>
+	<data name="MenuGuides" xml:space="preserve">
+		<value>Anleitungen</value>
 	</data>
 	<data name="MenuTitleExploring" xml:space="preserve">
 		<value>Wie das SRAM erkundet wird</value>
@@ -277,12 +277,6 @@
 	</data>
 	<data name="LabelTitleFile" xml:space="preserve">
 		<value>Wähle entweder eine SRAM- (*.srm, *.comp) or Snes9x Savestate- Datei (*.000 - *.009; *.state)</value>
-	</data>
-	<data name="MenuTitleGuideSavestate" xml:space="preserve">
-		<value>Bedienungsanleitung der Konsolen-Anwendung (Savestate)</value>
-	</data>
-	<data name="MenuGuideSavestate" xml:space="preserve">
-		<value>Anleitung (Savestate)</value>
 	</data>
 	<data name="ErrorWrongFileExtensionTemplate" xml:space="preserve">
 		<value>Fehler: Datei  {0} hat eine nicht unterstützt Dateiendung</value>

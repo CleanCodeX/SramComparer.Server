@@ -285,8 +285,8 @@
   <data name="MenuTitleImagery" xml:space="preserve">
     <value>Console App Imagery</value>
   </data>
-  <data name="MenuTitleGuideSrm" xml:space="preserve">
-    <value>Console App Guide (SRM)</value>
+  <data name="MenuTitleGuides" xml:space="preserve">
+    <value>Console App Guides</value>
   </data>
   <data name="MenuHistory" xml:space="preserve">
     <value>History</value>
@@ -354,8 +354,8 @@
   <data name="ButtonHideLocalization" xml:space="preserve">
     <value>Hide localization</value>
   </data>
-  <data name="MenuGuideSrm" xml:space="preserve">
-    <value>Guide (SRM)</value>
+  <data name="MenuGuides" xml:space="preserve">
+    <value>Guides</value>
   </data>
   <data name="MenuTitleExploring" xml:space="preserve">
     <value>How to explore the SRAM</value>
@@ -383,12 +383,6 @@
   </data>
   <data name="LabelTitleFile" xml:space="preserve">
     <value>Select either a SRAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009; *.state)</value>
-  </data>
-  <data name="MenuTitleGuideSavestate" xml:space="preserve">
-    <value>Console App Guide (Savestate)</value>
-  </data>
-  <data name="MenuGuideSavestate" xml:space="preserve">
-    <value>Guide (Savestate)</value>
   </data>
   <data name="ErrorWrongFileExtensionTemplate" xml:space="preserve">
     <value>Error: File {0} has an unsupported file extension

@@ -620,20 +620,11 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Guide (Savestate) ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Guides ähnelt.
         /// </summary>
-        public static string MenuGuideSavestate {
+        public static string MenuGuides {
             get {
-                return ResourceManager.GetString("MenuGuideSavestate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Guide (SRM) ähnelt.
-        /// </summary>
-        public static string MenuGuideSrm {
-            get {
-                return ResourceManager.GetString("MenuGuideSrm", resourceCulture);
+                return ResourceManager.GetString("MenuGuides", resourceCulture);
             }
         }
         
@@ -800,20 +791,11 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Console App Guide (Savestate) ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Console App Guides ähnelt.
         /// </summary>
-        public static string MenuTitleGuideSavestate {
+        public static string MenuTitleGuides {
             get {
-                return ResourceManager.GetString("MenuTitleGuideSavestate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Console App Guide (SRM) ähnelt.
-        /// </summary>
-        public static string MenuTitleGuideSrm {
-            get {
-                return ResourceManager.GetString("MenuTitleGuideSrm", resourceCulture);
+                return ResourceManager.GetString("MenuTitleGuides", resourceCulture);
             }
         }
         
