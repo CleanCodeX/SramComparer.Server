@@ -400,4 +400,10 @@
   <data name="SaveSlot" xml:space="preserve">
     <value>Save slot</value>
   </data>
+  <data name="MenuTitleTutorials" xml:space="preserve">
+    <value>Tutorials of example comparisons</value>
+  </data>
+  <data name="MenuTutorials" xml:space="preserve">
+    <value>Tutorials</value>
+  </data>
 </root>

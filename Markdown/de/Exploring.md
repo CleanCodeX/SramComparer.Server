@@ -18,5 +18,5 @@ Das Lesen und Bearbeiten von Versatzwerten kann (u.a.) mit den folgenden Möglic
 
 Veröffentliche deine Vermutungen und Funde in der [Community](community)!
 
-Falls du nicht vertraut mit der Verwendung der Konsolen-App bist, schaue in den [guide](guide). [Web Vergleich](comparing) ist einfacher zu verwenden und funktioniert mit jedem modernen Browser.
+Falls du nicht vertraut mit der Verwendung der Konsolen-App bist, schaue in die [Guides](guides). [Web Vergleich](comparing) ist einfacher zu verwenden und funktioniert mit jedem modernen Browser.
 

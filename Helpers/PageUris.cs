@@ -13,9 +13,11 @@
 		public const string Localizing = "/" + nameof(Localizing);
 		public const string Features = "/" + nameof(Features);
 
-		public const string Guide = "/" + nameof(Guide);
-		public const string GuideSrm = Guide + "/Srm";
-		public const string GuideSavestate = Guide + "/Savestate";
+		public const string Tutorials = "/" + nameof(Tutorials);
+
+		public const string Guides = "/" + nameof(Guides);
+		public const string GuideSrm = Guides + "/Srm";
+		public const string GuideSavestate = Guides + "/Savestate";
 
 		public const string Glossary = "/" + nameof(Glossary);
 		public const string Imagery = "/" + nameof(Imagery);

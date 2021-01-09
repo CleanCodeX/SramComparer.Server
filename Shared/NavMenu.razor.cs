@@ -59,6 +59,7 @@ namespace WebApp.SoE.Shared
 			var comparisonItems = new[]
 			{
 				PageUris.Features.ToLower(),
+				PageUris.Tutorials.ToLower(),
 				PageUris.Sources.ToLower()
 			};
 
@@ -78,7 +79,7 @@ namespace WebApp.SoE.Shared
 
 				// ConsoleApp
 				_ when consoleItems.Contains(path) => ExpandedMenu.ConsoleApp,
-				_ when path.StartsWith(PageUris.Guide, true) => ExpandedMenu.ConsoleApp,
+				_ when path.StartsWith(PageUris.Guides, true) => ExpandedMenu.ConsoleApp,
 
 				// WebTools
 				_ when path == PageUris.Comparing.ToLower() => ExpandedMenu.WebTools,

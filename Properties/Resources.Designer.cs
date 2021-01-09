@@ -863,6 +863,24 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Tutorials of example comparisons ähnelt.
+        /// </summary>
+        public static string MenuTitleTutorials {
+            get {
+                return ResourceManager.GetString("MenuTitleTutorials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Tutorials ähnelt.
+        /// </summary>
+        public static string MenuTutorials {
+            get {
+                return ResourceManager.GetString("MenuTutorials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Compare ähnelt.
         /// </summary>
         public static string MenuWebComparison {

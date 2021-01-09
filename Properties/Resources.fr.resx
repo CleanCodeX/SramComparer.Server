@@ -294,4 +294,10 @@
 	<data name="SaveSlot" xml:space="preserve">
 		<value>Partie</value>
 	</data>
+	<data name="MenuTitleTutorials" xml:space="preserve">
+		<value>Tutoriels d'exemples de comparaisons</value>
+	</data>
+	<data name="MenuTutorials" xml:space="preserve">
+		<value>Tutoriels</value>
+	</data>
 </root>
