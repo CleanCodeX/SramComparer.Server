@@ -276,7 +276,7 @@
 		<value>Willkommen zum Evermore Format Erkundungs-Projekt</value>
 	</data>
 	<data name="LabelTitleFile" xml:space="preserve">
-		<value>Wähle entweder eine SRAM- (*.srm) or Snes9x Savestate- Datei (*.000 - *.009; *.state)</value>
+		<value>Wähle entweder eine SRAM- (*.srm, *.comp) or Snes9x Savestate- Datei (*.000 - *.009; *.state)</value>
 	</data>
 	<data name="MenuTitleGuideSavestate" xml:space="preserve">
 		<value>Bedienungsanleitung der Konsolen-Anwendung (Savestate)</value>
