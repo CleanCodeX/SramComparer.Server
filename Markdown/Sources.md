@@ -16,5 +16,8 @@ Info: links open in a new tab
 * <a href="https://github.com/CleanCodeX/SramComparer" target=_>SramComparer</a> Common SRAM comparison functionality
 * <a href="https://github.com/CleanCodeX/SramCommons" target=_>SramCommons</a> Common SRAM load and save functionality
 
+#### Snex9x Savestate format
+* <a href="https://github.com/CleanCodeX/SavestateFormat.Snes9x" target=_>Savestate Format (Snes9x)</a> Common Snes9x savestate format loading functionality
+
 #### WebApp
 *  <a href="https://github.com/CleanCodeX/WebApp.SoE" target=_>WebApp.SoE</a> Web app for website and web-tools

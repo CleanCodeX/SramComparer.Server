@@ -16,5 +16,8 @@ Info: Links öffnen in einem neuen Tab
 * <a href="https://github.com/CleanCodeX/SramComparer" target=_>SramComparer</a> Allgemeine SRAM Vergleichs-Funktionalität
 * <a href="https://github.com/CleanCodeX/SramCommons" target=_>SramCommons</a> Allgemeine SRAM Lade- und Speicher-Funktionalität
 
+#### Snex9x Savestate format
+* <a href="https://github.com/CleanCodeX/SavestateFormat.Snes9x" target=_>Savestate Format (Snes9x)</a> Allgemeine Savestate-Format Lade-Funktionalität
+
 #### WebApp
 *  <a href="https://github.com/CleanCodeX/WebApp.SoE" target=_>WebApp.SoE</a> Web-App für Webseite und Web-Tools
