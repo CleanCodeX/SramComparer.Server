@@ -15,9 +15,10 @@ Allows to compare (unknown) areas and modify offset values in Secret of Evermore
 * [C|W] Display of changed or all game's checksums (O)
 * [W] Last used settings will be automatically saved
 * [C] Backup / restore functionality of current and comparison sram file
-* [C] Save SRAM file as different game name 
+* [C] Save SRAM file with different game name 
 * [C] Settings are parameterized
 * [C] Config loading/saving (including custom configs)
+* [C] Auto loading config
 * [C] Key binding customization
 
 *) C = Supported by <a href=downloads>Windows Console App</a>, W = Supported by <a href=comparing>Web App</a>
