@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Components.Forms;
 using SramFormat.SoE;
 using WebApp.SoE.Extensions;
 using WebApp.SoE.Shared.Enums;
-using SavestateFormat.Snes9x.Extensions;
+using Snes9x = SavestateFormat.Snes9x.Extensions.StreamExtensions;
 using SramComparer.SoE.Extensions;
 using SramFormat.SoE.Constants;
 
@@ -86,7 +86,7 @@ namespace WebApp.SoE.ViewModels.Bases
 			var fileExtension = Path.GetExtension(filePath).ToLower();
 			if (fileExtension == ".srm") return stream;
 
-			var result = stream.ConvertSnes9xSavestateToSram().GetStreamSlice(Sizes.Sram);
+			var result = Snes9x.GetSramFromSavestateStream(stream).GetStreamSlice(Sizes.Sram);
 
 			IsSavestate = true;
 
