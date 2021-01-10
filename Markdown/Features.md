@@ -21,7 +21,7 @@ Allows to compare (unknown) areas and modify offset values in Secret of Evermore
 * [C] Auto loading config
 * [C] Key binding customization
 
-*) C = Supported by <a href=downloads>Windows Console App</a>, W = Supported by <a href=comparing>Web App</a>
+*) C = Supported by <a href=console-app>Windows Console App</a>, W = Supported by <a href=comparing>Web App</a>
 *) (O) = optional, (D) = default
 
 For images of console app click <a href=imagery>here</a>.
