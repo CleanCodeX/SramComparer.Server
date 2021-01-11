@@ -28,7 +28,7 @@
 }
 
 .navmenu {
-	min-height: 494px;
+	min-height: 475px;
 	padding-top: 15px;
 	background-image: linear-gradient(360deg, rgb(5, 39, 103) 0%, #111111 70%);
 	height: -webkit-fill-available;
