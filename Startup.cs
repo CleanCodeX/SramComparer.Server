@@ -58,7 +58,7 @@ namespace WebApp.SoE
 					options.FallBackToParentUICultures = true;
 					options.FallBackToParentCultures = true;
 
-					options.SetDefaultCulture("en");
+					options.SetDefaultCulture(defaultCulture.TwoLetterISOLanguageName);
 					// Formatting numbers, dates, etc.
 					options.SupportedCultures = supportedCultures;
 					// UI strings that we have localized.

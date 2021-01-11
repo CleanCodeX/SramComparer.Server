@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
@@ -9,9 +10,12 @@ namespace WebApp.SoE.Pages.Bases
 {
 	public abstract class MarkupContentBase : ComponentBase
 	{
-#nullable disable
-		[Inject] private IHttpClientFactory ClientFactory { get; set; }
-#nullable restore
+		[Inject] private IHttpClientFactory ClientFactory { get; set; } = default!;
+
+		private protected string? UrlToLoad;
+		private protected string? FileToLoad;
+		private protected bool FileExists;
+		private protected bool UrlExists;
 
 		protected MarkupString Content { get; set; }
 
@@ -35,27 +39,34 @@ namespace WebApp.SoE.Pages.Bases
 
 		protected virtual Task<MarkupString> ParseContentAsync(string? content) => Task.FromResult(MarkdownHelper.Parse(content));
 
-		protected async Task<string?> LoadFromUrlAsync(string url, bool allowFailure = false)
+		protected async Task<string?> LoadFromUrlAsync(string url)
 		{
 			try
 			{
+				UrlToLoad = url;
+
 				var http = ClientFactory.CreateClient();
 				var response = await http.GetAsync(url);
 				var result = response.IsSuccessStatusCode ?
 					await response.Content.ReadAsStringAsync() : response.ReasonPhrase!;
 
+				UrlExists = true;
+
 				return result;
 			}
 			catch (Exception ex)
 			{
-				return allowFailure ? null : ex.Message;
+				return ex.Message;
 			}
 		}
 
-		protected static string LoadFromFile(string filePath)
+		protected string LoadFromFile(string filePath)
 		{
 			try
 			{
+				FileToLoad = filePath;
+				FileExists = File.Exists(filePath);
+
 				return File.ReadAllText(filePath);
 			}
 			catch (Exception ex)

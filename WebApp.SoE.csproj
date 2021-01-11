@@ -5,14 +5,14 @@
 	  <Nullable>enable</Nullable>
 	  <Company>KST</Company>
 	  <Product>WebApp.SoE</Product>
-	  <Version>1.0.5-a2</Version>
-	  <Authors>CleanCodeX</Authors>
+	  <Version>1.0.5-a3</Version>
+	  <Authors>CleanCoderX</Authors>
 	  <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 	  <UserSecretsId>17d24474-ed46-4f7f-bc20-2d543c8c8603</UserSecretsId>
 	  <Platforms>AnyCPU</Platforms>
 	  <PackageProjectUrl>http://evermore.xeth.de</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/CleanCodeX/WebApp.SoE</RepositoryUrl>
-	  <PackageTags>SoE, Secret Of Evermore, SRAM, SNES, Blazor</PackageTags>
+	  <PackageTags>SoE, Secret Of Evermore, SRAM, SNES, Blazor, Web-App, NET 5</PackageTags>
 	  <PackageReleaseNotes>Added savestate web comparison
 Added savestate web offset value display
 </PackageReleaseNotes>

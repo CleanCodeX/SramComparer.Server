@@ -1,15 +1,21 @@
 ﻿@inherits AutoLangContentIdMarkupBase
 
-GetRequestLanguage: @GetRequestLanguage()
+@nameof(Language): @Language
 <br />
-Language: @Language
+@nameof(AutoTranslate): @AutoTranslate
 <br />
-AutoTranslate: @AutoTranslate
+@nameof(LangFileFound): @LangFileFound
 <br />
-LangFileFound: @LangFileFound
+@nameof(FileToLoad): @FileToLoad
+<br />
+@nameof(FileExists): @FileExists
+<br />
+@nameof(UrlToLoad): @UrlToLoad
+<br />
+@nameof(UrlExists): @UrlExists
 
 <p />
-<br />
+<p />
 
 @if (ShowAutoTranslateOption)
 {

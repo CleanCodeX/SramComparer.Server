@@ -33,11 +33,11 @@ namespace WebApp.SoE.Pages.Bases
 			}
 		}
 
-		protected bool ShowAutoTranslateOption => !LangFileFound;
+		protected bool ShowAutoTranslateOption => ShouldBeTranslated && LangFileFound == false;
 
 		protected override async Task<MarkupString> ParseContentAsync(string? content)
 		{
-			if (LangFileFound || !AutoTranslate) return await base.ParseContentAsync(content);
+			if (!AutoTranslate || LangFileFound == true) return await base.ParseContentAsync(content);
 
 			MarkupString markup;
 

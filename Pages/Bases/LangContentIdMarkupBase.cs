@@ -15,28 +15,32 @@ namespace WebApp.SoE.Pages.Bases
 		[Inject] private IHttpContextAccessor HttpContextAccessor { get; set; }
 		[Inject] private SupportedCultures SupportedCultures { get; set; }
 
+		protected bool ShouldBeTranslated => Language != "en";
 		protected string Language { get; private set; }
 #nullable restore
 
-		protected bool ShouldTranslate { get; private set; }
-		protected bool LangFileFound { get; private set; }
+		protected bool SearchForLangFile { get; private set; }
+		protected bool? LangFileFound { get; private set; }
 
 		protected override void OnInitialized()
 		{
 			Language = GetRequestLanguage() ?? "en";
-			ShouldTranslate = Language != "en" && SupportedCultures.Cultures.Contains(Language);
+			SearchForLangFile = ShouldBeTranslated && SupportedCultures.Cultures.Contains(Language);
 		}
 
 		protected override bool TryGetFileFromSettings(string key, [NotNullWhen(true)] out string? filePath)
 		{
 			if (!base.TryGetFileFromSettings(key, out filePath)) return false;
-			if (!ShouldTranslate) return true;
+			if (!SearchForLangFile) return true;
 
 			var langFilePath = MakeLanguageFilePath(filePath, Language);
-			if (File.Exists(langFilePath))
+			var found = File.Exists(langFilePath);
+			LangFileFound = found;
+
+			if (found)
 			{
 				filePath = langFilePath;
-				LangFileFound = true;
+				return true;
 			}
 
 			return File.Exists(filePath);
@@ -45,20 +49,39 @@ namespace WebApp.SoE.Pages.Bases
 		protected override bool TryGetUrlFromSettings(string key, [NotNullWhen(true)] out string? url)
 		{
 			if(!base.TryGetUrlFromSettings(key, out url)) return false;
-			if (!ShouldTranslate) return true;
+			if (!SearchForLangFile) return true;
 
 			var langUrl = MakeLanguageFileUrl(url, Language);
+			var found = GetUrlExists(langUrl);
+			LangFileFound = found;
 
-			if (UrlExists(langUrl))
+			if (found)
 			{
 				url = langUrl;
-				LangFileFound = true;
+				return true;
 			}
 
-			return true;
+			return GetUrlExists(url);
 		}
 
-		protected string? GetRequestLanguage()
+		private static bool GetUrlExists(string url)
+		{
+			try
+			{
+				var request = (HttpWebRequest)WebRequest.Create(url);
+
+				request.Method = "HEAD";
+
+				using var response = (HttpWebResponse)request.GetResponse();
+				return response.StatusCode == HttpStatusCode.OK;
+			}
+			catch
+			{
+				return false;
+			}
+		}
+
+		private string? GetRequestLanguage()
 		{
 			if (HttpContextAccessor.HttpContext is { } httpContext)
 			{
@@ -69,23 +92,6 @@ namespace WebApp.SoE.Pages.Bases
 			}
 
 			return null;
-		}
-
-		private static bool UrlExists(string url)
-		{
-			try
-			{
-				var request = (HttpWebRequest)WebRequest.Create(url);
-				//Setting the Request method HEAD, you can also use GET too.
-				request.Method = "HEAD";
-
-				using var response = (HttpWebResponse)request.GetResponse();
-					return response.StatusCode == HttpStatusCode.OK;
-			}
-			catch
-			{
-				return false;
-			}
 		}
 
 		private static string MakeLanguageFilePath(string filePath, string language)
