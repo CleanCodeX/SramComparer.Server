@@ -10,9 +10,9 @@
 
 <div>
 <!-- Quick links -->
-    <ol class="nav flex-column">
-        <li class="nav-item quicklinks" title="@Res.MenuQuickLinks">
-            <NavLink class="nav-link">
+    <ol class="nav flex-column"  title="@TooltipRandomizer.NextTooltip()">
+        <li class="nav-item quicklinks">
+            <NavLink class="nav-link" title="@TooltipRandomizer.NextTooltip()">
                 @quickLinkOpener @sp
                 <a href="@PageUris.RosettaStone" title="@Res.MenuTitleRosettaStone">
                     <span class="iconify" data-icon="oi-document"/>
@@ -35,7 +35,7 @@
                 </a>
                 @sp @quickLinkCloser
             </NavLink>
-            <NavLink class="nav-link">
+            <NavLink class="nav-link" title="@TooltipRandomizer.NextTooltip()">
                 @quickLinkOpener @sp
                 <a href="@PageUris.Comparing" title="@Res.MenuTitleCompare">
                     <span class="iconify" data-icon="oi-magnifying-glass"/>
@@ -62,7 +62,7 @@
     </ol>
     <!-- / Quick links -->
     <!-- S-RAM Format -->
-    <ol class="nav flex-column firstRow">
+    <ol class="nav flex-column firstRow" title="@TooltipRandomizer.NextTooltip()">
         <li class="nav-item px-3">
             <a class="nav-link" href="@PageUris.Goals" title="@Res.MenuTitleGoals">
                 <span class="@(_sramFormat ? "oi oi-zoom-out" : "oi oi-zoom-in")"/> 
@@ -98,7 +98,7 @@
     </ol>
     <!-- / S-RAM Format -->
     <!-- S-RAM Comparison -->
-    <ol class="nav flex-column">
+    <ol class="nav flex-column" title="@TooltipRandomizer.NextTooltip()">
         <li class="nav-item px-3">
             <a class="nav-link" href="@PageUris.Features" title="@Res.MenuTitleFeatures">
                 <span class="@(_sramComparison ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
@@ -188,7 +188,7 @@
     </ol>
     <!-- / S-RAM Comparison -->
     <!-- Other -->
-    <ol class="nav flex-column">
+    <ol class="nav flex-column" title="@TooltipRandomizer.NextTooltip()">
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="@PageUris.Contributing" title="@Res.MenuTitleContribute">
                 <span class="oi oi-heart"/> @Res.MenuContributing.ReplaceSpaces()
