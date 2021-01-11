@@ -12,8 +12,10 @@ namespace WebApp.SoE
 			Host.CreateDefaultBuilder(args)
 				.ConfigureWebHostDefaults(webBuilder =>
 				{
+#if DEBUG
 					webBuilder.UseSetting(WebHostDefaults.DetailedErrorsKey, "true");
 					webBuilder.CaptureStartupErrors(true);
+#endif
 					webBuilder.UseStaticWebAssets();
 					webBuilder.UseStartup<Startup>();
 				})
