@@ -7,10 +7,17 @@ namespace WebApp.SoE.Pages
 	[Route(PageUris.About)]
     public partial class About
     {
-#nullable disable
-	    [Inject] private IAppInfoService AppInfoService { get; set; }
-#nullable restore
+	    [Inject] private IAppInfoService AppInfoService { get; set; } = default!;
 
-	    protected override void OnParametersSet() => ContentId = "contributors";
+		private bool ShowDebugLink { get; }
+
+		protected override void OnParametersSet() => ContentId = "contributors";
+
+		public About()
+		{
+#if DEBUG
+			ShowDebugLink = true;
+#endif
+		}
     }
 }

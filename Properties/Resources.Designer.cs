@@ -431,6 +431,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Language ähnelt.
+        /// </summary>
+        public static string LabelLanguage {
+            get {
+                return ResourceManager.GetString("LabelLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Link opens in a new tab ähnelt.
         /// </summary>
         public static string LabelLinkOpensInNewTab {

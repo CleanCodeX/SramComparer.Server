@@ -1,0 +1,21 @@
+﻿@inherits AutoLangContentIdMarkupBase
+
+GetRequestLanguage: @GetRequestLanguage()
+<br />
+Language: @Language
+<br />
+AutoTranslate: @AutoTranslate
+<br />
+LangFileFound: @LangFileFound
+
+<p />
+<br />
+
+@if (ShowAutoTranslateOption)
+{
+	<TranslateButton @bind-Value="@AutoTranslate" />
+}
+
+<div class="markup">
+	@Content
+</div>

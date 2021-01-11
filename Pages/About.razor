@@ -1,4 +1,5 @@
-﻿@inherits AutoLangContentIdMarkupBase
+﻿@using WebApp.SoE.Helpers
+@inherits AutoLangContentIdMarkupBase
 
 <h2>@Res.LabelAppVersion</h2>
 
@@ -7,7 +8,15 @@ Web App: @AppInfoService.PackageVersion | <a href=changelog/web>@Res.LabelChange
 @Res.MenuSramComparerCmdApp: @AppInfoService.GetAssemblyVersion(typeof(SramComparer.SoE.Program).Assembly) | <a href=changelog/console>@Res.LabelChangeLog</a>
 
 <p />
+<h2>@Res.LabelLanguage</h2>
+[@GetRequestLanguage()]
 <p />
+
+@if (ShowDebugLink)
+{
+	<h2>Lang-Debug</h2>
+	<a href="@PageUris.LangDebug">Click here</a>
+}
 
 @if (ShowAutoTranslateOption)
 {

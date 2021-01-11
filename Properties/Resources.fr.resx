@@ -294,4 +294,7 @@
 	<data name="MenuTutorials" xml:space="preserve">
 		<value>Tutoriels</value>
 	</data>
+	<data name="LabelLanguage" xml:space="preserve">
+		<value>Langue</value>
+	</data>
 </root>

@@ -58,7 +58,7 @@ namespace WebApp.SoE.Pages.Bases
 			return true;
 		}
 
-		private string? GetRequestLanguage()
+		protected string? GetRequestLanguage()
 		{
 			if (HttpContextAccessor.HttpContext is { } httpContext)
 			{

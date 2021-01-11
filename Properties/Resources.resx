@@ -400,4 +400,7 @@
   <data name="MenuTutorials" xml:space="preserve">
     <value>Tutorials</value>
   </data>
+  <data name="LabelLanguage" xml:space="preserve">
+    <value>Language</value>
+  </data>
 </root>

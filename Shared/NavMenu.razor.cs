@@ -22,10 +22,8 @@ namespace WebApp.SoE.Shared
 			WebTools = WebTools_Flag | SramComparison
 		}
 
-#nullable disable
-		[Inject] private ProtectedSessionStorage SessionStorage { get; set; }
-		[Inject] private NavigationManager NavManager { get; set; }
-#nullable restore
+		[Inject] private ProtectedSessionStorage SessionStorage { get; set; } = default!;
+		[Inject] private NavigationManager NavManager { get; set; } = default!;
 		
 		private bool _sramFormat;
 		private bool _sramComparison;
@@ -43,7 +41,6 @@ namespace WebApp.SoE.Shared
 			NavManager.LocationChanged += OnLocationChanged;
 		}
 
-		/// <inheritdoc />
 		public void Dispose() => NavManager.LocationChanged -= OnLocationChanged;
 
 		private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
