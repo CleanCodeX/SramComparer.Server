@@ -38,7 +38,7 @@
 		public const string SramDocu = "/" + nameof(SramDocu);
 		public const string Discord = "https://discord.gg/s4wTHQgxae";
 
-		public const string LangDebug = "/" + nameof(LangDebug);
+		public const string LangCheck = "/" + nameof(LangCheck);
 
 		public const string Page = "/p";
 		public const string ContentPagePrefix = Page + "?c=";

@@ -14,8 +14,8 @@ namespace WebApp.SoE.Pages.Bases
 
 		private protected string? UrlToLoad;
 		private protected string? FileToLoad;
-		private protected bool FileExists;
-		private protected bool UrlExists;
+		private protected bool? FileExists;
+		private protected bool? UrlExists;
 
 		protected MarkupString Content { get; set; }
 
@@ -56,6 +56,8 @@ namespace WebApp.SoE.Pages.Bases
 			}
 			catch (Exception ex)
 			{
+				UrlExists = false;
+
 				return ex.Message;
 			}
 		}
