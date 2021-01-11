@@ -1,5 +1,5 @@
 ﻿using System;
-using SramFormat.SoE.Constants;
+using RosettaStone.Sram.SoE.Constants;
 using WebApp.SoE.Properties;
 using Res = SramComparer.Properties.Resources;
 

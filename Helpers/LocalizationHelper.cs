@@ -41,7 +41,7 @@ namespace WebApp.SoE.Helpers
 				typeof(WebApp.SoE.Properties.Resources),
 				typeof(SramComparer.SoE.Properties.Resources),
 				typeof(SramComparer.Properties.Resources),
-				typeof(SramFormat.SoE.Properties.Resources),
+				typeof(RosettaStone.Sram.SoE.Properties.Resources),
 				typeof(SramCommons.Properties.Resources),
 			};
 			

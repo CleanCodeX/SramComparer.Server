@@ -5,14 +5,14 @@
 	  <Nullable>enable</Nullable>
 	  <Company>KST</Company>
 	  <Product>WebApp.SoE</Product>
-	  <Version>1.0.5-a3</Version>
+	  <Version>1.0.5-b1</Version>
 	  <Authors>CleanCoderX</Authors>
 	  <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 	  <UserSecretsId>17d24474-ed46-4f7f-bc20-2d543c8c8603</UserSecretsId>
 	  <Platforms>AnyCPU</Platforms>
 	  <PackageProjectUrl>http://evermore.xeth.de</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/CleanCodeX/WebApp.SoE</RepositoryUrl>
-	  <PackageTags>SoE, Secret Of Evermore, S-RAM, SNES, Blazor, Web-App, NET 5</PackageTags>
+	  <PackageTags>SoE, Secret Of Evermore, S-RAM, SRAM, Savestate, SNES, Super Nintendo, Super Famicon, Blazor, Web-App, NET 5, Rosetta Stone</PackageTags>
 	  <PackageReleaseNotes>Added savestate web comparison
 Added savestate web offset value display
 </PackageReleaseNotes>
@@ -34,10 +34,7 @@ Added savestate web offset value display
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\SavestateFormat.Snes9x\SavestateFormat.Snes9x.csproj" />
-	  <ProjectReference Include="..\SramCommons\SramCommons.csproj" />
-	  <ProjectReference Include="..\SramComparer.SoE\SramComparer.SoE.csproj" />
-	  <ProjectReference Include="..\SramFormat.SoE\SramFormat.SoE.csproj" />
+		<ProjectReference Include="..\SramComparer.SoE\SramComparer.SoE.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

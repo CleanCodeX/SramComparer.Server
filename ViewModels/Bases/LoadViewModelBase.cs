@@ -6,12 +6,12 @@ using Common.Shared.Min.Extensions;
 using Common.Shared.Min.Helpers;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
-using SramFormat.SoE;
+using RosettaStone.Sram.SoE;
 using WebApp.SoE.Extensions;
 using WebApp.SoE.Shared.Enums;
-using Snes9x = SavestateFormat.Snes9x.Extensions.StreamExtensions;
+using Snes9x = RosettaStone.Savestate.Snes9x.Extensions.StreamExtensions;
 using SramComparer.SoE.Extensions;
-using SramFormat.SoE.Constants;
+using RosettaStone.Sram.SoE.Constants;
 
 #pragma warning disable 8509
 
