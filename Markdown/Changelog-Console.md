@@ -27,14 +27,14 @@ Hint: if download does not start, use rightclick - save target as
 <a href="http://xeth.de/Releases/SramComparer/Comparer-SoE-024.zip">Download</a>
 * Markdown changes
 
-#### v023 (2020-12-02)
+### v023 (2020-12-02)
 <a href="http://xeth.de/Releases/SramComparer/Comparer-SoE-023.zip">Download</a>
 
-#### v021 (2020-09-27)
+### v021 (2020-09-27)
 <a href="http://xeth.de/Releases/SramComparer/Comparer-SoE-021.zip">Download</a>
 
-##### v020 (2020-09-15)
+### v020 (2020-09-15)
 <a href="http://xeth.de/Releases/SramComparer/Comparer-SoE-020.zip">Download</a>
 
-##### v018 (2020-09-03)
+### v018 (2020-09-03)
 <a href="http://xeth.de/Releases/SramComparer/Comparer-SoE-018.zip">Download</a>
