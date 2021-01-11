@@ -97,7 +97,7 @@
 		<value>Le lien s'ouvre dans un nouvel onglet</value>
 	</data>
 	<data name="LabelTitleProjectStatus" xml:space="preserve">
-		<value>Statut de l'exploration du format</value>
+		<value>Statut de l'exploration</value>
 	</data>
 	<data name="LabelMandatory" xml:space="preserve">
 		<value>obligatoire</value>
@@ -163,7 +163,7 @@
 		<value>Comparaison des données en dehors de la partie en cours (après les données de toutes les parties)</value>
 	</data>
 	<data name="LabelTitleProjectName" xml:space="preserve">
-		<value>Projet d'exploration de format</value>
+		<value>Projet Evermore «Rosetta Stone» (Exploration de format)</value>
 	</data>
 	<data name="LabelShowAdditionalSaveSlotInformation" xml:space="preserve">
 		<value>Afficher des informations supplémentaires sur la partie</value>
@@ -262,7 +262,7 @@
 		<value>Comment explorer la S-RAM</value>
 	</data>
 	<data name="MenuTitleTheUnknowns" xml:space="preserve">
-		<value>Quels sont les inconnus à explorer?</value>
+		<value>Quelles sont les zones inconnues à explorer?</value>
 	</data>
 	<data name="MenuTitleContribute" xml:space="preserve">
 		<value>Comment contribuer au projet</value>
@@ -274,7 +274,7 @@
 		<value>Comparaison Web des fichiers S-RAM</value>
 	</data>
 	<data name="LabelWelcomeMessage" xml:space="preserve">
-		<value>Bienvenue dans le projet d'exploration Evermore Format!</value>
+		<value>Il s'agit du projet «Rosetta Stone» d'Evermore.</value>
 	</data>
 	<data name="LabelTitleFile" xml:space="preserve">
 		<value>Sélectionnez un fichier de sauvegarde S-RAM (* .srm, *.comp) ou Snes9x (* .000 - * .009; *.state)</value>

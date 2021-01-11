@@ -4,11 +4,11 @@
 }
 
 .project {
-	display: flex;
 }
 
 #projectBanner {
 	height: 70px;
+	width: 100%;
 }
 
 .blur {

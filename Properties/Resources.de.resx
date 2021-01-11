@@ -147,7 +147,7 @@
 		<value>Das Unbekannte</value>
 	</data>
 	<data name="MenuRosettaStone" xml:space="preserve">
-		<value>Rosetta Stone</value>
+		<value>Rosetta-Sten</value>
 	</data>
 	<data name="MenuTitleAwesome" xml:space="preserve">
 		<value>Awesome Seiten für ein awesome Spiel</value>
@@ -183,7 +183,7 @@
 		<value>Versionsangaben und Beitragende</value>
 	</data>
 	<data name="LabelTitleProjectName" xml:space="preserve">
-		<value>Format Erkundungs Projekt</value>
+		<value>Evermore «Rosetta-Stone»-Projekt</value>
 	</data>
 	<data name="MenuAbout" xml:space="preserve">
 		<value>Info</value>
@@ -207,7 +207,7 @@
 		<value>Changelog und download der Konsolen-Anwendung</value>
 	</data>
 	<data name="MenuTitleRosettaStone" xml:space="preserve">
-		<value>Rosetta Stone-Dokument</value>
+		<value>Rosetta-Stein-Dokument</value>
 	</data>
 	<data name="MenuTitleSources" xml:space="preserve">
 		<value>Quellcodes auf GitHub</value>
@@ -261,7 +261,7 @@
 		<value>Wie man zum Projekt beitragen kann</value>
 	</data>
 	<data name="MenuTitleTheUnknowns" xml:space="preserve">
-		<value>Welche Unbekannten gilt es zu erforschen?</value>
+		<value>Welche unbekannten Bereiche gilt es zu erforschen?</value>
 	</data>
 	<data name="MenuTitleGoals" xml:space="preserve">
 		<value>Das Ziel dieses Projektes</value>
@@ -273,7 +273,7 @@
 		<value>Web-Vergleich von S-RAM-Dateien</value>
 	</data>
 	<data name="LabelWelcomeMessage" xml:space="preserve">
-		<value>Willkommen zum Evermore Format Erkundungs-Projekt</value>
+		<value>Dies ist Evermores «Rosetta Stone» Projekt.</value>
 	</data>
 	<data name="LabelTitleFile" xml:space="preserve">
 		<value>Wähle entweder eine S-RAM- (*.srm, *.comp) or Snes9x Savestate- Datei (*.000 - *.009; *.state)</value>
