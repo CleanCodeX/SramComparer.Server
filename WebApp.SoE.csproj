@@ -12,7 +12,7 @@
 	  <Platforms>AnyCPU</Platforms>
 	  <PackageProjectUrl>http://evermore.xeth.de</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/CleanCodeX/WebApp.SoE</RepositoryUrl>
-	  <PackageTags>SoE, Secret Of Evermore, SRAM, SNES, Blazor, Web-App, NET 5</PackageTags>
+	  <PackageTags>SoE, Secret Of Evermore, S-RAM, SNES, Blazor, Web-App, NET 5</PackageTags>
 	  <PackageReleaseNotes>Added savestate web comparison
 Added savestate web offset value display
 </PackageReleaseNotes>

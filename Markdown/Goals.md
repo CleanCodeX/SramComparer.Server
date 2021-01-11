@@ -1,18 +1,18 @@
 # Goal
 
-## SRAM?
+## S-RAM?
 If you're unsure what this term means, there is an explanation in the <a href=glossary>glossary</a>.
 
-The SRAM-file can be read and manipulated, too. So far so good.
+The S-RAM-file can be read and manipulated, too. So far so good.
 
-The only problem with this is that aprox. 54% of SoE's SRAM save slot format is still considered to be unknown, meaning that we don't really know what meaning these areas of SRAM actually have.
+The only problem with this is that aprox. 54% of SoE's S-RAM save slot format is still considered to be unknown, meaning that we don't really know what meaning these areas of S-RAM actually have.
 
 ### The Unknowns
 An explanation of what unknowns are can be found in the <a href=glossary>glossary</a>.
 A non-exhaustive list of examples can be found under: <a href=unknowns>Unknowns</a>.
 
 ## What are the goals?
-Once the SRAM format is completely known, it offers the possibility to write a full capable SRAM editor, enabling/disabling everything what can be controlled by a savegame.
+Once the S-RAM format is completely known, it offers the possibility to write a full capable S-RAM editor, enabling/disabling everything what can be controlled by a savegame.
 
 "That sounds cool!" you might think. Indeed it does!
 

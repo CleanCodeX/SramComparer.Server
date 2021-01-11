@@ -1,6 +1,4 @@
-﻿@using WebApp.SoE.Helpers
-
-@attribute [Route(PageUris.ConsoleApp)]
+﻿@attribute [Route(PageUris.ConsoleApp)]
 @attribute [Route(PageUris.Changelog)]
 @attribute [Route(PageUris.ChangelogConsole)]
 @inherits AutoLangContentIdMarkupBase
@@ -15,5 +13,5 @@
 </div>
 
 @code {
-	protected override void OnParametersSet() => ContentId = PageUris.ChangelogConsole.Substring(1);
+	protected override void OnParametersSet() => ContentId = PageUris.ChangelogConsole;
 }

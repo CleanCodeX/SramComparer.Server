@@ -205,19 +205,19 @@
     <value>Open Discord invite</value>
   </data>
   <data name="CaptionWebCompare" xml:space="preserve">
-    <value>SRAM - Web Compare</value>
+    <value>S-RAM - Web Compare</value>
   </data>
   <data name="MenuSramComparerCmdApp" xml:space="preserve">
     <value>Console App</value>
   </data>
   <data name="MenuSramComparison" xml:space="preserve">
-    <value>SRAM Comparison</value>
+    <value>S-RAM Comparison</value>
   </data>
   <data name="MenuWebTools" xml:space="preserve">
     <value>Web Tools</value>
   </data>
   <data name="CaptionWebOffsetEdit" xml:space="preserve">
-    <value>SRAM - Web Offset Edit</value><comment>The term Offset should only be translated if not understandable</comment>
+    <value>S-RAM - Web Offset Edit</value><comment>The term Offset should only be translated if not understandable</comment>
   </data>
   <data name="LabelAdditionalComparisons" xml:space="preserve">
     <value>Additional comparisons</value>
@@ -271,7 +271,7 @@
     <value>mandatory</value>
   </data>
   <data name="ButtonTitleCompare" xml:space="preserve">
-    <value>Compare SRAM files</value>
+    <value>Compare S-RAM files</value>
   </data>
   <data name="ButtonCopy" xml:space="preserve">
     <value>Copy to clipboard</value>
@@ -295,7 +295,7 @@
     <value>Features</value>
   </data>
   <data name="MenuSramFormat" xml:space="preserve">
-    <value>SRAM Format</value>
+    <value>S-RAM Format</value>
   </data>
   <data name="MenuGoals" xml:space="preserve">
     <value>Goals of this Project</value>
@@ -307,13 +307,13 @@
     <value>Can I help?</value>
   </data>
   <data name="MenuExploring" xml:space="preserve">
-    <value>Exploring SRAM</value>
+    <value>Exploring S-RAM</value>
   </data>
-  <data name="MenuTitleSramDocu" xml:space="preserve">
-    <value>SRAM Documentation</value>
+  <data name="MenuTitleRosettaStone" xml:space="preserve">
+    <value>Rosetta Stone document</value>
   </data>
-  <data name="MenuSramDocu" xml:space="preserve">
-    <value>Documentation</value>
+  <data name="MenuRosettaStone" xml:space="preserve">
+    <value>Rosetta Stone</value>
   </data>
   <data name="MenuCommunity" xml:space="preserve">
     <value>Community</value>
@@ -358,10 +358,10 @@
     <value>Guides</value>
   </data>
   <data name="MenuTitleExploring" xml:space="preserve">
-    <value>How to explore the SRAM</value>
+    <value>How to explore the S-RAM</value>
   </data>
   <data name="MenuTitleFeatures" xml:space="preserve">
-    <value>Features of SRAM-Comparer</value>
+    <value>Features of S-RAM-Comparer</value>
   </data>
   <data name="MenuTitleContribute" xml:space="preserve">
     <value>How to contribute to the project</value>
@@ -373,7 +373,7 @@
     <value>The goals of this project</value>
   </data>
   <data name="MenuTitleCompare" xml:space="preserve">
-    <value>Web compare of SRAM files</value>
+    <value>Web compare of S-RAM files</value>
   </data>
   <data name="MenuTitleOffsetEdit" xml:space="preserve">
     <value>Web offset edit</value>
@@ -382,7 +382,7 @@
     <value>Welcome to the Evermore Format Exploration Project!</value>
   </data>
   <data name="LabelTitleFile" xml:space="preserve">
-    <value>Select either a SRAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009; *.state)</value>
+    <value>Select either a S-RAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009; *.state)</value>
   </data>
   <data name="ErrorWrongFileExtensionTemplate" xml:space="preserve">
     <value>Error: File {0} has an unsupported file extension

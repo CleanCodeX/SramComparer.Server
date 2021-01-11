@@ -6,6 +6,6 @@ namespace WebApp.SoE.Pages
 	[Route(PageUris.Contributors)]
     public partial class Contributors 
 	{
-		protected override void OnParametersSet() => ContentId = nameof(PageUris.Contributors);
+		protected override void OnParametersSet() => ContentId = PageUris.Contributors;
     }
 }

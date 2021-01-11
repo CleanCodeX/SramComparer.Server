@@ -35,10 +35,10 @@
 		public const string Sources = "/" + nameof(Sources);
 		public const string Contributing = "/" + nameof(Contributing);
 		public const string Community = "/" + nameof(Community);
-		public const string SramDocu = "/" + nameof(SramDocu);
+		public const string RosettaStone = "/rosetta-stone";
 		public const string Discord = "https://discord.gg/s4wTHQgxae";
 
-		public const string LangCheck = "/" + nameof(LangCheck);
+		public const string LangCheck = "/lang-check";
 
 		public const string Page = "/p";
 		public const string ContentPagePrefix = Page + "?c=";

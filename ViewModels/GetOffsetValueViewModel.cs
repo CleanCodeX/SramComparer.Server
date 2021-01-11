@@ -13,7 +13,7 @@ using WebApp.SoE.ViewModels.Bases;
 
 namespace WebApp.SoE.ViewModels
 {
-	/// <summary>Base Viewmodel for loading SoE SRAM files</summary>
+	/// <summary>Base Viewmodel for loading SoE S-RAM files</summary>
 	public class GetOffsetValueViewModel : LoadViewModelBase
 	{
 		public int OffsetAddress { get; set; }

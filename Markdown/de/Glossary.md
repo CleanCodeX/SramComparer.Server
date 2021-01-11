@@ -1,9 +1,9 @@
 ﻿# Glossar
 
-## SRAM
-SRAM steht für <a href="https://de.wikipedia.org/wiki/Static_random-access_memory" target=_>statischer Direkt-Zugriffsspeicher</a> und ist ein Puffer, in welchem das Spiel alle Informationen des Spiels speichert muss später von einem Savegame fortgesetzt werden.
+## S-RAM
+S-RAM steht für <a href="https://de.wikipedia.org/wiki/Static_random-access_memory" target=_>statischer Direkt-Zugriffsspeicher</a> und ist ein Puffer, in welchem das Spiel alle Informationen des Spiels speichert muss später von einem Savegame fortgesetzt werden.
 
-Wenn du innerhalb des Spiels im Gasthaus speicherst, wird der SRAM-Puffer aktualisiert. Mit einem Emulator wird dieser Puffer SRAM als * .srm-Datei auf der Festplatte gespeichert. Jeder Fortschritt, den du im Spiel gemacht hast, in dieser Datei gespeichert. 
+Wenn du innerhalb des Spiels im Gasthaus speicherst, wird der S-RAM-Puffer aktualisiert. Mit einem Emulator wird dieser Puffer S-RAM als * .srm-Datei auf der Festplatte gespeichert. Jeder Fortschritt, den du im Spiel gemacht hast, in dieser Datei gespeichert. 
 
 ## Unknowns / Unbekannte
 Die "Unbekannten" sind Bereiche des SRAMs, welche noch keine Bedeutung zugewiesen bekamen.

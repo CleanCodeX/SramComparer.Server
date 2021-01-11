@@ -7,7 +7,7 @@ Und ob!
 Wenn das Ziel dieses Projekts noch nicht klar ist, lies zuerst das <a href=goals>Ziel</a> durch.
 
 ## Warum
-Das Finden der Bedeutung unbekannter SRAM-Teile ist eine zeitaufwändige Reise, die die Hilfe der Community von SoE benötigt.
+Das Finden der Bedeutung unbekannter S-RAM-Teile ist eine zeitaufwändige Reise, die die Hilfe der Community von SoE benötigt.
 
 Je mehr Menschen etwas beitragen, desto früher und besser die Ergebnisse.
 
@@ -16,7 +16,7 @@ Aber letztendlich ist dies ein Freizeit-Projekt und die Entwicklung von Tools od
 ## Wie etwas beisteuern
 Es gibt ein paar unterschiedliche Wege etwas zum Projekt beizusteuern.
 
-#### SRAM-Daten vergleichen
+#### S-RAM-Daten vergleichen
 Zunächst einmal ist es nicht schwierig, das zu tun. Es gibt ein praktisches Tool, das die unangenehme Vergleichsarbeit für dich erledigt, sodass du keinen Hex-Editor verwenden musst. Versprochen ;-)
 
 Falls du dich nicht all zu sehr vor Bits und Bytes fürchtest, könntest du dich in das Exploration Team einreihen. Sieh dir <a href=exploring>hier</a> an, wie es funktioniert.

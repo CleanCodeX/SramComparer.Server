@@ -15,7 +15,12 @@ namespace WebApp.SoE.Pages.Bases
 		[Inject] private NavigationManager NavigationManager { get; set; }
 #nullable restore
 
-		protected string? ContentId { get; set; }
+		private string? _contentId;
+		protected string? ContentId
+		{
+			get => _contentId;
+			set => _contentId = value.RemovePrefixSlash();
+		}
 
 		protected override Task OnParametersSetAsync()
 		{

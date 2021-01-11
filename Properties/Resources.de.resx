@@ -18,7 +18,7 @@
 		<value>Verglichene Speicherslots</value>
 	</data>
 	<data name="ButtonTitleCompare" xml:space="preserve">
-		<value>Vergleiche SRAM-Dateien</value>
+		<value>Vergleiche S-RAM-Dateien</value>
 	</data>
 	<data name="EnumDontShow" xml:space="preserve">
 		<value>Nicht anzeigen</value>
@@ -75,7 +75,7 @@
 		<value>#4</value>
 	</data>
 	<data name="CaptionWebOffsetEdit" xml:space="preserve">
-		<value>SRAM - Web Offset Änderung</value><comment>The term Offset should only be translated if not understandable</comment>
+		<value>S-RAM - Web Offset Änderung</value><comment>The term Offset should only be translated if not understandable</comment>
 	</data>
 	<data name="AlertDownloadConfirmationFileTemplate" xml:space="preserve">
 		<value>Datei '{0}' herunterladen?</value>
@@ -146,29 +146,29 @@
 	<data name="MenuTheUnknowns" xml:space="preserve">
 		<value>Das Unbekannte</value>
 	</data>
-	<data name="MenuSramDocu" xml:space="preserve">
-		<value>Dokumentation</value>
+	<data name="MenuRosettaStone" xml:space="preserve">
+		<value>Rosetta Stone</value>
 	</data>
 	<data name="MenuTitleAwesome" xml:space="preserve">
 		<value>Awesome Seiten für ein awesome Spiel</value>
 	</data>
 	<data name="MenuExploring" xml:space="preserve">
-		<value>SRAM Erkunden</value>
+		<value>S-RAM Erkunden</value>
 	</data>
 	<data name="MenuCommunity" xml:space="preserve">
 		<value>Community</value>
 	</data>
 	<data name="MenuSramFormat" xml:space="preserve">
-		<value>SRAM Format</value>
+		<value>S-RAM Format</value>
 	</data>
 	<data name="MenuSramComparison" xml:space="preserve">
-		<value>SRAM Vergleich</value>
+		<value>S-RAM Vergleich</value>
 	</data>
 	<data name="MenuSramComparerCmdApp" xml:space="preserve">
 		<value>Konsolen App</value>
 	</data>
 	<data name="CaptionWebCompare" xml:space="preserve">
-		<value>SRAM - Web Vergleich</value>
+		<value>S-RAM - Web Vergleich</value>
 	</data>
 	<data name="LabelKnownBytes" xml:space="preserve">
 		<value>bekannte Bytes</value>
@@ -206,8 +206,8 @@
 	<data name="MenuTitleChangeLog" xml:space="preserve">
 		<value>Changelog und download der Konsolen-Anwendung</value>
 	</data>
-	<data name="MenuTitleSramDocu" xml:space="preserve">
-		<value>SRAM-Dokumentation</value>
+	<data name="MenuTitleRosettaStone" xml:space="preserve">
+		<value>Rosetta Stone-Dokument</value>
 	</data>
 	<data name="MenuTitleSources" xml:space="preserve">
 		<value>Quellcodes auf GitHub</value>
@@ -252,10 +252,10 @@
 		<value>Anleitungen</value>
 	</data>
 	<data name="MenuTitleExploring" xml:space="preserve">
-		<value>Wie das SRAM erkundet wird</value>
+		<value>Wie das S-RAM erkundet wird</value>
 	</data>
 	<data name="MenuTitleFeatures" xml:space="preserve">
-		<value>Features von SRAM-Comparer</value>
+		<value>Features von S-RAM-Comparer</value>
 	</data>
 	<data name="MenuTitleContribute" xml:space="preserve">
 		<value>Wie man zum Projekt beitragen kann</value>
@@ -270,13 +270,13 @@
 		<value>Web Offset-Änderung</value>
 	</data>
 	<data name="MenuTitleCompare" xml:space="preserve">
-		<value>Web-Vergleich von SRAM-Dateien</value>
+		<value>Web-Vergleich von S-RAM-Dateien</value>
 	</data>
 	<data name="LabelWelcomeMessage" xml:space="preserve">
 		<value>Willkommen zum Evermore Format Erkundungs-Projekt</value>
 	</data>
 	<data name="LabelTitleFile" xml:space="preserve">
-		<value>Wähle entweder eine SRAM- (*.srm, *.comp) or Snes9x Savestate- Datei (*.000 - *.009; *.state)</value>
+		<value>Wähle entweder eine S-RAM- (*.srm, *.comp) or Snes9x Savestate- Datei (*.000 - *.009; *.state)</value>
 	</data>
 	<data name="ErrorWrongFileExtensionTemplate" xml:space="preserve">
 		<value>Fehler: Datei  {0} hat eine nicht unterstützt Dateiendung</value>

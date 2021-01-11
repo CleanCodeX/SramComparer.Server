@@ -7,7 +7,7 @@ Actually you can!
 If the goals of this project aren't clear yet, make sure to have read through the <a href=goals>goals</a> first.
 
 ## Why
-Finding the meaning of unknown SRAM pieces is a time-consuming journey which needs the help from the community of SoE.
+Finding the meaning of unknown S-RAM pieces is a time-consuming journey which needs the help from the community of SoE.
 Your help would save much time in not doing something twice what someone else already did.
 
 The more people contribute, the earlier and better the results.
@@ -17,7 +17,7 @@ But after all this is a free time project and developing tools or finding offset
 ## How to contribute
 There are a view different ways of contributing to the project
 
-#### Exploring SRAM data
+#### Exploring S-RAM data
 First of all, it's not difficult to do that. There is a convenient tool which does the nasty work of comparison for you, meaning there is no need to use a hex-editor. Promised ;-)
 
 If you're not **too** scared of bits and bytes, you could join the Exploration team. Check out <a href=exploring>here</a> how it works.

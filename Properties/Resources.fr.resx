@@ -36,10 +36,10 @@
 		<value>Définir la valeur</value>
 	</data>
 	<data name="CaptionWebCompare" xml:space="preserve">
-		<value>Web Comparaison SRAM</value><comment>Needs to have Web or online oncluded</comment>
+		<value>Web Comparaison S-RAM</value><comment>Needs to have Web or online oncluded</comment>
 	</data>
 	<data name="CaptionWebOffsetEdit" xml:space="preserve">
-		<value>Web Modification du décalage SRAM</value>
+		<value>Web Modification du décalage S-RAM</value>
 		<comment>Needs to have Web or online oncluded</comment>
 	</data>
 	<data name="EnumDontShow" xml:space="preserve">
@@ -114,8 +114,8 @@
 	<data name="MenuCommunity" xml:space="preserve">
 		<value>Communité</value>
 	</data>
-	<data name="MenuSramDocu" xml:space="preserve">
-		<value>Documentation</value>
+	<data name="MenuRosettaStone" xml:space="preserve">
+		<value>Rosetta Stone</value>
 	</data>
 	<data name="MenuChangeLog" xml:space="preserve">
 		<value>Historique</value>
@@ -139,13 +139,13 @@
 		<value>Application console</value>
 	</data>
 	<data name="MenuSramComparison" xml:space="preserve">
-		<value>Comparaison SRAM</value>
+		<value>Comparaison S-RAM</value>
 	</data>
 	<data name="MenuSramFormat" xml:space="preserve">
-		<value>Format SRAM</value>
+		<value>Format S-RAM</value>
 	</data>
 	<data name="MenuExploring" xml:space="preserve">
-		<value>Explorer SRAM</value>
+		<value>Explorer S-RAM</value>
 	</data>
 	<data name="MenuTheUnknowns" xml:space="preserve">
 		<value>Valeurs inconnues</value>
@@ -195,8 +195,8 @@
 	<data name="LabelTitleSaveSlotOffset" xml:space="preserve">
 		<value>Le décalage relatif dans les données de la partie</value>
 	</data>
-	<data name="MenuTitleSramDocu" xml:space="preserve">
-		<value>Documentation SRAM</value>
+	<data name="MenuTitleRosettaStone" xml:space="preserve">
+		<value>Document Rosetta Stone</value>
 	</data>
 	<data name="LabelKnownBytes" xml:space="preserve">
 		<value>octets connus</value>
@@ -256,10 +256,10 @@
 		<value>Les objectifs de ce projet</value>
 	</data>
 	<data name="MenuTitleFeatures" xml:space="preserve">
-		<value>Caractéristiques de SRAM-Comparer</value>
+		<value>Caractéristiques de S-RAM-Comparer</value>
 	</data>
 	<data name="MenuTitleExploring" xml:space="preserve">
-		<value>Comment explorer la SRAM</value>
+		<value>Comment explorer la S-RAM</value>
 	</data>
 	<data name="MenuTitleTheUnknowns" xml:space="preserve">
 		<value>Quels sont les inconnus à explorer?</value>
@@ -271,13 +271,13 @@
 		<value>Modification du décalage Web</value>
 	</data>
 	<data name="MenuTitleCompare" xml:space="preserve">
-		<value>Comparaison Web des fichiers SRAM</value>
+		<value>Comparaison Web des fichiers S-RAM</value>
 	</data>
 	<data name="LabelWelcomeMessage" xml:space="preserve">
 		<value>Bienvenue dans le projet d'exploration Evermore Format!</value>
 	</data>
 	<data name="LabelTitleFile" xml:space="preserve">
-		<value>Sélectionnez un fichier de sauvegarde SRAM (* .srm, *.comp) ou Snes9x (* .000 - * .009; *.state)</value>
+		<value>Sélectionnez un fichier de sauvegarde S-RAM (* .srm, *.comp) ou Snes9x (* .000 - * .009; *.state)</value>
 	</data>
 	<data name="ErrorWrongFileExtensionTemplate" xml:space="preserve">
 		<value>Erreur: le fichier {0} a une extension de fichier non prise en charge</value>

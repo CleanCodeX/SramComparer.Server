@@ -151,7 +151,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Compare SRAM files ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compare S-RAM files ähnelt.
         /// </summary>
         public static string ButtonTitleCompare {
             get {
@@ -232,7 +232,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Web Compare ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die S-RAM - Web Compare ähnelt.
         /// </summary>
         public static string CaptionWebCompare {
             get {
@@ -241,7 +241,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM - Web Offset Edit ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die S-RAM - Web Offset Edit ähnelt.
         /// </summary>
         public static string CaptionWebOffsetEdit {
             get {
@@ -476,7 +476,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Select either a SRAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009; *.state) ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Select either a S-RAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009; *.state) ähnelt.
         /// </summary>
         public static string LabelTitleFile {
             get {
@@ -602,7 +602,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Exploring SRAM ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Exploring S-RAM ähnelt.
         /// </summary>
         public static string MenuExploring {
             get {
@@ -665,6 +665,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Rosetta Stone ähnelt.
+        /// </summary>
+        public static string MenuRosettaStone {
+            get {
+                return ResourceManager.GetString("MenuRosettaStone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Console App ähnelt.
         /// </summary>
         public static string MenuSramComparerCmdApp {
@@ -674,7 +683,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Comparison ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die S-RAM Comparison ähnelt.
         /// </summary>
         public static string MenuSramComparison {
             get {
@@ -683,16 +692,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Documentation ähnelt.
-        /// </summary>
-        public static string MenuSramDocu {
-            get {
-                return ResourceManager.GetString("MenuSramDocu", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Format ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die S-RAM Format ähnelt.
         /// </summary>
         public static string MenuSramFormat {
             get {
@@ -746,7 +746,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Web compare of SRAM files ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Web compare of S-RAM files ähnelt.
         /// </summary>
         public static string MenuTitleCompare {
             get {
@@ -773,7 +773,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die How to explore the SRAM ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die How to explore the S-RAM ähnelt.
         /// </summary>
         public static string MenuTitleExploring {
             get {
@@ -782,7 +782,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Features of SRAM-Comparer ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Features of S-RAM-Comparer ähnelt.
         /// </summary>
         public static string MenuTitleFeatures {
             get {
@@ -827,20 +827,20 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The Rosetta Stone document ähnelt.
+        /// </summary>
+        public static string MenuTitleRosettaStone {
+            get {
+                return ResourceManager.GetString("MenuTitleRosettaStone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Sources at GitHub ähnelt.
         /// </summary>
         public static string MenuTitleSources {
             get {
                 return ResourceManager.GetString("MenuTitleSources", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SRAM Documentation ähnelt.
-        /// </summary>
-        public static string MenuTitleSramDocu {
-            get {
-                return ResourceManager.GetString("MenuTitleSramDocu", resourceCulture);
             }
         }
         

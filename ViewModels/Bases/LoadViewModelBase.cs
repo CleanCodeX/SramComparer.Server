@@ -17,7 +17,7 @@ using SramFormat.SoE.Constants;
 
 namespace WebApp.SoE.ViewModels.Bases
 {
-	/// <summary>Base Viewmodel for loading SoE SRAM files</summary>
+	/// <summary>Base Viewmodel for loading SoE S-RAM files</summary>
 	public abstract class LoadViewModelBase : ViewModelBase
 	{
 		protected bool IsSavestate { get; private set; }

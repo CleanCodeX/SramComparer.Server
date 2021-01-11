@@ -1,5 +1,5 @@
-﻿# SoE SRAM Comparer
-Erlaubt das Vergleichen von (unbekannten) Bereichen und Modifizieren von Offset-Werten in Secret of Evermores SRAM-Datei.
+﻿# SoE S-RAM Comparer
+Erlaubt das Vergleichen von (unbekannten) Bereichen und Modifizieren von Offset-Werten in Secret of Evermores S-RAM-Datei.
 
 ## Features
 * [C|W] Anzeigen (oder speichern von geänderten) SRM Offset-Werten
@@ -14,8 +14,8 @@ Erlaubt das Vergleichen von (unbekannten) Bereichen und Modifizieren von Offset-
 * [C|W] Export des Vergleichsergebnisses als Text-Datei
 * [C|W] Anzeige von Speicherslot-Prüfsummen (O)
 * [W] Zuletzt benutzte Einstellungen werden automatisch gespeichert
-* [C] Sicherungs- und Wiederherstellungs-Funktionalität der aktuellen oder Vergleichs-SRAM-Datei
-* [C] Speichern der SRAM-Datei unter einem anderen Spielnamen
+* [C] Sicherungs- und Wiederherstellungs-Funktionalität der aktuellen oder Vergleichs-S-RAM-Datei
+* [C] Speichern der S-RAM-Datei unter einem anderen Spielnamen
 * [C] Einstellungen können parametrisiert werden
 * [C] Konfig laden/speichern (inkl. benutzedefinierter Konfignamen)
 * [C] Auto Laden einer Konfig

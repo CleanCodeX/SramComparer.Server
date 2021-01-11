@@ -14,7 +14,7 @@ using WebApp.SoE.Extensions;
 
 namespace WebApp.SoE.ViewModels
 {
-	/// <summary>Base Viewmodel for loading SoE SRAM files</summary>
+	/// <summary>Base Viewmodel for loading SoE S-RAM files</summary>
 	public class SetOffsetValueViewModel : GetOffsetValueViewModel
 	{
 #nullable disable

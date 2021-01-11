@@ -1,6 +1,4 @@
-﻿@using WebApp.SoE.Helpers
-
-@attribute [Route(PageUris.Prerequisites)]
+﻿@attribute [Route(PageUris.Prerequisites)]
 @inherits LangContentIdMarkupBase
 
 <div class="markup">
@@ -8,5 +6,5 @@
 </div>
 
 @code {
-	protected override void OnParametersSet() => ContentId = nameof(PageUris.Prerequisites);
+	protected override void OnParametersSet() => ContentId = PageUris.Prerequisites;
 }

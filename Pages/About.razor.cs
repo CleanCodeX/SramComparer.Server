@@ -11,7 +11,7 @@ namespace WebApp.SoE.Pages
 
 		private bool ShowDebugLink { get; }
 
-		protected override void OnParametersSet() => ContentId = "contributors";
+		protected override void OnParametersSet() => ContentId = PageUris.Contributors;
 
 		public About()
 		{

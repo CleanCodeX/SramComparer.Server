@@ -1,5 +1,5 @@
-# SoE SRAM Comparer
-Allows to compare (unknown) areas and modify offset values in Secret of Evermore's SRAM file.
+# SoE S-RAM Comparer
+Allows to compare (unknown) areas and modify offset values in Secret of Evermore's S-RAM file.
 
 ## Features
 * [C|W] Display (or save modified) srm offset values
@@ -15,7 +15,7 @@ Allows to compare (unknown) areas and modify offset values in Secret of Evermore
 * [C|W] Display of changed or all game's checksums (O)
 * [W] Last used settings will be automatically saved
 * [C] Backup / restore functionality of current and comparison sram file
-* [C] Save SRAM file with different game name 
+* [C] Save S-RAM file with different game name 
 * [C] Settings are parameterized
 * [C] Config loading/saving (including custom configs)
 * [C] Auto loading config

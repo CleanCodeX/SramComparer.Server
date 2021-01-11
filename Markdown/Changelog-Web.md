@@ -17,7 +17,7 @@
 * added automatic settings loading/saving for web tools
 * restructured menu
 * added Awesome SoE pages link
-* added SRAM docu link
+* added S-RAM docu link
 * added Forums / Discord invite link
 * moved most pages into markdown files hosted at GitHub
 

@@ -1,18 +1,18 @@
 ﻿# Ziel des Ganzen
 
-## SRAM?
+## S-RAM?
 Falls du unsicher bist, was mit diesem Begriff gemeint ist, im <a href=glossary>Glossar</a> wird es erklärt.
 
-Die SRAM-Datei kann gelesen und manipuliert werden. So weit, so gut.
+Die S-RAM-Datei kann gelesen und manipuliert werden. So weit, so gut.
 
-Das einzige Problem dabei ist, dass ca. 54% des SRAM-Speicherslot-Formates von SoE immer noch als unbekannt gelten. Das bedeutet, dass wir nicht wirklich wissen, welche Bedeutung diese Bereiche des SRAMs haben.
+Das einzige Problem dabei ist, dass ca. 54% des S-RAM-Speicherslot-Formates von SoE immer noch als unbekannt gelten. Das bedeutet, dass wir nicht wirklich wissen, welche Bedeutung diese Bereiche des SRAMs haben.
 
 ### Die Unbekannten
 Eine Erklärung der Unbekannten findest du im <a href=glossary>Glossar</a>.
 Eine unvollständige Liste von Beispielen findest du unter: <a href=unknowns>das Unbekannte</a>.
 
 ## Was ist das Ziel?
-Sobald das SRAM-Format vollständig bekannt ist, bietet es die Möglichkeit einen leistungsstarken Spielstand-Editor zu entwickeln, der alles aktiviert oder deaktiviert, was von einem Spielstand aus gesteuert werden kann.
+Sobald das S-RAM-Format vollständig bekannt ist, bietet es die Möglichkeit einen leistungsstarken Spielstand-Editor zu entwickeln, der alles aktiviert oder deaktiviert, was von einem Spielstand aus gesteuert werden kann.
 
 "Das klingt cool!" denkst du vielleicht. Absolut, das ist es!
 

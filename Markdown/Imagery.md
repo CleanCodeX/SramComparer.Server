@@ -6,7 +6,7 @@
 
 ![Many Values Change](https://raw.githubusercontent.com/CleanCodeX/SramComparer.SoE/master/Images/ManyValuesChange.png "Many Values Change")
 
-![No SRAM Change](https://raw.githubusercontent.com/CleanCodeX/SramComparer.SoE/master/Images/NoChange.png "No SRAM Change")
+![No S-RAM Change](https://raw.githubusercontent.com/CleanCodeX/SramComparer.SoE/master/Images/NoChange.png "No S-RAM Change")
 
 ![Whole Save Slot Area Comparison](https://raw.githubusercontent.com/CleanCodeX/SramComparer.SoE/master/Images/WholeSaveSlotAreaComparison.png "Whole Save Slot Area Comparison")
 

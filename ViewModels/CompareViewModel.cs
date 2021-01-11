@@ -18,7 +18,7 @@ using Res = WebApp.SoE.Properties.Resources;
 
 namespace WebApp.SoE.ViewModels
 {
-	/// <summary>Viewmodel for SoE SRAM comparison</summary>
+	/// <summary>Viewmodel for SoE S-RAM comparison</summary>
 	public class CompareViewModel : ViewModelBase
 	{
 		public SaveSlotId ComparisonFileSaveSlot { get; set; }

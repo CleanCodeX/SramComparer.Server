@@ -1,14 +1,14 @@
 # Explore
 
-## Compare SRAM
-Join the exploration team to find meanings for various SRAM offsets.
+## Compare S-RAM
+Join the exploration team to find meanings for various S-RAM offsets.
 This can be done either by using 
 
 * [Web Comparison](comparing)
 * [Windows Console App](changelog-console)
 
 ### Edit offset values
-Once you found a meaning for an offset value, try to enable or disable this flag in other SRAM (*.srm) files to prove your find. 
+Once you found a meaning for an offset value, try to enable or disable this flag in other S-RAM (*.srm) files to prove your find. 
 Reading and manipulating offset values can be done using the following: 
 
 * [Web Offset Editor](offset-editing)
