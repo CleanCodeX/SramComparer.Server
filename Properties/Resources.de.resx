@@ -183,7 +183,7 @@
 		<value>Versionsangaben und Beitragende</value>
 	</data>
 	<data name="LabelTitleProjectName" xml:space="preserve">
-		<value>Evermore «Rosetta-Stone»-Projekt</value>
+		<value>Evermore «Rosetta Stone»-Projekt</value>
 	</data>
 	<data name="MenuAbout" xml:space="preserve">
 		<value>Info</value>
@@ -273,7 +273,7 @@
 		<value>Web-Vergleich von S-RAM-Dateien</value>
 	</data>
 	<data name="LabelWelcomeMessage" xml:space="preserve">
-		<value>Dies ist Evermores «Rosetta Stone» Projekt.</value>
+		<value>Willkommen zum Evermore «Rosetta Stone» Projekt.</value>
 	</data>
 	<data name="LabelTitleFile" xml:space="preserve">
 		<value>Wähle entweder eine S-RAM- (*.srm, *.comp) or Snes9x Savestate- Datei (*.000 - *.009; *.state)</value>

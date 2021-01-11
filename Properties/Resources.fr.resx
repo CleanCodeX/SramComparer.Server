@@ -163,7 +163,7 @@
 		<value>Comparaison des données en dehors de la partie en cours (après les données de toutes les parties)</value>
 	</data>
 	<data name="LabelTitleProjectName" xml:space="preserve">
-		<value>Projet Evermore «Rosetta Stone» (Exploration de format)</value>
+		<value>Projet Evermore «Rosetta Stone»</value>
 	</data>
 	<data name="LabelShowAdditionalSaveSlotInformation" xml:space="preserve">
 		<value>Afficher des informations supplémentaires sur la partie</value>
@@ -274,7 +274,7 @@
 		<value>Comparaison Web des fichiers S-RAM</value>
 	</data>
 	<data name="LabelWelcomeMessage" xml:space="preserve">
-		<value>Il s'agit du projet «Rosetta Stone» d'Evermore.</value>
+		<value>Bienvenue dans le projet Evermore «Rosetta Stone».</value>
 	</data>
 	<data name="LabelTitleFile" xml:space="preserve">
 		<value>Sélectionnez un fichier de sauvegarde S-RAM (* .srm, *.comp) ou Snes9x (* .000 - * .009; *.state)</value>
