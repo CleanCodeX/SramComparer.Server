@@ -14,13 +14,7 @@
 
 	private static readonly Random Random = new();
 
-	private string GetTooltip()
-	{
-		var tooltip = TooltipRandomizer.NextTooltip();
-
-		if (Random.NextInclusive(1, 4) == 2)
-			tooltip = "I wonder what these cryptic symbols mean? Let me know if you have any guess…";
-
-		return tooltip;
-	}
+	private string GetTooltip() => Random.NextInclusive(1, 10) == 1 
+		? "I wonder what these cryptic symbols mean? Let me know if you have any guess…"
+		: TooltipRandomizer.NextTooltip();
 }

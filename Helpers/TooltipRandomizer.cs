@@ -10,10 +10,15 @@ namespace WebApp.SoE.Helpers
 		private const string TooltipFile = "wwwroot/Tooltips.txt";
 		private const int IHaveSpokenWaitTimeInSeconds = 300;
 
+		[ThreadStatic]
 		private static readonly Random Random = new();
+		[ThreadStatic]
 		private static List<string> Tooltips = new();
+		[ThreadStatic]
 		private static DateTimeOffset lastLockedAt;
+		[ThreadStatic]
 		private static int lastLockedIndex;
+		[ThreadStatic]
 		private static object LockObj = new();
 
 		public static string NextTooltip()
