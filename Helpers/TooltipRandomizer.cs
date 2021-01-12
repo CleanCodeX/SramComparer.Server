@@ -21,28 +21,40 @@ namespace WebApp.SoE.Helpers
 
 		static TooltipRandomizer()
 		{
-			if (File.Exists(TooltipFile))
-				Tooltips = File.ReadAllLines(TooltipFile).ToList();
+			try
+			{
+				if (File.Exists(TooltipFile))
+					Tooltips = File.ReadAllLines(TooltipFile).ToList();
+			}
+			catch
+			{ }
 		}
 
 		public static string GetTooltip(int index)
 		{
-			if ((DateTimeOffset.Now - lastLockedAt).TotalSeconds <= IHaveSpokenWaitTimeInSeconds)
-				index = lastLockedIndex;
-			else
-				lastLockedAt = default;
-
-			if (index >= Tooltips.Count)
-				index = 0;
-
-			var tooltip = Tooltips[index];
-			if (tooltip.Contains("I have spoken."))
+			try
 			{
-				lastLockedIndex = index;
-				lastLockedAt = DateTimeOffset.Now;
-			}
+				if ((DateTimeOffset.Now - lastLockedAt).TotalSeconds <= IHaveSpokenWaitTimeInSeconds)
+					index = lastLockedIndex;
+				else
+					lastLockedAt = default;
 
-			return  $"»{tooltip}«";
+				if (index >= Tooltips.Count)
+					index = 0;
+
+				var tooltip = Tooltips[index];
+				if (tooltip.Contains("I have spoken."))
+				{
+					lastLockedIndex = index;
+					lastLockedAt = DateTimeOffset.Now;
+				}
+
+				return $"»{tooltip}«";
+			}
+			catch (Exception ex)
+			{
+				return "Upsi pupsi: " + ex.Message;
+			}
 		}
 	}
 }

@@ -14,15 +14,22 @@ namespace WebApp.SoE.Helpers
 
 		public static string GetRes(string resKey, int randomizedWithinMax = RandomizedWithinMaxDefault, int tooltip = -1)
 		{
-			if (Random.NextInclusive(1, randomizedWithinMax) == 1)
+			try
 			{
-				if (tooltip > -1)
-					return TooltipRandomizer.GetTooltip(tooltip);
+				if (Random.NextInclusive(1, randomizedWithinMax) == 1)
+				{
+					if (tooltip > -1)
+						return TooltipRandomizer.GetTooltip(tooltip);
 
-				return TooltipRandomizer.NextMenuTooltip();
+					return TooltipRandomizer.NextMenuTooltip();
+				}
+
+				return ResourceManager.GetString(resKey)!;
 			}
-
-			return ResourceManager.GetString(resKey)!;
+			catch (Exception ex)
+			{
+				return "Upsi pupsi: " + ex.Message;
+			}
 		}
 	}
 }
