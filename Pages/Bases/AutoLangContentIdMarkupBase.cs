@@ -16,9 +16,10 @@ namespace WebApp.SoE.Pages.Bases
 			Html
 		}
 
+		private const int TranslateErrorDelayInMilliseconds = 200;
 		private static readonly TranslateOptionEnum TranslateOption = TranslateOptionEnum.Markup;
 
-		private bool _autoTranslate = true;
+		private bool _autoTranslate = false; 
 
 		protected bool AutoTranslate
 		{
@@ -64,7 +65,7 @@ namespace WebApp.SoE.Pages.Bases
 			catch (Exception ex)
 			{
 				Console.WriteLine(ex);
-				await Task.Delay(500);
+				await Task.Delay(TranslateErrorDelayInMilliseconds);
 				return content;
 			}
 		}
