@@ -1,7 +1,7 @@
 ﻿@using Microsoft.JSInterop
 @inject IJSRuntime JsRuntime
 
-<button type="button" id="copyButton" class="btn btn-primary" @onclick="CopyTextToClipboardAsync" @attributes="AdditionalAttributes" disabled="@Disabled"><span class="iconify" data-icon="oi-file" data-inline="false" /></button>
+<button type="button" id="copyButton" class="btn btn-primary" @onclick="CopyTextToClipboardAsync" @attributes="AdditionalAttributes" disabled="@Disabled"><span class="iconify" data-icon="oi-file" data-inline="false" title="@GetRes(Res.ButtonTitleCopy, 20)" /></button>
 
 @code {
 
@@ -20,6 +20,6 @@
 		if (result != null)
 			Text = result;
 
-		await JsRuntime.InvokeVoidAsync("clipboardCopy.copyText", TimeSpan.FromMilliseconds(100), Text!, Res.AlertCopiedToClipboard);
+		await JsRuntime.InvokeVoidAsync("clipboardCopy.copyText", TimeSpan.FromMilliseconds(100), Text!, GetRes(Res.AlertCopiedToClipboard, 20));
 	}
 }

@@ -1,10 +1,26 @@
-﻿<a href="/">
+﻿@using RosettaStone.Sram.SoE.Extensions
+<a href="/">
 	<img src="media/banner.png" class="header blur" title="@TooltipRandomizer.NextTooltip()" />
 </a>
 
 <div class="project">
 	<a href="@PageUris.RosettaStone">
-		<img src="media/project.png" class="blur" id="projectBanner" title="@TooltipRandomizer.NextTooltip()" />
+		<img src="media/project.png" class="blur" id="projectBanner" title="@GetTooltip()" />
 	</a>
 	<StatusDisplay />
 </div>
+
+@code{
+
+	private static readonly Random Random = new();
+
+	private string GetTooltip()
+	{
+		var tooltip = TooltipRandomizer.NextTooltip();
+
+		if (Random.NextInclusive(1, 4) == 2)
+			tooltip = "I wonder what these cryptic symbols mean? Let me know if you have any guess…";
+
+		return tooltip;
+	}
+}

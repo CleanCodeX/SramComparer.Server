@@ -16,8 +16,6 @@ namespace WebApp.SoE.Helpers
 			string url = $"translate_a/single?client=gtx&sl={fromLanguage}&tl={toLanguage}&dt=t&q={HttpUtility.UrlEncode(content)}";
 			using var httpClient = new HttpClient() {BaseAddress = new Uri("https://translate.googleapis.com")};
 
-			//Uri.EscapeUriString(content)
-
 			try
 			{
 				var result = await httpClient.GetFromJsonAsync<List<dynamic>>(url);

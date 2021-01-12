@@ -7,7 +7,7 @@
 		var buttonTitle = Value ? Res.ButtonTitleDisableAutoTranslation : Res.ButtonTitleEnableAutoTranslation;
 	}
 
-	<button class="@buttonClass" @onclick="@ToggleAutoTranslateAsync" title="@buttonTitle">@caption</button>
+	<button class="@buttonClass" @onclick="@ToggleAutoTranslateAsync" title="@GetRes(buttonTitle, 20)">@caption</button>
 </div>
 
 @code {

@@ -1,25 +1,48 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace WebApp.SoE.Helpers
 {
 	public static class TooltipRandomizer
 	{
-		private static readonly string[] Tooltips = 
+		private const string TooltipFile = "wwwroot/Tooltips.txt";
+		private const int IHaveSpokenWaitTimeInSeconds = 300;
+
+		private static readonly Random Random = new();
+		private static readonly List<string> Tooltips = new();
+		private static DateTimeOffset lastLockedAt;
+		private static int lastLockedIndex;
+		
+
+		public static string NextTooltip() => GetTooltip(Random.Next(Tooltips.Count));
+		public static string NextMenuTooltip() => GetTooltip(Random.Next(Tooltips.IndexOf(string.Empty)));
+
+		static TooltipRandomizer()
 		{
-			"Take heed and go no further",
-			"Camp on the banks of the great green Limpopo River",
-			"Souvenir Spoon Pounding Factory 5 Furlongs, Tours daily",
-			"I'd turn back if I were you",
-			"Visit beautiful Gruelville, 25 leagues west",
-			"Come see Mr. Head at Perceval Plank's Exhibition of Cultural Oddities",
-			"See the amazing Bearded Boy, next left",
-			"Half Way",
-			"City of Costagando, 30 leagues east",
-			 "Mountains of Candy, 50 furlongs" 
-		};
+			if (File.Exists(TooltipFile))
+				Tooltips = File.ReadAllLines(TooltipFile).ToList();
+		}
 
-		private static readonly Random Random = new ();
+		public static string GetTooltip(int index)
+		{
+			if ((DateTimeOffset.Now - lastLockedAt).TotalSeconds <= IHaveSpokenWaitTimeInSeconds)
+				index = lastLockedIndex;
+			else
+				lastLockedAt = default;
 
-		public static string NextTooltip() => Tooltips[Random.Next(0, Tooltips.Length)];
+			if (index >= Tooltips.Count)
+				index = 0;
+
+			var tooltip = Tooltips[index];
+			if (tooltip.Contains("I have spoken."))
+			{
+				lastLockedIndex = index;
+				lastLockedAt = DateTimeOffset.Now;
+			}
+
+			return  $"»{tooltip}«";
+		}
 	}
 }
