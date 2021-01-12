@@ -14,7 +14,7 @@
 
 	private readonly Random Random = new();
 
-	private string GetTooltip() => Random.NextInclusive(1, 10) == 1 
-		? "I wonder what these cryptic symbols mean? Let me know if you have any guess…"
+	private string GetTooltip() => Random.NextInclusive(1, 5) == 1 
+		? "Wonder what these cryptic symbols mean? Let me know if you have any guess…"
 		: TooltipRandomizer.NextTooltip();
 }
