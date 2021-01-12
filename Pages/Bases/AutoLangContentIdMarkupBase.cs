@@ -55,7 +55,19 @@ namespace WebApp.SoE.Pages.Bases
 			return markup;
 		}
 
-		private async Task<string?> TranslateContent(string content) => ContentCorrections(await TranslateHelper.TranslateTextAsync(PrefixContent(content), "en", Language));
+		private async Task<string?> TranslateContent(string content)
+		{
+			try
+			{
+				return ContentCorrections(await TranslateHelper.TranslateTextAsync(PrefixContent(content), "en", Language));
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex);
+				await Task.Delay(500);
+				return content;
+			}
+		}
 
 		private string PrefixContent(string content)
 		{

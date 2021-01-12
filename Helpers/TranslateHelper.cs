@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text.Json;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 
@@ -54,7 +55,6 @@ namespace WebApp.SoE.Helpers
 			}
 			catch (Exception ex)
 			{
-				Console.WriteLine(ex);
 				throw;
 			}
 		}
