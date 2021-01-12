@@ -12,7 +12,7 @@
 
 @code{
 
-	private static readonly Random Random = new();
+	private readonly Random Random = new();
 
 	private string GetTooltip() => Random.NextInclusive(1, 10) == 1 
 		? "I wonder what these cryptic symbols mean? Let me know if you have any guess…"
