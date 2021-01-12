@@ -2,7 +2,7 @@
 
 #### v005 (2021-01-09)
 * added Web-Compare support for Snes9x savestates
-* Added savestate web comparison
+* Added savestate web comparison (still requires to save at the inn)
 * Added savestate web offset value display
 
 #### v004 (2021-01-04)
