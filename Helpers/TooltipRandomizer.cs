@@ -8,6 +8,7 @@ namespace WebApp.SoE.Helpers
 	{
 		private const string TooltipFile = "wwwroot/Tooltips.txt";
 		private const int IHaveSpokenWaitTimeInSeconds = 300;
+		private const int IHaveSpokenStateChanceMaxValue = 10;
 
 		private static readonly Random Random = new();
 		private static List<string> Tooltips = new();
@@ -77,8 +78,11 @@ namespace WebApp.SoE.Helpers
 				var tooltip = GetFromIndex(index);
 				if (lastLockedIndex == -1 && tooltip.StartsWith("I have spoken."))
 				{
-					lastLockedIndex = index;
-					lastLockedAt = DateTimeOffset.Now;
+					if (Random.Next(IHaveSpokenStateChanceMaxValue) == 1) // lower these chances
+					{
+						lastLockedIndex = index;
+						lastLockedAt = DateTimeOffset.Now;
+					}
 				}
 
 				return Template(tooltip);
