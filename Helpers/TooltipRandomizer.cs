@@ -11,26 +11,58 @@ namespace WebApp.SoE.Helpers
 		private const int IHaveSpokenWaitTimeInSeconds = 300;
 
 		private static readonly Random Random = new();
-		private static readonly List<string> Tooltips = new();
+		private static List<string> Tooltips = new();
 		private static DateTimeOffset lastLockedAt;
 		private static int lastLockedIndex;
-		
+		private static object LockObj = new();
 
-		public static string NextTooltip() => GetTooltip(Random.Next(Tooltips.Count));
-		public static string NextMenuTooltip() => GetTooltip(Random.Next(Tooltips.IndexOf(string.Empty)));
-
-		static TooltipRandomizer()
+		public static string NextTooltip()
 		{
-			try
+			lock (LockObj)
 			{
-				if (File.Exists(TooltipFile))
-					Tooltips = File.ReadAllLines(TooltipFile).ToList();
+				Initialize();
+				return GetTooltip(Random.Next(Tooltips.Count));
 			}
-			catch
-			{ }
+		}
+
+		public static string NextMenuTooltip()
+		{
+			lock (LockObj)
+			{
+				Initialize();
+				return GetTooltip(Random.Next(Tooltips.IndexOf(string.Empty)));
+			}
 		}
 
 		public static string GetTooltip(int index)
+		{
+			Initialize();
+			return InternalGetTooltip(index);
+		}
+
+		private static int Initialize()
+		{
+			if (Tooltips.Count == 0)
+			{
+				lock (LockObj)
+				{
+					if (Tooltips.Count > 0) return Tooltips.Count;
+
+					try
+					{
+						if (File.Exists(TooltipFile))
+							Tooltips = File.ReadAllLines(TooltipFile).ToList();
+					}
+					catch
+					{
+					}
+				}
+			}
+
+			return Tooltips.Count;
+		}
+
+		private static string InternalGetTooltip(int index)
 		{
 			try
 			{
