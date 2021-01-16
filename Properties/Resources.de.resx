@@ -272,8 +272,8 @@
 	<data name="MenuTitleCompare" xml:space="preserve">
 		<value>Web-Vergleich von S-RAM-Dateien</value>
 	</data>
-	<data name="LabelWelcomeMessage" xml:space="preserve">
-		<value>Willkommen zum Evermore «Rosetta Stone» Projekt.</value>
+	<data name="LabelIndexTitle" xml:space="preserve">
+		<value>Evermore » Rosetta Stone « Projekt</value>
 	</data>
 	<data name="LabelTitleFile" xml:space="preserve">
 		<value>Wähle entweder eine S-RAM- (*.srm, *.comp) or Snes9x Savestate- Datei (*.000 - *.009; *.state)</value>

@@ -14,12 +14,15 @@ Allows to compare (unknown) areas and modify offset values in Secret of Evermore
 * [C|W] Export comparison result as text file
 * [C|W] Display of changed or all game's checksums (O)
 * [W] Last used settings will be automatically saved
+* [C] Option to either open or select the file in windows explorer
+* [C] Option to prompt for export file name or path
+* [C] Option to log  all comparison results
 * [C] Backup / restore functionality of current and comparison sram file
-* [C] Save S-RAM file with different game name 
+* [C] Save S-RAM file with different game name
 * [C] Settings are parameterized
 * [C] Config loading/saving (including custom configs)
-* [C] Auto loading config
-* [C] Key binding customization
+* [C] Option to auto load config
+* [C] Key binding customization 
 
 *) C = Supported by <a href=console-app>Windows Console App</a>, W = Supported by <a href=comparing>Web App</a>
 *) (O) = optional, (D) = default

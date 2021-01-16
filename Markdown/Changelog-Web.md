@@ -1,5 +1,8 @@
 ﻿## Changelog Web-App
 
+#### v006 (2021-01-16)
+* Improved savestate web comparison (removed requirement to save at the inn)
+
 #### v005 (2021-01-09)
 * added Web-Compare support for Snes9x savestates
 * Added savestate web comparison (still requires to save at the inn)

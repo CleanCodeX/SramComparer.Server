@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RosettaStone.Savestate.Snes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RosettaStone.Sram.SoE", "..\RosettaStone.Sram.SoE\RosettaStone.Sram.SoE.csproj", "{381A8523-2493-4F56-B2B6-6519076A5A7C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RosettaStone.Savestate.Snes9x.SoE", "..\RosettaStone.Savestate.Snes9x.SoE\RosettaStone.Savestate.Snes9x.SoE.csproj", "{322BCA21-DF86-40EC-A5C3-0755824D72ED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SramComparer.SoE.FileWatcher", "..\SramComparer.SoE.FileWatcher\SramComparer.SoE.FileWatcher.csproj", "{BFD322E0-05F6-45C5-BEEF-869C70A852FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +77,22 @@ Global
 		{381A8523-2493-4F56-B2B6-6519076A5A7C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{381A8523-2493-4F56-B2B6-6519076A5A7C}.Release|x86.ActiveCfg = Release|Any CPU
 		{381A8523-2493-4F56-B2B6-6519076A5A7C}.Release|x86.Build.0 = Release|Any CPU
+		{322BCA21-DF86-40EC-A5C3-0755824D72ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{322BCA21-DF86-40EC-A5C3-0755824D72ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{322BCA21-DF86-40EC-A5C3-0755824D72ED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{322BCA21-DF86-40EC-A5C3-0755824D72ED}.Debug|x86.Build.0 = Debug|Any CPU
+		{322BCA21-DF86-40EC-A5C3-0755824D72ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{322BCA21-DF86-40EC-A5C3-0755824D72ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{322BCA21-DF86-40EC-A5C3-0755824D72ED}.Release|x86.ActiveCfg = Release|Any CPU
+		{322BCA21-DF86-40EC-A5C3-0755824D72ED}.Release|x86.Build.0 = Release|Any CPU
+		{BFD322E0-05F6-45C5-BEEF-869C70A852FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFD322E0-05F6-45C5-BEEF-869C70A852FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFD322E0-05F6-45C5-BEEF-869C70A852FD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BFD322E0-05F6-45C5-BEEF-869C70A852FD}.Debug|x86.Build.0 = Debug|Any CPU
+		{BFD322E0-05F6-45C5-BEEF-869C70A852FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFD322E0-05F6-45C5-BEEF-869C70A852FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFD322E0-05F6-45C5-BEEF-869C70A852FD}.Release|x86.ActiveCfg = Release|Any CPU
+		{BFD322E0-05F6-45C5-BEEF-869C70A852FD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

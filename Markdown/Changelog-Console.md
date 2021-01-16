@@ -5,18 +5,21 @@ This application uses the latest .NET 5 runtime. Make sure you have it installed
 
 Hint: if download does not start, use rightclick - save target as
 
-#### v031 (2021-01-12) (Watchdog-Extension) (S-RAM Comparer embedded)
+#### v031 (2021-01-16) (watchdog extension included) 
 <a href="http://xeth.de/Releases/SramComparer/Comparer-SoE-031-Watchdog-x64.zip">Download (64bit)</a>
 <a href="http://xeth.de/Releases/SramComparer/Comparer-SoE-031-Watchdog-x86.zip">Download (32bit)</a>
-* Added support for watching current srm or savestate file for changes (still requires in-game saving)
+* Added support for watching current srm or savestate file for changes
 * Auto overwrites comparison file at start
-* Added option: auto-overwrite comparison file after comparison (default: true)
-* Added option: auto-export comparison result after comparison (default: false)
+* Added auto-overwrite option comparison file after comparison (default: true)
+* Added auto-export option comparison result after comparison (default: false)
+* Added option to either open or select the file in windows explorer
+* Added option to prompt for export file name
+* Added option to append every comparison to logfile
 
 #### v031 (2021-01-12)
 <a href="http://xeth.de/Releases/SramComparer/Comparer-SoE-031-x64.zip">Download (64bit)</a>
 <a href="http://xeth.de/Releases/SramComparer/Comparer-SoE-031-x86.zip">Download (32bit)</a>
-* Added support for Snes9x savestates (still requires in-game saving)
+* Added support for Snes9x savestates
 * Added savestate offset value display
 * Added config(s) loading/saving (support for custom config name)
 * Added key binding customization

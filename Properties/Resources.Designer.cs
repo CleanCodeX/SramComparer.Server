@@ -422,6 +422,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Evermore » Rosetta Stone « project ähnelt.
+        /// </summary>
+        public static string LabelIndexTitle {
+            get {
+                return ResourceManager.GetString("LabelIndexTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die known bytes ähnelt.
         /// </summary>
         public static string LabelKnownBytes {
@@ -494,7 +503,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Format Exploration Project ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Evermore «Rosetta Stone» Project ähnelt.
         /// </summary>
         public static string LabelTitleProjectName {
             get {
@@ -503,7 +512,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Format exploration status ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Exploration status ähnelt.
         /// </summary>
         public static string LabelTitleProjectStatus {
             get {
@@ -544,15 +553,6 @@ namespace WebApp.SoE.Properties {
         public static string LabelUnknownBytes {
             get {
                 return ResourceManager.GetString("LabelUnknownBytes", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Welcome to the Evermore Format Exploration Project! ähnelt.
-        /// </summary>
-        public static string LabelWelcomeMessage {
-            get {
-                return ResourceManager.GetString("LabelWelcomeMessage", resourceCulture);
             }
         }
         
@@ -827,7 +827,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die The Rosetta Stone document ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Rosetta Stone document ähnelt.
         /// </summary>
         public static string MenuTitleRosettaStone {
             get {
@@ -845,7 +845,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die What are the Unknowns to explore? ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die What are the Unknown areas to explore? ähnelt.
         /// </summary>
         public static string MenuTitleTheUnknowns {
             get {

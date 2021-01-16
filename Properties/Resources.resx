@@ -378,8 +378,8 @@
   <data name="MenuTitleOffsetEdit" xml:space="preserve">
     <value>Web offset edit</value>
   </data>
-  <data name="LabelWelcomeMessage" xml:space="preserve">
-    <value>Welcome to Evermore «Rosetta Stone» project.</value>
+  <data name="LabelIndexTitle" xml:space="preserve">
+    <value>Evermore » Rosetta Stone « project</value>
   </data>
   <data name="LabelTitleFile" xml:space="preserve">
     <value>Select either a S-RAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009; *.state)</value>
