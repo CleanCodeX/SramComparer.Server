@@ -1,5 +1,4 @@
-﻿@using WebApp.SoE.Helpers
-@inherits AutoLangContentIdMarkupBase
+﻿@inherits AutoLangContentIdMarkupBase
 
 <h2>@Res.LabelAppVersion</h2>
 
@@ -26,3 +25,7 @@ Web App: @AppInfoService.PackageVersion | <a href=changelog/web>@Res.LabelChange
 <div class="markup">
 	@Content.Replace("'", string.Empty)
 </div>
+
+<h7 title="@ResHidden.LabelTooltipSymbolsHint1">@ResHidden.LabelSymbolsHint1</h7>
+<br />
+<label class="hidden" title="@ResHidden.LabelTooltipSymbolsHint2">@ResHidden.LabelSymbolsHint2</label>

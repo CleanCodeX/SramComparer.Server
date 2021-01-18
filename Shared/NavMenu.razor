@@ -14,46 +14,46 @@
         <li class="nav-item quicklinks">
             <NavLink class="nav-link" title="@TooltipRandomizer.NextTooltip()">
                 @quickLinkOpener @sp
-                <a href="@PageUris.RosettaStone" title="@GetRes(nameof(Res.MenuTitleRosettaStone))">
+                <a href="@PageUris.RosettaStone" title="@GetRes(nameof(Res.MenuTooltipRosettaStone))">
                     <span class="iconify" data-icon="oi-document"/>
                 </a>
                 @del
-                <a href="@PageUris.Awesome" title="@GetRes(nameof(Res.MenuTitleAwesome))">
+                <a href="@PageUris.Awesome" title="@GetRes(nameof(Res.MenuTooltipAwesome))">
                     <span class="iconify" data-icon="oi-star"/>
                 </a>
                 @del
-                <a href="@PageUris.Community" title="@GetRes(nameof(Res.MenuTitleCommunity))">
+                <a href="@PageUris.Community" title="@GetRes(nameof(Res.MenuTooltipCommunity))">
                     <span class="iconify" data-icon="oi-people"/>
                 </a>
                 @del
-                <a href="@PageUris.Discord" target="_" title="@GetRes(nameof(Res.MenuTitleDiscord))">
+                <a href="@PageUris.Discord" target="_" title="@GetRes(nameof(Res.MenuTooltipDiscord))">
                     <img src="media/Discord.png" class="discord" />
                 </a>
                 @del
-                <a href="@PageUris.Sources" title="@GetRes(nameof(Res.MenuTitleSources))">
+                <a href="@PageUris.Sources" title="@GetRes(nameof(Res.MenuTooltipSources))">
                     <img src="media/GitHub.png" class="github" />
                 </a>
                 @sp @quickLinkCloser
             </NavLink>
             <NavLink class="nav-link" title="@TooltipRandomizer.NextTooltip()">
                 @quickLinkOpener @sp
-                <a href="@PageUris.Comparing" title="@GetRes(nameof(Res.MenuTitleCompare))">
+                <a href="@PageUris.Comparing" title="@GetRes(nameof(Res.MenuTooltipCompare))">
                     <span class="iconify" data-icon="oi-magnifying-glass"/>
                 </a>
                 @del
-                <a href="@PageUris.OffsetEditing" title="@GetRes(nameof(Res.MenuTitleOffsetEdit))">
+                <a href="@PageUris.OffsetEditing" title="@GetRes(nameof(Res.MenuTooltipOffsetEdit))">
                     <span class="iconify" data-icon="oi-pencil"/>
                 </a>
                 @del
-                <a href="@PageUris.ConsoleApp" title="@GetRes(nameof(Res.MenuTitleChangeLog))">
+                <a href="@PageUris.ConsoleApp" title="@GetRes(nameof(Res.MenuTooltipChangeLog))">
                     <span class="iconify" data-icon="oi-cloud-download"/>
                 </a>
                 @del
-                <a href="@PageUris.Imagery" title="@GetRes(nameof(Res.MenuTitleImagery))">
+                <a href="@PageUris.Imagery" title="@GetRes(nameof(Res.MenuTooltipImagery))">
                     <span class="iconify" data-icon="oi-image"/>
                 </a>
                 @del
-                <a href="@PageUris.Guides" title="@GetRes(nameof(Res.MenuTitleGuides))">
+                <a href="@PageUris.Guides" title="@GetRes(nameof(Res.MenuTooltipGuides))">
                     <span class="iconify" data-icon="oi-document"/>
                 </a>
                 @sp @quickLinkCloser
@@ -64,7 +64,7 @@
     <!-- S-RAM Format -->
     <ol class="nav flex-column firstRow" title="@TooltipRandomizer.NextTooltip()">
         <li class="nav-item px-3">
-            <a class="nav-link" href="@PageUris.Goals" title="@GetRes(nameof(Res.MenuTitleGoals))">
+            <a class="nav-link" href="@PageUris.Goals" title="@GetRes(nameof(Res.MenuTooltipGoals))">
                 <span class="@(_sramFormat ? "oi oi-zoom-out" : "oi oi-zoom-in")"/> 
                 <span class="oi oi-code"/> @Res.MenuSramFormat.ReplaceSpaces() 
             </a>
@@ -73,22 +73,22 @@
             {
                 <ol class="nav flex-column">
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Goals" title="@GetRes(nameof(Res.MenuTitleGoals))">
+                        <NavLink class="nav-link" href="@PageUris.Goals" title="@GetRes(nameof(Res.MenuTooltipGoals))">
                             <span class="oi oi-flag"/> @Res.MenuGoals.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Unknowns" title="@GetRes(nameof(Res.MenuTitleTheUnknowns))">
+                        <NavLink class="nav-link" href="@PageUris.Unknowns" title="@GetRes(nameof(Res.MenuTooltipTheUnknowns))">
                             <span class="oi oi-question-mark"/> @Res.MenuTheUnknowns.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Exploring" title="@GetRes(nameof(Res.MenuTitleExploring))">
+                        <NavLink class="nav-link" href="@PageUris.Exploring" title="@GetRes(nameof(Res.MenuTooltipExploring))">
                             <span class="oi oi-thumb-up"/> @Res.MenuExploring.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.RosettaStone" title="@GetRes(nameof(Res.MenuTitleRosettaStone))">
+                        <NavLink class="nav-link" href="@PageUris.RosettaStone" title="@GetRes(nameof(Res.MenuTooltipRosettaStone))">
                             <span class="oi oi-document"/> @Res.MenuRosettaStone.ReplaceSpaces()
                         </NavLink>
                     </li>
@@ -100,7 +100,7 @@
     <!-- S-RAM Comparison -->
     <ol class="nav flex-column" title="@TooltipRandomizer.NextTooltip()">
         <li class="nav-item px-3">
-            <a class="nav-link" href="@PageUris.Features" title="@GetRes(nameof(Res.MenuTitleFeatures))">
+            <a class="nav-link" href="@PageUris.Features" title="@GetRes(nameof(Res.MenuTooltipFeatures))">
                 <span class="@(_sramComparison ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
                 <span class="oi oi-eye"/> @Res.MenuSramComparison.ReplaceSpaces() 
             </a>
@@ -109,14 +109,14 @@
                 <ol class="nav flex-column">
                     <!-- Features -->
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Features" title="@GetRes(nameof(Res.MenuTitleFeatures))">
+                        <NavLink class="nav-link" href="@PageUris.Features" title="@GetRes(nameof(Res.MenuTooltipFeatures))">
                             <span class="oi oi-circle-check"/> @Res.MenuFeatures.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <!-- / Features -->
                     <!-- ConsoleApp -->
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="@PageUris.Imagery" title="@GetRes(nameof(Res.MenuTitleImagery))">
+                        <a class="nav-link" href="@PageUris.Imagery" title="@GetRes(nameof(Res.MenuTooltipImagery))">
                             <span class="@(_consoleApp ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
                             <span class="oi oi-command"/> @Res.MenuSramComparerCmdApp.ReplaceSpaces() 
                         </a>
@@ -124,17 +124,17 @@
                         {
                             <ol class="nav flex-column">
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.Imagery" title="@GetRes(nameof(Res.MenuTitleImagery))">
+                                    <NavLink class="nav-link" href="@PageUris.Imagery" title="@GetRes(nameof(Res.MenuTooltipImagery))">
                                         <span class="oi oi-image"/> @Res.MenuImagery.ReplaceSpaces()
                                     </NavLink>
                                 </li>
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.ChangelogConsole" title="@GetRes(nameof(Res.MenuTitleChangeLog))">
+                                    <NavLink class="nav-link" href="@PageUris.ChangelogConsole" title="@GetRes(nameof(Res.MenuTooltipChangeLog))">
                                         <span class="oi oi-arrow-circle-bottom"/> @Res.MenuChangeLog.ReplaceSpaces()
                                     </NavLink>
                                 </li>
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.Guides" title="@GetRes(nameof(Res.MenuTitleGuides))">
+                                    <NavLink class="nav-link" href="@PageUris.Guides" title="@GetRes(nameof(Res.MenuTooltipGuides))">
                                         <span class="oi oi-document"/> @Res.MenuGuides.ReplaceSpaces()
                                     </NavLink>
                                 </li>
@@ -144,7 +144,7 @@
                     <!-- / ConsoleApp -->
                     <!-- WebTools -->
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="@PageUris.Comparing" title="@GetRes(nameof(Res.MenuTitleCompare))">
+                        <a class="nav-link" href="@PageUris.Comparing" title="@GetRes(nameof(Res.MenuTooltipCompare))">
                             <span class="@(_webTools ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
                             <span class="oi oi-wrench" /> @Res.MenuWebTools.ReplaceSpaces() 
                         </a>
@@ -153,12 +153,12 @@
                         {
                             <ol class="nav flex-column">
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.Comparing" title="@GetRes(nameof(Res.MenuTitleCompare))">
+                                    <NavLink class="nav-link" href="@PageUris.Comparing" title="@GetRes(nameof(Res.MenuTooltipCompare))">
                                         <span class="oi oi-eye"/> @Res.MenuWebComparison.ReplaceSpaces()
                                     </NavLink>
                                 </li>
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.OffsetEditing" title="@GetRes(nameof(Res.MenuTitleOffsetEdit))">
+                                    <NavLink class="nav-link" href="@PageUris.OffsetEditing" title="@GetRes(nameof(Res.MenuTooltipOffsetEdit))">
                                         <span class="oi oi-pencil"/> @Res.MenuWebOffsetEdit.ReplaceSpaces()
                                     </NavLink>
                                 </li>
@@ -169,7 +169,7 @@
                 </ol>
                 <!-- Tutorials -->
                 <li class="nav-item px-3">
-                    <NavLink class="nav-link" href="@PageUris.Tutorials" title="@GetRes(nameof(Res.MenuTitleTutorials))">
+                    <NavLink class="nav-link" href="@PageUris.Tutorials" title="@GetRes(nameof(Res.MenuTooltipTutorials))">
                         <span class="oi oi-document"/> @Res.MenuTutorials.ReplaceSpaces()
                     </NavLink>
                 </li>
@@ -177,7 +177,7 @@
                 <!-- GitHub -->
                 <ol class="nav flex-column">
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Sources" title="@GetRes(nameof(Res.MenuTitleSources))">
+                        <NavLink class="nav-link" href="@PageUris.Sources" title="@GetRes(nameof(Res.MenuTooltipSources))">
                             <img src="media/Github.png" class="github" />@(sp)GitHub
                         </NavLink>
                     </li>
@@ -190,22 +190,22 @@
     <!-- Other -->
     <ol class="nav flex-column" title="@TooltipRandomizer.NextTooltip()">
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.Contributing" title="@GetRes(nameof(Res.MenuTitleContribute))">
+            <NavLink class="nav-link" href="@PageUris.Contributing" title="@GetRes(nameof(Res.MenuTooltipContribute))">
                 <span class="oi oi-heart"/> @Res.MenuContributing.ReplaceSpaces()
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.Community" title="@GetRes(nameof(Res.MenuTitleCommunity))">
+            <NavLink class="nav-link" href="@PageUris.Community" title="@GetRes(nameof(Res.MenuTooltipCommunity))">
                 <span class="oi oi-people"/> @Res.MenuCommunity.ReplaceSpaces()
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.Awesome" title="@GetRes(nameof(Res.MenuTitleAwesome))">
+            <NavLink class="nav-link" href="@PageUris.Awesome" title="@GetRes(nameof(Res.MenuTooltipAwesome))">
                 <span class="oi oi-star"/> @Res.MenuAwesomeSoE.ReplaceSpaces()
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.About" title="@GetRes(nameof(Res.MenuTitleAbout))">
+            <NavLink class="nav-link" href="@PageUris.About" title="@GetRes(nameof(Res.MenuTooltipAbout))">
                 <span class="oi oi-info"/> @Res.MenuAbout.ReplaceSpaces()
             </NavLink>
         </li>

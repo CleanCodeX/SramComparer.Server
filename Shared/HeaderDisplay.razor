@@ -1,4 +1,5 @@
 ﻿@using RosettaStone.Sram.SoE.Extensions
+
 <a href="/">
 	<img src="media/banner.png" class="header blur" title="@TooltipRandomizer.NextTooltip()" />
 </a>
@@ -7,7 +8,7 @@
 	<a href="@PageUris.RosettaStone">
 		<img src="media/project.png" class="blur" id="projectBanner" title="@GetTooltip()" />
 	</a>
-	<StatusDisplay />
+	<ExplorationStatusDisplay />
 </div>
 
 @code{
@@ -15,6 +16,6 @@
 	private readonly Random Random = new();
 
 	private string GetTooltip() => Random.NextInclusive(1, 5) == 1 
-		? "Wonder what these cryptic symbols mean? Let me know if you have any guess…"
+		? ResHidden.LabelTooltipCrypticSymbols /* 20% chance */
 		: TooltipRandomizer.NextTooltip();
 }

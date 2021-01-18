@@ -6,7 +6,7 @@ namespace WebApp.SoE.Helpers
 {
 	public static class TooltipRandomizer 
 	{
-		private const string TooltipFile = "wwwroot/SoE-Phrases.txt";
+		private const string TooltipFile = "wwwroot/Phrases.txt";
 		private const int IHaveSpokenWaitTimeInSeconds = 300;
 		private const int IHaveSpokenStateChanceMaxValue = 10;
 

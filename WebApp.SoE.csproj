@@ -28,7 +28,7 @@ Added savestate web offset value display
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CCX.SramComparer.SoE" Version="0.3.1-d7" />
+		<PackageReference Include="CCX.SramComparer.SoE" Version="0.3.1-e1" />
 		<PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.5.0" />
 		<PackageReference Include="Westwind.AspNetCore.LiveReload" Version="0.3.1" />
 	</ItemGroup>
@@ -39,14 +39,24 @@ Added savestate web offset value display
 	</ItemGroup>
 
 	<ItemGroup>
+		<Compile Update="Properties\Hidden\Resources.Designer.cs">
+		  <DependentUpon>Resources.resx</DependentUpon>
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		</Compile>
 		<Compile Update="Properties\Resources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Resources.resx</DependentUpon>
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>Resources.resx</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Hidden\Resources.resx">
+	    <SubType>Designer</SubType>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	    <Generator>PublicResXFileCodeGenerator</Generator>
+	  </EmbeddedResource>
 	  <EmbeddedResource Update="Properties\Resources.resx">
 	    <Generator>PublicResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
