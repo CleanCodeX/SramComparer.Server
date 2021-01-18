@@ -1,0 +1,29 @@
+﻿<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="LabelTooltipCrypticSymbols" xml:space="preserve">
+		<value>Aimez-vous les énigmes? Savez-vous ce que signifient ces symboles cryptiques? Aucune idée? Il y a un "petit" indice sur l'une des pages Web. Si vous avez trouvé la réponse, envoyez-moi un e-mail avec votre pseudo. Je vous ajouterai à la liste des démêleurs.</value>
+	</data>
+	<data name="LabelSymbolsHint2" xml:space="preserve">
+		<value>Mêmes symboles ≙ mêmes lettres…</value>
+	</data>
+	<data name="LabelTooltipSymbolsHint2" xml:space="preserve">
+		<value>Euh, c'est chaud! Vous avez potentiellement trouvé le premier indice "caché"!</value>
+	</data>
+	<data name="LabelTooltipSymbolsHint1" xml:space="preserve">
+		<value>Ou peut-être que c'est?</value>
+	</data>
+	<data name="LabelSymbolsHint1" xml:space="preserve">
+		<value>Il n'y a définitivement rien ici ...</value>
+	</data>
+</root>

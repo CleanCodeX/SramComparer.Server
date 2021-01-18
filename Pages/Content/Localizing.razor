@@ -13,7 +13,7 @@
 <p>
 	<div>
 		<button class="@_buttonStyle" @onclick="@(InvertShowTranslation)">@($"[{_language}]") @_buttonCaption</button>
-		<ClipboardCopy OnCopyAsync="@GetCopyTextAsync" title="@Res.ButtonTitleCopyLocalization" />
+		<ClipboardCopy OnCopyAsync="@GetCopyTextAsync" title="@Res.ButtonTooltipCopyLocalization" />
 	</div>
 
 	@if (_showLocalization && _localization.HasValue)

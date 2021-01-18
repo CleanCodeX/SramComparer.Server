@@ -4,7 +4,7 @@
 	@{
 		var caption = Value ? Res.ButtonOn : Res.ButtonOff;
 		var buttonClass = Value ? "btn btn-secondary" : "btn btn-dark";
-		var buttonTitle = Value ? Res.ButtonTitleDisableAutoTranslation : Res.ButtonTitleEnableAutoTranslation;
+		var buttonTitle = Value ? Res.ButtonTooltipDisableAutoTranslation : Res.ButtonTooltipEnableAutoTranslation;
 	}
 
 	<button class="@buttonClass" @onclick="@ToggleAutoTranslateAsync" title="@GetRes(buttonTitle, 20)">@caption</button>

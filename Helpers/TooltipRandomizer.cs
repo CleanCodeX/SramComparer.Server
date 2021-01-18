@@ -6,13 +6,13 @@ namespace WebApp.SoE.Helpers
 {
 	public static class TooltipRandomizer 
 	{
-		private const string TooltipFile = "wwwroot/Tooltips.txt";
+		private const string TooltipFile = "wwwroot/SoE-Phrases.txt";
 		private const int IHaveSpokenWaitTimeInSeconds = 300;
 		private const int IHaveSpokenStateChanceMaxValue = 10;
 
 		private static readonly Random Random = new();
-		private static List<string> Tooltips = new();
-		private static object LockObj;
+		private static readonly List<string> Tooltips = new();
+		private static readonly object LockObj;
 		private static int ListCount;
 
 		[ThreadStatic]
@@ -40,17 +40,17 @@ namespace WebApp.SoE.Helpers
 
 				try
 				{
-					if (File.Exists(TooltipFile))
-					{
-						var lines = File.ReadAllLines(TooltipFile);
-						if (ListCount > 0) return;
+					if (!File.Exists(TooltipFile)) return;
 
-						Tooltips.AddRange(lines);
-						ListCount = lines.Length;
-					}
+					var lines = File.ReadAllLines(TooltipFile);
+					if (ListCount > 0) return;
+
+					Tooltips.AddRange(lines);
+					ListCount = lines.Length;
 				}
 				catch
 				{
+					// We don't care
 				}
 			}
 		}
@@ -68,11 +68,9 @@ namespace WebApp.SoE.Helpers
 				{
 					if ((DateTimeOffset.Now - lastLockedAt).TotalSeconds <= IHaveSpokenWaitTimeInSeconds)
 						return Template(GetFromIndex(lastLockedIndex));
-					else
-					{
-						lastLockedAt = default;
-						lastLockedIndex = -1;
-					}
+
+					lastLockedAt = default;
+					lastLockedIndex = -1;
 				}
 
 				var tooltip = GetFromIndex(index);
@@ -95,6 +93,6 @@ namespace WebApp.SoE.Helpers
 
 		private static string GetFromIndex(int index) => Tooltips[index];
 		private static int FindIndex(string text) => Tooltips.IndexOf(text);
-		private static string Template(string text) => $"»{text}«";
+		private static string Template(string text) => text != string.Empty ? $"»{text}«" : text;
 	}
 }

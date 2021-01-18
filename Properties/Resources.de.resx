@@ -17,7 +17,7 @@
 	<data name="EnumComparedSaveSlots" xml:space="preserve">
 		<value>Verglichene Speicherslots</value>
 	</data>
-	<data name="ButtonTitleCompare" xml:space="preserve">
+	<data name="ButtonTooltipCompare" xml:space="preserve">
 		<value>Vergleiche S-RAM-Dateien</value>
 	</data>
 	<data name="EnumDontShow" xml:space="preserve">
@@ -38,13 +38,13 @@
 	<data name="LabelMandatory" xml:space="preserve">
 		<value>Pflichtfeld</value>
 	</data>
-	<data name="LabelTitleNonSaveSlotByteByByteComparison" xml:space="preserve">
+	<data name="LabelTooltipNonSaveSlotByteComparison" xml:space="preserve">
 		<value>Gesamten nicht-Speicherslot Byte für Byte vergleichen (Bereich jenseits aller Speicherslots)</value>
 	</data>
 	<data name="LabelShowAdditionalSaveSlotInformation" xml:space="preserve">
 		<value>Zusätzliche Speicherslot-Informationen anzeigen</value>
 	</data>
-	<data name="LabelTitleUnknown12B" xml:space="preserve">
+	<data name="LabelTooltipUnknown12B" xml:space="preserve">
 		<value>Dieser Wert ändert sich bei jedem In-game Speichern - vielleicht ein Zeitstempel oder ähnliches</value>
 	</data>
 	<data name="LabelColorizeOutput" xml:space="preserve">
@@ -53,7 +53,7 @@
 	<data name="MenuWebComparison" xml:space="preserve">
 		<value>Vergleichen</value>
 	</data>
-	<data name="LabelTitleSaveSlotByteByByteComparison" xml:space="preserve">
+	<data name="LabelTooltipSaveSlotByteComparison" xml:space="preserve">
 		<value>Gesamten Speicherslot Byte für Byte vergleichen (inkl. der "bekannten" Bereiche)</value>
 	</data>
 	<data name="LabelOffsetValue" xml:space="preserve">
@@ -80,13 +80,13 @@
 	<data name="AlertDownloadConfirmationFileTemplate" xml:space="preserve">
 		<value>Datei '{0}' herunterladen?</value>
 	</data>
-	<data name="ButtonTitleGetOffsetValue" xml:space="preserve">
+	<data name="ButtonTooltipGetOffsetValue" xml:space="preserve">
 		<value>Lade einen Offset-Wert</value><comment>The term Offset should only be translated if not understandable</comment>
 	</data>
-	<data name="ButtonTitleSetOffsetValue" xml:space="preserve">
+	<data name="ButtonTooltipSetOffsetValue" xml:space="preserve">
 		<value>Setze einen Offset-Wert</value><comment>The term Offset should only be translated if not understandable</comment>
 	</data>
-	<data name="ButtonTitleDownloadChangedFile" xml:space="preserve">
+	<data name="ButtonTooltipDownloadChangedFile" xml:space="preserve">
 		<value>Geänderte Datei herunterladen</value>
 	</data>
 	<data name="MenuChangeLog" xml:space="preserve">
@@ -101,13 +101,13 @@
 	<data name="ButtonDownloadFile" xml:space="preserve">
     <value>Herunterladen</value>
   </data>
-	<data name="ButtonTitleDownloadFile" xml:space="preserve">
+	<data name="ButtonTooltipDownloadFile" xml:space="preserve">
     <value>Als Text-Datei herunterladen</value>
   </data>
 	<data name="LabelAppVersion" xml:space="preserve">
 		<value>Version</value>
 	</data>
-	<data name="ButtonTitleCopy" xml:space="preserve">
+	<data name="ButtonTooltipCopy" xml:space="preserve">
 		<value>Text in Zwischenablage kopieren</value>
 	</data>
 	<data name="ButtonGetValue" xml:space="preserve">
@@ -149,7 +149,7 @@
 	<data name="MenuRosettaStone" xml:space="preserve">
 		<value>Rosetta-Sten</value>
 	</data>
-	<data name="MenuTitleAwesome" xml:space="preserve">
+	<data name="MenuTooltipAwesome" xml:space="preserve">
 		<value>Awesome Seiten für ein awesome Spiel</value>
 	</data>
 	<data name="MenuExploring" xml:space="preserve">
@@ -176,13 +176,13 @@
 	<data name="LabelUnknownBytes" xml:space="preserve">
 		<value>unbekannte Bytes</value>
 	</data>
-	<data name="LabelTitleProjectStatus" xml:space="preserve">
+	<data name="LabelTooltipProjectStatus" xml:space="preserve">
 		<value>Entdeckungs-Status</value>
 	</data>
-	<data name="MenuTitleAbout" xml:space="preserve">
+	<data name="MenuTooltipAbout" xml:space="preserve">
 		<value>Versionsangaben und Beitragende</value>
 	</data>
-	<data name="LabelTitleProjectName" xml:space="preserve">
+	<data name="LabelTooltipProjectName" xml:space="preserve">
 		<value>Evermore «Rosetta Stone»-Projekt</value>
 	</data>
 	<data name="MenuAbout" xml:space="preserve">
@@ -194,31 +194,31 @@
 	<data name="LabelFile" xml:space="preserve">
 		<value>Datei</value>
 	</data>
-	<data name="LabelTitleSaveSlotOffset" xml:space="preserve">
+	<data name="LabelTooltipSaveSlotOffset" xml:space="preserve">
 		<value>Das relative Offset innerhalb des Speicherslot-Bereichs</value>
 	</data>
 	<data name="EnumComparedSaveSlotsIfDifferent" xml:space="preserve">
 		<value>Verglichene Speicherslots falls unterschiedlich</value>
 	</data>
-	<data name="MenuTitleCommunity" xml:space="preserve">
+	<data name="MenuTooltipCommunity" xml:space="preserve">
 		<value>Community (Discord, Forum, etc.)</value>
 	</data>
-	<data name="MenuTitleChangeLog" xml:space="preserve">
+	<data name="MenuTooltipChangeLog" xml:space="preserve">
 		<value>Changelog und download der Konsolen-Anwendung</value>
 	</data>
-	<data name="MenuTitleRosettaStone" xml:space="preserve">
+	<data name="MenuTooltipRosettaStone" xml:space="preserve">
 		<value>Rosetta-Stein-Dokument</value>
 	</data>
-	<data name="MenuTitleSources" xml:space="preserve">
+	<data name="MenuTooltipSources" xml:space="preserve">
 		<value>Quellcodes auf GitHub</value>
 	</data>
-	<data name="MenuTitleImagery" xml:space="preserve">
+	<data name="MenuTooltipImagery" xml:space="preserve">
 		<value>Bilder der Konsolen-Anwendung</value>
 	</data>
-	<data name="MenuTitleGuides" xml:space="preserve">
+	<data name="MenuTooltipGuides" xml:space="preserve">
 		<value>Anleitungen der Konsolen-Anwendung</value>
 	</data>
-	<data name="MenuTitleDiscord" xml:space="preserve">
+	<data name="MenuTooltipDiscord" xml:space="preserve">
 		<value>Öffnet Discord-Einladung</value>
 	</data>
 	<data name="EnumAllSaveSlots" xml:space="preserve">
@@ -227,10 +227,10 @@
 	<data name="LabelAutoTranslate" xml:space="preserve">
 		<value>Auto-Übersetzung</value>
 	</data>
-	<data name="ButtonTitleDisableAutoTranslation" xml:space="preserve">
+	<data name="ButtonTooltipDisableAutoTranslation" xml:space="preserve">
 		<value>Auto-Übersetzung deaktivieren</value>
 	</data>
-	<data name="ButtonTitleEnableAutoTranslation" xml:space="preserve">
+	<data name="ButtonTooltipEnableAutoTranslation" xml:space="preserve">
 		<value>Auto-Übersetzung aktivieren</value>
 	</data>
 	<data name="ButtonOn" xml:space="preserve">
@@ -245,37 +245,37 @@
 	<data name="ButtonHideLocalization" xml:space="preserve">
 		<value>Lokalisierung ausblenden</value>
 	</data>
-	<data name="ButtonTitleCopyLocalization" xml:space="preserve">
+	<data name="ButtonTooltipCopyLocalization" xml:space="preserve">
 		<value>Die Lokalisierung in die Zwischen ablage kopieren</value>
 	</data>
 	<data name="MenuGuides" xml:space="preserve">
 		<value>Anleitungen</value>
 	</data>
-	<data name="MenuTitleExploring" xml:space="preserve">
+	<data name="MenuTooltipExploring" xml:space="preserve">
 		<value>Wie das S-RAM erkundet wird</value>
 	</data>
-	<data name="MenuTitleFeatures" xml:space="preserve">
+	<data name="MenuTooltipFeatures" xml:space="preserve">
 		<value>Features von S-RAM-Comparer</value>
 	</data>
-	<data name="MenuTitleContribute" xml:space="preserve">
+	<data name="MenuTooltipContribute" xml:space="preserve">
 		<value>Wie man zum Projekt beitragen kann</value>
 	</data>
-	<data name="MenuTitleTheUnknowns" xml:space="preserve">
+	<data name="MenuTooltipTheUnknowns" xml:space="preserve">
 		<value>Welche unbekannten Bereiche gilt es zu erforschen?</value>
 	</data>
-	<data name="MenuTitleGoals" xml:space="preserve">
+	<data name="MenuTooltipGoals" xml:space="preserve">
 		<value>Das Ziel dieses Projektes</value>
 	</data>
-	<data name="MenuTitleOffsetEdit" xml:space="preserve">
+	<data name="MenuTooltipOffsetEdit" xml:space="preserve">
 		<value>Web Offset-Änderung</value>
 	</data>
-	<data name="MenuTitleCompare" xml:space="preserve">
+	<data name="MenuTooltipCompare" xml:space="preserve">
 		<value>Web-Vergleich von S-RAM-Dateien</value>
 	</data>
 	<data name="LabelIndexTitle" xml:space="preserve">
 		<value>Evermore » Rosetta Stone « Projekt</value>
 	</data>
-	<data name="LabelTitleFile" xml:space="preserve">
+	<data name="LabelTooltipFile" xml:space="preserve">
 		<value>Wähle entweder eine S-RAM- (*.srm, *.comp) or Snes9x Savestate- Datei (*.000 - *.009; *.state)</value>
 	</data>
 	<data name="ErrorWrongFileExtensionTemplate" xml:space="preserve">
@@ -287,7 +287,7 @@
 	<data name="SaveSlot" xml:space="preserve">
 		<value>Speicherslot</value>
 	</data>
-	<data name="MenuTitleTutorials" xml:space="preserve">
+	<data name="MenuTooltipTutorials" xml:space="preserve">
 		<value>Tutorials von Beispiel-Vergleichen</value>
 	</data>
 	<data name="MenuTutorials" xml:space="preserve">

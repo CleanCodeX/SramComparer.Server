@@ -18,11 +18,11 @@
 			<p />
 
 			<tr>
-				<td colspan="2"><label class="header" title="@Res.LabelTitleFile">@ResComp.EnumCurrentFile (*.srm|*.00x|*.state)</label></td>
+				<td colspan="2"><label class="header" title="@Res.LabelTooltipFile">@ResComp.EnumCurrentFile (*.srm|*.00x|*.state)</label></td>
 			</tr>
 			<tr>
-				<td><label title="@Res.LabelTitleFile">@Res.LabelFile:@Ns</label>*)</td>
-				<td><InputFile OnChange="@OnCurrentFileChange" style=@ButtonStyle title="@Res.LabelTitleFile" /></td>
+				<td><label title="@Res.LabelTooltipFile">@Res.LabelFile:@Ns</label>*)</td>
+				<td><InputFile OnChange="@OnCurrentFileChange" style=@ButtonStyle title="@Res.LabelTooltipFile" /></td>
 			</tr>
 			<tr>
 				<td><label>@Res.SaveSlot:@Ns</label></td>
@@ -35,10 +35,10 @@
 				<td><label class="header">@ResComp.CompOffset</label></td>
 			</tr>
 			<tr>
-				<td><label title="@Res.LabelTitleSaveSlotOffset">@Res.SaveSlotOffset:@Ns</label>*)</td>
+				<td><label title="@Res.LabelTooltipSaveSlotOffset">@Res.SaveSlotOffset:@Ns</label>*)</td>
 				<td>
-					<input type="number" @bind="@ViewModel.OffsetAddress" maxLength="4" title="@Res.LabelTitleSaveSlotOffset" />
-					<button class="btn btn-primary" @onclick="@ViewModel.GetOffsetValueAsync" disabled="@(!ViewModel.CanGet)" title="@Res.ButtonTitleGetOffsetValue">
+					<input type="number" @bind="@ViewModel.OffsetAddress" maxLength="4" title="@Res.LabelTooltipSaveSlotOffset" />
+					<button class="btn btn-primary" @onclick="@ViewModel.GetOffsetValueAsync" disabled="@(!ViewModel.CanGet)" title="@Res.ButtonTooltipGetOffsetValue">
 						<span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" />
 					</button>
 				</td>
@@ -47,7 +47,7 @@
 				<td><label>@Res.LabelOffsetValue:@Ns</label></td>
 				<td>
 					<input type="number" @bind="@ViewModel.OffsetValue" maxLength="3" />
-					<button class="btn btn-primary" @onclick="@ViewModel.SetOffsetValueAsync" disabled="@(!ViewModel.CanSet)" title="@Res.ButtonTitleSetOffsetValue">
+					<button class="btn btn-primary" @onclick="@ViewModel.SetOffsetValueAsync" disabled="@(!ViewModel.CanSet)" title="@Res.ButtonTooltipSetOffsetValue">
 						<span class="iconify" data-icon="oi-pencil" data-inline="false" />
 					</button>
 				</td>
@@ -63,7 +63,7 @@
 			
 			<tr>
 				<td>
-					<button class="btn btn-primary" @onclick="@ViewModel.SaveAndDownloadAsync" disabled="@SaveButtonDisabled" title="@Res.ButtonTitleDownloadChangedFile">
+					<button class="btn btn-primary" @onclick="@ViewModel.SaveAndDownloadAsync" disabled="@SaveButtonDisabled" title="@Res.ButtonTooltipDownloadChangedFile">
 						<span class="iconify" data-icon="oi-cloud-download" data-inline="false" />
 					</button>
 				</td>

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using RosettaStone.Sram.SoE.Constants;
 using RosettaStone.Sram.SoE.Models;
-using SramComparer.SoE.Extensions;
+using SramCommons.Extensions;
 using WebApp.SoE.Extensions;
 using WebApp.SoE.Shared.Enums;
 using Snes9x = RosettaStone.Savestate.Snes9x.SoE.Extensions.StreamExtensions;
@@ -86,7 +86,7 @@ namespace WebApp.SoE.ViewModels.Bases
 			var fileExtension = Path.GetExtension(filePath).ToLower();
 			if (fileExtension == ".srm") return stream;
 
-			var result = Snes9x.GetSramFromSavestate(stream)!.GetStreamSlice(SramSizes.Sram);
+			var result = Snes9x.GetSramFromSavestate(stream)!.GetSlice(SramSizes.All);
 
 			IsSavestate = true;
 

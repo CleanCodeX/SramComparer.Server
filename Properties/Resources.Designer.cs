@@ -153,81 +153,81 @@ namespace WebApp.SoE.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Compare S-RAM files ähnelt.
         /// </summary>
-        public static string ButtonTitleCompare {
+        public static string ButtonTooltipCompare {
             get {
-                return ResourceManager.GetString("ButtonTitleCompare", resourceCulture);
+                return ResourceManager.GetString("ButtonTooltipCompare", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Copy text to clipboard ähnelt.
         /// </summary>
-        public static string ButtonTitleCopy {
+        public static string ButtonTooltipCopy {
             get {
-                return ResourceManager.GetString("ButtonTitleCopy", resourceCulture);
+                return ResourceManager.GetString("ButtonTooltipCopy", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Copy localization to clipboard ähnelt.
         /// </summary>
-        public static string ButtonTitleCopyLocalization {
+        public static string ButtonTooltipCopyLocalization {
             get {
-                return ResourceManager.GetString("ButtonTitleCopyLocalization", resourceCulture);
+                return ResourceManager.GetString("ButtonTooltipCopyLocalization", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Disable auto-translate ähnelt.
         /// </summary>
-        public static string ButtonTitleDisableAutoTranslation {
+        public static string ButtonTooltipDisableAutoTranslation {
             get {
-                return ResourceManager.GetString("ButtonTitleDisableAutoTranslation", resourceCulture);
+                return ResourceManager.GetString("ButtonTooltipDisableAutoTranslation", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Download changed file ähnelt.
         /// </summary>
-        public static string ButtonTitleDownloadChangedFile {
+        public static string ButtonTooltipDownloadChangedFile {
             get {
-                return ResourceManager.GetString("ButtonTitleDownloadChangedFile", resourceCulture);
+                return ResourceManager.GetString("ButtonTooltipDownloadChangedFile", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Download as text file ähnelt.
         /// </summary>
-        public static string ButtonTitleDownloadFile {
+        public static string ButtonTooltipDownloadFile {
             get {
-                return ResourceManager.GetString("ButtonTitleDownloadFile", resourceCulture);
+                return ResourceManager.GetString("ButtonTooltipDownloadFile", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Enable auto-translate ähnelt.
         /// </summary>
-        public static string ButtonTitleEnableAutoTranslation {
+        public static string ButtonTooltipEnableAutoTranslation {
             get {
-                return ResourceManager.GetString("ButtonTitleEnableAutoTranslation", resourceCulture);
+                return ResourceManager.GetString("ButtonTooltipEnableAutoTranslation", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Get offset value ähnelt.
         /// </summary>
-        public static string ButtonTitleGetOffsetValue {
+        public static string ButtonTooltipGetOffsetValue {
             get {
-                return ResourceManager.GetString("ButtonTitleGetOffsetValue", resourceCulture);
+                return ResourceManager.GetString("ButtonTooltipGetOffsetValue", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Set offset value ähnelt.
         /// </summary>
-        public static string ButtonTitleSetOffsetValue {
+        public static string ButtonTooltipSetOffsetValue {
             get {
-                return ResourceManager.GetString("ButtonTitleSetOffsetValue", resourceCulture);
+                return ResourceManager.GetString("ButtonTooltipSetOffsetValue", resourceCulture);
             }
         }
         
@@ -487,63 +487,63 @@ namespace WebApp.SoE.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Select either a S-RAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009; *.state) ähnelt.
         /// </summary>
-        public static string LabelTitleFile {
+        public static string LabelTooltipFile {
             get {
-                return ResourceManager.GetString("LabelTitleFile", resourceCulture);
+                return ResourceManager.GetString("LabelTooltipFile", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Compare non-save slot area byte by byte (area beyond all save slots) ähnelt.
         /// </summary>
-        public static string LabelTitleNonSaveSlotByteByByteComparison {
+        public static string LabelTooltipNonSaveSlotByteComparison {
             get {
-                return ResourceManager.GetString("LabelTitleNonSaveSlotByteByByteComparison", resourceCulture);
+                return ResourceManager.GetString("LabelTooltipNonSaveSlotByteComparison", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Evermore «Rosetta Stone» Project ähnelt.
         /// </summary>
-        public static string LabelTitleProjectName {
+        public static string LabelTooltipProjectName {
             get {
-                return ResourceManager.GetString("LabelTitleProjectName", resourceCulture);
+                return ResourceManager.GetString("LabelTooltipProjectName", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Exploration status ähnelt.
         /// </summary>
-        public static string LabelTitleProjectStatus {
+        public static string LabelTooltipProjectStatus {
             get {
-                return ResourceManager.GetString("LabelTitleProjectStatus", resourceCulture);
+                return ResourceManager.GetString("LabelTooltipProjectStatus", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Compare whole save slot area byte by byte (including the &quot;knowns&quot; areas) ähnelt.
         /// </summary>
-        public static string LabelTitleSaveSlotByteByByteComparison {
+        public static string LabelTooltipSaveSlotByteComparison {
             get {
-                return ResourceManager.GetString("LabelTitleSaveSlotByteByByteComparison", resourceCulture);
+                return ResourceManager.GetString("LabelTooltipSaveSlotByteComparison", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die The relative offset within the gameslot area ähnelt.
         /// </summary>
-        public static string LabelTitleSaveSlotOffset {
+        public static string LabelTooltipSaveSlotOffset {
             get {
-                return ResourceManager.GetString("LabelTitleSaveSlotOffset", resourceCulture);
+                return ResourceManager.GetString("LabelTooltipSaveSlotOffset", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die This value changes at every in-game save - maybe a timestamp or similar ähnelt.
         /// </summary>
-        public static string LabelTitleUnknown12B {
+        public static string LabelTooltipUnknown12B {
             get {
-                return ResourceManager.GetString("LabelTitleUnknown12B", resourceCulture);
+                return ResourceManager.GetString("LabelTooltipUnknown12B", resourceCulture);
             }
         }
         
@@ -712,153 +712,153 @@ namespace WebApp.SoE.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Version infos and contributors ähnelt.
         /// </summary>
-        public static string MenuTitleAbout {
+        public static string MenuTooltipAbout {
             get {
-                return ResourceManager.GetString("MenuTitleAbout", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipAbout", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Awesome pages for an awesome game ähnelt.
         /// </summary>
-        public static string MenuTitleAwesome {
+        public static string MenuTooltipAwesome {
             get {
-                return ResourceManager.GetString("MenuTitleAwesome", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipAwesome", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Console App changelog and downloads ähnelt.
         /// </summary>
-        public static string MenuTitleChangeLog {
+        public static string MenuTooltipChangeLog {
             get {
-                return ResourceManager.GetString("MenuTitleChangeLog", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipChangeLog", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Community (Discord, Forum, etc.) ähnelt.
         /// </summary>
-        public static string MenuTitleCommunity {
+        public static string MenuTooltipCommunity {
             get {
-                return ResourceManager.GetString("MenuTitleCommunity", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipCommunity", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Web compare of S-RAM files ähnelt.
         /// </summary>
-        public static string MenuTitleCompare {
+        public static string MenuTooltipCompare {
             get {
-                return ResourceManager.GetString("MenuTitleCompare", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipCompare", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die How to contribute to the project ähnelt.
         /// </summary>
-        public static string MenuTitleContribute {
+        public static string MenuTooltipContribute {
             get {
-                return ResourceManager.GetString("MenuTitleContribute", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipContribute", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Open Discord invite ähnelt.
         /// </summary>
-        public static string MenuTitleDiscord {
+        public static string MenuTooltipDiscord {
             get {
-                return ResourceManager.GetString("MenuTitleDiscord", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipDiscord", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die How to explore the S-RAM ähnelt.
         /// </summary>
-        public static string MenuTitleExploring {
+        public static string MenuTooltipExploring {
             get {
-                return ResourceManager.GetString("MenuTitleExploring", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipExploring", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Features of S-RAM-Comparer ähnelt.
         /// </summary>
-        public static string MenuTitleFeatures {
+        public static string MenuTooltipFeatures {
             get {
-                return ResourceManager.GetString("MenuTitleFeatures", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipFeatures", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die The goals of this project ähnelt.
         /// </summary>
-        public static string MenuTitleGoals {
+        public static string MenuTooltipGoals {
             get {
-                return ResourceManager.GetString("MenuTitleGoals", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipGoals", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Console App Guides ähnelt.
         /// </summary>
-        public static string MenuTitleGuides {
+        public static string MenuTooltipGuides {
             get {
-                return ResourceManager.GetString("MenuTitleGuides", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipGuides", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Console App Imagery ähnelt.
         /// </summary>
-        public static string MenuTitleImagery {
+        public static string MenuTooltipImagery {
             get {
-                return ResourceManager.GetString("MenuTitleImagery", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipImagery", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Web offset edit ähnelt.
         /// </summary>
-        public static string MenuTitleOffsetEdit {
+        public static string MenuTooltipOffsetEdit {
             get {
-                return ResourceManager.GetString("MenuTitleOffsetEdit", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipOffsetEdit", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Rosetta Stone document ähnelt.
         /// </summary>
-        public static string MenuTitleRosettaStone {
+        public static string MenuTooltipRosettaStone {
             get {
-                return ResourceManager.GetString("MenuTitleRosettaStone", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipRosettaStone", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Sources at GitHub ähnelt.
         /// </summary>
-        public static string MenuTitleSources {
+        public static string MenuTooltipSources {
             get {
-                return ResourceManager.GetString("MenuTitleSources", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipSources", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die What are the Unknown areas to explore? ähnelt.
         /// </summary>
-        public static string MenuTitleTheUnknowns {
+        public static string MenuTooltipTheUnknowns {
             get {
-                return ResourceManager.GetString("MenuTitleTheUnknowns", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipTheUnknowns", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Tutorials of example comparisons ähnelt.
         /// </summary>
-        public static string MenuTitleTutorials {
+        public static string MenuTooltipTutorials {
             get {
-                return ResourceManager.GetString("MenuTitleTutorials", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipTutorials", resourceCulture);
             }
         }
         
