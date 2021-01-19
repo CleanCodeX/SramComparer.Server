@@ -5,7 +5,7 @@ If you're unsure what this term means, there is an explanation in the <a href=gl
 
 The S-RAM-file can be read and manipulated, too. So far so good.
 
-The only problem with this is that aprox. 54% of SoE's S-RAM save slot format is still considered to be unknown, meaning that we don't really know what meaning these areas of S-RAM actually have.
+The only problem with this is that a bigger area SoE's S-RAM save slot format is still considered to be unknown, meaning that we don't really know what meaning these areas of S-RAM actually have.
 
 ### The Unknowns
 An explanation of what unknowns are can be found in the <a href=glossary>glossary</a>.

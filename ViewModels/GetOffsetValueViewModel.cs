@@ -27,13 +27,28 @@ namespace WebApp.SoE.ViewModels
 		protected internal override async Task LoadOptionsAsync()
 		{
 			await base.LoadOptionsAsync();
-			OffsetAddress = (await LocalStorage.GetAsync<int>(StorageKey)).Value;
+			try
+			{
+				OffsetAddress = (await LocalStorage.GetAsync<int>(StorageKey)).Value;
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex);
+			}
 		}
 
 		protected internal override async Task SaveOptionsAsync()
 		{
 			await base.SaveOptionsAsync();
-			await LocalStorage.SetAsync(StorageKey, OffsetAddress);
+
+			try
+			{
+				await LocalStorage.SetAsync(StorageKey, OffsetAddress);
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex);
+			}
 		}
 
 		public override async Task SetCurrentFileAsync(IBrowserFile file)

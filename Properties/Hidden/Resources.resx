@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="LabelTooltipCrypticSymbols" xml:space="preserve">
-    <value>Do you like riddles? Do you know what these cryptic symbols mean? No clue? There's a "small" hint on one of the web pages. If you'Ve found the answer, send me an e-Mail with your nickname. I'll add you to the list of unravelers.</value>
+    <value>Do you like riddles? Do you know what these cryptic symbols mean? No clue? There's a "small" hint on one of the web pages. If you've found the answer, send me an e-Mail with your nickname. I'll add you to a internal list of unravelers.</value>
   </data>
   <data name="LabelSymbolsHint2" xml:space="preserve">
-    <value>Same symbols ≙ same letters…</value>
+    <value>The same symbols mean the same letters. That was easy! Wasn't it? No?! Well… maybe you should try a few fonts…</value>
   </data>
   <data name="LabelTooltipSymbolsHint2" xml:space="preserve">
-    <value>Uhm here's hot! You've potentially found the first "hidden" hint!</value>
+    <value>Uh it's really hot here! You found the "hidden" clue! At least potentially…</value>
   </data>
   <data name="LabelTooltipSymbolsHint1" xml:space="preserve">
     <value>Or maybe it is?</value>

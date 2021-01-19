@@ -12,13 +12,13 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="LabelTooltipCrypticSymbols" xml:space="preserve">
-		<value>Magst du Rätsel? Weist du was diese kryptischen Symbole bedeuten? Kein Plan? Es gibt einen "kleinen" Hinweis auf einer der Seiten hier. Falls du die Lösung gefunden hast, sende mir eine E-Mail mit deinem Nick. Ich füge dich zur Enträseler-Liste hinzu.</value>
+		<value>Magst du Rätsel? Weist du was diese kryptischen Symbole bedeuten? Keinen Plan? Es gibt einen "kleinen" Hinweis auf einer der Seiten hier. Falls du die Lösung gefunden hast, sende mir eine E-Mail mit deinem Nick. Ich füge dich zur internen Enträtseler-Liste hinzu.</value>
 	</data>
 	<data name="LabelSymbolsHint2" xml:space="preserve">
-		<value>Gleiche Symbole ≙ gleiche Buchstaben…</value>
+		<value>Gleiche Symbole bedeuten gleiche Buchstaben. War doch easy! Oder? Nein?! Hm gut… möglicherweise solltest du ein paar Schriftarten durchprobieren…</value>
 	</data>
 	<data name="LabelTooltipSymbolsHint2" xml:space="preserve">
-		<value>Uh hier ist es ganz heiß! Potenziell hast du den ersten "versteckten" Hinweis gefunden!</value>
+		<value>Uh hier ist es ganz heiß! Du hast den "versteckten" Hinweis gefunden! Potenziell jedenfalls…</value>
 	</data>
 	<data name="LabelTooltipSymbolsHint1" xml:space="preserve">
 		<value>Oder möglicherweise doch?</value>

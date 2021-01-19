@@ -5,6 +5,8 @@ S-RAM stands for <a href="https://en.wikipedia.org/wiki/Static_random-access_mem
 
 When you save in-game at the inn the S-RAM buffer will be updated. With an emulator the S-RAM gets saved to disk as *.srm file. Every progress you made in the game gets stored in this file.
 
+As of recently, (Snes9x) savestates can also be compared. These do not require in-game saving.
+
 ## Unknowns
 The "Unknowns" are areas of S-RAM which have no known meaning assigned yet.
 

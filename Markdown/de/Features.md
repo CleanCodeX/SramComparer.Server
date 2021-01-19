@@ -2,9 +2,9 @@
 Erlaubt das Vergleichen von (unbekannten) Bereichen und Modifizieren von Offset-Werten in Secret of Evermores S-RAM-Datei.
 
 ## Features
-* [C|W] Anzeigen (oder speichern von geänderten) SRM Offset-Werten
+* [C|W] Anzeigen (oder speichern von geänderten) S-RAM Offset-Werten
 * [C|W] Anzeige von Savestate Offset-Werten (keine Editierung)
-* [C|W] Vergleichen von sowohl *.SRM Dateien auch auch Snes9x Savestate-Dateien
+* [C|W] Vergleichen von sowohl *.srm-Dateien auch auch Snes9x Savestate-Dateien
 * [C|W] Vergleichen von unbekannten Bereichen des Speicherslots (V) 
 * [C|W] Vergleichen des gesamten Speicherslot-Bereichs (O)
 * [C|W] Vergleichen des Nicht-Speicherslot-Bereichs (O)
