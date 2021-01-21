@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using Blazor.Polyfill.Server;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using Microsoft.AspNetCore.Hosting;
@@ -82,6 +83,7 @@ namespace WebApp.SoE
 			services.AddHttpClient();
 			services.AddRazorPages().AddDataAnnotationsLocalization();
 			services.AddServerSideBlazor();
+			services.AddBlazorPolyfill();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -105,6 +107,7 @@ namespace WebApp.SoE
 #endif
 
 			app.UseHttpsRedirection();
+			app.UseBlazorPolyfill();
 			app.UseStaticFiles();
 			app.UseRouting();
 
