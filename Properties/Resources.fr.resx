@@ -36,10 +36,10 @@
 		<value>Définir la valeur</value>
 	</data>
 	<data name="CaptionWebCompare" xml:space="preserve">
-		<value>Web Comparaison S-RAM</value><comment>Needs to have Web or online oncluded</comment>
+		<value>Comparaison Web Savegame</value><comment>Needs to have Web or online oncluded</comment>
 	</data>
 	<data name="CaptionWebOffsetEdit" xml:space="preserve">
-		<value>Web Modification du décalage S-RAM</value>
+		<value>Affichage / modification du décalage Web de sauvegarde</value>
 		<comment>Needs to have Web or online oncluded</comment>
 	</data>
 	<data name="EnumDontShow" xml:space="preserve">
@@ -85,7 +85,7 @@
 		<value>Définir la valeur du décalage</value>
 	</data>
 	<data name="ButtonTooltipCompare" xml:space="preserve">
-		<value>Comparer les fichiers</value>
+		<value>Comparer les fichiers de sauvegarde</value>
 	</data>
 	<data name="ButtonTooltipCopy" xml:space="preserve">
 		<value>Copier le texte dans le presse-papiers</value>
@@ -139,7 +139,7 @@
 		<value>Application console</value>
 	</data>
 	<data name="MenuSramComparison" xml:space="preserve">
-		<value>Comparaison S-RAM</value>
+		<value>Comparaison des sauvegardes</value>
 	</data>
 	<data name="MenuSramFormat" xml:space="preserve">
 		<value>Format S-RAM</value>
@@ -159,7 +159,7 @@
 	<data name="AlertCopiedToClipboard" xml:space="preserve">
 		<value>Copié dans le presse-papier!</value><comment>Why a semicolon?</comment>
 	</data>
-	<data name="LabelTooltipNonSaveSlotByteComparison" xml:space="preserve">
+	<data name="LabelTooltipNonSlotComparison" xml:space="preserve">
 		<value>Comparaison des données en dehors de la partie en cours (après les données de toutes les parties)</value>
 	</data>
 	<data name="LabelTooltipProjectName" xml:space="preserve">
@@ -180,7 +180,7 @@
 	<data name="MenuWebComparison" xml:space="preserve">
 		<value>Comparer</value>
 	</data>
-	<data name="LabelTooltipSaveSlotByteComparison" xml:space="preserve">
+	<data name="LabelTooltipSlotByteComparison" xml:space="preserve">
 		<value>Comparaison des données (y compris les valeurs connues)</value>
 	</data>
 	<data name="LabelOffsetValue" xml:space="preserve">
@@ -274,7 +274,7 @@
 		<value>Comparaison Web des fichiers S-RAM</value>
 	</data>
 	<data name="LabelIndexTitle" xml:space="preserve">
-		<value>Projet Evermore » Rosetta Stone «</value>
+		<value>Projet Evermore »Rosetta Stone«</value>
 	</data>
 	<data name="LabelTooltipFile" xml:space="preserve">
 		<value>Sélectionnez un fichier de sauvegarde S-RAM (* .srm, *.comp) ou Snes9x (* .000 - * .009; *.state)</value>
@@ -296,5 +296,17 @@
 	</data>
 	<data name="LabelLanguage" xml:space="preserve">
 		<value>Langue</value>
+	</data>
+	<data name="LabelChecksumStatus" xml:space="preserve">
+		<value>État de la somme de contrôle</value>
+	</data>
+	<data name="LabelTooltipChecksumStatus" xml:space="preserve">
+		<value>Afficher l'état de la somme de contrôle de l'emplacement de sauvegarde</value>
+	</data>
+	<data name="MenuTooltipGlossary" xml:space="preserve">
+		<value>Explications des termes</value>
+	</data>
+	<data name="MenuGlossary" xml:space="preserve">
+		<value>Glossaire</value>
 	</data>
 </root>

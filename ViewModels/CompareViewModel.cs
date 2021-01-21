@@ -31,16 +31,22 @@ namespace WebApp.SoE.ViewModels
 		public bool ShowOutput => OutputMessage.ToString() != string.Empty;
 		public bool IsError { get; private set; }
 
-		public bool SlotByteByByteComparison
+		public bool SlotByteComparison
 		{
-			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.SlotByteByByteComparison);
-			set => Options.ComparisonFlags = (ComparisonFlagsSoE)EnumHelper.InvertUIntFlag(Options.ComparisonFlags, ComparisonFlagsSoE.SlotByteByByteComparison);
+			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.SlotByteComparison);
+			set => Options.ComparisonFlags = (ComparisonFlagsSoE)EnumHelper.InvertUIntFlag(Options.ComparisonFlags, ComparisonFlagsSoE.SlotByteComparison);
 		}
 
-		public bool NonSlotByteByByteComparison
+		public bool NonSlotComparison
 		{
-			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.NonSlotByteByByteComparison);
-			set => Options.ComparisonFlags = (ComparisonFlagsSoE)EnumHelper.InvertUIntFlag(Options.ComparisonFlags, ComparisonFlagsSoE.NonSlotByteByByteComparison);
+			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.NonSlotComparison);
+			set => Options.ComparisonFlags = (ComparisonFlagsSoE)EnumHelper.InvertUIntFlag(Options.ComparisonFlags, ComparisonFlagsSoE.NonSlotComparison);
+		}
+
+		public bool ChecksumStatus
+		{
+			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.ChecksumStatus);
+			set => Options.ComparisonFlags = (ComparisonFlagsSoE)EnumHelper.InvertUIntFlag(Options.ComparisonFlags, ComparisonFlagsSoE.ChecksumStatus);
 		}
 
 		public enum SaveSlotOption : uint
@@ -48,9 +54,9 @@ namespace WebApp.SoE.ViewModels
 			[Display(Name = nameof(Res.EnumDontShow), ResourceType = typeof(Res))]
 			None,
 			[Display(Name = nameof(Res.EnumComparedSaveSlotsIfDifferent), ResourceType = typeof(Res))]
-			ComparedIfDifferent,
+			IfComparedAndDifferent,
 			[Display(Name = nameof(Res.EnumComparedSaveSlots), ResourceType = typeof(Res))]
-			Compared
+			IfCompared
 		}
 
 		public SaveSlotOption Checksum { get; set; }
@@ -100,13 +106,13 @@ namespace WebApp.SoE.ViewModels
 
 			if (Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.ChecksumIfDifferent))
 				Checksum = Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.Checksum)
-					? SaveSlotOption.Compared
-					: SaveSlotOption.ComparedIfDifferent;
+					? SaveSlotOption.IfCompared
+					: SaveSlotOption.IfComparedAndDifferent;
 
 			if (Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.Unknown12BIfDifferent))
 				Unknown12B = Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.Unknown12B)
-					? SaveSlotOption.Compared
-					: SaveSlotOption.ComparedIfDifferent;
+					? SaveSlotOption.IfCompared
+					: SaveSlotOption.IfComparedAndDifferent;
 		}
 
 		protected internal override Task SaveOptionsAsync()
@@ -117,16 +123,16 @@ namespace WebApp.SoE.ViewModels
 			if (Checksum != default)
 				Options.ComparisonFlags = Checksum switch
 				{
-					SaveSlotOption.Compared => Options.ComparisonFlags |= ComparisonFlagsSoE.Checksum,
-					SaveSlotOption.ComparedIfDifferent => Options.ComparisonFlags |= ComparisonFlagsSoE.ChecksumIfDifferent,
+					SaveSlotOption.IfCompared => Options.ComparisonFlags |= ComparisonFlagsSoE.Checksum,
+					SaveSlotOption.IfComparedAndDifferent => Options.ComparisonFlags |= ComparisonFlagsSoE.ChecksumIfDifferent,
 				};
 
 			Options.ComparisonFlags = Options.ComparisonFlags & ~ComparisonFlagsSoE.Unknown12B;
 			if (Unknown12B != default)
 				Options.ComparisonFlags = Unknown12B switch
 				{
-					SaveSlotOption.Compared => Options.ComparisonFlags |= ComparisonFlagsSoE.Unknown12B,
-					SaveSlotOption.ComparedIfDifferent => Options.ComparisonFlags |= ComparisonFlagsSoE.Unknown12BIfDifferent,
+					SaveSlotOption.IfCompared => Options.ComparisonFlags |= ComparisonFlagsSoE.Unknown12B,
+					SaveSlotOption.IfComparedAndDifferent => Options.ComparisonFlags |= ComparisonFlagsSoE.Unknown12BIfDifferent,
 				};
 
 			return base.SaveOptionsAsync();

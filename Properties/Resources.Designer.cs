@@ -151,7 +151,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Compare S-RAM files ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compare savegame files ähnelt.
         /// </summary>
         public static string ButtonTooltipCompare {
             get {
@@ -232,7 +232,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die S-RAM - Web Compare ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Savegame web comparison ähnelt.
         /// </summary>
         public static string CaptionWebCompare {
             get {
@@ -241,7 +241,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die S-RAM - Web Offset Edit ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Savegame web offset display/edit ähnelt.
         /// </summary>
         public static string CaptionWebOffsetEdit {
             get {
@@ -404,6 +404,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Checksum status ähnelt.
+        /// </summary>
+        public static string LabelChecksumStatus {
+            get {
+                return ResourceManager.GetString("LabelChecksumStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Colorize output ähnelt.
         /// </summary>
         public static string LabelColorizeOutput {
@@ -422,7 +431,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Evermore » Rosetta Stone « project ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Evermore »Rosetta Stone« project ähnelt.
         /// </summary>
         public static string LabelIndexTitle {
             get {
@@ -485,6 +494,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show save slot checksum status ähnelt.
+        /// </summary>
+        public static string LabelTooltipChecksumStatus {
+            get {
+                return ResourceManager.GetString("LabelTooltipChecksumStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Select either a S-RAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009; *.state) ähnelt.
         /// </summary>
         public static string LabelTooltipFile {
@@ -496,9 +514,9 @@ namespace WebApp.SoE.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Compare non-save slot area byte by byte (area beyond all save slots) ähnelt.
         /// </summary>
-        public static string LabelTooltipNonSaveSlotByteComparison {
+        public static string LabelTooltipNonSlotComparison {
             get {
-                return ResourceManager.GetString("LabelTooltipNonSaveSlotByteComparison", resourceCulture);
+                return ResourceManager.GetString("LabelTooltipNonSlotComparison", resourceCulture);
             }
         }
         
@@ -521,20 +539,20 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Compare whole save slot area byte by byte (including the &quot;knowns&quot; areas) ähnelt.
-        /// </summary>
-        public static string LabelTooltipSaveSlotByteComparison {
-            get {
-                return ResourceManager.GetString("LabelTooltipSaveSlotByteComparison", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die The relative offset within the gameslot area ähnelt.
         /// </summary>
         public static string LabelTooltipSaveSlotOffset {
             get {
                 return ResourceManager.GetString("LabelTooltipSaveSlotOffset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compare whole save slot area byte by byte (including the &quot;knowns&quot; areas) ähnelt.
+        /// </summary>
+        public static string LabelTooltipSlotByteComparison {
+            get {
+                return ResourceManager.GetString("LabelTooltipSlotByteComparison", resourceCulture);
             }
         }
         
@@ -620,6 +638,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Glossary ähnelt.
+        /// </summary>
+        public static string MenuGlossary {
+            get {
+                return ResourceManager.GetString("MenuGlossary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Goals of this Project ähnelt.
         /// </summary>
         public static string MenuGoals {
@@ -683,7 +710,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die S-RAM Comparison ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Savegame Comparison ähnelt.
         /// </summary>
         public static string MenuSramComparison {
             get {
@@ -787,6 +814,15 @@ namespace WebApp.SoE.Properties {
         public static string MenuTooltipFeatures {
             get {
                 return ResourceManager.GetString("MenuTooltipFeatures", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Term explanations ähnelt.
+        /// </summary>
+        public static string MenuTooltipGlossary {
+            get {
+                return ResourceManager.GetString("MenuTooltipGlossary", resourceCulture);
             }
         }
         

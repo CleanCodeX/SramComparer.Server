@@ -13,6 +13,7 @@ Allows to compare (unknown) areas and modify offset values in Secret of Evermore
 * [C|W] Display of differences in decimal, hex and binary format
 * [C|W] Export comparison result as text file
 * [C|W] Display of changed or all game's checksums (O)
+* [C|W] Display checksum validation status (O)
 * [W] Last used settings will be automatically saved
 * [C] Option to either open or select the file in windows explorer
 * [C] Option to prompt for export file name or path

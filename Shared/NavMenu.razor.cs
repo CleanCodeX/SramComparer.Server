@@ -51,7 +51,9 @@ namespace WebApp.SoE.Shared
 				PageUris.Goals.ToLower(), 
 				PageUris.Unknowns.ToLower(), 
 				PageUris.Exploring.ToLower(), 
-				PageUris.RosettaStone.ToLower() };
+				PageUris.RosettaStone.ToLower(),
+				PageUris.Glossary.ToLower(),
+			};
 
 			var comparisonItems = new[]
 			{

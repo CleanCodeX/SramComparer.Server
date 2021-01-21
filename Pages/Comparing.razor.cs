@@ -31,13 +31,14 @@ namespace WebApp.SoE.Pages
 		private static readonly string SelectUnselectedStyle = $"color: white;background-color: {BgColor};";
 		private const string ButtonStyle = "color: cyan;width: 600px;";
 		
-		private string WholeSlotStyle => ViewModel.SlotByteByByteComparison == default ? SelectUnselectedStyle : SelectSelectedStyle;
-		private string NonSlotStyle => ViewModel.NonSlotByteByByteComparison == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string SlotByteCompStyle => ViewModel.SlotByteComparison == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string NonSlotCompStyle => ViewModel.NonSlotComparison == default ? SelectUnselectedStyle : SelectSelectedStyle;
 
 		private string CurrentFileStyle => ViewModel.CurrentFileSaveSlot == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private string ComparisonFileStyle => ViewModel.ComparisonFileSaveSlot == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private string GameRegionStyle => ViewModel.GameRegion == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private string Unknown12BStyle => ViewModel.Unknown12B == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string ChecksumStatusStyle => ViewModel.ChecksumStatus == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private string ChecksumStyle => ViewModel.Checksum == default ? SelectUnselectedStyle : SelectSelectedStyle;
 
 		private Task OnCurrentFileChange(InputFileChangeEventArgs arg) => ViewModel.SetCurrentFileAsync(arg.File);

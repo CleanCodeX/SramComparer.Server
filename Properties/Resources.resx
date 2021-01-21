@@ -205,19 +205,19 @@
     <value>Open Discord invite</value>
   </data>
   <data name="CaptionWebCompare" xml:space="preserve">
-    <value>S-RAM - Web Compare</value>
+    <value>Savegame web comparison</value>
   </data>
   <data name="MenuSramComparerCmdApp" xml:space="preserve">
     <value>Console App</value>
   </data>
   <data name="MenuSramComparison" xml:space="preserve">
-    <value>S-RAM Comparison</value>
+    <value>Savegame Comparison</value>
   </data>
   <data name="MenuWebTools" xml:space="preserve">
     <value>Web Tools</value>
   </data>
   <data name="CaptionWebOffsetEdit" xml:space="preserve">
-    <value>S-RAM - Web Offset Edit</value><comment>The term Offset should only be translated if not understandable</comment>
+    <value>Savegame web offset display/edit</value><comment>The term Offset should only be translated if not understandable</comment>
   </data>
   <data name="LabelAdditionalComparisons" xml:space="preserve">
     <value>Additional comparisons</value>
@@ -228,10 +228,10 @@
   <data name="LabelTooltipProjectName" xml:space="preserve">
     <value>Evermore «Rosetta Stone» Project</value>
   </data>
-  <data name="LabelTooltipNonSaveSlotByteComparison" xml:space="preserve">
+  <data name="LabelTooltipNonSlotComparison" xml:space="preserve">
     <value>Compare non-save slot area byte by byte (area beyond all save slots)</value>
   </data>
-  <data name="LabelTooltipSaveSlotByteComparison" xml:space="preserve">
+  <data name="LabelTooltipSlotByteComparison" xml:space="preserve">
     <value>Compare whole save slot area byte by byte (including the "knowns" areas)</value>
   </data>
   <data name="LabelShowAdditionalSaveSlotInformation" xml:space="preserve">
@@ -271,7 +271,7 @@
     <value>mandatory</value>
   </data>
   <data name="ButtonTooltipCompare" xml:space="preserve">
-    <value>Compare S-RAM files</value>
+    <value>Compare savegame files</value>
   </data>
   <data name="ButtonCopy" xml:space="preserve">
     <value>Copy to clipboard</value>
@@ -379,7 +379,7 @@
     <value>Web offset edit</value>
   </data>
   <data name="LabelIndexTitle" xml:space="preserve">
-    <value>Evermore » Rosetta Stone « project</value>
+    <value>Evermore »Rosetta Stone« project</value>
   </data>
   <data name="LabelTooltipFile" xml:space="preserve">
     <value>Select either a S-RAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009; *.state)</value>
@@ -402,5 +402,17 @@
   </data>
   <data name="LabelLanguage" xml:space="preserve">
     <value>Language</value>
+  </data>
+  <data name="LabelChecksumStatus" xml:space="preserve">
+    <value>Checksum status</value>
+  </data>
+  <data name="LabelTooltipChecksumStatus" xml:space="preserve">
+    <value>Show save slot checksum status</value>
+  </data>
+  <data name="MenuTooltipGlossary" xml:space="preserve">
+    <value>Term explanations</value>
+  </data>
+  <data name="MenuGlossary" xml:space="preserve">
+    <value>Glossary</value>
   </data>
 </root>
