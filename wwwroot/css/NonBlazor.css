@@ -1,0 +1,50 @@
+/* MainLayout.css */
+.content {
+	color: lightgray;
+	padding: 1.5rem;
+	font-size: 1.3rem;
+	min-width: 1000px;
+}
+
+img {
+	width: 100%;
+}
+
+/* Header.css */
+.header {
+	padding: 5px;
+	filter: blur(0.5px);
+}
+
+.project {
+	height: 120px;
+	filter: blur(0.5px);
+}
+
+/* Footer.css */
+.footer {
+	padding: 10px;
+	filter: blur(0.5px);
+}
+
+/* ExplorationStatusDisplay.css */
+.statusInfo {
+	color: brown;
+	font-size: 1.5rem;
+	margin-top: -15px;
+	margin-left: 30px;
+	filter: blur(1px);
+	-webkit-filter: blur(0px);
+}
+
+/* Index.css */
+.welcome {
+	color: white;
+	font-size: 40px;
+}
+
+/* About.css */
+.hidden {
+	font-size: 1rem;
+	color: #111111;
+}

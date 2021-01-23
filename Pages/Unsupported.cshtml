@@ -1,0 +1,95 @@
+﻿@page "/Unsupported"
+
+@using Common.Shared.Min.Extensions
+@using WebApp.SoE.Helpers
+@using WebApp.SoE.ViewModels
+@using Res = WebApp.SoE.Properties.Resources
+@using ResHidden = WebApp.SoE.Properties.Hidden.Resources
+
+@namespace WebApp.SoE.Pages
+@model BrowserInfoViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Your browser version is not supported</title>
+
+    <base href="~/" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/NonBlazor.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="media/SoE.ico" />
+</head>
+<body>
+<div class="page">
+    <img src="media/banner.png" class="header" title="@TooltipRandomizer.NextTooltip()" />
+    <img src="media/project.png" class="project" title="@CrypticTooltipRandomizer.GetTooltip()" />
+    <h5 class="statusInfo" title="@TooltipRandomizer.NextTooltip()">@ExplorationStatusHelper.GetExplorationStatus()</h5>
+
+    <div class="content">
+        <h1 class="welcome">@Res.LabelIndexTitle</h1>
+        <p>
+            <h5>Your browser reports itself as:</h5>
+            <h6>@Model.BrowserName, version @Model.Version. @Model.UserAgent</h6>
+            
+            <p>
+                <h3>Unfortunately, your browser's version won't render this website correctly,<br />that's why you get this alternate page presented instead.</h3>
+            </p>
+
+            <p>
+                Here's a snapshot how it <a href="http://xeth.de/Media/Snapshot.png" target="_">should</a> look like.
+            </p>
+        </p>
+        <br />
+            
+        <p>
+            No big deal. You could either use one of the supported min-versions:
+
+            <h5>* <a href=https://www.google.com/intl/en_us/chrome target=_ title="Download latest version">Chrome</a>: ver. @BrowserMinVersion.Chrome.ToInt()</h5>
+            <h5>* <a href=https://www.mozilla.org/en/firefox/new target=_ title="Download latest version">Firefox</a>: ver. @BrowserMinVersion.Firefox.ToInt()</h5>
+            <h5>* <a href=https://www.microsoft.com/en-us/edge target=_ title="Download latest version">Edge</a>: ver. @BrowserMinVersion.Edge.ToInt()</h5>
+            <h5>* <a href=https://www.opera.com target=_ title="Download latest version">Opera</a>: ver. @BrowserMinVersion.Opera.ToInt()</h5>
+        </p>
+        
+        <br />
+        <p>
+            …or access the most relevant contents directly at GitHub (see links below).
+        </p>
+        
+        <p>
+            <h3>But, if your browser wasn't recognized correctly, or you want to proceed anyway, then give it a <a href="/home">try</a>.<br />Your choice.</h3>
+        </p>
+
+        <br />
+        <h6>Hint: most of the markdown's relative links won't work as they aren't supposed to be shown directly from GitHub.</h6>
+
+        <h2>S-RAM Format Exploration</h2>
+            * <a href="https://github.com/CleanCodeX/WebApp.SoE/blob/main/Markdown/Goals.md">Goals</a>
+            * <a href="https://github.com/CleanCodeX/RosettaStone.Sram.SoE/blob/master/Markdown/Unknowns.md">Unknowns</a>
+            * <a href="https://github.com/CleanCodeX/WebApp.SoE/blob/main/Markdown/Exploring.md">Exploring S-RAM</a>
+            * <a href="https://github.com/CleanCodeX/WebApp.SoE/blob/main/Markdown/RosettaStone.md">Rosetta Stone</a>
+            * <a href="https://github.com/CleanCodeX/WebApp.SoE/blob/main/Markdown/Glossary.md">Glossary</a>
+        <h2>Savegame Comparison</h2>
+            * <a href="https://github.com/CleanCodeX/WebApp.SoE/blob/main/Markdown/Features.md">Features</a>
+            * <a href="https://github.com/CleanCodeX/WebApp.SoE/blob/main/Markdown/Prerequisites.md">Prerequisites</a>
+            * <a href="https://github.com/CleanCodeX/WebApp.SoE/blob/main/Markdown/Changelog-Console.md">Console App</a>
+            * <a href="https://github.com/CleanCodeX/WebApp.SoE/blob/main/Markdown/Imagery.md">Imagery</a>
+            * <a href="https://github.com/CleanCodeX/SramComparer.SoE/blob/master/Guides/Guides.md">Guides</a>
+            * <a href="https://github.com/CleanCodeX/SramComparer.SoE/blob/master/Tutorials/Tutorials.md">Tutorials</a>
+        <h2>Last but not least</h2>
+            * <a href="https://github.com/CleanCodeX/WebApp.SoE/blob/main/Markdown/Sources.md">GitHub</a>
+            * <a href="https://github.com/CleanCodeX/WebApp.SoE/blob/main/Markdown/Contributing.md">Contributing</a>
+            * <a href="https://github.com/CleanCodeX/WebApp.SoE/blob/main/Markdown/Community.md">Community</a>
+            * <a href="https://github.com/maluramichael/awesome-secret-of-evermore">Awesome Evermore</a>
+            * <a href="https://github.com/CleanCodeX/WebApp.SoE/blob/main/Markdown/Contributors.md">Contributors</a>
+    </div>
+
+    <img src="media/banner.png" class="footer" title="@TooltipRandomizer.NextTooltip()" />
+
+    <h7 title="@ResHidden.LabelTooltipSymbolsHint1">@ResHidden.LabelSymbolsHint1</h7>
+    <label class="hidden" title="@ResHidden.LabelTooltipSymbolsHint2">@ResHidden.LabelSymbolsHint2</label>
+</div>
+</body>
+</html>

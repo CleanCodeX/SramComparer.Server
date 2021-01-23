@@ -2,6 +2,10 @@
 {
 	internal static class PageUris
 	{
+		public const string BrowserCheck = "/" + nameof(BrowserCheck);
+		public const string Unsupported = "/" + nameof(Unsupported);
+		public const string Home = "/" + nameof(Home);
+
 		public const string Comparing = "/" + nameof(Comparing);
 
 		public const string Offset = "/" + nameof(Offset);

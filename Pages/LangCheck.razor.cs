@@ -6,6 +6,6 @@ namespace WebApp.SoE.Pages
 	[Route(PageUris.LangCheck)]
     public partial class LangCheck
 	{
-		protected override void OnParametersSet() => ContentId = nameof(PageUris.LangCheck);
+		protected override void OnParametersSet() => ContentId = PageUris.LangCheck;
     }
 }

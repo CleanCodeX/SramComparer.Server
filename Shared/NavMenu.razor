@@ -179,21 +179,17 @@
                     </NavLink>
                 </li>
                 <!-- / Tutorials -->
-                <!-- GitHub -->
-                <ol class="nav flex-column">
-                    <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Sources" title="@GetRes(nameof(Res.MenuTooltipSources))">
-                            <img src="media/Github.png" class="github" />@(sp)GitHub
-                        </NavLink>
-                    </li>
-                </ol>
-                <!-- / GitHub -->
             }
         </li>
     </ol>
     <!-- / S-RAM Comparison -->
     <!-- Other -->
     <ol class="nav flex-column" title="@TooltipRandomizer.NextTooltip()">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="@PageUris.Sources" title="@GetRes(nameof(Res.MenuTooltipSources))">
+                <img src="media/Github.png" class="github" />@(sp)GitHub
+            </NavLink>
+        </li>
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="@PageUris.Contributing" title="@GetRes(nameof(Res.MenuTooltipContribute))">
                 <span class="oi oi-heart"/> @Res.MenuContributing.ReplaceSpaces()
