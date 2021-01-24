@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using Blazor.Polyfill.Server;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using Microsoft.AspNetCore.Hosting;
@@ -30,7 +31,6 @@ namespace WebApp.SoE
 			services.AddSingleton<IAppInfoService, AppInfoService>();
 			services.AddScoped<CompareViewModel>(sp => new() {LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>()});
 			services.AddHttpContextAccessor();
-			
 			services.AddScoped<SetOffsetValueViewModel>(sp => new()
 			{
 				JsRuntime = sp.GetRequiredService<IJSRuntime>(),
@@ -72,7 +72,8 @@ namespace WebApp.SoE
 			services.AddTransient(cfg => cfg.GetService<IOptionsMonitor<SupportedCultures>>()!.CurrentValue);
 
 #if DEBUG
-			services.AddLiveReload(config => {
+			services.AddLiveReload(config =>
+			{
 				config.LiveReloadEnabled = true;
 				config.ClientFileExtensions = ".css,.js,.htm,.html";
 				config.FolderToMonitor = "~/../";
@@ -82,6 +83,7 @@ namespace WebApp.SoE
 			services.AddHttpClient();
 			services.AddRazorPages().AddDataAnnotationsLocalization();
 			services.AddServerSideBlazor();
+			services.AddBlazorPolyfill();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -105,6 +107,18 @@ namespace WebApp.SoE
 #endif
 
 			app.UseHttpsRedirection();
+			app.UseBlazorPolyfill(o =>
+			{
+				o.ES5FallbackValidation = request =>
+				{
+					var userAgent = request.Headers["User-Agent"];
+
+					if(!BrowserInfoHelper.IsSupportedBrowser(userAgent))
+						return BrowserInfoHelper.HasES5Support(userAgent);
+
+					return false;
+				};
+			});
 			app.UseStaticFiles();
 			app.UseRouting();
 
@@ -112,7 +126,8 @@ namespace WebApp.SoE
 			{
 				endpoints.MapDefaultControllerRoute();
 				endpoints.MapBlazorHub();
-				endpoints.MapFallbackToPage("/_Host");
+				endpoints.MapRazorPages();
+				endpoints.MapFallbackToPage(PageUris.BrowserCheck);
 			});
 		}
 	}

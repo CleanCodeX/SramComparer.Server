@@ -53,10 +53,11 @@
 			</tr>
 			
 			<tr>
-				<td colspan="2"><InputCheckbox @bind-Value="@ViewModel.SlotByteByByteComparison" />
-					<label style=@WholeSlotStyle title="@Res.LabelTooltipSaveSlotByteComparison">@ResComp.EnumSlotByteComparison</label> | 
-					<InputCheckbox @bind-Value="@ViewModel.NonSlotByteByByteComparison" />
-					<label style=@NonSlotStyle title="@Res.LabelTooltipNonSaveSlotByteComparison">@ResComp.EnumNonSlotComparison</label>
+				<td colspan="2">
+					<InputCheckbox @bind-Value="@ViewModel.SlotByteComparison" />
+					<label style=@SlotByteCompStyle title="@Res.LabelTooltipSlotByteComparison">@ResComp.EnumSlotByteComparison</label> | 
+					<InputCheckbox @bind-Value="@ViewModel.NonSlotComparison" />
+					<label style=@NonSlotCompStyle title="@Res.LabelTooltipNonSlotComparison">@ResComp.EnumNonSlotComparison</label>
 				</td>
 			</tr>
 			
@@ -73,6 +74,10 @@
 			<tr>
 				<td><label title="@Res.LabelTooltipUnknown12B">Unknown12B:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.Unknown12B" style=@Unknown12BStyle /></td>
+			</tr>
+			<tr>
+				<td><label style=@ChecksumStatusStyle title="@Res.LabelTooltipChecksumStatus">@Res.LabelChecksumStatus:@Ns</label></td>
+				<td><InputCheckbox @bind-Value="@ViewModel.ChecksumStatus" /></td>
 			</tr>
 			
 			<p />

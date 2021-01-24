@@ -10,7 +10,8 @@ namespace WebApp.SoE.Helpers
 		private const int IHaveSpokenWaitTimeInSeconds = 300;
 		private const int IHaveSpokenStateChanceMaxValue = 10;
 
-		private static readonly Random Random = new();
+		internal  static readonly Random Random = new();
+
 		private static readonly List<string> Tooltips = new();
 		private static readonly object LockObj;
 		private static int ListCount;

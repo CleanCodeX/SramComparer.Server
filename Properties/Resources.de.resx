@@ -18,7 +18,7 @@
 		<value>Verglichene Speicherslots</value>
 	</data>
 	<data name="ButtonTooltipCompare" xml:space="preserve">
-		<value>Vergleiche S-RAM-Dateien</value>
+		<value>Vergleiche Spielstand-Dateien</value>
 	</data>
 	<data name="EnumDontShow" xml:space="preserve">
 		<value>Nicht anzeigen</value>
@@ -38,7 +38,7 @@
 	<data name="LabelMandatory" xml:space="preserve">
 		<value>Pflichtfeld</value>
 	</data>
-	<data name="LabelTooltipNonSaveSlotByteComparison" xml:space="preserve">
+	<data name="LabelTooltipNonSlotComparison" xml:space="preserve">
 		<value>Gesamten nicht-Speicherslot Byte für Byte vergleichen (Bereich jenseits aller Speicherslots)</value>
 	</data>
 	<data name="LabelShowAdditionalSaveSlotInformation" xml:space="preserve">
@@ -53,7 +53,7 @@
 	<data name="MenuWebComparison" xml:space="preserve">
 		<value>Vergleichen</value>
 	</data>
-	<data name="LabelTooltipSaveSlotByteComparison" xml:space="preserve">
+	<data name="LabelTooltipSlotByteComparison" xml:space="preserve">
 		<value>Gesamten Speicherslot Byte für Byte vergleichen (inkl. der "bekannten" Bereiche)</value>
 	</data>
 	<data name="LabelOffsetValue" xml:space="preserve">
@@ -75,7 +75,7 @@
 		<value>#4</value>
 	</data>
 	<data name="CaptionWebOffsetEdit" xml:space="preserve">
-		<value>S-RAM - Web Offset Änderung</value><comment>The term Offset should only be translated if not understandable</comment>
+		<value>Spielstand Web-Offsetanzeige/-änderung</value><comment>The term Offset should only be translated if not understandable</comment>
 	</data>
 	<data name="AlertDownloadConfirmationFileTemplate" xml:space="preserve">
 		<value>Datei '{0}' herunterladen?</value>
@@ -147,13 +147,13 @@
 		<value>Das Unbekannte</value>
 	</data>
 	<data name="MenuRosettaStone" xml:space="preserve">
-		<value>Rosetta-Sten</value>
+		<value>Rosetta-Stein</value>
 	</data>
 	<data name="MenuTooltipAwesome" xml:space="preserve">
 		<value>Awesome Seiten für ein awesome Spiel</value>
 	</data>
 	<data name="MenuExploring" xml:space="preserve">
-		<value>S-RAM Erkunden</value>
+		<value>S-RAM erkunden</value>
 	</data>
 	<data name="MenuCommunity" xml:space="preserve">
 		<value>Community</value>
@@ -162,13 +162,13 @@
 		<value>S-RAM Format</value>
 	</data>
 	<data name="MenuSramComparison" xml:space="preserve">
-		<value>S-RAM Vergleich</value>
+		<value>Spielstand-Vergleich</value>
 	</data>
 	<data name="MenuSramComparerCmdApp" xml:space="preserve">
 		<value>Konsolen App</value>
 	</data>
 	<data name="CaptionWebCompare" xml:space="preserve">
-		<value>S-RAM - Web Vergleich</value>
+		<value>Spielstand Web-Vergleich</value>
 	</data>
 	<data name="LabelKnownBytes" xml:space="preserve">
 		<value>bekannte Bytes</value>
@@ -273,7 +273,7 @@
 		<value>Web-Vergleich von S-RAM-Dateien</value>
 	</data>
 	<data name="LabelIndexTitle" xml:space="preserve">
-		<value>Evermore » Rosetta Stone « Projekt</value>
+		<value>Evermore »Rosetta Stone« Projekt</value>
 	</data>
 	<data name="LabelTooltipFile" xml:space="preserve">
 		<value>Wähle entweder eine S-RAM- (*.srm, *.comp) or Snes9x Savestate- Datei (*.000 - *.009; *.state)</value>
@@ -295,5 +295,17 @@
 	</data>
 	<data name="LabelLanguage" xml:space="preserve">
 		<value>Sprache</value>
+	</data>
+	<data name="LabelChecksumStatus" xml:space="preserve">
+		<value>Prüfsummenstatus</value>
+	</data>
+	<data name="LabelTooltipChecksumStatus" xml:space="preserve">
+		<value>Speicherslot Prüfsummenstatus anzeigen</value>
+	</data>
+	<data name="MenuTooltipGlossary" xml:space="preserve">
+		<value>Begriffserklärungen</value>
+	</data>
+	<data name="MenuGlossary" xml:space="preserve">
+		<value>Glossar</value>
 	</data>
 </root>

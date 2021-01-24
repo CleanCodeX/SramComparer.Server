@@ -13,6 +13,7 @@ Erlaubt das Vergleichen von (unbekannten) Bereichen und Modifizieren von Offset-
 * [C|W] Anzeige der Unterschiede im Dezimal-, Hex- und Binär-Format
 * [C|W] Export des Vergleichsergebnisses als Text-Datei
 * [C|W] Anzeige von Speicherslot-Prüfsummen (O)
+* [C|W] Anzeige Prüfsummen-Validierungsstatus (O)
 * [W] Zuletzt benutzte Einstellungen werden automatisch gespeichert
 * [C] Option zum entweder Öffen oder Auswählen der Export-Datei im Windows-Explorer
 * [C] Option zum Eingeben des Export-Dateinamens oder -pfades

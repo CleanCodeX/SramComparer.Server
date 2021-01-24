@@ -4,12 +4,8 @@
 }
 
 .project {
-}
-
-#projectBanner {
 	height: 120px;
 	width: 100%;
-	font-family: "Wingdings"
 }
 
 .blur {
