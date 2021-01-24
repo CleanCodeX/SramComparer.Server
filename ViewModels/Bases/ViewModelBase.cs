@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using SramComparer.SoE;
-using RosettaStone.Sram.SoE.Enums;
+using RosettaStone.Sram.SoE.Models.Enums;
 using WebApp.SoE.Properties;
 using WebApp.SoE.Shared.Enums;
 

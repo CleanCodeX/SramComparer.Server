@@ -33,14 +33,14 @@ namespace WebApp.SoE.ViewModels
 
 		public bool SlotByteByByteComparison
 		{
-			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.SlotByteByByteComparison);
-			set => Options.ComparisonFlags = (ComparisonFlagsSoE)EnumHelper.InvertUIntFlag(Options.ComparisonFlags, ComparisonFlagsSoE.SlotByteByByteComparison);
+			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.SlotByteComparison);
+			set => Options.ComparisonFlags = (ComparisonFlagsSoE)EnumHelper.InvertUIntFlag(Options.ComparisonFlags, ComparisonFlagsSoE.SlotByteComparison);
 		}
 
 		public bool NonSlotByteByByteComparison
 		{
-			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.NonSlotByteByByteComparison);
-			set => Options.ComparisonFlags = (ComparisonFlagsSoE)EnumHelper.InvertUIntFlag(Options.ComparisonFlags, ComparisonFlagsSoE.NonSlotByteByByteComparison);
+			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.NonSlotComparison);
+			set => Options.ComparisonFlags = (ComparisonFlagsSoE)EnumHelper.InvertUIntFlag(Options.ComparisonFlags, ComparisonFlagsSoE.NonSlotComparison);
 		}
 
 		public enum SaveSlotOption : uint

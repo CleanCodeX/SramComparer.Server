@@ -34,7 +34,7 @@ Added savestate web offset value display
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\RosettaStone.Savestate.Snes9x.SoE\RosettaStone.Savestate.Snes9x.SoE.csproj" />
+		<!--<ProjectReference Include="..\RosettaStone.Savestate.Snes9x.SoE\RosettaStone.Savestate.Snes9x.SoE.csproj" />-->
 		<ProjectReference Include="..\SramComparer.SoE\SramComparer.SoE.csproj" />
 	</ItemGroup>
 

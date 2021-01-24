@@ -5,6 +5,8 @@ S-RAM steht für <a href="https://de.wikipedia.org/wiki/Static_random-access_mem
 
 Wenn du innerhalb des Spiels im Gasthaus speicherst, wird der S-RAM-Puffer aktualisiert. Mit einem Emulator wird dieser Puffer S-RAM als * .srm-Datei auf der Festplatte gespeichert. Jeder Fortschritt, den du im Spiel gemacht hast, in dieser Datei gespeichert. 
 
+Seit neuestem können auch (Snes9x) Savestates vergleichen werden. Diese erfordern kein spielinternes Speichern.
+
 ## Unknowns / Unbekannte
 Die "Unbekannten" sind Bereiche des SRAMs, welche noch keine Bedeutung zugewiesen bekamen.
 

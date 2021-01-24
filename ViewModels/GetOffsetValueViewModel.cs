@@ -21,13 +21,20 @@ namespace WebApp.SoE.ViewModels
 
 		public bool CanGet => IsLoaded && OffsetAddress > 0;
 		public bool CanSet => IsLoaded && OffsetAddress > 0;
-		
+
 		private string StorageKey => StorageKeyPrefix + nameof(OffsetAddress);
 
 		protected internal override async Task LoadOptionsAsync()
 		{
 			await base.LoadOptionsAsync();
-			OffsetAddress = (await LocalStorage.GetAsync<int>(StorageKey)).Value;
+			try
+			{
+				OffsetAddress = (await LocalStorage.GetAsync<int>(StorageKey)).Value;
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex);
+			}
 		}
 
 		protected internal override async Task SaveOptionsAsync()
@@ -59,7 +66,7 @@ namespace WebApp.SoE.ViewModels
 
 				IsError = false;
 				OffsetValue = SramFile.GetOffsetByte(CurrentFileSaveSlot.ToInt() - 1, OffsetAddress);
-				var valueDisplayText = NumberFormatter.GetByteValueRepresentations((byte) OffsetValue);
+				var valueDisplayText = NumberFormatter.GetByteValueRepresentations((byte)OffsetValue);
 
 				OutputMessage = Resources.StatusGetOffsetValueTemplate.InsertArgs(OffsetAddress, valueDisplayText)
 					.ColorText(Color.Green).ToMarkup();

@@ -1,7 +1,7 @@
 ﻿# Tritt der Community bei
 
 Um deine Meinung zu teilen oder Funde zu melden, solltest du einen Post im Forum / Discord in Betracht ziehen.
-Deine Community-Hilfe wird gebraucht!
+Deine Hilfe wird begrüßt!
 
 Info: Links werden in einem neuen Tab geöffnet
 
@@ -13,4 +13,3 @@ Info: Links werden in einem neuen Tab geöffnet
 
 #### E-Mail
 * Oder sende eine old-school <a href="mailto:evermore@SECRETOFxeth.de?Subject=Format%20Exploration%20Projekt">E-Mail</a> durch entfernen des SECRETOF-Teils
-

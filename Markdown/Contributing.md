@@ -12,7 +12,7 @@ Your help would save much time in not doing something twice what someone else al
 
 The more people contribute, the earlier and better the results.
 
-But after all this is a free time project and developing tools or finding offset meanings needs hundreds, probably thousands of hours.
+But after all this is a free time project and developing tools or finding all offset meanings needs hundreds of hours.
 
 ## How to contribute
 There are a view different ways of contributing to the project

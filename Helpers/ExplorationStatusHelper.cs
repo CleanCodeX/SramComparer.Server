@@ -1,7 +1,7 @@
 ﻿using System;
 using WebApp.SoE.Properties;
 using ResComp = SramComparer.Properties.Resources;
-using SaveSlot = RosettaStone.Sram.SoE.Constants.SramSizes.SaveSlot;
+using SaveSlot = RosettaStone.Sram.SoE.Models.SramSizes.SaveSlot;
 
 namespace WebApp.SoE.Helpers
 {
@@ -10,7 +10,7 @@ namespace WebApp.SoE.Helpers
 		public static string GetExplorationStatus()
 		{
 			const char est = '≙';
-			const int knownBytes = SaveSlot.AllKnown;
+			const int knownBytes = SaveSlot.AllKnowns;
 			const int allBytes = SaveSlot.All;
 			const int unknownBytes = SaveSlot.AllUnknown;
 			var knownPercentage = Math.Round(SaveSlot.KnownPercentage, 1);
