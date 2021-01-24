@@ -24,7 +24,7 @@ namespace WebApp.SoE.Helpers
 			var unknown = Resources.LabelUnknownBytes;
 			var known = Resources.LabelKnownBytes;
 
-			return $"~{knownPercentage}% ({knownBytes}) {known} + ~{unknownPercentage}% ({unknownBytes}) {unknown} {est} 100% ({allBytes} {ResComp.Bytes})";
+			return $"~{knownPercentage}% ({knownBytes}) {known} & ~{unknownPercentage}% ({unknownBytes}) {unknown} {est} 100% ({allBytes} {ResComp.Bytes})";
 		}
 	}
 }
