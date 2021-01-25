@@ -27,7 +27,7 @@ namespace WebApp.SoE.Services
         {
             var version = GetPackageVersion(assembly);
             if (version.EndsWith(".0"))
-                version = PackageVersion.Replace(".0", string.Empty);
+                version = version.Replace(".0", string.Empty);
 
             return version;
 
