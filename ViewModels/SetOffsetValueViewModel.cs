@@ -3,11 +3,11 @@ using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
+using IO.Extensions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-using SramCommons.Extensions;
-using SramComparer.Helpers;
-using SramComparer.Properties;
+using SRAM.Comparison.Helpers;
+using SRAM.Comparison.Properties;
 using WebApp.SoE.Extensions;
 
 #pragma warning disable 8509

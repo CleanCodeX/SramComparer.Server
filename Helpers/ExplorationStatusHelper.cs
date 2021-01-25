@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
 using WebApp.SoE.Properties;
-using ResComp = SramComparer.Properties.Resources;
-using SaveSlot = RosettaStone.Sram.SoE.Models.SramSizes.SaveSlot;
+using ResComp = SRAM.Comparison.Properties.Resources;
+using SaveSlot = SRAM.SoE.Models.SramSizes.SaveSlot;
 
 namespace WebApp.SoE.Helpers
 {

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Resources;
-using RosettaStone.Sram.SoE.Extensions;
 using WebApp.SoE.Properties;
 
 namespace WebApp.SoE.Helpers
@@ -16,13 +15,10 @@ namespace WebApp.SoE.Helpers
 		{
 			try
 			{
-				if (Random.NextInclusive(1, randomizedWithinMax) == 1)
-				{
-					if (tooltip > -1)
-						return TooltipRandomizer.GetTooltip(tooltip);
-
-					return TooltipRandomizer.NextMenuTooltip();
-				}
+				if (Random.Next(1, randomizedWithinMax) == 1)
+					return tooltip > -1 
+						? TooltipRandomizer.GetTooltip(tooltip) 
+						: TooltipRandomizer.NextMenuTooltip();
 
 				return ResourceManager.GetString(resKey)!;
 			}

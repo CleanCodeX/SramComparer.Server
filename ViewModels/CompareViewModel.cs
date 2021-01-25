@@ -5,15 +5,16 @@ using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
 using Common.Shared.Min.Helpers;
 using Microsoft.AspNetCore.Components;
-using SramComparer.Helpers;
-using SramComparer.Services;
-using SramComparer.SoE.Enums;
-using SramComparer.SoE.Services;
+using SRAM.Comparison.Helpers;
+using SRAM.Comparison.Services;
+using SRAM.Comparison.SoE.Enums;
+using SRAM.Comparison.SoE.Services;
 using WebApp.SoE.Extensions;
 using WebApp.SoE.Services;
 using WebApp.SoE.Shared.Enums;
 using WebApp.SoE.ViewModels.Bases;
 using Res = WebApp.SoE.Properties.Resources;
+// ReSharper disable ValueParameterNotUsed
 #pragma warning disable 8509
 
 namespace WebApp.SoE.ViewModels
@@ -82,7 +83,7 @@ namespace WebApp.SoE.ViewModels
 				ComparisonFileStream.Position = 0;
 
 				Options.CurrentFilePath = CurrentFileName;
-				Options.ComparisonFilePath = ComparisonFileName;
+				Options.ComparisonPath = ComparisonFileName;
 
 				new CommandHandlerSoE(ColorizeOutput ? new HtmlConsolePrinterSoE() : new ConsolePrinter()).Compare(
 					CurrentFileStream, ComparisonFileStream, Options, output);

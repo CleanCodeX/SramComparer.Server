@@ -1,6 +1,6 @@
 ﻿using System;
 using WebApp.SoE.Extensions;
-using SramComparer.SoE.Services;
+using SRAM.Comparison.SoE.Services;
 
 namespace WebApp.SoE.Services
 {

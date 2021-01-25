@@ -2,10 +2,10 @@
 using System.Drawing;
 using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
+using IO.Extensions;
 using Microsoft.AspNetCore.Components.Forms;
-using SramCommons.Extensions;
-using SramComparer.Helpers;
-using SramComparer.Properties;
+using SRAM.Comparison.Helpers;
+using SRAM.Comparison.Properties;
 using WebApp.SoE.Extensions;
 using WebApp.SoE.ViewModels.Bases;
 

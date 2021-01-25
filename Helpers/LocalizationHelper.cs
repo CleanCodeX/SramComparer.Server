@@ -39,10 +39,10 @@ namespace WebApp.SoE.Helpers
 			var resTypes = new[]
 			{
 				typeof(WebApp.SoE.Properties.Resources),
-				typeof(SramComparer.SoE.Properties.Resources),
-				typeof(SramComparer.Properties.Resources),
-				typeof(RosettaStone.Sram.SoE.Properties.Resources),
-				typeof(SramCommons.Properties.Resources),
+				typeof(SRAM.Comparison.SoE.Properties.Resources),
+				typeof(SRAM.Comparison.Properties.Resources),
+				typeof(SRAM.SoE.Properties.Resources),
+				typeof(IO.Properties.Resources),
 			};
 			
 			var sb = new StringBuilder();

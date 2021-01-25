@@ -19,7 +19,7 @@ namespace WebApp.SoE.Helpers
 		[ThreadStatic]
 		private static DateTimeOffset lastLockedAt;
 		[ThreadStatic]
-		private static int lastLockedIndex = -1;
+		private static int lastLockedIndex;
 
 		static TooltipRandomizer()
 		{
@@ -27,9 +27,9 @@ namespace WebApp.SoE.Helpers
 			Initialize();
 		}
 
-		public static string NextTooltip() => GetTooltip(Random.Next(ListCount));
-		public static string NextMenuTooltip() => GetTooltip(Random.Next(FindIndex(string.Empty)));
-		public static string GetTooltip(int index) => InternalGetTooltip(index);
+		public static string NextTooltip(bool allowFreeze = true) => GetTooltip(Random.Next(ListCount), allowFreeze);
+		public static string NextMenuTooltip(bool allowFreeze = true) => GetTooltip(Random.Next(FindIndex(string.Empty)), allowFreeze);
+		public static string GetTooltip(int index, bool allowFreeze = true) => InternalGetTooltip(index, allowFreeze);
 
 		private static void Initialize()
 		{
@@ -56,7 +56,7 @@ namespace WebApp.SoE.Helpers
 			}
 		}
 
-		private static string InternalGetTooltip(int index)
+		private static string InternalGetTooltip(int index, bool allowFreeze)
 		{
 			if (ListCount == 0) return string.Empty;
 
@@ -65,21 +65,21 @@ namespace WebApp.SoE.Helpers
 
 			try
 			{
-				if (lastLockedIndex > -1)
+				if (lastLockedIndex > 0)
 				{
 					if ((DateTimeOffset.Now - lastLockedAt).TotalSeconds <= IHaveSpokenWaitTimeInSeconds)
-						return Template(GetFromIndex(lastLockedIndex));
+						return Template(GetFromIndex(lastLockedIndex - 1));
 
 					lastLockedAt = default;
-					lastLockedIndex = -1;
+					lastLockedIndex = 0;
 				}
 
 				var tooltip = GetFromIndex(index);
-				if (lastLockedIndex == -1 && tooltip.StartsWith("I have spoken."))
+				if (allowFreeze && lastLockedIndex == 0 && tooltip.StartsWith("I have spoken."))
 				{
 					if (Random.Next(IHaveSpokenStateChanceMaxValue) == 1) // lower these chances
 					{
-						lastLockedIndex = index;
+						lastLockedIndex = index + 1;
 						lastLockedAt = DateTimeOffset.Now;
 					}
 				}

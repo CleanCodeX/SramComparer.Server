@@ -13,11 +13,11 @@ Allows to compare (unknown) areas and modify offset values in Secret of Evermore
 * [C|W] Display of differences in decimal, hex and binary format
 * [C|W] Export comparison result as text file
 * [C|W] Display of changed or all game's checksums (O)
-* [C|W] Display checksum validation status (O)
+* [C|W] Display save slot checksum status (O)
 * [W] Last used settings will be automatically saved
 * [C] Option to either open or select the file in windows explorer
 * [C] Option to prompt for export file name or path
-* [C] Option to log  all comparison results
+* [C] Option to log all or exported only comparison results
 * [C] Backup / restore functionality of current and comparison sram file
 * [C] Save S-RAM file with different game name
 * [C] Settings are parameterized

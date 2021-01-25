@@ -4,13 +4,13 @@ using System.IO;
 using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
 using Common.Shared.Min.Helpers;
+using IO.Extensions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
-using RosettaStone.Sram.SoE.Models;
-using SramCommons.Extensions;
+using SRAM.SoE.Models;
 using WebApp.SoE.Extensions;
 using WebApp.SoE.Shared.Enums;
-using Snes9x = RosettaStone.Savestate.Snes9x.SoE.Extensions.StreamExtensions;
+using Snes9x = WRAM.Snes9x.SoE.Extensions.StreamExtensions;
 
 #pragma warning disable 8509
 
@@ -85,7 +85,7 @@ namespace WebApp.SoE.ViewModels.Bases
 			var fileExtension = Path.GetExtension(filePath).ToLower();
 			if (fileExtension == ".srm") return stream;
 
-			var result = Snes9x.GetSramFromSavestate(stream)!.GetSlice(SramSizes.All);
+			var result = Snes9x.GetSramFromSavestate(stream, GameRegion)!.GetSlice(SramSizes.All);
 
 			IsSavestate = true;
 
