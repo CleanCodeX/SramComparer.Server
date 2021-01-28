@@ -4,8 +4,8 @@ using System.IO;
 using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
 using Common.Shared.Min.Helpers;
+using IO.Extensions;
 using Microsoft.AspNetCore.Components;
-using SRAM.Comparison.Helpers;
 using SRAM.Comparison.Services;
 using SRAM.Comparison.SoE.Enums;
 using SRAM.Comparison.SoE.Services;
@@ -35,19 +35,19 @@ namespace WebApp.SoE.ViewModels
 		public bool SlotByteComparison
 		{
 			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.SlotByteComparison);
-			set => Options.ComparisonFlags = (ComparisonFlagsSoE)EnumHelper.InvertUIntFlag(Options.ComparisonFlags, ComparisonFlagsSoE.SlotByteComparison);
+			set => Options.ComparisonFlags = Options.ComparisonFlags.InvertUInt32Flags(ComparisonFlagsSoE.SlotByteComparison);
 		}
 
 		public bool NonSlotComparison
 		{
 			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.NonSlotComparison);
-			set => Options.ComparisonFlags = (ComparisonFlagsSoE)EnumHelper.InvertUIntFlag(Options.ComparisonFlags, ComparisonFlagsSoE.NonSlotComparison);
+			set => Options.ComparisonFlags = Options.ComparisonFlags.InvertUInt32Flags(ComparisonFlagsSoE.NonSlotComparison);
 		}
 
 		public bool ChecksumStatus
 		{
 			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.ChecksumStatus);
-			set => Options.ComparisonFlags = (ComparisonFlagsSoE)EnumHelper.InvertUIntFlag(Options.ComparisonFlags, ComparisonFlagsSoE.ChecksumStatus);
+			set => Options.ComparisonFlags = Options.ComparisonFlags.InvertUInt32Flags(ComparisonFlagsSoE.ChecksumStatus);
 		}
 
 		public enum SaveSlotOption : uint
