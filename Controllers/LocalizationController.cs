@@ -25,6 +25,6 @@ namespace WebApp.SoE.Controllers
 			return File(content, "application/text", fileName);
 		}
 
-		private static LocalizationOptions Options(string? targetCulture = null, bool returnHtml = false) => LocalizationOptions.Create(targetCulture, returnHtml);
+		private static LocalizationOptions Options(string? targetCulture = null, bool returnHtml = false) => LocalizationOptions.Create(targetCulture, returnHtml, targetCulture is null);
 	}
 }
