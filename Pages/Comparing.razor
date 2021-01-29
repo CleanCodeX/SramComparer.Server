@@ -28,7 +28,7 @@
 			</tr>
 			<tr>
 				<td><label>@Res.SaveSlot:@Ns</label></td>
-				<td><InputSelectEnum @bind-Value="@ViewModel.CurrentFileSaveSlot" style=@CurrentFileStyle title="@Res.LabelTooltipFile" /></td>
+				<td><InputSelectEnum @bind-Value="@CurrentFileSaveSlot" style=@CurrentFileStyle title="@Res.LabelTooltipFile" /></td>
 			</tr>
 			
 			<p />
@@ -43,7 +43,7 @@
 			</tr>
 			<tr>
 				<td><label>@Res.SaveSlot:@Ns</label></td>
-				<td><InputSelectEnum @bind-Value="@ViewModel.ComparisonFileSaveSlot" style=@ComparisonFileStyle /></td>
+				<td><InputSelectEnum @bind-Value="@ViewModel.ComparisonFileSaveSlot" style=@ComparisonFileStyle disabled="@ComparisonFileSaveSlotDisabled" /></td>
 			</tr>
 			
 			<p />

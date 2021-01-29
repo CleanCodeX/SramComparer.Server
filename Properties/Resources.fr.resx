@@ -279,8 +279,8 @@
 	<data name="LabelTooltipFile" xml:space="preserve">
 		<value>Sélectionnez un fichier de sauvegarde S-RAM (* .srm, *.comp) ou Snes9x (* .000 - * .009; *.state)</value>
 	</data>
-	<data name="ErrorWrongFileExtensionTemplate" xml:space="preserve">
-		<value>Erreur: le fichier {0} a une extension de fichier non prise en charge</value>
+	<data name="ErrorUnsupportedFileExtensionTemplate" xml:space="preserve">
+		<value>Erreur: le fichier [{0}] a une extension de fichier non prise en charge</value>
 	</data>
 	<data name="SaveSlotOffset" xml:space="preserve">
 		<value>Décalage dans la partie</value>

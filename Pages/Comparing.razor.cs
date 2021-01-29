@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.JSInterop;
 using WebApp.SoE.Extensions;
 using WebApp.SoE.Helpers;
+using WebApp.SoE.Shared.Enums;
 using WebApp.SoE.ViewModels;
 
 namespace WebApp.SoE.Pages
@@ -40,13 +41,48 @@ namespace WebApp.SoE.Pages
 		private string Unknown12BStyle => ViewModel.Unknown12B == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private string ChecksumStatusStyle => ViewModel.ChecksumStatus == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private string ChecksumStyle => ViewModel.Checksum == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private bool ComparisonFileSaveSlotDisabled => ViewModel.CurrentFileSaveSlot == SaveSlotId.All;
 
-		private Task OnCurrentFileChange(InputFileChangeEventArgs arg) => ViewModel.SetCurrentFileAsync(arg.File);
+		public SaveSlotId CurrentFileSaveSlot
+		{
+			get => ViewModel.CurrentFileSaveSlot;
+			set
+			{
+				if (ViewModel.CurrentFileSaveSlot == value) return;
+
+				if (value == SaveSlotId.All || value == ViewModel.ComparisonFileSaveSlot)
+					if (ViewModel.ComparisonFileSaveSlot != SaveSlotId.All)
+					{
+						ViewModel.ComparisonFileSaveSlot = SaveSlotId.All;
+						StateHasChanged();
+					}
+				
+				ViewModel.CurrentFileSaveSlot = value;
+			}
+		}
+
+		private async Task OnCurrentFileChange(InputFileChangeEventArgs arg)
+		{
+			try
+			{
+				await ViewModel.SetCurrentFileAsync(arg.File);
+			}
+			catch (Exception ex)
+			{
+				ViewModel.OutputMessage = ex.Message.ColorText(Color.Red).ToMarkup();
+			}
+		}
 
 		private async Task OnComparisonFileChange(InputFileChangeEventArgs arg)
 		{
-			ViewModel.ComparisonFileName = arg.File.Name;
-			ViewModel.ComparisonFileStream = await arg.File.OpenReadStream().CopyAsMemoryStreamAsync();
+			try
+			{
+				await ViewModel.SetComparisonFileAsync(arg.File);
+			}
+			catch (Exception ex)
+			{
+				ViewModel.OutputMessage = ex.Message.ColorText(Color.Red).ToMarkup();
+			}
 		}
 
 		protected override Task OnInitializedAsync() => ViewModel.LoadOptionsAsync();
@@ -56,11 +92,19 @@ namespace WebApp.SoE.Pages
 			if (!ViewModel.ColorizeOutput)
 				return ViewModel.OutputMessage.ToString();
 
+			var oldText = ViewModel.OutputMessage;
+			var wasColored = ViewModel.ColorizeOutput;
+
 			ViewModel.ColorizeOutput = false;
 			await ViewModel.CompareAsync();
 			ViewModel.ColorizeOutput = true;
 
-			return ViewModel.OutputMessage.ReplaceHtmlLineBreaks();
+			var result = ViewModel.OutputMessage.ReplaceHtmlLineBreaks();
+
+			if(wasColored)
+				ViewModel.OutputMessage = oldText;
+
+			return result;
 		}
 
 		public async Task DownloadAsync()

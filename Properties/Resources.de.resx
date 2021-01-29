@@ -278,8 +278,8 @@
 	<data name="LabelTooltipFile" xml:space="preserve">
 		<value>Wähle entweder eine S-RAM- (*.srm, *.comp) or Snes9x Savestate- Datei (*.000 - *.009; *.state)</value>
 	</data>
-	<data name="ErrorWrongFileExtensionTemplate" xml:space="preserve">
-		<value>Fehler: Datei  {0} hat eine nicht unterstützt Dateiendung</value>
+	<data name="ErrorUnsupportedFileExtensionTemplate" xml:space="preserve">
+		<value>Fehler: Datei [{0}] hat eine nicht unterstützte Dateiendung</value>
 	</data>
 	<data name="SaveSlotOffset" xml:space="preserve">
 		<value>Speicherslot-Offset</value>

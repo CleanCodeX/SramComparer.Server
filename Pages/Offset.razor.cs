@@ -1,6 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Drawing;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
+using WebApp.SoE.Extensions;
 using WebApp.SoE.Helpers;
 using WebApp.SoE.ViewModels;
 
@@ -27,6 +30,16 @@ namespace WebApp.SoE.Pages
 
 		protected override Task OnInitializedAsync() => ViewModel.LoadOptionsAsync();
 
-		private Task OnCurrentFileChange(InputFileChangeEventArgs arg) => ViewModel.SetCurrentFileAsync(arg.File);
+		private async Task OnCurrentFileChange(InputFileChangeEventArgs arg)
+		{
+			try
+			{
+				await ViewModel.SetCurrentFileAsync(arg.File);
+			}
+			catch (Exception ex)
+			{
+				ViewModel.OutputMessage = ex.Message.ColorText(Color.Red).ToMarkup();
+			}
+		}
 	}
 }

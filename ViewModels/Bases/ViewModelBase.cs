@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using SoE.Models.Enums;
+using SRAM.Comparison.Helpers;
 using SRAM.Comparison.SoE;
 using WebApp.SoE.Properties;
 using WebApp.SoE.Shared.Enums;
@@ -20,7 +21,7 @@ namespace WebApp.SoE.ViewModels.Bases
 
 		public Options Options { get; private set; } = new();
 		public GameRegion GameRegion { get; set; }
-		public SaveSlotId CurrentFileSaveSlot { get; set; }
+		public virtual SaveSlotId CurrentFileSaveSlot { get; set; }
 		protected Stream? CurrentFileStream { get; set; }
 		public string? CurrentFileName { get; set; }
 
@@ -66,22 +67,11 @@ namespace WebApp.SoE.ViewModels.Bases
 			CurrentFileStream = await file.OpenReadStream().CopyAsMemoryStreamAsync();
 		}
 
-		private static void CheckFileExtension(string fileName)
+		protected static void CheckFileExtension(string fileName)
 		{
-			var extension = Path.GetExtension(fileName).ToLower().Substring(1);
-			var isNumber = int.TryParse(extension, out var number);
+			if (FilePathHelper.IsSaveFile(fileName)) return;
 
-			var isValid = extension switch
-			{
-				"srm" => true,
-				"state" => true,
-				_ when isNumber && number >= 0 && number  <= 9 => true,
-				_ => false
-			};
-
-			if (isValid) return;
-
-			throw new ArgumentException(Resources.ErrorWrongFileExtensionTemplate.InsertArgs(fileName));
+			throw new ArgumentException(Resources.ErrorUnsupportedFileExtensionTemplate.InsertArgs(fileName));
 		}
 	}
 }

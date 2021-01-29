@@ -358,12 +358,12 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Error: File {0} has an unsupported file extension
+        ///   Sucht eine lokalisierte Zeichenfolge, die Error: File [{0}] has an unsupported file extension
         /// ähnelt.
         /// </summary>
-        public static string ErrorWrongFileExtensionTemplate {
+        public static string ErrorUnsupportedFileExtensionTemplate {
             get {
-                return ResourceManager.GetString("ErrorWrongFileExtensionTemplate", resourceCulture);
+                return ResourceManager.GetString("ErrorUnsupportedFileExtensionTemplate", resourceCulture);
             }
         }
         

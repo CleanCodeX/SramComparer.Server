@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Resources;
-using WebApp.SoE.Properties;
 
 namespace WebApp.SoE.Helpers
 {
@@ -8,10 +6,9 @@ namespace WebApp.SoE.Helpers
 	{
 		private const int RandomizedWithinMaxDefault = 20;
 
-		private static readonly ResourceManager ResourceManager = new(typeof(Resources));
 		private static readonly Random Random = new();
 
-		public static string GetRes(string resKey, int randomizedWithinMax = RandomizedWithinMaxDefault, int tooltip = -1)
+		public static string GetRes(string resText, int randomizedWithinMax = RandomizedWithinMaxDefault, int tooltip = -1)
 		{
 			try
 			{
@@ -20,7 +17,7 @@ namespace WebApp.SoE.Helpers
 						? TooltipRandomizer.GetTooltip(tooltip) 
 						: TooltipRandomizer.NextMenuTooltip();
 
-				return ResourceManager.GetString(resKey)!;
+				return resText;
 			}
 			catch (Exception ex)
 			{

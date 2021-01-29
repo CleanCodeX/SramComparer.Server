@@ -384,8 +384,8 @@
   <data name="LabelTooltipFile" xml:space="preserve">
     <value>Select either a S-RAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009; *.state)</value>
   </data>
-  <data name="ErrorWrongFileExtensionTemplate" xml:space="preserve">
-    <value>Error: File {0} has an unsupported file extension
+  <data name="ErrorUnsupportedFileExtensionTemplate" xml:space="preserve">
+    <value>Error: File [{0}] has an unsupported file extension
 </value>
   </data>
   <data name="SaveSlotOffset" xml:space="preserve">
