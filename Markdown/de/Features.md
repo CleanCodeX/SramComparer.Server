@@ -14,6 +14,7 @@ Erlaubt das Vergleichen von (unbekannten) Bereichen und Modifizieren von Offset-
 * [C|W] Export des Vergleichsergebnisses als Text-Datei
 * [C|W] Anzeige der Speicherslot-Prüfsumme (O)
 * [C|W] Anzeige des Speicherslot Prüfsummen-Status (O)
+* [C|W] Anzeige und Export einer Speicherslot-Zusammenfassung
 * [W] Automatische Speicherung der zuletzt benutzten Einstellungen
 * [C] Option zum Öffnen oder Auswählen der Export-Datei im Windows-Explorer
 * [C] Option zum Eingeben des Export-Dateinamens oder -pfades
