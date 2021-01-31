@@ -1,11 +1,11 @@
-﻿# Localization
+﻿# Localizing
 
-Do you speak a language that this website doesn't currently offer but think you think it should be supported? 
+Do you speak a language that this website doesn't provide and bit think it should? 
 
 ## Show / Download Localization
-Check out the localization in the bottom area beforehand.
+Check out the an existing localization beforehand.
 
-If you want to translate this, download the <a href=localization/csv>CSV file</a> and open it in Excel or any other CSV editor. 
+If you want to do the translatation, download the CSV file and open it in Excel or any other CSV editor. 
 Make sure to not use semicolons (;) as it is used as column a separator.
 
 ## Sending

@@ -1,0 +1,29 @@
+﻿<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="LabelSymbolsHint1" xml:space="preserve">
+		<value>Definitivamente no hay nada aquí ...</value>
+	</data>
+	<data name="LabelSymbolsHint2" xml:space="preserve">
+		<value>Los mismos símbolos significan las mismas letras. ¡Eso fue fácil! ¿No fue así? ¡¿No?! Bueno ... tal vez deberías probar algunas fuentes ...</value>
+	</data>
+	<data name="LabelTooltipCrypticSymbols" xml:space="preserve">
+		<value>¿Te gustan los acertijos? ¿Sabes qué significan estos símbolos crípticos? ¿Ninguna pista? Hay una "pequeña" pista en una de las páginas web. Si ha encontrado la respuesta, envíeme un correo electrónico con su apodo. Te agregaré a una lista interna de desenredadores.</value>
+	</data>
+	<data name="LabelTooltipSymbolsHint1" xml:space="preserve">
+		<value>¿O quizás lo es?</value>
+	</data>
+	<data name="LabelTooltipSymbolsHint2" xml:space="preserve">
+		<value>¡Hace mucho calor aquí! ¡Encontraste la pista "oculta"! Al menos potencialmente ...</value>
+	</data>
+</root>

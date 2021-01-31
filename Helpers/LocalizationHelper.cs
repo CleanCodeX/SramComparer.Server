@@ -1,61 +1,45 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Resources;
 using System.Text;
+using Common.Shared.Min.Extensions;
 using WebApp.SoE.Extensions;
+// ReSharper disable RedundantNameQualifier
 
 namespace WebApp.SoE.Helpers
 {
 	public class LocalizationOptions
 	{
-		public bool ReturnHtml { get; set; }
 		public string? TargetCultureInitText { get; set; }
 		public string? TargetCulture { get; set; }
-		public bool HideTargetColumn { get; set; }
+		public bool HideEnglish { get; set; }
 
-		public static LocalizationOptions Create(string? targetCulture = null, bool returnHtml = false, bool hideTargetColumn = false) =>
-			new() { TargetCulture = targetCulture, ReturnHtml = returnHtml, HideTargetColumn = hideTargetColumn };
+		public static LocalizationOptions Create(string? targetCulture = null) => new() { TargetCulture = targetCulture};
 	}
 
 	public static class LocalizationHelper
 	{
-		public static string GetResourceStrings() => GetResourceStrings("en");
-		public static string GetResourceStrings(string? sourceCulture) => GetResourceStrings(sourceCulture, null);
-		public static string GetResourceStrings(string? sourceCulture, LocalizationOptions? options)
+		private const string TargetLanguageDefaultText = "YOUR TRANSLATION";
+
+		private static readonly Type[] ResTypes = 
 		{
-			options ??= new LocalizationOptions();
-			sourceCulture ??= "en";
+			typeof(WebApp.SoE.Properties.Resources),
+			typeof(SRAM.Comparison.SoE.Properties.Resources),
+			typeof(SRAM.Comparison.Properties.Resources),
+			typeof(global::SoE.Properties.Resources),
+			typeof(IO.Properties.Resources),
+		};
 
-			var returnHtml = options.ReturnHtml;
-			var hideTargetColumn = options.HideTargetColumn;
-			var targetCulture = options.TargetCulture ?? "Translation";
-			var targetCultureInitText = options.TargetCultureInitText ?? "NO TRANSLATION YET";
-			var cultureInfo = CultureInfo.GetCultureInfo(sourceCulture);
-			
-			sourceCulture = sourceCulture.ToUpperInvariant();
-			targetCulture = targetCulture.ToUpperInvariant();
+		public static Dictionary<string, string> GetResourceStrings(string culture)
+		{
+			var cultureInfo = CultureInfo.GetCultureInfo(culture);
 
-			var resTypes = new[]
-			{
-				typeof(WebApp.SoE.Properties.Resources),
-				typeof(SRAM.Comparison.SoE.Properties.Resources),
-				typeof(SRAM.Comparison.Properties.Resources),
-				typeof(SRAM.SoE.Properties.Resources),
-				typeof(IO.Properties.Resources),
-			};
-			
-			var sb = new StringBuilder();
+			Dictionary<string, string> result = new();
 
-			if (returnHtml)
-			{
-				sb.AppendLine("<table>");
-				sb.AppendLine($"<tr><th id='id'>ID</th><th id='source'>{sourceCulture}</th>{(hideTargetColumn ? string.Empty : $"<th id='target'>{targetCulture}</th>")}</tr>");
-			}
-			else
-				sb.AppendLine($"ID;{sourceCulture};{targetCulture}");
-
-			foreach (var type in resTypes)
+			foreach (var type in ResTypes)
 			{
 				var assemblyName = type.Assembly.GetName().Name!;
 				var resManager = new ResourceManager(type);
@@ -66,15 +50,150 @@ namespace WebApp.SoE.Helpers
 					var key = $"{assemblyName}.{entry.Key}";
 					var value = entry.Value!.ToString()!;
 
-					if(returnHtml)
-						sb.AppendLine($"<tr><td>{key}</td><td>{value.ReplaceWithHtmlLineBreaks()}</td>{(hideTargetColumn ? string.Empty : $"<td>{targetCultureInitText.ReplaceSpaces()}</td>")}</tr>");
-					else
-						sb.AppendLine($"{key};{value};{targetCultureInitText}");
+					result.Add(key, value);
 				}
 			}
 
-			if (returnHtml)
-				sb.AppendLine("</table>");
+			return result;
+		}
+
+		public static string GetLocalizationsCsv(string? sourceCulture) => GetLocalizationsCsv(sourceCulture, null);
+		public static string GetLocalizationsCsv(string? sourceCulture, LocalizationOptions? options)
+		{
+			options ??= new LocalizationOptions();
+			sourceCulture ??= "en";
+
+			var targetCulture = options.TargetCulture ?? "Translation";
+			var targetCultureInitText = options.TargetCultureInitText ?? TargetLanguageDefaultText;
+			var cultureInfo = CultureInfo.GetCultureInfo(sourceCulture);
+			var enCultureInfo = CultureInfo.GetCultureInfo("en");
+			var showEnglish = sourceCulture.ToLower() != "en" && !options.HideEnglish;
+
+			sourceCulture = sourceCulture.ToUpperInvariant();
+			targetCulture = targetCulture.ToUpperInvariant();
+			
+			CultureInfo? targetCultureInfo = null;
+			if (options.TargetCulture is not null)
+				targetCultureInfo = CultureInfo.GetCultureInfo(options.TargetCulture);
+
+			var sb = new StringBuilder();
+
+			sb.Append("ID");
+
+			if (showEnglish)
+				sb.Append(";EN");
+
+			sb.Append($";{sourceCulture}");
+			sb.AppendLine($";{targetCulture}");
+
+			foreach (var type in ResTypes)
+			{
+				var assemblyName = type.Assembly.GetName().Name!;
+				var resManager = new ResourceManager(type);
+				var resourceSet = resManager.GetResourceSet(cultureInfo, true, true)!;
+				ResourceSet? targetResourceSet = null;
+
+				if (targetCultureInfo is not null)
+					targetResourceSet = resManager.GetResourceSet(targetCultureInfo, true, false)!;
+
+				var enResourceSet = resManager.GetResourceSet(enCultureInfo, true, true)!;
+
+				foreach (var entry in resourceSet.OfType<DictionaryEntry>().OrderBy(e => (string)e.Key))
+				{
+					var key = (string)entry.Key;
+					var qualifiedKey = $"{assemblyName}.{key}";
+					var value = entry.Value!.ToString()!;
+
+					sb.Append(qualifiedKey);
+
+					if (showEnglish)
+						sb.Append($";{GetEnCultureText()}");
+
+					sb.Append($";{value}");
+					sb.AppendLine($";{TryGetTargetCultureText()}");
+
+					string TryGetTargetCultureText() => targetResourceSet?.GetString(key) ?? targetCultureInitText;
+					string GetEnCultureText() => enResourceSet.GetString(key) ?? targetCultureInitText;
+				}
+			}
+
+			return sb.ToString();
+		}
+
+		public static string GetLocalizationsHtml(string? sourceCulture) => GetLocalizationsHtml(sourceCulture, null);
+		public static string GetLocalizationsHtml(string? sourceCulture, LocalizationOptions? options)
+		{
+			options ??= new LocalizationOptions();
+			sourceCulture ??= "en";
+
+			var hideTargetColumn = options.TargetCulture is null;
+			var targetCulture = options.TargetCulture ?? "Translation";
+			var targetCultureInitText = options.TargetCultureInitText ?? TargetLanguageDefaultText;
+			var cultureInfo = CultureInfo.GetCultureInfo(sourceCulture);
+			var enCultureInfo = CultureInfo.GetCultureInfo("en");
+			var showEnglish = sourceCulture.ToLower() != "en" && !options.HideEnglish;
+
+			sourceCulture = sourceCulture.ToUpperInvariant();
+			targetCulture = targetCulture?.ToUpperInvariant();
+
+			CultureInfo? targetCultureInfo = null;
+			if (options.TargetCulture is not null)
+				targetCultureInfo = CultureInfo.GetCultureInfo(options.TargetCulture);
+
+			var sb = new StringBuilder();
+
+			sb.AppendLine("<table>");
+			sb.Append("<tr style='text-align:left'><th id='id'>ID</th>");
+			
+			if (showEnglish)
+				sb.Append("<th id='EN'>EN</th>");
+
+			sb.Append($"<th id='source'>{sourceCulture}</th>");
+
+			if (!hideTargetColumn)
+				sb.Append($"<th id='target'>{targetCulture}</th>");
+
+			sb.AppendLine("</tr>");
+
+			const string tdTemplate = "<td>{0}</td>";
+
+			foreach (var type in ResTypes)
+			{
+				var assemblyName = type.Assembly.GetName().Name!;
+				var resManager = new ResourceManager(type);
+				var resourceSet = resManager.GetResourceSet(cultureInfo, true, true)!;
+				ResourceSet? targetResourceSet = null;
+
+				if (targetCultureInfo is not null)
+					targetResourceSet = resManager.GetResourceSet(targetCultureInfo, true, false)!;
+
+				var enResourceSet = resManager.GetResourceSet(enCultureInfo, true, true)!;
+
+				foreach (var entry in resourceSet.OfType<DictionaryEntry>().OrderBy(e => (string)e.Key))
+				{
+					var key = (string)entry.Key;
+					var qualifiedKey = $"{assemblyName}.{key}";
+					var value = entry.Value!.ToString()!;
+
+					sb.Append("<tr>");
+					sb.Append(tdTemplate.InsertArgs(qualifiedKey));
+
+					if (showEnglish)
+						sb.Append(tdTemplate.InsertArgs(GetEnCultureText().ReplaceWithHtmlLineBreaks()));
+
+					sb.Append(tdTemplate.InsertArgs(value.ReplaceWithHtmlLineBreaks()));
+
+					if (!hideTargetColumn)
+						sb.Append(tdTemplate.InsertArgs(TryGetTargetCultureText().ReplaceWithHtmlLineBreaks()));
+
+					sb.AppendLine("</tr>");
+
+					string TryGetTargetCultureText() => targetResourceSet?.GetString(key) ?? targetCultureInitText;
+					string GetEnCultureText() => enResourceSet.GetString(key) ?? targetCultureInitText;
+				}
+			}
+
+			sb.AppendLine("</table>");
 
 			return sb.ToString();
 		}

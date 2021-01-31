@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Diagnostics.CodeAnalysis;
+using System.Text;
+using System.Text.Json;
+using Common.Shared.Min.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using WebApp.SoE.Helpers;
 
@@ -8,23 +12,60 @@ namespace WebApp.SoE.Controllers
 	[ApiController]
 	public class LocalizationController : ControllerBase
 	{
-		public ActionResult<string> Get(string? culture, string? targetCulture = null) => Content(LocalizationHelper.GetResourceStrings(culture, Options(targetCulture)));
+		public ActionResult<string> Get(string? culture)
+		{
+			SetCultureDefault(ref culture);
+			CheckCultures(culture);
+			return Content(JsonSerializer.Serialize(LocalizationHelper.GetResourceStrings(culture!)),
+				"application/json");
+		}
 
 		[HttpGet(nameof(Html))]
-		public ActionResult<string> Html(string? culture, string? targetCulture = null) => Content(LocalizationHelper.GetResourceStrings(culture, Options(targetCulture, true)), "text/html");
+		public ActionResult<string> Html(string? culture, string? targetCulture = null)
+		{
+			SetCultureDefault(ref culture);
+			CheckCultures(culture, targetCulture);
+			return Content(LocalizationHelper.GetLocalizationsHtml(culture, Options(targetCulture)), "text/html");
+		}
 
 		[HttpGet(nameof(Csv))]
 		public IActionResult Csv(string? culture, string? targetCulture = null)
 		{
-			culture ??= "EN";
-			targetCulture ??= "Translation";
+			try
+			{
+				SetCultureDefault(ref culture);
+				CheckCultures(culture, targetCulture);
 
-			var content = Encoding.UTF8.GetBytes(LocalizationHelper.GetResourceStrings(culture, Options(targetCulture)));
-			var fileName = $"{culture}_{targetCulture}.csv";
-			
-			return File(content, "application/text", fileName);
+				culture = culture.ToUpper();
+				targetCulture = targetCulture?.ToUpper();
+
+				var content = Encoding.UTF8.GetBytes(LocalizationHelper.GetLocalizationsCsv(culture, Options(targetCulture)));
+
+				targetCulture ??= "Translation";
+				var fileName = $"{culture}_{targetCulture}.csv";
+
+				if (culture.ToUpper() != "EN")
+					fileName = $"EN_{fileName}";
+
+				return File(content, "application/text", fileName);
+			}
+			catch (Exception ex)
+			{
+				return Problem(ex.Message);
+			}
 		}
 
-		private static LocalizationOptions Options(string? targetCulture = null, bool returnHtml = false) => LocalizationOptions.Create(targetCulture, returnHtml, targetCulture is null);
+		private static void SetCultureDefault([NotNull] ref string? culture) => culture ??= "EN";
+
+		private static void CheckCultures(string culture, string? targetCulture = null)
+		{
+			Requires.Equal(culture.Length, 2, nameof(culture), $"Culture [{culture}] must be of two letters");
+
+			if (targetCulture is not null)
+				Requires.Equal(targetCulture.Length, 2, nameof(targetCulture),
+					$"Target culture [{targetCulture}] must be of two letters");
+		}
+
+		private static LocalizationOptions Options(string? targetCulture = null) => LocalizationOptions.Create(targetCulture);
 	}
 }

@@ -32,7 +32,7 @@
 	<data name="ButtonGetValue" xml:space="preserve">
 		<value>Obtenir la valeur</value>
 	</data>
-	<data name="ButtonSetValue" xml:space="preserve">
+	<data name="ButtonSetNewValue" xml:space="preserve">
 		<value>Définir la valeur</value>
 	</data>
 	<data name="CaptionWebCompare" xml:space="preserve">
@@ -171,8 +171,8 @@
 	<data name="MenuTooltipAwesome" xml:space="preserve">
 		<value>Des pages géniales pour un jeu génial</value>
 	</data>
-	<data name="LabelUnknownBytes" xml:space="preserve">
-		<value>octets inconnus</value>
+	<data name="LabelUnknown" xml:space="preserve">
+		<value>inconnue</value>
 	</data>
 	<data name="LabelColorizeOutput" xml:space="preserve">
 		<value>Résultat avec couleurs</value><comment>Canged to colorize output</comment>
@@ -198,8 +198,8 @@
 	<data name="MenuTooltipRosettaStone" xml:space="preserve">
 		<value>Document Rosetta Stone</value>
 	</data>
-	<data name="LabelKnownBytes" xml:space="preserve">
-		<value>octets connus</value>
+	<data name="LabelKnown" xml:space="preserve">
+		<value>connu</value>
 	</data>
 	<data name="MenuTooltipCommunity" xml:space="preserve">
 		<value>Communité (Discord, Forum, etc.)</value>
@@ -277,7 +277,7 @@
 		<value>Projet Evermore »Rosetta Stone«</value>
 	</data>
 	<data name="LabelTooltipFile" xml:space="preserve">
-		<value>Sélectionnez un fichier de sauvegarde S-RAM (* .srm, *.comp) ou Snes9x (* .000 - * .009; *.state)</value>
+		<value>Sélectionnez un fichier de sauvegarde S-RAM (* .srm, *.comp) ou Snes9x (* .000 - * .009, *.state)</value>
 	</data>
 	<data name="ErrorUnsupportedFileExtensionTemplate" xml:space="preserve">
 		<value>Erreur: le fichier [{0}] a une extension de fichier non prise en charge</value>
@@ -308,5 +308,23 @@
 	</data>
 	<data name="MenuGlossary" xml:space="preserve">
 		<value>Glossaire</value>
+	</data>
+	<data name="LabelLocalizing" xml:space="preserve">
+		<value>Localisation</value>
+	</data>
+	<data name="SelectLanguage" xml:space="preserve">
+		<value>Choisir la langue</value>
+	</data>
+	<data name="LabelUnsupportedLanguages" xml:space="preserve">
+		<value>Langues non prises en charge</value>
+	</data>
+	<data name="LabelSupportedLanguages" xml:space="preserve">
+		<value>Langues prises en charge</value>
+	</data>
+	<data name="ButtonDownloadCsv" xml:space="preserve">
+		<value>Télécharger CSV</value>
+	</data>
+	<data name="LabelTranslatableLanguage" xml:space="preserve">
+		<value>Langue traduisible</value>
 	</data>
 </root>

@@ -139,28 +139,28 @@
     <value>Don't show</value>
   </data>
   <data name="EnumSaveSlot1Only" xml:space="preserve">
-    <value>#1 only</value>
+    <value>1st only</value>
   </data>
   <data name="EnumSaveSlot2Only" xml:space="preserve">
-    <value>#2 only</value>
+    <value>2nd only</value>
   </data>
   <data name="EnumSaveSlot3Only" xml:space="preserve">
-    <value>#3 only</value>
+    <value>3rd only</value>
   </data>
   <data name="EnumSaveSlot4Only" xml:space="preserve">
-    <value>#4 only</value>
+    <value>4th only</value>
   </data>
   <data name="EnumSaveSlot1" xml:space="preserve">
-    <value>#1</value>
+    <value>1st</value>
   </data>
   <data name="EnumSaveSlot2" xml:space="preserve">
-    <value>#2</value>
+    <value>2nd</value>
   </data>
   <data name="EnumSaveSlot3" xml:space="preserve">
-    <value>#3</value>
+    <value>3rd</value>
   </data>
   <data name="EnumSaveSlot4" xml:space="preserve">
-    <value>#4</value>
+    <value>4th</value>
   </data>
   <data name="ButtonTooltipDownloadChangedFile" xml:space="preserve">
     <value>Download changed file</value>
@@ -237,11 +237,11 @@
   <data name="LabelShowAdditionalSaveSlotInformation" xml:space="preserve">
     <value>Show additional save slot information</value>
   </data>
-  <data name="LabelKnownBytes" xml:space="preserve">
-    <value>known bytes</value>
+  <data name="LabelKnown" xml:space="preserve">
+    <value>known</value>
   </data>
-  <data name="LabelUnknownBytes" xml:space="preserve">
-    <value>unknown bytes</value>
+  <data name="LabelUnknown" xml:space="preserve">
+    <value>unknown</value>
   </data>
   <data name="ButtonTooltipGetOffsetValue" xml:space="preserve">
     <value>Get offset value</value><comment>The term Offset should only be translated if not understandable</comment>
@@ -252,7 +252,7 @@
   <data name="ButtonGetValue" xml:space="preserve">
     <value>Get value</value>
   </data>
-  <data name="ButtonSetValue" xml:space="preserve">
+  <data name="ButtonSetNewValue" xml:space="preserve">
     <value>Set value</value>
   </data>
   <data name="MenuTooltipCommunity" xml:space="preserve">
@@ -382,7 +382,7 @@
     <value>Evermore »Rosetta Stone« project</value>
   </data>
   <data name="LabelTooltipFile" xml:space="preserve">
-    <value>Select either a S-RAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009; *.state)</value>
+    <value>Select either a S-RAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009, *.state)</value>
   </data>
   <data name="ErrorUnsupportedFileExtensionTemplate" xml:space="preserve">
     <value>Error: File [{0}] has an unsupported file extension
@@ -414,5 +414,23 @@
   </data>
   <data name="MenuGlossary" xml:space="preserve">
     <value>Glossary</value>
+  </data>
+  <data name="LabelLocalizing" xml:space="preserve">
+    <value>Localizing</value>
+  </data>
+  <data name="SelectLanguage" xml:space="preserve">
+    <value>Select language</value>
+  </data>
+  <data name="LabelSupportedLanguages" xml:space="preserve">
+    <value>Supported Languages</value>
+  </data>
+  <data name="LabelUnsupportedLanguages" xml:space="preserve">
+    <value>Unsupported Languages</value>
+  </data>
+  <data name="ButtonDownloadCsv" xml:space="preserve">
+    <value>Download CSV</value>
+  </data>
+  <data name="LabelTranslatableLanguage" xml:space="preserve">
+    <value>Translatable language</value>
   </data>
 </root>

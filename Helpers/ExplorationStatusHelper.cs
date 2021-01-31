@@ -21,10 +21,10 @@ namespace WebApp.SoE.Helpers
 			var roundedPercentage = Math.Round(combinedPercentage, 1, MidpointRounding.ToZero);
 			Debug.Assert(roundedPercentage.Equals(100));
 
-			var unknown = Resources.LabelUnknownBytes;
-			var known = Resources.LabelKnownBytes;
-
-			return $"~{knownPercentage}% ({knownBytes}) {known} & ~{unknownPercentage}% ({unknownBytes}) {unknown} {est} 100% ({allBytes} {ResComp.Bytes})";
+			var unknown = Resources.LabelUnknown;
+			var known = Resources.LabelKnown;
+			
+			return $"{Resources.MenuSramFormat} [{Resources.SaveSlot}]: ~{knownPercentage}% {known} ({knownBytes} {ResComp.Bytes}) & ~{unknownPercentage}% {unknown} ({unknownBytes} {ResComp.Bytes}) {est} 100% ({allBytes} {ResComp.Bytes})";
 		}
 	}
 }

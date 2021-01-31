@@ -88,6 +88,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download CSV ähnelt.
+        /// </summary>
+        public static string ButtonDownloadCsv {
+            get {
+                return ResourceManager.GetString("ButtonDownloadCsv", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Download ähnelt.
         /// </summary>
         public static string ButtonDownloadFile {
@@ -135,9 +144,9 @@ namespace WebApp.SoE.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Set value ähnelt.
         /// </summary>
-        public static string ButtonSetValue {
+        public static string ButtonSetNewValue {
             get {
-                return ResourceManager.GetString("ButtonSetValue", resourceCulture);
+                return ResourceManager.GetString("ButtonSetNewValue", resourceCulture);
             }
         }
         
@@ -286,7 +295,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #1 ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die 1st ähnelt.
         /// </summary>
         public static string EnumSaveSlot1 {
             get {
@@ -295,7 +304,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #1 only ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die 1st only ähnelt.
         /// </summary>
         public static string EnumSaveSlot1Only {
             get {
@@ -304,7 +313,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #2 ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die 2nd ähnelt.
         /// </summary>
         public static string EnumSaveSlot2 {
             get {
@@ -313,7 +322,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #2 only ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die 2nd only ähnelt.
         /// </summary>
         public static string EnumSaveSlot2Only {
             get {
@@ -322,7 +331,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #3 ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die 3rd ähnelt.
         /// </summary>
         public static string EnumSaveSlot3 {
             get {
@@ -331,7 +340,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #3 only ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die 3rd only ähnelt.
         /// </summary>
         public static string EnumSaveSlot3Only {
             get {
@@ -340,7 +349,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #4 ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die 4th ähnelt.
         /// </summary>
         public static string EnumSaveSlot4 {
             get {
@@ -349,7 +358,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die #4 only ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die 4th only ähnelt.
         /// </summary>
         public static string EnumSaveSlot4Only {
             get {
@@ -440,11 +449,11 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die known bytes ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die known ähnelt.
         /// </summary>
-        public static string LabelKnownBytes {
+        public static string LabelKnown {
             get {
-                return ResourceManager.GetString("LabelKnownBytes", resourceCulture);
+                return ResourceManager.GetString("LabelKnown", resourceCulture);
             }
         }
         
@@ -463,6 +472,15 @@ namespace WebApp.SoE.Properties {
         public static string LabelLinkOpensInNewTab {
             get {
                 return ResourceManager.GetString("LabelLinkOpensInNewTab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Localizing ähnelt.
+        /// </summary>
+        public static string LabelLocalizing {
+            get {
+                return ResourceManager.GetString("LabelLocalizing", resourceCulture);
             }
         }
         
@@ -494,6 +512,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Supported Languages ähnelt.
+        /// </summary>
+        public static string LabelSupportedLanguages {
+            get {
+                return ResourceManager.GetString("LabelSupportedLanguages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Show save slot checksum status ähnelt.
         /// </summary>
         public static string LabelTooltipChecksumStatus {
@@ -503,7 +530,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Select either a S-RAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009; *.state) ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Select either a S-RAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009, *.state) ähnelt.
         /// </summary>
         public static string LabelTooltipFile {
             get {
@@ -566,11 +593,29 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die unknown bytes ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Translatable language ähnelt.
         /// </summary>
-        public static string LabelUnknownBytes {
+        public static string LabelTranslatableLanguage {
             get {
-                return ResourceManager.GetString("LabelUnknownBytes", resourceCulture);
+                return ResourceManager.GetString("LabelTranslatableLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die unknown ähnelt.
+        /// </summary>
+        public static string LabelUnknown {
+            get {
+                return ResourceManager.GetString("LabelUnknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Unsupported Languages ähnelt.
+        /// </summary>
+        public static string LabelUnsupportedLanguages {
+            get {
+                return ResourceManager.GetString("LabelUnsupportedLanguages", resourceCulture);
             }
         }
         
@@ -949,6 +994,15 @@ namespace WebApp.SoE.Properties {
         public static string SaveSlotOffset {
             get {
                 return ResourceManager.GetString("SaveSlotOffset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Select language ähnelt.
+        /// </summary>
+        public static string SelectLanguage {
+            get {
+                return ResourceManager.GetString("SelectLanguage", resourceCulture);
             }
         }
     }

@@ -1,5 +1,8 @@
 ﻿@attribute [Route(PageUris.Localizing)]
+@using System.Globalization
+@using Common.Shared.Min.Extensions
 @inherits AutoLangContentIdMarkupBase
+@inject SupportedCultures SupportedCultures
 
 @if (ShowAutoTranslateOption)
 {
@@ -11,36 +14,128 @@
 </div>
 
 <p>
-	<div>
-		<button class="@_buttonStyle" @onclick="@(InvertShowTranslation)">@($"[{_language}]") @_buttonCaption</button>
-		<ClipboardCopy OnCopyAsync="@GetCopyTextAsync" title="@Res.ButtonTooltipCopyLocalization" />
-	</div>
+	@Res.LabelSupportedLanguages: <br />
+	<select @onchange="SupportedLangChanged" style="@SelectStyle">
+		@foreach (var (LangCode, Name) in SupportedLanguages)
+		{
+			if (LangCode.EqualsInsensitive(DisplayLanguage!))
+			{
+				<option value="@LangCode" selected>@Name</option>
+			}
+			else
+			{
+				<option value="@LangCode">@Name</option>
+			}
+		}
+	</select>
+	<button class="@_buttonStyle" @onclick="@(InvertShowTranslation)">@_buttonCaption</button>
+	<ClipboardCopy OnCopyAsync="@GetCopyTextAsync" title="@Res.ButtonTooltipCopyLocalization" />
+</p>
 
-	@if (_showLocalization && _localization.HasValue)
+<p>
+	@Res.LabelUnsupportedLanguages: <br />
+	<select @bind="@TargetLanguage" style="@SelectStyle">
+		<option>@Res.SelectLanguage</option>
+
+		@foreach (var (LangCode, Name) in UnsupportedLanguages)
+		{
+			if (LangCode.EqualsInsensitive(TargetLanguage!))
+			{
+				<option value="@LangCode" selected>@Name</option>
+			}
+			else
+			{
+				<option value="@LangCode">@Name</option>
+			}
+		}
+	</select>
+
+	@Res.LabelTranslatableLanguage:
+	<select @bind="@TranslatableLanguage" style="@SelectStyle">
+		@foreach (var (LangCode, Name) in TranslatableLanguages)
+		{
+			if (LangCode.EqualsInsensitive(TranslatableLanguage!))
+			{
+				<option value="@LangCode" selected>@Name</option>
+			}
+			else
+			{
+				<option value="@LangCode">@Name</option>
+			}
+		}
+	</select>
+
+	<a href="localization/csv?culture=@TranslatableLanguage&targetCulture=@TargetLanguage" target=_>
+		<button disabled="@DownloadCsvFileButtonDisabled" class="btn btn-primary">@Res.ButtonDownloadCsv</button>
+	</a>
+</p>
+<p>
+	@if (_showLocalization && _localizations.HasValue)
 	{
 		<div class="result">
-			@_localization.Value
+			@_localizations.Value
 		</div>
 	}
-
 </p>
 
 @code {
 	private bool _showLocalization;
-	private MarkupString? _localization;
-	#nullable disable
+	private MarkupString? _localizations;
+#nullable disable
 	private string _buttonCaption;
-	private string _language;
+	private string TranslatableLanguage = "en";
+	private string DisplayLanguage = "en";
 	private string _buttonStyle;
-	#nullable restore
+	private Dictionary<string, string> TranslatableLanguages;
+	private Dictionary<string, string> SupportedLanguages;
+	private Dictionary<string, string> UnsupportedLanguages;
+#nullable restore
+	private string? TargetLanguage = Res.SelectLanguage;
+	private bool DownloadCsvFileButtonDisabled => TargetLanguage == Res.SelectLanguage;
+	private const string SelectStyle = "color: cyan;background-color: black;";
+
+	internal class TwoLetterLangComparer : IEqualityComparer<CultureInfo>
+	{
+		public bool Equals(CultureInfo? x, CultureInfo? y)
+		{
+			if (ReferenceEquals(x, y)) return true;
+			if (ReferenceEquals(x, null)) return false;
+			if (ReferenceEquals(y, null)) return false;
+			if (x.GetType() != y.GetType()) return false;
+			return string.Equals(x.TwoLetterISOLanguageName, y.TwoLetterISOLanguageName, StringComparison.InvariantCultureIgnoreCase);
+		}
+
+		public int GetHashCode(CultureInfo obj) => StringComparer.InvariantCultureIgnoreCase.GetHashCode(obj.TwoLetterISOLanguageName);
+	}
+
+	protected void SupportedLangChanged(ChangeEventArgs e)
+	{
+		DisplayLanguage = (string)e.Value!;
+		SetShowTranslation();
+	}
 
 	protected override void OnParametersSet()
 	{
 		ContentId = nameof(PageUris.Localizing);
+
+		if (SupportedCultures.Cultures.Contains(Language))
+			DisplayLanguage = Language;
+
+		UnsupportedLanguages = CultureInfo.GetCultures(CultureTypes.AllCultures)
+			.Distinct(new TwoLetterLangComparer())
+			.Where(e => e.DisplayName.Length > 3 
+			            && e.TwoLetterISOLanguageName.Length == 2 
+			            && !SupportedCultures.Cultures.Contains(e.TwoLetterISOLanguageName))
+			.OrderBy(e => e.DisplayName)
+			.ToDictionary(k => k.TwoLetterISOLanguageName, k => k.DisplayName);
+
+		SupportedLanguages = SupportedCultures.Cultures.ToDictionary(c => c, n => CultureInfo.GetCultureInfo(n).DisplayName);
+		TranslatableLanguages = new[] {"en", "de"}.ToDictionary(c => c, n => CultureInfo.GetCultureInfo(n).DisplayName);
+
 		SetShowTranslation();
 	}
 
-	private Task<string> GetCopyTextAsync() => Task.FromResult(LocalizationHelper.GetResourceStrings(_language));
+	private Task<string> GetCopyTextAsync() => Task.FromResult(LocalizationHelper.GetLocalizationsCsv(DisplayLanguage));
 
 	private void InvertShowTranslation()
 	{
@@ -53,11 +148,7 @@
 		_buttonCaption = _showLocalization ? Res.ButtonHideLocalization : Res.ButtonShowLocalization;
 		_buttonStyle = _showLocalization ? "btn btn-secondary" : "btn btn-dark";
 
-		_language = AutoTranslate ? Language : "en";
-		if (_language != "de")
-			_language = "en";
-
 		if (_showLocalization)
-			_localization ??= LocalizationHelper.GetResourceStrings(_language, LocalizationOptions.Create(null, true, true)).ToMarkup();
+			_localizations = LocalizationHelper.GetLocalizationsHtml(DisplayLanguage, new LocalizationOptions {HideEnglish = true}).ToMarkup();
 	}
 }

@@ -1,34 +1,37 @@
 ﻿## Changelog Web-App
 
+#### v010 (2021-01-16)
+* Updated S-RAM format based on recent explorations (unknown rate reduced to 25%)
+
 #### v006 (2021-01-16)
 * Improved savestate web comparison (removed requirement to save at the inn)
 
 #### v005 (2021-01-09)
-* added Web-Compare support for Snes9x savestates
+* Added Web-Compare support for Snes9x savestates
 * Added savestate web comparison (still requires to save at the inn)
 * Added savestate web offset value display
 
 #### v004 (2021-01-04)
-* added auto-translate option for pages
-* added localization page
+* Added auto-translate option for pages
+* Added localization page
 
 #### v003 (2020-12-29)
-* added quick links
-* added french localization
+* Added quick links
+* Added french localization
 
 #### v002 (2020-12-23)
-* added automatic settings loading/saving for web tools
-* restructured menu
-* added Awesome SoE pages link
-* added S-RAM docu link
-* added Forums / Discord invite link
-* moved most pages into markdown files hosted at GitHub
+* Added automatic settings loading/saving for web tools
+* Restructured menu
+* Added Awesome SoE pages link
+* Added S-RAM docu link
+* Added Forums / Discord invite link
+* Moved most pages into markdown files hosted at GitHub
 
 #### v001 (2020-12-01)
-* added download text file and copy to clipboard buttons for (colored) comparison results
-* added download button for changed sram file
-* added version display
-* added changelog download
+* Added download text file and copy to clipboard buttons for (colored) comparison results
+* Added download button for changed sram file
+* Added version display
+* Added changelog download
 
 #### v000 (2020-10-01)
 * First web release

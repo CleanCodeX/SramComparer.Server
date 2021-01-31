@@ -113,7 +113,7 @@
 	<data name="ButtonGetValue" xml:space="preserve">
 		<value>Zeige Wert</value>
 	</data>
-	<data name="ButtonSetValue" xml:space="preserve">
+	<data name="ButtonSetNewValue" xml:space="preserve">
 		<value>Setze Wert</value>
 	</data>
 	<data name="MenuAwesomeSoE" xml:space="preserve">
@@ -170,11 +170,11 @@
 	<data name="CaptionWebCompare" xml:space="preserve">
 		<value>Spielstand Web-Vergleich</value>
 	</data>
-	<data name="LabelKnownBytes" xml:space="preserve">
-		<value>bekannte Bytes</value>
+	<data name="LabelKnown" xml:space="preserve">
+		<value>bekannt</value>
 	</data>
-	<data name="LabelUnknownBytes" xml:space="preserve">
-		<value>unbekannte Bytes</value>
+	<data name="LabelUnknown" xml:space="preserve">
+		<value>unbekannt</value>
 	</data>
 	<data name="LabelTooltipProjectStatus" xml:space="preserve">
 		<value>Entdeckungs-Status</value>
@@ -246,7 +246,7 @@
 		<value>Lokalisierung ausblenden</value>
 	</data>
 	<data name="ButtonTooltipCopyLocalization" xml:space="preserve">
-		<value>Die Lokalisierung in die Zwischen ablage kopieren</value>
+		<value>Die Lokalisierung in die Zwischenablage kopieren</value>
 	</data>
 	<data name="MenuGuides" xml:space="preserve">
 		<value>Anleitungen</value>
@@ -276,7 +276,7 @@
 		<value>Evermore »Rosetta Stone« Projekt</value>
 	</data>
 	<data name="LabelTooltipFile" xml:space="preserve">
-		<value>Wähle entweder eine S-RAM- (*.srm, *.comp) or Snes9x Savestate- Datei (*.000 - *.009; *.state)</value>
+		<value>Wähle entweder eine S-RAM- (*.srm, *.comp) or Snes9x Savestate- Datei (*.000 - *.009, *.state)</value>
 	</data>
 	<data name="ErrorUnsupportedFileExtensionTemplate" xml:space="preserve">
 		<value>Fehler: Datei [{0}] hat eine nicht unterstützte Dateiendung</value>
@@ -307,5 +307,24 @@
 	</data>
 	<data name="MenuGlossary" xml:space="preserve">
 		<value>Glossar</value>
+	</data>
+	<data name="LabelLocalizing" xml:space="preserve">
+		<value>Lokalisieren</value>
+	</data>
+	<data name="SelectLanguage" xml:space="preserve">
+		<value>Sprache auswählen</value>
+	</data>
+	<data name="LabelSupportedLanguages" xml:space="preserve">
+		<value>Unterstützte Sprachen</value>
+	</data>
+	<data name="LabelUnsupportedLanguages" xml:space="preserve">
+		<value>Nicht-unterstützte Sprachen</value>
+	</data>
+	<data name="ButtonDownloadCsv" xml:space="preserve">
+		<value>CSV herunterladen
+</value>
+	</data>
+	<data name="LabelTranslatableLanguage" xml:space="preserve">
+		<value>Zu übersetzende Sprache</value>
 	</data>
 </root>
