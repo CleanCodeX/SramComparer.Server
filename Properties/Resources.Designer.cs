@@ -171,9 +171,9 @@ namespace WebApp.SoE.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Copy text to clipboard ähnelt.
         /// </summary>
-        public static string ButtonTooltipCopy {
+        public static string ButtonTooltipCopyComparison {
             get {
-                return ResourceManager.GetString("ButtonTooltipCopy", resourceCulture);
+                return ResourceManager.GetString("ButtonTooltipCopyComparison", resourceCulture);
             }
         }
         
@@ -183,6 +183,15 @@ namespace WebApp.SoE.Properties {
         public static string ButtonTooltipCopyLocalization {
             get {
                 return ResourceManager.GetString("ButtonTooltipCopyLocalization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Copy save slot summary to clipboard ähnelt.
+        /// </summary>
+        public static string ButtonTooltipCopySummary {
+            get {
+                return ResourceManager.GetString("ButtonTooltipCopySummary", resourceCulture);
             }
         }
         
@@ -205,11 +214,20 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Download as text file ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download comparison result as text file ähnelt.
         /// </summary>
-        public static string ButtonTooltipDownloadFile {
+        public static string ButtonTooltipDownloadComparisonFile {
             get {
-                return ResourceManager.GetString("ButtonTooltipDownloadFile", resourceCulture);
+                return ResourceManager.GetString("ButtonTooltipDownloadComparisonFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download save slot summary as text file ähnelt.
+        /// </summary>
+        public static string ButtonTooltipDownloadSummaryFile {
+            get {
+                return ResourceManager.GetString("ButtonTooltipDownloadSummaryFile", resourceCulture);
             }
         }
         
@@ -237,6 +255,15 @@ namespace WebApp.SoE.Properties {
         public static string ButtonTooltipSetOffsetValue {
             get {
                 return ResourceManager.GetString("ButtonTooltipSetOffsetValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show save slot summary ähnelt.
+        /// </summary>
+        public static string ButtonTooltipShowSummary {
+            get {
+                return ResourceManager.GetString("ButtonTooltipShowSummary", resourceCulture);
             }
         }
         

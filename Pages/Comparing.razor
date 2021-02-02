@@ -95,14 +95,24 @@
 			<p />
 
 			<tr>	
-				<td>
+				<td colspan="2">
 					<button class="btn btn-primary" @onclick="@ViewModel.CompareAsync" disabled="@CompareButtonDisabled" title="@Res.ButtonTooltipCompare">
 						<span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" />
 					</button>
 					
-					<ClipboardCopy OnCopyAsync="@CopyTextAsync" Disabled="@CopyButtonDisabled" title="@Res.ButtonTooltipCopy" />
+					<ClipboardCopy OnCopyAsync="@CopyComparisonTextAsync" Disabled="@CopyComparisonButtonDisabled" title="@Res.ButtonTooltipCopyComparison" />
 					
-					<button class="btn btn-primary" @onclick="@DownloadAsync" disabled="@CopyButtonDisabled" title="@Res.ButtonTooltipDownloadFile">
+					<button class="btn btn-primary" @onclick="@DownloadComparisonResultAsync" disabled="@CopyComparisonButtonDisabled" title="@Res.ButtonTooltipDownloadComparisonFile">
+						<span class="iconify" data-icon="oi-cloud-download" data-inline="false" />
+					</button>
+					| 
+					<button class="btn btn-primary" @onclick="@ViewModel.GetSummaryAsync" disabled="@ShowSummaryButtonDisabled" title="@Res.ButtonTooltipShowSummary">
+						<span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" />
+					</button>
+					
+					<ClipboardCopy OnCopyAsync="@CopySummaryTextAsync" Disabled="@CopySummaryButtonDisabled" title="@Res.ButtonTooltipCopySummary" />
+					
+					<button class="btn btn-primary" @onclick="@DownloadSummaryAsync" disabled="@CopySummaryButtonDisabled" title="@Res.ButtonTooltipDownloadSummaryFile">
 						<span class="iconify" data-icon="oi-cloud-download" data-inline="false" />
 					</button>
 				</td>

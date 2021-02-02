@@ -8,7 +8,6 @@ using Common.Shared.Min.Helpers;
 using IO.Extensions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
-using SRAM.Comparison.Properties;
 using SRAM.Comparison.Services;
 using SRAM.Comparison.SoE.Enums;
 using SRAM.Comparison.SoE.Services;
@@ -75,8 +74,9 @@ namespace WebApp.SoE.ViewModels
 		public MemoryStream? ComparisonFileStream { get; set; }
 		public string? ComparisonFileName { get; set; }
 		public MarkupString OutputMessage { get; set; }
-		public bool IsComparing { get; set; }
-		public bool CanCompare => !IsComparing && CurrentFileStream is not null && ComparisonFileStream is not null;
+		public bool IsBusy { get; set; }
+		public bool CanCompare => !IsBusy && CurrentFileStream is not null && ComparisonFileStream is not null;
+		public bool CanShowSummary => !IsBusy && CurrentFileStream is not null && CurrentFileSaveSlot != SaveSlotId.All;
 		public bool ColorizeOutput { get; set; } = true;
 
 #pragma warning disable 4014
@@ -169,7 +169,7 @@ namespace WebApp.SoE.ViewModels
 				CanCompare.ThrowIfFalse(nameof(CanCompare));
 
 				IsError = false;
-				IsComparing = true;
+				IsBusy = true;
 
 				await SaveOptionsAsync();
 
@@ -184,9 +184,8 @@ namespace WebApp.SoE.ViewModels
 				Options.CurrentFilePath = CurrentFileName;
 				Options.ComparisonPath = ComparisonFileName;
 
-				var comparer = new CommandHandlerSoE(ColorizeOutput ? new HtmlConsolePrinterSoE() : new ConsolePrinter());
-
-				comparer.Compare(CurrentFileStream, ComparisonFileStream, Options, output);
+				var commandHandler = new CommandHandlerSoE(ColorizeOutput ? new HtmlConsolePrinterSoE() : new ConsolePrinter());
+				commandHandler.Compare(CurrentFileStream, ComparisonFileStream, Options, output);
 
 				OutputMessage = output.ToString().ToMarkup();
 			}
@@ -196,7 +195,37 @@ namespace WebApp.SoE.ViewModels
 				IsError = true;
 			}
 
-			IsComparing = false;
+			IsBusy = false;
+		}
+
+		public async Task GetSummaryAsync()
+		{
+			try
+			{
+				CanShowSummary.ThrowIfFalse(nameof(CanShowSummary));
+
+				IsError = false;
+				IsBusy = true;
+
+				await SaveOptionsAsync();
+
+				Requires.NotNull(CurrentFileStream, nameof(CurrentFileStream));
+
+				CurrentFileStream.Position = 0;
+				Options.CurrentFilePath = CurrentFileName;
+
+				var commandHandler = new CommandHandlerSoE(ColorizeOutput ? new HtmlConsolePrinterSoE() : new ConsolePrinter());
+				var summary = commandHandler.GetSummary(CurrentFileStream, Options);
+
+				OutputMessage = summary.ToMarkup();
+			}
+			catch (Exception ex)
+			{
+				OutputMessage = ex.GetColoredMessage();
+				IsError = true;
+			}
+
+			IsBusy = false;
 		}
 
 		protected internal override async Task LoadOptionsAsync()

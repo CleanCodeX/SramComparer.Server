@@ -44,7 +44,7 @@
 	<data name="ButtonTooltipCompare" xml:space="preserve">
 		<value>Comparar archivos de partidas guardadas</value>
 	</data>
-	<data name="ButtonTooltipCopy" xml:space="preserve">
+	<data name="ButtonTooltipCopyComparison" xml:space="preserve">
 		<value>Copiar texto al portapapeles</value>
 	</data>
 	<data name="ButtonTooltipCopyLocalization" xml:space="preserve">
@@ -56,8 +56,8 @@
 	<data name="ButtonTooltipDownloadChangedFile" xml:space="preserve">
 		<value>Descargar archivo modificado</value>
 	</data>
-	<data name="ButtonTooltipDownloadFile" xml:space="preserve">
-		<value>Descargar como archivo de texto</value>
+	<data name="ButtonTooltipDownloadComparisonFile" xml:space="preserve">
+		<value>Descargar el resultado de la comparación como archivo de texto</value>
 	</data>
 	<data name="ButtonTooltipEnableAutoTranslation" xml:space="preserve">
 		<value>Habilitar la traducción automática</value>
@@ -325,5 +325,14 @@
 	</data>
 	<data name="LabelTranslatableLanguage" xml:space="preserve">
 		<value>Idioma traducible</value>
+	</data>
+	<data name="ButtonTooltipCopySummary" xml:space="preserve">
+		<value>Copiar el resumen del espacio guardado en el portapapeles</value>
+	</data>
+	<data name="ButtonTooltipDownloadSummaryFile" xml:space="preserve">
+		<value>Descargar guardar resumen de ranura como archivo de texto</value>
+	</data>
+	<data name="ButtonTooltipShowSummary" xml:space="preserve">
+		<value>Mostrar resumen de espacio guardado</value>
 	</data>
 </root>

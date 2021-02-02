@@ -101,13 +101,13 @@
 	<data name="ButtonDownloadFile" xml:space="preserve">
     <value>Herunterladen</value>
   </data>
-	<data name="ButtonTooltipDownloadFile" xml:space="preserve">
-    <value>Als Text-Datei herunterladen</value>
-  </data>
+	<data name="ButtonTooltipDownloadComparisonFile" xml:space="preserve">
+		<value>Vergleichsergebnis als Text-Datei herunterladen</value>
+	</data>
 	<data name="LabelAppVersion" xml:space="preserve">
 		<value>Version</value>
 	</data>
-	<data name="ButtonTooltipCopy" xml:space="preserve">
+	<data name="ButtonTooltipCopyComparison" xml:space="preserve">
 		<value>Text in Zwischenablage kopieren</value>
 	</data>
 	<data name="ButtonGetValue" xml:space="preserve">
@@ -326,5 +326,14 @@
 	</data>
 	<data name="LabelTranslatableLanguage" xml:space="preserve">
 		<value>Zu übersetzende Sprache</value>
+	</data>
+	<data name="ButtonTooltipShowSummary" xml:space="preserve">
+		<value>Speicherslot-Zusammenfassung anzeigen</value>
+	</data>
+	<data name="ButtonTooltipCopySummary" xml:space="preserve">
+		<value>Speicherslot-Zusammenfassung in die Zwischenablage kopieren</value>
+	</data>
+	<data name="ButtonTooltipDownloadSummaryFile" xml:space="preserve">
+		<value>Speicherslot-Zusammenfassung als Text-Datei herunterden</value>
 	</data>
 </root>

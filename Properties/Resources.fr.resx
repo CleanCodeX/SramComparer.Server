@@ -87,11 +87,11 @@
 	<data name="ButtonTooltipCompare" xml:space="preserve">
 		<value>Comparer les fichiers de sauvegarde</value>
 	</data>
-	<data name="ButtonTooltipCopy" xml:space="preserve">
+	<data name="ButtonTooltipCopyComparison" xml:space="preserve">
 		<value>Copier le texte dans le presse-papiers</value>
 	</data>
-	<data name="ButtonTooltipDownloadFile" xml:space="preserve">
-		<value>Télécharger sous forme de fichier texte</value>
+	<data name="ButtonTooltipDownloadComparisonFile" xml:space="preserve">
+		<value>Télécharger le résultat de la comparaison sous forme de fichier texte</value>
 	</data>
 	<data name="LabelLinkOpensInNewTab" xml:space="preserve">
 		<value>Le lien s'ouvre dans un nouvel onglet</value>
@@ -326,5 +326,14 @@
 	</data>
 	<data name="LabelTranslatableLanguage" xml:space="preserve">
 		<value>Langue traduisible</value>
+	</data>
+	<data name="ButtonTooltipDownloadSummaryFile" xml:space="preserve">
+		<value>Télécharger le résumé de l'emplacement de sauvegarde sous forme de fichier texte</value>
+	</data>
+	<data name="ButtonTooltipShowSummary" xml:space="preserve">
+		<value>Afficher le résumé de l'emplacement de sauvegarde</value>
+	</data>
+	<data name="ButtonTooltipCopySummary" xml:space="preserve">
+		<value>Copier le résumé de l'emplacement d'enregistrement dans le presse-papiers</value>
 	</data>
 </root>

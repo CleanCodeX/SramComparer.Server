@@ -24,7 +24,9 @@ namespace WebApp.SoE.Pages
 #nullable restore
 		
 		private bool CompareButtonDisabled => !ViewModel.CanCompare;
-		private bool CopyButtonDisabled => ViewModel.IsError || ViewModel.IsComparing || ViewModel.OutputMessage.ToString().IsNullOrEmpty();
+		private bool ShowSummaryButtonDisabled => !ViewModel.CanShowSummary;
+		private bool CopyComparisonButtonDisabled => CompareButtonDisabled || ViewModel.IsError || ViewModel.OutputMessage.ToString().IsNullOrEmpty();
+		private bool CopySummaryButtonDisabled => ShowSummaryButtonDisabled || ViewModel.OutputMessage.ToString().IsNullOrEmpty();
 
 		private const string BgColor = "#111111";
 
@@ -87,11 +89,8 @@ namespace WebApp.SoE.Pages
 
 		protected override Task OnInitializedAsync() => ViewModel.LoadOptionsAsync();
 
-		private async Task<string> CopyTextAsync()
+		private async Task<string> CopyComparisonTextAsync()
 		{
-			if (!ViewModel.ColorizeOutput)
-				return ViewModel.OutputMessage.ToString();
-
 			var oldText = ViewModel.OutputMessage;
 			var wasColored = ViewModel.ColorizeOutput;
 
@@ -107,11 +106,30 @@ namespace WebApp.SoE.Pages
 			return result;
 		}
 
-		public async Task DownloadAsync()
+		private async Task<string> CopySummaryTextAsync()
+		{
+			await ViewModel.GetSummaryAsync();
+
+			return ViewModel.OutputMessage.ReplaceHtmlLineBreaks();
+		}
+
+		public async Task DownloadComparisonResultAsync()
 		{
 			try
 			{
-				await JsRuntime.StartDownloadAsync("Output.txt", Encoding.UTF8.GetBytes(await CopyTextAsync()));
+				await JsRuntime.StartDownloadAsync("Output.txt", Encoding.UTF8.GetBytes(await CopyComparisonTextAsync()));
+			}
+			catch (Exception ex)
+			{
+				ViewModel.OutputMessage = ex.Message.ColorText(Color.Red).ToMarkup();
+			}
+		}
+
+		public async Task DownloadSummaryAsync()
+		{
+			try
+			{
+				await JsRuntime.StartDownloadAsync($"Saveslot_{(int)CurrentFileSaveSlot}.txt", Encoding.UTF8.GetBytes(await CopySummaryTextAsync()));
 			}
 			catch (Exception ex)
 			{

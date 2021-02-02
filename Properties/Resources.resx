@@ -168,10 +168,10 @@
   <data name="ButtonDownloadFile" xml:space="preserve">
     <value>Download</value>
   </data>
-  <data name="ButtonTooltipDownloadFile" xml:space="preserve">
-    <value>Download as text file</value>
+  <data name="ButtonTooltipDownloadComparisonFile" xml:space="preserve">
+    <value>Download comparison result as text file</value>
   </data>
-  <data name="ButtonTooltipCopy" xml:space="preserve">
+  <data name="ButtonTooltipCopyComparison" xml:space="preserve">
     <value>Copy text to clipboard</value>
   </data>
   <data name="ButtonTooltipCopyLocalization" xml:space="preserve">
@@ -432,5 +432,14 @@
   </data>
   <data name="LabelTranslatableLanguage" xml:space="preserve">
     <value>Translatable language</value>
+  </data>
+  <data name="ButtonTooltipShowSummary" xml:space="preserve">
+    <value>Show save slot summary</value>
+  </data>
+  <data name="ButtonTooltipCopySummary" xml:space="preserve">
+    <value>Copy save slot summary to clipboard</value>
+  </data>
+  <data name="ButtonTooltipDownloadSummaryFile" xml:space="preserve">
+    <value>Download save slot summary as text file</value>
   </data>
 </root>
