@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WRAM", "..\WRAM\WRAM.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoE", "..\SoE\SoE.csproj", "{272007DB-887F-4044-B938-30319FD8A003}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IO.Modules", "..\IO.Modules\IO.Modules.csproj", "{0B15F0A7-A0E1-4C76-808A-81F372E1F061}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,14 @@ Global
 		{272007DB-887F-4044-B938-30319FD8A003}.Release|Any CPU.Build.0 = Release|Any CPU
 		{272007DB-887F-4044-B938-30319FD8A003}.Release|x86.ActiveCfg = Release|Any CPU
 		{272007DB-887F-4044-B938-30319FD8A003}.Release|x86.Build.0 = Release|Any CPU
+		{0B15F0A7-A0E1-4C76-808A-81F372E1F061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B15F0A7-A0E1-4C76-808A-81F372E1F061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B15F0A7-A0E1-4C76-808A-81F372E1F061}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0B15F0A7-A0E1-4C76-808A-81F372E1F061}.Debug|x86.Build.0 = Debug|Any CPU
+		{0B15F0A7-A0E1-4C76-808A-81F372E1F061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B15F0A7-A0E1-4C76-808A-81F372E1F061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B15F0A7-A0E1-4C76-808A-81F372E1F061}.Release|x86.ActiveCfg = Release|Any CPU
+		{0B15F0A7-A0E1-4C76-808A-81F372E1F061}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
