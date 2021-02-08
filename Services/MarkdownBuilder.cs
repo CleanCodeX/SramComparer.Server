@@ -3,12 +3,12 @@ using Markdig;
 using Markdig.Extensions.AutoIdentifiers;
 using Microsoft.AspNetCore.Components;
 
-namespace WebApp.SoE.Helpers
+namespace WebApp.SoE.Services
 {
 	/// <summary>Parses markdown content (md-files) into a MarkupString which can be displayed in blazor</summary>
-	public static class MarkdownHelper
+	public class MarkdownBuilder : IMarkdownBuilder
 	{
-		public static MarkupString Parse(string? markdown)
+		public MarkupString Parse(string? markdown)
 		{
 			if (markdown.IsNullOrEmpty()) return default;
 			

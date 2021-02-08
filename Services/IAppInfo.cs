@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace WebApp.SoE.Services
 {
-	public interface IAppInfoService
+	public interface IAppInfo
 	{
 		DateTime CompileTime { get; }
 		public string PackageVersion { get; }

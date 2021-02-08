@@ -20,6 +20,6 @@
 		if (result != null)
 			Text = result;
 
-		await JsRuntime.InvokeVoidAsync("clipboardCopy.copyText", TimeSpan.FromMilliseconds(100), Text!, GetRes(Res.AlertCopiedToClipboard), 20);
+		await JsRuntime.InvokeVoidAsync("clipboardCopy.copyText", TimeSpan.FromMilliseconds(100), Text!, Res.AlertCopiedToClipboard);
 	}
 }

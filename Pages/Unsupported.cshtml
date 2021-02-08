@@ -2,12 +2,15 @@
 
 @using Common.Shared.Min.Extensions
 @using WebApp.SoE.Helpers
+@using WebApp.SoE.Services
 @using WebApp.SoE.ViewModels
 @using Res = WebApp.SoE.Properties.Resources
 @using ResHidden = WebApp.SoE.Properties.Hidden.Resources
 
 @namespace WebApp.SoE.Pages
 @model BrowserInfoViewModel
+@inject ITooltipRandomizer TooltipRandomizer
+@inject IExplorationStatus ExplorationStatus
 
 <!DOCTYPE html>
 <html>
@@ -26,7 +29,7 @@
 <div class="page">
     <img src="media/banner.png" class="header" title="@TooltipRandomizer.NextTooltip()" />
     <img src="media/project.png" class="project" title="@TooltipRandomizer.NextTooltip()" />
-    <h5 class="statusInfo" title="@TooltipRandomizer.NextTooltip()">@ExplorationStatusHelper.GetExplorationStatus()</h5>
+    <h5 class="statusInfo" title="@TooltipRandomizer.NextTooltip()">@ExplorationStatus.GetStatus()</h5>
 
     <div class="content">
         <h1 class="welcome">@Res.LabelIndexTitle</h1>

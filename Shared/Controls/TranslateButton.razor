@@ -1,4 +1,5 @@
-﻿<div>
+﻿@using WebApp.SoE.Services
+<div>
 	<label>@Res.LabelAutoTranslate</label>&nbsp;
 
 	@{
@@ -7,13 +8,15 @@
 		var buttonTitle = Value ? Res.ButtonTooltipDisableAutoTranslation : Res.ButtonTooltipEnableAutoTranslation;
 	}
 
-	<button class="@buttonClass" @onclick="@ToggleAutoTranslateAsync" title="@GetRes(buttonTitle, 20)">@caption</button>
+	<button class="@buttonClass" @onclick="@ToggleAutoTranslateAsync" title="@RandomResTooltip[buttonTitle, 20]">@caption</button>
 </div>
 
 @code {
+	[Inject] private RandomResTooltip RandomResTooltip { get; set; } = default!;
+	
 	[Parameter]
 	public bool Value { get; set; }
-
+	
 	[Parameter]
 	public EventCallback<bool> ValueChanged { get; set; }
 

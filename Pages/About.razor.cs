@@ -7,7 +7,7 @@ namespace WebApp.SoE.Pages
 	[Route(PageUris.About)]
     public partial class About
     {
-	    [Inject] private IAppInfoService AppInfoService { get; set; } = default!;
+	    [Inject] private IAppInfo AppInfo { get; set; } = default!;
 
 		private bool ShowDebugLink { get; }
 

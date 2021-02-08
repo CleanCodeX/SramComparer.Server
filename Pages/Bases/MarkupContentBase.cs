@@ -1,16 +1,16 @@
 ﻿using System;
 using System.IO;
-using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
-using WebApp.SoE.Helpers;
+using WebApp.SoE.Services;
 
 namespace WebApp.SoE.Pages.Bases
 {
 	public abstract class MarkupContentBase : ComponentBase
 	{
 		[Inject] private IHttpClientFactory ClientFactory { get; set; } = default!;
+		[Inject] private IMarkdownBuilder MarkdownBuilder { get; set; } = default!;
 
 		private protected string? UrlToLoad;
 		private protected string? FileToLoad;
@@ -37,7 +37,7 @@ namespace WebApp.SoE.Pages.Bases
 			return Content.Value != string.Empty;
 		}
 
-		protected virtual Task<MarkupString> ParseContentAsync(string? content) => Task.FromResult(MarkdownHelper.Parse(content));
+		protected virtual Task<MarkupString> ParseContentAsync(string? content) => Task.FromResult(MarkdownBuilder.Parse(content));
 
 		protected async Task<string?> LoadFromUrlAsync(string url)
 		{

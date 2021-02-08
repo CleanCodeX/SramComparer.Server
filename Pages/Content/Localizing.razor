@@ -1,8 +1,13 @@
 ﻿@attribute [Route(PageUris.Localizing)]
+
 @using System.Globalization
 @using Common.Shared.Min.Extensions
+@using WebApp.SoE.Services
+
 @inherits AutoLangContentIdMarkupBase
+
 @inject SupportedCultures SupportedCultures
+@inject ILocalizationCollector LocalizationCollector
 
 @if (ShowAutoTranslateOption)
 {
@@ -135,7 +140,7 @@
 		SetShowTranslation();
 	}
 
-	private Task<string> GetCopyTextAsync() => Task.FromResult(LocalizationHelper.GetLocalizationsCsv(DisplayLanguage));
+	private Task<string> GetCopyTextAsync() => Task.FromResult(LocalizationCollector.GetLocalizationsCsv(DisplayLanguage));
 
 	private void InvertShowTranslation()
 	{
@@ -149,6 +154,6 @@
 		_buttonStyle = _showLocalization ? "btn btn-secondary" : "btn btn-dark";
 
 		if (_showLocalization)
-			_localizations = LocalizationHelper.GetLocalizationsHtml(DisplayLanguage, new LocalizationOptions {HideEnglish = true}).ToMarkup();
+			_localizations = LocalizationCollector.GetLocalizationsHtml(DisplayLanguage, new() {HideEnglish = true}).ToMarkup();
 	}
 }

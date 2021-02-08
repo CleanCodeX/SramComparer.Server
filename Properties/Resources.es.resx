@@ -138,7 +138,7 @@
 		<value>Proyecto Evermore »Rosetta Stone«</value>
 	</data>
 	<data name="LabelKnown" xml:space="preserve">
-		<value>conocido</value>
+		<value>bytes conocidos</value>
 	</data>
 	<data name="LabelLanguage" xml:space="preserve">
 		<value>Idioma</value>
@@ -180,7 +180,7 @@
 		<value>Este valor cambia en cada guardado del juego, tal vez una marca de tiempo o similar</value>
 	</data>
 	<data name="LabelUnknown" xml:space="preserve">
-		<value>desconocido</value>
+		<value>bytes desconocidos</value>
 	</data>
 	<data name="MenuAbout" xml:space="preserve">
 		<value>Acerca de</value>

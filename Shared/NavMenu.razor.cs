@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using WebApp.SoE.Extensions;
 using WebApp.SoE.Helpers;
+using WebApp.SoE.Services;
 
 namespace WebApp.SoE.Shared
 {
@@ -22,6 +23,8 @@ namespace WebApp.SoE.Shared
 			WebTools = WebTools_Flag | SramComparison
 		}
 
+		[Inject] private RandomResTooltip RandomResTooltip { get; set; } = default!;
+		[Inject] private ITooltipRandomizer TooltipRandomizer { get; set; } = default!;
 		[Inject] private ProtectedSessionStorage SessionStorage { get; set; } = default!;
 		[Inject] private NavigationManager NavManager { get; set; } = default!;
 		

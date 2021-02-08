@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace WebApp.SoE.Helpers
+namespace WebApp.SoE.Services
 {
-	public static class TooltipRandomizer 
+	public class TooltipRandomizer : ITooltipRandomizer
 	{
 		private const string TooltipFile = "wwwroot/Phrases.txt";
-		private const int IHaveSpokenWaitTimeInSeconds = 300;
-		private const int IHaveSpokenStateChanceMaxValue = 10;
-
+		
 		internal  static readonly Random Random = new();
 
 		private static readonly List<string> Tooltips = new();
@@ -21,15 +19,19 @@ namespace WebApp.SoE.Helpers
 		[ThreadStatic]
 		private static int lastLockedIndex;
 
+		public TooltipRandomizerOptions Options { get; }
+
 		static TooltipRandomizer()
 		{
 			LockObj ??= new();
 			Initialize();
 		}
 
-		public static string NextTooltip(bool allowFreeze = true) => GetTooltip(Random.Next(ListCount), allowFreeze);
-		public static string NextMenuTooltip(bool allowFreeze = true) => GetTooltip(Random.Next(FindIndex(string.Empty)), allowFreeze);
-		public static string GetTooltip(int index, bool allowFreeze = true) => InternalGetTooltip(index, allowFreeze);
+		public TooltipRandomizer(TooltipRandomizerOptions options) => Options = options;
+
+		public virtual string NextTooltip(bool allowFreeze = true) => GetTooltip(Random.Next(ListCount), allowFreeze);
+		public virtual string NextMenuTooltip(bool allowFreeze = true) => GetTooltip(Random.Next(FindIndex(string.Empty)), allowFreeze);
+		public virtual string GetTooltip(int index, bool allowFreeze = true) => InternalGetTooltip(index, allowFreeze);
 
 		private static void Initialize()
 		{
@@ -56,18 +58,23 @@ namespace WebApp.SoE.Helpers
 			}
 		}
 
-		private static string InternalGetTooltip(int index, bool allowFreeze)
+		private string InternalGetTooltip(int index, bool allowFreeze)
 		{
 			if (ListCount == 0) return string.Empty;
 
+			allowFreeze = allowFreeze && Options.FreezeTooltipOneOutOfChance > 0 && Options.FreezeTooltipBeginMarker is not null;
+
+			if (Random.Next(Options.TooltipOneOutOfChance) > 0) // chance to see a tooltip at all
+				return string.Empty;
+
 			if (index >= ListCount)
 				index = 0;
-
+			
 			try
 			{
 				if (lastLockedIndex > 0)
 				{
-					if ((DateTimeOffset.Now - lastLockedAt).TotalSeconds <= IHaveSpokenWaitTimeInSeconds)
+					if ((DateTimeOffset.Now - lastLockedAt).TotalSeconds <= Options.FreezeTooltipWaitTimeInSeconds)
 						return Template(GetFromIndex(lastLockedIndex - 1));
 
 					lastLockedAt = default;
@@ -75,9 +82,9 @@ namespace WebApp.SoE.Helpers
 				}
 
 				var tooltip = GetFromIndex(index);
-				if (allowFreeze && lastLockedIndex == 0 && tooltip.StartsWith("I have spoken."))
+				if (allowFreeze && lastLockedIndex == 0 && tooltip.StartsWith(Options.FreezeTooltipBeginMarker!))
 				{
-					if (Random.Next(IHaveSpokenStateChanceMaxValue) == 1) // lower these chances
+					if (Random.Next(Options.FreezeTooltipOneOutOfChance / Options.TooltipOneOutOfChance) == 0) // lower these chances
 					{
 						lastLockedIndex = index + 1;
 						lastLockedAt = DateTimeOffset.Now;

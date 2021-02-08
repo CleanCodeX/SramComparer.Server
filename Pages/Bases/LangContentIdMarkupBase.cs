@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using WebApp.SoE.Helpers;
+using WebApp.SoE.Services;
 
 namespace WebApp.SoE.Pages.Bases
 {

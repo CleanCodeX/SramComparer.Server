@@ -238,10 +238,10 @@
     <value>Show additional save slot information</value>
   </data>
   <data name="LabelKnown" xml:space="preserve">
-    <value>known</value>
+    <value>known bytes</value>
   </data>
   <data name="LabelUnknown" xml:space="preserve">
-    <value>unknown</value>
+    <value>unknown bytes</value>
   </data>
   <data name="ButtonTooltipGetOffsetValue" xml:space="preserve">
     <value>Get offset value</value><comment>The term Offset should only be translated if not understandable</comment>

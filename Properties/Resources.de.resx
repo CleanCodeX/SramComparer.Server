@@ -171,10 +171,10 @@
 		<value>Spielstand Web-Vergleich</value>
 	</data>
 	<data name="LabelKnown" xml:space="preserve">
-		<value>bekannt</value>
+		<value>bekannte Bytes</value>
 	</data>
 	<data name="LabelUnknown" xml:space="preserve">
-		<value>unbekannt</value>
+		<value>unbekannte Bytes</value>
 	</data>
 	<data name="LabelTooltipProjectStatus" xml:space="preserve">
 		<value>Entdeckungs-Status</value>

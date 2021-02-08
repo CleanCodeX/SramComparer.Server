@@ -5,6 +5,7 @@ using Common.Shared.Min.Extensions;
 using Microsoft.AspNetCore.Components;
 using WebApp.SoE.Extensions;
 using WebApp.SoE.Helpers;
+using WebApp.SoE.Services;
 
 namespace WebApp.SoE.Pages.Bases
 {
@@ -18,6 +19,8 @@ namespace WebApp.SoE.Pages.Bases
 
 		private const int TranslateErrorDelayInMilliseconds = 200;
 		private static readonly TranslateOptionEnum TranslateOption = TranslateOptionEnum.Markup;
+
+		[Inject] private ITranslator Translator { get; set; } = default!;
 
 		private bool _autoTranslate = false; 
 
@@ -60,7 +63,7 @@ namespace WebApp.SoE.Pages.Bases
 		{
 			try
 			{
-				return ContentCorrections(await TranslateHelper.TranslateTextAsync(PrefixContent(content), "en", Language));
+				return ContentCorrections(await Translator.TranslateTextAsync(PrefixContent(content), "en", Language));
 			}
 			catch (Exception ex)
 			{

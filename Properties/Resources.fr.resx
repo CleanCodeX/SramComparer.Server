@@ -172,7 +172,7 @@
 		<value>Des pages géniales pour un jeu génial</value>
 	</data>
 	<data name="LabelUnknown" xml:space="preserve">
-		<value>inconnue</value>
+		<value>octets inconnus</value>
 	</data>
 	<data name="LabelColorizeOutput" xml:space="preserve">
 		<value>Résultat avec couleurs</value><comment>Canged to colorize output</comment>
@@ -199,7 +199,7 @@
 		<value>Document Rosetta Stone</value>
 	</data>
 	<data name="LabelKnown" xml:space="preserve">
-		<value>connu</value>
+		<value>octets connus</value>
 	</data>
 	<data name="MenuTooltipCommunity" xml:space="preserve">
 		<value>Communité (Discord, Forum, etc.)</value>

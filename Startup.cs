@@ -28,9 +28,9 @@ namespace WebApp.SoE
 		// For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddSingleton<IAppInfoService, AppInfoService>();
-			services.AddScoped<CompareViewModel>(sp => new() {LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>()});
 			services.AddHttpContextAccessor();
+
+			services.AddScoped<CompareViewModel>(sp => new() {LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>()});
 			services.AddScoped<SetOffsetValueViewModel>(sp => new()
 			{
 				JsRuntime = sp.GetRequiredService<IJSRuntime>(),
@@ -43,7 +43,20 @@ namespace WebApp.SoE
 			var supportedCulturesSection = Configuration.GetSection(nameof(SupportedCultures));
 			services.AddOptions<SupportedCultures>().Bind(supportedCulturesSection);
 			var supportedCultureIds = supportedCulturesSection.GetSection("Cultures").GetChildren().Select(e => e.Value).ToList();
-			
+
+			services.AddOptions<TooltipRandomizerOptions>().Bind(Configuration.GetSection("TooltipRandomizer"));
+			services.AddSingleton(cfg => cfg.GetService<IOptionsMonitor<TooltipRandomizerOptions>>()!.CurrentValue);
+
+			services.AddSingleton<ITranslator, Translator>();
+			services.AddSingleton<ILocalizationCollector, LocalizationCollector>();
+			services.AddSingleton<IMarkdownBuilder, MarkdownBuilder>();
+			services.AddSingleton<IExplorationStatus, ExplorationStatus>();
+			services.AddSingleton<ITooltipRandomizer, TooltipRandomizer>();
+			services.AddSingleton<CrypticTooltipRandomizer>();
+			services.AddSingleton<IAppInfo, AppInfo>();
+			services.AddSingleton<IBrowserInfo, BrowserInfo>();
+			services.AddSingleton<IRandomResTooltip, RandomResTooltip>();
+
 			services.Configure<RequestLocalizationOptions>(
 				options =>
 				{
@@ -112,11 +125,9 @@ namespace WebApp.SoE
 				o.ES5FallbackValidation = request =>
 				{
 					var userAgent = request.Headers["User-Agent"];
+					var browserInfo = request.HttpContext.RequestServices.GetRequiredService<IBrowserInfo>();
 
-					if(!BrowserInfoHelper.IsSupportedBrowser(userAgent))
-						return BrowserInfoHelper.HasES5Support(userAgent);
-
-					return false;
+					return !browserInfo.IsSupportedBrowser(userAgent) && browserInfo.HasES5Support(userAgent);
 				};
 			});
 			app.UseStaticFiles();

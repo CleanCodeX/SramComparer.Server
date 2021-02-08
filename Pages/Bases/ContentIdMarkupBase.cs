@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.WebUtilities;
 using WebApp.SoE.Extensions;
 using WebApp.SoE.Helpers;
+using WebApp.SoE.Services;
 
 namespace WebApp.SoE.Pages.Bases
 {

@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 using Common.Shared.Min.Extensions;
 using IO.Extensions;
 
-namespace WebApp.SoE.Helpers
+namespace WebApp.SoE.Services
 {
 	public enum BrowserMinVersion
 	{
@@ -24,13 +24,13 @@ namespace WebApp.SoE.Helpers
 		Opera = 30
 	}
 
-	public static class BrowserInfoHelper
+	public class BrowserInfo : IBrowserInfo
 	{
 		private static readonly Dictionary<string, int> MinVersions = default(BrowserMinVersion).ToDictionary().ToDictionary(k => k.Key, v => v.Value.ToInt());
 
 		private static readonly Dictionary<string, int> ES5FallbackMinVersions = default(BrowserES5FallbackMinVersion).ToDictionary().ToDictionary(k => k.Key, v => v.Value.ToInt());
 
-		public static (string Name, int Version) ExtractBrowserInfo(in string userAgent)
+		public (string Name, int Version) ExtractBrowserInfo(in string userAgent)
 		{
 			var regEx = new Regex(@"(MSIE|Trident|(?!Gecko.+)Firefox|(?!AppleWebKit.+Chrome.+)Safari(?!.+Edge)|(?!AppleWebKit.+)Chrome(?!.+Edge)|(?!AppleWebKit.+Chrome.+Safari.+)Edge|AppleWebKit(?!.+Chrome|.+Safari)|Gecko(?!.+Firefox))(?: |\/)([\d\.apre]+)").Match(userAgent);
 
@@ -49,10 +49,10 @@ namespace WebApp.SoE.Helpers
 		}
 
 		
-		public static bool IsSupportedBrowser(string userAgent) => IsSupportedBrowser(ExtractBrowserInfo(userAgent));
+		public bool IsSupportedBrowser(string userAgent) => IsSupportedBrowser(ExtractBrowserInfo(userAgent));
 
-		private static bool IsSupportedBrowser((string Name, int Version) browserInfo) => IsSupportedBrowser(browserInfo.Name, browserInfo.Version);
-		public static bool IsSupportedBrowser(string Name, int version)
+		private bool IsSupportedBrowser((string Name, int Version) browserInfo) => IsSupportedBrowser(browserInfo.Name, browserInfo.Version);
+		public bool IsSupportedBrowser(string Name, int version)
 		{
 			if (!MinVersions.TryGetValue(Name, out var minVersion) || minVersion == 0)
 				return false;
@@ -60,10 +60,10 @@ namespace WebApp.SoE.Helpers
 			return version >= minVersion;
 		}
 
-		public static bool HasES5Support(string userAgent) => HasES5Support(ExtractBrowserInfo(userAgent));
-		private static bool HasES5Support((string Name, int Version) browserInfo) => HasES5Support(browserInfo.Name, browserInfo.Version);
+		public bool HasES5Support(string userAgent) => HasES5Support(ExtractBrowserInfo(userAgent));
+		private bool HasES5Support((string Name, int Version) browserInfo) => HasES5Support(browserInfo.Name, browserInfo.Version);
 
-		public static bool HasES5Support(string Name, int version)
+		public bool HasES5Support(string Name, int version)
 		{
 			if (!ES5FallbackMinVersions.TryGetValue(Name, out var minVersion) || minVersion == 0)
 				return false;

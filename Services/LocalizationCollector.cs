@@ -7,20 +7,12 @@ using System.Resources;
 using System.Text;
 using Common.Shared.Min.Extensions;
 using WebApp.SoE.Extensions;
+
 // ReSharper disable RedundantNameQualifier
 
-namespace WebApp.SoE.Helpers
+namespace WebApp.SoE.Services
 {
-	public class LocalizationOptions
-	{
-		public string? TargetCultureInitText { get; set; }
-		public string? TargetCulture { get; set; }
-		public bool HideEnglish { get; set; }
-
-		public static LocalizationOptions Create(string? targetCulture = null) => new() { TargetCulture = targetCulture};
-	}
-
-	public static class LocalizationHelper
+	public class LocalizationCollector : ILocalizationCollector
 	{
 		private const string TargetLanguageDefaultText = "YOUR TRANSLATION";
 
@@ -33,7 +25,7 @@ namespace WebApp.SoE.Helpers
 			typeof(IO.Properties.Resources),
 		};
 
-		public static Dictionary<string, string> GetResourceStrings(string culture)
+		public Dictionary<string, string> GetResourceStrings(string culture)
 		{
 			var cultureInfo = CultureInfo.GetCultureInfo(culture);
 
@@ -57,8 +49,7 @@ namespace WebApp.SoE.Helpers
 			return result;
 		}
 
-		public static string GetLocalizationsCsv(string? sourceCulture) => GetLocalizationsCsv(sourceCulture, null);
-		public static string GetLocalizationsCsv(string? sourceCulture, LocalizationOptions? options)
+		public string GetLocalizationsCsv(string? sourceCulture, LocalizationOptions? options)
 		{
 			options ??= new LocalizationOptions();
 			sourceCulture ??= "en";
@@ -120,8 +111,7 @@ namespace WebApp.SoE.Helpers
 			return sb.ToString();
 		}
 
-		public static string GetLocalizationsHtml(string? sourceCulture) => GetLocalizationsHtml(sourceCulture, null);
-		public static string GetLocalizationsHtml(string? sourceCulture, LocalizationOptions? options)
+		public string GetLocalizationsHtml(string? sourceCulture, LocalizationOptions? options)
 		{
 			options ??= new LocalizationOptions();
 			sourceCulture ??= "en";

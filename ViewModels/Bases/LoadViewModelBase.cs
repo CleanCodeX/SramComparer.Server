@@ -85,7 +85,7 @@ namespace WebApp.SoE.ViewModels.Bases
 			var fileExtension = Path.GetExtension(filePath).ToLower();
 			if (fileExtension == ".srm") return stream;
 
-			var result = Snes9x.GetSramFromSavestate(stream, GameRegion)!.GetSlice(SramSizes.All);
+			var result = Snes9x.GetSramFromSavestate(stream, GameRegion)!.GetSlice(SramSizes.Size);
 
 			IsSavestate = true;
 

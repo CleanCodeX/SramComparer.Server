@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace WebApp.SoE.Helpers
+namespace WebApp.SoE.Services
 {
 	public class SupportedCultures
 	{

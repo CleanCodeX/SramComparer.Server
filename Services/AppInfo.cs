@@ -5,14 +5,14 @@ using Common.Shared.Min.Extensions;
 
 namespace WebApp.SoE.Services
 {
-    public class AppInfoService : IAppInfoService
+    public class AppInfo : IAppInfo
     {
         public DateTime CompileTime { get; }
         public string PackageVersion { get; }
         public string? AppTitle { get; }
 
-        public AppInfoService() :this(Assembly.GetEntryAssembly()!) {}
-        public AppInfoService(Assembly assembly)
+        public AppInfo() :this(Assembly.GetEntryAssembly()!) {}
+        public AppInfo(Assembly assembly)
         {
             assembly.ThrowIfNull(nameof(assembly));
 

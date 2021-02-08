@@ -1,3 +1,6 @@
-﻿<a href="@PageUris.Home" title="@TooltipRandomizer.NextTooltip()">
+﻿@using WebApp.SoE.Services
+@inject ITooltipRandomizer TooltipRandomizer
+
+<a href="@PageUris.Home" title="@TooltipRandomizer.NextTooltip()">
 	<img src="media/SoE.png">
 </a>

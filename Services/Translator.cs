@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text.Json;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace WebApp.SoE.Helpers
+namespace WebApp.SoE.Services
 {
-	public static class TranslateHelper
+	public class Translator : ITranslator
 	{
-		public static async Task<string?> TranslateTextAsync(string content, string fromLanguage, string toLanguage)
+		public async Task<string?> TranslateTextAsync(string content, string fromLanguage, string toLanguage)
 		{
 			// Set the language from/to in the url (or pass it into this function)
 			string url = $"translate_a/single?client=gtx&sl={fromLanguage}&tl={toLanguage}&dt=t&q={HttpUtility.UrlEncode(content)}";
-			using var httpClient = new HttpClient() {BaseAddress = new Uri("https://translate.googleapis.com")};
+			using HttpClient httpClient = new() {BaseAddress = new("https://translate.googleapis.com")};
 
 			try
 			{
@@ -37,7 +36,7 @@ namespace WebApp.SoE.Helpers
 					var translationLineObject = item.EnumerateArray();
 
 					// Convert the IEnumerable translationLineObject to a IEnumerator
-					var translationLineString = translationLineObject.GetEnumerator();
+					using var translationLineString = translationLineObject.GetEnumerator();
 
 					// Get first object in IEnumerator
 					translationLineString.MoveNext();
@@ -48,11 +47,12 @@ namespace WebApp.SoE.Helpers
 
 				// Remove first blank character
 				if (translation.Length > 1) 
-					translation = translation.Substring(1); 
+					translation = translation[1..]; 
 
 				// Return translation
 				return translation;
 			}
+			// ReSharper disable once RedundantCatchClause
 			catch (Exception ex)
 			{
 				throw;

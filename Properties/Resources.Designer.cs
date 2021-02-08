@@ -476,7 +476,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die known ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die known bytes ähnelt.
         /// </summary>
         public static string LabelKnown {
             get {
@@ -629,7 +629,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die unknown ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die unknown bytes ähnelt.
         /// </summary>
         public static string LabelUnknown {
             get {

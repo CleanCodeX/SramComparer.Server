@@ -1,4 +1,7 @@
 ﻿@using SRAM.SoE.Extensions
+@using WebApp.SoE.Services
+@inject ITooltipRandomizer TooltipRandomizer
+@inject CrypticTooltipRandomizer CrypticTooltipRandomizer
 
 <a href="@PageUris.Home">
 	<img src="media/banner.png" class="header blur" title="@TooltipRandomizer.NextTooltip()" />

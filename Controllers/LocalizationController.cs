@@ -4,7 +4,8 @@ using System.Text;
 using System.Text.Json;
 using Common.Shared.Min.Helpers;
 using Microsoft.AspNetCore.Mvc;
-using WebApp.SoE.Helpers;
+using Microsoft.Extensions.DependencyInjection;
+using WebApp.SoE.Services;
 
 namespace WebApp.SoE.Controllers
 {
@@ -12,11 +13,18 @@ namespace WebApp.SoE.Controllers
 	[ApiController]
 	public class LocalizationController : ControllerBase
 	{
+		private ILocalizationCollector LocalizationCollector { get; }
+
+		public LocalizationController(IServiceProvider serviceProvider)
+		{
+			LocalizationCollector = serviceProvider.GetRequiredService<ILocalizationCollector>();
+		}
+
 		public ActionResult<string> Get(string? culture)
 		{
 			SetCultureDefault(ref culture);
 			CheckCultures(culture);
-			return Content(JsonSerializer.Serialize(LocalizationHelper.GetResourceStrings(culture!)),
+			return Content(JsonSerializer.Serialize(LocalizationCollector.GetResourceStrings(culture!)),
 				"application/json");
 		}
 
@@ -25,7 +33,7 @@ namespace WebApp.SoE.Controllers
 		{
 			SetCultureDefault(ref culture);
 			CheckCultures(culture, targetCulture);
-			return Content(LocalizationHelper.GetLocalizationsHtml(culture, Options(targetCulture)), "text/html");
+			return Content(LocalizationCollector.GetLocalizationsHtml(culture, Options(targetCulture)), "text/html");
 		}
 
 		[HttpGet(nameof(Csv))]
@@ -39,7 +47,7 @@ namespace WebApp.SoE.Controllers
 				culture = culture.ToUpper();
 				targetCulture = targetCulture?.ToUpper();
 
-				var content = Encoding.UTF8.GetBytes(LocalizationHelper.GetLocalizationsCsv(culture, Options(targetCulture)));
+				var content = Encoding.UTF8.GetBytes(LocalizationCollector.GetLocalizationsCsv(culture, Options(targetCulture)));
 
 				targetCulture ??= "Translation";
 				var fileName = $"{culture}_{targetCulture}.csv";
