@@ -12,7 +12,7 @@
 </div>
 
 @code {
-	[Inject] private RandomResTooltip RandomResTooltip { get; set; } = default!;
+	[Inject] private IRandomResTooltip RandomResTooltip { get; set; } = default!;
 	
 	[Parameter]
 	public bool Value { get; set; }

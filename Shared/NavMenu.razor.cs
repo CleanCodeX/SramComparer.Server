@@ -23,7 +23,7 @@ namespace WebApp.SoE.Shared
 			WebTools = WebTools_Flag | SramComparison
 		}
 
-		[Inject] private RandomResTooltip RandomResTooltip { get; set; } = default!;
+		[Inject] private IRandomResTooltip RandomResTooltip { get; set; } = default!;
 		[Inject] private ITooltipRandomizer TooltipRandomizer { get; set; } = default!;
 		[Inject] private ProtectedSessionStorage SessionStorage { get; set; } = default!;
 		[Inject] private NavigationManager NavManager { get; set; } = default!;
