@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Components.Forms;
 using SRAM.SoE.Models;
 using WebApp.SoE.Extensions;
 using WebApp.SoE.Shared.Enums;
-using Snes9x = WRAM.Snes9x.SoE.Extensions.StreamExtensions;
+using Snes9x = SRAM.SoE.Extensions.StreamExtensions;
 
 #pragma warning disable 8509
 
