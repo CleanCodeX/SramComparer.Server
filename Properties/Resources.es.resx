@@ -176,7 +176,7 @@
 	<data name="LabelTooltipSlotByteComparison" xml:space="preserve">
 		<value>Compare toda el área de la ranura guardada byte por byte (incluidas las áreas "conocidas")</value>
 	</data>
-	<data name="LabelTooltipUnknown12B" xml:space="preserve">
+	<data name="LabelTooltipScriptedEventTimer" xml:space="preserve">
 		<value>Este valor cambia en cada guardado del juego, tal vez una marca de tiempo o similar</value>
 	</data>
 	<data name="LabelUnknown" xml:space="preserve">

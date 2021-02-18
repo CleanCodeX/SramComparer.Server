@@ -40,7 +40,7 @@ namespace WebApp.SoE.Pages
 		private string CurrentFileStyle => ViewModel.CurrentFileSaveSlot == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private string ComparisonFileStyle => ViewModel.ComparisonFileSaveSlot == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private string GameRegionStyle => ViewModel.GameRegion == default ? SelectUnselectedStyle : SelectSelectedStyle;
-		private string Unknown12BStyle => ViewModel.Unknown12B == default ? SelectUnselectedStyle : SelectSelectedStyle;
+		private string ScriptedEventTimerStyle => ViewModel.ScriptedEventTimer == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private string ChecksumStatusStyle => ViewModel.ChecksumStatus == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private string ChecksumStyle => ViewModel.Checksum == default ? SelectUnselectedStyle : SelectSelectedStyle;
 		private bool ComparisonFileSaveSlotDisabled => ViewModel.CurrentFileSaveSlot == SaveSlotId.All;

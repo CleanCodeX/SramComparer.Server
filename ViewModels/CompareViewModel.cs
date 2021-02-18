@@ -135,14 +135,14 @@ namespace WebApp.SoE.ViewModels
 			}
 		}
 
-		private SaveSlotOption _unknown12B;
-		public SaveSlotOption Unknown12B
+		private SaveSlotOption _scriptedEventTimer;
+		public SaveSlotOption ScriptedEventTimer
 		{
-			get => _unknown12B;
+			get => _scriptedEventTimer;
 			set
 			{
-				if (_unknown12B == value) return;
-				_unknown12B = value;
+				if (_scriptedEventTimer == value) return;
+				_scriptedEventTimer = value;
 				StartComparison();
 			}
 		}
@@ -239,8 +239,8 @@ namespace WebApp.SoE.ViewModels
 					? SaveSlotOption.IfCompared
 					: SaveSlotOption.IfComparedAndDifferent;
 
-			if (Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.Unknown12BIfDifferent))
-				Unknown12B = Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.Unknown12B)
+			if (Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.ScriptedEventTimerIfDifferent))
+				ScriptedEventTimer = Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.ScriptedEventTimer)
 					? SaveSlotOption.IfCompared
 					: SaveSlotOption.IfComparedAndDifferent;
 		}
@@ -257,12 +257,12 @@ namespace WebApp.SoE.ViewModels
 					SaveSlotOption.IfComparedAndDifferent => Options.ComparisonFlags |= ComparisonFlagsSoE.ChecksumIfDifferent,
 				};
 
-			Options.ComparisonFlags &= ~ComparisonFlagsSoE.Unknown12B;
-			if (Unknown12B != default)
-				Options.ComparisonFlags = Unknown12B switch
+			Options.ComparisonFlags &= ~ComparisonFlagsSoE.ScriptedEventTimer;
+			if (ScriptedEventTimer != default)
+				Options.ComparisonFlags = ScriptedEventTimer switch
 				{
-					SaveSlotOption.IfCompared => Options.ComparisonFlags |= ComparisonFlagsSoE.Unknown12B,
-					SaveSlotOption.IfComparedAndDifferent => Options.ComparisonFlags |= ComparisonFlagsSoE.Unknown12BIfDifferent,
+					SaveSlotOption.IfCompared => Options.ComparisonFlags |= ComparisonFlagsSoE.ScriptedEventTimer,
+					SaveSlotOption.IfComparedAndDifferent => Options.ComparisonFlags |= ComparisonFlagsSoE.ScriptedEventTimerIfDifferent,
 				};
 
 			return base.SaveOptionsAsync();

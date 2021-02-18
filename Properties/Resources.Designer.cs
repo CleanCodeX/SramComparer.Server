@@ -613,9 +613,9 @@ namespace WebApp.SoE.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die This value changes at every in-game save - maybe a timestamp or similar ähnelt.
         /// </summary>
-        public static string LabelTooltipUnknown12B {
+        public static string LabelTooltipScriptedEventTimer {
             get {
-                return ResourceManager.GetString("LabelTooltipUnknown12B", resourceCulture);
+                return ResourceManager.GetString("LabelTooltipScriptedEventTimer", resourceCulture);
             }
         }
         

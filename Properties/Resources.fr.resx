@@ -189,7 +189,7 @@
 	<data name="MenuQuickLinks" xml:space="preserve">
 		<value>Liens rapides</value>
 	</data>
-	<data name="LabelTooltipUnknown12B" xml:space="preserve">
+	<data name="LabelTooltipScriptedEventTimer" xml:space="preserve">
 		<value>Cette valeur change à chaque sauvegarde en jeu</value>
 	</data>
 	<data name="LabelTooltipSaveSlotOffset" xml:space="preserve">

@@ -44,7 +44,7 @@
 	<data name="LabelShowAdditionalSaveSlotInformation" xml:space="preserve">
 		<value>Zusätzliche Speicherslot-Informationen anzeigen</value>
 	</data>
-	<data name="LabelTooltipUnknown12B" xml:space="preserve">
+	<data name="LabelTooltipScriptedEventTimer" xml:space="preserve">
 		<value>Dieser Wert ändert sich bei jedem In-game Speichern - vielleicht ein Zeitstempel oder ähnliches</value>
 	</data>
 	<data name="LabelColorizeOutput" xml:space="preserve">

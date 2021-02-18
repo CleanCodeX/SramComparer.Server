@@ -264,7 +264,7 @@
   <data name="LabelOffsetValue" xml:space="preserve">
     <value>Offset value</value><comment>The term Offset should only be translated if not understandable</comment>
   </data>
-  <data name="LabelTooltipUnknown12B" xml:space="preserve">
+  <data name="LabelTooltipScriptedEventTimer" xml:space="preserve">
     <value>This value changes at every in-game save - maybe a timestamp or similar</value>
   </data>
   <data name="LabelMandatory" xml:space="preserve">
