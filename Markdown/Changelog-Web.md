@@ -1,7 +1,8 @@
 ﻿## Changelog Web-App
 
 #### v010 (2021-01-16)
-* Updated S-RAM format based on recent explorations (unknown rate reduced to 25%)
+* Updated S-RAM format based on recent explorations (unknown rate reduced to 37%)
+* Added slot summary display (export)
 
 #### v006 (2021-01-16)
 * Improved savestate web comparison (removed requirement to save at the inn)

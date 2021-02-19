@@ -5,6 +5,13 @@ This application uses the latest .NET 5 runtime. Make sure you have it installed
 
 Hint: if download does not start, use rightclick - save target as
 
+#### v032 RC1 (2021-02-19) 
+<a href="http://xeth.de/Releases/SRAM.Comparison/032/Comparer-SoE-Watchdog-032-rc1-x64.zip">Download (64bit)</a>
+<a href="http://xeth.de/Releases/SRAM.Comparison/032/Comparer-SoE-Watchdog-032-rc1-x86.zip">Download (32bit)</a>
+* Updated SoE-S-RAM format
+* Integrated watch dog extension
+* Added slot summary display (export)
+
 #### v031 (2021-01-16) (with watchdog extension included) 
 <a href="http://xeth.de/Releases/SRAM.Comparison/031/Comparer-SoE-Watchdog-x64-031.zip">Download (64bit)</a>
 <a href="http://xeth.de/Releases/SRAM.Comparison/031/Comparer-SoE-Watchdog-x86-031.zip">Download (32bit)</a>

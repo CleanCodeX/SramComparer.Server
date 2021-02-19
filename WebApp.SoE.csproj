@@ -13,15 +13,13 @@
 	  <PackageProjectUrl>http://evermore.xeth.de</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/CleanCodeX/WebApp.SoE</RepositoryUrl>
 	  <PackageTags>SoE, Secret Of Evermore, S-RAM, SRAM, Savestate, SNES, Super Nintendo, Super Famicon, Blazor, Web-App, NET 5, Rosetta Stone</PackageTags>
-	  <PackageReleaseNotes>
-</PackageReleaseNotes>
 	  <RepositoryType>UI</RepositoryType>
 	  <Description>Web app for viewing »Rosetta Stone« documents and comparing S-RAM and editing S-RAM offset values online</Description>
   </PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="BlazorPolyfill.Server" Version="5.0.102" />
-		<PackageReference Include="CCX.SRAM.Comparison.SoE" Version="0.4.0-b7" />
+		<PackageReference Include="CCX.SRAM.Comparison.SoE" Version="0.4.0-c3" />
 		<PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.5.0" />
 		<PackageReference Include="Westwind.AspNetCore.LiveReload" Version="0.3.1" />
 	</ItemGroup>
