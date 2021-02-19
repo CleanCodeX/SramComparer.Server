@@ -34,6 +34,7 @@ namespace WebApp.SoE.ViewModels
 			catch (Exception ex)
 			{
 				Console.WriteLine(ex);
+				await LocalStorage.DeleteAsync(StorageKey);
 			}
 		}
 

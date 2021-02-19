@@ -38,6 +38,7 @@ namespace WebApp.SoE.ViewModels.Bases
 			catch (Exception ex)
 			{
 				Console.WriteLine(ex);
+				await LocalStorage.DeleteAsync(StorageKey);
 			}
 			
 			GameRegion = Options.GameRegion;
