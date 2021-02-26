@@ -14,46 +14,46 @@
         <li class="nav-item quicklinks">
             <NavLink class="nav-link" title="@TooltipRandomizer.NextTooltip()">
                 @quickLinkOpener @sp
-                <a href="@PageUris.RosettaStone" title="@RandomResTooltip[nameof(Res.MenuTooltipRosettaStone)]">
+                <a href="@PageUris.RosettaStone" title="@RandomResTooltip[Res.MenuTooltipRosettaStone]">
                     <span class="iconify" data-icon="oi-document"/>
                 </a>
                 @del
-                <a href="@PageUris.Awesome" title="@RandomResTooltip[nameof(Res.MenuTooltipAwesome)]">
+                <a href="@PageUris.Awesome" title="@RandomResTooltip[Res.MenuTooltipAwesome]">
                     <span class="iconify" data-icon="oi-star"/>
                 </a>
                 @del
-                <a href="@PageUris.Community" title="@RandomResTooltip[nameof(Res.MenuTooltipCommunity)]">
+                <a href="@PageUris.Community" title="@RandomResTooltip[Res.MenuTooltipCommunity]">
                     <span class="iconify" data-icon="oi-people"/>
                 </a>
                 @del
-                <a href="@PageUris.Discord" target="_" title="@RandomResTooltip[nameof(Res.MenuTooltipDiscord)]">
+                <a href="@PageUris.Discord" target="_" title="@RandomResTooltip[Res.MenuTooltipDiscord]">
                     <img src="media/Discord.png" class="discord" />
                 </a>
                 @del
-                <a href="@PageUris.Sources" title="@RandomResTooltip[nameof(Res.MenuTooltipSources)]">
+                <a href="@PageUris.Sources" title="@RandomResTooltip[Res.MenuTooltipSources]">
                     <img src="media/GitHub.png" class="github" />
                 </a>
                 @sp @quickLinkCloser
             </NavLink>
             <NavLink class="nav-link" title="@TooltipRandomizer.NextTooltip()">
                 @quickLinkOpener @sp
-                <a href="@PageUris.Comparison" title="@RandomResTooltip[nameof(Res.MenuTooltipComparison)]">
+                <a href="@PageUris.Comparison" title="@RandomResTooltip[Res.MenuTooltipComparison]">
                     <span class="iconify" data-icon="oi-magnifying-glass"/>
                 </a>
                 @del
-                <a href="@PageUris.OffsetEditing" title="@RandomResTooltip[nameof(Res.MenuTooltipOffsetEdit)]">
+                <a href="@PageUris.OffsetEditing" title="@RandomResTooltip[Res.MenuTooltipOffsetEdit]">
                     <span class="iconify" data-icon="oi-pencil"/>
                 </a>
                 @del
-                <a href="@PageUris.ConsoleApp" title="@RandomResTooltip[nameof(Res.MenuTooltipChangeLog)]">
+                <a href="@PageUris.ConsoleApp" title="@RandomResTooltip[Res.MenuTooltipChangeLog]">
                     <span class="iconify" data-icon="oi-cloud-download"/>
                 </a>
                 @del
-                <a href="@PageUris.Imagery" title="@RandomResTooltip[nameof(Res.MenuTooltipImagery)]">
+                <a href="@PageUris.Imagery" title="@RandomResTooltip[Res.MenuTooltipImagery]">
                     <span class="iconify" data-icon="oi-image"/>
                 </a>
                 @del
-                <a href="@PageUris.Guides" title="@RandomResTooltip[nameof(Res.MenuTooltipGuides)]">
+                <a href="@PageUris.Guides" title="@RandomResTooltip[Res.MenuTooltipGuides]">
                     <span class="iconify" data-icon="oi-document"/>
                 </a>
                 @sp @quickLinkCloser
@@ -64,7 +64,7 @@
     <!-- S-RAM Format -->
     <ol class="nav flex-column firstRow" title="@TooltipRandomizer.NextTooltip()">
         <li class="nav-item px-3">
-            <a class="nav-link" href="@PageUris.Goals" title="@RandomResTooltip[nameof(Res.MenuTooltipGoals)]">
+            <a class="nav-link" href="@PageUris.Goals" title="@RandomResTooltip[Res.MenuTooltipGoals]">
                 <span class="@(_sramFormat ? "oi oi-zoom-out" : "oi oi-zoom-in")"/> 
                 <span class="oi oi-code"/> @Res.MenuSramFormat.ReplaceSpaces() 
             </a>
@@ -73,27 +73,27 @@
             {
                 <ol class="nav flex-column">
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Goals" title="@RandomResTooltip[nameof(Res.MenuTooltipGoals)]">
+                        <NavLink class="nav-link" href="@PageUris.Goals" title="@RandomResTooltip[Res.MenuTooltipGoals]">
                             <span class="oi oi-flag"/> @Res.MenuGoals.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Unknowns" title="@RandomResTooltip[nameof(Res.MenuTooltipTheUnknowns)]">
+                        <NavLink class="nav-link" href="@PageUris.Unknowns" title="@RandomResTooltip[Res.MenuTooltipTheUnknowns]">
                             <span class="oi oi-question-mark"/> @Res.MenuTheUnknowns.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Exploring" title="@RandomResTooltip[nameof(Res.MenuTooltipExploring)]">
+                        <NavLink class="nav-link" href="@PageUris.Exploring" title="@RandomResTooltip[Res.MenuTooltipExploring]">
                             <span class="oi oi-thumb-up"/> @Res.MenuExploring.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.RosettaStone" title="@RandomResTooltip[nameof(Res.MenuTooltipRosettaStone)]">
+                        <NavLink class="nav-link" href="@PageUris.RosettaStone" title="@RandomResTooltip[Res.MenuTooltipRosettaStone]">
                             <span class="oi oi-document"/> @Res.MenuRosettaStone.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Glossary" title="@RandomResTooltip[nameof(Res.MenuTooltipGlossary)]">
+                        <NavLink class="nav-link" href="@PageUris.Glossary" title="@RandomResTooltip[Res.MenuTooltipGlossary]">
                             <span class="oi oi-document"/> @Res.MenuGlossary.ReplaceSpaces()
                         </NavLink>
                     </li>
@@ -105,7 +105,7 @@
     <!-- S-RAM Comparison -->
     <ol class="nav flex-column" title="@TooltipRandomizer.NextTooltip()">
         <li class="nav-item px-3">
-            <a class="nav-link" href="@PageUris.Features" title="@RandomResTooltip[nameof(Res.MenuTooltipFeatures)]">
+            <a class="nav-link" href="@PageUris.Features" title="@RandomResTooltip[Res.MenuTooltipFeatures]">
                 <span class="@(_sramComparison ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
                 <span class="oi oi-eye"/> @Res.MenuSramComparison.ReplaceSpaces() 
             </a>
@@ -114,14 +114,14 @@
                 <ol class="nav flex-column">
                     <!-- Features -->
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="@PageUris.Features" title="@RandomResTooltip[nameof(Res.MenuTooltipFeatures)]">
+                        <NavLink class="nav-link" href="@PageUris.Features" title="@RandomResTooltip[Res.MenuTooltipFeatures]">
                             <span class="oi oi-circle-check"/> @Res.MenuFeatures.ReplaceSpaces()
                         </NavLink>
                     </li>
                     <!-- / Features -->
                     <!-- ConsoleApp -->
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="@PageUris.Imagery" title="@RandomResTooltip[nameof(Res.MenuTooltipImagery)]">
+                        <a class="nav-link" href="@PageUris.Imagery" title="@RandomResTooltip[Res.MenuTooltipImagery]">
                             <span class="@(_consoleApp ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
                             <span class="oi oi-command"/> @Res.MenuSramComparerCmdApp.ReplaceSpaces() 
                         </a>
@@ -129,17 +129,17 @@
                         {
                             <ol class="nav flex-column">
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.Imagery" title="@RandomResTooltip[nameof(Res.MenuTooltipImagery)]">
+                                    <NavLink class="nav-link" href="@PageUris.Imagery" title="@RandomResTooltip[Res.MenuTooltipImagery]">
                                         <span class="oi oi-image"/> @Res.MenuImagery.ReplaceSpaces()
                                     </NavLink>
                                 </li>
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.ChangelogConsole" title="@RandomResTooltip[nameof(Res.MenuTooltipChangeLog)]">
+                                    <NavLink class="nav-link" href="@PageUris.ChangelogConsole" title="@RandomResTooltip[Res.MenuTooltipChangeLog]">
                                         <span class="oi oi-arrow-circle-bottom"/> @Res.MenuChangeLog.ReplaceSpaces()
                                     </NavLink>
                                 </li>
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.Guides" title="@RandomResTooltip[nameof(Res.MenuTooltipGuides)]">
+                                    <NavLink class="nav-link" href="@PageUris.Guides" title="@RandomResTooltip[Res.MenuTooltipGuides]">
                                         <span class="oi oi-document"/> @Res.MenuGuides.ReplaceSpaces()
                                     </NavLink>
                                 </li>
@@ -149,7 +149,7 @@
                     <!-- / ConsoleApp -->
                     <!-- WebTools -->
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="@PageUris.Comparison" title="@RandomResTooltip[nameof(Res.MenuTooltipComparison)]">
+                        <a class="nav-link" href="@PageUris.Comparison" title="@RandomResTooltip[Res.MenuTooltipComparison]">
                             <span class="@(_webTools ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
                             <span class="oi oi-wrench" /> @Res.MenuWebTools.ReplaceSpaces() 
                         </a>
@@ -158,12 +158,12 @@
                         {
                             <ol class="nav flex-column">
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.Comparison" title="@RandomResTooltip[nameof(Res.MenuTooltipComparison)]">
+                                    <NavLink class="nav-link" href="@PageUris.Comparison" title="@RandomResTooltip[Res.MenuTooltipComparison]">
                                         <span class="oi oi-eye"/> @Res.MenuWebComparison.ReplaceSpaces()
                                     </NavLink>
                                 </li>
                                 <li class="nav-item px-3">
-                                    <NavLink class="nav-link" href="@PageUris.OffsetEditing" title="@RandomResTooltip[nameof(Res.MenuTooltipOffsetEdit)]">
+                                    <NavLink class="nav-link" href="@PageUris.OffsetEditing" title="@RandomResTooltip[Res.MenuTooltipOffsetEdit]">
                                         <span class="oi oi-pencil"/> @Res.MenuWebOffsetEdit.ReplaceSpaces()
                                     </NavLink>
                                 </li>
@@ -174,7 +174,7 @@
                 </ol>
                 <!-- Tutorials -->
                 <li class="nav-item px-3">
-                    <NavLink class="nav-link" href="@PageUris.Tutorials" title="@RandomResTooltip[nameof(Res.MenuTooltipTutorials)]">
+                    <NavLink class="nav-link" href="@PageUris.Tutorials" title="@RandomResTooltip[Res.MenuTooltipTutorials]">
                         <span class="oi oi-document"/> @Res.MenuTutorials.ReplaceSpaces()
                     </NavLink>
                 </li>
@@ -186,27 +186,27 @@
     <!-- Other -->
     <ol class="nav flex-column" title="@TooltipRandomizer.NextTooltip()">
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.Sources" title="@RandomResTooltip[nameof(Res.MenuTooltipSources)]">
+            <NavLink class="nav-link" href="@PageUris.Sources" title="@RandomResTooltip[Res.MenuTooltipSources]">
                 <img src="media/Github.png" class="github" />@(sp)GitHub
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.Contributing" title="@RandomResTooltip[nameof(Res.MenuTooltipContribute)]">
+            <NavLink class="nav-link" href="@PageUris.Contributing" title="@RandomResTooltip[Res.MenuTooltipContribute]">
                 <span class="oi oi-heart"/> @Res.MenuContributing.ReplaceSpaces()
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.Community" title="@RandomResTooltip[nameof(Res.MenuTooltipCommunity)]">
+            <NavLink class="nav-link" href="@PageUris.Community" title="@RandomResTooltip[Res.MenuTooltipCommunity]">
                 <span class="oi oi-people"/> @Res.MenuCommunity.ReplaceSpaces()
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.Awesome" title="@RandomResTooltip[nameof(Res.MenuTooltipAwesome)]">
+            <NavLink class="nav-link" href="@PageUris.Awesome" title="@RandomResTooltip[Res.MenuTooltipAwesome]">
                 <span class="oi oi-star"/> @Res.MenuAwesomeSoE.ReplaceSpaces()
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="@PageUris.About" title="@RandomResTooltip[nameof(Res.MenuTooltipAbout)]">
+            <NavLink class="nav-link" href="@PageUris.About" title="@RandomResTooltip[Res.MenuTooltipAbout]">
                 <span class="oi oi-info"/> @Res.MenuAbout.ReplaceSpaces()
             </NavLink>
         </li>
