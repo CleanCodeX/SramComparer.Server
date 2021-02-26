@@ -138,7 +138,7 @@ namespace WebApp.SoE
 				endpoints.MapDefaultControllerRoute();
 				endpoints.MapBlazorHub();
 				endpoints.MapRazorPages();
-				endpoints.MapFallbackToPage(PageUris.BrowserCheck);
+				endpoints.MapFallbackToPage("/_Host");
 			});
 		}
 	}
