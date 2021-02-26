@@ -35,6 +35,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IO.Modules", "..\IO.Modules
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RAMsettaStone.SoE", "..\RAMsettaStone.SoE\RAMsettaStone.SoE.csproj", "{D31E87DA-A8D3-425A-A4F3-6FBEB39DD445}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SRAM.Comparison.Media", "..\SRAM.Comparison.Media\SRAM.Comparison.Media.csproj", "{BDF5BE6E-36B5-4C59-90BA-DC00E277738A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -163,6 +165,14 @@ Global
 		{D31E87DA-A8D3-425A-A4F3-6FBEB39DD445}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D31E87DA-A8D3-425A-A4F3-6FBEB39DD445}.Release|x86.ActiveCfg = Release|Any CPU
 		{D31E87DA-A8D3-425A-A4F3-6FBEB39DD445}.Release|x86.Build.0 = Release|Any CPU
+		{BDF5BE6E-36B5-4C59-90BA-DC00E277738A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDF5BE6E-36B5-4C59-90BA-DC00E277738A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDF5BE6E-36B5-4C59-90BA-DC00E277738A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BDF5BE6E-36B5-4C59-90BA-DC00E277738A}.Debug|x86.Build.0 = Debug|Any CPU
+		{BDF5BE6E-36B5-4C59-90BA-DC00E277738A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDF5BE6E-36B5-4C59-90BA-DC00E277738A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDF5BE6E-36B5-4C59-90BA-DC00E277738A}.Release|x86.ActiveCfg = Release|Any CPU
+		{BDF5BE6E-36B5-4C59-90BA-DC00E277738A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
