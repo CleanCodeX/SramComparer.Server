@@ -23,7 +23,7 @@ using ResComp = SRAM.Comparison.Properties.Resources;
 namespace WebApp.SoE.ViewModels
 {
 	/// <summary>Viewmodel for SoE S-RAM comparison</summary>
-	public class CompareViewModel : ViewModelBase
+	public class ComparisonViewModel : ViewModelBase
 	{
 		public enum SaveSlotOption : uint
 		{
@@ -33,6 +33,23 @@ namespace WebApp.SoE.ViewModels
 			IfComparedAndDifferent,
 			[Display(Name = nameof(Res.EnumComparedSaveSlots), ResourceType = typeof(Res))]
 			IfCompared
+		}
+
+		public override SaveSlotId CurrentFileSaveSlot
+		{
+			get => base.CurrentFileSaveSlot;
+			set
+			{
+				if (base.CurrentFileSaveSlot == value) return;
+
+				base.CurrentFileSaveSlot = value;
+
+				if (ComparisonFileSaveSlot != SaveSlotId.All)
+					if (value == SaveSlotId.All || value == ComparisonFileSaveSlot)
+						ComparisonFileSaveSlot = SaveSlotId.All;
+
+				StartComparison();
+			}
 		}
 
 		private SaveSlotId _comparisonFileSaveSlot;
@@ -54,23 +71,6 @@ namespace WebApp.SoE.ViewModels
 			}
 		}
 
-		public override SaveSlotId CurrentFileSaveSlot
-		{
-			get => base.CurrentFileSaveSlot;
-			set
-			{
-				if (base.CurrentFileSaveSlot == value) return;
-
-				base.CurrentFileSaveSlot = value;
-
-				if (ComparisonFileSaveSlot != SaveSlotId.All)
-					if (value == SaveSlotId.All || value == ComparisonFileSaveSlot)
-						ComparisonFileSaveSlot = SaveSlotId.All;
-
-				StartComparison();
-			}
-		}
-
 		public MemoryStream? ComparisonFileStream { get; set; }
 		public string? ComparisonFileName { get; set; }
 		public MarkupString OutputMessage { get; set; }
@@ -84,7 +84,7 @@ namespace WebApp.SoE.ViewModels
 		{
 			if (!CanCompare) return;
 
-			CompareAsync();
+			//CompareAsync(); // TODO Currently buggy. Changes will only be updated the next time
 		}
 #pragma warning restore 4014
 

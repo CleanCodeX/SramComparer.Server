@@ -4,7 +4,7 @@
 Join the exploration team to find meanings for various S-RAM offsets.
 This can be done either by using 
 
-* [Web Comparison](comparing)
+* [Web Comparison](comparison)
 * [Windows Console App](changelog-console)
 
 ### Edit offset values
@@ -17,5 +17,5 @@ Reading and manipulating offset values can be done using the following:
 
 Post your assumptions and finds in the [Community](community)!
 
-If you're unfamiliar with using the Console App check out the [guides](guides). [Web Comparison](comparing) is easier to use and works with any kind of modern browser.
+If you're unfamiliar with using the Console App check out the [guides](guides). [Web Comparison](comparison) is easier to use and works with any kind of modern browser.
 

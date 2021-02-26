@@ -269,7 +269,7 @@
 	<data name="MenuTooltipOffsetEdit" xml:space="preserve">
 		<value>Web Offset-Änderung</value>
 	</data>
-	<data name="MenuTooltipCompare" xml:space="preserve">
+	<data name="MenuTooltipComparison" xml:space="preserve">
 		<value>Web-Vergleich von S-RAM-Dateien</value>
 	</data>
 	<data name="LabelIndexTitle" xml:space="preserve">

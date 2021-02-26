@@ -270,7 +270,7 @@
 	<data name="MenuTooltipOffsetEdit" xml:space="preserve">
 		<value>Modification du décalage Web</value>
 	</data>
-	<data name="MenuTooltipCompare" xml:space="preserve">
+	<data name="MenuTooltipComparison" xml:space="preserve">
 		<value>Comparaison Web des fichiers S-RAM</value>
 	</data>
 	<data name="LabelIndexTitle" xml:space="preserve">

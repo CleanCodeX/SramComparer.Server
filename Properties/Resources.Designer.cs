@@ -602,20 +602,20 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Compare whole save slot area byte by byte (including the &quot;knowns&quot; areas) ähnelt.
-        /// </summary>
-        public static string LabelTooltipSlotByteComparison {
-            get {
-                return ResourceManager.GetString("LabelTooltipSlotByteComparison", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die This value changes at every in-game save - maybe a timestamp or similar ähnelt.
         /// </summary>
         public static string LabelTooltipScriptedEventTimer {
             get {
                 return ResourceManager.GetString("LabelTooltipScriptedEventTimer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compare whole save slot area byte by byte (including the &quot;knowns&quot; areas) ähnelt.
+        /// </summary>
+        public static string LabelTooltipSlotByteComparison {
+            get {
+                return ResourceManager.GetString("LabelTooltipSlotByteComparison", resourceCulture);
             }
         }
         
@@ -847,9 +847,9 @@ namespace WebApp.SoE.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Web compare of S-RAM files ähnelt.
         /// </summary>
-        public static string MenuTooltipCompare {
+        public static string MenuTooltipComparison {
             get {
-                return ResourceManager.GetString("MenuTooltipCompare", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipComparison", resourceCulture);
             }
         }
         

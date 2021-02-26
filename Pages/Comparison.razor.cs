@@ -13,16 +13,14 @@ using WebApp.SoE.ViewModels;
 
 namespace WebApp.SoE.Pages
 {
-	[Route(PageUris.Comparing)]
-	public partial class Comparing
+	[Route(PageUris.Comparison)]
+	public partial class Comparison
 	{
 		private static readonly MarkupString Ns = (MarkupString)"&nbsp;";
 
-#nullable disable
-		[Inject] private IJSRuntime JsRuntime { get; set; }
-		[Inject] private CompareViewModel ViewModel { get; set; }
-#nullable restore
-		
+		[Inject] private IJSRuntime JsRuntime { get; set; } = default!;
+		[Inject] private ComparisonViewModel ViewModel { get; set; } = default!;
+
 		private bool CompareButtonDisabled => !ViewModel.CanCompare;
 		private bool ShowSummaryButtonDisabled => !ViewModel.CanShowSummary;
 		private bool CopyComparisonButtonDisabled => CompareButtonDisabled || ViewModel.IsError || ViewModel.OutputMessage.ToString().IsNullOrEmpty();

@@ -84,7 +84,7 @@ namespace WebApp.SoE.Shared
 				_ when path.StartsWith(PageUris.Guides, true) => ExpandedMenu.ConsoleApp,
 
 				// WebTools
-				_ when path == PageUris.Comparing.ToLower() => ExpandedMenu.WebTools,
+				_ when path == PageUris.Comparison.ToLower() => ExpandedMenu.WebTools,
 				_ when path.StartsWith(PageUris.Offset, true) => ExpandedMenu.WebTools,
 
 				_ => ExpandedMenu.None

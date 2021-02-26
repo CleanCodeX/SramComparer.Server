@@ -248,7 +248,7 @@
 	<data name="MenuTooltipCommunity" xml:space="preserve">
 		<value>Comunidad (Discord, Forum, etc.)</value>
 	</data>
-	<data name="MenuTooltipCompare" xml:space="preserve">
+	<data name="MenuTooltipComparison" xml:space="preserve">
 		<value>Comparación web de archivos S-RAM</value>
 	</data>
 	<data name="MenuTooltipContribute" xml:space="preserve">

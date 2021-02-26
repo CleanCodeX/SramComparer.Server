@@ -372,7 +372,7 @@
   <data name="MenuTooltipGoals" xml:space="preserve">
     <value>The goals of this project</value>
   </data>
-  <data name="MenuTooltipCompare" xml:space="preserve">
+  <data name="MenuTooltipComparison" xml:space="preserve">
     <value>Web compare of S-RAM files</value>
   </data>
   <data name="MenuTooltipOffsetEdit" xml:space="preserve">
