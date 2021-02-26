@@ -2,6 +2,8 @@
 
 ![Commands](https://raw.githubusercontent.com/CleanCodeX/SRAM.Comparison.SoE/main/Images/Cmd.png "Commands")
 
+![Single Bit Changes](https://raw.githubusercontent.com/CleanCodeX/SRAM.Comparison.SoE/main/Images/SingleBitChanges.png "Single Bit Changes")
+
 ![Few Flags Change](https://raw.githubusercontent.com/CleanCodeX/SRAM.Comparison.SoE/main/Images/FewFlagsChange.png "Few Flags Change")
 
 ![Many Values Change](https://raw.githubusercontent.com/CleanCodeX/SRAM.Comparison.SoE/main/Images/ManyValuesChange.png "Many Values Change")
