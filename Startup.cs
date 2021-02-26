@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.JSInterop;
-using WebApp.SoE.Helpers;
+using WebApp.SoE.Extensions;
 using WebApp.SoE.Services;
 using WebApp.SoE.ViewModels;
 using Westwind.AspNetCore.LiveReload;
@@ -64,7 +64,7 @@ namespace WebApp.SoE
 					var defaultCulture = CultureInfo.GetCultureInfo("en");
 					CultureInfo.CurrentCulture = defaultCulture;
 					CultureInfo.CurrentUICulture = defaultCulture;
-					
+
 					var supportedCultures = new List<CultureInfo> { defaultCulture };
 					foreach (var supportedCultureId in supportedCultureIds)
 						supportedCultures.Add(CultureInfo.GetCultureInfo(supportedCultureId));
@@ -125,8 +125,15 @@ namespace WebApp.SoE
 			{
 				o.ES5FallbackValidation = request =>
 				{
+					var services = request.HttpContext.RequestServices;
+					var supportedCultures = services.GetRequiredService<SupportedCultures>();
+
+					var currentCultureId = request.HttpContext.GetRequestCultureId() ?? "en";
+					if (!supportedCultures.Cultures.Contains(currentCultureId))
+						CultureInfo.CurrentCulture = CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(currentCultureId);
+
 					var userAgent = request.Headers["User-Agent"];
-					var browserInfo = request.HttpContext.RequestServices.GetRequiredService<IBrowserInfo>();
+					var browserInfo = services.GetRequiredService<IBrowserInfo>();
 
 					return !browserInfo.IsSupportedBrowser(userAgent) && browserInfo.HasES5Support(userAgent);
 				};

@@ -4,8 +4,7 @@ using System.IO;
 using System.Net;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Localization;
-using WebApp.SoE.Helpers;
+using WebApp.SoE.Extensions;
 using WebApp.SoE.Services;
 
 namespace WebApp.SoE.Pages.Bases
@@ -25,7 +24,7 @@ namespace WebApp.SoE.Pages.Bases
 
 		protected override void OnInitialized()
 		{
-			Language = GetRequestLanguage() ?? "en";
+			Language = HttpContextAccessor.HttpContext?.GetRequestCultureId() ?? "en";
 			SearchForLangFile = ShouldBeTranslated && SupportedCultures.Cultures.Contains(Language);
 		}
 
@@ -80,19 +79,6 @@ namespace WebApp.SoE.Pages.Bases
 			{
 				return false;
 			}
-		}
-
-		private string? GetRequestLanguage()
-		{
-			if (HttpContextAccessor.HttpContext is { } httpContext)
-			{
-				var cultureFeature = httpContext.Features.Get<IRequestCultureFeature>();
-				var requestCulture = cultureFeature.RequestCulture.UICulture!;
-
-				return requestCulture.TwoLetterISOLanguageName!;
-			}
-
-			return null;
 		}
 
 		private static string MakeLanguageFilePath(string filePath, string language)
