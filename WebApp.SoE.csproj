@@ -15,6 +15,7 @@
 	  <PackageTags>SoE, Secret Of Evermore, S-RAM, SRAM, Savestate, SNES, Super Nintendo, Super Famicon, Blazor, Web-App, NET 5, Rosetta Stone</PackageTags>
 	  <RepositoryType>UI</RepositoryType>
 	  <Description>Web app for viewing »Rosetta Stone« documents and comparing S-RAM and editing S-RAM offset values online</Description>
+	  <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
 	<ItemGroup>
