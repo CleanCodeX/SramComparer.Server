@@ -11,7 +11,7 @@ namespace WebApp.SoE.ViewModels
 		public IActionResult OnGet()
 		{
 			var isSupportedBrowser = BrowserInfo.IsSupportedBrowser(BrowserName, Version);
-			return Redirect(isSupportedBrowser ? PageUris.Home : PageUris.Unsupported);
+			return Redirect(isSupportedBrowser ? PageUris.Index : PageUris.Unsupported);
 		}
 	}
 }
