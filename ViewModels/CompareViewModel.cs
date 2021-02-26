@@ -96,8 +96,7 @@ namespace WebApp.SoE.ViewModels
 			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.SlotByteComparison);
 			set
 			{
-				Options.ComparisonFlags =
-					Options.ComparisonFlags.InvertUInt32Flags(ComparisonFlagsSoE.SlotByteComparison);
+				Options.ComparisonFlags = Options.ComparisonFlags.InvertUInt32Flags(ComparisonFlagsSoE.SlotByteComparison);
 				StartComparison();
 			}
 		}
@@ -107,8 +106,7 @@ namespace WebApp.SoE.ViewModels
 			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.NonSlotComparison);
 			set
 			{
-				Options.ComparisonFlags =
-					Options.ComparisonFlags.InvertUInt32Flags(ComparisonFlagsSoE.NonSlotComparison);
+				Options.ComparisonFlags = Options.ComparisonFlags.InvertUInt32Flags(ComparisonFlagsSoE.NonSlotComparison);
 				StartComparison();
 			}
 		}

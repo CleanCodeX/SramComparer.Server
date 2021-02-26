@@ -8,6 +8,5 @@ Info: links open in a new tab
 
 ### »Rosetta Stones«
 
-* <a href="https://github.com/CleanCodeX/SRAM.SoE/blob/main/ReadMe.md" target=_>S-RAM</a>
-* <a href="https://github.com/CleanCodeX/WRAM.Snes9x.SoE/blob/main/ReadMe.md" target=_>W-RAM</a>
-* <a href="https://github.com/CleanCodeX/ROM.SoE/blob/main/ReadMe.md" target=_>ROM</a>
+* <a href="https://github.com/CleanCodeX/RAMsettaStone.SoE/blob/main/ReadMe.md" target=_>RAMsetta Stone</a>
+* <a href="https://github.com/CleanCodeX/ROMsettaStone.SoE/blob/main/ReadMe.md" target=_>ROMsetta Stone</a>

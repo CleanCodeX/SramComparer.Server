@@ -25,6 +25,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\RAMsettaStone.SoE\RAMsettaStone.SoE.csproj" />
 		<ProjectReference Include="..\ROM.SoE\ROM.SoE.csproj" />
 		<ProjectReference Include="..\SoE\SoE.csproj" />
 		<ProjectReference Include="..\SRAM.Comparison.SoE\SRAM.Comparison.SoE.csproj" />
