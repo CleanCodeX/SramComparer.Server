@@ -47,10 +47,11 @@ namespace WebApp.SoE
 			services.AddOptions<TooltipRandomizerOptions>().Bind(Configuration.GetSection("TooltipRandomizer"));
 			services.AddSingleton(cfg => cfg.GetService<IOptionsMonitor<TooltipRandomizerOptions>>()!.CurrentValue);
 
+			services.AddScoped<IExplorationStatus, ExplorationStatus>();
+
 			services.AddSingleton<ITranslator, Translator>();
 			services.AddSingleton<ILocalizationCollector, LocalizationCollector>();
 			services.AddSingleton<IMarkdownBuilder, MarkdownBuilder>();
-			services.AddSingleton<IExplorationStatus, ExplorationStatus>();
 			services.AddSingleton<ITooltipRandomizer, TooltipRandomizer>();
 			services.AddSingleton<CrypticTooltipRandomizer>();
 			services.AddSingleton<IAppInfo, AppInfo>();

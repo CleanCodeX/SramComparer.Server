@@ -14,11 +14,12 @@ namespace WebApp.SoE.Services
 	{
 		private const char Est = '≙';
 		private const char Nbsp = '\u00A0';
-		private static readonly string Unknown = Resources.LabelUnknown;
-		private static readonly string Known = Resources.LabelKnown;
-		private static readonly string Bytes = ResComp.Bytes;
 		private static readonly string NewLine = Environment.NewLine;
 
+		private readonly string Unknown = Resources.LabelUnknown;
+		private readonly string Known = Resources.LabelKnown;
+		private readonly string Bytes = ResComp.Bytes;
+		
 		public static bool ShowWramStatus = Wram.AllKnown > 0;
 		public static bool ShowRomStatus = Rom.AllKnown > 0;
 		public static bool UsePadding = false;
@@ -40,11 +41,11 @@ namespace WebApp.SoE.Services
 		}
 
 		private const int Padding = 5;
-		public static string GetSramStatus(int padding = 0) => GetStatus(typeof(Sram), "S-RAM".PadLeft(Padding, Nbsp), padding);
-		public static string GetWramStatus(int padding = 0) => GetStatus(typeof(Wram), "W-RAM".PadLeft(Padding, Nbsp), padding);
-		public static string GetRomStatus(int padding = 0) => GetStatus(typeof(Rom), "ROM".PadLeft(Padding, Nbsp), padding);
+		public string GetSramStatus(int padding = 0) => GetStatus(typeof(Sram), "S-RAM".PadLeft(Padding, Nbsp), padding);
+		public string GetWramStatus(int padding = 0) => GetStatus(typeof(Wram), "W-RAM".PadLeft(Padding, Nbsp), padding);
+		public string GetRomStatus(int padding = 0) => GetStatus(typeof(Rom), "ROM".PadLeft(Padding, Nbsp), padding);
 
-		private static string GetStatus(Type sizeType, string name, int padding = 0)
+		private string GetStatus(Type sizeType, string name, int padding = 0)
 		{
 			var all = (int)sizeType.GetField("All")!.GetRawConstantValue()!;
 			var allKnown = (int)sizeType.GetField("AllKnown")!.GetRawConstantValue()!;
