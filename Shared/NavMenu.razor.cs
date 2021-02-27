@@ -68,7 +68,9 @@ namespace WebApp.SoE.Shared
 			var consoleItems = new[]
 			{
 				PageUris.Imagery.ToLower(), 
-				PageUris.ChangelogConsole.ToLower()
+				PageUris.ChangelogConsole.ToLower(),
+				PageUris.Changelog.ToLower(),
+				PageUris.ConsoleApp.ToLower()
 			};
 
 			var menu = path switch
