@@ -75,7 +75,7 @@ namespace WebApp.SoE.ViewModels
 
 				IsError = false;
 				OffsetValue = SramFile.GetOffsetByte(CurrentFileSaveSlot.ToInt() - 1, OffsetAddress);
-				var valueDisplayText = NumberFormatter.GetByteValueRepresentations((byte)OffsetValue);
+				var valueDisplayText = NumberFormatter.FormatDecHexBin((byte)OffsetValue);
 
 				OutputMessage = Resources.StatusGetOffsetValueTemplate.InsertArgs(OffsetAddress, valueDisplayText)
 					.ColorText(Color.Green).ToMarkup();
