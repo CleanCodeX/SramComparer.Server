@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
@@ -36,9 +37,10 @@ namespace WebApp.SoE.Shared
 
 		protected override async Task OnInitializedAsync()
 		{
+			await Task.Yield();
 			_menu = (await SessionStorage.GetAsync<ExpandedMenu>(nameof(_menu))).Value;
-			
-			if(_menu != ExpandedMenu.None)
+
+			if (_menu != ExpandedMenu.None)
 				SetMenuStateVariables(_menu);
 
 			NavManager.LocationChanged += OnLocationChanged;
@@ -61,8 +63,7 @@ namespace WebApp.SoE.Shared
 			var comparisonItems = new[]
 			{
 				PageUris.Features.ToLower(),
-				PageUris.Tutorials.ToLower(),
-				PageUris.Sources.ToLower()
+				PageUris.Tutorials.ToLower()
 			};
 
 			var consoleItems = new[]
@@ -94,23 +95,14 @@ namespace WebApp.SoE.Shared
 
 			if (menu == _menu)
 				return;
-				
+
+			if (_menu != menu)
+			{
+				_menu = menu;
 #pragma warning disable 4014
-			ExpandMenu(menu);
+				SessionStorage.SetAsync(nameof(_menu), _menu);
 #pragma warning restore 4014
-			
-			InvokeAsync(StateHasChanged);
-		}
-
-		private async Task ExpandMenu(ExpandedMenu menu)
-		{
-			if (_menu == menu) return;
-
-			_menu = menu;
-
-			SetMenuStateVariables(menu);
-	
-			await SessionStorage.SetAsync(nameof(_menu), _menu);
+			}
 		}
 
 		private void SetMenuStateVariables(ExpandedMenu menu)
