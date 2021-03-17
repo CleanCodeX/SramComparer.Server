@@ -182,9 +182,6 @@
 	<data name="MenuTooltipAbout" xml:space="preserve">
 		<value>Versionsangaben und Beitragende</value>
 	</data>
-	<data name="LabelTooltipProjectName" xml:space="preserve">
-		<value>Evermore «Rosetta Stone»-Projekt</value>
-	</data>
 	<data name="MenuAbout" xml:space="preserve">
 		<value>Info</value>
 	</data>
@@ -273,7 +270,7 @@
 		<value>Web-Vergleich von S-RAM-Dateien</value>
 	</data>
 	<data name="LabelIndexTitle" xml:space="preserve">
-		<value>Evermore »Rosetta Stone« Projekt</value>
+		<value>Evermore Format-Exploration-Projekt</value>
 	</data>
 	<data name="LabelTooltipFile" xml:space="preserve">
 		<value>Wähle entweder eine S-RAM- (*.srm, *.comp) or Snes9x Savestate- Datei (*.000 - *.009, *.state)</value>
@@ -335,5 +332,17 @@
 	</data>
 	<data name="ButtonTooltipDownloadSummaryFile" xml:space="preserve">
 		<value>Speicherslot-Zusammenfassung als Text-Datei herunterden</value>
+	</data>
+	<data name="CaptionWebSlotSummary" xml:space="preserve">
+		<value>Spielstand Web-Zusammenfassung</value>
+	</data>
+	<data name="MenuSlotSummary" xml:space="preserve">
+		<value>Spielstand-Zusammenfassung</value>
+	</data>
+	<data name="MenuTooltipSlotSummary" xml:space="preserve">
+		<value>Spielstand-Zusammenfassung anzeigen</value>
+	</data>
+	<data name="MenuTooltipFAQ" xml:space="preserve">
+		<value>Häufig gestellte Fragen</value>
 	</data>
 </root>

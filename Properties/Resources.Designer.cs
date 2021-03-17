@@ -286,6 +286,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Savegame web summary ähnelt.
+        /// </summary>
+        public static string CaptionWebSlotSummary {
+            get {
+                return ResourceManager.GetString("CaptionWebSlotSummary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die All save slots ähnelt.
         /// </summary>
         public static string EnumAllSaveSlots {
@@ -467,7 +476,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Evermore »Rosetta Stone« project ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Evermore Format Exploration Project ähnelt.
         /// </summary>
         public static string LabelIndexTitle {
             get {
@@ -571,15 +580,6 @@ namespace WebApp.SoE.Properties {
         public static string LabelTooltipNonSlotComparison {
             get {
                 return ResourceManager.GetString("LabelTooltipNonSlotComparison", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Evermore «Rosetta Stone» Project ähnelt.
-        /// </summary>
-        public static string LabelTooltipProjectName {
-            get {
-                return ResourceManager.GetString("LabelTooltipProjectName", resourceCulture);
             }
         }
         
@@ -773,6 +773,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Slot summary ähnelt.
+        /// </summary>
+        public static string MenuSlotSummary {
+            get {
+                return ResourceManager.GetString("MenuSlotSummary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Console App ähnelt.
         /// </summary>
         public static string MenuSramComparerCmdApp {
@@ -881,6 +890,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Frequently asked questions ähnelt.
+        /// </summary>
+        public static string MenuTooltipFAQ {
+            get {
+                return ResourceManager.GetString("MenuTooltipFAQ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Features of S-RAM-Comparer ähnelt.
         /// </summary>
         public static string MenuTooltipFeatures {
@@ -940,6 +958,15 @@ namespace WebApp.SoE.Properties {
         public static string MenuTooltipRosettaStone {
             get {
                 return ResourceManager.GetString("MenuTooltipRosettaStone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Display save slot summary ähnelt.
+        /// </summary>
+        public static string MenuTooltipSlotSummary {
+            get {
+                return ResourceManager.GetString("MenuTooltipSlotSummary", resourceCulture);
             }
         }
         

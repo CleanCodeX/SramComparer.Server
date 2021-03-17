@@ -5,7 +5,7 @@
 	  <Nullable>enable</Nullable>
 	  <Company>KST</Company>
 	  <Product>WebApp.SoE</Product>
-	  <Version>0.1.0-a1</Version>
+	  <Version>0.1.1-a1</Version>
 	  <Authors>S. Krauter { CleanCoderX, XETH }</Authors>
 	  <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 	  <UserSecretsId>17d24474-ed46-4f7f-bc20-2d543c8c8603</UserSecretsId>

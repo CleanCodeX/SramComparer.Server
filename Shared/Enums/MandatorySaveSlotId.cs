@@ -3,7 +3,7 @@ using WebApp.SoE.Properties;
 
 namespace WebApp.SoE.Shared.Enums
 {
-	public enum MandatoryGameId
+	public enum MandatorySaveSlotId
 	{
 		[Display(Name = nameof(Resources.EnumSaveSlot1), ResourceType = typeof(Resources))]
 		One = 1,

@@ -68,11 +68,11 @@
 			</tr>
 			
 			<tr>
-				<td><label>@Resources.EnumChecksum:@Ns</label></td>
+				<td><label style=@ChecksumStyle>@Resources.EnumChecksum:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.Checksum" style=@ChecksumStyle /></td>
 			</tr>
 			<tr>
-				<td><label title="@Res.LabelTooltipScriptedEventTimer">ScriptedEventTimer:@Ns</label></td>
+				<td><label style=@ScriptedEventTimerStyle title="@Res.LabelTooltipScriptedEventTimer">ScriptedEventTimer:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.ScriptedEventTimer" style=@ScriptedEventTimerStyle /></td>
 			</tr>
 			<tr>
@@ -103,16 +103,6 @@
 					<ClipboardCopy OnCopyAsync="@CopyComparisonTextAsync" Disabled="@CopyComparisonButtonDisabled" title="@Res.ButtonTooltipCopyComparison" />
 					
 					<button class="btn btn-primary" @onclick="@DownloadComparisonResultAsync" disabled="@CopyComparisonButtonDisabled" title="@Res.ButtonTooltipDownloadComparisonFile">
-						<span class="iconify" data-icon="oi-cloud-download" data-inline="false" />
-					</button>
-					| 
-					<button class="btn btn-primary" @onclick="@ViewModel.GetSummaryAsync" disabled="@ShowSummaryButtonDisabled" title="@Res.ButtonTooltipShowSummary">
-						<span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" />
-					</button>
-					
-					<ClipboardCopy OnCopyAsync="@CopySummaryTextAsync" Disabled="@CopySummaryButtonDisabled" title="@Res.ButtonTooltipCopySummary" />
-					
-					<button class="btn btn-primary" @onclick="@DownloadSummaryAsync" disabled="@CopySummaryButtonDisabled" title="@Res.ButtonTooltipDownloadSummaryFile">
 						<span class="iconify" data-icon="oi-cloud-download" data-inline="false" />
 					</button>
 				</td>

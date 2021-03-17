@@ -47,8 +47,6 @@ namespace WebApp.SoE.ViewModels
 				if (ComparisonFileSaveSlot != SaveSlotId.All)
 					if (value == SaveSlotId.All || value == ComparisonFileSaveSlot)
 						ComparisonFileSaveSlot = SaveSlotId.All;
-
-				StartComparison();
 			}
 		}
 
@@ -67,7 +65,6 @@ namespace WebApp.SoE.ViewModels
 				}
 					
 				_comparisonFileSaveSlot = value;
-				StartComparison();
 			}
 		}
 
@@ -76,17 +73,7 @@ namespace WebApp.SoE.ViewModels
 		public MarkupString OutputMessage { get; set; }
 		public bool IsBusy { get; set; }
 		public bool CanCompare => !IsBusy && CurrentFileStream is not null && ComparisonFileStream is not null;
-		public bool CanShowSummary => !IsBusy && CurrentFileStream is not null && CurrentFileSaveSlot != SaveSlotId.All;
 		public bool ColorizeOutput { get; set; } = true;
-
-#pragma warning disable 4014
-		private void StartComparison()
-		{
-			if (!CanCompare) return;
-
-			//CompareAsync(); // TODO Currently buggy. Changes will only be updated the next time
-		}
-#pragma warning restore 4014
 
 		public bool ShowOutput => OutputMessage.ToString() != string.Empty;
 		public bool IsError { get; private set; }
@@ -94,62 +81,25 @@ namespace WebApp.SoE.ViewModels
 		public bool SlotByteComparison
 		{
 			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.SlotByteComparison);
-			set
-			{
-				Options.ComparisonFlags = Options.ComparisonFlags.InvertUInt32Flags(ComparisonFlagsSoE.SlotByteComparison);
-				StartComparison();
-			}
+			set => Options.ComparisonFlags = Options.ComparisonFlags.InvertUInt32Flags(ComparisonFlagsSoE.SlotByteComparison);
 		}
 
 		public bool NonSlotComparison
 		{
 			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.NonSlotComparison);
-			set
-			{
-				Options.ComparisonFlags = Options.ComparisonFlags.InvertUInt32Flags(ComparisonFlagsSoE.NonSlotComparison);
-				StartComparison();
-			}
+			set => Options.ComparisonFlags = Options.ComparisonFlags.InvertUInt32Flags(ComparisonFlagsSoE.NonSlotComparison);
 		}
 
 		public bool ChecksumStatus
 		{
 			get => Options.ComparisonFlags.HasFlag(ComparisonFlagsSoE.ChecksumStatus);
-			set
-			{
-				Options.ComparisonFlags = Options.ComparisonFlags.InvertUInt32Flags(ComparisonFlagsSoE.ChecksumStatus);
-				StartComparison();
-			}
+			set => Options.ComparisonFlags = Options.ComparisonFlags.InvertUInt32Flags(ComparisonFlagsSoE.ChecksumStatus);
 		}
 
-		private SaveSlotOption _checksum;
-		public SaveSlotOption Checksum
-		{
-			get => _checksum;
-			set
-			{
-				if (_checksum == value) return;
-				_checksum = value;
-				StartComparison();
-			}
-		}
+		public SaveSlotOption Checksum { get; set; }
+		public SaveSlotOption ScriptedEventTimer { get; set; }
 
-		private SaveSlotOption _scriptedEventTimer;
-		public SaveSlotOption ScriptedEventTimer
-		{
-			get => _scriptedEventTimer;
-			set
-			{
-				if (_scriptedEventTimer == value) return;
-				_scriptedEventTimer = value;
-				StartComparison();
-			}
-		}
-
-		public override async Task SetCurrentFileAsync(IBrowserFile file)
-		{
-			await base.SetCurrentFileAsync(file);
-			StartComparison();
-		}
+		public override async Task SetCurrentFileAsync(IBrowserFile file) => await base.SetCurrentFileAsync(file);
 
 		public async Task SetComparisonFileAsync(IBrowserFile file)
 		{
@@ -157,7 +107,6 @@ namespace WebApp.SoE.ViewModels
 
 			ComparisonFileName = file.Name;
 			ComparisonFileStream = await file.OpenReadStream().CopyAsMemoryStreamAsync();
-			StartComparison();
 		}
 
 		public async Task CompareAsync()
@@ -186,36 +135,6 @@ namespace WebApp.SoE.ViewModels
 				commandHandler.Compare(CurrentFileStream, ComparisonFileStream, Options, output);
 
 				OutputMessage = output.ToString().ToMarkup();
-			}
-			catch (Exception ex)
-			{
-				OutputMessage = ex.GetColoredMessage();
-				IsError = true;
-			}
-
-			IsBusy = false;
-		}
-
-		public async Task GetSummaryAsync()
-		{
-			try
-			{
-				CanShowSummary.ThrowIfFalse(nameof(CanShowSummary));
-
-				IsError = false;
-				IsBusy = true;
-
-				await SaveOptionsAsync();
-
-				Requires.NotNull(CurrentFileStream, nameof(CurrentFileStream));
-
-				CurrentFileStream.Position = 0;
-				Options.CurrentFilePath = CurrentFileName;
-
-				var commandHandler = new CommandHandlerSoE(ColorizeOutput ? new HtmlConsolePrinterSoE() : new ConsolePrinter());
-				var summary = commandHandler.GetSummary(CurrentFileStream, Options);
-
-				OutputMessage = summary.ToMarkup();
 			}
 			catch (Exception ex)
 			{

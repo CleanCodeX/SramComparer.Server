@@ -11,6 +11,8 @@
 		public const string Offset = "/" + nameof(Offset);
 		public const string OffsetEditing = Offset + "/editing";
 
+		public const string SlotSummary = "/" + nameof(SlotSummary);
+
 		public const string About = "/" + nameof(About);
 		public const string Contributors = "/" + nameof(Contributors);
 		public const string Contributor = "/" + nameof(Contributor);
@@ -23,6 +25,7 @@
 		public const string GuideSrm = Guides + "/Srm";
 		public const string GuideSavestate = Guides + "/Savestate";
 
+		public const string FAQ = "/" + nameof(FAQ);
 		public const string Glossary = "/" + nameof(Glossary);
 		public const string Imagery = "/" + nameof(Imagery);
 		public const string Prerequisites = "/" + nameof(Prerequisites);

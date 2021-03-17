@@ -12,18 +12,18 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="LabelTooltipCrypticSymbols" xml:space="preserve">
-		<value>Aimez-vous les énigmes? Savez-vous ce que signifient ces symboles cryptiques? Aucune idée? Il y a un "petit" indice sur l'une des pages Web. Si vous avez trouvé la réponse, envoyez-moi un e-mail avec votre pseudo. Je vous ajouterai à une liste interne de démêleurs.</value>
+		<value>Aimez-vous les énigmes? Savez-vous ce que signifient ces symboles cryptiques? Non? Écoutez: il y a un "petit" indice sur l'une des pages Web. Si vous avez trouvé la réponse, envoyez-moi un e-mail avec votre pseudo. Je vous ajouterai à la liste des démêleurs.</value>
 	</data>
 	<data name="LabelSymbolsHint2" xml:space="preserve">
 		<value>Les mêmes symboles signifient les mêmes lettres. C'était facile! N'est-ce pas? Non?! Eh bien… vous devriez peut-être essayer quelques polices…</value>
 	</data>
 	<data name="LabelTooltipSymbolsHint2" xml:space="preserve">
-		<value>Euh il fait vraiment chaud ici! Vous avez trouvé l'indice "caché"! Au moins potentiellement…</value>
+		<value>Euh il fait vraiment chaud ici! Peut-être avez-vous trouvé un indice "caché"?! Au moins potentiellement…</value>
 	</data>
 	<data name="LabelTooltipSymbolsHint1" xml:space="preserve">
 		<value>Ou peut-être que c'est?</value>
 	</data>
 	<data name="LabelSymbolsHint1" xml:space="preserve">
-		<value>Il n'y a définitivement rien ici ...</value>
+		<value>Apparemment, il n'y a rien ici…</value>
 	</data>
 </root>

@@ -61,7 +61,7 @@ namespace WebApp.SoE.Properties.Hidden {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die There is definitely nothing here ... ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Apparently there is nothing here… ähnelt.
         /// </summary>
         public static string LabelSymbolsHint1 {
             get {
@@ -70,7 +70,7 @@ namespace WebApp.SoE.Properties.Hidden {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die The same symbols mean the same letters. That was easy! Wasn&apos;t it? No?! Well… maybe you should try a few fonts… ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die The same symbols mean the same letters. Not enough? Listen: … maybe you should try a few fonts… ähnelt.
         /// </summary>
         public static string LabelSymbolsHint2 {
             get {
@@ -79,7 +79,7 @@ namespace WebApp.SoE.Properties.Hidden {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Do you like riddles? Do you know what these cryptic symbols mean? No clue? There&apos;s a &quot;small&quot; hint on one of the web pages. If you&apos;ve found the answer, send me an e-Mail with your nickname. I&apos;ll add you to a internal list of unravelers. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Do you like riddles? Do you know what these cryptic symbols mean? No? Listen: there&apos;s a &quot;small&quot; hint on one of the web pages. If you&apos;ve found the answer, send me an e-Mail with your nickname. I&apos;ll add you to the list of unravelers. ähnelt.
         /// </summary>
         public static string LabelTooltipCrypticSymbols {
             get {
@@ -97,7 +97,7 @@ namespace WebApp.SoE.Properties.Hidden {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Uh it&apos;s really hot here! You found the &quot;hidden&quot; clue! At least potentially… ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Uh it&apos;s really hot here! Perhaps you&apos;ve found a &quot;hidden&quot; clue?! At least potentially… ähnelt.
         /// </summary>
         public static string LabelTooltipSymbolsHint2 {
             get {

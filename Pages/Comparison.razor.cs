@@ -22,9 +22,7 @@ namespace WebApp.SoE.Pages
 		[Inject] private ComparisonViewModel ViewModel { get; set; } = default!;
 
 		private bool CompareButtonDisabled => !ViewModel.CanCompare;
-		private bool ShowSummaryButtonDisabled => !ViewModel.CanShowSummary;
 		private bool CopyComparisonButtonDisabled => CompareButtonDisabled || ViewModel.IsError || ViewModel.OutputMessage.ToString().IsNullOrEmpty();
-		private bool CopySummaryButtonDisabled => ShowSummaryButtonDisabled || ViewModel.OutputMessage.ToString().IsNullOrEmpty();
 
 		private const string BgColor = "#111111";
 
@@ -104,30 +102,11 @@ namespace WebApp.SoE.Pages
 			return result;
 		}
 
-		private async Task<string> CopySummaryTextAsync()
-		{
-			await ViewModel.GetSummaryAsync();
-
-			return ViewModel.OutputMessage.ReplaceHtmlLineBreaks();
-		}
-
 		public async Task DownloadComparisonResultAsync()
 		{
 			try
 			{
 				await JsRuntime.StartDownloadAsync("Output.txt", Encoding.UTF8.GetBytes(await CopyComparisonTextAsync()));
-			}
-			catch (Exception ex)
-			{
-				ViewModel.OutputMessage = ex.Message.ColorText(Color.Red).ToMarkup();
-			}
-		}
-
-		public async Task DownloadSummaryAsync()
-		{
-			try
-			{
-				await JsRuntime.StartDownloadAsync($"Saveslot_{(int)CurrentFileSaveSlot}.txt", Encoding.UTF8.GetBytes(await CopySummaryTextAsync()));
 			}
 			catch (Exception ex)
 			{

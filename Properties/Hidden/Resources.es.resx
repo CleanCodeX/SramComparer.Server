@@ -11,19 +11,19 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
-	<data name="LabelSymbolsHint1" xml:space="preserve">
-		<value>Definitivamente no hay nada aquí ...</value>
-	</data>
 	<data name="LabelSymbolsHint2" xml:space="preserve">
 		<value>Los mismos símbolos significan las mismas letras. ¡Eso fue fácil! ¿No fue así? ¡¿No?! Bueno ... tal vez deberías probar algunas fuentes ...</value>
 	</data>
 	<data name="LabelTooltipCrypticSymbols" xml:space="preserve">
-		<value>¿Te gustan los acertijos? ¿Sabes qué significan estos símbolos crípticos? ¿Ninguna pista? Hay una "pequeña" pista en una de las páginas web. Si ha encontrado la respuesta, envíeme un correo electrónico con su apodo. Te agregaré a una lista interna de desenredadores.</value>
+		<value>¿Te gustan los acertijos? ¿Sabes qué significan estos símbolos crípticos? ¿No? Escuche: hay una "pequeña" pista en una de las páginas web. Si ha encontrado la respuesta, envíeme un correo electrónico con su apodo. Te agregaré a la lista de desenredadores.</value>
 	</data>
 	<data name="LabelTooltipSymbolsHint1" xml:space="preserve">
 		<value>¿O quizás lo es?</value>
 	</data>
 	<data name="LabelTooltipSymbolsHint2" xml:space="preserve">
-		<value>¡Hace mucho calor aquí! ¡Encontraste la pista "oculta"! Al menos potencialmente ...</value>
+		<value>¡Hace mucho calor aquí! ¿Quizás has encontrado una pista "oculta"? Al menos potencialmente…</value>
+	</data>
+	<data name="LabelSymbolsHint1" xml:space="preserve">
+		<value>Aparentemente no hay nada aqui…</value>
 	</data>
 </root>

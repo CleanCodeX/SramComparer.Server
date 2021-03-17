@@ -1,0 +1,62 @@
+﻿<title>@Res.CaptionWebSlotSummary</title>
+
+<div>
+	<h1>@Res.CaptionWebSlotSummary</h1>
+	<br />
+
+	<EditForm Model="@ViewModel">
+		<table>
+			<tr>
+				<th class="firstColumn"/><th />
+			</tr>
+
+			<tr>
+				<td><label class="header">@ResComp.EnumGameRegion:@Ns</label></td>
+				<td><InputSelectEnum @bind-Value="@ViewModel.GameRegion" style=@GameRegionStyle /></td>
+			</tr>
+			
+			<p />
+
+			<tr>
+				<td colspan="2"><label class="header" title="@Res.LabelTooltipFile">@ResComp.EnumCurrentFile (*.srm|*.00x|*.state)</label></td>
+			</tr>
+			<tr>
+				<td><label title="@Res.LabelTooltipFile">@Res.LabelFile:@Ns</label>*)</td>
+				<td><InputFile OnChange="@OnCurrentFileChange" style=@ButtonStyle title="@Res.LabelTooltipFile" /></td>
+			</tr>
+			<tr>
+				<td><label>@Res.SaveSlot:@Ns</label></td>
+				<td><InputSelectEnum @bind-Value="@CurrentFileSaveSlot" style=@CurrentSramFileStyle /></td>
+			</tr>
+
+			<p />
+
+			<tr>
+				<td><label>*) @Res.LabelMandatory</label></td>
+			</tr>
+			
+			<p />
+			
+			<tr>
+				<td>
+					<button class="btn btn-primary" @onclick="@ViewModel.GetSummaryAsync" disabled="@ShowSummaryButtonDisabled" title="@Res.ButtonTooltipShowSummary">
+						<span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" />
+					</button>
+					
+					<ClipboardCopy OnCopyAsync="@CopySummaryTextAsync" Disabled="@CopySummaryButtonDisabled" title="@Res.ButtonTooltipCopySummary" />
+					
+					<button class="btn btn-primary" @onclick="@DownloadSummaryAsync" disabled="@CopySummaryButtonDisabled" title="@Res.ButtonTooltipDownloadSummaryFile">
+						<span class="iconify" data-icon="oi-cloud-download" data-inline="false" />
+					</button>
+				</td>
+			</tr>
+		</table>
+	</EditForm>
+	
+	@if (ViewModel.ShowOutput)
+	{
+		<div class="result">
+			@ViewModel.OutputMessage
+		</div>
+	}
+</div>

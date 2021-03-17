@@ -135,7 +135,7 @@
 		<value>Archivo</value>
 	</data>
 	<data name="LabelIndexTitle" xml:space="preserve">
-		<value>Proyecto Evermore »Rosetta Stone«</value>
+		<value>Proyecto de exploración Evermore Format</value>
 	</data>
 	<data name="LabelKnown" xml:space="preserve">
 		<value>bytes conocidos</value>
@@ -163,9 +163,6 @@
 	</data>
 	<data name="LabelTooltipNonSlotComparison" xml:space="preserve">
 		<value>Compare el área de la ranura no guardada byte por byte (área más allá de todas las ranuras para guardar)</value>
-	</data>
-	<data name="LabelTooltipProjectName" xml:space="preserve">
-		<value>Proyecto Evermore «Rosetta Stone»</value>
 	</data>
 	<data name="LabelTooltipProjectStatus" xml:space="preserve">
 		<value>Estado de exploración</value>
@@ -334,5 +331,17 @@
 	</data>
 	<data name="ButtonTooltipShowSummary" xml:space="preserve">
 		<value>Mostrar resumen de espacio guardado</value>
+	</data>
+	<data name="CaptionWebSlotSummary" xml:space="preserve">
+		<value>Resumen web de partidas guardadas</value>
+	</data>
+	<data name="MenuSlotSummary" xml:space="preserve">
+		<value>Resumen web de partidas guardadas</value>
+	</data>
+	<data name="MenuTooltipSlotSummary" xml:space="preserve">
+		<value>Mostrar resumen de espacio para guardar</value>
+	</data>
+	<data name="MenuTooltipFAQ" xml:space="preserve">
+		<value>Preguntas frecuentes</value>
 	</data>
 </root>

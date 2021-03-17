@@ -11,7 +11,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.JSInterop;
-using WebApp.SoE.Extensions;
 using WebApp.SoE.Services;
 using WebApp.SoE.ViewModels;
 using Westwind.AspNetCore.LiveReload;
@@ -30,6 +29,7 @@ namespace WebApp.SoE
 		{
 			services.AddHttpContextAccessor();
 
+			services.AddScoped<SlotSummaryViewModel>(sp => new() {LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>()});
 			services.AddScoped<ComparisonViewModel>(sp => new() {LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>()});
 			services.AddScoped<SetOffsetValueViewModel>(sp => new()
 			{
@@ -69,8 +69,7 @@ namespace WebApp.SoE
 					foreach (var supportedCultureId in supportedCultureIds)
 						supportedCultures.Add(CultureInfo.GetCultureInfo(supportedCultureId));
 
-					options.FallBackToParentUICultures = true;
-					options.FallBackToParentCultures = true;
+
 
 					options.SetDefaultCulture(defaultCulture.TwoLetterISOLanguageName);
 					// Formatting numbers, dates, etc.
@@ -126,15 +125,9 @@ namespace WebApp.SoE
 				o.ES5FallbackValidation = request =>
 				{
 					var services = request.HttpContext.RequestServices;
-					var supportedCultures = services.GetRequiredService<SupportedCultures>();
-
-					var currentCultureId = request.HttpContext.GetRequestCultureId() ?? "en";
-					if (!supportedCultures.Cultures.Contains(currentCultureId))
-						CultureInfo.CurrentCulture = CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(currentCultureId);
-
-					var userAgent = request.Headers["User-Agent"];
 					var browserInfo = services.GetRequiredService<IBrowserInfo>();
-
+					var userAgent = request.Headers["User-Agent"];
+					
 					return !browserInfo.IsSupportedBrowser(userAgent) && browserInfo.HasES5Support(userAgent);
 				};
 			});

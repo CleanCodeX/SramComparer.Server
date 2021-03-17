@@ -162,9 +162,6 @@
 	<data name="LabelTooltipNonSlotComparison" xml:space="preserve">
 		<value>Comparaison des données en dehors de la partie en cours (après les données de toutes les parties)</value>
 	</data>
-	<data name="LabelTooltipProjectName" xml:space="preserve">
-		<value>Projet Evermore «Rosetta Stone»</value>
-	</data>
 	<data name="LabelShowAdditionalSaveSlotInformation" xml:space="preserve">
 		<value>Afficher des informations supplémentaires sur la partie</value>
 	</data>
@@ -274,7 +271,7 @@
 		<value>Comparaison Web des fichiers S-RAM</value>
 	</data>
 	<data name="LabelIndexTitle" xml:space="preserve">
-		<value>Projet Evermore »Rosetta Stone«</value>
+		<value>Projet d'exploration Evermore Format</value>
 	</data>
 	<data name="LabelTooltipFile" xml:space="preserve">
 		<value>Sélectionnez un fichier de sauvegarde S-RAM (* .srm, *.comp) ou Snes9x (* .000 - * .009, *.state)</value>
@@ -335,5 +332,17 @@
 	</data>
 	<data name="ButtonTooltipCopySummary" xml:space="preserve">
 		<value>Copier le résumé de l'emplacement d'enregistrement dans le presse-papiers</value>
+	</data>
+	<data name="CaptionWebSlotSummary" xml:space="preserve">
+		<value>Résumé Web Savegame</value>
+	</data>
+	<data name="MenuSlotSummary" xml:space="preserve">
+		<value>Résumé Web Savegame</value>
+	</data>
+	<data name="MenuTooltipSlotSummary" xml:space="preserve">
+		<value>Afficher le récapitulatif des emplacements de sauvegarde</value>
+	</data>
+	<data name="MenuTooltipFAQ" xml:space="preserve">
+		<value>Questions fréquemment posées</value>
 	</data>
 </root>
