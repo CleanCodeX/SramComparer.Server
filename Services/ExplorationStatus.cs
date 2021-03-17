@@ -69,7 +69,7 @@ namespace WebApp.SoE.Services
 
 			#endregion
 
-			return $"{name} :: {Known}: {knownString} (~{knownRounded}%) {Est} {Unknown}: {unknownString} (~{unknownRounded}%) {Est} 100% ({allString} {Bytes})";
+			return $"{name} :: {Unknown}: {unknownString} (~{unknownRounded}%) {Est} {Known}: {knownString} (~{knownRounded}%) {Est} 100% ({allString} {Bytes})";
 		}
 	}
 }

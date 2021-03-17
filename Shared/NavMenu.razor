@@ -9,7 +9,7 @@
 }
 
 <div>
-<!-- Quick links -->
+    <!-- Quick links -->
     <ol class="nav flex-column"  title="@TooltipRandomizer.NextTooltip()">
         <li class="nav-item quicklinks">
             <NavLink class="nav-link" title="@TooltipRandomizer.NextTooltip()">
@@ -64,7 +64,7 @@
     <!-- S-RAM Format -->
     <ol class="nav flex-column firstRow" title="@TooltipRandomizer.NextTooltip()">
         <li class="nav-item px-3">
-            <a class="nav-link" href="@PageUris.Goals" title="@RandomResTooltip[Res.MenuTooltipGoals]">
+            <a class="nav-link" href="@PageUris.Goals" title="@RandomResTooltip[Res.MenuTooltipRosettaStone]">
                 <span class="@(_sramFormat ? "oi oi-zoom-out" : "oi oi-zoom-in")"/> 
                 <span class="oi oi-code"/> @Res.MenuSramFormat.ReplaceSpaces() 
             </a>
@@ -105,7 +105,7 @@
     <!-- S-RAM Comparison -->
     <ol class="nav flex-column" title="@TooltipRandomizer.NextTooltip()">
         <li class="nav-item px-3">
-            <a class="nav-link" href="@PageUris.Features" title="@RandomResTooltip[Res.MenuTooltipFeatures]">
+            <a class="nav-link" href="@PageUris.Features" title="@RandomResTooltip[Res.MenuTooltipComparison]">
                 <span class="@(_sramComparison ? "oi oi-zoom-out" : "oi oi-zoom-in")"/>
                 <span class="oi oi-eye"/> @Res.MenuSramComparison.ReplaceSpaces() 
             </a>

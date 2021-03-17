@@ -69,8 +69,6 @@ namespace WebApp.SoE
 					foreach (var supportedCultureId in supportedCultureIds)
 						supportedCultures.Add(CultureInfo.GetCultureInfo(supportedCultureId));
 
-
-
 					options.SetDefaultCulture(defaultCulture.TwoLetterISOLanguageName);
 					// Formatting numbers, dates, etc.
 					options.SupportedCultures = supportedCultures;
@@ -127,7 +125,7 @@ namespace WebApp.SoE
 					var services = request.HttpContext.RequestServices;
 					var browserInfo = services.GetRequiredService<IBrowserInfo>();
 					var userAgent = request.Headers["User-Agent"];
-					
+
 					return !browserInfo.IsSupportedBrowser(userAgent) && browserInfo.HasES5Support(userAgent);
 				};
 			});
