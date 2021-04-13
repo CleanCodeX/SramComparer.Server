@@ -23,7 +23,7 @@
 
 		public const string Guides = "/" + nameof(Guides);
 		public const string GuideSrm = Guides + "/Srm";
-		public const string GuideSavestate = Guides + "/Savestate";
+		public const string GuideSnes9x = Guides + "/Snes9x";
 
 		public const string FAQ = "/" + nameof(FAQ);
 		public const string Glossary = "/" + nameof(Glossary);
