@@ -24,9 +24,9 @@ namespace WebApp.SoE
 					var env = hostingContext.HostingEnvironment;
 					config.SetBasePath(env.ContentRootPath);
 					config.AddJsonFile("appsettings.json", false, true);
-					if(env.IsDevelopment())
-						config.AddJsonFile($"appsettings.{env.EnvironmentName}.json", true);
-					
+					//if (env.IsDevelopment())
+					//	config.AddJsonFile($"appsettings.{env.EnvironmentName}.json", true);
+
 					config.AddEnvironmentVariables();
 				});
 	}
