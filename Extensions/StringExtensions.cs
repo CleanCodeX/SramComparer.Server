@@ -12,13 +12,23 @@ namespace WebApp.SoE.Extensions
 	public static partial class StringExtensions
 	{
 		/// <summary>Sets a fore color of a string</summary>
-		public static string ColorText(this string? source, Color color) => $"<span style='color:{color.Name}'>{source}</span>";
+		public static string ColorText(this string source, Color color, bool formatAsHtml = true)
+		{
+			if (!formatAsHtml) return source;
+
+			return $"<span style='color:{color.Name}'>{source}</span>";
+		}
 
 		/// <summary>Sets a background color of a string</summary>
-		public static string BgColorText(this string? source, Color color) => $"<span style='background-color:{color.Name}'>{source}</span>";
+		public static string BgColorText(this string source, Color color, bool formatAsHtml = true)
+		{
+			if (!formatAsHtml) return source;
+
+			return $"<span style='background-color:{color.Name}'>{source}</span>";
+		}
 
 		/// <summary>Adds a tooltop to a string</summary>
-		public static string AddTooltip(this string source, string title) => $"<span title='{title}'>{source}</span>";
+		public static string AddTooltip(this string source, string text) => $"<span title='{text}'>{source}</span>";
 		
 		/// <summary>Replaces spaces by non breakable spaces</summary>
 		public static MarkupString ReplaceSpaces(this string source) => source.Replace(' ', '\u00A0').ToMarkup();
@@ -31,8 +41,13 @@ namespace WebApp.SoE.Extensions
 
 		public static string? ToNullIfEmpty(this string? source) => source.IsNullOrEmpty() ? null : source;
 
-		public static MarkupString ReplaceWithHtmlLineBreaks(this string source) => source
-			.Replace(Environment.NewLine, "<br>").ToMarkup();
+		public static MarkupString ReplaceWithHtmlLineBreaks(this string source, bool replace = true)
+		{
+			if (!replace) return source.ToMarkup();
+
+			return source
+				.Replace(Environment.NewLine, "<br>").ToMarkup();
+		}
 
 		/// <summary>Replaces quotes</summary>
 		public static string RemoveQuotes(this string source) => source.Remove(@"""")!;

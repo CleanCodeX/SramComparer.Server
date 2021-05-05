@@ -19,14 +19,14 @@ namespace WebApp.SoE.ViewModels
 		public int OffsetAddress { get; set; }
 		public int OffsetValue { get; set; }
 
+		private string StorageKey => StorageKeyPrefix + nameof(OffsetAddress);
 		public bool CanGet => IsLoaded && OffsetAddress > 0;
 		public bool CanSet => IsLoaded && OffsetAddress > 0;
-
-		private string StorageKey => StorageKeyPrefix + nameof(OffsetAddress);
-
+		
 		protected internal override async Task LoadOptionsAsync()
 		{
 			await base.LoadOptionsAsync();
+
 			try
 			{
 				OffsetAddress = (await LocalStorage.GetAsync<int>(StorageKey)).Value;
@@ -68,12 +68,14 @@ namespace WebApp.SoE.ViewModels
 
 		private void InternalGetOffsetValue()
 		{
+			IsError = false;
+
 			try
 			{
 				CurrentFileSaveSlot.ThrowIfDefault(nameof(CurrentFileSaveSlot));
 				SramFile.ThrowIfNull(nameof(SramFile));
 
-				IsError = false;
+				
 				OffsetValue = SramFile.GetOffsetByte(CurrentFileSaveSlot.ToInt() - 1, OffsetAddress);
 				var valueDisplayText = NumberFormatter.FormatDecHexBin((byte)OffsetValue);
 

@@ -200,7 +200,7 @@
 	<data name="MenuTooltipCommunity" xml:space="preserve">
 		<value>Community (Discord, Forum, etc.)</value>
 	</data>
-	<data name="MenuTooltipChangeLog" xml:space="preserve">
+	<data name="MenuTooltipChangelog" xml:space="preserve">
 		<value>Changelog und download der Konsolen-Anwendung</value>
 	</data>
 	<data name="MenuTooltipRosettaStone" xml:space="preserve">
@@ -344,5 +344,23 @@
 	</data>
 	<data name="MenuTooltipFAQ" xml:space="preserve">
 		<value>Häufig gestellte Fragen</value>
+	</data>
+	<data name="ButtonTooltipChangeSecretCode" xml:space="preserve">
+		<value>Geheimen Boss-Raumcode ändern</value>
+	</data>
+	<data name="ButtonTooltipCopyOutput" xml:space="preserve">
+		<value>Das Ausgabeergebnis in die Zwischenablage kopieren</value>
+	</data>
+	<data name="NotSet" xml:space="preserve">
+		<value>Nicht gesetzt</value>
+	</data>
+	<data name="MenuTooltipTerminalCodes" xml:space="preserve">
+		<value>Die Alarm- und geheimen Boss-Raumcodes anzeigen</value>
+	</data>
+	<data name="TooltipInvalidSaveSlotChecksum" xml:space="preserve">
+		<value>Ein ungültiger Validierungsstatus hat keinen Einfluss auf die Fähigkeit, das Savegame in Emulatoren zum Spielen zu verwenden.</value>
+	</data>
+	<data name="EmptySaveSlot" xml:space="preserve">
+		<value>Leerer Speicherslot</value>
 	</data>
 </root>

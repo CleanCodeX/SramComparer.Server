@@ -36,9 +36,9 @@ namespace WebApp.SoE.Shared.Controls
         protected override bool TryParseValueFromString(string? value, out TEnum result, out string validationErrorMessage)
         {
             // Let's Blazor convert the value for us 😊
-            if (BindConverter.TryConvertTo(value, CultureInfo.CurrentCulture, out TEnum parsedValue))
+            if (BindConverter.TryConvertTo(value, CultureInfo.CurrentCulture, out TEnum? parsedValue))
             {
-                result = parsedValue;
+                result = parsedValue!;
                 validationErrorMessage = null!;
                 return true;
             }

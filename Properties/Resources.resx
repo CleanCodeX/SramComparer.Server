@@ -243,6 +243,12 @@
   <data name="ButtonTooltipGetOffsetValue" xml:space="preserve">
     <value>Get offset value</value><comment>The term Offset should only be translated if not understandable</comment>
   </data>
+  <data name="ButtonTooltipChangeSecretCode" xml:space="preserve">
+    <value>Change secret boss room code</value>
+  </data>
+  <data name="TooltipInvalidSaveSlotChecksum" xml:space="preserve">
+    <value>An invalid checksum does not affect the ability to use the savegame in emulators for playing.</value>
+  </data>
   <data name="LabelTooltipSaveSlotOffset" xml:space="preserve">
     <value>The relative offset within the gameslot area</value><comment>The term Offset should only be translated if not understandable</comment>
   </data>
@@ -251,6 +257,12 @@
   </data>
   <data name="ButtonSetNewValue" xml:space="preserve">
     <value>Set value</value>
+  </data>
+  <data name="NotSet" xml:space="preserve">
+    <value>Not set</value>
+  </data>
+  <data name="EmptySaveSlot" xml:space="preserve">
+    <value>Empty saveslot</value>
   </data>
   <data name="MenuTooltipCommunity" xml:space="preserve">
     <value>Community (Discord, Forum, etc.)</value>
@@ -276,7 +288,7 @@
   <data name="MenuChangeLog" xml:space="preserve">
     <value>Changelog</value>
   </data>
-  <data name="MenuTooltipChangeLog" xml:space="preserve">
+  <data name="MenuTooltipChangelog" xml:space="preserve">
     <value>Console App changelog and downloads</value>
   </data>
   <data name="MenuTooltipImagery" xml:space="preserve">
@@ -436,6 +448,9 @@
   <data name="ButtonTooltipCopySummary" xml:space="preserve">
     <value>Copy save slot summary to clipboard</value>
   </data>
+  <data name="ButtonTooltipCopyOutput" xml:space="preserve">
+  <value>Copy output result to clipboard</value>
+  </data>
   <data name="ButtonTooltipDownloadSummaryFile" xml:space="preserve">
     <value>Download save slot summary as text file</value>
   </data>
@@ -447,6 +462,9 @@
   </data>
   <data name="MenuTooltipSlotSummary" xml:space="preserve">
     <value>Display save slot summary</value>
+  </data>
+  <data name="MenuTooltipTerminalCodes" xml:space="preserve">
+    <value>Display the alarm- and secret boss-terminal codes</value>
   </data>
   <data name="MenuTooltipFAQ" xml:space="preserve">
     <value>Frequently asked questions</value>

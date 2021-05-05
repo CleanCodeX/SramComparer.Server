@@ -3,12 +3,13 @@ using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
-using Common.Shared.Min.Helpers;
 using IO.Extensions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using SRAM.SoE.Models;
 using WebApp.SoE.Extensions;
+using WebApp.SoE.Helpers;
+using WebApp.SoE.Properties;
 using WebApp.SoE.Shared.Enums;
 using Snes9x = SRAM.SoE.Extensions.StreamExtensions;
 
@@ -21,15 +22,21 @@ namespace WebApp.SoE.ViewModels.Bases
 	{
 		protected bool IsSavestate { get; private set; }
 		protected SramFileSoE? SramFile { get; set; }
-		
+
+		public bool IsError { get; protected set; }
 		public bool IsLoading { get; set; }
-		public virtual bool CanLoad => !IsLoading && CurrentFileStream is not null;
 		public MarkupString OutputMessage { get; set; }
-		public new MandatorySaveSlotId CurrentFileSaveSlot { get; set; } = MandatorySaveSlotId.One;
+		
+		public new MandatorySaveSlotId CurrentFileSaveSlot 
+		{
+			get => (MandatorySaveSlotId) base.CurrentFileSaveSlot;
+			set => base.CurrentFileSaveSlot = (SaveSlotId) value;
+		}
+
+		public virtual bool CanLoad => !IsLoading && CurrentFileStream is not null;
 		public bool IsLoaded => SramFile is not null;
 		public bool ShowOutput => OutputMessage.ToString() != string.Empty;
-		public bool IsError { get; protected set; }
-		
+
 		public override async Task SetCurrentFileAsync(IBrowserFile file)
 		{
 			await base.SetCurrentFileAsync(file);
@@ -37,21 +44,26 @@ namespace WebApp.SoE.ViewModels.Bases
 			Load();
 		}
 
+		public virtual MarkupString GetCurrentSaveslotChecksumStatus()
+		{
+			if (!IsLoaded) return Resources.NotSet.ColorText(Color.Cyan).ToMarkup();
+
+			return SaveslotChecksumStatusFormatter.GetSaveslotChecksumStatus(CurrentFileSaveSlot.ToInt() - 1, SramFile!);
+		}
+
 		private void Load()
 		{
 			try
 			{
 				CanLoad.ThrowIfFalse(nameof(CanLoad));
+				CurrentFileStream.ThrowIfNull(nameof(CurrentFileStream));
 
-				IsError = false;
-				IsLoading = true;
-
-				Requires.NotNull(CurrentFileStream, nameof(CurrentFileStream));
-
+				(IsError, IsLoading) = (false, true);
+				
 				CurrentFileStream.Position = 0;
 				CurrentFileStream = ConvertStreamIfSaveState(CurrentFileStream, CurrentFileName!);
 
-				SramFile = new SramFileSoE(CurrentFileStream, GameRegion);
+				SramFile = new(CurrentFileStream, GameRegion);
 				CurrentFileStream = null;
 			}
 			catch (Exception ex)
@@ -67,8 +79,10 @@ namespace WebApp.SoE.ViewModels.Bases
 		{
 			await base.LoadOptionsAsync();
 
-			if(Options.CurrentFileSaveSlot > 0)
-				CurrentFileSaveSlot = (MandatorySaveSlotId)base.CurrentFileSaveSlot;
+			if (Options.CurrentFileSaveSlot > 0)
+				CurrentFileSaveSlot = (MandatorySaveSlotId) base.CurrentFileSaveSlot;
+			else
+				CurrentFileSaveSlot = MandatorySaveSlotId.One;
 		}
 
 		protected internal override Task SaveOptionsAsync()
@@ -85,7 +99,7 @@ namespace WebApp.SoE.ViewModels.Bases
 			var fileExtension = Path.GetExtension(filePath).ToLower();
 			if (fileExtension == ".srm") return stream;
 
-			var result = Snes9x.GetSramFromSavestate(stream, GameRegion)!.GetSlice(SramSizes.Size);
+			var result = Snes9x.ReadSramFromSavestate(stream, GameRegion)!.GetSlice(SramSizes.Size);
 
 			IsSavestate = true;
 

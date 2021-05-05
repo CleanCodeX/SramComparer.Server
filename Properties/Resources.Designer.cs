@@ -160,6 +160,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Change secret boss room code ähnelt.
+        /// </summary>
+        public static string ButtonTooltipChangeSecretCode {
+            get {
+                return ResourceManager.GetString("ButtonTooltipChangeSecretCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Compare savegame files ähnelt.
         /// </summary>
         public static string ButtonTooltipCompare {
@@ -183,6 +192,15 @@ namespace WebApp.SoE.Properties {
         public static string ButtonTooltipCopyLocalization {
             get {
                 return ResourceManager.GetString("ButtonTooltipCopyLocalization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Copy output result to clipboard ähnelt.
+        /// </summary>
+        public static string ButtonTooltipCopyOutput {
+            get {
+                return ResourceManager.GetString("ButtonTooltipCopyOutput", resourceCulture);
             }
         }
         
@@ -291,6 +309,15 @@ namespace WebApp.SoE.Properties {
         public static string CaptionWebSlotSummary {
             get {
                 return ResourceManager.GetString("CaptionWebSlotSummary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Empty saveslot ähnelt.
+        /// </summary>
+        public static string EmptySaveSlot {
+            get {
+                return ResourceManager.GetString("EmptySaveSlot", resourceCulture);
             }
         }
         
@@ -838,9 +865,9 @@ namespace WebApp.SoE.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Console App changelog and downloads ähnelt.
         /// </summary>
-        public static string MenuTooltipChangeLog {
+        public static string MenuTooltipChangelog {
             get {
-                return ResourceManager.GetString("MenuTooltipChangeLog", resourceCulture);
+                return ResourceManager.GetString("MenuTooltipChangelog", resourceCulture);
             }
         }
         
@@ -980,6 +1007,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Display the alarm- and secret boss-terminal codes ähnelt.
+        /// </summary>
+        public static string MenuTooltipTerminalCodes {
+            get {
+                return ResourceManager.GetString("MenuTooltipTerminalCodes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die What are the Unknown areas to explore? ähnelt.
         /// </summary>
         public static string MenuTooltipTheUnknowns {
@@ -1034,6 +1070,15 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Not set ähnelt.
+        /// </summary>
+        public static string NotSet {
+            get {
+                return ResourceManager.GetString("NotSet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Save slot ähnelt.
         /// </summary>
         public static string SaveSlot {
@@ -1057,6 +1102,15 @@ namespace WebApp.SoE.Properties {
         public static string SelectLanguage {
             get {
                 return ResourceManager.GetString("SelectLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die An invalid checksum does not affect the ability to use the savegame in emulators for playing. ähnelt.
+        /// </summary>
+        public static string TooltipInvalidSaveSlotChecksum {
+            get {
+                return ResourceManager.GetString("TooltipInvalidSaveSlotChecksum", resourceCulture);
             }
         }
     }

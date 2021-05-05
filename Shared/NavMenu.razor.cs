@@ -90,6 +90,7 @@ namespace WebApp.SoE.Shared
 				_ when path == PageUris.Comparison.ToLower() => ExpandedMenu.WebTools,
 				_ when path.StartsWith(PageUris.Offset, true) => ExpandedMenu.WebTools,
 				_ when path == PageUris.SlotSummary.ToLower() => ExpandedMenu.WebTools,
+				_ when path == PageUris.TerminalCodes.ToLower() => ExpandedMenu.WebTools,
 
 				_ => ExpandedMenu.None
 			};

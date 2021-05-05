@@ -1,5 +1,7 @@
 ﻿using System;
+using System.ComponentModel;
 using System.IO;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
 using Microsoft.AspNetCore.Components;
@@ -13,17 +15,28 @@ using WebApp.SoE.Shared.Enums;
 
 namespace WebApp.SoE.ViewModels.Bases
 {
-	public abstract class ViewModelBase
+	public abstract class ViewModelBase : INotifyPropertyChanged
 	{
-#nullable disable
-		[Inject] public ProtectedLocalStorage LocalStorage { get; set; }
-#nullable restore
+		[Inject] public ProtectedLocalStorage LocalStorage { get; set; } = null!;
 
-		public Options Options { get; private set; } = new();
-		public GameRegion GameRegion { get; set; }
-		public virtual SaveSlotId CurrentFileSaveSlot { get; set; }
 		protected Stream? CurrentFileStream { get; set; }
+
+		public GameRegion GameRegion { get; set; }
 		public string? CurrentFileName { get; set; }
+		public Options Options { get; private set; } = new();
+
+		private SaveSlotId _currentFileSaveSlot;
+		public virtual SaveSlotId CurrentFileSaveSlot
+		{
+			get => _currentFileSaveSlot;
+			set
+			{
+				if (_currentFileSaveSlot == value) return;
+
+				_currentFileSaveSlot = value;
+				OnPropertyChanged();
+			}
+		}
 
 		protected virtual string StorageKeyPrefix => GetType().Name + "_" ;
 		private string StorageKey => StorageKeyPrefix + nameof(Options);
@@ -74,5 +87,9 @@ namespace WebApp.SoE.ViewModels.Bases
 
 			throw new ArgumentException(Resources.ErrorUnsupportedFileExtensionTemplate.InsertArgs(fileName));
 		}
+
+		public event PropertyChangedEventHandler? PropertyChanged;
+
+		protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null) => PropertyChanged?.Invoke(this, new(propertyName));
 	}
 }

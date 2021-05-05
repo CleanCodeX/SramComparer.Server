@@ -1,7 +1,10 @@
-﻿<title>@Res.CaptionWebOffsetEdit</title>
+﻿@using System.Drawing
+@using WebApp.SoE.ViewModels
+@using static WebApp.SoE.ViewModels.TerminalCodesViewModel
+<title>@ResCompSoE.TerminalCodes</title>
 
 <div>
-	<h1>@Res.CaptionWebOffsetEdit</h1>
+	<h1>@ResCompSoE.TerminalCodes</h1>
 	<br />
 
 	<EditForm Model="@ViewModel">
@@ -39,27 +42,17 @@
 			<p />
 			
 			<tr>
-				<td><label class="header">@ResComp.CompOffset</label></td>
+				<td><label class="header">@ResCompSoE.TerminalCodes</label></td>
 			</tr>
 			<tr>
-				<td><label title="@Res.LabelTooltipSaveSlotOffset">@Res.SaveSlotOffset:@Ns</label>*)</td>
-				<td>
-					<input type="number" @bind="@ViewModel.OffsetAddress" maxLength="4" title="@Res.LabelTooltipSaveSlotOffset" />
-					<button class="btn btn-primary" @onclick="@ViewModel.GetOffsetValueAsync" disabled="@(!ViewModel.CanGet)" title="@Res.ButtonTooltipGetOffsetValue">
-						<span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" />
-					</button>
-				</td>
+				<td><label>@ResCompSoE.AlarmCode:@Ns</label></td>
+				<td><label>@TerminalCodeFormatter.FormatTerminalCode(ViewModel.AlarmCode, true)</label></td>
 			</tr>
 			<tr>
-				<td><label>@Res.LabelOffsetValue:@Ns</label></td>
-				<td>
-					<input type="number" @bind="@ViewModel.OffsetValue" maxLength="3" />
-					<button class="btn btn-primary" @onclick="@ViewModel.SetOffsetValueAsync" disabled="@(!ViewModel.CanSet)" title="@Res.ButtonTooltipSetOffsetValue">
-						<span class="iconify" data-icon="oi-pencil" data-inline="false" />
-					</button>
-				</td>
+				<td><label>@ResCompSoE.SecretBossRoomCode:@Ns</label></td>
+				<td><label>@TerminalCodeFormatter.FormatTerminalCode(ViewModel.SecretCode, true)</label></td>
 			</tr>
-			
+
 			<p />
 
 			<tr>
@@ -70,6 +63,16 @@
 			
 			<tr>
 				<td>
+					<button class="btn btn-primary" @onclick="@(() => ViewModel.GetTerminalCodes(true))" disabled="@ShowOutputButtonDisabled" title="@Res.ButtonTooltipShowSummary">
+						<span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" />
+					</button>
+					
+					<ClipboardCopy OnCopyAsync="@CopyTerminalCodesAsync" Disabled="@CopyOutputButtonDisabled" title="@Res.ButtonTooltipCopyOutput" />
+					
+					<button class="btn btn-primary" @onclick="@ViewModel.ChangeSecretDoorCodeIfSame" disabled="@(!ViewModel.CanSet)" title="@Res.ButtonTooltipChangeSecretCode">
+						<span class="iconify" data-icon="oi-pencil" data-inline="false" />
+					</button>
+					
 					<button class="btn btn-primary" @onclick="@ViewModel.SaveAndDownloadAsync" disabled="@SaveButtonDisabled" title="@Res.ButtonTooltipDownloadChangedFile">
 						<span class="iconify" data-icon="oi-cloud-download" data-inline="false" />
 					</button>

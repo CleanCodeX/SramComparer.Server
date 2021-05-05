@@ -201,7 +201,7 @@
 	<data name="MenuTooltipCommunity" xml:space="preserve">
 		<value>Communité (Discord, Forum, etc.)</value>
 	</data>
-	<data name="MenuTooltipChangeLog" xml:space="preserve">
+	<data name="MenuTooltipChangelog" xml:space="preserve">
 		<value>Historique &amp; Télécharger l'application console</value>
 	</data>
 	<data name="LabelChangeLog" xml:space="preserve">
@@ -344,5 +344,23 @@
 	</data>
 	<data name="MenuTooltipFAQ" xml:space="preserve">
 		<value>Questions fréquemment posées</value>
+	</data>
+	<data name="ButtonTooltipChangeSecretCode" xml:space="preserve">
+		<value>Changer le code secret de la salle du boss</value>
+	</data>
+	<data name="ButtonTooltipCopyOutput" xml:space="preserve">
+		<value>Copier le résultat de la sortie dans le presse-papiers</value>
+	</data>
+	<data name="NotSet" xml:space="preserve">
+		<value>Pas encore défini</value>
+	</data>
+	<data name="MenuTooltipTerminalCodes" xml:space="preserve">
+		<value>Afficher les codes d'alarme et de borne du boss secret</value>
+	</data>
+	<data name="TooltipInvalidSaveSlotChecksum" xml:space="preserve">
+		<value>Un état de validation non valide n'affecte pas la possibilité d'utiliser la sauvegarde dans les émulateurs pour jouer.</value>
+	</data>
+	<data name="EmptySaveSlot" xml:space="preserve">
+		<value>Espacio de guardado vacío</value>
 	</data>
 </root>

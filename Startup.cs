@@ -29,14 +29,19 @@ namespace WebApp.SoE
 		{
 			services.AddHttpContextAccessor();
 
-			services.AddScoped<SlotSummaryViewModel>(sp => new() {LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>()});
-			services.AddScoped<ComparisonViewModel>(sp => new() {LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>()});
+			services.AddScoped<TerminalCodesViewModel>(sp => new()
+			{
+				JsRuntime = sp.GetRequiredService<IJSRuntime>(),
+				LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>()
+			});
+			services.AddScoped<SlotSummaryViewModel>(sp => new() { LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>() });
+			services.AddScoped<ComparisonViewModel>(sp => new() { LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>() });
 			services.AddScoped<SetOffsetValueViewModel>(sp => new()
 			{
 				JsRuntime = sp.GetRequiredService<IJSRuntime>(),
 				LocalStorage = sp.GetRequiredService<ProtectedLocalStorage>()
 			});
-
+			
 			services.AddOptions<Settings>().Bind(Configuration.GetSection(nameof(Settings)));
 			services.AddSingleton(cfg => cfg.GetService<IOptionsMonitor<Settings>>()!.CurrentValue);
 

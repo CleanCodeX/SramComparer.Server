@@ -1,6 +1,8 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Threading.Tasks;
+using Common.Shared.Min.Extensions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using WebApp.SoE.Extensions;
@@ -10,17 +12,16 @@ using WebApp.SoE.ViewModels;
 
 namespace WebApp.SoE.Pages
 {
-	[Route(PageUris.Offset)]
-	[Route(PageUris.OffsetEditing)]
-	public partial class Offset
+	[Route(PageUris.TerminalCodes)]
+	public partial class TerminalCodes
 	{
 		private static readonly MarkupString Ns = (MarkupString)"&nbsp;";
 
-#nullable disable
-		[Inject] private SetOffsetValueViewModel ViewModel { get; set; }
-#nullable restore
+		[Inject] private TerminalCodesViewModel ViewModel { get; set; } = default!;
 
 		private bool SaveButtonDisabled => ViewModel.IsError || !ViewModel.CanSave;
+		private bool ShowOutputButtonDisabled => !ViewModel.CanShowOutput;
+		private bool CopyOutputButtonDisabled => ShowOutputButtonDisabled || ViewModel.OutputMessage.ToString().IsNullOrEmpty();
 
 		private const string SelectSelectedStyle = "color: cyan;background-color: black;";
 		private const string SelectUnselectedStyle = "color: white;background-color: black;";
@@ -31,6 +32,7 @@ namespace WebApp.SoE.Pages
 
 		protected override Task OnInitializedAsync()
 		{
+			ViewModel.CurrentFileSaveSlot = MandatorySaveSlotId.One;
 			ViewModel.PropertyChanged += (_, _) => InvokeAsync(StateHasChanged);
 			return ViewModel.LoadOptionsAsync();
 		}
@@ -45,6 +47,16 @@ namespace WebApp.SoE.Pages
 			{
 				ViewModel.OutputMessage = ex.Message.ColorText(Color.Red).ToMarkup();
 			}
+		}
+
+		private void ViewModelOnPropertyChanged(object? sender, PropertyChangedEventArgs e) =>
+			InvokeAsync(StateHasChanged);
+
+		private async Task<string> CopyTerminalCodesAsync()
+		{
+			await ViewModel.GetTerminalCodes(false);
+
+			return ViewModel.OutputMessage.ReplaceHtmlLineBreaks();
 		}
 	}
 }

@@ -239,7 +239,7 @@
 	<data name="MenuTooltipAwesome" xml:space="preserve">
 		<value>Páginas impresionantes para un juego increíble</value>
 	</data>
-	<data name="MenuTooltipChangeLog" xml:space="preserve">
+	<data name="MenuTooltipChangelog" xml:space="preserve">
 		<value>Registro de cambios y descargas de la aplicación de consola</value>
 	</data>
 	<data name="MenuTooltipCommunity" xml:space="preserve">
@@ -343,5 +343,23 @@
 	</data>
 	<data name="MenuTooltipFAQ" xml:space="preserve">
 		<value>Preguntas frecuentes</value>
+	</data>
+	<data name="ButtonTooltipChangeSecretCode" xml:space="preserve">
+		<value>Cambiar el código secreto de la sala del jefe</value>
+	</data>
+	<data name="ButtonTooltipCopyOutput" xml:space="preserve">
+		<value>Copiar el resultado de salida al portapapeles</value>
+	</data>
+	<data name="NotSet" xml:space="preserve">
+		<value>No establecido</value>
+	</data>
+	<data name="MenuTooltipTerminalCodes" xml:space="preserve">
+		<value>Muestra los códigos de terminal de jefe secreto y de alarma</value>
+	</data>
+	<data name="TooltipInvalidSaveSlotChecksum" xml:space="preserve">
+		<value>Un estado de validación no válido no afecta la capacidad de usar la partida guardada en emuladores para jugar.</value>
+	</data>
+	<data name="EmptySaveSlot" xml:space="preserve">
+		<value>Emplacement de sauvegarde vide</value>
 	</data>
 </root>

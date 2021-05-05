@@ -34,6 +34,13 @@
 			<p />
 
 			<tr>
+				<td><label class="header">@Res.LabelChecksumStatus:@Ns</label></td>
+				<td><label title="@Res.TooltipInvalidSaveSlotChecksum">@ViewModel.GetCurrentSaveslotChecksumStatus()</label></td>
+			</tr>
+			
+			<p />
+
+			<tr>
 				<td colspan="2"><label class="header" title="@Res.LabelTooltipFile">@ResComp.EnumComparisonFile (*.srm|*.comp|*.00x|*.state)</label></td>
 			</tr>
 			
@@ -44,6 +51,13 @@
 			<tr>
 				<td><label>@Res.SaveSlot:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@ViewModel.ComparisonFileSaveSlot" style=@ComparisonFileStyle disabled="@ComparisonFileSaveSlotDisabled" /></td>
+			</tr>
+			
+			<p />
+
+			<tr>
+				<td><label class="header">@Res.LabelChecksumStatus:@Ns</label></td>
+				<td><label title="@Res.TooltipInvalidSaveSlotChecksum">@ViewModel.GetComparisonSaveslotChecksumStatus()</label></td>
 			</tr>
 			
 			<p />

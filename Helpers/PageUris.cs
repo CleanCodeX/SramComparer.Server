@@ -12,6 +12,7 @@
 		public const string OffsetEditing = Offset + "/editing";
 
 		public const string SlotSummary = "/" + nameof(SlotSummary);
+		public const string TerminalCodes = "/" + nameof(TerminalCodes);
 
 		public const string About = "/" + nameof(About);
 		public const string Contributors = "/" + nameof(Contributors);

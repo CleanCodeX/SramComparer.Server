@@ -4,14 +4,16 @@ using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
-using Common.Shared.Min.Helpers;
 using IO.Extensions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using SRAM.Comparison.Services;
 using SRAM.Comparison.SoE.Enums;
 using SRAM.Comparison.SoE.Services;
+using SRAM.SoE.Models;
 using WebApp.SoE.Extensions;
+using WebApp.SoE.Helpers;
+using WebApp.SoE.Properties;
 using WebApp.SoE.Services;
 using WebApp.SoE.Shared.Enums;
 using WebApp.SoE.ViewModels.Bases;
@@ -44,9 +46,10 @@ namespace WebApp.SoE.ViewModels
 
 				base.CurrentFileSaveSlot = value;
 
-				if (ComparisonFileSaveSlot != SaveSlotId.All)
-					if (value == SaveSlotId.All || value == ComparisonFileSaveSlot)
-						ComparisonFileSaveSlot = SaveSlotId.All;
+				if (ComparisonFileSaveSlot == SaveSlotId.All) return;
+
+				if (value == SaveSlotId.All || value == ComparisonFileSaveSlot)
+					ComparisonFileSaveSlot = SaveSlotId.All;
 			}
 		}
 
@@ -65,6 +68,7 @@ namespace WebApp.SoE.ViewModels
 				}
 					
 				_comparisonFileSaveSlot = value;
+				OnPropertyChanged();
 			}
 		}
 
@@ -72,11 +76,13 @@ namespace WebApp.SoE.ViewModels
 		public string? ComparisonFileName { get; set; }
 		public MarkupString OutputMessage { get; set; }
 		public bool IsBusy { get; set; }
-		public bool CanCompare => !IsBusy && CurrentFileStream is not null && ComparisonFileStream is not null;
 		public bool ColorizeOutput { get; set; } = true;
-
-		public bool ShowOutput => OutputMessage.ToString() != string.Empty;
 		public bool IsError { get; private set; }
+		public SaveSlotOption Checksum { get; set; }
+		public SaveSlotOption ScriptedEventTimer { get; set; }
+
+		public bool CanCompare => !IsBusy && CurrentFileStream is not null && ComparisonFileStream is not null;
+		public bool ShowOutput => OutputMessage.ToString() != string.Empty;
 
 		public bool SlotByteComparison
 		{
@@ -96,11 +102,6 @@ namespace WebApp.SoE.ViewModels
 			set => Options.ComparisonFlags = Options.ComparisonFlags.InvertUInt32Flags(ComparisonFlagsSoE.ChecksumStatus);
 		}
 
-		public SaveSlotOption Checksum { get; set; }
-		public SaveSlotOption ScriptedEventTimer { get; set; }
-
-		public override async Task SetCurrentFileAsync(IBrowserFile file) => await base.SetCurrentFileAsync(file);
-
 		public async Task SetComparisonFileAsync(IBrowserFile file)
 		{
 			CheckFileExtension(file.Name);
@@ -111,27 +112,26 @@ namespace WebApp.SoE.ViewModels
 
 		public async Task CompareAsync()
 		{
+			(IsError, IsBusy) = (false, true);
+
 			try
 			{
 				CanCompare.ThrowIfFalse(nameof(CanCompare));
-
-				IsError = false;
-				IsBusy = true;
-
+				CurrentFileStream.ThrowIfNull(nameof(CurrentFileStream));
+				ComparisonFileStream.ThrowIfNull(nameof(ComparisonFileStream));
+				
 				await SaveOptionsAsync();
-
-				await using var output = new StringWriter {NewLine = "<br>"};
-
-				Requires.NotNull(CurrentFileStream, nameof(CurrentFileStream));
-				Requires.NotNull(ComparisonFileStream, nameof(ComparisonFileStream));
-
+				await using StringWriter output = new() {NewLine = "<br>"};
+				
 				CurrentFileStream.Position = 0;
 				ComparisonFileStream.Position = 0;
 
 				Options.CurrentFilePath = CurrentFileName;
 				Options.ComparisonPath = ComparisonFileName;
 
-				var commandHandler = new CommandHandlerSoE(ColorizeOutput ? new HtmlConsolePrinterSoE() : new ConsolePrinter());
+				CommandHandlerSoE commandHandler = new(ColorizeOutput 
+					? new HtmlConsolePrinterSoE() 
+					: new ConsolePrinter());
 				commandHandler.Compare(CurrentFileStream, ComparisonFileStream, Options, output);
 
 				OutputMessage = output.ToString().ToMarkup();
@@ -143,6 +143,20 @@ namespace WebApp.SoE.ViewModels
 			}
 
 			IsBusy = false;
+		}
+
+		public virtual MarkupString GetCurrentSaveslotChecksumStatus()
+		{
+			if (CurrentFileStream is null) return Res.NotSet.ColorText(Color.Cyan).ToMarkup();
+
+			return SaveslotChecksumStatusFormatter.GetSaveslotChecksumStatus(CurrentFileSaveSlot.ToInt() - 1, CurrentFileStream, GameRegion);
+		}
+
+		public virtual MarkupString GetComparisonSaveslotChecksumStatus()
+		{
+			if (ComparisonFileStream is null) return Res.NotSet.ColorText(Color.Cyan).ToMarkup();
+
+			return SaveslotChecksumStatusFormatter.GetSaveslotChecksumStatus(CurrentFileSaveSlot.ToInt() - 1, ComparisonFileStream, GameRegion);
 		}
 
 		protected internal override async Task LoadOptionsAsync()
@@ -164,7 +178,7 @@ namespace WebApp.SoE.ViewModels
 
 		protected internal override Task SaveOptionsAsync()
 		{
-			Options.ComparisonFileSaveSlot = ComparisonFileSaveSlot.ToInt();
+			Options.ComparisonFileSaveSlot = ComparisonFileSaveSlot.ToInt() - 1;
 
 			Options.ComparisonFlags &= ~ComparisonFlagsSoE.Checksum;
 			if (Checksum != default)

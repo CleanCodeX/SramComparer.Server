@@ -50,12 +50,27 @@ namespace WebApp.SoE.Pages
 
 				if (value == SaveSlotId.All || value == ViewModel.ComparisonFileSaveSlot)
 					if (ViewModel.ComparisonFileSaveSlot != SaveSlotId.All)
-					{
 						ViewModel.ComparisonFileSaveSlot = SaveSlotId.All;
-						StateHasChanged();
-					}
 				
 				ViewModel.CurrentFileSaveSlot = value;
+			}
+		}
+
+		protected override Task OnInitializedAsync()
+		{
+			ViewModel.PropertyChanged += (_, _) => InvokeAsync(StateHasChanged);
+			return ViewModel.LoadOptionsAsync();
+		}
+
+		public async Task DownloadComparisonResultAsync()
+		{
+			try
+			{
+				await JsRuntime.StartDownloadAsync("Output.txt", Encoding.UTF8.GetBytes(await CopyComparisonTextAsync()));
+			}
+			catch (Exception ex)
+			{
+				ViewModel.OutputMessage = ex.Message.ColorText(Color.Red).ToMarkup();
 			}
 		}
 
@@ -83,8 +98,6 @@ namespace WebApp.SoE.Pages
 			}
 		}
 
-		protected override Task OnInitializedAsync() => ViewModel.LoadOptionsAsync();
-
 		private async Task<string> CopyComparisonTextAsync()
 		{
 			var oldText = ViewModel.OutputMessage;
@@ -100,18 +113,6 @@ namespace WebApp.SoE.Pages
 				ViewModel.OutputMessage = oldText;
 
 			return result;
-		}
-
-		public async Task DownloadComparisonResultAsync()
-		{
-			try
-			{
-				await JsRuntime.StartDownloadAsync("Output.txt", Encoding.UTF8.GetBytes(await CopyComparisonTextAsync()));
-			}
-			catch (Exception ex)
-			{
-				ViewModel.OutputMessage = ex.Message.ColorText(Color.Red).ToMarkup();
-			}
 		}
 	}
 }

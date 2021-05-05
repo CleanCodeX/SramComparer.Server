@@ -28,6 +28,13 @@
 				<td><label>@Res.SaveSlot:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@CurrentFileSaveSlot" style=@CurrentSramFileStyle /></td>
 			</tr>
+			
+			<p />
+
+			<tr>
+				<td><label class="header">@Res.LabelChecksumStatus:@Ns</label></td>
+				<td><label title="@Res.TooltipInvalidSaveSlotChecksum">@ViewModel.GetCurrentSaveslotChecksumStatus()</label></td>
+			</tr>
 
 			<p />
 
@@ -39,13 +46,13 @@
 			
 			<tr>
 				<td>
-					<button class="btn btn-primary" @onclick="@ViewModel.GetSummaryAsync" disabled="@ShowSummaryButtonDisabled" title="@Res.ButtonTooltipShowSummary">
+					<button class="btn btn-primary" @onclick="@ViewModel.GetSummaryAsync" disabled="@ShowOutputButtonDisabled" title="@Res.ButtonTooltipShowSummary">
 						<span class="iconify" data-icon="oi-magnifying-glass" data-inline="false" />
 					</button>
 					
-					<ClipboardCopy OnCopyAsync="@CopySummaryTextAsync" Disabled="@CopySummaryButtonDisabled" title="@Res.ButtonTooltipCopySummary" />
+					<ClipboardCopy OnCopyAsync="@CopySummaryTextAsync" Disabled="@CopyOutputButtonDisabled" title="@Res.ButtonTooltipCopySummary" />
 					
-					<button class="btn btn-primary" @onclick="@DownloadSummaryAsync" disabled="@CopySummaryButtonDisabled" title="@Res.ButtonTooltipDownloadSummaryFile">
+					<button class="btn btn-primary" @onclick="@DownloadSummaryAsync" disabled="@CopyOutputButtonDisabled" title="@Res.ButtonTooltipDownloadSummaryFile">
 						<span class="iconify" data-icon="oi-cloud-download" data-inline="false" />
 					</button>
 				</td>

@@ -21,8 +21,8 @@ namespace WebApp.SoE.Pages
 		[Inject] private IJSRuntime JsRuntime { get; set; } = default!;
 		[Inject] private SlotSummaryViewModel ViewModel { get; set; } = default!;
 
-		private bool ShowSummaryButtonDisabled => !ViewModel.CanShowSummary;
-		private bool CopySummaryButtonDisabled => ShowSummaryButtonDisabled || ViewModel.OutputMessage.ToString().IsNullOrEmpty();
+		private bool ShowOutputButtonDisabled => !ViewModel.CanShowOutput;
+		private bool CopyOutputButtonDisabled => ShowOutputButtonDisabled || ViewModel.OutputMessage.ToString().IsNullOrEmpty();
 
 		private const string SelectSelectedStyle = "color: cyan;background-color: black;";
 		private const string SelectUnselectedStyle = "color: white;background-color: black;";
@@ -34,13 +34,27 @@ namespace WebApp.SoE.Pages
 		private MandatorySaveSlotId CurrentFileSaveSlot
 		{
 			get => (MandatorySaveSlotId)ViewModel.CurrentFileSaveSlot;
-			set => ViewModel.CurrentFileSaveSlot = (SaveSlotId)value;
+			set => ViewModel.CurrentFileSaveSlot = (SaveSlotId) value;
 		}
 
 		protected override Task OnInitializedAsync()
 		{
 			CurrentFileSaveSlot = MandatorySaveSlotId.One;
+			ViewModel.PropertyChanged += (_, _) => InvokeAsync(StateHasChanged);
+
 			return ViewModel.LoadOptionsAsync();
+		}
+
+		public async Task DownloadSummaryAsync()
+		{
+			try
+			{
+				await JsRuntime.StartDownloadAsync($"Saveslot_{(int)ViewModel.CurrentFileSaveSlot}.txt", Encoding.UTF8.GetBytes(await CopySummaryTextAsync()));
+			}
+			catch (Exception ex)
+			{
+				ViewModel.OutputMessage = ex.Message.ColorText(Color.Red).ToMarkup();
+			}
 		}
 
 		private async Task OnCurrentFileChange(InputFileChangeEventArgs arg)
@@ -60,18 +74,6 @@ namespace WebApp.SoE.Pages
 			await ViewModel.GetSummaryAsync();
 
 			return ViewModel.OutputMessage.ReplaceHtmlLineBreaks();
-		}
-
-		public async Task DownloadSummaryAsync()
-		{
-			try
-			{
-				await JsRuntime.StartDownloadAsync($"Saveslot_{(int)ViewModel.CurrentFileSaveSlot}.txt", Encoding.UTF8.GetBytes(await CopySummaryTextAsync()));
-			}
-			catch (Exception ex)
-			{
-				ViewModel.OutputMessage = ex.Message.ColorText(Color.Red).ToMarkup();
-			}
 		}
 	}
 }

@@ -17,23 +17,20 @@ namespace WebApp.SoE.ViewModels
 	/// <summary>Base Viewmodel for loading SoE S-RAM files</summary>
 	public class SetOffsetValueViewModel : GetOffsetValueViewModel
 	{
-#nullable disable
-		[Inject] internal IJSRuntime JsRuntime { get; set; }
-#nullable restore
-		
-		private bool Changed { get; set; }
+		[Inject] internal IJSRuntime JsRuntime { get; set; } = default!;
 
+		private bool Changed { get; set; }
 		public bool CanSave => Changed && CanSet && !IsSavestate;
 
 		public async Task SetOffsetValueAsync()
 		{
+			IsError = false;
+
 			try
 			{
-				await Task.CompletedTask;
-				
-				SramFile.ThrowIfNull(nameof(SramFile));
+				await SaveOptionsAsync();
 
-				IsError = false;
+				SramFile.ThrowIfNull(nameof(SramFile));
 				SramFile.SetOffsetValue(Options.CurrentFileSaveSlot - 1, OffsetAddress, (byte)OffsetValue);
 				var valueDisplayText = NumberFormatter.FormatDecHexBin((byte)OffsetValue);
 
@@ -50,11 +47,12 @@ namespace WebApp.SoE.ViewModels
 
 		public async Task SaveAndDownloadAsync()
 		{
+			IsError = false;
+
 			try
 			{
 				SramFile.ThrowIfNull(nameof(SramFile));
-
-				IsError = false;
+				
 				var bytes = new byte[8192];
 				SramFile.Save(new MemoryStream(bytes));
 

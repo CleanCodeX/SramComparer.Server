@@ -53,7 +53,7 @@ namespace WebApp.SoE.Services
 				return translation;
 			}
 			// ReSharper disable once RedundantCatchClause
-			catch (Exception ex)
+			catch (Exception)
 			{
 				throw;
 			}
