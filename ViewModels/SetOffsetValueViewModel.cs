@@ -53,8 +53,15 @@ namespace WebApp.SoE.ViewModels
 			{
 				SramFile.ThrowIfNull(nameof(SramFile));
 				
-				var bytes = new byte[8192];
-				SramFile.Save(new MemoryStream(bytes));
+				MemoryStream stream = new();
+				SramFile.Save(stream);
+
+				byte[]? bytes;
+
+				if (IsSavestate && ConvertSrmStreamToSavestate(Options, stream, CurrentFileStream!) is { } savestateData)
+					bytes = savestateData.GetBytes();
+				else
+					bytes = stream.GetBuffer();
 
 				await JsRuntime.StartDownloadAsync(CurrentFileName!, bytes);
 

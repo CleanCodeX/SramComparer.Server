@@ -6,12 +6,13 @@ using Common.Shared.Min.Extensions;
 using IO.Extensions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
+using SRAM.Comparison;
+using SRAM.SoE.Extensions;
 using SRAM.SoE.Models;
 using WebApp.SoE.Extensions;
 using WebApp.SoE.Helpers;
 using WebApp.SoE.Properties;
 using WebApp.SoE.Shared.Enums;
-using Snes9x = SRAM.SoE.Extensions.StreamExtensions;
 
 #pragma warning disable 8509
 
@@ -53,18 +54,22 @@ namespace WebApp.SoE.ViewModels.Bases
 
 		private void Load()
 		{
+			(IsError, IsLoading) = (false, true);
+
 			try
 			{
 				CanLoad.ThrowIfFalse(nameof(CanLoad));
 				CurrentFileStream.ThrowIfNull(nameof(CurrentFileStream));
-
-				(IsError, IsLoading) = (false, true);
 				
+				IsSavestate = Path.GetExtension(CurrentFileName)!.ToLower() == ".srm";
+
 				CurrentFileStream.Position = 0;
-				CurrentFileStream = ConvertStreamIfSaveState(CurrentFileStream, CurrentFileName!);
+				CurrentFileStream = ConvertSavestateStreamToSrm(CurrentFileStream);
 
 				SramFile = new(CurrentFileStream, GameRegion);
-				CurrentFileStream = null;
+				
+				if(!IsSavestate)
+					CurrentFileStream = null;
 			}
 			catch (Exception ex)
 			{
@@ -92,18 +97,24 @@ namespace WebApp.SoE.ViewModels.Bases
 			return base.SaveOptionsAsync();
 		}
 
-		private Stream ConvertStreamIfSaveState(Stream stream, string filePath)
+		private Stream ConvertSavestateStreamToSrm(Stream stream)
 		{
-			IsSavestate = false;
+			stream.ThrowIfNull(nameof(stream));
 
-			var fileExtension = Path.GetExtension(filePath).ToLower();
-			if (fileExtension == ".srm") return stream;
+			return !IsSavestate 
+				? stream : 
+				stream.ReadSramFromSavestate(GameRegion).ToStream();
+		}
 
-			var result = Snes9x.ReadSramFromSavestate(stream, GameRegion)!.GetSlice(SramSizes.Size);
+		public virtual Stream ConvertSrmStreamToSavestate(IOptions options, Stream srmStream, Stream savestateStream)
+		{
+			srmStream.ThrowIfNull(nameof(srmStream));
 
-			IsSavestate = true;
+			if (!IsSavestate) return srmStream;
 
-			return result;
+			savestateStream.ThrowIfNull(nameof(savestateStream));
+
+			return srmStream.WriteSramToSavestate(GameRegion, savestateStream.GetBytes()).ToStream();
 		}
 	}
 }
