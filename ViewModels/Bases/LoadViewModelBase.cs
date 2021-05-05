@@ -54,13 +54,13 @@ namespace WebApp.SoE.ViewModels.Bases
 
 		private void Load()
 		{
-			(IsError, IsLoading) = (false, true);
-
 			try
 			{
 				CanLoad.ThrowIfFalse(nameof(CanLoad));
 				CurrentFileStream.ThrowIfNull(nameof(CurrentFileStream));
-				
+
+				(IsError, IsLoading) = (false, true);
+
 				IsSavestate = Path.GetExtension(CurrentFileName)!.ToLower() == ".srm";
 
 				CurrentFileStream.Position = 0;

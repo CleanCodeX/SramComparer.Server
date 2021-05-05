@@ -41,16 +41,14 @@ namespace WebApp.SoE.ViewModels
 
 		public async Task GetTerminalCodes(bool formatAsHtml)
 		{
-			(IsError, IsBusy) = (false, true);
-
 			try
 			{
 				CanShowOutput.ThrowIfFalse(nameof(CanShowOutput));
 				SramFile.ThrowIfNull(nameof(SramFile));
-				
+
+				(IsError, IsBusy) = (false, true);
+
 				await SaveOptionsAsync();
-				
-				Options.CurrentFilePath = CurrentFileName;
 
 				var nl = Environment.NewLine;
 				var slotIndex = CurrentFileSaveSlot.ToInt() - 1;

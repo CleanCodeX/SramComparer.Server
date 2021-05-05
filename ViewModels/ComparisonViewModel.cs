@@ -112,14 +112,14 @@ namespace WebApp.SoE.ViewModels
 
 		public async Task CompareAsync()
 		{
-			(IsError, IsBusy) = (false, true);
-
 			try
 			{
 				CanCompare.ThrowIfFalse(nameof(CanCompare));
 				CurrentFileStream.ThrowIfNull(nameof(CurrentFileStream));
 				ComparisonFileStream.ThrowIfNull(nameof(ComparisonFileStream));
-				
+
+				(IsError, IsBusy) = (false, true);
+
 				await SaveOptionsAsync();
 				await using StringWriter output = new() {NewLine = "<br>"};
 				
