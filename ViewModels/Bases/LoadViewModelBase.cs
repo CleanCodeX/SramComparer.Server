@@ -61,7 +61,7 @@ namespace WebApp.SoE.ViewModels.Bases
 
 				(IsError, IsLoading) = (false, true);
 
-				IsSavestate = Path.GetExtension(CurrentFileName)!.ToLower() == ".srm";
+				IsSavestate = Path.GetExtension(CurrentFileName)!.ToLower() != ".srm";
 
 				CurrentFileStream.Position = 0;
 				CurrentFileStream = ConvertSavestateStreamToSrm(CurrentFileStream);
