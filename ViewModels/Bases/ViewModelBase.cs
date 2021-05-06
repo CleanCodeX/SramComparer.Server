@@ -19,6 +19,7 @@ namespace WebApp.SoE.ViewModels.Bases
 	{
 		[Inject] public ProtectedLocalStorage LocalStorage { get; set; } = null!;
 
+		protected bool IsSavestate { get; private set; }
 		protected Stream? CurrentFileStream { get; set; }
 
 		public GameRegion GameRegion { get; set; }
@@ -34,12 +35,16 @@ namespace WebApp.SoE.ViewModels.Bases
 				if (_currentFileSaveSlot == value) return;
 
 				_currentFileSaveSlot = value;
+				ResetState();
 				OnPropertyChanged();
 			}
 		}
 
 		protected virtual string StorageKeyPrefix => GetType().Name + "_" ;
 		private string StorageKey => StorageKeyPrefix + nameof(Options);
+
+		protected virtual void ResetState()
+		{ }
 		
 		protected internal virtual async Task LoadOptionsAsync()
 		{
@@ -75,9 +80,12 @@ namespace WebApp.SoE.ViewModels.Bases
 
 		public virtual async Task SetCurrentFileAsync(IBrowserFile file)
 		{
+			ResetState();
 			CheckFileExtension(file.Name);
 
 			CurrentFileName = file.Name;
+			IsSavestate = Path.GetExtension(CurrentFileName)!.ToLower() != ".srm";
+
 			CurrentFileStream = await file.OpenReadStream().CopyAsMemoryStreamAsync();
 		}
 

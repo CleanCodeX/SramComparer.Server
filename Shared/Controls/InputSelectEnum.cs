@@ -18,7 +18,7 @@ namespace WebApp.SoE.Shared.Controls
             builder.AddMultipleAttributes(1, AdditionalAttributes);
             builder.AddAttribute(2, "class", CssClass);
             builder.AddAttribute(3, "value", BindConverter.FormatValue(CurrentValueAsString));
-            builder.AddAttribute(4, "onchange", EventCallback.Factory.CreateBinder<string>(this, value => CurrentValueAsString = value, CurrentValueAsString!, null));
+            builder.AddAttribute(4, "onchange", EventCallback.Factory.CreateBinder<string>(this, value => CurrentValueAsString = value, CurrentValueAsString!));
 
             // Add an option element per enum value
             var enumType = GetEnumType();
@@ -47,7 +47,7 @@ namespace WebApp.SoE.Shared.Controls
             if (string.IsNullOrEmpty(value))
             {
                 var nullableType = Nullable.GetUnderlyingType(typeof(TEnum));
-                if (nullableType != null)
+                if (nullableType is not null)
                 {
                     result = default!;
                     validationErrorMessage = null!;
@@ -69,11 +69,11 @@ namespace WebApp.SoE.Shared.Controls
             // Read the Display attribute name
             var member = value!.GetType().GetMember(value.ToString()!)[0];
             var displayAttribute = member.GetCustomAttribute<DisplayAttribute>();
-            if (displayAttribute != null)
+            if (displayAttribute is not null)
                 return displayAttribute.GetName()!;
 
             var displayNameAttribute = member.GetCustomAttribute<DisplayNameAttribute>();
-            if (displayNameAttribute != null)
+            if (displayNameAttribute is not null)
                 return displayNameAttribute.DisplayName;
 
             return value.ToString()!;
@@ -85,8 +85,7 @@ namespace WebApp.SoE.Shared.Controls
         private static Type GetEnumType()
         {
             var nullableType = Nullable.GetUnderlyingType(typeof(TEnum));
-            return nullableType != null ? nullableType : typeof(TEnum);
+            return nullableType ?? typeof(TEnum);
         }
     }
-
 }

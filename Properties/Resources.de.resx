@@ -273,7 +273,7 @@
 		<value>Evermore Format-Exploration-Projekt</value>
 	</data>
 	<data name="LabelTooltipFile" xml:space="preserve">
-		<value>Wähle entweder eine S-RAM- (*.srm, *.comp) or Snes9x Savestate- Datei (*.000 - *.009, *.state)</value>
+		<value>Wähle entweder eine S-RAM- (*.srm, *.comp) or Snes9x Savestate- Datei (*.000 - *.009, *.state). Dag 'n' Drop ist möglich.</value>
 	</data>
 	<data name="ErrorUnsupportedFileExtensionTemplate" xml:space="preserve">
 		<value>Fehler: Datei [{0}] hat eine nicht unterstützte Dateiendung</value>
@@ -362,5 +362,8 @@
 	</data>
 	<data name="EmptySaveSlot" xml:space="preserve">
 		<value>Leerer Speicherslot</value>
+	</data>
+	<data name="TooltipGameRegion" xml:space="preserve">
+		<value>Das Ändern der Spielstand-Region muss vor dem Laden des Spielstandes geschehen.</value>
 	</data>
 </root>

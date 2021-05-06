@@ -10,10 +10,8 @@ using Microsoft.AspNetCore.Components.Forms;
 using SRAM.Comparison.Services;
 using SRAM.Comparison.SoE.Enums;
 using SRAM.Comparison.SoE.Services;
-using SRAM.SoE.Models;
 using WebApp.SoE.Extensions;
 using WebApp.SoE.Helpers;
-using WebApp.SoE.Properties;
 using WebApp.SoE.Services;
 using WebApp.SoE.Shared.Enums;
 using WebApp.SoE.ViewModels.Bases;
@@ -105,6 +103,7 @@ namespace WebApp.SoE.ViewModels
 		public async Task SetComparisonFileAsync(IBrowserFile file)
 		{
 			CheckFileExtension(file.Name);
+			ResetState();
 
 			ComparisonFileName = file.Name;
 			ComparisonFileStream = await file.OpenReadStream().CopyAsMemoryStreamAsync();

@@ -274,7 +274,7 @@
 		<value>Projet d'exploration Evermore Format</value>
 	</data>
 	<data name="LabelTooltipFile" xml:space="preserve">
-		<value>Sélectionnez un fichier de sauvegarde S-RAM (* .srm, *.comp) ou Snes9x (* .000 - * .009, *.state)</value>
+		<value>Sélectionnez un fichier de sauvegarde S-RAM (* .srm, *.comp) ou Snes9x (* .000 - * .009, *.state). Drag'n'Drop est possible.</value>
 	</data>
 	<data name="ErrorUnsupportedFileExtensionTemplate" xml:space="preserve">
 		<value>Erreur: le fichier [{0}] a une extension de fichier non prise en charge</value>
@@ -362,5 +362,8 @@
 	</data>
 	<data name="EmptySaveSlot" xml:space="preserve">
 		<value>Espacio de guardado vacío</value>
+	</data>
+	<data name="TooltipGameRegion" xml:space="preserve">
+		<value>La modification de la région de la sauvegarde doit être effectuée avant de charger la sauvegarde.</value>
 	</data>
 </root>

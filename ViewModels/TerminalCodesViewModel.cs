@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Common.Shared.Min.Extensions;
 using IO.Extensions;
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.JSInterop;
 using SoE.Models.Enums;
 using SoE.Models.Structs;
@@ -33,10 +32,10 @@ namespace WebApp.SoE.ViewModels
 		public bool CanSave => Changed && CanSet && !IsSavestate;
 		public bool CanShowOutput => !IsBusy && IsLoaded;
 
-		public override Task SetCurrentFileAsync(IBrowserFile file)
+		protected override void ResetState()
 		{
-			(AlarmCode, SecretCode, TerminalCodesAreTheSame, Changed, OutputMessage) = (default, default, default, default, default);
-			return base.SetCurrentFileAsync(file);
+			base.ResetState();
+			(AlarmCode, SecretCode, TerminalCodesAreTheSame, Changed) = (default, default, default, default);
 		}
 
 		public async Task GetTerminalCodes(bool formatAsHtml)

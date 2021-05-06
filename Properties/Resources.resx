@@ -249,6 +249,9 @@
   <data name="TooltipInvalidSaveSlotChecksum" xml:space="preserve">
     <value>An invalid checksum does not affect the ability to use the savegame in emulators for playing.</value>
   </data>
+  <data name="TooltipGameRegion" xml:space="preserve">
+    <value>Changing the savegame's region needs to be done before loading the savegame.</value>
+  </data>
   <data name="LabelTooltipSaveSlotOffset" xml:space="preserve">
     <value>The relative offset within the gameslot area</value><comment>The term Offset should only be translated if not understandable</comment>
   </data>
@@ -391,7 +394,7 @@
     <value>Evermore Format Exploration Project</value>
   </data>
   <data name="LabelTooltipFile" xml:space="preserve">
-    <value>Select either a S-RAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009, *.state)</value>
+    <value>Select either a S-RAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009, *.state). Drag 'n' drop is possible.</value>
   </data>
   <data name="ErrorUnsupportedFileExtensionTemplate" xml:space="preserve">
     <value>Error: File [{0}] has an unsupported file extension

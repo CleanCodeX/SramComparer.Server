@@ -21,18 +21,19 @@ namespace WebApp.SoE.ViewModels.Bases
 	/// <summary>Base Viewmodel for loading SoE S-RAM files</summary>
 	public abstract class LoadViewModelBase : ViewModelBase
 	{
-		protected bool IsSavestate { get; private set; }
 		protected SramFileSoE? SramFile { get; set; }
 
 		public bool IsError { get; protected set; }
 		public bool IsLoading { get; set; }
 		public MarkupString OutputMessage { get; set; }
 		
-		public new MandatorySaveSlotId CurrentFileSaveSlot 
+		public new MandatorySaveSlotId CurrentFileSaveSlot
 		{
 			get => (MandatorySaveSlotId) base.CurrentFileSaveSlot;
 			set => base.CurrentFileSaveSlot = (SaveSlotId) value;
 		}
+
+		protected override void ResetState() => OutputMessage = default;
 
 		public virtual bool CanLoad => !IsLoading && CurrentFileStream is not null;
 		public bool IsLoaded => SramFile is not null;
@@ -60,8 +61,6 @@ namespace WebApp.SoE.ViewModels.Bases
 				CurrentFileStream.ThrowIfNull(nameof(CurrentFileStream));
 
 				(IsError, IsLoading) = (false, true);
-
-				IsSavestate = Path.GetExtension(CurrentFileName)!.ToLower() != ".srm";
 
 				CurrentFileStream.Position = 0;
 				CurrentFileStream = ConvertSavestateStreamToSrm(CurrentFileStream);

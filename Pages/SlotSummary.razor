@@ -12,7 +12,7 @@
 
 			<tr>
 				<td><label class="header">@ResComp.EnumGameRegion:@Ns</label></td>
-				<td><InputSelectEnum @bind-Value="@ViewModel.GameRegion" style=@GameRegionStyle /></td>
+				<td><InputSelectEnum @bind-Value="@ViewModel.GameRegion" style=@GameRegionStyle title="@Res.TooltipGameRegion" /></td>
 			</tr>
 			
 			<p />
@@ -28,11 +28,8 @@
 				<td><label>@Res.SaveSlot:@Ns</label></td>
 				<td><InputSelectEnum @bind-Value="@CurrentFileSaveSlot" style=@CurrentSramFileStyle /></td>
 			</tr>
-			
-			<p />
-
 			<tr>
-				<td><label class="header">@Res.LabelChecksumStatus:@Ns</label></td>
+				<td><label>@Res.LabelChecksumStatus:@Ns</label></td>
 				<td><label title="@Res.TooltipInvalidSaveSlotChecksum">@ViewModel.GetCurrentSaveslotChecksumStatus()</label></td>
 			</tr>
 

@@ -593,7 +593,7 @@ namespace WebApp.SoE.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Select either a S-RAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009, *.state) ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Select either a S-RAM (*.srm, *.comp) or Snes9x savestate file (*.000 - *.009, *.state). Drag &apos;n&apos; drop is possible. ähnelt.
         /// </summary>
         public static string LabelTooltipFile {
             get {
@@ -1102,6 +1102,15 @@ namespace WebApp.SoE.Properties {
         public static string SelectLanguage {
             get {
                 return ResourceManager.GetString("SelectLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Changing the savegame&apos;s region needs to be done before loading the savegame. ähnelt.
+        /// </summary>
+        public static string TooltipGameRegion {
+            get {
+                return ResourceManager.GetString("TooltipGameRegion", resourceCulture);
             }
         }
         

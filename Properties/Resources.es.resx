@@ -159,7 +159,7 @@
 		<value>Mostrar el estado de la suma de comprobación de la ranura guardada</value>
 	</data>
 	<data name="LabelTooltipFile" xml:space="preserve">
-		<value>Seleccione un archivo S-RAM (* .srm, * .comp) o Snes9x savestate (* .000 - * .009, * .state)</value>
+		<value>Seleccione un archivo S-RAM (* .srm, * .comp) o Snes9x savestate (* .000 - * .009, * .state). Drag'n'Drop es posible.</value>
 	</data>
 	<data name="LabelTooltipNonSlotComparison" xml:space="preserve">
 		<value>Compare el área de la ranura no guardada byte por byte (área más allá de todas las ranuras para guardar)</value>
@@ -361,5 +361,8 @@
 	</data>
 	<data name="EmptySaveSlot" xml:space="preserve">
 		<value>Emplacement de sauvegarde vide</value>
+	</data>
+	<data name="TooltipGameRegion" xml:space="preserve">
+		<value>Es necesario cambiar la región de la partida guardada antes de cargar la partida guardada.</value>
 	</data>
 </root>
