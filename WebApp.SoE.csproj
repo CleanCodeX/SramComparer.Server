@@ -10,7 +10,7 @@
 	  <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 	  <UserSecretsId>17d24474-ed46-4f7f-bc20-2d543c8c8603</UserSecretsId>
 	  <Platforms>AnyCPU</Platforms>
-	  <PackageProjectUrl>http://evermore.xeth.de</PackageProjectUrl>
+	  <PackageProjectUrl>https://evermore.xeth.de</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/CleanCodeX/WebApp.SoE</RepositoryUrl>
 	  <PackageTags>SoE, Secret Of Evermore, S-RAM, SRAM, Savestate, SNES, Super Nintendo, Super Famicon, Blazor, Web-App, NET 5, Rosetta Stone</PackageTags>
 	  <RepositoryType>UI</RepositoryType>
